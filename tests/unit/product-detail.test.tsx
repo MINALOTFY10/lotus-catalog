@@ -26,16 +26,19 @@ describe('publicProducts service', () => {
     totalPages: 2,
     pages: [
       {
+        position: 1,
         pageNumber: 1,
         template: 'cover',
         sectionTitle: 'الغلاف',
         slots: [],
       },
       {
+        position: 2,
         pageNumber: 2,
         template: 'grid3x3',
         sectionTitle: 'عسل نحل فاخر',
         slots: [
+
           {
             slot: 1,
             product: {
@@ -60,7 +63,7 @@ describe('publicProducts service', () => {
     expect(result?.sale_price).toBe(620);
     expect(result?.magazinePageNumber).toBe(2);
     // CRITICAL SECURITY REQUIREMENT: cost_price must never leak to public
-    expect((result as Record<string, unknown>).cost_price).toBeUndefined();
+    expect((result as unknown as Record<string, unknown>).cost_price).toBeUndefined();
   });
 
   it('searches products by Arabic title or cashier code', () => {

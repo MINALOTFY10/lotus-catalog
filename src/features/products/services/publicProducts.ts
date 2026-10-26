@@ -26,15 +26,15 @@ export function extractProductsFromIssue(issue: IssueSnapshot): PublicProduct[] 
           id: p.id,
           cashier_code: p.cashier_code ?? null,
           slug: p.slug,
-          name_ar: slot.title_override || p.name_ar,
-          description_ar: slot.description_override || p.description_ar,
-          category: page.sectionTitle,
+          name_ar: (slot.title_override || p.name_ar) ?? '',
+          description_ar: (slot.description_override || p.description_ar) || undefined,
+          category: page.sectionTitle || page.section_title || undefined,
           sale_price: slot.price_override ?? p.sale_price ?? 0,
           in_stock: true,
           primary_image_url: slot.image_override || p.primary_image_url || '/brand/lotus_logo.png',
-          magazinePageNumber: page.pageNumber,
+          magazinePageNumber: page.pageNumber ?? page.position,
           magazineSlot: slot.slot,
-          sectionTitle: page.sectionTitle,
+          sectionTitle: page.sectionTitle || page.section_title || undefined,
         });
       }
     }

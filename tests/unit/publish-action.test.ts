@@ -6,6 +6,7 @@ describe('computeIssueDiff', () => {
   it('identifies changed slot prices and slot counts', () => {
     const draft: MagazinePageData[] = [
       {
+        position: 2,
         pageNumber: 2,
         template: 'grid3x3',
         sectionTitle: 'عسل',
@@ -27,6 +28,7 @@ describe('computeIssueDiff', () => {
 
     const live: MagazinePageData[] = [
       {
+        position: 2,
         pageNumber: 2,
         template: 'grid3x3',
         sectionTitle: 'عسل',
@@ -55,11 +57,11 @@ describe('computeIssueDiff', () => {
 
   it('detects added pages', () => {
     const draft: MagazinePageData[] = [
-      { pageNumber: 1, template: 'cover', sectionTitle: 'غلاف', slots: [] },
-      { pageNumber: 2, template: 'grid3x3', sectionTitle: 'جديد', slots: [] },
+      { position: 1, pageNumber: 1, template: 'cover', sectionTitle: 'غلاف', slots: [] },
+      { position: 2, pageNumber: 2, template: 'grid3x3', sectionTitle: 'جديد', slots: [] },
     ];
     const live: MagazinePageData[] = [
-      { pageNumber: 1, template: 'cover', sectionTitle: 'غلاف', slots: [] },
+      { position: 1, pageNumber: 1, template: 'cover', sectionTitle: 'غلاف', slots: [] },
     ];
 
     const diff = computeIssueDiff(draft, live);

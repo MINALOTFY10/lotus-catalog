@@ -34,6 +34,7 @@ describe('slotAssignSchema', () => {
 describe('assignProductToSlot & removeProductFromSlot', () => {
   const initialPages: MagazinePageData[] = [
     {
+      position: 2,
       pageNumber: 2,
       template: 'grid3x3',
       sectionTitle: 'عسل نحل',

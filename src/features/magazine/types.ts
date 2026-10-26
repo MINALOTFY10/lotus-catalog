@@ -1,6 +1,6 @@
 export interface ProductData {
   id: string;
-  cashier_code: number;
+  cashier_code?: number | null;
   slug: string;
   name_ar: string;
   name_en?: string | null;
@@ -24,7 +24,9 @@ export interface PageSlotData {
 export interface MagazinePageData {
   id?: string;
   position: number;
+  pageNumber: number;
   template: 'cover' | 'grid3x3' | 'grid2x2' | 'single' | 'info';
   section_title?: string | null;
+  sectionTitle?: string;
   slots: PageSlotData[];
 }

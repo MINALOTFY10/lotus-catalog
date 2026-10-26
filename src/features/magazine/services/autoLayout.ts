@@ -40,10 +40,13 @@ export function generateAutoLayout(
 
       pages.push({
         position: pageNumber,
+        pageNumber,
         template: 'grid3x3',
         section_title: sectionTitle,
+        sectionTitle,
         slots,
       });
+
 
       pageNumber++;
     }

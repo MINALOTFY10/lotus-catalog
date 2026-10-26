@@ -61,10 +61,11 @@ export function computeIssueDiff(
           pageNumber: draftPage.pageNumber,
           slotNumber: draftSlot.slot,
           productName: draftSlot.title_override || draftSlot.product?.name_ar || 'منتج',
-          oldPrice: livePrice,
-          newPrice: draftPrice,
+          oldPrice: livePrice ?? 0,
+          newPrice: draftPrice ?? 0,
         });
       }
+
 
       if (draftSlot.title_override !== liveSlot.title_override) {
         titleChangesCount++;
