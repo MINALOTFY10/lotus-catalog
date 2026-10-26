@@ -1,69 +1,189 @@
-import Image from "next/image";
+'use client';
+
+import React, { useState } from 'react';
+import { Grid3x3Page } from '@/features/magazine/components/Grid3x3Page';
+import { PageSlotData } from '@/features/magazine/types';
+
+const SAMPLE_SLOTS: PageSlotData[] = [
+  {
+    slot: 1,
+    product: {
+      id: 'p1',
+      cashier_code: 1,
+      slug: 'honey-1-5kg',
+      name_ar: 'عسل كيلو و نص',
+      description_ar: 'عسل نقي طبيعي فاخر من مناحل الصندوق غني بالطاقة والإنزيمات',
+      sale_price: 620,
+      primary_image_url: '/brand/lotus_logo.png',
+    },
+  },
+  {
+    slot: 2,
+    product: {
+      id: 'p2',
+      cashier_code: 2,
+      slug: 'honey-650g-plain',
+      name_ar: 'عسل 650 جرام ساده',
+      description_ar: 'عسل نحل طبيعي فاخر 100% زهرة البرسيم',
+      sale_price: 385,
+      primary_image_url: '/brand/lotus_logo.png',
+    },
+  },
+  {
+    slot: 3,
+    product: {
+      id: 'p3',
+      cashier_code: 3,
+      slug: 'honey-650g-nuts',
+      name_ar: 'عسل 650 جرام مكسرات',
+      description_ar: 'عسل مع تشكيلة مكسرات فاخرة مقرمشة',
+      sale_price: 715,
+      primary_image_url: '/brand/lotus_logo.png',
+    },
+  },
+  {
+    slot: 4,
+    product: {
+      id: 'p4',
+      cashier_code: 4,
+      slug: 'honey-650g-wax',
+      name_ar: 'عسل 650 جرام شمع',
+      description_ar: 'عسل مع قرص الشمع الطبيعي الخام',
+      sale_price: 520,
+      primary_image_url: '/brand/lotus_logo.png',
+    },
+  },
+  {
+    slot: 5,
+    product: {
+      id: 'p5',
+      cashier_code: 5,
+      slug: 'pottery-bottle-large',
+      name_ar: 'ازازه فخار كبير',
+      description_ar: 'مصنوع يدويًا فخار مصري تقليدي مبرد للماء',
+      sale_price: 225,
+      primary_image_url: '/brand/lotus_logo.png',
+    },
+  },
+  {
+    slot: 6,
+    product: {
+      id: 'p6',
+      cashier_code: 6,
+      slug: 'pottery-bottle-medium',
+      name_ar: 'ازازه فخار وسط',
+      description_ar: 'فخار صحي طبيعي بحرفية تراثية أصيلة',
+      sale_price: 190,
+      primary_image_url: '/brand/lotus_logo.png',
+    },
+  },
+  {
+    slot: 7,
+    product: {
+      id: 'p7',
+      cashier_code: 7,
+      slug: 'sarsoo-wood-set',
+      name_ar: 'طقم خشب سرسوع',
+      description_ar: 'طقم أواني وضيافة من خشب السرسوع الطبيعي الفاخر',
+      sale_price: 1080,
+      primary_image_url: '/brand/lotus_logo.png',
+    },
+  },
+  {
+    slot: 8,
+    product: {
+      id: 'p8',
+      cashier_code: 8,
+      slug: 'sarsoo-oval-set',
+      name_ar: 'طقم خشب سرسوع بيضاوي',
+      description_ar: 'صواني تقديم بيضاوية مشغولة يدويًا بنقوش بارزة',
+      sale_price: 550,
+      primary_image_url: '/brand/lotus_logo.png',
+    },
+  },
+  {
+    slot: 9,
+    product: {
+      id: 'p9',
+      cashier_code: 9,
+      slug: 'jewelry-earring-set',
+      name_ar: 'طقم اكسسوار بحلق',
+      description_ar: 'مجوهرات نحاسية براسس يدوية بتصميم فرعوني مع حلق متناسق',
+      sale_price: 405,
+      primary_image_url: '/brand/lotus_logo.png',
+    },
+  },
+];
 
 export default function Home() {
+  const [scalePreset, setScalePreset] = useState<'desktop' | 'tablet' | 'mobile'>('desktop');
+
+  const widthStyle = {
+    desktop: 'max-w-[720px] w-full',
+    tablet: 'max-w-[520px] w-full',
+    mobile: 'max-w-[360px] w-full',
+  }[scalePreset];
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
+    <div className="min-h-screen bg-stone-200/70 py-8 px-4 flex flex-col items-center justify-start">
+      {/* Top Controls Bar */}
+      <div className="w-full max-w-4xl bg-white rounded-xl shadow-sm border border-stone-200/80 p-4 mb-6 flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <h1 className="text-xl font-bold text-[#443000] flex items-center gap-2">
+            <span>لوتس</span>
+            <span className="text-xs px-2 py-0.5 bg-[#B68763]/15 text-[#B68763] rounded font-medium">
+              معاينة الصفحة الحية (Canva Replica)
+            </span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <p className="text-xs text-stone-500 mt-0.5">
+            نموذج A4 تفاعلي مع وحدات الاستعلام الحاوية (Container Queries) وتدرجات ألوان كانفا الأصلية
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+
+        {/* Responsive viewport presets */}
+        <div className="flex items-center gap-2 bg-stone-100 p-1 rounded-lg text-xs font-medium">
+          <button
+            onClick={() => setScalePreset('desktop')}
+            className={`px-3 py-1.5 rounded-md transition-all ${
+              scalePreset === 'desktop'
+                ? 'bg-white text-[#443000] shadow-sm font-bold'
+                : 'text-stone-600 hover:text-black'
+            }`}
           >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            كمبيوتر (720px)
+          </button>
+          <button
+            onClick={() => setScalePreset('tablet')}
+            className={`px-3 py-1.5 rounded-md transition-all ${
+              scalePreset === 'tablet'
+                ? 'bg-white text-[#443000] shadow-sm font-bold'
+                : 'text-stone-600 hover:text-black'
+            }`}
           >
-            Documentation
-          </a>
+            تابلت (520px)
+          </button>
+          <button
+            onClick={() => setScalePreset('mobile')}
+            className={`px-3 py-1.5 rounded-md transition-all ${
+              scalePreset === 'mobile'
+                ? 'bg-white text-[#443000] shadow-sm font-bold'
+                : 'text-stone-600 hover:text-black'
+            }`}
+          >
+            موبايل (360px)
+          </button>
         </div>
-      </main>
+      </div>
+
+      {/* The A4 Canvas Container */}
+      <div className={`${widthStyle} transition-all duration-300 mx-auto drop-shadow-2xl`}>
+        <Grid3x3Page
+          sectionTitle="مجموعة التراث المصري"
+          pageNumber={6}
+          slots={SAMPLE_SLOTS}
+          isInteractive={true}
+        />
+      </div>
     </div>
   );
 }
