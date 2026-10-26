@@ -5,7 +5,7 @@ import { resolveCurrentPage } from '@/features/magazine/reader/useFlipbook';
 import { MagazineReaderView } from '@/features/magazine/reader/MagazineReaderView';
 
 export const metadata: Metadata = {
-  title: 'المجلة التفاعلية | كتالوج وقائمة أسعار لوتس',
+  title: 'مجلة لوتس التفاعلية | كتالوج المنتجات',
   description: 'تصفح كتالوج ومجلة لوتس للمنتجات اليدوية والتراثية المصرية بتجربة تفاعلية ثلاثية الأبعاد',
 };
 

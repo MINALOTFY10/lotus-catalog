@@ -63,11 +63,10 @@ export function FlipbookClient({
     if (isMobile) {
       goToPage(currentPage + 1);
     } else {
-      // On desktop spread: page 1 is cover alone, then 2-3, 4-5, etc.
-      if (currentPage === 1) {
-        goToPage(2);
-      } else {
-        goToPage(Math.min(currentPage + 2, totalPages));
+      const currentSpreadStart = Math.floor((currentPage - 1) / 2) * 2 + 1;
+      const nextSpreadStart = currentSpreadStart + 2;
+      if (nextSpreadStart <= totalPages) {
+        goToPage(nextSpreadStart);
       }
     }
   }, [currentPage, isMobile, goToPage, totalPages]);
@@ -76,10 +75,10 @@ export function FlipbookClient({
     if (isMobile) {
       goToPage(currentPage - 1);
     } else {
-      if (currentPage <= 3) {
-        goToPage(1);
-      } else {
-        goToPage(Math.max(currentPage - 2, 2));
+      const currentSpreadStart = Math.floor((currentPage - 1) / 2) * 2 + 1;
+      const prevSpreadStart = currentSpreadStart - 2;
+      if (prevSpreadStart >= 1) {
+        goToPage(prevSpreadStart);
       }
     }
   }, [currentPage, isMobile, goToPage]);
@@ -129,20 +128,15 @@ export function FlipbookClient({
   };
 
   // Determine active pages for spread
-  // In Arabic desktop spread:
-  // - Page 1 (Cover): sits alone on the right side
-  // - Pages 2 & 3: Page 3 on right, Page 2 on left (or Page 2 on right in standard 2-spread)
-  // For standard Arabic 2-page spread:
-  // Right side = Even page (e.g. Page 2), Left side = Odd page (e.g. Page 3)
-  const isCover = currentPage === 1;
-  const rightPageIndex = isCover ? 0 : Math.floor((currentPage - 2) / 2) * 2 + 1; // 0-based
-  const leftPageIndex = isCover ? -1 : rightPageIndex + 1; // 0-based
+  // Pairs: (Page 1 right, Page 2 left), (Page 3 right, Page 4 left), ...
+  const rightPageIndex = Math.floor((currentPage - 1) / 2) * 2; // 0-based
+  const leftPageIndex = rightPageIndex + 1; // 0-based
 
   return (
     <div
       ref={wrapperRef}
       className={`relative w-full flex flex-col items-center justify-start select-none ${
-        isFullscreen ? 'h-screen bg-stone-900 py-6 overflow-y-auto' : 'py-6 px-4'
+        isFullscreen ? 'h-screen bg-[#F3F4F7] py-6 overflow-y-auto' : 'py-6 px-4'
       }`}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
@@ -156,11 +150,6 @@ export function FlipbookClient({
           /* Mobile Single Page View */
           <div className="w-full max-w-[420px] drop-shadow-2xl transition-transform duration-300">
             {children[currentPage - 1] || children[0]}
-          </div>
-        ) : isCover ? (
-          /* Desktop Cover (Single page centered with spine shadow) */
-          <div className="w-full max-w-[560px] drop-shadow-2xl transition-transform duration-300 relative border-l-4 border-stone-300">
-            {children[0]}
           </div>
         ) : (
           /* Desktop Two-Page Spread (Left page + Right page with Center Spine Shadow) */
@@ -192,26 +181,50 @@ export function FlipbookClient({
         {/* Previous page button */}
         <button
           onClick={prevPage}
-          disabled={currentPage <= 1}
-          className="px-3.5 py-1.5 bg-stone-100 hover:bg-[#B68763] hover:text-white disabled:opacity-30 rounded-full text-[#443000] font-bold flex items-center gap-1.5 transition-all shadow-2xs"
+          disabled={isMobile ? currentPage <= 1 : rightPageIndex <= 0}
+          className="px-3.5 py-1.5 bg-stone-100 hover:bg-[#B68763] hover:text-white disabled:opacity-30 rounded-full text-[#443000] font-bold flex items-center gap-2 transition-all shadow-2xs"
         >
+          <svg
+            className="w-3.5 h-3.5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2.5"
+              d="M9 5l7 7-7 7"
+            />
+          </svg>
           <span>السابق</span>
-          <span>→</span>
         </button>
 
         {/* Page counter */}
         <span className="font-bold text-[#443000] px-3 text-sm select-none" dir="rtl">
-          صفحة {currentPage} من {totalPages}
+          صفحة {isMobile ? currentPage : `${rightPageIndex + 1}${leftPageIndex < totalPages ? ` - ${leftPageIndex + 1}` : ''}`} من {totalPages}
         </span>
 
         {/* Next page button */}
         <button
           onClick={nextPage}
-          disabled={currentPage >= totalPages}
-          className="px-3.5 py-1.5 bg-stone-100 hover:bg-[#B68763] hover:text-white disabled:opacity-30 rounded-full text-[#443000] font-bold flex items-center gap-1.5 transition-all shadow-2xs"
+          disabled={isMobile ? currentPage >= totalPages : rightPageIndex + 2 > totalPages}
+          className="px-3.5 py-1.5 bg-stone-100 hover:bg-[#B68763] hover:text-white disabled:opacity-30 rounded-full text-[#443000] font-bold flex items-center gap-2 transition-all shadow-2xs"
         >
-          <span>←</span>
           <span>التالي</span>
+          <svg
+            className="w-3.5 h-3.5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2.5"
+              d="M15 19l-7-7 7-7"
+            />
+          </svg>
         </button>
 
         <span className="w-px h-4 bg-stone-200" />
@@ -219,10 +232,39 @@ export function FlipbookClient({
         {/* Fullscreen button */}
         <button
           onClick={toggleFullscreen}
-          className="text-stone-500 hover:text-stone-800 transition-colors px-1.5 py-0.5 font-semibold flex items-center gap-1"
-          title="ملء الشاشة"
+          className="text-stone-600 hover:text-[#B68763] hover:bg-stone-100/80 rounded-full transition-all px-2.5 py-1 text-xs font-bold flex items-center gap-2 group"
+          title={isFullscreen ? 'تصغير الشاشة' : 'ملء الشاشة'}
         >
-          <span>{isFullscreen ? '⛶ تصغير' : '⛶ ملء الشاشة'}</span>
+          {isFullscreen ? (
+            <svg
+              className="w-3.5 h-3.5 text-stone-500 group-hover:text-[#B68763] transition-colors"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 14h6m0 0v6m0-6L3 21m17-7h-6m0 0v6m0-6l7 7M14 4v6m0 0h6m-6 0L21 3M10 4v6m0 0H4m6 0L3 3"
+              />
+            </svg>
+          ) : (
+            <svg
+              className="w-3.5 h-3.5 text-stone-500 group-hover:text-[#B68763] transition-colors"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"
+              />
+            </svg>
+          )}
+          <span>{isFullscreen ? 'تصغير' : 'ملء الشاشة'}</span>
         </button>
       </div>
     </div>
