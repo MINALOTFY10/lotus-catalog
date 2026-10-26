@@ -50,7 +50,6 @@ export function ProductCard({
           className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
           loading="lazy"
           onError={(e) => {
-            // Graceful fallback to Lotus Logo if image fails
             (e.target as HTMLImageElement).src = '/brand/lotus_logo.png';
             (e.target as HTMLImageElement).className = 'w-16 h-16 object-contain opacity-30';
           }}
@@ -91,7 +90,7 @@ export function ProductCard({
           )}
         </div>
 
-        {/* Price Row */}
+        {/* Price Row: Arabic "السعر" label + LTR price "405 L.E" */}
         <div
           className="flex items-baseline justify-between border-t border-stone-100/80"
           style={{
@@ -109,7 +108,8 @@ export function ProductCard({
             السعر
           </span>
           <span
-            className="font-bold tracking-tight"
+            dir="ltr"
+            className="font-bold tracking-tight inline-block"
             style={{
               color: 'var(--mag-ink, #443000)',
               fontSize: 'calc(12 * var(--u, 1px))',

@@ -29,18 +29,19 @@ export function PageShell({
         <img
           src="/brand/laurel_top_right.png"
           alt=""
-          className="w-full h-full object-contain object-top-right"
+          className="w-full h-full object-contain object-top-right mix-blend-multiply"
         />
       </div>
 
-      {/* 2. Top Header Logos (Lotus Crest & Fund Seal) */}
+      {/* 2. Top Header Logos: Lotus Crest on Left, Fund Seal on Right */}
       <header
-        className="absolute top-0 flex items-center justify-center gap-[calc(20*var(--u,1px))] z-10"
+        className="absolute top-0 flex items-center justify-center gap-[calc(28*var(--u,1px))] z-10"
         style={{
           left: 'calc(28 * var(--u, 1px))',
           width: 'calc(405 * var(--u, 1px))',
           height: 'calc(130 * var(--u, 1px))',
-          paddingTop: 'calc(8 * var(--u, 1px))',
+          paddingTop: 'calc(10 * var(--u, 1px))',
+          direction: 'ltr', // Keep Lotus on left and Fund Seal on right
         }}
       >
         {/* Lotus Crest */}
@@ -48,7 +49,7 @@ export function PageShell({
           <img
             src="/brand/lotus_logo.png"
             alt="لوتس"
-            className="h-full w-auto object-contain"
+            className="h-full w-auto object-contain mix-blend-multiply"
           />
         </div>
 
@@ -57,33 +58,45 @@ export function PageShell({
           <img
             src="/brand/fund_seal.png"
             alt="صندوق دعم الصناعات"
-            className="h-full w-auto object-contain"
+            className="h-full w-auto object-contain mix-blend-multiply"
           />
         </div>
       </header>
 
-      {/* 3. Right Sidebar Vertical Title */}
+      {/* 3. Right Sidebar Vertical Title (calibrated to top: ~500pt, 2 parallel vertical lines) */}
       <aside
-        className="absolute top-0 right-0 h-full flex flex-col items-center justify-center z-10 pointer-events-none"
+        className="absolute flex items-start gap-[calc(8*var(--u,1px))] z-10 pointer-events-none"
         style={{
-          width: 'calc(162 * var(--u, 1px))',
+          right: 'calc(25 * var(--u, 1px))',
+          top: 'calc(495 * var(--u, 1px))',
+          height: 'calc(300 * var(--u, 1px))',
+          writingMode: 'vertical-rl',
+          transform: 'rotate(180deg)',
+          color: 'var(--mag-ink, #443000)',
+          direction: 'ltr',
         }}
       >
-        <div
-          className="flex items-center gap-[calc(14*var(--u,1px))] font-extrabold tracking-tight whitespace-nowrap"
+        {/* Outer line: قائمة الأسعار */}
+        <span
+          className="font-extrabold tracking-tight whitespace-nowrap"
           style={{
-            writingMode: 'vertical-rl',
-            transform: 'rotate(180deg)',
-            color: 'var(--mag-ink, #443000)',
-            fontSize: 'calc(27 * var(--u, 1px))',
-            letterSpacing: 'calc(0.5 * var(--u, 1px))',
+            fontSize: 'calc(28 * var(--u, 1px))',
           }}
         >
-          <span>قائمة الأسعار</span>
-          {sectionTitle && (
-            <span className="opacity-90">{sectionTitle}</span>
-          )}
-        </div>
+          قائمة الأسعار
+        </span>
+
+        {/* Inner line: Section Title (e.g. مجموعة التراث المصري) */}
+        {sectionTitle && (
+          <span
+            className="font-bold tracking-tight whitespace-nowrap opacity-95"
+            style={{
+              fontSize: 'calc(25 * var(--u, 1px))',
+            }}
+          >
+            {sectionTitle}
+          </span>
+        )}
       </aside>
 
       {/* 4. Main Catalog Content Area */}
@@ -91,9 +104,9 @@ export function PageShell({
         className="absolute"
         style={{
           left: 'calc(28 * var(--u, 1px))',
-          top: 'calc(135 * var(--u, 1px))',
+          top: 'calc(140 * var(--u, 1px))',
           width: 'calc(405 * var(--u, 1px))',
-          height: 'calc(685 * var(--u, 1px))',
+          height: 'calc(680 * var(--u, 1px))',
         }}
       >
         {children}
