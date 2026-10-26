@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { IssueSnapshot } from '../types';
 import { FlipbookClient } from './FlipbookClient';
-import { Grid3x3Page } from '../components/Grid3x3Page';
+import { CanvaMagazinePage } from '../components/CanvaMagazinePage';
 import { TocDrawer } from '../components/TocDrawer';
 import { ListViewGrid } from '../components/ListViewGrid';
 import { MagazineSearchModal } from '../components/MagazineSearchModal';
@@ -79,17 +79,23 @@ export function MagazineReaderView({
         {viewMode === 'flipbook' ? (
           <FlipbookClient initialPage={currentPage} onPageChange={handlePageChange}>
             {initialIssue.pages.map((pageData) => (
-              <Grid3x3Page
+              <CanvaMagazinePage
                 key={pageData.position}
                 pageNumber={pageData.position}
                 sectionTitle={pageData.section_title}
-                slots={pageData.slots}
-                isInteractive={true}
+                priority={pageData.position <= 4}
               />
             ))}
           </FlipbookClient>
         ) : (
-          <ListViewGrid pages={initialIssue.pages} />
+          <ListViewGrid
+            pages={initialIssue.pages}
+            onSelectPage={(targetPage) => {
+              setCurrentPage(targetPage);
+              setViewMode('flipbook');
+              handlePageChange(targetPage);
+            }}
+          />
         )}
       </main>
 

@@ -3,7 +3,7 @@
   "title_ar": "قائمة أسعار لوتس",
   "version": 2,
   "publishedAt": "2026-10-26T09:49:33.910Z",
-  "totalPages": 51,
+  "totalPages": 65,
   "pages": [
     {
       "position": 1,
@@ -7606,6 +7606,258 @@
             "stock_status": "قارب النفاد",
             "in_stock": true,
             "primary_image_url": "/uploads/products/image88.jpg"
+          }
+        }
+      ]
+    },
+    {
+      "position": 52,
+      "template": "grid3x3",
+      "section_title": "مجموعة التراث المصري",
+      "slots": [
+        {
+          "slot": 1,
+          "title_override": "صواني وعلب مناديل نحاس منقوش",
+          "product": {
+            "id": "prod-canva-52",
+            "slug": "prod-canva-52",
+            "name_ar": "صواني وعلب مناديل نحاس منقوش",
+            "category": "مجموعة التراث المصري",
+            "in_stock": true
+          }
+        }
+      ]
+    },
+    {
+      "position": 53,
+      "template": "grid3x3",
+      "section_title": "مجموعة التراث المصري",
+      "slots": [
+        {
+          "slot": 1,
+          "title_override": "صواني نحاس برأس بيضاوي ومستطيل",
+          "product": {
+            "id": "prod-canva-53",
+            "slug": "prod-canva-53",
+            "name_ar": "صواني نحاس برأس بيضاوي ومستطيل",
+            "category": "مجموعة التراث المصري",
+            "in_stock": true
+          }
+        }
+      ]
+    },
+    {
+      "position": 54,
+      "template": "grid3x3",
+      "section_title": "شموع وخزف يدوي",
+      "slots": [
+        {
+          "slot": 1,
+          "title_override": "أواني شموع سيراميك يدوي",
+          "product": {
+            "id": "prod-canva-54",
+            "slug": "prod-canva-54",
+            "name_ar": "أواني شموع سيراميك يدوي",
+            "category": "شموع وخزف يدوي",
+            "in_stock": true
+          }
+        }
+      ]
+    },
+    {
+      "position": 55,
+      "template": "grid3x3",
+      "section_title": "شموع وخزف يدوي",
+      "slots": [
+        {
+          "slot": 1,
+          "title_override": "شموع سيراميك وكريستال",
+          "product": {
+            "id": "prod-canva-55",
+            "slug": "prod-canva-55",
+            "name_ar": "شموع سيراميك وكريستال",
+            "category": "شموع وخزف يدوي",
+            "in_stock": true
+          }
+        }
+      ]
+    },
+    {
+      "position": 56,
+      "template": "grid3x3",
+      "section_title": "شموع وخزف يدوي",
+      "slots": [
+        {
+          "slot": 1,
+          "title_override": "شموع سيراميك ماندالا زرقاء",
+          "product": {
+            "id": "prod-canva-56",
+            "slug": "prod-canva-56",
+            "name_ar": "شموع سيراميك ماندالا زرقاء",
+            "category": "شموع وخزف يدوي",
+            "in_stock": true
+          }
+        }
+      ]
+    },
+    {
+      "position": 57,
+      "template": "grid3x3",
+      "section_title": "شموع وخزف يدوي",
+      "slots": [
+        {
+          "slot": 1,
+          "title_override": "شموع سيراميك أسطواني برتقالي",
+          "product": {
+            "id": "prod-canva-57",
+            "slug": "prod-canva-57",
+            "name_ar": "شموع سيراميك أسطواني برتقالي",
+            "category": "شموع وخزف يدوي",
+            "in_stock": true
+          }
+        }
+      ]
+    },
+    {
+      "position": 58,
+      "template": "grid3x3",
+      "section_title": "شموع وخزف يدوي",
+      "slots": [
+        {
+          "slot": 1,
+          "title_override": "برطمانات شموع زجاجية صغيرة",
+          "product": {
+            "id": "prod-canva-58",
+            "slug": "prod-canva-58",
+            "name_ar": "برطمانات شموع زجاجية صغيرة",
+            "category": "شموع وخزف يدوي",
+            "in_stock": true
+          }
+        }
+      ]
+    },
+    {
+      "position": 59,
+      "template": "grid3x3",
+      "section_title": "شموع وخزف يدوي",
+      "slots": [
+        {
+          "slot": 1,
+          "title_override": "كوسترات كروشيه يدوي",
+          "product": {
+            "id": "prod-canva-59",
+            "slug": "prod-canva-59",
+            "name_ar": "كوسترات كروشيه يدوي",
+            "category": "شموع وخزف يدوي",
+            "in_stock": true
+          }
+        }
+      ]
+    },
+    {
+      "position": 60,
+      "template": "grid3x3",
+      "section_title": "أخشاب وتراث يدوي",
+      "slots": [
+        {
+          "slot": 1,
+          "title_override": "علب مجوهرات عرق اللؤلؤ وصواني خشبية",
+          "product": {
+            "id": "prod-canva-60",
+            "slug": "prod-canva-60",
+            "name_ar": "علب مجوهرات عرق اللؤلؤ وصواني خشبية",
+            "category": "أخشاب وتراث يدوي",
+            "in_stock": true
+          }
+        }
+      ]
+    },
+    {
+      "position": 61,
+      "template": "grid3x3",
+      "section_title": "أخشاب وتراث يدوي",
+      "slots": [
+        {
+          "slot": 1,
+          "title_override": "أطقم صواني ومباخر خشبية",
+          "product": {
+            "id": "prod-canva-61",
+            "slug": "prod-canva-61",
+            "name_ar": "أطقم صواني ومباخر خشبية",
+            "category": "أخشاب وتراث يدوي",
+            "in_stock": true
+          }
+        }
+      ]
+    },
+    {
+      "position": 62,
+      "template": "grid3x3",
+      "section_title": "أخشاب وتراث يدوي",
+      "slots": [
+        {
+          "slot": 1,
+          "title_override": "علب أرابيسك فسيفساء خشبية",
+          "product": {
+            "id": "prod-canva-62",
+            "slug": "prod-canva-62",
+            "name_ar": "علب أرابيسك فسيفساء خشبية",
+            "category": "أخشاب وتراث يدوي",
+            "in_stock": true
+          }
+        }
+      ]
+    },
+    {
+      "position": 63,
+      "template": "grid3x3",
+      "section_title": "أخشاب وتراث يدوي",
+      "slots": [
+        {
+          "slot": 1,
+          "title_override": "حوامل شموع خشبية مجوفة",
+          "product": {
+            "id": "prod-canva-63",
+            "slug": "prod-canva-63",
+            "name_ar": "حوامل شموع خشبية مجوفة",
+            "category": "أخشاب وتراث يدوي",
+            "in_stock": true
+          }
+        }
+      ]
+    },
+    {
+      "position": 64,
+      "template": "grid3x3",
+      "section_title": "أخشاب وتراث يدوي",
+      "slots": [
+        {
+          "slot": 1,
+          "title_override": "مرايا وعلب مناديل خشبية منحوتة",
+          "product": {
+            "id": "prod-canva-64",
+            "slug": "prod-canva-64",
+            "name_ar": "مرايا وعلب مناديل خشبية منحوتة",
+            "category": "أخشاب وتراث يدوي",
+            "in_stock": true
+          }
+        }
+      ]
+    },
+    {
+      "position": 65,
+      "template": "grid3x3",
+      "section_title": "أخشاب وتراث يدوي",
+      "slots": [
+        {
+          "slot": 1,
+          "title_override": "صواني وكوسترات خشبية هندسية",
+          "product": {
+            "id": "prod-canva-65",
+            "slug": "prod-canva-65",
+            "name_ar": "صواني وكوسترات خشبية هندسية",
+            "category": "أخشاب وتراث يدوي",
+            "in_stock": true
           }
         }
       ]

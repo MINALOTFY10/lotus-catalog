@@ -147,48 +147,9 @@ export function FlipbookClient({
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      {/* Top Floating Control Bar */}
-      <div className="z-30 mb-6 px-4 py-2 bg-white/95 backdrop-blur shadow-md rounded-full border border-stone-200 flex items-center gap-4 text-xs font-medium">
-        {/* Next page (advances in RTL) */}
-        <button
-          onClick={nextPage}
-          disabled={currentPage >= totalPages}
-          className="px-3 py-1 bg-stone-100 hover:bg-[#B68763] hover:text-white disabled:opacity-30 rounded-full text-[#443000] font-bold flex items-center gap-1.5 transition-all"
-        >
-          <span>التالي</span>
-          <span>←</span>
-        </button>
-
-        {/* Page counter */}
-        <span className="font-bold text-[#443000] px-3 text-sm" dir="rtl">
-          صفحة {currentPage} من {totalPages}
-        </span>
-
-        {/* Previous page */}
-        <button
-          onClick={prevPage}
-          disabled={currentPage <= 1}
-          className="px-3 py-1 bg-stone-100 hover:bg-[#B68763] hover:text-white disabled:opacity-30 rounded-full text-[#443000] font-bold flex items-center gap-1.5 transition-all"
-        >
-          <span>→</span>
-          <span>السابق</span>
-        </button>
-
-        <span className="w-px h-4 bg-stone-200" />
-
-        {/* Fullscreen button */}
-        <button
-          onClick={toggleFullscreen}
-          className="text-stone-500 hover:text-stone-800 transition-colors"
-          title="ملء الشاشة"
-        >
-          {isFullscreen ? '⛶ تصغير' : '⛶ ملء الشاشة'}
-        </button>
-      </div>
-
       {/* Book Stage */}
       <div
-        className="w-full flex items-center justify-center"
+        className="w-full flex items-center justify-center flex-1"
         style={{ perspective: '2000px' }}
       >
         {isMobile ? (
@@ -226,22 +187,43 @@ export function FlipbookClient({
         )}
       </div>
 
-      {/* Quick jump thumbnails strip */}
-      <div className="mt-8 flex items-center gap-2 overflow-x-auto max-w-2xl px-4 py-2 bg-white/70 backdrop-blur rounded-lg border border-stone-200/80">
-        <span className="text-[11px] font-bold text-stone-500 whitespace-nowrap">انتقال:</span>
-        {Array.from({ length: Math.min(20, totalPages) }, (_, i) => i + 1).map((p) => (
-          <button
-            key={p}
-            onClick={() => goToPage(p)}
-            className={`min-w-7 h-7 rounded text-xs font-bold transition-all ${
-              p === currentPage
-                ? 'bg-[#B68763] text-white shadow-sm'
-                : 'bg-stone-100 hover:bg-stone-200 text-stone-600'
-            }`}
-          >
-            {p}
-          </button>
-        ))}
+      {/* Floating Control Bar at Bottom */}
+      <div className="z-30 mt-6 px-4 py-2 bg-white/95 backdrop-blur shadow-md rounded-full border border-stone-200 flex items-center gap-4 text-xs font-medium">
+        {/* Previous page button */}
+        <button
+          onClick={prevPage}
+          disabled={currentPage <= 1}
+          className="px-3.5 py-1.5 bg-stone-100 hover:bg-[#B68763] hover:text-white disabled:opacity-30 rounded-full text-[#443000] font-bold flex items-center gap-1.5 transition-all shadow-2xs"
+        >
+          <span>السابق</span>
+          <span>→</span>
+        </button>
+
+        {/* Page counter */}
+        <span className="font-bold text-[#443000] px-3 text-sm select-none" dir="rtl">
+          صفحة {currentPage} من {totalPages}
+        </span>
+
+        {/* Next page button */}
+        <button
+          onClick={nextPage}
+          disabled={currentPage >= totalPages}
+          className="px-3.5 py-1.5 bg-stone-100 hover:bg-[#B68763] hover:text-white disabled:opacity-30 rounded-full text-[#443000] font-bold flex items-center gap-1.5 transition-all shadow-2xs"
+        >
+          <span>←</span>
+          <span>التالي</span>
+        </button>
+
+        <span className="w-px h-4 bg-stone-200" />
+
+        {/* Fullscreen button */}
+        <button
+          onClick={toggleFullscreen}
+          className="text-stone-500 hover:text-stone-800 transition-colors px-1.5 py-0.5 font-semibold flex items-center gap-1"
+          title="ملء الشاشة"
+        >
+          <span>{isFullscreen ? '⛶ تصغير' : '⛶ ملء الشاشة'}</span>
+        </button>
       </div>
     </div>
   );
