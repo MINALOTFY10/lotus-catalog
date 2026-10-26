@@ -67,8 +67,9 @@ export function ProductsCatalogView({
           </span>
           <h1 className="text-2xl sm:text-3xl font-extrabold">قائمة منتجات لوتس</h1>
           <p className="text-stone-200 text-sm mt-1 max-w-xl">
-            تصفح جميع المنتجات المتوفرة، أو انتقل إلى المجلة التفاعلية لتقليب الصفحات بتصميم كانفا A4.
+            تصفح جميع المنتجات المتوفرة، أو انتقل إلى المجلة التفاعلية لتقليب الصفحات بتصميم كانفا الأنيق.
           </p>
+
         </div>
         <Link
           href="/magazine"

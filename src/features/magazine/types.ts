@@ -30,3 +30,14 @@ export interface MagazinePageData {
   sectionTitle?: string;
   slots: PageSlotData[];
 }
+
+export interface IssueSnapshot {
+  issueSlug: string;
+  title_ar: string;
+  version: number;
+  publishedAt: string;
+  totalPages: number;
+  pages: MagazinePageData[];
+  theme?: Record<string, string>;
+}
+

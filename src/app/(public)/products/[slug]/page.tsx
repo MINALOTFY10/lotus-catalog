@@ -154,7 +154,7 @@ async function ProductDetailPageContent({ params }: ProductDetailPageProps) {
                   </span>
                 </div>
                 <div className="text-left text-[11px] text-stone-400 font-medium">
-                  شامل ضريبة القيمة المضافة<br />وفق قائمة أسعار لوتس A4
+                  شامل ضريبة القيمة المضافة<br />وفق قائمة أسعار لوتس الرسمية
                 </div>
               </div>
 
@@ -181,7 +181,7 @@ async function ProductDetailPageContent({ params }: ProductDetailPageProps) {
                       <p className="text-xs text-stone-600">
                         {activeProduct.sectionTitle
                           ? `قسم ${activeProduct.sectionTitle} - صفحة ${activeProduct.magazinePageNumber}`
-                          : `صفحة ${activeProduct.magazinePageNumber} بتقسيم كانفا A4`}
+                          : `صفحة ${activeProduct.magazinePageNumber} في المجلة`}
                       </p>
                     </div>
                   </div>

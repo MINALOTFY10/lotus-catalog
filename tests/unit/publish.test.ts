@@ -38,10 +38,10 @@ describe('compileIssueSnapshot', () => {
     ];
 
     const pages = generateAutoLayout(mockProducts);
-    const snapshot = compileIssueSnapshot('lotus-pricelist-a4', 'قائمة أسعار لوتس A4', pages);
+    const snapshot = compileIssueSnapshot('lotus-pricelist', 'قائمة أسعار لوتس', pages);
 
-    expect(snapshot.issueSlug).toBe('lotus-pricelist-a4');
-    expect(snapshot.title_ar).toBe('قائمة أسعار لوتس A4');
+    expect(snapshot.issueSlug).toBe('lotus-pricelist');
+    expect(snapshot.title_ar).toBe('قائمة أسعار لوتس');
     expect(snapshot.totalPages).toBe(pages.length);
     expect(snapshot.pages[0].slots[0].product?.name_ar).toBe('عسل');
     expect(snapshot.publishedAt).toBeDefined();

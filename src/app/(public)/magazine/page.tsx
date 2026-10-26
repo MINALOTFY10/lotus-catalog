@@ -5,7 +5,7 @@ import { resolveCurrentPage } from '@/features/magazine/reader/useFlipbook';
 import { MagazineReaderView } from '@/features/magazine/reader/MagazineReaderView';
 
 export const metadata: Metadata = {
-  title: 'المجلة التفاعلية | قائمة أسعار لوتس A4',
+  title: 'المجلة التفاعلية | قائمة أسعار لوتس',
   description: 'تصفح كتالوج لوتس الكامل بجودة عالية مع تجربة تقليب الصفحات التفاعلية',
 };
 

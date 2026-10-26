@@ -16,7 +16,7 @@ const notoSans = Noto_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
-  title: "مجلة لوتس | قائمة الأسعار A4",
+  title: "مجلة لوتس | قائمة الأسعار",
   description: "الكتالوج الرقمي لمنتجات لوتس - التراث يلتقي الفن",
 };
 

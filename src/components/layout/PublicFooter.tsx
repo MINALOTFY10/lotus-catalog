@@ -29,7 +29,7 @@ export function PublicFooter() {
           {/* Quick Links */}
           <div className="flex flex-wrap items-center justify-start md:justify-center gap-6 text-sm font-bold">
             <Link href="/magazine" className="hover:text-[#B68763] transition-colors">
-              المجلة التفاعلية (A4)
+              المجلة التفاعلية
             </Link>
             <Link href="/products" className="hover:text-[#B68763] transition-colors">
               دليل المنتجات

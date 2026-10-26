@@ -187,8 +187,9 @@ export function ComposerView({
           </span>
         </div>
         <span className="text-[11px] text-stone-400 font-mono">
-          نموذج A4 كانفا الحقيقي (595.5 × 842.25 pt)
+          أبعاد كانفا القياسية (595.5 × 842.25 pt)
         </span>
+
       </div>
 
       {/* Visual Canvas Area */}

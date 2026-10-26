@@ -147,8 +147,8 @@ export async function runAutoLayoutAction(): Promise<{ success: boolean; totalPa
     const issue = fs.existsSync(liveIssuePath)
       ? JSON.parse(fs.readFileSync(liveIssuePath, 'utf8'))
       : {
-          issueSlug: 'lotus-pricelist-a4',
-          title_ar: 'قائمة أسعار لوتس A4',
+          issueSlug: 'lotus-pricelist',
+          title_ar: 'قائمة أسعار لوتس',
           version: 1,
         };
 

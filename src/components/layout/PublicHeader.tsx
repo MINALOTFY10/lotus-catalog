@@ -99,11 +99,6 @@ export function PublicHeader() {
                   }`}
                 >
                   {link.label}
-                  {link.highlight && (
-                    <span className="mr-1.5 text-[10px] bg-white/25 px-1.5 py-0.2 rounded-full font-sans uppercase">
-                      A4
-                    </span>
-                  )}
                 </Link>
               );
             })}

@@ -20,7 +20,7 @@ describe('formatMagazinePrice', () => {
 describe('publicProducts service', () => {
   const mockIssue: IssueSnapshot = {
     issueSlug: 'lotus-test',
-    title_ar: 'قائمة أسعار لوتس A4',
+    title_ar: 'قائمة أسعار لوتس',
     version: 1,
     publishedAt: new Date().toISOString(),
     totalPages: 2,

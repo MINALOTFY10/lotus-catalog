@@ -49,5 +49,5 @@ export async function getLiveIssue(): Promise<IssueSnapshot> {
 
   const { generateAutoLayout } = await import('./autoLayout');
   const pages = generateAutoLayout(products);
-  return compileIssueSnapshot('lotus-pricelist-a4', 'قائمة أسعار لوتس A4', pages, 1);
+  return compileIssueSnapshot('lotus-pricelist', 'قائمة أسعار لوتس', pages, 1);
 }

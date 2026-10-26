@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { IssueSnapshot } from '@/features/magazine/services/publishIssue';
+import { IssueSnapshot } from '@/features/magazine/types';
 import {
   VersionHistoryRecord,
   publishLiveIssueAction,
@@ -116,8 +116,9 @@ export function PublishManagerView({
                   {new Date(currentLiveIssue.publishedAt).toLocaleString('ar-EG')}
                 </p>
                 <p className="text-xs text-stone-500">
-                  عدد الصفحات الإجمالي: <strong className="text-stone-700">{currentLiveIssue.totalPages} صفحة A4</strong>
+                  عدد الصفحات الإجمالي: <strong className="text-stone-700">{currentLiveIssue.totalPages} صفحة</strong>
                 </p>
+
               </div>
             </div>
           </div>
