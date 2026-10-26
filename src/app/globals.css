@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@import "../styles/magazine-tokens.css";
+
+:root {
+  --background: #EFEFEF;
+  --foreground: #443000;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--mag-font-ar);
+  direction: rtl;
+}

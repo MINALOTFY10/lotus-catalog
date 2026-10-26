@@ -1,0 +1,21 @@
+:root {
+  --mag-bg: #EFEFEF;          /* Canvas background: rgb(239, 239, 239) */
+  --mag-card: #FFFFFF;        /* Card surface: crisp white */
+  --mag-ink: #443000;         /* Heritage brown text: rgb(68, 48, 0) */
+  --mag-accent: #B68763;      /* Bronze accent: rgb(182, 135, 99) */
+  --mag-font-ar: var(--font-noto-arabic), system-ui, sans-serif;
+  --mag-font-en: var(--font-noto-sans), system-ui, sans-serif;
+  --u: calc(100cqw / 595);
+}
+
+.magazine-page-container {
+  aspect-ratio: 595 / 842;
+  container-type: inline-size;
+  background-color: var(--mag-bg);
+  color: var(--mag-ink);
+  font-family: var(--mag-font-ar);
+  direction: rtl;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
