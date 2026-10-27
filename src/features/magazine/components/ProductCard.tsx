@@ -20,12 +20,15 @@ export function ProductCard({
   isInteractive = true,
 }: ProductCardProps) {
   if (!product && !titleOverride) {
-    return (
-      <div className="w-full h-full bg-white/40 border border-dashed border-stone-300/40 rounded flex items-center justify-center text-stone-400 text-[calc(9*var(--u,1px))]" />
-    );
+    return <div className="w-full h-full" />;
   }
 
-  const title = titleOverride || product?.name_ar || 'منتج لوتس';
+  const rawTitle = titleOverride || product?.name_ar || '';
+  if (rawTitle.startsWith('منتج لوتس')) {
+    return <div className="w-full h-full" />;
+  }
+
+  const title = rawTitle || 'منتج لوتس';
   const description = descriptionOverride || product?.description_ar || '';
   const price = priceOverride !== undefined && priceOverride !== null ? priceOverride : product?.sale_price;
   const imageUrl = imageOverride || product?.primary_image_url || '/brand/lotus_logo.png';
@@ -33,10 +36,10 @@ export function ProductCard({
 
   const cardContent = (
     <div
-      className="w-full h-full flex flex-col justify-between overflow-hidden bg-white shadow-[0_1px_4px_rgba(0,0,0,0.06)] hover:shadow-md transition-all duration-200 border border-stone-200/40 rounded-xs"
+      className="w-full h-full flex flex-col justify-between overflow-hidden bg-white shadow-[0_1px_3px_rgba(0,0,0,0.05)] hover:shadow-md transition-all duration-200 border border-stone-200/50 rounded-xs"
     >
       {/* Top Image: Fixed 50% height with clean object-cover */}
-      <div className="w-full h-[50%] shrink-0 overflow-hidden bg-stone-50 flex items-center justify-center relative">
+      <div className="w-full h-[52%] shrink-0 overflow-hidden bg-stone-50 flex items-center justify-center relative">
         <img
           src={imageUrl}
           alt={title}
@@ -54,14 +57,14 @@ export function ProductCard({
       <div
         className="flex-1 min-h-0 flex flex-col justify-between"
         style={{
-          padding: 'calc(6 * var(--u, 1px)) calc(7 * var(--u, 1px)) calc(5 * var(--u, 1px))',
+          padding: 'calc(5 * var(--u, 1px)) calc(7 * var(--u, 1px)) calc(4 * var(--u, 1px))',
         }}
       >
         {/* Text Section with Strict Line Clamping */}
         <div className="overflow-hidden min-h-0">
           {/* Title */}
           <h3
-            className="font-bold leading-tight line-clamp-1 truncate text-[#443000]"
+            className="font-extrabold leading-tight line-clamp-1 truncate text-[#443000]"
             title={title}
             style={{
               fontSize: 'calc(9.5 * var(--u, 1px))',
@@ -73,7 +76,7 @@ export function ProductCard({
           {/* Description */}
           {description && (
             <p
-              className="line-clamp-2 leading-snug text-stone-600 opacity-85 mt-[calc(2.5*var(--u,1px))]"
+              className="line-clamp-2 leading-snug text-stone-600 opacity-85 mt-[calc(2*var(--u,1px))]"
               title={description}
               style={{
                 fontSize: 'calc(7.2 * var(--u, 1px))',
@@ -84,34 +87,36 @@ export function ProductCard({
           )}
         </div>
 
-        {/* Bottom Price Row: Dedicated pinned footer, never collides with text */}
-        <div
-          className="mt-auto flex items-center justify-between border-t border-stone-100 shrink-0"
-          style={{
-            paddingTop: 'calc(3.5 * var(--u, 1px))',
-          }}
-        >
-          <span
-            className="font-bold select-none"
+        {/* Bottom Price Row: Only shown if product has an authentic price */}
+        {price !== undefined && price !== null && (
+          <div
+            className="mt-auto flex items-center justify-between border-t border-stone-100 shrink-0"
             style={{
-              color: 'var(--mag-accent, #B68763)',
-              fontSize: 'calc(8.5 * var(--u, 1px))',
+              paddingTop: 'calc(3 * var(--u, 1px))',
             }}
           >
-            السعر
-          </span>
-          <span
-            dir="ltr"
-            className="font-extrabold tracking-tight select-none"
-            style={{
-              color: 'var(--mag-ink, #443000)',
-              fontSize: 'calc(10.5 * var(--u, 1px))',
-              fontFamily: 'var(--mag-font-en)',
-            }}
-          >
-            {price !== undefined && price !== null ? `${price} L.E` : 'عند الطلب'}
-          </span>
-        </div>
+            <span
+              className="font-bold select-none"
+              style={{
+                color: 'var(--mag-accent, #B68763)',
+                fontSize: 'calc(8.5 * var(--u, 1px))',
+              }}
+            >
+              السعر
+            </span>
+            <span
+              dir="ltr"
+              className="font-extrabold tracking-tight select-none"
+              style={{
+                color: 'var(--mag-ink, #443000)',
+                fontSize: 'calc(10.5 * var(--u, 1px))',
+                fontFamily: 'var(--mag-font-en)',
+              }}
+            >
+              {price} L.E
+            </span>
+          </div>
+        )}
       </div>
     </div>
   );

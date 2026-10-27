@@ -6,7 +6,8 @@ import { IssueSnapshot } from '../types';
 import { FlipbookClient } from './FlipbookClient';
 import { HoneyShowcasePage } from '../components/HoneyShowcasePage';
 import { BasketsShowcasePage } from '../components/BasketsShowcasePage';
-import { CanvaMagazinePage } from '../components/CanvaMagazinePage';
+import { OliveDatesPage } from '../components/OliveDatesPage';
+import { Grid3x3Page } from '../components/Grid3x3Page';
 import { TocDrawer } from '../components/TocDrawer';
 import { ListViewGrid } from '../components/ListViewGrid';
 import { MagazineSearchModal } from '../components/MagazineSearchModal';
@@ -133,11 +134,21 @@ export function MagazineReaderView({
               if (pageData.position === 2) {
                 return <BasketsShowcasePage key={pageData.position} pageNumber={2} />;
               }
+              if (pageData.position >= 3 && pageData.position <= 5) {
+                return (
+                  <OliveDatesPage
+                    key={pageData.position}
+                    pageNumber={pageData.position}
+                  />
+                );
+              }
               return (
-                <CanvaMagazinePage
+                <Grid3x3Page
                   key={pageData.position}
                   pageNumber={pageData.position}
                   sectionTitle={pageData.section_title}
+                  slots={pageData.slots}
+                  isInteractive={true}
                 />
               );
             })}

@@ -26,7 +26,7 @@ export function Grid3x3Page({
       <div
         className="grid grid-cols-3 grid-rows-3 w-full h-full"
         style={{
-          gap: 'calc(12 * var(--u, 1px)) calc(13 * var(--u, 1px))',
+          gap: 'calc(8 * var(--u, 1px)) calc(8 * var(--u, 1px))',
           direction: 'rtl',
         }}
       >
@@ -42,7 +42,7 @@ export function Grid3x3Page({
                 isInteractive={isInteractive}
               />
             ) : (
-              <div className="w-full h-full bg-white/40 border border-dashed border-stone-300/30 rounded" />
+              <div className="w-full h-full" />
             )}
           </div>
         ))}
