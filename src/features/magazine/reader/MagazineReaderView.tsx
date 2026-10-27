@@ -4,7 +4,9 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { IssueSnapshot } from '../types';
 import { FlipbookClient } from './FlipbookClient';
-import { CanvaMagazinePage } from '../components/CanvaMagazinePage';
+import { Grid3x3Page } from '../components/Grid3x3Page';
+import { HoneyShowcasePage } from '../components/HoneyShowcasePage';
+import { OliveShowcasePage } from '../components/OliveShowcasePage';
 import { TocDrawer } from '../components/TocDrawer';
 import { ListViewGrid } from '../components/ListViewGrid';
 import { MagazineSearchModal } from '../components/MagazineSearchModal';
@@ -124,14 +126,23 @@ export function MagazineReaderView({
       <main className="flex-1 flex flex-col items-center justify-center">
         {viewMode === 'flipbook' ? (
           <FlipbookClient initialPage={currentPage} onPageChange={handlePageChange}>
-            {initialIssue.pages.map((pageData) => (
-              <CanvaMagazinePage
-                key={pageData.position}
-                pageNumber={pageData.position}
-                sectionTitle={pageData.section_title}
-                priority={pageData.position <= 4}
-              />
-            ))}
+            {initialIssue.pages.map((pageData) => {
+              if (pageData.position === 1) {
+                return <HoneyShowcasePage key={pageData.position} pageNumber={1} />;
+              }
+              if (pageData.position === 2) {
+                return <OliveShowcasePage key={pageData.position} pageNumber={2} />;
+              }
+              return (
+                <Grid3x3Page
+                  key={pageData.position}
+                  pageNumber={pageData.position}
+                  sectionTitle={pageData.section_title}
+                  slots={pageData.slots}
+                  isInteractive={true}
+                />
+              );
+            })}
           </FlipbookClient>
         ) : (
           <ListViewGrid
