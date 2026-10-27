@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import { IssueSnapshot } from '../types';
 import { FlipbookClient } from './FlipbookClient';
 import { HoneyShowcasePage } from '../components/HoneyShowcasePage';
@@ -21,7 +21,6 @@ export function MagazineReaderView({
   initialIssue,
   initialPage,
 }: MagazineReaderViewProps) {
-  const router = useRouter();
   const [currentPage, setCurrentPage] = useState<number>(initialPage);
   const [isTocOpen, setIsTocOpen] = useState<boolean>(false);
   const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
@@ -37,11 +36,25 @@ export function MagazineReaderView({
     <div className="min-h-screen bg-[#F3F4F7] flex flex-col">
       {/* Top Reader Navbar */}
       <nav className="w-full bg-white border-b border-stone-200 px-4 sm:px-6 py-3 flex items-center justify-between sticky top-0 z-40 shadow-xs">
-        <div className="flex items-center gap-3">
-          <img src="/brand/lotus_logo.png" alt="لوتس" className="h-9 w-auto object-contain" />
-          <span className="font-extrabold text-[#443000] text-base hidden sm:inline">
-            مجلة لوتس
-          </span>
+        <div className="mr-5 flex items-center gap-3">
+          <div className="relative h-12 w-12 flex-shrink-0">
+            <Image
+              src="/brand/lotus_logo.png"
+              alt="شعار لوتس"
+              fill
+              sizes="48px"
+              className="object-contain"
+              priority
+            />
+          </div>
+          <div className="flex flex-col">
+            <span className="text-xl font-extrabold tracking-tight text-[#443000] sm:text-2xl">
+              لوتس
+            </span>
+            <span className="-mt-1 text-[10px] font-medium tracking-wider text-stone-500">
+              كتالوج المنتجات اليدوية والتراثية
+            </span>
+          </div>
         </div>
 
         {/* Action Controls - Unified Luxury Toolbar */}

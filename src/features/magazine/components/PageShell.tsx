@@ -3,14 +3,21 @@ import React from 'react';
 interface PageShellProps {
   sectionTitle?: string | null;
   pageNumber?: number;
+  headlineBottom?: number;
   children: React.ReactNode;
 }
 
 export function PageShell({
-  sectionTitle = 'NA7LA عسل نقي',
+  sectionTitle = 'عسل نقي NA7LA',
   pageNumber,
+  headlineBottom,
   children,
 }: PageShellProps) {
+  // On showcase pages (1-5), the headline stops above the bottom feature card (~588)
+  // On catalog 3x3 grid pages (6+), the headline extends along the full grid to (~792)
+  const finalHeadlineBottom =
+    headlineBottom ?? (pageNumber && pageNumber >= 6 ? 792 : 588);
+
   return (
     <div
       className="magazine-page-container select-none relative w-full h-full overflow-hidden"
@@ -40,49 +47,56 @@ export function PageShell({
 
       {/* 2. Right Sidebar Vertical Title: 100% Authentic Canva Typography & Orientation */}
       <aside
-        className="absolute z-10 pointer-events-none select-none flex items-center justify-center"
+        className="absolute z-10 pointer-events-none select-none"
         style={{
-          right: 'calc(22 * var(--u, 1px))',
-          top: 'calc(580 * var(--u, 1px))',
-          width: 'calc(60 * var(--u, 1px))',
+          right: 'calc(96.5 * var(--u, 1px))',
+          top: `calc(${finalHeadlineBottom} * var(--u, 1px))`,
+          width: '0px',
           height: '0px',
         }}
       >
         <div
-          className="flex flex-col items-start gap-[calc(5*var(--u,1px))]"
+          className="flex flex-col items-start"
           style={{
-            transform: 'rotate(-90deg)',
-            transformOrigin: 'center center',
+            position: 'absolute',
+            right: 0,
+            bottom: 0,
+            width: 'max-content',
+            gap: 'calc(7 * var(--u, 1px))',
+            transform: 'rotate(90deg)',
+            transformOrigin: 'bottom right',
             whiteSpace: 'nowrap',
             direction: 'rtl',
             color: 'var(--mag-ink, #443000)',
           }}
         >
-          {/* Inner Line: قائمة الأسعار (rotates to left/inner line) */}
-          <span
-            className="font-bold tracking-normal block opacity-95"
-            style={{
-              fontSize: 'calc(18.5 * var(--u, 1px))',
-              fontFamily: 'var(--mag-font-ar)',
-              lineHeight: 1,
-            }}
-          >
-            قائمة الأسعار
-          </span>
-
-          {/* Outer Line: Section Title (rotates to right/outer line) */}
+          {/* Outer Line: Section Title (rotates to outer line on right) */}
           {sectionTitle && (
             <span
               className="font-extrabold tracking-normal block"
               style={{
-                fontSize: 'calc(22.5 * var(--u, 1px))',
+                fontSize: 'calc(23.5 * var(--u, 1px))',
                 fontFamily: 'var(--mag-font-ar)',
                 lineHeight: 1,
+                letterSpacing: '0.05em',
               }}
             >
               {sectionTitle}
             </span>
           )}
+
+          {/* Inner Line: قائمة الأسعار (rotates to inner line on left) */}
+          <span
+            className="font-bold tracking-normal block opacity-95"
+            style={{
+              fontSize: 'calc(19 * var(--u, 1px))',
+              fontFamily: 'var(--mag-font-ar)',
+              lineHeight: 1,
+              letterSpacing: '0.04em',
+            }}
+          >
+            قائمة الأسعار
+          </span>
         </div>
       </aside>
 

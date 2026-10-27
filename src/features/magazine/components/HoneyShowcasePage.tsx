@@ -7,7 +7,7 @@ interface HoneyShowcasePageProps {
 
 export function HoneyShowcasePage({ pageNumber = 1 }: HoneyShowcasePageProps) {
   return (
-    <PageShell sectionTitle="NA7LA عسل نقي" pageNumber={pageNumber}>
+    <PageShell sectionTitle="عسل نقي NA7LA" pageNumber={pageNumber}>
       {/* 2-Column Exact Authentic Canva Layout */}
       <div
         className="grid grid-cols-2 w-full h-full"

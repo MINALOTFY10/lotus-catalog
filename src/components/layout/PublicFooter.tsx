@@ -9,7 +9,7 @@ export function PublicFooter() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center border-b border-amber-900/40 pb-8">
           {/* Logo & Description */}
           <div className="flex items-center gap-4">
-            <div className="relative w-14 h-14 bg-white/10 p-1.5 rounded-full backdrop-blur-xs flex-shrink-0">
+            <div className="relative w-16 h-16 bg-white/10 p-1.5 rounded-full backdrop-blur-xs flex-shrink-0">
               <Image
                 src="/brand/lotus_logo.png"
                 alt="شعار لوتس"
@@ -19,7 +19,7 @@ export function PublicFooter() {
               />
             </div>
             <div>
-              <h3 className="text-xl font-extrabold text-white">لوتس للمنتجات اليدوية</h3>
+              <h3 className="text-xl font-extrabold text-white">لوتس  </h3>
               <p className="text-xs text-stone-300 mt-1 max-w-sm leading-relaxed">
                 كتالوج متكامل يجسد أصالة الحرف التراثية والمنتجات الطبيعية المصرية المصنوعة بأيدي أمهر الحرفيين.
               </p>
@@ -36,9 +36,6 @@ export function PublicFooter() {
             </Link>
             <Link href="/search" className="hover:text-[#B68763] transition-colors">
               البحث المتقدم
-            </Link>
-            <Link href="/admin" className="hover:text-[#B68763] transition-colors">
-              دخول الإدارة
             </Link>
           </div>
 
