@@ -38,42 +38,52 @@ export function PageShell({
         />
       </header>
 
-      {/* 3. Right Sidebar Vertical Title: Scaled to prevent any overflow */}
+      {/* 2. Right Sidebar Vertical Title: 100% Authentic Canva Typography & Orientation */}
       <aside
-        className="absolute flex flex-col items-center justify-center z-10 pointer-events-none text-center"
+        className="absolute z-10 pointer-events-none select-none flex items-center justify-center"
         style={{
-          right: 'calc(14 * var(--u, 1px))',
-          top: 'calc(350 * var(--u, 1px))',
-          height: 'calc(260 * var(--u, 1px))',
-          width: 'calc(45 * var(--u, 1px))',
-          writingMode: 'vertical-rl',
-          transform: 'rotate(180deg)',
-          transformOrigin: 'center center',
-          color: 'var(--mag-ink, #443000)',
-          direction: 'ltr',
+          right: 'calc(22 * var(--u, 1px))',
+          top: 'calc(580 * var(--u, 1px))',
+          width: 'calc(60 * var(--u, 1px))',
+          height: '0px',
         }}
       >
-        <span
-          className="font-extrabold tracking-tight whitespace-nowrap block"
+        <div
+          className="flex flex-col items-start gap-[calc(5*var(--u,1px))]"
           style={{
-            fontSize: 'calc(18 * var(--u, 1px))',
-            letterSpacing: 'calc(0.5 * var(--u, 1px))',
+            transform: 'rotate(-90deg)',
+            transformOrigin: 'center center',
+            whiteSpace: 'nowrap',
+            direction: 'rtl',
+            color: 'var(--mag-ink, #443000)',
           }}
         >
-          قائمة الأسعار
-        </span>
-
-        {sectionTitle && (
+          {/* Inner Line: قائمة الأسعار (rotates to left/inner line) */}
           <span
-            className="font-bold tracking-tight whitespace-nowrap block opacity-95 mt-1"
+            className="font-bold tracking-normal block opacity-95"
             style={{
-              fontSize: 'calc(16 * var(--u, 1px))',
-              letterSpacing: 'calc(0.5 * var(--u, 1px))',
+              fontSize: 'calc(18.5 * var(--u, 1px))',
+              fontFamily: 'var(--mag-font-ar)',
+              lineHeight: 1,
             }}
           >
-            {sectionTitle}
+            قائمة الأسعار
           </span>
-        )}
+
+          {/* Outer Line: Section Title (rotates to right/outer line) */}
+          {sectionTitle && (
+            <span
+              className="font-extrabold tracking-normal block"
+              style={{
+                fontSize: 'calc(22.5 * var(--u, 1px))',
+                fontFamily: 'var(--mag-font-ar)',
+                lineHeight: 1,
+              }}
+            >
+              {sectionTitle}
+            </span>
+          )}
+        </div>
       </aside>
 
       {/* 4. Main Catalog Content Area */}
