@@ -4,9 +4,9 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { IssueSnapshot } from '../types';
 import { FlipbookClient } from './FlipbookClient';
-import { Grid3x3Page } from '../components/Grid3x3Page';
 import { HoneyShowcasePage } from '../components/HoneyShowcasePage';
-import { OliveShowcasePage } from '../components/OliveShowcasePage';
+import { BasketsShowcasePage } from '../components/BasketsShowcasePage';
+import { CanvaMagazinePage } from '../components/CanvaMagazinePage';
 import { TocDrawer } from '../components/TocDrawer';
 import { ListViewGrid } from '../components/ListViewGrid';
 import { MagazineSearchModal } from '../components/MagazineSearchModal';
@@ -131,15 +131,13 @@ export function MagazineReaderView({
                 return <HoneyShowcasePage key={pageData.position} pageNumber={1} />;
               }
               if (pageData.position === 2) {
-                return <OliveShowcasePage key={pageData.position} pageNumber={2} />;
+                return <BasketsShowcasePage key={pageData.position} pageNumber={2} />;
               }
               return (
-                <Grid3x3Page
+                <CanvaMagazinePage
                   key={pageData.position}
                   pageNumber={pageData.position}
                   sectionTitle={pageData.section_title}
-                  slots={pageData.slots}
-                  isInteractive={true}
                 />
               );
             })}
