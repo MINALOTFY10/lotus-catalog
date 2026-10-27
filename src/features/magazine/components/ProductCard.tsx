@@ -33,13 +33,21 @@ export function ProductCard({
   const price = priceOverride !== undefined && priceOverride !== null ? priceOverride : product?.sale_price;
   const imageUrl = imageOverride || product?.primary_image_url || '/brand/lotus_logo.png';
   const slug = product?.slug || '#';
+  const copyLength = title.length + description.length;
+  const isDense = copyLength > 300 || title.length > 80;
+  const isCompact = !isDense && (copyLength > 180 || title.length > 45);
+  const imageShare = isDense ? 18 : isCompact ? 27 : 38;
+  const titleFontSize = title.length > 80 ? 7.5 : title.length > 45 ? 8.5 : 9.5;
+  const descriptionFontSize = isDense ? 6.2 : isCompact ? 6.6 : 7.2;
 
   const cardContent = (
     <div
       className="w-full h-full flex flex-col justify-between overflow-hidden bg-white shadow-[0_1px_3px_rgba(0,0,0,0.05)] hover:shadow-md transition-all duration-200 border border-stone-200/50 rounded-xs"
     >
-      {/* Top Image: Fixed 50% height with clean object-cover */}
-      <div className="w-full h-[52%] shrink-0 overflow-hidden bg-stone-50 flex items-center justify-center relative">
+      <div
+        className="w-full shrink-0 overflow-hidden bg-stone-50 flex items-center justify-center relative"
+        style={{ flexBasis: `${imageShare}%`, height: `${imageShare}%` }}
+      >
         <img
           src={imageUrl}
           alt={title}
@@ -53,21 +61,21 @@ export function ProductCard({
         />
       </div>
 
-      {/* Content Container: Guaranteed No-Overflow */}
       <div
-        className="flex-1 min-h-0 flex flex-col justify-between"
+        className="flex-1 flex flex-col justify-between"
         style={{
-          padding: 'calc(5 * var(--u, 1px)) calc(7 * var(--u, 1px)) calc(4 * var(--u, 1px))',
+          padding: 'calc(4 * var(--u, 1px))',
+          minHeight: 'max-content',
         }}
       >
-        {/* Text Section with Strict Line Clamping */}
-        <div className="overflow-hidden min-h-0">
-          {/* Title */}
+        <div className="min-w-0 flex-none">
           <h3
-            className="font-extrabold leading-tight line-clamp-1 truncate text-[#443000]"
+            className="font-extrabold leading-tight text-[#443000]"
             title={title}
             style={{
-              fontSize: 'calc(9.5 * var(--u, 1px))',
+              fontSize: `calc(${titleFontSize} * var(--u, 1px))`,
+              lineHeight: 1.1,
+              overflowWrap: 'anywhere',
             }}
           >
             {title}
@@ -76,10 +84,12 @@ export function ProductCard({
           {/* Description */}
           {description && (
             <p
-              className="line-clamp-2 leading-snug text-stone-600 opacity-85 mt-[calc(2*var(--u,1px))]"
+              className="leading-snug text-stone-600 opacity-85 mt-[calc(2*var(--u,1px))]"
               title={description}
               style={{
-                fontSize: 'calc(7.2 * var(--u, 1px))',
+                fontSize: `calc(${descriptionFontSize} * var(--u, 1px))`,
+                lineHeight: 1.15,
+                overflowWrap: 'anywhere',
               }}
             >
               {description}
@@ -87,7 +97,6 @@ export function ProductCard({
           )}
         </div>
 
-        {/* Bottom Price Row: Only shown if product has an authentic price */}
         {price !== undefined && price !== null && (
           <div
             className="mt-auto flex items-center justify-between border-t border-stone-100 shrink-0"

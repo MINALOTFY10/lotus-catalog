@@ -75,7 +75,7 @@ export function OliveDatesPage({ pageNumber }: OliveDatesPageProps) {
                 <h4 className="font-extrabold text-[#443000] text-[calc(10.5*var(--u,1px))] leading-tight">
                   {datesTitle}
                 </h4>
-                <p className="text-[calc(7.8*var(--u,1px))] text-stone-600 font-medium leading-snug mt-1 opacity-90 line-clamp-2">
+                <p className="text-[calc(7.8*var(--u,1px))] text-stone-600 font-medium leading-snug mt-1 opacity-90">
                   ناكهلاه التمور - مزروعة في الأراضي المصرية فاخر نخيل التمور.
                 </p>
               </div>
@@ -128,7 +128,7 @@ export function OliveDatesPage({ pageNumber }: OliveDatesPageProps) {
                 <h4 className="font-extrabold text-[#443000] text-[calc(11*var(--u,1px))] leading-tight">
                   {oliveTitle}
                 </h4>
-                <p className="text-[calc(7.8*var(--u,1px))] text-stone-600 font-medium leading-snug mt-1 opacity-90 line-clamp-3">
+                <p className="text-[calc(7.8*var(--u,1px))] text-stone-600 font-medium leading-snug mt-1 opacity-90">
                   مصري إكسترا فيرجين أوليفي ويل علامة تجارية من مزارع الزيتون المصرية النقية.
                 </p>
               </div>

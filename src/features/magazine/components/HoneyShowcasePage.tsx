@@ -61,7 +61,7 @@ export function HoneyShowcasePage({ pageNumber = 1 }: HoneyShowcasePageProps) {
                 <h4 className="font-extrabold text-[#443000] text-[calc(10.5*var(--u,1px))] leading-tight">
                   نقي عسل مع قرص العسل 650 G
                 </h4>
-                <p className="text-[calc(7.8*var(--u,1px))] text-stone-600 font-medium leading-snug mt-1 opacity-90 line-clamp-2">
+                <p className="text-[calc(7.8*var(--u,1px))] text-stone-600 font-medium leading-snug mt-1 opacity-90">
                   فاخر برطمان من طبيعي البرسيم عسل مملوء بقرص العسل الذهبي الغني بالمذاق الطبيعي.
                 </p>
               </div>
@@ -114,7 +114,7 @@ export function HoneyShowcasePage({ pageNumber = 1 }: HoneyShowcasePageProps) {
                 <h4 className="font-extrabold text-[#443000] text-[calc(11*var(--u,1px))] leading-tight">
                   عسل نقي NA7LA 1.5 KG
                 </h4>
-                <p className="text-[calc(7.8*var(--u,1px))] text-stone-600 font-medium leading-snug mt-1 opacity-90 line-clamp-3">
+                <p className="text-[calc(7.8*var(--u,1px))] text-stone-600 font-medium leading-snug mt-1 opacity-90">
                   هو فاخر البرسيم عسل، غني في طبيعي NA7LA— فيتامينات و إنزيمات الذي دعم المناعة و طاقة بطبيعية.
                 </p>
               </div>
@@ -134,10 +134,10 @@ export function HoneyShowcasePage({ pageNumber = 1 }: HoneyShowcasePageProps) {
 
           {/* 2. Honey with Nuts Tall Card (NO photo on top, exact authentic Canva) */}
           <div
-            className="w-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 flex flex-col justify-between p-[calc(12*var(--u,1px))]"
+            className="w-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 flex flex-col justify-between p-[calc(8*var(--u,1px))]"
             style={{ height: 'calc(296 * var(--u, 1px))' }}
           >
-            <div className="pt-[calc(20*var(--u,1px))]">
+            <div className="flex-1 flex flex-col justify-center">
               <h4 className="font-extrabold text-[#443000] text-[calc(11.5*var(--u,1px))] leading-snug">
                 عسل نقي مع مكسرات 650G
               </h4>
