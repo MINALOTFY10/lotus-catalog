@@ -7,7 +7,7 @@ interface BasketsShowcasePageProps {
 
 export function BasketsShowcasePage({ pageNumber = 2 }: BasketsShowcasePageProps) {
   return (
-    <PageShell sectionTitle="سلال وزيوت طبيعية" pageNumber={pageNumber}>
+    <PageShell sectionTitle="عسل نقي NA7LA" pageNumber={pageNumber}>
       {/* 2-Column Exact Authentic Canva Layout for Page 2 */}
       <div
         className="grid grid-cols-2 w-full h-full"

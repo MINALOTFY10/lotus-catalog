@@ -4,6 +4,8 @@ import { getLiveIssue } from '@/features/magazine/services/publishIssue';
 import { resolveCurrentPage } from '@/features/magazine/reader/useFlipbook';
 import { MagazineReaderView } from '@/features/magazine/reader/MagazineReaderView';
 
+import { MagazineSkeleton } from '@/features/magazine/components/MagazineSkeleton';
+
 export const metadata: Metadata = {
   title: 'مجلة لوتس التفاعلية | كتالوج المنتجات',
   description: 'تصفح كتالوج ومجلة لوتس للمنتجات اليدوية والتراثية المصرية بتجربة تفاعلية ثلاثية الأبعاد',
@@ -28,13 +30,7 @@ async function HomeMagazineContent({ searchParams }: HomePageProps) {
 
 export default function Home(props: HomePageProps) {
   return (
-    <Suspense
-      fallback={
-        <div className="min-h-screen bg-stone-100 flex items-center justify-center font-bold text-[#443000] text-sm">
-          جاري فتح مجلة لوتس التفاعلية...
-        </div>
-      }
-    >
+    <Suspense fallback={<MagazineSkeleton />}>
       <HomeMagazineContent {...props} />
     </Suspense>
   );

@@ -9,6 +9,7 @@ interface ProductCardProps {
   priceOverride?: number | null;
   imageOverride?: string | null;
   isInteractive?: boolean;
+  isHighlighted?: boolean;
 }
 
 export function ProductCard({
@@ -18,6 +19,7 @@ export function ProductCard({
   priceOverride,
   imageOverride,
   isInteractive = true,
+  isHighlighted = false,
 }: ProductCardProps) {
   if (!product && !titleOverride) {
     return <div className="w-full h-full" />;
@@ -33,25 +35,30 @@ export function ProductCard({
   const price = priceOverride !== undefined && priceOverride !== null ? priceOverride : product?.sale_price;
   const imageUrl = imageOverride || product?.primary_image_url || '/brand/lotus_logo.png';
   const slug = product?.slug || '#';
+  const hasDescription = Boolean(description && description.trim());
   const copyLength = title.length + description.length;
   const isDense = copyLength > 300 || title.length > 80;
   const isCompact = !isDense && (copyLength > 180 || title.length > 45);
-  const imageShare = isDense ? 18 : isCompact ? 27 : 38;
-  const titleFontSize = title.length > 80 ? 7.5 : title.length > 45 ? 8.5 : 9.5;
-  const descriptionFontSize = isDense ? 6.2 : isCompact ? 6.6 : 7.2;
+  const imageShare = hasDescription ? (isDense ? 22 : isCompact ? 30 : 40) : 56;
+  const titleFontSize = title.length > 80 ? 7.6 : title.length > 45 ? 8.6 : 9.6;
+  const descriptionFontSize = isDense ? 6.2 : isCompact ? 6.8 : 7.4;
 
   const cardContent = (
     <div
-      className="w-full h-full flex flex-col justify-between overflow-hidden bg-white shadow-[0_1px_3px_rgba(0,0,0,0.05)] hover:shadow-md transition-all duration-200 border border-stone-200/50 rounded-xs"
+      className={`w-full h-full flex flex-col justify-between overflow-hidden bg-white shadow-[0_1px_4px_rgba(0,0,0,0.07)] hover:shadow-lg transition-all duration-300 rounded-[calc(6*var(--u,1px))] ${
+        isHighlighted
+          ? 'border-2 border-[#B68763] ring-4 ring-[#B68763]/40 shadow-[0_0_25px_rgba(182,135,99,0.5)] scale-[1.03] z-20 animate-pulse'
+          : 'border border-stone-200/90 hover:border-[#B68763]/60'
+      }`}
     >
       <div
-        className="w-full shrink-0 overflow-hidden bg-stone-50 flex items-center justify-center relative"
+        className="w-full shrink-0 overflow-hidden bg-stone-50/60 flex items-center justify-center relative border-b border-stone-100"
         style={{ flexBasis: `${imageShare}%`, height: `${imageShare}%` }}
       >
         <img
           src={imageUrl}
           alt={title}
-          className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
           loading="lazy"
           onError={(e) => {
             const target = e.target as HTMLImageElement;
@@ -62,34 +69,33 @@ export function ProductCard({
       </div>
 
       <div
-        className="flex-1 flex flex-col justify-between"
+        className="flex-1 flex flex-col justify-between min-h-0 bg-white"
         style={{
-          padding: 'calc(4 * var(--u, 1px))',
-          minHeight: 'max-content',
+          padding: 'calc(8 * var(--u, 1px)) calc(9 * var(--u, 1px)) calc(8 * var(--u, 1px))',
         }}
       >
-        <div className="min-w-0 flex-none">
+        <div className="min-w-0 flex-1 flex flex-col justify-start">
           <h3
-            className="font-extrabold leading-tight text-[#443000]"
+            className="font-extrabold text-[#443000] tracking-tight"
             title={title}
             style={{
               fontSize: `calc(${titleFontSize} * var(--u, 1px))`,
-              lineHeight: 1.1,
-              overflowWrap: 'anywhere',
+              lineHeight: 1.28,
+              overflowWrap: 'break-word',
             }}
           >
             {title}
           </h3>
 
           {/* Description */}
-          {description && (
+          {hasDescription && (
             <p
-              className="leading-snug text-stone-600 opacity-85 mt-[calc(2*var(--u,1px))]"
+              className="text-stone-600 opacity-90 leading-snug mt-[calc(2.5*var(--u,1px))]"
               title={description}
               style={{
                 fontSize: `calc(${descriptionFontSize} * var(--u, 1px))`,
-                lineHeight: 1.15,
-                overflowWrap: 'anywhere',
+                lineHeight: 1.25,
+                overflowWrap: 'break-word',
               }}
             >
               {description}
@@ -99,9 +105,9 @@ export function ProductCard({
 
         {price !== undefined && price !== null && (
           <div
-            className="mt-auto flex items-center justify-between border-t border-stone-100 shrink-0"
+            className="mt-auto flex items-baseline justify-between border-t border-stone-100 shrink-0"
             style={{
-              paddingTop: 'calc(3 * var(--u, 1px))',
+              paddingTop: 'calc(5 * var(--u, 1px))',
             }}
           >
             <span

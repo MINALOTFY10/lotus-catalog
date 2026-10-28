@@ -13,7 +13,7 @@ interface MagazineSearchModalProps {
   isOpen: boolean;
   onClose: () => void;
   issue: IssueSnapshot;
-  onNavigateToPage: (pageNumber: number) => void;
+  onNavigateToPage: (pageNumber: number, cashierCode?: number | null) => void;
 }
 
 export function MagazineSearchModal({
@@ -40,9 +40,13 @@ export function MagazineSearchModal({
     });
   }, [allProducts, query]);
 
-  const handleProductClick = (pageNumber?: number) => {
+  const handleProductClick = (pageNumber?: number, cashierCode?: number | null) => {
     if (pageNumber) {
-      onNavigateToPage(pageNumber);
+      if (cashierCode !== undefined && cashierCode !== null) {
+        onNavigateToPage(pageNumber, cashierCode);
+      } else {
+        onNavigateToPage(pageNumber);
+      }
       onClose();
     }
   };
@@ -108,7 +112,7 @@ export function MagazineSearchModal({
 
           <div className="mt-4 flex flex-wrap items-center gap-2">
             <span className="me-1 text-xs font-semibold text-stone-500">اقتراحات سريعة</span>
-            {['عسل', 'فخار', 'سرسوع', 'إكسسوار', 'طقم', 'شمع'].map((tag) => (
+            {['عسل', 'سيراميك', 'شمع', 'فرعوني', 'نحاس'].map((tag) => (
               <button
                 key={tag}
                 type="button"
@@ -164,7 +168,7 @@ export function MagazineSearchModal({
                   <button
                     key={product.id || product.slug}
                     type="button"
-                    onClick={() => handleProductClick(product.magazinePageNumber)}
+                    onClick={() => handleProductClick(product.magazinePageNumber, product.cashier_code)}
                     className="group flex w-full items-center justify-between gap-3 rounded-xl border border-stone-200 bg-white p-3 text-right transition-colors hover:border-[#B68763]/60 hover:bg-amber-50/50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#B68763]"
                   >
                     <span className="flex min-w-0 items-center gap-3">
@@ -230,13 +234,6 @@ export function MagazineSearchModal({
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
           </Link>
-          <button
-            type="button"
-            onClick={onClose}
-            className="rounded-lg px-2 py-1 text-stone-500 transition-colors hover:bg-stone-100 hover:text-stone-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#B68763]"
-          >
-            إغلاق
-          </button>
         </div>
       </div>
     </div>

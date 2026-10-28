@@ -75,7 +75,7 @@ export function SearchClientView({
         {/* Quick Search Suggestions */}
         <div className="flex flex-wrap items-center justify-center gap-2 mt-4 text-xs">
           <span className="text-stone-400">عمليات بحث شائعة:</span>
-          {['عسل', 'فخار', 'سرسوع', 'إكسسوار', 'طقم'].map((tag) => (
+          {['عسل', 'سيراميك', 'شمع', 'فرعوني', 'نحاس'].map((tag) => (
             <button
               key={tag}
               onClick={() => setQuery(tag)}

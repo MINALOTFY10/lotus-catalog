@@ -7,7 +7,7 @@ interface OliveShowcasePageProps {
 
 export function OliveShowcasePage({ pageNumber = 2 }: OliveShowcasePageProps) {
   return (
-    <PageShell sectionTitle="سلال وزيوت طبيعية" pageNumber={pageNumber}>
+    <PageShell sectionTitle="عسل نقي NA7LA" pageNumber={pageNumber}>
       <div
         className="grid grid-cols-2 grid-rows-3 w-full h-full"
         style={{

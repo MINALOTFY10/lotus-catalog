@@ -8,6 +8,7 @@ interface Grid3x3PageProps {
   pageNumber?: number;
   slots: PageSlotData[];
   isInteractive?: boolean;
+  highlightedCode?: number | null;
 }
 
 export function Grid3x3Page({
@@ -15,6 +16,7 @@ export function Grid3x3Page({
   pageNumber,
   slots,
   isInteractive = true,
+  highlightedCode,
 }: Grid3x3PageProps) {
   // Ensure array has 9 slot entries
   const slotList: (PageSlotData | null)[] = Array.from({ length: 9 }, (_, index) => {
@@ -40,6 +42,7 @@ export function Grid3x3Page({
                 priceOverride={slotData.price_override}
                 imageOverride={slotData.image_override}
                 isInteractive={isInteractive}
+                isHighlighted={Boolean(highlightedCode && slotData.product?.cashier_code === highlightedCode)}
               />
             ) : (
               <div className="w-full h-full" />

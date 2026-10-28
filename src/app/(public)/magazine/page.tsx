@@ -4,6 +4,8 @@ import { getLiveIssue } from '@/features/magazine/services/publishIssue';
 import { resolveCurrentPage } from '@/features/magazine/reader/useFlipbook';
 import { MagazineReaderView } from '@/features/magazine/reader/MagazineReaderView';
 
+import { MagazineSkeleton } from '@/features/magazine/components/MagazineSkeleton';
+
 export const metadata: Metadata = {
   title: 'مجلة لوتس التفاعلية',
   description: 'تصفح كتالوج لوتس الكامل بجودة عالية مع تجربة تقليب الصفحات التفاعلية',
@@ -28,13 +30,7 @@ async function MagazineContent({ searchParams }: MagazinePageProps) {
 
 export default function MagazinePage(props: MagazinePageProps) {
   return (
-    <Suspense
-      fallback={
-        <div className="min-h-screen bg-stone-100 flex items-center justify-center font-bold text-[#443000]">
-          جاري تحميل المجلة...
-        </div>
-      }
-    >
+    <Suspense fallback={<MagazineSkeleton />}>
       <MagazineContent {...props} />
     </Suspense>
   );

@@ -3,6 +3,8 @@
 import React from 'react';
 import { MagazinePageData } from '../types';
 
+import { MagazinePagePreview } from './MagazinePagePreview';
+
 interface ListViewGridProps {
   pages: MagazinePageData[];
   onSelectPage?: (page: number) => void;
@@ -32,14 +34,11 @@ export function ListViewGrid({ pages, onSelectPage }: ListViewGridProps) {
             onClick={() => onSelectPage?.(page.position)}
             className="group cursor-pointer bg-white rounded-2xl p-3 shadow-md hover:shadow-2xl border border-stone-200 hover:border-[#B68763] transition-all duration-300 flex flex-col"
           >
-            <div className="relative w-full aspect-[595.5/842.25] overflow-hidden rounded-xl bg-stone-100 border border-stone-200/60 shadow-inner">
-              <img
-                src={`/magazine/pages/page_${page.position}.webp`}
-                alt={`صفحة ${page.position}`}
-                className="w-full h-full object-contain group-hover:scale-102 transition-transform duration-300"
-                loading="lazy"
-              />
-              <div className="absolute top-2.5 right-2.5 px-2.5 py-1 bg-black/60 backdrop-blur-xs text-white text-[11px] font-bold rounded-lg shadow-sm">
+            <div className="relative w-full aspect-[595.5/842.25] overflow-hidden rounded-xl bg-stone-100 border border-stone-200/60 shadow-inner group-hover:scale-102 transition-transform duration-300">
+              <div className="w-full h-full pointer-events-none select-none">
+                <MagazinePagePreview page={page} />
+              </div>
+              <div className="absolute top-2.5 right-2.5 px-2.5 py-1 bg-black/60 backdrop-blur-xs text-white text-[11px] font-bold rounded-lg shadow-sm z-20">
                 صفحة {page.position}
               </div>
             </div>

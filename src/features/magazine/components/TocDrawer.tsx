@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { MagazinePageData } from '../types';
+import { MagazinePagePreview } from './MagazinePagePreview';
 
 interface TocDrawerProps {
   isOpen: boolean;
@@ -63,12 +64,17 @@ export function TocDrawer({
               className="text-right p-2.5 rounded-xl border border-stone-200 hover:border-[#B68763] hover:bg-amber-50/40 transition-all flex items-center gap-3 group"
             >
               <div className="w-12 h-16 rounded-md overflow-hidden bg-stone-100 border border-stone-200 shrink-0 shadow-2xs">
-                <img
-                  src={`/magazine/thumbs/thumb_${sec.startPage}.webp`}
-                  alt=""
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform"
-                  loading="lazy"
-                />
+                {(() => {
+                  const targetPage = pages.find((p) => p.position === sec.startPage);
+                  return targetPage ? (
+                    <MagazinePagePreview
+                      page={targetPage}
+                      className="group-hover:scale-105 transition-transform"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-stone-200" />
+                  );
+                })()}
               </div>
 
               <div className="flex-1 min-w-0">

@@ -17,24 +17,24 @@ export function PublicHeader() {
   return (
     <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-stone-200 shadow-xs">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-18">
+        <div className="flex items-center justify-between h-20">
           {/* Brand Logo & Title */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <div className="relative w-12 h-12 flex-shrink-0">
+          <Link href="/" className="flex items-center gap-3.5 group">
+            <div className="relative w-14 h-14 sm:w-[58px] sm:h-[58px] flex-shrink-0 transition-transform duration-200 group-hover:scale-105">
               <Image
                 src="/brand/lotus_logo.png"
                 alt="شعار لوتس"
                 fill
-                sizes="48px"
+                sizes="58px"
                 className="object-contain"
                 priority
               />
             </div>
-            <div className="flex flex-col">
-              <span className="font-extrabold text-xl sm:text-2xl text-[#443000] tracking-tight group-hover:text-[#B68763] transition-colors">
+            <div className="flex flex-col justify-center">
+              <span className="font-extrabold text-lg sm:text-xl text-[#443000] tracking-tight leading-snug group-hover:text-[#B68763] transition-colors">
                 لوتس
               </span>
-              <span className="text-[10px] font-medium text-stone-500 -mt-1 tracking-wider">
+              <span className="text-[11px] font-medium text-stone-500 mt-0.5 leading-tight">
                 كتالوج المنتجات اليدوية والتراثية
               </span>
             </div>

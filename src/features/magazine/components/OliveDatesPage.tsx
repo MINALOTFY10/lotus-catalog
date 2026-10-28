@@ -32,7 +32,7 @@ export function OliveDatesPage({ pageNumber }: OliveDatesPageProps) {
     : '/magazine/assets/p4_dates_500g.webp';
 
   return (
-    <PageShell sectionTitle="سلال وزيوت طبيعية" pageNumber={pageNumber}>
+    <PageShell sectionTitle="عسل نقي NA7LA" pageNumber={pageNumber}>
       {/* 2-Column Exact Authentic Canva Layout for Olive Oil & Dates */}
       <div
         className="grid grid-cols-2 w-full h-full"
