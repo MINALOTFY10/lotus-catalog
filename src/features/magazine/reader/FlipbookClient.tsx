@@ -150,14 +150,14 @@ export function FlipbookClient({
       className={`relative w-full flex flex-col items-center select-none overflow-x-hidden ${
         isFullscreen
           ? 'h-screen w-screen bg-[#F3F4F7] p-2 flex flex-col justify-between overflow-hidden'
-          : 'py-3 sm:py-6 px-2 sm:px-4 justify-start'
+          : 'pt-1.5 pb-3 sm:py-6 px-2 sm:px-4 justify-start'
       }`}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
       {/* Book Stage */}
       <div
-        className="w-full flex items-center justify-center flex-1 min-h-0"
+        className="w-full flex items-start sm:items-center justify-center flex-1 min-h-0"
         style={{ perspective: '2000px' }}
       >
         {isMobile ? (
@@ -223,7 +223,7 @@ export function FlipbookClient({
       {/* Floating Control Bar at Bottom */}
       <div
         className={`z-30 px-2 sm:px-4 py-1.5 sm:py-2 bg-white/95 backdrop-blur shadow-md rounded-full border border-stone-200 flex items-center justify-center gap-1 sm:gap-3 text-xs font-medium transition-all max-w-[calc(100vw-20px)] mx-auto shrink-0 ${
-          isFullscreen ? 'mt-2 mb-1 shadow-lg' : 'mt-3 sm:mt-6'
+          isFullscreen ? 'mt-2 mb-1 shadow-lg' : 'mt-2.5 sm:mt-6 mb-1 sm:mb-0'
         }`}
       >
         {/* Previous page button */}

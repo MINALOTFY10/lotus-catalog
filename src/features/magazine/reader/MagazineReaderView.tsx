@@ -143,7 +143,7 @@ export function MagazineReaderView({
       </nav>
 
       {/* Main Reader View */}
-      <main className="flex-1 flex flex-col items-center justify-center">
+      <main className="flex-1 flex flex-col items-center justify-start sm:justify-center">
         {viewMode === 'flipbook' ? (
           <FlipbookClient initialPage={currentPage} onPageChange={handlePageChange}>
             {initialIssue.pages.map((pageData) => {
