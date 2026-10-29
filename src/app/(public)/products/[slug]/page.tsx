@@ -69,6 +69,17 @@ async function ProductDetailPageContent({ params }: ProductDetailPageProps) {
     .filter((p) => p.category === activeProduct.category && p.slug !== activeProduct.slug)
     .slice(0, 4);
 
+  // Generate a clean, simple description if not provided
+  const simpleDescription =
+    activeProduct.description_ar?.trim() ||
+    (activeProduct.category?.includes('عسل')
+      ? 'عسل نحل طبيعي نقي 100% مستخلص بعناية من أفضل المناحل المصرية.'
+      : activeProduct.category?.includes('فخار') || activeProduct.category?.includes('خزف')
+      ? 'قطعة فنية مشغولة يدوياً من الفخار والخزف بتشطيب متقن يجمع بين الأصالة والاستخدام العملي.'
+      : activeProduct.category?.includes('مجوهرات') || activeProduct.category?.includes('حلي')
+      ? 'تصميم تراثي أنيق مشغول يدوياً ليعكس أصالة وجمال الحرف المصرية.'
+      : 'صناعة يدوية مصرية متقنة تجسد عراقة الفنون التراثية بمظهر جذاب.');
+
   return (
     <>
       {/* Schema.org Product JSON-LD */}
@@ -77,9 +88,9 @@ async function ProductDetailPageContent({ params }: ProductDetailPageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         {/* Breadcrumb Navigation */}
-        <nav className="flex items-center gap-2 text-xs text-stone-500 mb-8 font-medium">
+        <nav className="flex items-center gap-2 text-xs text-stone-500 mb-6 font-medium">
           <Link href="/" className="hover:text-[#443000] transition-colors">
             الرئيسية
           </Link>
@@ -97,117 +108,86 @@ async function ProductDetailPageContent({ params }: ProductDetailPageProps) {
           <span className="text-[#443000] font-bold truncate max-w-xs">{activeProduct.name_ar}</span>
         </nav>
 
-        {/* Product Showcase Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 bg-white rounded-3xl p-6 sm:p-10 border border-stone-200/80 shadow-xs">
-          {/* Right Column: Image */}
-          <div className="flex flex-col items-center">
-            <div className="relative w-full aspect-4/3 sm:aspect-square max-w-lg rounded-2xl overflow-hidden bg-stone-100 border border-stone-200 shadow-inner">
+        {/* Product Showcase Card */}
+        <div className="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200/80 shadow-xs flex flex-col md:flex-row items-center md:items-stretch gap-6 sm:gap-10">
+          {/* Image Column - Compact, elegant square thumbnail */}
+          <div className="w-full md:w-[320px] shrink-0 flex items-center justify-center">
+            <div className="relative w-full max-w-[280px] sm:max-w-[320px] aspect-square rounded-2xl overflow-hidden bg-stone-50 border border-stone-200 shadow-inner group">
               <Image
                 src={activeProduct.primary_image_url}
                 alt={activeProduct.name_ar}
                 fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-contain sm:object-cover hover:scale-105 transition-transform duration-500"
+                sizes="(max-width: 768px) 280px, 320px"
+                className="object-contain sm:object-cover group-hover:scale-105 transition-transform duration-500"
                 priority
               />
               {activeProduct.cashier_code && (
-                <div className="absolute top-4 right-4 bg-black/75 backdrop-blur-md text-white text-xs font-mono font-bold px-3 py-1 rounded-full shadow-sm">
+                <div className="absolute top-3 right-3 bg-black/75 backdrop-blur-md text-white text-[11px] font-mono font-bold px-2.5 py-0.5 rounded-full shadow-sm">
                   كود المنتج: #{activeProduct.cashier_code}
                 </div>
               )}
             </div>
-
-            {/* Quality Note below image */}
-            <div className="flex items-center gap-3 mt-4 text-xs text-stone-500">
-              <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-              <span>صناعة يدوية مصرية أصيلة بجودة معتمدة</span>
-            </div>
           </div>
 
-          {/* Left Column: Product Info & Magazine CTA */}
-          <div className="flex flex-col justify-between">
+          {/* Details Column */}
+          <div className="flex-1 w-full flex flex-col justify-between">
             <div>
-              {/* Category & Status Badges */}
-              <div className="flex items-center gap-3 mb-3">
-                {activeProduct.category && (
-                  <span className="text-xs font-bold text-[#B68763] bg-[#B68763]/10 px-3 py-1 rounded-full">
+              {/* Category Badge */}
+              {activeProduct.category && (
+                <div className="mb-2.5">
+                  <span className="inline-block text-xs font-bold text-[#B68763] bg-[#B68763]/10 border border-[#B68763]/20 px-3 py-1 rounded-full">
                     {activeProduct.category}
                   </span>
-                )}
-                <span className="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200/60 px-3 py-1 rounded-full flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                  {activeProduct.stock_status || 'متاح في المعرض'}
-                </span>
-              </div>
+                </div>
+              )}
 
               {/* Title */}
-              <h1 className="text-2xl sm:text-3xl font-extrabold text-[#443000] leading-snug">
+              <h1 className="text-xl sm:text-2xl font-extrabold text-[#443000] leading-snug">
                 {activeProduct.name_ar}
               </h1>
 
-              {/* Price Box */}
-              <div className="mt-6 p-4 sm:p-5 rounded-2xl bg-stone-50 border border-stone-200/80 flex items-center justify-between">
-                <div>
-                  <span className="text-xs font-bold text-stone-500 block">السعر الرسمي بالكتالوج</span>
-                  <span className="text-2xl sm:text-3xl font-extrabold font-mono text-[#443000] tracking-tight">
-                    {formatMagazinePrice(activeProduct.sale_price)}
-                  </span>
-                </div>
-                <div className="text-left text-[11px] text-stone-400 font-medium">
-                  شامل ضريبة القيمة المضافة<br />وفق قائمة أسعار لوتس الرسمية
-                </div>
-              </div>
-
-              {/* Description */}
-              <div className="mt-6">
-                <h2 className="text-sm font-bold text-stone-800 mb-2">الوصف والمواصفات</h2>
-                <p className="text-stone-600 text-sm leading-relaxed whitespace-pre-line bg-stone-50/50 p-4 rounded-xl border border-stone-100">
-                  {activeProduct.description_ar ||
-                    'منتج يدوي فاخر مصنوع بعناية فائقة يجمع بين التصميم التراثي وجودة المواد الطبيعية.'}
-                </p>
-              </div>
+              {/* Simple Description */}
+              <p className="mt-3 text-stone-600 text-sm leading-relaxed">
+                {simpleDescription}
+              </p>
             </div>
 
-            {/* Interactive Magazine Connection Box */}
-            <div className="mt-8 pt-6 border-t border-stone-200">
-              {activeProduct.magazinePageNumber ? (
-                <div className="bg-gradient-to-l from-amber-50 to-orange-50/50 border border-[#B68763]/30 rounded-2xl p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
-                  <div className="flex items-center gap-3.5">
-                    <div className="w-11 h-11 rounded-xl bg-[#443000] text-white flex items-center justify-center font-bold text-sm shadow-xs flex-shrink-0">
-                      p.{activeProduct.magazinePageNumber}
-                    </div>
-                    <div>
-                      <h4 className="text-sm font-bold text-[#443000]">معروض في المجلة التفاعلية</h4>
-                      <p className="text-xs text-stone-600">
-                        {activeProduct.sectionTitle
-                          ? `قسم ${activeProduct.sectionTitle} - صفحة ${activeProduct.magazinePageNumber}`
-                          : `صفحة ${activeProduct.magazinePageNumber} في المجلة`}
-                      </p>
-                    </div>
-                  </div>
+            {/* Price & Magazine Action (at the bottom) */}
+            <div className="mt-6 pt-5 border-t border-stone-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <span className="text-[11px] font-bold text-stone-400 block mb-0.5">السعر</span>
+                <span className="text-2xl sm:text-3xl font-extrabold font-mono text-[#443000] tracking-tight">
+                  {formatMagazinePrice(activeProduct.sale_price)}
+                </span>
+              </div>
 
-                  <Link
-                    href={`/magazine?p=${activeProduct.magazinePageNumber}`}
-                    className="w-full sm:w-auto bg-[#443000] hover:bg-[#5c4205] text-white text-xs font-bold px-5 py-3 rounded-xl shadow-xs transition-colors text-center flex items-center justify-center gap-2 whitespace-nowrap"
+              {activeProduct.magazinePageNumber ? (
+                <Link
+                  href={`/magazine?p=${activeProduct.magazinePageNumber}`}
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#443000] hover:bg-[#B68763] text-white text-xs sm:text-sm font-bold shadow-xs hover:shadow-md transition-all duration-200"
+                >
+                  <svg
+                    className="w-4 h-4 shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    strokeWidth="2"
                   >
-                    <span>عرض الصفحة في المجلة</span>
-                    <svg className="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-                    </svg>
-                  </Link>
-                </div>
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                    />
+                  </svg>
+                  <span>عرض في المجلة (صفحة {activeProduct.magazinePageNumber})</span>
+                </Link>
               ) : (
-                <div className="bg-stone-50 border border-stone-200 rounded-2xl p-4 flex items-center justify-between">
-                  <span className="text-xs text-stone-600 font-medium">
-                    تصفح جميع الصفحات في المجلة الرقمية الكاملة
-                  </span>
-                  <Link
-                    href="/magazine"
-                    className="text-xs font-bold text-[#B68763] hover:underline"
-                  >
-                    فتح المجلة
-                  </Link>
-                </div>
+                <Link
+                  href="/magazine"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#443000] hover:bg-[#B68763] text-white text-xs sm:text-sm font-bold shadow-xs hover:shadow-md transition-all duration-200"
+                >
+                  <span>فتح المجلة</span>
+                </Link>
               )}
             </div>
           </div>

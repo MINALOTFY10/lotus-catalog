@@ -62,12 +62,9 @@ export function ProductsCatalogView({
       {/* Page Title & Magazine Promo Banner */}
       <div className="bg-gradient-to-r from-[#443000] via-[#5c4205] to-[#B68763] rounded-2xl p-6 sm:p-8 text-white shadow-lg mb-8 flex flex-col md:flex-row items-center justify-between gap-6">
         <div>
-          <span className="text-xs font-bold uppercase tracking-wider text-[#B68763] bg-white/10 px-3 py-1 rounded-full inline-block mb-2">
-            دليل الكتالوج الرسمي
-          </span>
           <h1 className="text-2xl sm:text-3xl font-extrabold">قائمة منتجات لوتس</h1>
           <p className="text-stone-200 text-sm mt-1 max-w-xl">
-            تصفح جميع المنتجات المتوفرة، أو انتقل إلى المجلة التفاعلية لتقليب الصفحات بتصميم كانفا الأنيق.
+            تصفح جميع المنتجات المتوفرة، أو انتقل إلى المجلة التفاعلية لتقليب الصفحات والاطلاع على المعروضات.
           </p>
 
         </div>

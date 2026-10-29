@@ -6,6 +6,9 @@ import Link from 'next/link';
 import { IssueSnapshot } from '../types';
 import { FlipbookClient } from './FlipbookClient';
 import { HoneyShowcasePage } from '../components/HoneyShowcasePage';
+import { BasketsShowcasePage } from '../components/BasketsShowcasePage';
+import { OliveDatesPage } from '../components/OliveDatesPage';
+import { OliveShowcasePage } from '../components/OliveShowcasePage';
 import { Grid3x3Page } from '../components/Grid3x3Page';
 import { TocDrawer } from '../components/TocDrawer';
 import { ListViewGrid } from '../components/ListViewGrid';
@@ -146,6 +149,18 @@ export function MagazineReaderView({
             {initialIssue.pages.map((pageData) => {
               if (pageData.position === 1) {
                 return <HoneyShowcasePage key={pageData.position} pageNumber={1} />;
+              }
+              if (pageData.position === 2) {
+                return <BasketsShowcasePage key={pageData.position} pageNumber={2} />;
+              }
+              if (pageData.position === 3) {
+                return <OliveDatesPage key={pageData.position} pageNumber={3} />;
+              }
+              if (pageData.position === 4) {
+                return <OliveDatesPage key={pageData.position} pageNumber={4} />;
+              }
+              if (pageData.position === 5) {
+                return <OliveShowcasePage key={pageData.position} pageNumber={5} />;
               }
               return (
                 <Grid3x3Page

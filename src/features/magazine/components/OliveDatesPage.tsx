@@ -33,130 +33,137 @@ export function OliveDatesPage({ pageNumber }: OliveDatesPageProps) {
 
   return (
     <PageShell sectionTitle="عسل نقي NA7LA" pageNumber={pageNumber}>
-      {/* 2-Column Exact Authentic Canva Layout for Olive Oil & Dates */}
+      {/* Exact Authentic Canva Layout for Olive Oil & Dates (Pages 3 & 4) */}
       <div
-        className="grid grid-cols-2 w-full h-full"
+        className="flex flex-col w-full h-full justify-between"
         style={{
           gap: 'calc(8 * var(--u, 1px))',
           direction: 'rtl',
         }}
       >
-        {/* Right Column (Contains NAKHLA Brand, Dates Product, Trust Badge) */}
+        {/* Top 2-Column Section */}
         <div
-          className="flex flex-col h-full"
-          style={{ gap: 'calc(8 * var(--u, 1px))' }}
+          className="grid grid-cols-2 w-full shrink-0"
+          style={{
+            height: 'calc(485 * var(--u, 1px))',
+            gap: 'calc(8 * var(--u, 1px))',
+          }}
         >
-          {/* 1. NAKHLA Dates Brand Container (NO product, NO price) */}
+          {/* Right Column (Contains NAKHLA Brand & Dates Product) */}
           <div
-            className="w-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 overflow-hidden flex items-center justify-center select-none"
-            style={{ height: 'calc(175 * var(--u, 1px))' }}
+            className="flex flex-col h-full justify-between"
+            style={{ gap: 'calc(8 * var(--u, 1px))' }}
           >
-            <img
-              src="/magazine/assets/p3_nakhla_brand.webp"
-              alt="شعار تمور نخلة NAKHLA"
-              className="w-full h-full object-contain p-[calc(6*var(--u,1px))]"
-            />
-          </div>
-
-          {/* 2. Dates Product Container */}
-          <div
-            className="w-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 flex flex-col justify-between overflow-hidden"
-            style={{ height: 'calc(300 * var(--u, 1px))' }}
-          >
-            <div className="w-full h-[54%] overflow-hidden bg-stone-100/50 shrink-0">
+            {/* 1. NAKHLA Dates Brand Container (NO product, NO price) */}
+            <div
+              className="w-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 overflow-hidden flex items-center justify-center select-none"
+              style={{ height: 'calc(175 * var(--u, 1px))' }}
+            >
               <img
-                src={datesImg}
-                alt={datesTitle}
-                className="w-full h-full object-cover"
+                src="/magazine/assets/p3_nakhla_brand.webp"
+                alt="شعار تمور نخلة NAKHLA"
+                className="w-full h-full object-contain p-[calc(6*var(--u,1px))]"
               />
             </div>
-            <div className="flex-1 p-[calc(8*var(--u,1px))] flex flex-col justify-between">
-              <div>
-                <h4 className="font-extrabold text-[#443000] text-[calc(10.5*var(--u,1px))] leading-tight">
-                  {datesTitle}
-                </h4>
-                <p className="text-[calc(7.8*var(--u,1px))] text-stone-600 font-medium leading-snug mt-1 opacity-90">
-                  ناكهلاه التمور - مزروعة في الأراضي المصرية فاخر نخيل التمور.
-                </p>
+
+            {/* 2. Dates Product Container */}
+            <div
+              className="w-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 flex flex-col justify-between overflow-hidden flex-1"
+            >
+              <div className="w-full h-[52%] overflow-hidden bg-stone-100/50 shrink-0">
+                <img
+                  src={datesImg}
+                  alt={datesTitle}
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <div className="flex items-center justify-between border-t border-stone-100 pt-[calc(3*var(--u,1px))] mt-auto">
-                <span className="font-bold text-[#B68763] text-[calc(9*var(--u,1px))]">
-                  السعر
-                </span>
-                <span
-                  dir="ltr"
-                  className="font-extrabold text-[#443000] text-[calc(11.5*var(--u,1px))]"
-                >
-                  {datesPrice}
-                </span>
+              <div className="flex-1 p-[calc(8*var(--u,1px))] flex flex-col justify-between">
+                <div>
+                  <h4 className="font-extrabold text-[#443000] text-[calc(10.5*var(--u,1px))] leading-tight">
+                    {datesTitle}
+                  </h4>
+                  <p className="text-[calc(7.8*var(--u,1px))] text-stone-600 font-medium leading-snug mt-1 opacity-90">
+                    ناكهلاه التمور - مزروعة في الأراضي المصرية فاخر نخيل التمور.
+                  </p>
+                </div>
+                <div className="flex items-center justify-between border-t border-stone-100 pt-[calc(3*var(--u,1px))] mt-auto">
+                  <span className="font-bold text-[#B68763] text-[calc(9*var(--u,1px))]">
+                    السعر
+                  </span>
+                  <span
+                    dir="ltr"
+                    className="font-extrabold text-[#443000] text-[calc(11.5*var(--u,1px))]"
+                  >
+                    {datesPrice}
+                  </span>
+                </div>
               </div>
             </div>
           </div>
 
-          {/* 3. Rural Fund Trust Badge Container (NO product, NO price) */}
+          {/* Left Column (Contains Olive Oil Product, WAJ Brand Card) */}
           <div
-            className="w-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 overflow-hidden flex items-center justify-center"
-            style={{ height: 'calc(176 * var(--u, 1px))' }}
+            className="flex flex-col h-full justify-between"
+            style={{ gap: 'calc(8 * var(--u, 1px))' }}
           >
-            <img
-              src="/magazine/assets/authentic_trust_card.webp"
-              alt="شهادة أصالة صندوق دعم الصناعات الريفية والبيئية"
-              className="w-full h-full object-contain"
-            />
+            {/* 1. Olive Oil Product Container */}
+            <div
+              className="w-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 flex flex-col justify-between overflow-hidden"
+              style={{ height: 'calc(315 * var(--u, 1px))' }}
+            >
+              <div className="w-full h-[54%] overflow-hidden bg-stone-100/50 shrink-0">
+                <img
+                  src={oliveImg}
+                  alt={oliveTitle}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="flex-1 p-[calc(8*var(--u,1px))] flex flex-col justify-between">
+                <div>
+                  <h4 className="font-extrabold text-[#443000] text-[calc(11*var(--u,1px))] leading-tight">
+                    {oliveTitle}
+                  </h4>
+                  <p className="text-[calc(7.8*var(--u,1px))] text-stone-600 font-medium leading-snug mt-1 opacity-90">
+                    مصري إكسترا فيرجين أوليفي ويل علامة تجارية من مزارع الزيتون المصرية النقية.
+                  </p>
+                </div>
+                <div className="flex items-center justify-between border-t border-stone-100 pt-[calc(3*var(--u,1px))] mt-auto">
+                  <span className="font-bold text-[#B68763] text-[calc(9*var(--u,1px))]">
+                    السعر
+                  </span>
+                  <span
+                    dir="ltr"
+                    className="font-extrabold text-[#443000] text-[calc(11.5*var(--u,1px))]"
+                  >
+                    {olivePrice}
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* 2. WAJ Olive Oil Brand Container (NO product, NO price) */}
+            <div
+              className="w-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 flex flex-col items-center justify-center p-[calc(10*var(--u,1px))] select-none overflow-hidden flex-1"
+            >
+              <img
+                src="/magazine/assets/p3_waj_brand.webp"
+                alt="شعار واج WAJ"
+                className="max-h-[85%] w-auto object-contain"
+              />
+            </div>
           </div>
         </div>
 
-        {/* Left Column (Contains Olive Oil Product, WAJ Brand Card) */}
+        {/* Bottom Full-Width Rural Natural Banner (Exact Authentic Canva) */}
         <div
-          className="flex flex-col h-full"
-          style={{ gap: 'calc(8 * var(--u, 1px))' }}
+          className="w-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 overflow-hidden flex items-center justify-center select-none shrink-0"
+          style={{ height: 'calc(160 * var(--u, 1px))' }}
         >
-          {/* 1. Olive Oil Product Container */}
-          <div
-            className="w-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 flex flex-col justify-between overflow-hidden"
-            style={{ height: 'calc(355 * var(--u, 1px))' }}
-          >
-            <div className="w-full h-[54%] overflow-hidden bg-stone-100/50 shrink-0">
-              <img
-                src={oliveImg}
-                alt={oliveTitle}
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="flex-1 p-[calc(8*var(--u,1px))] flex flex-col justify-between">
-              <div>
-                <h4 className="font-extrabold text-[#443000] text-[calc(11*var(--u,1px))] leading-tight">
-                  {oliveTitle}
-                </h4>
-                <p className="text-[calc(7.8*var(--u,1px))] text-stone-600 font-medium leading-snug mt-1 opacity-90">
-                  مصري إكسترا فيرجين أوليفي ويل علامة تجارية من مزارع الزيتون المصرية النقية.
-                </p>
-              </div>
-              <div className="flex items-center justify-between border-t border-stone-100 pt-[calc(3*var(--u,1px))] mt-auto">
-                <span className="font-bold text-[#B68763] text-[calc(9*var(--u,1px))]">
-                  السعر
-                </span>
-                <span
-                  dir="ltr"
-                  className="font-extrabold text-[#443000] text-[calc(11.5*var(--u,1px))]"
-                >
-                  {olivePrice}
-                </span>
-              </div>
-            </div>
-          </div>
-
-          {/* 2. WAJ Olive Oil Brand Container (NO product, NO price) */}
-          <div
-            className="w-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 flex flex-col items-center justify-center p-[calc(12*var(--u,1px))] select-none overflow-hidden"
-            style={{ height: 'calc(296 * var(--u, 1px))' }}
-          >
-            <img
-              src="/magazine/assets/p3_waj_brand.webp"
-              alt="شعار واج WAJ"
-              className="max-h-[85%] w-auto object-contain"
-            />
-          </div>
+          <img
+            src="/magazine/assets/p3_bottom_natural_banner.webp"
+            alt="طبيعي من مناحل صندوق دعم الصناعات الريفية والبيئية مصر"
+            className="w-full h-full object-cover"
+          />
         </div>
       </div>
     </PageShell>

@@ -91,7 +91,14 @@ export function getPublicProductBySlug(
   issue: IssueSnapshot
 ): PublicProduct | null {
   const products = extractProductsFromIssue(issue);
-  const found = products.find((p) => p.slug === slug || p.id === slug);
+  const found = products.find((p) => {
+    if (p.slug === slug || p.id === slug) return true;
+    if (slug.startsWith('prod-') && p.cashier_code) {
+      const match = slug.match(/^prod-(\d+)/);
+      if (match && Number(match[1]) === p.cashier_code) return true;
+    }
+    return false;
+  });
   return found || null;
 }
 

@@ -52,17 +52,17 @@ export function HoneyShowcasePage({ pageNumber = 1 }: HoneyShowcasePageProps) {
             <div className="w-full h-[54%] overflow-hidden bg-stone-100/50 shrink-0">
               <img
                 src="/magazine/assets/p1_honey_comb_clean.webp"
-                alt="نقي عسل مع قرص العسل"
+                alt="عسل نقي مع قرص العسل"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="flex-1 p-[calc(8*var(--u,1px))] flex flex-col justify-between">
               <div>
                 <h4 className="font-extrabold text-[#443000] text-[calc(10.5*var(--u,1px))] leading-tight">
-                  نقي عسل مع قرص العسل 650 G
+                  عسل نقي مع قرص العسل 650 G
                 </h4>
                 <p className="text-[calc(7.8*var(--u,1px))] text-stone-600 font-medium leading-snug mt-1 opacity-90">
-                  فاخر برطمان من طبيعي البرسيم عسل مملوء بقرص العسل الذهبي الغني بالمذاق الطبيعي.
+                  برطمان فاخر من عسل البرسيم الطبيعي مملوء بقرص العسل الذهبي الغني بالمذاق الأصيل.
                 </p>
               </div>
               <div className="flex items-center justify-between border-t border-stone-100 pt-[calc(3*var(--u,1px))] mt-auto">
@@ -115,7 +115,7 @@ export function HoneyShowcasePage({ pageNumber = 1 }: HoneyShowcasePageProps) {
                   عسل نقي NA7LA 1.5 KG
                 </h4>
                 <p className="text-[calc(7.8*var(--u,1px))] text-stone-600 font-medium leading-snug mt-1 opacity-90">
-                  هو فاخر البرسيم عسل، غني في طبيعي NA7LA— فيتامينات و إنزيمات الذي دعم المناعة و طاقة بطبيعية.
+                  عسل برسيم طبيعي فاخر من NA7LA، غني بالفيتامينات والإنزيمات الطبيعية لتعزيز المناعة والطاقة.
                 </p>
               </div>
               <div className="flex items-center justify-between border-t border-stone-100 pt-[calc(3*var(--u,1px))] mt-auto">
@@ -142,7 +142,7 @@ export function HoneyShowcasePage({ pageNumber = 1 }: HoneyShowcasePageProps) {
                 عسل نقي مع مكسرات 650G
               </h4>
               <p className="text-[calc(8*var(--u,1px))] text-stone-600 font-medium leading-relaxed mt-3 opacity-90">
-                عسل مع مكسرات — فاخر مزيج من نقي البرسيم NA7LA، عسل و مقرمشة طبيعي مكسرات، غنية مع بروتينات، فيتامينات، و طاقة لـ مفيد تعزيز.
+                عسل مع مكسرات — مزيج فاخر من عسل برسيم NA7LA النقي والمكسرات الطبيعية المقرمشة، غني بالبروتينات والفيتامينات والطاقة.
               </p>
             </div>
             <div className="flex items-center justify-between border-t border-stone-100 pt-[calc(3*var(--u,1px))] mt-auto">
