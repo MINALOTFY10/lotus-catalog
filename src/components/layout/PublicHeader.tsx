@@ -106,11 +106,6 @@ export function PublicHeader() {
                   }`}
                 >
                   <span>{link.label}</span>
-                  {link.highlight && (
-                    <span className="text-[10px] bg-white/20 px-2 py-0.5 rounded-full">
-                      Canva Replica
-                    </span>
-                  )}
                 </Link>
               ))}
             </div>
