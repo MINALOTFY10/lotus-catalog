@@ -8,8 +8,8 @@ describe('Reader Page Data Resolution', () => {
     expect(liveIssue.totalPages).toBeGreaterThanOrEqual(50);
     // Page 1 is NA7LA honey with 4 featured items
     expect(liveIssue.pages[0].slots.length).toBe(4);
-    // Page 2 is full 9-card page
-    expect(liveIssue.pages[1].slots.length).toBe(9);
+    // First grid page (page 6) is full 9-card page
+    expect(liveIssue.pages[5].slots.length).toBe(9);
 
     const validPage = resolveCurrentPage('5', liveIssue.totalPages);
     expect(validPage).toBe(5);
