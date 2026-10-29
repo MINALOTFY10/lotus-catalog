@@ -20,15 +20,15 @@ export function MagazinePagePreview({ page, className = '' }: MagazinePagePrevie
       aria-label={`معاينة صفحة ${page.position}`}
     >
       {page.position === 1 ? (
-        <HoneyShowcasePage pageNumber={1} />
+        <HoneyShowcasePage pageNumber={1} isInteractive={false} />
       ) : page.position === 2 ? (
-        <BasketsShowcasePage pageNumber={2} />
+        <BasketsShowcasePage pageNumber={2} isInteractive={false} />
       ) : page.position === 3 ? (
-        <OliveDatesPage pageNumber={3} />
+        <OliveDatesPage pageNumber={3} isInteractive={false} />
       ) : page.position === 4 ? (
-        <OliveDatesPage pageNumber={4} />
+        <OliveDatesPage pageNumber={4} isInteractive={false} />
       ) : page.position === 5 ? (
-        <OliveShowcasePage pageNumber={5} />
+        <OliveShowcasePage pageNumber={5} isInteractive={false} />
       ) : (
         <Grid3x3Page
           pageNumber={page.position}

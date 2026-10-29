@@ -167,7 +167,7 @@ export function FlipbookClient({
             style={{
               maxWidth: isFullscreen
                 ? 'calc((100vh - 68px) * (595 / 842))'
-                : 'min(calc(100vw - 24px), calc((100vh - 175px) * (595 / 842)), 440px)',
+                : 'min(calc(100vw - 20px), 460px)',
               width: '100%',
             }}
           >
@@ -181,7 +181,7 @@ export function FlipbookClient({
               direction: 'ltr',
               maxWidth: isFullscreen
                 ? 'min(98vw, calc((100vh - 68px) * (1190 / 842)))'
-                : '1140px',
+                : 'min(94vw, 1260px)',
             }}
           >
             {/* Left Page */}
@@ -190,7 +190,7 @@ export function FlipbookClient({
               style={{
                 maxWidth: isFullscreen
                   ? 'min(49vw, calc((100vh - 68px) * (595 / 842)))'
-                  : '570px',
+                  : '630px',
               }}
             >
               {leftPageIndex < children.length ? (
@@ -209,7 +209,7 @@ export function FlipbookClient({
               style={{
                 maxWidth: isFullscreen
                   ? 'min(49vw, calc((100vh - 68px) * (595 / 842)))'
-                  : '570px',
+                  : '630px',
               }}
             >
               {children[rightPageIndex] || (

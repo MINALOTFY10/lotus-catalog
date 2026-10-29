@@ -148,19 +148,54 @@ export function MagazineReaderView({
           <FlipbookClient initialPage={currentPage} onPageChange={handlePageChange}>
             {initialIssue.pages.map((pageData) => {
               if (pageData.position === 1) {
-                return <HoneyShowcasePage key={pageData.position} pageNumber={1} />;
+                return (
+                  <HoneyShowcasePage
+                    key={pageData.position}
+                    pageNumber={1}
+                    isInteractive={true}
+                    highlightedCode={highlightedCode}
+                  />
+                );
               }
               if (pageData.position === 2) {
-                return <BasketsShowcasePage key={pageData.position} pageNumber={2} />;
+                return (
+                  <BasketsShowcasePage
+                    key={pageData.position}
+                    pageNumber={2}
+                    isInteractive={true}
+                    highlightedCode={highlightedCode}
+                  />
+                );
               }
               if (pageData.position === 3) {
-                return <OliveDatesPage key={pageData.position} pageNumber={3} />;
+                return (
+                  <OliveDatesPage
+                    key={pageData.position}
+                    pageNumber={3}
+                    isInteractive={true}
+                    highlightedCode={highlightedCode}
+                  />
+                );
               }
               if (pageData.position === 4) {
-                return <OliveDatesPage key={pageData.position} pageNumber={4} />;
+                return (
+                  <OliveDatesPage
+                    key={pageData.position}
+                    pageNumber={4}
+                    isInteractive={true}
+                    highlightedCode={highlightedCode}
+                  />
+                );
               }
               if (pageData.position === 5) {
-                return <OliveShowcasePage key={pageData.position} pageNumber={5} />;
+                return (
+                  <OliveShowcasePage
+                    key={pageData.position}
+                    pageNumber={5}
+                    isInteractive={true}
+                    highlightedCode={highlightedCode}
+                  />
+                );
               }
               return (
                 <Grid3x3Page
