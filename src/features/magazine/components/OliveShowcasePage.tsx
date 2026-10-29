@@ -60,7 +60,7 @@ export function OliveShowcasePage({
     <PageShell sectionTitle="عسل نقي NA7LA" pageNumber={pageNumber}>
       {/* Exact Authentic Canva Layout for Page 5 (Olive Oil Solo Showcase) */}
       <div
-        className="flex flex-col w-full select-none"
+        className="flex flex-col w-full select-none animate-rise-bottom-delayed"
         style={{
           gap: 'calc(8 * var(--u, 1px))',
           direction: 'rtl',
@@ -80,21 +80,29 @@ export function OliveShowcasePage({
             style={{ gap: 'calc(8 * var(--u, 1px))' }}
           >
             {/* 1. Olive Oil 500 ML Product Container */}
-            {isInteractive ? (
-              <Link
-                href="/products/prod-55-زيت-زيتون-بكر-ممتاز-500-ML"
-                className="block w-full no-underline group focus:outline-none shrink-0"
-                style={{ height: 'calc(295 * var(--u, 1px))' }}
-              >
-                {olive500Card}
-              </Link>
-            ) : (
-              olive500Card
-            )}
+            <div
+              className="w-full shrink-0 animate-card-rise"
+              style={{
+                height: 'calc(295 * var(--u, 1px))',
+                animationDelay: '0.08s',
+              }}
+            >
+              {isInteractive ? (
+                <Link
+                  href="/products/prod-55-زيت-زيتون-بكر-ممتاز-500-ML"
+                  className="block w-full h-full no-underline group focus:outline-none"
+                >
+                  {olive500Card}
+                </Link>
+              ) : (
+                olive500Card
+              )}
+            </div>
 
             {/* 2. Olive Oil Triptych / Groves Photo Collage Container */}
             <div
-              className="w-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 overflow-hidden flex items-center justify-center select-none flex-1"
+              className="w-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 overflow-hidden flex items-center justify-center select-none flex-1 animate-card-rise"
+              style={{ animationDelay: '0.16s' }}
             >
               <img
                 src="/magazine/assets/p5_olive_collage.webp"
@@ -106,7 +114,8 @@ export function OliveShowcasePage({
 
           {/* Left Column: Tall Vertical Olive Branch Natural Card */}
           <div
-            className="w-full h-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 overflow-hidden flex items-center justify-center select-none"
+            className="w-full h-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 overflow-hidden flex items-center justify-center select-none animate-card-rise"
+            style={{ animationDelay: '0.12s' }}
           >
             <img
               src="/magazine/assets/p5_left_tall_olive_card.webp"
@@ -118,8 +127,11 @@ export function OliveShowcasePage({
 
         {/* Bottom Full-Width WAJ Brand Card (Exact Authentic Canva) */}
         <div
-          className="w-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 overflow-hidden flex items-center justify-center select-none shrink-0"
-          style={{ height: 'calc(155 * var(--u, 1px))' }}
+          className="w-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 overflow-hidden flex items-center justify-center select-none shrink-0 animate-card-rise"
+          style={{
+            height: 'calc(155 * var(--u, 1px))',
+            animationDelay: '0.22s',
+          }}
         >
           <img
             src="/magazine/assets/p5_waj_bottom_card.webp"

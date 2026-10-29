@@ -141,7 +141,7 @@ export function OliveDatesPage({
     <PageShell sectionTitle="عسل نقي NA7LA" pageNumber={pageNumber}>
       {/* Exact Authentic Canva Layout for Olive Oil & Dates (Pages 3 & 4) */}
       <div
-        className="flex flex-col w-full h-full justify-between"
+        className="flex flex-col w-full h-full justify-between animate-rise-bottom-delayed"
         style={{
           gap: 'calc(8 * var(--u, 1px))',
           direction: 'rtl',
@@ -162,8 +162,11 @@ export function OliveDatesPage({
           >
             {/* 1. NAKHLA Dates Brand Container (NO product, NO price) */}
             <div
-              className="w-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 overflow-hidden flex items-center justify-center select-none"
-              style={{ height: 'calc(175 * var(--u, 1px))' }}
+              className="w-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 overflow-hidden flex items-center justify-center select-none animate-card-rise"
+              style={{
+                height: 'calc(175 * var(--u, 1px))',
+                animationDelay: '0.08s',
+              }}
             >
               <img
                 src="/magazine/assets/p3_nakhla_brand.webp"
@@ -173,16 +176,21 @@ export function OliveDatesPage({
             </div>
 
             {/* 2. Dates Product Container */}
-            {isInteractive ? (
-              <Link
-                href={`/products/${datesSlug}`}
-                className="block w-full no-underline group focus:outline-none flex-1 flex flex-col"
-              >
-                {datesCard}
-              </Link>
-            ) : (
-              datesCard
-            )}
+            <div
+              className="w-full flex-1 flex flex-col animate-card-rise"
+              style={{ animationDelay: '0.16s' }}
+            >
+              {isInteractive ? (
+                <Link
+                  href={`/products/${datesSlug}`}
+                  className="block w-full h-full no-underline group focus:outline-none flex-1 flex flex-col"
+                >
+                  {datesCard}
+                </Link>
+              ) : (
+                datesCard
+              )}
+            </div>
           </div>
 
           {/* Left Column (Contains Olive Oil Product, WAJ Brand Card) */}
@@ -191,21 +199,29 @@ export function OliveDatesPage({
             style={{ gap: 'calc(8 * var(--u, 1px))' }}
           >
             {/* 1. Olive Oil Product Container */}
-            {isInteractive ? (
-              <Link
-                href={`/products/${oliveSlug}`}
-                className="block w-full no-underline group focus:outline-none"
-                style={{ height: 'calc(315 * var(--u, 1px))' }}
-              >
-                {oliveCard}
-              </Link>
-            ) : (
-              oliveCard
-            )}
+            <div
+              className="w-full animate-card-rise"
+              style={{
+                height: 'calc(315 * var(--u, 1px))',
+                animationDelay: '0.12s',
+              }}
+            >
+              {isInteractive ? (
+                <Link
+                  href={`/products/${oliveSlug}`}
+                  className="block w-full h-full no-underline group focus:outline-none"
+                >
+                  {oliveCard}
+                </Link>
+              ) : (
+                oliveCard
+              )}
+            </div>
 
             {/* 2. WAJ Olive Oil Brand Container (NO product, NO price) */}
             <div
-              className="w-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 flex flex-col items-center justify-center p-[calc(10*var(--u,1px))] select-none overflow-hidden flex-1"
+              className="w-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 flex flex-col items-center justify-center p-[calc(10*var(--u,1px))] select-none overflow-hidden flex-1 animate-card-rise"
+              style={{ animationDelay: '0.20s' }}
             >
               <img
                 src="/magazine/assets/p3_waj_brand.webp"
@@ -218,8 +234,11 @@ export function OliveDatesPage({
 
         {/* Bottom Full-Width Rural Natural Banner (Exact Authentic Canva) */}
         <div
-          className="w-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 overflow-hidden flex items-center justify-center select-none shrink-0"
-          style={{ height: 'calc(160 * var(--u, 1px))' }}
+          className="w-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 overflow-hidden flex items-center justify-center select-none shrink-0 animate-card-rise"
+          style={{
+            height: 'calc(160 * var(--u, 1px))',
+            animationDelay: '0.24s',
+          }}
         >
           <img
             src="/magazine/assets/p3_bottom_natural_banner.webp"

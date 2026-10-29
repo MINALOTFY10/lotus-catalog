@@ -43,7 +43,7 @@ describe('ProductCard', () => {
     expect(screen.getByText('مصنوع يدويا براسس مجوهرات طقم مع حلق متناسق')).toBeDefined();
   });
 
-  it('lets long product titles and descriptions wrap without truncation', () => {
+  it('lets long product titles wrap and clamps descriptions to maximum two lines with line-clamp', () => {
     const title = 'Handcrafted catalog title '.repeat(5).trim();
     const description = 'Detailed product description '.repeat(12).trim();
 
@@ -62,7 +62,7 @@ describe('ProductCard', () => {
     expect(screen.getByRole('heading', { name: title }).className).not.toContain(
       'truncate'
     );
-    expect(screen.getByText(description).className).not.toContain('line-clamp');
+    expect(screen.getByText(description).className).toContain('line-clamp-2');
   });
 });
 

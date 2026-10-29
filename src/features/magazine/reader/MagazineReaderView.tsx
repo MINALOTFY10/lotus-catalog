@@ -38,7 +38,7 @@ export function MagazineReaderView({
   return (
     <div className="min-h-screen bg-[#F3F4F7] flex flex-col">
       {/* Top Reader Navbar */}
-      <nav className="w-full bg-white border-b border-stone-200 px-2 sm:px-6 py-2 sm:py-3 flex items-center justify-between sticky top-0 z-40 shadow-xs">
+      <nav className="w-full bg-white border-b border-stone-200 px-2 sm:px-6 py-2 sm:py-3 flex items-center justify-between sticky top-0 z-40 shadow-xs animate-slide-down-nav">
         <Link href="/" className="flex items-center gap-1.5 sm:gap-3.5 group min-w-0">
           <div className="relative h-10 w-10 sm:h-14 sm:w-14 flex-shrink-0 transition-transform duration-200 group-hover:scale-105">
             <Image

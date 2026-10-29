@@ -33,7 +33,13 @@ export function Grid3x3Page({
         }}
       >
         {slotList.map((slotData, index) => (
-          <div key={index} className="w-full h-full min-h-0 min-w-0">
+          <div
+            key={index}
+            className="w-full h-full min-h-0 min-w-0 animate-card-rise"
+            style={{
+              animationDelay: `calc(${index} * 0.035s + 0.12s)`,
+            }}
+          >
             {slotData ? (
               <ProductCard
                 product={slotData.product}

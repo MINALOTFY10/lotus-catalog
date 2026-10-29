@@ -117,7 +117,7 @@ export function BasketsShowcasePage({
     <PageShell sectionTitle="عسل نقي NA7LA" pageNumber={pageNumber}>
       {/* 2-Column Exact Authentic Canva Layout for Page 2 */}
       <div
-        className="grid grid-cols-2 w-full h-full"
+        className="grid grid-cols-2 w-full h-full animate-rise-bottom-delayed"
         style={{
           gap: 'calc(8 * var(--u, 1px))',
           direction: 'rtl',
@@ -130,8 +130,11 @@ export function BasketsShowcasePage({
         >
           {/* 1. Bee Brand Emblem Container (NO product, NO price) */}
           <div
-            className="w-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 flex flex-col items-center justify-center p-[calc(8*var(--u,1px))] text-center select-none"
-            style={{ height: 'calc(175 * var(--u, 1px))' }}
+            className="w-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 flex flex-col items-center justify-center p-[calc(8*var(--u,1px))] text-center select-none animate-card-rise"
+            style={{
+              height: 'calc(175 * var(--u, 1px))',
+              animationDelay: '0.08s',
+            }}
           >
             <div className="h-[52%] flex items-center justify-center mb-1">
               <img
@@ -152,17 +155,24 @@ export function BasketsShowcasePage({
           </div>
 
           {/* 2. Honey Jar Product Container with Bullet Points */}
-          {isInteractive ? (
-            <Link
-              href="/products/prod-na7la-عسل-سلة-NA7LA"
-              className="block w-full no-underline group focus:outline-none flex-1 flex flex-col"
-              style={{ height: 'calc(476 * var(--u, 1px))' }}
-            >
-              {honeyBasketCard}
-            </Link>
-          ) : (
-            honeyBasketCard
-          )}
+          <div
+            className="w-full flex-1 flex flex-col animate-card-rise"
+            style={{
+              height: 'calc(476 * var(--u, 1px))',
+              animationDelay: '0.16s',
+            }}
+          >
+            {isInteractive ? (
+              <Link
+                href="/products/prod-na7la-عسل-سلة-NA7LA"
+                className="block w-full h-full no-underline group focus:outline-none flex-1 flex flex-col"
+              >
+                {honeyBasketCard}
+              </Link>
+            ) : (
+              honeyBasketCard
+            )}
+          </div>
         </div>
 
         {/* Left Column (Contains Handwoven Palm Basket and Trust Badge) */}
@@ -171,22 +181,32 @@ export function BasketsShowcasePage({
           style={{ gap: 'calc(8 * var(--u, 1px))' }}
         >
           {/* 1. Palm Basket Product Container with 4 Bullet Items */}
-          {isInteractive ? (
-            <Link
-              href="/products/prod-na7la-عسل-سلة-NA7LA-هاندكرافتيد"
-              className="block w-full no-underline group focus:outline-none"
-              style={{ height: 'calc(455 * var(--u, 1px))' }}
-            >
-              {palmBasketCard}
-            </Link>
-          ) : (
-            palmBasketCard
-          )}
+          <div
+            className="w-full animate-card-rise"
+            style={{
+              height: 'calc(455 * var(--u, 1px))',
+              animationDelay: '0.12s',
+            }}
+          >
+            {isInteractive ? (
+              <Link
+                href="/products/prod-na7la-عسل-سلة-NA7LA-هاندكرافتيد"
+                className="block w-full h-full no-underline group focus:outline-none"
+              >
+                {palmBasketCard}
+              </Link>
+            ) : (
+              palmBasketCard
+            )}
+          </div>
 
           {/* 2. Rural Fund Trust Badge Container (NO product, NO price) */}
           <div
-            className="w-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 overflow-hidden flex items-center justify-center flex-1"
-            style={{ height: 'calc(196 * var(--u, 1px))' }}
+            className="w-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 overflow-hidden flex items-center justify-center flex-1 animate-card-rise"
+            style={{
+              height: 'calc(196 * var(--u, 1px))',
+              animationDelay: '0.20s',
+            }}
           >
             <img
               src="/magazine/assets/authentic_trust_card.webp"

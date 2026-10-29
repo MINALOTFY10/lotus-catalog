@@ -28,11 +28,14 @@ export function ListViewGrid({ pages, onSelectPage }: ListViewGridProps) {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
-        {pages.map((page) => (
+        {pages.map((page, index) => (
           <div
             key={page.position}
             onClick={() => onSelectPage?.(page.position)}
-            className="group cursor-pointer bg-white rounded-2xl p-3 shadow-md hover:shadow-2xl border border-stone-200 hover:border-[#B68763] transition-all duration-300 flex flex-col"
+            className="group cursor-pointer bg-white rounded-2xl p-3 shadow-md hover:shadow-2xl border border-stone-200 hover:border-[#B68763] transition-all duration-300 flex flex-col animate-card-rise"
+            style={{
+              animationDelay: `calc(${Math.min(index, 12)} * 0.04s + 0.08s)`,
+            }}
           >
             <div className="relative w-full aspect-[595.5/842.25] overflow-hidden rounded-xl bg-stone-100 border border-stone-200/60 shadow-inner group-hover:scale-102 transition-transform duration-300">
               <div className="w-full h-full pointer-events-none select-none">

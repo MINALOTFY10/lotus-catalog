@@ -140,7 +140,7 @@ export function HoneyShowcasePage({
     <PageShell sectionTitle="عسل نقي NA7LA" pageNumber={pageNumber}>
       {/* 2-Column Exact Authentic Canva Layout */}
       <div
-        className="grid grid-cols-2 w-full h-full"
+        className="grid grid-cols-2 w-full h-full animate-rise-bottom-delayed"
         style={{
           gap: 'calc(8 * var(--u, 1px))',
           direction: 'rtl',
@@ -153,8 +153,11 @@ export function HoneyShowcasePage({
         >
           {/* 1. Bee Brand Emblem Container (NO product, NO price) */}
           <div
-            className="w-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 flex flex-col items-center justify-center p-[calc(8*var(--u,1px))] text-center select-none"
-            style={{ height: 'calc(175 * var(--u, 1px))' }}
+            className="w-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 flex flex-col items-center justify-center p-[calc(8*var(--u,1px))] text-center select-none animate-card-rise"
+            style={{
+              height: 'calc(175 * var(--u, 1px))',
+              animationDelay: '0.06s',
+            }}
           >
             <div className="h-[52%] flex items-center justify-center mb-1">
               <img
@@ -175,22 +178,32 @@ export function HoneyShowcasePage({
           </div>
 
           {/* 2. Honey with Comb Product Container */}
-          {isInteractive ? (
-            <Link
-              href="/products/prod-4-NA7LA-عسل-نقي-مع-قرص-العسل-650-G"
-              className="block w-full no-underline group focus:outline-none"
-              style={{ height: 'calc(300 * var(--u, 1px))' }}
-            >
-              {combCard}
-            </Link>
-          ) : (
-            combCard
-          )}
+          <div
+            className="w-full animate-card-rise"
+            style={{
+              height: 'calc(300 * var(--u, 1px))',
+              animationDelay: '0.14s',
+            }}
+          >
+            {isInteractive ? (
+              <Link
+                href="/products/prod-4-NA7LA-عسل-نقي-مع-قرص-العسل-650-G"
+                className="block w-full h-full no-underline group focus:outline-none"
+              >
+                {combCard}
+              </Link>
+            ) : (
+              combCard
+            )}
+          </div>
 
           {/* 3. Rural Fund Trust Badge Container (NO product, NO price) */}
           <div
-            className="w-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 overflow-hidden flex items-center justify-center"
-            style={{ height: 'calc(176 * var(--u, 1px))' }}
+            className="w-full bg-white rounded-xs shadow-[0_1px_3px_rgba(0,0,0,0.05)] border border-stone-200/50 overflow-hidden flex items-center justify-center animate-card-rise"
+            style={{
+              height: 'calc(176 * var(--u, 1px))',
+              animationDelay: '0.22s',
+            }}
           >
             <img
               src="/magazine/assets/authentic_trust_card.webp"
@@ -206,30 +219,44 @@ export function HoneyShowcasePage({
           style={{ gap: 'calc(8 * var(--u, 1px))' }}
         >
           {/* 1. Honey 1.5 KG Product Container */}
-          {isInteractive ? (
-            <Link
-              href="/products/prod-1-NA7LA-عسل-نقي-15-KG"
-              className="block w-full no-underline group focus:outline-none"
-              style={{ height: 'calc(355 * var(--u, 1px))' }}
-            >
-              {jar1_5kgCard}
-            </Link>
-          ) : (
-            jar1_5kgCard
-          )}
+          <div
+            className="w-full animate-card-rise"
+            style={{
+              height: 'calc(355 * var(--u, 1px))',
+              animationDelay: '0.10s',
+            }}
+          >
+            {isInteractive ? (
+              <Link
+                href="/products/prod-1-NA7LA-عسل-نقي-15-KG"
+                className="block w-full h-full no-underline group focus:outline-none"
+              >
+                {jar1_5kgCard}
+              </Link>
+            ) : (
+              jar1_5kgCard
+            )}
+          </div>
 
           {/* 2. Honey with Nuts Tall Card (NO photo on top, exact authentic Canva) */}
-          {isInteractive ? (
-            <Link
-              href="/products/prod-3-NA7LA-عسل-نقي-مع-مكسرات-650-G"
-              className="block w-full no-underline group focus:outline-none"
-              style={{ height: 'calc(296 * var(--u, 1px))' }}
-            >
-              {nutsCard}
-            </Link>
-          ) : (
-            nutsCard
-          )}
+          <div
+            className="w-full animate-card-rise"
+            style={{
+              height: 'calc(296 * var(--u, 1px))',
+              animationDelay: '0.18s',
+            }}
+          >
+            {isInteractive ? (
+              <Link
+                href="/products/prod-3-NA7LA-عسل-نقي-مع-مكسرات-650-G"
+                className="block w-full h-full no-underline group focus:outline-none"
+              >
+                {nutsCard}
+              </Link>
+            ) : (
+              nutsCard
+            )}
+          </div>
         </div>
       </div>
     </PageShell>
