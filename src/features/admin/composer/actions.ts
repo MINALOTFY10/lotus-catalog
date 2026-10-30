@@ -99,9 +99,22 @@ export async function saveSlotAssignmentAction(
     const issue = JSON.parse(fs.readFileSync(liveIssuePath, 'utf8'));
 
     let productObj: any = undefined;
-    if (productId && fs.existsSync(seedPath)) {
-      const allSeed = JSON.parse(fs.readFileSync(seedPath, 'utf8'));
-      productObj = allSeed.find((p: any) => p.id === productId || p.slug === productId);
+    if (productId) {
+      // Check in existing issue pages first
+      for (const page of issue.pages || []) {
+        for (const slot of page.slots || []) {
+          if (slot.product && (slot.product.id === productId || slot.product.slug === productId)) {
+            productObj = slot.product;
+            break;
+          }
+        }
+        if (productObj) break;
+      }
+      // If not found in issue, check seed
+      if (!productObj && fs.existsSync(seedPath)) {
+        const allSeed = JSON.parse(fs.readFileSync(seedPath, 'utf8'));
+        productObj = allSeed.find((p: any) => p.id === productId || p.slug === productId);
+      }
     }
 
     if (productId && productObj) {
@@ -118,6 +131,8 @@ export async function saveSlotAssignmentAction(
 
     fs.writeFileSync(liveIssuePath, JSON.stringify(issue, null, 2), 'utf8');
 
+    revalidatePath('/', 'layout');
+    revalidatePath('/');
     revalidatePath('/magazine');
     revalidatePath('/admin/composer');
     revalidatePath('/products');
@@ -158,6 +173,8 @@ export async function runAutoLayoutAction(): Promise<{ success: boolean; totalPa
 
     fs.writeFileSync(liveIssuePath, JSON.stringify(issue, null, 2), 'utf8');
 
+    revalidatePath('/', 'layout');
+    revalidatePath('/');
     revalidatePath('/magazine');
     revalidatePath('/admin/composer');
     revalidatePath('/products');
@@ -187,6 +204,8 @@ export async function updatePageSectionTitleAction(
     if (page) {
       page.sectionTitle = newTitle.trim();
       fs.writeFileSync(liveIssuePath, JSON.stringify(issue, null, 2), 'utf8');
+      revalidatePath('/', 'layout');
+      revalidatePath('/');
       revalidatePath('/magazine');
       revalidatePath('/admin/composer');
       return { success: true };

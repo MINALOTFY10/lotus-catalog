@@ -89,6 +89,8 @@ export async function publishLiveIssueAction(
 
     fs.writeFileSync(historyPath, JSON.stringify(updatedHistory, null, 2), 'utf8');
 
+    revalidatePath('/', 'layout');
+    revalidatePath('/');
     revalidatePath('/magazine');
     revalidatePath('/products');
     revalidatePath('/admin/publish');
@@ -131,6 +133,8 @@ export async function rollbackToVersionAction(
       fs.writeFileSync(historyPath, JSON.stringify(updated, null, 2), 'utf8');
     }
 
+    revalidatePath('/', 'layout');
+    revalidatePath('/');
     revalidatePath('/magazine');
     revalidatePath('/products');
     revalidatePath('/admin/publish');
