@@ -149,24 +149,24 @@ export function FlipbookClient({
       ref={wrapperRef}
       className={`relative w-full flex flex-col items-center select-none overflow-x-hidden ${
         isFullscreen
-          ? 'h-screen w-screen bg-[#F3F4F7] p-2 flex flex-col justify-between overflow-hidden'
-          : 'pt-4 pb-4 sm:py-6 px-1.5 sm:px-4 justify-start'
+          ? 'h-screen w-screen bg-[#F3F4F7] p-2 flex flex-col justify-between items-center overflow-hidden'
+          : 'pt-2 pb-4 sm:py-6 px-1.5 sm:px-4 justify-center items-center'
       }`}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
       {/* Book Stage */}
       <div
-        className="w-full flex items-start sm:items-center justify-center flex-1 min-h-0 animate-rise-bottom-delayed"
+        className="w-full flex items-center justify-center flex-1 min-h-0 animate-rise-bottom-delayed"
         style={{ perspective: '2000px' }}
       >
         {isMobile ? (
           /* Mobile Single Page View */
           <div
-            className="w-full drop-shadow-2xl transition-transform duration-300 flex items-center justify-center mx-auto"
+            className="w-full drop-shadow-2xl transition-transform duration-300 flex items-center justify-center mx-auto my-auto"
             style={{
               maxWidth: isFullscreen
-                ? 'calc((100vh - 68px) * (595 / 842))'
+                ? 'min(calc((100vh - 68px) * (595 / 842)), calc(100vw - 16px))'
                 : 'min(calc(100vw - 12px), 500px)',
               width: '100%',
             }}
