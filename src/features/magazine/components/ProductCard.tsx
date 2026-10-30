@@ -188,12 +188,12 @@ export function ProductCard({
           )}
         </div>
 
-        {/* Price block: Canva ~9.33px, slightly enlarged to 7.8u / 8.2u (+12-17%) */}
+        {/* Price block: Canva ~9.33px, slightly enlarged to 8.4u / 9.1u for extra clarity */}
         <div
           className="shrink-0 select-none text-right"
           style={{
             marginTop: 'calc(2.5 * var(--u, 1px))',
-            fontSize: 'calc(7.8 * var(--u, 1px))',
+            fontSize: 'calc(8.4 * var(--u, 1px))',
             lineHeight: 1.35,
             color: 'var(--mag-text)',
             fontFamily: 'var(--mag-font-ar)',
@@ -223,7 +223,7 @@ export function ProductCard({
                 key={idx}
                 className="block"
                 style={{
-                  fontSize: 'calc(8.2 * var(--u, 1px))',
+                  fontSize: 'calc(9.1 * var(--u, 1px))',
                   fontFamily: cleanLine.includes('L.E') ? 'var(--mag-font-en)' : 'var(--mag-font-ar)',
                 }}
               >
