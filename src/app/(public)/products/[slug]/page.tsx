@@ -156,9 +156,15 @@ async function ProductDetailPageContent({ params }: ProductDetailPageProps) {
             <div className="mt-6 pt-5 border-t border-stone-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
                 <span className="text-[11px] font-bold text-stone-400 block mb-0.5">السعر</span>
-                <span className="text-2xl sm:text-3xl font-extrabold font-mono text-[#443000] tracking-tight">
-                  {formatMagazinePrice(activeProduct.sale_price)}
-                </span>
+                <div className="text-2xl sm:text-3xl font-extrabold text-[#443000] tracking-tight">
+                  {formatMagazinePrice(activeProduct.sale_price, activeProduct.price_text)
+                    .split('\n')
+                    .map((line, idx) => (
+                      <div key={idx} className="leading-snug">
+                        {line}
+                      </div>
+                    ))}
+                </div>
               </div>
 
               {activeProduct.magazinePageNumber ? (
@@ -231,8 +237,8 @@ async function ProductDetailPageContent({ params }: ProductDetailPageProps) {
                   </div>
                   <div className="mt-3 pt-2 border-t border-stone-100 flex items-center justify-between">
                     <span className="text-[10px] text-stone-400">السعر</span>
-                    <span className="font-extrabold font-mono text-xs sm:text-sm text-[#443000]">
-                      {formatMagazinePrice(rel.sale_price)}
+                    <span className="font-extrabold text-xs sm:text-sm text-[#443000]">
+                      {formatMagazinePrice(rel.sale_price, rel.price_text)}
                     </span>
                   </div>
                 </Link>

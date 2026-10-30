@@ -167,8 +167,8 @@ export function SearchClientView({
 
                       <div className="mt-3 pt-2 border-t border-stone-100 flex items-center justify-between">
                         <span className="text-xs font-bold text-[#B68763]">السعر</span>
-                        <span className="font-extrabold font-mono text-sm sm:text-base text-[#443000]">
-                          {formatMagazinePrice(product.sale_price)}
+                        <span className="font-extrabold text-sm sm:text-base text-[#443000]">
+                          {formatMagazinePrice(product.sale_price, product.price_text)}
                         </span>
                       </div>
                     </div>

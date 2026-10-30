@@ -3,12 +3,12 @@ import fs from 'fs';
 import path from 'path';
 
 describe('Canva Catalog Extraction', () => {
-  it('should have exactly 48 pages in live_issue.json', () => {
+  it('should have valid total pages in live_issue.json', () => {
     const issuePath = path.resolve(process.cwd(), 'data/live_issue.json');
     expect(fs.existsSync(issuePath)).toBe(true);
     const issue = JSON.parse(fs.readFileSync(issuePath, 'utf-8'));
-    expect(issue.pages.length).toBe(48);
-    expect(issue.totalPages).toBe(48);
+    expect(issue.pages.length).toBe(65);
+    expect(issue.totalPages).toBe(65);
   });
 
   it('should have authentic products without placeholder text in products_seed.json', () => {

@@ -3,13 +3,13 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { IssueSnapshot, ProductData } from '../types';
 import { FlipbookClient } from './FlipbookClient';
 import { MagazinePageRenderer } from '../components/MagazinePageRenderer';
 import { TocDrawer } from '../components/TocDrawer';
 import { ListViewGrid } from '../components/ListViewGrid';
 import { MagazineSearchModal } from '../components/MagazineSearchModal';
-import { ProductDetailModal } from '../components/ProductDetailModal';
 
 interface MagazineReaderViewProps {
   initialIssue: IssueSnapshot;
@@ -20,11 +20,11 @@ export function MagazineReaderView({
   initialIssue,
   initialPage,
 }: MagazineReaderViewProps) {
+  const router = useRouter();
   const [currentPage, setCurrentPage] = useState<number>(initialPage);
   const [highlightedCode, setHighlightedCode] = useState<number | null>(null);
   const [isTocOpen, setIsTocOpen] = useState<boolean>(false);
   const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
-  const [selectedProduct, setSelectedProduct] = useState<ProductData | null>(null);
   const [viewMode, setViewMode] = useState<'flipbook' | 'list'>('flipbook');
 
   const handlePageChange = (newPage: number) => {
@@ -150,7 +150,11 @@ export function MagazineReaderView({
                 page={pageData}
                 isInteractive={true}
                 highlightedCode={highlightedCode}
-                onProductClick={(product) => setSelectedProduct(product)}
+                onProductClick={(product) => {
+                  if (product?.slug && product.slug !== '#') {
+                    router.push(`/products/${product.slug}`);
+                  }
+                }}
               />
             ))}
           </FlipbookClient>
@@ -192,13 +196,6 @@ export function MagazineReaderView({
             setTimeout(() => setHighlightedCode(null), 3500);
           }
         }}
-      />
-
-      {/* Interactive Product Quick View Modal */}
-      <ProductDetailModal
-        product={selectedProduct}
-        isOpen={Boolean(selectedProduct)}
-        onClose={() => setSelectedProduct(null)}
       />
     </div>
   );

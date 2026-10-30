@@ -4,10 +4,11 @@ import { getPublicProductBySlug, searchPublicProducts, generateProductJsonLd } f
 import { IssueSnapshot } from '@/features/magazine/services/publishIssue';
 
 describe('formatMagazinePrice', () => {
-  it('formats numeric price to Latin digits with L.E suffix', () => {
-    expect(formatMagazinePrice(405)).toBe('405 L.E');
-    expect(formatMagazinePrice(620)).toBe('620 L.E');
-    expect(formatMagazinePrice(1080)).toBe('1080 L.E');
+  it('formats numeric price to Arabic digits with ج.مصري suffix and supports magazine priceText', () => {
+    expect(formatMagazinePrice(405)).toBe('٤٠٥ ج.مصري');
+    expect(formatMagazinePrice(620)).toBe('٦٢٠ ج.مصري');
+    expect(formatMagazinePrice(1080)).toBe('١٠٨٠ ج.مصري');
+    expect(formatMagazinePrice(2095, 'السعر\n٢٠٩٥ ج.مصري')).toBe('٢٠٩٥ ج.مصري');
   });
 
   it('handles null, undefined, or zero with Arabic fallback', () => {

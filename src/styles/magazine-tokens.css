@@ -3,6 +3,8 @@
   --mag-card: #FFFFFF;        /* Card surface: crisp white */
   --mag-ink: #443000;         /* Primary ink token */
   --mag-accent: #B68763;      /* Bronze accent */
+  --mag-text: #000000;        /* Card + headline text (Canva: #000000) */
+  --mag-label-gold: #BD922E;  /* "المقاس والسعر" label (Canva: #bd922e) */
   --mag-font-ar: var(--font-tajawal), 'Tajawal', var(--font-noto-arabic), system-ui, sans-serif;
   --mag-font-en: var(--font-noto-sans), system-ui, sans-serif;
   --u: calc(100cqw / 595);

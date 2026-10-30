@@ -1,6 +1,8 @@
 'use client';
 
 import React from 'react';
+import { PageHeader } from './PageHeader';
+import { VerticalHeadline } from './VerticalHeadline';
 
 interface PageShellProps {
   sectionTitle?: string | null;
@@ -21,25 +23,8 @@ export function PageShell({
         backgroundColor: '#FFFFFF',
       }}
     >
-      {/* 1. Authentic Canva Top Header Strip: Lotus Logo + Heritage Text + Fund Seal */}
-      <header
-        className="absolute top-0 left-0 w-full pointer-events-none select-none z-10 overflow-hidden"
-        style={{
-          height: 'calc(142 * var(--u, 1px))',
-        }}
-      >
-        <img
-          src="/brand/canva_header_strip.webp"
-          alt="لوتس"
-          className="w-full h-full object-cover block"
-        />
-        {/* Hidden Fund Seal image for accessibility & test compatibility */}
-        <img
-          src="/brand/fund_seal.png"
-          alt="صندوق دعم الصناعات"
-          className="sr-only"
-        />
-      </header>
+      {/* 1. Header: Lotus logo + Fund seal, placed like in Canva */}
+      <PageHeader />
 
       {/* 2. Left Vertical Calligraphy Title: Matching Canva x=45.5 / 81.6 pt */}
       <aside
@@ -53,46 +38,8 @@ export function PageShell({
       >
         <span className="sr-only">قائمة الأسعار</span>
 
-        {/* Outer Line: قائمة اسعار (PDF: x=45.5pt..75.4pt, y=140pt, size=30pt, Tajawal-Light) */}
-        <div
-          style={{
-            position: 'absolute',
-            left: 'calc(75 * var(--u, 1px))',
-            top: 'calc(138 * var(--u, 1px))',
-            transform: 'rotate(90deg)',
-            transformOrigin: 'top left',
-            whiteSpace: 'nowrap',
-            color: '#000000',
-            fontFamily: 'var(--mag-font-ar)',
-            fontWeight: 300,
-            fontSize: 'calc(30 * var(--u, 1px))',
-            lineHeight: 1,
-            letterSpacing: 'calc(0.5 * var(--u, 1px))',
-          }}
-        >
-          قائمة اسعار
-        </div>
-
-        {/* Inner Line: Section Title (PDF: x=81.6pt..119.6pt, y=140pt, size=38pt, Tajawal-Medium) */}
-        {sectionTitle && (
-          <div
-            style={{
-              position: 'absolute',
-              left: 'calc(120 * var(--u, 1px))',
-              top: 'calc(138 * var(--u, 1px))',
-              transform: 'rotate(90deg)',
-              transformOrigin: 'top left',
-              whiteSpace: 'nowrap',
-              color: '#000000',
-              fontFamily: 'var(--mag-font-ar)',
-              fontWeight: 500,
-              fontSize: 'calc(38 * var(--u, 1px))',
-              lineHeight: 1,
-            }}
-          >
-            {sectionTitle}
-          </div>
-        )}
+        {/* Left vertical headline: outside = قائمة اسعار, inside = section title (as in Canva) */}
+        <VerticalHeadline title={sectionTitle} />
 
         {/* Authentic Canva Golden Wreath Garland at bottom-left */}
         <div
@@ -116,10 +63,11 @@ export function PageShell({
       <main
         className="absolute z-0"
         style={{
-          left: 'calc(136 * var(--u, 1px))',
-          top: 'calc(134 * var(--u, 1px))',
-          width: 'calc(426 * var(--u, 1px))',
-          height: 'calc(680 * var(--u, 1px))',
+          /* Canva grid box: 3 cards x 127.5u + 2 gaps x 12.7u, 3 rows x 212.4u + 2 gaps x 11.1u */
+          left: 'calc(144.2 * var(--u, 1px))',
+          top: 'calc(139.4 * var(--u, 1px))',
+          width: 'calc(407.9 * var(--u, 1px))',
+          height: 'calc(659.4 * var(--u, 1px))',
         }}
       >
         {children}

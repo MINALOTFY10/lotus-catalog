@@ -270,7 +270,7 @@ export function GridCustomPage({
       <div
         className="grid grid-cols-3 grid-rows-3 w-full h-full"
         style={{
-          gap: 'calc(7 * var(--u, 1px)) calc(7 * var(--u, 1px))',
+          gap: 'calc(11.1 * var(--u, 1px)) calc(12.7 * var(--u, 1px))',
           direction: 'rtl',
         }}
       >

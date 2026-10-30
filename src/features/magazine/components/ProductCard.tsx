@@ -40,8 +40,8 @@ export function ProductCard({
   const slug = product?.slug || '#';
   const hasDescription = Boolean(description && description.length > 0);
 
-  // Dynamic image percentage based on description presence
-  const finalImageShare = imageShare ?? (hasDescription ? 48 : 62);
+  // Canva card: image = 151.2px of 283.5px = 53.3% of the card height
+  const finalImageShare = imageShare ?? 53.3;
 
   // Split priceText into golden label and value
   let priceLabel = 'السعر';
@@ -52,28 +52,60 @@ export function ProductCard({
     : 'حسب الاختيار';
 
   if (priceText) {
-    if (priceText.includes('المقاس والسعر')) {
+    // Clean any stray prefix like "الالسعر" or "الـالسعر"
+    const cleanText = priceText.replace(/^ال+السعر/, 'السعر').trim();
+
+    if (cleanText.includes('المقاس والسعر')) {
       priceLabel = 'المقاس والسعر';
-      priceVal = priceText.replace('المقاس والسعر', '').trim();
-    } else if (priceText.includes('الحجم والسعر')) {
+      priceVal = cleanText.replace('المقاس والسعر', '').trim();
+    } else if (cleanText.includes('الحجم والسعر')) {
       priceLabel = 'الحجم والسعر';
-      priceVal = priceText.replace('الحجم والسعر', '').trim();
-    } else if (priceText.includes('الوزن والسعر')) {
+      priceVal = cleanText.replace('الحجم والسعر', '').trim();
+    } else if (cleanText.includes('الوزن والسعر')) {
       priceLabel = 'الوزن والسعر';
-      priceVal = priceText.replace('الوزن والسعر', '').trim();
-    } else if (priceText.includes('السعر')) {
+      priceVal = cleanText.replace('الوزن والسعر', '').trim();
+    } else if (cleanText.includes('السعر')) {
       priceLabel = 'السعر';
-      priceVal = priceText.replace('السعر', '').trim();
-    } else if (priceText.includes('سم')) {
+      priceVal = cleanText.replace('السعر', '').trim();
+    } else if (cleanText.includes('سم')) {
       priceLabel = 'المقاس والسعر';
+      priceVal = cleanText;
     } else if (
-      priceText.includes('جرام') ||
-      priceText.includes('كيلو') ||
-      priceText.includes('مل') ||
-      priceText.includes('لتر')
+      cleanText.includes('جرام') ||
+      cleanText.includes('كيلو') ||
+      cleanText.includes('مل') ||
+      cleanText.includes('لتر')
     ) {
       priceLabel = 'الحجم والسعر';
+      priceVal = cleanText;
+    } else {
+      priceVal = cleanText;
     }
+  }
+
+  // Format title into 2 authentic lines matching Canva where appropriate
+  let formattedTitle: React.ReactNode = title;
+  if (title.includes('عسل نحلة عسل')) {
+    formattedTitle = (
+      <>
+        <span className="block">عسل نحلة</span>
+        <span className="block">{title.replace('عسل نحلة ', '')}</span>
+      </>
+    );
+  } else if (title.includes('تمور نخلة رطب')) {
+    formattedTitle = (
+      <>
+        <span className="block">تمور نخلة</span>
+        <span className="block">رطب سكري</span>
+      </>
+    );
+  } else if (title.includes('حقيبة من الحلفا مع')) {
+    formattedTitle = (
+      <>
+        <span className="block">حقيبة من الحلفا</span>
+        <span className="block">مع اختيارك من منتجات نحلة</span>
+      </>
+    );
   }
 
   const cardContent = (
@@ -107,35 +139,40 @@ export function ProductCard({
       <div
         className="flex-1 flex flex-col justify-between min-h-0 text-right"
         style={{
-          padding: 'calc(5 * var(--u, 1px)) calc(7 * var(--u, 1px)) calc(5.5 * var(--u, 1px))',
+          // Canva: 9.45px side inset, ~11.7px below the image, 9.5px above the card bottom
+          padding: 'calc(8.8 * var(--u, 1px)) calc(7.1 * var(--u, 1px)) calc(7.1 * var(--u, 1px))',
           direction: 'rtl',
         }}
       >
         <div className="min-w-0 flex-1 flex flex-col justify-start overflow-hidden text-right">
-          {/* Title */}
+          {/* Title: Canva 13.33px bold, line-height 1.4 */}
           <h3
-            className="font-bold text-[#000000] tracking-tight leading-snug text-right"
+            className="font-bold text-right"
             title={title}
             style={{
               fontSize: 'calc(10 * var(--u, 1px))',
+              lineHeight: 1.4,
+              color: 'var(--mag-text)',
               overflowWrap: 'break-word',
               fontFamily: 'var(--mag-font-ar)',
             }}
           >
-            {title}
+            {formattedTitle}
           </h3>
 
-          {/* Arabic Description */}
+          {/* Description: Canva 8.5px regular, line-height 1.4, distinct from bold title */}
           {hasDescription && (
             <p
-              className="text-[#222222] font-normal leading-normal mt-[calc(2*var(--u,1px))] select-text line-clamp-2 text-right"
+              className="font-normal select-text text-right line-clamp-2"
               title={description}
               style={{
-                fontSize: 'calc(6.2 * var(--u, 1px))',
-                lineHeight: 1.35,
+                marginTop: 'calc(3.5 * var(--u, 1px))',
+                fontSize: 'calc(6.8 * var(--u, 1px))',
+                lineHeight: 1.4,
+                color: 'rgba(68, 48, 0, 0.8)',
                 overflowWrap: 'break-word',
                 display: '-webkit-box',
-                WebkitLineClamp: 2,
+                WebkitLineClamp: 3,
                 WebkitBoxOrient: 'vertical',
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
@@ -147,35 +184,46 @@ export function ProductCard({
           )}
         </div>
 
-        {/* Price & Specs Area - Authentic stacked right-aligned format */}
+        {/* Price block: Canva 9.33px, gold label then "size | price" line */}
         <div
-          className="mt-auto shrink-0 select-none text-right"
+          className="shrink-0 select-none text-right"
           style={{
-            marginTop: 'calc(2 * var(--u, 1px))',
+            marginTop: 'calc(3 * var(--u, 1px))',
+            fontSize: 'calc(7 * var(--u, 1px))',
+            lineHeight: 1.4,
+            color: 'var(--mag-text)',
+            fontFamily: 'var(--mag-font-ar)',
           }}
         >
-          <span
-            className="font-bold block tracking-normal text-[#B68763]"
-            style={{
-              fontSize: 'calc(7.0 * var(--u, 1px))',
-              fontFamily: 'var(--mag-font-ar)',
-            }}
-          >
+          <span className="font-bold block" style={{ color: 'var(--mag-label-gold)' }}>
             {priceLabel}
           </span>
           {priceVal.split('\n').map((line, idx) => {
-            const cleanLine = line.trim();
-            if (!cleanLine) return null;
+            let cleanLine = line.trim();
+            // Discard stray "ال", "الـ", "ا" or empty lines
+            if (!cleanLine || cleanLine === 'ال' || cleanLine === 'الـ' || cleanLine === 'ا') return null;
+
+            // Normalize currency order if currency was placed before number (e.g. "ج.مصري ٤٠٥" -> "٤٠٥ ج.مصري")
+            cleanLine = cleanLine.replace(/^(ج\.مصري|ج\.م|ج)\s+([٠-٩0-9]+(?:\.[٠-٩0-9]+)?)/, '$2 $1');
+
+            // "٨٥ سم | ١٠١٥ ج.مصري": size is regular, the "| price" part is bold (as in Canva)
+            const sepIndex = cleanLine.indexOf('|');
+            const sizePart = sepIndex > 0 ? cleanLine.slice(0, sepIndex).trimEnd() : '';
+            let pricePart = sepIndex > 0 ? cleanLine.slice(sepIndex) : cleanLine;
+
+            // Also check pricePart if currency was before number after '|': e.g. "| ج.مصري 405" -> "| 405 ج.مصري"
+            pricePart = pricePart.replace(/\|\s*(ج\.مصري|ج\.م|ج)\s+([٠-٩0-9]+(?:\.[٠-٩0-9]+)?)/, '| $2 $1');
+
             return (
               <span
                 key={idx}
-                className="font-bold text-[#000000] block leading-tight mt-[calc(1*var(--u,1px))]"
+                className="block"
                 style={{
-                  fontSize: 'calc(7.2 * var(--u, 1px))',
                   fontFamily: cleanLine.includes('L.E') ? 'var(--mag-font-en)' : 'var(--mag-font-ar)',
                 }}
               >
-                {cleanLine}
+                {sizePart && <span className="font-normal">{sizePart} </span>}
+                <span className="font-bold">{pricePart}</span>
               </span>
             );
           })}

@@ -200,7 +200,7 @@ export function MagazineSearchModal({
 
                     <span className="flex shrink-0 items-center gap-3">
                       <span className="text-left">
-                        <span className="block font-mono text-xs font-extrabold text-[#443000] sm:text-sm">
+                        <span className="block text-xs font-extrabold text-[#443000] sm:text-sm">
                           {formatMagazinePrice(product.sale_price)}
                         </span>
                         {product.magazinePageNumber && (

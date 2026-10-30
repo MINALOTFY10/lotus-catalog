@@ -13,6 +13,7 @@ export interface PublicProduct {
   magazinePageNumber?: number;
   magazineSlot?: number;
   sectionTitle?: string;
+  price_text?: string | null;
 }
 
 export interface ProductJsonLd {

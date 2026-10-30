@@ -48,13 +48,13 @@ describe('Magazine Page Components', () => {
     expect(cards.length).toBe(6);
   });
 
-  it('renders GridCustomPage for 4-card layout (page 47)', () => {
-    const page47 = issueData.pages[46]; // Page 47
+  it('renders GridCustomPage for 4-card layout (page 46)', () => {
+    const page46 = issueData.pages[45]; // Page 46
     const { container } = render(
       <GridCustomPage
-        pageNumber={47}
-        sectionTitle={page47.sectionTitle}
-        slots={page47.slots}
+        pageNumber={46}
+        sectionTitle={page46.sectionTitle}
+        slots={page46.slots}
         template="grid2x2"
       />
     );
@@ -62,13 +62,13 @@ describe('Magazine Page Components', () => {
     expect(cards.length).toBe(4);
   });
 
-  it('renders GridCustomPage for hero-split layout (page 48)', () => {
-    const page48 = issueData.pages[47]; // Page 48
+  it('renders GridCustomPage for hero-split layout (page 47)', () => {
+    const page47 = issueData.pages[46]; // Page 47
     const { container } = render(
       <GridCustomPage
-        pageNumber={48}
-        sectionTitle={page48.sectionTitle}
-        slots={page48.slots}
+        pageNumber={47}
+        sectionTitle={page47.sectionTitle}
+        slots={page47.slots}
         template="hero-split"
       />
     );
