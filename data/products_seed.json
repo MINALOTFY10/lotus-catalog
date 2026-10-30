@@ -801,9 +801,9 @@
   {
     "id": "prod-canva-p7-s7",
     "slug": "prod-canva-p7-s7-سلة-تخزين-خوص-مطرزة-،سلة-تخزين",
-    "name_ar": "سلة تخزين خوص مطرزة ،سلة تخزين دائرية من الخوص الطبيعي بدون مقابض ومزينة بخيوط كريمية حول",
+    "name_ar": "سلة تخزين خوص مطرزة",
     "name_en": null,
-    "description_ar": "الحافة",
+    "description_ar": "سلة تخزين دائرية من الخوص الطبيعي بدون مقابض ومزينة بخيوط كريمية حول الحافة.",
     "description_en": null,
     "category": "خوص وحلفا طبيعي",
     "sale_price": 880,
@@ -813,7 +813,8 @@
       "sm": "/magazine/canva_products/p7_s7.webp",
       "md": "/magazine/canva_products/p7_s7.webp",
       "lg": "/magazine/canva_products/p7_s7.webp"
-    }
+    },
+    "stock_status": "متاح"
   },
   {
     "id": "prod-canva-p7-s8",

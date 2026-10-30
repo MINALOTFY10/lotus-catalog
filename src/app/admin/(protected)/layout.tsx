@@ -1,23 +1,28 @@
-import React, { Suspense } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { redirect } from 'next/navigation';
 import { logoutAction, getStaffSession } from '@/features/admin/auth/actions';
 
-async function StaffSessionBadge() {
-  const session = await getStaffSession();
+function StaffSessionBadge({ email }: { email: string }) {
   return (
     <div className="hidden sm:flex items-center gap-2 text-xs text-stone-300 border-r border-amber-900/50 pr-3 mr-1">
       <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
-      <span>{session?.email || 'admin@lotus.eg'}</span>
+      <span>{email}</span>
     </div>
   );
 }
 
-export default function AdminProtectedLayout({
+export default async function AdminProtectedLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const session = await getStaffSession();
+  if (!session) {
+    redirect('/admin/login');
+  }
+
   return (
     <div className="min-h-screen bg-stone-100 flex flex-col">
       {/* Admin Top Navigation */}
@@ -78,16 +83,7 @@ export default function AdminProtectedLayout({
                 </svg>
               </Link>
 
-              <Suspense
-                fallback={
-                  <div className="hidden sm:flex items-center gap-2 text-xs text-stone-300 border-r border-amber-900/50 pr-3 mr-1">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
-                    <span>admin@lotus.eg</span>
-                  </div>
-                }
-              >
-                <StaffSessionBadge />
-              </Suspense>
+              <StaffSessionBadge email={session.email} />
 
               <form action={logoutAction}>
                 <button

@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { loginAction, quickDemoLoginAction } from '@/features/admin/auth/actions';
+import { loginAction } from '@/features/admin/auth/actions';
 
 export default function AdminLoginPage() {
   const [error, setError] = useState<string | null>(null);
@@ -20,11 +20,6 @@ export default function AdminLoginPage() {
       setError(res.error);
       setLoading(false);
     }
-  };
-
-  const handleDemoLogin = async () => {
-    setLoading(true);
-    await quickDemoLoginAction();
   };
 
   return (
@@ -63,7 +58,7 @@ export default function AdminLoginPage() {
             <input
               name="email"
               type="email"
-              defaultValue="admin@lotus.eg"
+              autoComplete="email"
               required
               placeholder="name@lotus.eg"
               className="w-full text-sm bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-stone-900 focus:outline-hidden focus:border-[#B68763] focus:bg-white transition-all"
@@ -77,7 +72,7 @@ export default function AdminLoginPage() {
             <input
               name="password"
               type="password"
-              defaultValue="lotus2026"
+              autoComplete="current-password"
               required
               placeholder="••••••••"
               className="w-full text-sm bg-stone-50 border border-stone-200 rounded-xl px-4 py-2.5 text-stone-900 focus:outline-hidden focus:border-[#B68763] focus:bg-white transition-all"
@@ -92,18 +87,6 @@ export default function AdminLoginPage() {
             {loading ? 'جاري التحقق...' : 'تسجيل الدخول'}
           </button>
         </form>
-
-        {/* Demo Fast Login */}
-        <div className="mt-6 pt-6 border-t border-stone-200 text-center">
-          <button
-            type="button"
-            onClick={handleDemoLogin}
-            disabled={loading}
-            className="w-full bg-[#B68763]/15 hover:bg-[#B68763]/25 text-[#443000] font-bold text-xs py-2.5 rounded-xl transition-all border border-[#B68763]/30"
-          >
-            تسجيل دخول فوري للتطوير (Demo Staff)
-          </button>
-        </div>
 
         <div className="mt-6 text-center">
           <Link

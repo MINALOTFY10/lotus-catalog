@@ -210,13 +210,54 @@ export function ProductCard({
             // Normalize currency order if currency was placed before number (e.g. "ج.مصري ٤٠٥" -> "٤٠٥ ج.مصري")
             cleanLine = cleanLine.replace(/^(ج\.مصري|ج\.م|ج)\s+([٠-٩0-9]+(?:\.[٠-٩0-9]+)?)/, '$2 $1');
 
-            // "٨٥ سم | ١٠١٥ ج.مصري": size is regular, the "| price" part is bold (as in Canva)
-            const sepIndex = cleanLine.indexOf('|');
-            const sizePart = sepIndex > 0 ? cleanLine.slice(0, sepIndex).trimEnd() : '';
-            let pricePart = sepIndex > 0 ? cleanLine.slice(sepIndex) : cleanLine;
+            if (!cleanLine.includes('|')) {
+              return (
+                <span
+                  key={idx}
+                  className="block font-bold"
+                  style={{
+                    fontSize: 'calc(9.1 * var(--u, 1px))',
+                    fontFamily: cleanLine.includes('L.E') ? 'var(--mag-font-en)' : 'var(--mag-font-ar)',
+                  }}
+                >
+                  {cleanLine}
+                </span>
+              );
+            }
 
-            // Also check pricePart if currency was before number after '|': e.g. "| ج.مصري 405" -> "| 405 ج.مصري"
-            pricePart = pricePart.replace(/\|\s*(ج\.مصري|ج\.م|ج)\s+([٠-٩0-9]+(?:\.[٠-٩0-9]+)?)/, '| $2 $1');
+            const parts = cleanLine.split('|');
+            let p1 = parts[0].trim();
+            let p2 = parts[1].trim();
+
+            // Also check p2 if currency was before number: e.g. "ج.مصري 405" -> "405 ج.مصري"
+            p2 = p2.replace(/^(ج\.مصري|ج\.م|ج)\s+([٠-٩0-9]+(?:\.[٠-٩0-9]+)?)/, '$2 $1');
+
+            const currencyKeywords = ['ج.مصري', 'ج.م', 'ج', 'l.e', 'le', 'egp'];
+            const sizeKeywords = ['سم', 'قطر', '*', 'جرام', 'كيلو', 'مل', 'لتر', 'صغير', 'كبير', 'وسط', 'قفطان', 'بنطلون'];
+
+            const p1Lower = p1.toLowerCase();
+            const p2Lower = p2.toLowerCase();
+
+            const p1HasCurrency = currencyKeywords.some((c) => p1Lower.includes(c));
+            const p2HasCurrency = currencyKeywords.some((c) => p2Lower.includes(c));
+
+            const p1HasSize = sizeKeywords.some((s) => p1.includes(s));
+            const p2HasSize = sizeKeywords.some((s) => p2.includes(s));
+
+            let isP1Price = false;
+            if (p1HasCurrency && !p2HasCurrency) {
+              isP1Price = true;
+            } else if (p2HasCurrency && !p1HasCurrency) {
+              isP1Price = false;
+            } else if (p1HasSize && !p2HasSize) {
+              isP1Price = false;
+            } else if (p2HasSize && !p1HasSize) {
+              isP1Price = true;
+            } else {
+              const p1Digits = (p1.match(/[0-9٠-٩]/g) || []).length;
+              const p2Digits = (p2.match(/[0-9٠-٩]/g) || []).length;
+              isP1Price = p1Digits >= p2Digits;
+            }
 
             return (
               <span
@@ -227,8 +268,9 @@ export function ProductCard({
                   fontFamily: cleanLine.includes('L.E') ? 'var(--mag-font-en)' : 'var(--mag-font-ar)',
                 }}
               >
-                {sizePart && <span className="font-normal">{sizePart} </span>}
-                <span className="font-bold">{pricePart}</span>
+                <span className={isP1Price ? 'font-bold' : 'font-normal'}>{p1}</span>
+                <span className="font-normal text-stone-400 mx-1">|</span>
+                <span className={isP1Price ? 'font-normal' : 'font-bold'}>{p2}</span>
               </span>
             );
           })}
