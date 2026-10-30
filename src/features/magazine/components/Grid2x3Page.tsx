@@ -3,7 +3,7 @@
 import React from 'react';
 import { PageShell } from './PageShell';
 import { ProductCard } from './ProductCard';
-import { PageSlotData } from '../types';
+import { PageSlotData, ProductData } from '../types';
 
 interface Grid2x3PageProps {
   sectionTitle?: string | null;
@@ -11,6 +11,7 @@ interface Grid2x3PageProps {
   slots: PageSlotData[];
   isInteractive?: boolean;
   highlightedCode?: number | null;
+  onProductClick?: (product: ProductData) => void;
 }
 
 export function Grid2x3Page({
@@ -19,6 +20,7 @@ export function Grid2x3Page({
   slots,
   isInteractive = true,
   highlightedCode,
+  onProductClick,
 }: Grid2x3PageProps) {
   // Ensure array has 6 slot entries
   const slotList: (PageSlotData | null)[] = Array.from({ length: 6 }, (_, index) => {
@@ -53,6 +55,7 @@ export function Grid2x3Page({
                 isInteractive={isInteractive}
                 isHighlighted={Boolean(highlightedCode && slotData.product?.cashier_code === highlightedCode)}
                 imageShare={56}
+                onSelect={onProductClick}
               />
             ) : (
               <div className="product-card w-full h-full" />

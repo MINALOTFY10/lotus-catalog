@@ -75,7 +75,7 @@ export function PageShell({
               lineHeight: 1,
             }}
           >
-            قائمة اسعار
+            قائمة الأسعار
           </span>
 
           {/* Inner Line: Section Title */}
@@ -93,20 +93,21 @@ export function PageShell({
           )}
         </div>
 
-        {/* Decorative Gold Leaf Garland at bottom left */}
+        {/* Authentic Canva Golden Wreath Garland at bottom-left */}
         <div
-          className="absolute bottom-0 left-0 w-full flex items-end pointer-events-none opacity-40"
+          className="absolute pointer-events-none select-none z-10"
           style={{
-            height: 'calc(180 * var(--u, 1px))',
+            left: 'calc(-258.5 * var(--u, 1px))',
+            top: 'calc(599 * var(--u, 1px))',
+            width: 'calc(323.5 * var(--u, 1px))',
+            height: 'calc(323.5 * var(--u, 1px))',
           }}
         >
-          <svg
-            viewBox="0 0 100 200"
-            className="w-full h-full text-[#B68763]"
-            fill="currentColor"
-          >
-            <path d="M20,180 Q30,140 10,100 Q40,90 25,60 Q50,50 35,20 C45,40 55,70 40,110 C60,120 40,150 20,180 Z" />
-          </svg>
+          <img
+            src="/brand/canva_golden_branch.webp"
+            alt=""
+            className="w-full h-full object-contain block"
+          />
         </div>
       </aside>
 

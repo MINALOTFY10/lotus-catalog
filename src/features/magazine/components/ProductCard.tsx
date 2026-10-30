@@ -14,6 +14,7 @@ interface ProductCardProps {
   isInteractive?: boolean;
   isHighlighted?: boolean;
   imageShare?: number; // Optional custom height % for image
+  onSelect?: (product: ProductData) => void;
 }
 
 export function ProductCard({
@@ -26,6 +27,7 @@ export function ProductCard({
   isInteractive = true,
   isHighlighted = false,
   imageShare,
+  onSelect,
 }: ProductCardProps) {
   if (!product && !titleOverride) {
     return <div className="product-card w-full h-full" />;
@@ -41,17 +43,50 @@ export function ProductCard({
   // Dynamic image percentage based on description presence
   const finalImageShare = imageShare ?? (hasDescription ? 48 : 62);
 
+  // Split priceText into golden label and value
+  let priceLabel = 'السعر';
+  let priceVal = priceText
+    ? priceText.trim()
+    : price !== undefined && price !== null
+    ? `${price} L.E`
+    : 'حسب الاختيار';
+
+  if (priceText) {
+    if (priceText.includes('المقاس والسعر')) {
+      priceLabel = 'المقاس والسعر';
+      priceVal = priceText.replace('المقاس والسعر', '').trim();
+    } else if (priceText.includes('الحجم والسعر')) {
+      priceLabel = 'الحجم والسعر';
+      priceVal = priceText.replace('الحجم والسعر', '').trim();
+    } else if (priceText.includes('الوزن والسعر')) {
+      priceLabel = 'الوزن والسعر';
+      priceVal = priceText.replace('الوزن والسعر', '').trim();
+    } else if (priceText.includes('السعر')) {
+      priceLabel = 'السعر';
+      priceVal = priceText.replace('السعر', '').trim();
+    } else if (priceText.includes('سم')) {
+      priceLabel = 'المقاس والسعر';
+    } else if (
+      priceText.includes('جرام') ||
+      priceText.includes('كيلو') ||
+      priceText.includes('مل') ||
+      priceText.includes('لتر')
+    ) {
+      priceLabel = 'الحجم والسعر';
+    }
+  }
+
   const cardContent = (
     <div
-      className={`product-card group w-full h-full flex flex-col justify-between overflow-hidden bg-gradient-to-b from-white via-[#FDFCFA] to-[#FAF7F2] shadow-[0_2px_6px_rgba(40,30,15,0.05)] hover:shadow-[0_10px_24px_rgba(182,135,99,0.18)] transition-all duration-300 rounded-[calc(7*var(--u,1px))] ${
+      className={`product-card group w-full h-full flex flex-col justify-between overflow-hidden bg-white shadow-[0_2px_8px_rgba(0,0,0,0.04)] hover:shadow-[0_8px_20px_rgba(0,0,0,0.08)] transition-all duration-300 rounded-[calc(5*var(--u,1px))] ${
         isHighlighted
-          ? 'border-2 border-[#B68763] ring-4 ring-[#B68763]/40 shadow-[0_0_25px_rgba(182,135,99,0.5)] scale-[1.03] z-20 animate-pulse'
-          : 'border border-[#E8DEC8]/80 hover:border-[#B68763]/70 hover:-translate-y-[calc(1.5*var(--u,1px))]'
+          ? 'border-2 border-[#C39B42] ring-4 ring-[#C39B42]/40 shadow-[0_0_25px_rgba(195,155,66,0.5)] scale-[1.03] z-20 animate-pulse'
+          : 'border border-stone-200/70 hover:border-stone-300 hover:-translate-y-[calc(1*var(--u,1px))]'
       }`}
     >
-      {/* Product Image Area */}
+      {/* Product Image Area - Clean edge-to-edge top matching Canva */}
       <div
-        className="w-full shrink-0 overflow-hidden bg-stone-50/80 flex items-center justify-center relative border-b border-[#EFE7DC]/80"
+        className="w-full shrink-0 overflow-hidden bg-white flex items-center justify-center relative"
         style={{ flexBasis: `${finalImageShare}%`, height: `${finalImageShare}%` }}
       >
         <img
@@ -65,23 +100,24 @@ export function ProductCard({
             target.className = 'w-12 h-12 object-contain opacity-25 p-2';
           }}
         />
-        <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+        <div className="absolute inset-0 pointer-events-none bg-black/0 group-hover:bg-black/3 transition-colors duration-300" />
       </div>
 
-      {/* Product Information Area */}
+      {/* Product Information Area - RTL right-aligned */}
       <div
-        className="flex-1 flex flex-col justify-between min-h-0"
+        className="flex-1 flex flex-col justify-between min-h-0 text-right"
         style={{
-          padding: 'calc(6 * var(--u, 1px)) calc(8 * var(--u, 1px)) calc(5.5 * var(--u, 1px))',
+          padding: 'calc(5 * var(--u, 1px)) calc(7 * var(--u, 1px)) calc(5.5 * var(--u, 1px))',
+          direction: 'rtl',
         }}
       >
-        <div className="min-w-0 flex-1 flex flex-col justify-start overflow-hidden">
+        <div className="min-w-0 flex-1 flex flex-col justify-start overflow-hidden text-right">
           {/* Title */}
           <h3
-            className="font-extrabold text-[#3B2904] tracking-tight leading-snug"
+            className="font-bold text-[#191919] tracking-tight leading-snug text-right"
             title={title}
             style={{
-              fontSize: 'calc(9.5 * var(--u, 1px))',
+              fontSize: 'calc(9.8 * var(--u, 1px))',
               overflowWrap: 'break-word',
             }}
           >
@@ -91,10 +127,10 @@ export function ProductCard({
           {/* Arabic Description */}
           {hasDescription && (
             <p
-              className="text-stone-600 font-medium opacity-90 leading-relaxed mt-[calc(3.5*var(--u,1px))] select-text"
+              className="text-[#444444] font-normal leading-normal mt-[calc(2.5*var(--u,1px))] select-text line-clamp-2 text-right"
               title={description}
               style={{
-                fontSize: 'calc(7.6 * var(--u, 1px))',
+                fontSize: 'calc(7.2 * var(--u, 1px))',
                 lineHeight: 1.35,
                 overflowWrap: 'break-word',
                 display: '-webkit-box',
@@ -109,47 +145,61 @@ export function ProductCard({
           )}
         </div>
 
-        {/* Price Tag Footer */}
+        {/* Price & Specs Area - Authentic stacked right-aligned format */}
         <div
-          className="mt-auto flex items-baseline justify-between border-t border-[#EDE4D5]/90 shrink-0"
+          className="mt-auto shrink-0 select-none text-right"
           style={{
-            paddingTop: 'calc(3.5 * var(--u, 1px))',
             marginTop: 'calc(2.5 * var(--u, 1px))',
           }}
         >
           <span
-            className="font-bold select-none text-[#B68763] tracking-wide"
+            className="font-bold block tracking-normal text-[#C39B42]"
             style={{
-              fontSize: 'calc(8 * var(--u, 1px))',
+              fontSize: 'calc(7.2 * var(--u, 1px))',
             }}
           >
-            السعر
+            {priceLabel}
           </span>
-          <span
-            dir="ltr"
-            className="font-extrabold tracking-tight select-none text-[#3B2904]"
-            style={{
-              fontSize: 'calc(10 * var(--u, 1px))',
-              fontFamily: 'var(--mag-font-en)',
-            }}
-          >
-            {priceText && !priceText.includes('ج.مصري')
-              ? priceText
-              : price !== undefined && price !== null
-              ? `${price} L.E`
-              : 'حسب الاختيار'}
-          </span>
+          {priceVal.split('\n').map((line, idx) => {
+            const cleanLine = line.trim();
+            if (!cleanLine) return null;
+            return (
+              <span
+                key={idx}
+                className="font-bold text-[#191919] block leading-tight mt-[calc(1.5*var(--u,1px))]"
+                style={{
+                  fontSize: 'calc(8.8 * var(--u, 1px))',
+                  fontFamily: cleanLine.includes('L.E') ? 'var(--mag-font-en)' : 'inherit',
+                }}
+              >
+                {cleanLine}
+              </span>
+            );
+          })}
         </div>
       </div>
     </div>
   );
+
+  if (onSelect && product && isInteractive) {
+    return (
+      <button
+        type="button"
+        onClick={() => onSelect(product)}
+        className="block w-full h-full text-right no-underline cursor-pointer bg-transparent border-0 p-0"
+        aria-label={`عرض تفاصيل ${title}`}
+      >
+        {cardContent}
+      </button>
+    );
+  }
 
   if (!isInteractive || !slug || slug === '#') {
     return cardContent;
   }
 
   return (
-    <Link href={`/products/${slug}`} className="block w-full h-full no-underline">
+    <Link href={`/products/${slug}`} className="block w-full h-full no-underline cursor-pointer">
       {cardContent}
     </Link>
   );

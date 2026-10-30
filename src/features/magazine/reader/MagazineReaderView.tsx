@@ -3,16 +3,13 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { IssueSnapshot } from '../types';
+import { IssueSnapshot, ProductData } from '../types';
 import { FlipbookClient } from './FlipbookClient';
-import { HoneyShowcasePage } from '../components/HoneyShowcasePage';
-import { BasketsShowcasePage } from '../components/BasketsShowcasePage';
-import { OliveDatesPage } from '../components/OliveDatesPage';
-import { OliveShowcasePage } from '../components/OliveShowcasePage';
-import { Grid3x3Page } from '../components/Grid3x3Page';
+import { MagazinePageRenderer } from '../components/MagazinePageRenderer';
 import { TocDrawer } from '../components/TocDrawer';
 import { ListViewGrid } from '../components/ListViewGrid';
 import { MagazineSearchModal } from '../components/MagazineSearchModal';
+import { ProductDetailModal } from '../components/ProductDetailModal';
 
 interface MagazineReaderViewProps {
   initialIssue: IssueSnapshot;
@@ -27,6 +24,7 @@ export function MagazineReaderView({
   const [highlightedCode, setHighlightedCode] = useState<number | null>(null);
   const [isTocOpen, setIsTocOpen] = useState<boolean>(false);
   const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
+  const [selectedProduct, setSelectedProduct] = useState<ProductData | null>(null);
   const [viewMode, setViewMode] = useState<'flipbook' | 'list'>('flipbook');
 
   const handlePageChange = (newPage: number) => {
@@ -146,68 +144,15 @@ export function MagazineReaderView({
       <main className="flex-1 flex flex-col items-center justify-start sm:justify-center">
         {viewMode === 'flipbook' ? (
           <FlipbookClient initialPage={currentPage} onPageChange={handlePageChange}>
-            {initialIssue.pages.map((pageData) => {
-              if (pageData.position === 1) {
-                return (
-                  <HoneyShowcasePage
-                    key={pageData.position}
-                    pageNumber={1}
-                    isInteractive={true}
-                    highlightedCode={highlightedCode}
-                  />
-                );
-              }
-              if (pageData.position === 2) {
-                return (
-                  <BasketsShowcasePage
-                    key={pageData.position}
-                    pageNumber={2}
-                    isInteractive={true}
-                    highlightedCode={highlightedCode}
-                  />
-                );
-              }
-              if (pageData.position === 3) {
-                return (
-                  <OliveDatesPage
-                    key={pageData.position}
-                    pageNumber={3}
-                    isInteractive={true}
-                    highlightedCode={highlightedCode}
-                  />
-                );
-              }
-              if (pageData.position === 4) {
-                return (
-                  <OliveDatesPage
-                    key={pageData.position}
-                    pageNumber={4}
-                    isInteractive={true}
-                    highlightedCode={highlightedCode}
-                  />
-                );
-              }
-              if (pageData.position === 5) {
-                return (
-                  <OliveShowcasePage
-                    key={pageData.position}
-                    pageNumber={5}
-                    isInteractive={true}
-                    highlightedCode={highlightedCode}
-                  />
-                );
-              }
-              return (
-                <Grid3x3Page
-                  key={pageData.position}
-                  pageNumber={pageData.position}
-                  sectionTitle={pageData.section_title}
-                  slots={pageData.slots}
-                  isInteractive={true}
-                  highlightedCode={highlightedCode}
-                />
-              );
-            })}
+            {initialIssue.pages.map((pageData) => (
+              <MagazinePageRenderer
+                key={pageData.position}
+                page={pageData}
+                isInteractive={true}
+                highlightedCode={highlightedCode}
+                onProductClick={(product) => setSelectedProduct(product)}
+              />
+            ))}
           </FlipbookClient>
         ) : (
           <ListViewGrid
@@ -247,6 +192,13 @@ export function MagazineReaderView({
             setTimeout(() => setHighlightedCode(null), 3500);
           }
         }}
+      />
+
+      {/* Interactive Product Quick View Modal */}
+      <ProductDetailModal
+        product={selectedProduct}
+        isOpen={Boolean(selectedProduct)}
+        onClose={() => setSelectedProduct(null)}
       />
     </div>
   );
