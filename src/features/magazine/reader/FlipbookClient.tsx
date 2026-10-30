@@ -150,7 +150,7 @@ export function FlipbookClient({
       className={`relative w-full flex flex-col items-center select-none overflow-x-hidden ${
         isFullscreen
           ? 'h-screen w-screen bg-[#F3F4F7] p-2 flex flex-col justify-between items-center overflow-hidden'
-          : 'pt-2 pb-4 sm:py-6 px-1.5 sm:px-4 justify-center items-center'
+          : 'pt-7 sm:pt-14 pb-4 sm:pb-12 px-1.5 sm:px-4 justify-start items-center'
       }`}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
