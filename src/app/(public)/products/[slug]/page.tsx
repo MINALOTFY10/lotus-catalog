@@ -10,6 +10,7 @@ import {
   generateProductJsonLd,
 } from '@/features/products/services/publicProducts';
 import { formatMagazinePrice } from '@/lib/format/price';
+import { ProductPriceDisplay } from '@/features/products/components/ProductPriceDisplay';
 
 interface ProductDetailPageProps {
   params: Promise<{ slug: string }>;
@@ -235,12 +236,10 @@ async function ProductDetailPageContent({ params }: ProductDetailPageProps) {
                       {rel.name_ar}
                     </h4>
                   </div>
-                  <div className="mt-3 pt-2 border-t border-stone-100 flex items-center justify-between">
-                    <span className="text-[10px] text-stone-400">السعر</span>
-                    <span className="font-extrabold text-xs sm:text-sm text-[#443000]">
-                      {formatMagazinePrice(rel.sale_price, rel.price_text)}
-                    </span>
-                  </div>
+                  <ProductPriceDisplay
+                    salePrice={rel.sale_price}
+                    priceText={rel.price_text}
+                  />
                 </Link>
               ))}
             </div>

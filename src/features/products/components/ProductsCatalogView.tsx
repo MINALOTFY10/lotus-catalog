@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { PublicProduct } from '../types';
 import { formatMagazinePrice } from '@/lib/format/price';
+import { ProductPriceDisplay } from './ProductPriceDisplay';
 import { normalizeArabic } from '@/lib/format/arabic';
 
 interface ProductsCatalogViewProps {
@@ -225,12 +226,10 @@ export function ProductsCatalogView({
                   </Link>
 
                   {/* Price Block */}
-                  <div className="mt-3 pt-2 border-t border-stone-100 flex items-center justify-between">
-                    <span className="text-xs font-bold text-[#B68763]">السعر</span>
-                    <span className="font-extrabold text-sm sm:text-base text-[#443000]">
-                      {formatMagazinePrice(product.sale_price, product.price_text)}
-                    </span>
-                  </div>
+                  <ProductPriceDisplay
+                    salePrice={product.sale_price}
+                    priceText={product.price_text}
+                  />
                 </div>
               </div>
 
