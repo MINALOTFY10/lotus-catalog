@@ -19,13 +19,24 @@ export interface PageSlotData {
   description_override?: string | null;
   price_override?: number | null;
   image_override?: string | null;
+  price_text?: string | null;
 }
 
 export interface MagazinePageData {
   id?: string;
   position: number;
   pageNumber: number;
-  template: 'cover' | 'grid3x3' | 'grid2x2' | 'single' | 'info';
+  template:
+    | 'showcase-honey'
+    | 'showcase-food'
+    | 'grid3x3'
+    | 'grid2x3'
+    | 'grid2x2'
+    | 'grid-custom'
+    | 'hero-split'
+    | 'cover'
+    | 'single'
+    | 'info';
   section_title?: string | null;
   sectionTitle?: string;
   slots: PageSlotData[];
