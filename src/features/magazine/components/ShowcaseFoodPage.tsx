@@ -10,6 +10,7 @@ interface ShowcaseFoodPageProps {
   pageNumber?: number;
   sectionTitle?: string | null;
   isInteractive?: boolean;
+  priority?: boolean;
   highlightedCode?: number | null;
   onProductClick?: (product: ProductData) => void;
 }
@@ -19,6 +20,7 @@ export function ShowcaseFoodPage({
   pageNumber = 2,
   sectionTitle = 'مجموعة المنتجات الغذائية الطبيعية',
   isInteractive = true,
+  priority = false,
   highlightedCode,
   onProductClick,
 }: ShowcaseFoodPageProps) {
@@ -58,6 +60,7 @@ export function ShowcaseFoodPage({
                 priceText={oliveSlot.price_text}
                 imageOverride={oliveSlot.image_override}
                 isInteractive={isInteractive}
+                priority={priority}
                 isHighlighted={Boolean(highlightedCode && oliveSlot.product?.cashier_code === highlightedCode)}
                 imageShare={54}
                 onSelect={onProductClick}
@@ -79,6 +82,7 @@ export function ShowcaseFoodPage({
                 priceText={datesSlot.price_text}
                 imageOverride={datesSlot.image_override}
                 isInteractive={isInteractive}
+                priority={priority}
                 isHighlighted={Boolean(highlightedCode && datesSlot.product?.cashier_code === highlightedCode)}
                 imageShare={54}
                 onSelect={onProductClick}

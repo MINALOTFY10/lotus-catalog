@@ -150,7 +150,7 @@ export function FlipbookClient({
       className={`relative w-full flex flex-col items-center select-none overflow-x-hidden ${
         isFullscreen
           ? 'h-screen w-screen bg-[#F3F4F7] p-2 flex flex-col justify-between overflow-hidden'
-          : 'pt-8 pb-5 sm:py-6 px-2 sm:px-4 justify-start'
+          : 'pt-4 pb-4 sm:py-6 px-1.5 sm:px-4 justify-start'
       }`}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
@@ -167,7 +167,7 @@ export function FlipbookClient({
             style={{
               maxWidth: isFullscreen
                 ? 'calc((100vh - 68px) * (595 / 842))'
-                : 'min(calc(100vw - 16px), 480px)',
+                : 'min(calc(100vw - 12px), 500px)',
               width: '100%',
             }}
           >

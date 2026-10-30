@@ -11,6 +11,7 @@ import { GridCustomPage } from './GridCustomPage';
 interface MagazinePageRendererProps {
   page: MagazinePageData;
   isInteractive?: boolean;
+  priority?: boolean;
   highlightedCode?: number | null;
   onProductClick?: (product: ProductData) => void;
 }
@@ -18,6 +19,7 @@ interface MagazinePageRendererProps {
 export function MagazinePageRenderer({
   page,
   isInteractive = true,
+  priority = false,
   highlightedCode,
   onProductClick,
 }: MagazinePageRendererProps) {
@@ -34,6 +36,7 @@ export function MagazinePageRenderer({
           pageNumber={pageNumber}
           sectionTitle={sectionTitle}
           isInteractive={isInteractive}
+          priority={priority}
           highlightedCode={highlightedCode}
           onProductClick={onProductClick}
         />
@@ -46,6 +49,7 @@ export function MagazinePageRenderer({
           pageNumber={pageNumber}
           sectionTitle={sectionTitle}
           isInteractive={isInteractive}
+          priority={priority}
           highlightedCode={highlightedCode}
           onProductClick={onProductClick}
         />
@@ -58,6 +62,7 @@ export function MagazinePageRenderer({
           pageNumber={pageNumber}
           sectionTitle={sectionTitle}
           isInteractive={isInteractive}
+          priority={priority}
           highlightedCode={highlightedCode}
           onProductClick={onProductClick}
         />
@@ -73,6 +78,7 @@ export function MagazinePageRenderer({
           sectionTitle={sectionTitle}
           template={template}
           isInteractive={isInteractive}
+          priority={priority}
           highlightedCode={highlightedCode}
           onProductClick={onProductClick}
         />
@@ -86,6 +92,7 @@ export function MagazinePageRenderer({
           pageNumber={pageNumber}
           sectionTitle={sectionTitle}
           isInteractive={isInteractive}
+          priority={priority}
           highlightedCode={highlightedCode}
           onProductClick={onProductClick}
         />

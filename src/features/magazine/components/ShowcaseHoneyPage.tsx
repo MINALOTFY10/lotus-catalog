@@ -10,6 +10,7 @@ interface ShowcaseHoneyPageProps {
   pageNumber?: number;
   sectionTitle?: string | null;
   isInteractive?: boolean;
+  priority?: boolean;
   highlightedCode?: number | null;
   onProductClick?: (product: ProductData) => void;
 }
@@ -19,6 +20,7 @@ export function ShowcaseHoneyPage({
   pageNumber = 1,
   sectionTitle = 'مجموعة عسل نحلة الطبيعي',
   isInteractive = true,
+  priority = false,
   highlightedCode,
   onProductClick,
 }: ShowcaseHoneyPageProps) {
@@ -61,6 +63,7 @@ export function ShowcaseHoneyPage({
               priceText={slot1.price_text}
               imageOverride={slot1.image_override}
               isInteractive={isInteractive}
+              priority={priority}
               isHighlighted={Boolean(highlightedCode && slot1.product?.cashier_code === highlightedCode)}
               imageShare={54}
               onSelect={onProductClick}
@@ -79,6 +82,7 @@ export function ShowcaseHoneyPage({
               priceText={slot2.price_text}
               imageOverride={slot2.image_override}
               isInteractive={isInteractive}
+              priority={priority}
               isHighlighted={Boolean(highlightedCode && slot2.product?.cashier_code === highlightedCode)}
               imageShare={54}
               onSelect={onProductClick}
@@ -97,6 +101,7 @@ export function ShowcaseHoneyPage({
               priceText={slot3.price_text}
               imageOverride={slot3.image_override}
               isInteractive={isInteractive}
+              priority={priority}
               isHighlighted={Boolean(highlightedCode && slot3.product?.cashier_code === highlightedCode)}
               imageShare={54}
               onSelect={onProductClick}
@@ -115,6 +120,7 @@ export function ShowcaseHoneyPage({
               priceText={slot4.price_text}
               imageOverride={slot4.image_override}
               isInteractive={isInteractive}
+              priority={priority}
               isHighlighted={Boolean(highlightedCode && slot4.product?.cashier_code === highlightedCode)}
               imageShare={54}
               onSelect={onProductClick}

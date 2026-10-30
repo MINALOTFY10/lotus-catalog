@@ -14,6 +14,7 @@ interface ProductCardProps {
   isInteractive?: boolean;
   isHighlighted?: boolean;
   imageShare?: number; // Optional custom height % for image
+  priority?: boolean;
   onSelect?: (product: ProductData) => void;
 }
 
@@ -27,6 +28,7 @@ export function ProductCard({
   isInteractive = true,
   isHighlighted = false,
   imageShare,
+  priority = false,
   onSelect,
 }: ProductCardProps) {
   if (!product && !titleOverride) {
@@ -125,7 +127,9 @@ export function ProductCard({
           src={imageUrl}
           alt={title}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-          loading="lazy"
+          loading={priority ? 'eager' : 'lazy'}
+          fetchPriority={priority ? 'high' : 'auto'}
+          decoding="async"
           onError={(e) => {
             const target = e.target as HTMLImageElement;
             target.src = '/brand/lotus_logo.png';
@@ -145,13 +149,13 @@ export function ProductCard({
         }}
       >
         <div className="min-w-0 flex-1 flex flex-col justify-start overflow-hidden text-right">
-          {/* Title: Canva 13.33px bold, line-height 1.4 */}
+          {/* Title: Canva ~13.33px bold, slightly enlarged to 11.2u (+12%) for enhanced legibility */}
           <h3
             className="font-bold text-right"
             title={title}
             style={{
-              fontSize: 'calc(10 * var(--u, 1px))',
-              lineHeight: 1.4,
+              fontSize: 'calc(11.2 * var(--u, 1px))',
+              lineHeight: 1.35,
               color: 'var(--mag-text)',
               overflowWrap: 'break-word',
               fontFamily: 'var(--mag-font-ar)',
@@ -160,19 +164,19 @@ export function ProductCard({
             {formattedTitle}
           </h3>
 
-          {/* Description: Canva 8.5px regular, line-height 1.4, distinct from bold title */}
+          {/* Description: Canva ~8.5px regular, slightly enlarged to 7.4u */}
           {hasDescription && (
             <p
               className="font-normal select-text text-right line-clamp-2"
               title={description}
               style={{
-                marginTop: 'calc(3.5 * var(--u, 1px))',
-                fontSize: 'calc(6.8 * var(--u, 1px))',
-                lineHeight: 1.4,
+                marginTop: 'calc(2.5 * var(--u, 1px))',
+                fontSize: 'calc(7.4 * var(--u, 1px))',
+                lineHeight: 1.35,
                 color: 'rgba(68, 48, 0, 0.8)',
                 overflowWrap: 'break-word',
                 display: '-webkit-box',
-                WebkitLineClamp: 3,
+                WebkitLineClamp: 2,
                 WebkitBoxOrient: 'vertical',
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
@@ -184,13 +188,13 @@ export function ProductCard({
           )}
         </div>
 
-        {/* Price block: Canva 9.33px, gold label then "size | price" line */}
+        {/* Price block: Canva ~9.33px, slightly enlarged to 7.8u / 8.2u (+12-17%) */}
         <div
           className="shrink-0 select-none text-right"
           style={{
-            marginTop: 'calc(3 * var(--u, 1px))',
-            fontSize: 'calc(7 * var(--u, 1px))',
-            lineHeight: 1.4,
+            marginTop: 'calc(2.5 * var(--u, 1px))',
+            fontSize: 'calc(7.8 * var(--u, 1px))',
+            lineHeight: 1.35,
             color: 'var(--mag-text)',
             fontFamily: 'var(--mag-font-ar)',
           }}
@@ -219,6 +223,7 @@ export function ProductCard({
                 key={idx}
                 className="block"
                 style={{
+                  fontSize: 'calc(8.2 * var(--u, 1px))',
                   fontFamily: cleanLine.includes('L.E') ? 'var(--mag-font-en)' : 'var(--mag-font-ar)',
                 }}
               >

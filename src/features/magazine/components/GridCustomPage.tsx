@@ -11,6 +11,7 @@ interface GridCustomPageProps {
   slots: PageSlotData[];
   template?: string;
   isInteractive?: boolean;
+  priority?: boolean;
   highlightedCode?: number | null;
   onProductClick?: (product: ProductData) => void;
 }
@@ -21,6 +22,7 @@ export function GridCustomPage({
   slots,
   template = 'grid-custom',
   isInteractive = true,
+  priority = false,
   highlightedCode,
   onProductClick,
 }: GridCustomPageProps) {
@@ -47,6 +49,7 @@ export function GridCustomPage({
                   priceText={slotData.price_text}
                   imageOverride={slotData.image_override}
                   isInteractive={isInteractive}
+                  priority={priority}
                   isHighlighted={Boolean(highlightedCode && slotData.product?.cashier_code === highlightedCode)}
                   imageShare={58}
                   onSelect={onProductClick}
@@ -81,6 +84,7 @@ export function GridCustomPage({
                   priceText={slotData.price_text}
                   imageOverride={slotData.image_override}
                   isInteractive={isInteractive}
+                  priority={priority}
                   isHighlighted={Boolean(highlightedCode && slotData.product?.cashier_code === highlightedCode)}
                   imageShare={56}
                   onSelect={onProductClick}
@@ -100,6 +104,7 @@ export function GridCustomPage({
                 priceText={heroSlot.price_text}
                 imageOverride={heroSlot.image_override}
                 isInteractive={isInteractive}
+                  priority={priority}
                 isHighlighted={Boolean(highlightedCode && heroSlot.product?.cashier_code === highlightedCode)}
                 imageShare={62}
                 onSelect={onProductClick}
@@ -138,6 +143,7 @@ export function GridCustomPage({
                   priceText={slotData.price_text}
                   imageOverride={slotData.image_override}
                   isInteractive={isInteractive}
+                  priority={priority}
                   isHighlighted={Boolean(highlightedCode && slotData.product?.cashier_code === highlightedCode)}
                   onSelect={onProductClick}
                 />
@@ -157,6 +163,7 @@ export function GridCustomPage({
                   priceText={slotData.price_text}
                   imageOverride={slotData.image_override}
                   isInteractive={isInteractive}
+                  priority={priority}
                   isHighlighted={Boolean(highlightedCode && slotData.product?.cashier_code === highlightedCode)}
                   onSelect={onProductClick}
                 />
@@ -176,6 +183,7 @@ export function GridCustomPage({
                   priceText={slotData.price_text}
                   imageOverride={slotData.image_override}
                   isInteractive={isInteractive}
+                  priority={priority}
                   isHighlighted={Boolean(highlightedCode && slotData.product?.cashier_code === highlightedCode)}
                   onSelect={onProductClick}
                 />
@@ -214,6 +222,7 @@ export function GridCustomPage({
                   priceText={slotData.price_text}
                   imageOverride={slotData.image_override}
                   isInteractive={isInteractive}
+                  priority={priority}
                   isHighlighted={Boolean(highlightedCode && slotData.product?.cashier_code === highlightedCode)}
                   onSelect={onProductClick}
                 />
@@ -233,6 +242,7 @@ export function GridCustomPage({
                   priceText={slotData.price_text}
                   imageOverride={slotData.image_override}
                   isInteractive={isInteractive}
+                  priority={priority}
                   isHighlighted={Boolean(highlightedCode && slotData.product?.cashier_code === highlightedCode)}
                   onSelect={onProductClick}
                 />
@@ -252,6 +262,7 @@ export function GridCustomPage({
                   priceText={heroSlot.price_text}
                   imageOverride={heroSlot.image_override}
                   isInteractive={isInteractive}
+                  priority={priority}
                   isHighlighted={Boolean(highlightedCode && heroSlot.product?.cashier_code === highlightedCode)}
                   onSelect={onProductClick}
                 />
@@ -285,6 +296,7 @@ export function GridCustomPage({
                 priceText={slotData.price_text}
                 imageOverride={slotData.image_override}
                 isInteractive={isInteractive}
+                  priority={priority}
                 isHighlighted={Boolean(highlightedCode && slotData.product?.cashier_code === highlightedCode)}
                 onSelect={onProductClick}
               />

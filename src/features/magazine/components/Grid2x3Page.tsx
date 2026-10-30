@@ -10,6 +10,7 @@ interface Grid2x3PageProps {
   pageNumber?: number;
   slots: PageSlotData[];
   isInteractive?: boolean;
+  priority?: boolean;
   highlightedCode?: number | null;
   onProductClick?: (product: ProductData) => void;
 }
@@ -19,6 +20,7 @@ export function Grid2x3Page({
   pageNumber,
   slots,
   isInteractive = true,
+  priority = false,
   highlightedCode,
   onProductClick,
 }: Grid2x3PageProps) {
@@ -53,6 +55,7 @@ export function Grid2x3Page({
                 priceText={slotData.price_text}
                 imageOverride={slotData.image_override}
                 isInteractive={isInteractive}
+                priority={priority}
                 isHighlighted={Boolean(highlightedCode && slotData.product?.cashier_code === highlightedCode)}
                 imageShare={56}
                 onSelect={onProductClick}

@@ -10,6 +10,7 @@ import { MagazinePageRenderer } from '../components/MagazinePageRenderer';
 import { TocDrawer } from '../components/TocDrawer';
 import { ListViewGrid } from '../components/ListViewGrid';
 import { MagazineSearchModal } from '../components/MagazineSearchModal';
+import { useMagazinePreload } from './useMagazinePreload';
 
 interface MagazineReaderViewProps {
   initialIssue: IssueSnapshot;
@@ -26,6 +27,11 @@ export function MagazineReaderView({
   const [isTocOpen, setIsTocOpen] = useState<boolean>(false);
   const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
   const [viewMode, setViewMode] = useState<'flipbook' | 'list'>('flipbook');
+
+  // Proactively preload images for visible and upcoming spreads in background
+  useMagazinePreload(initialIssue.pages, currentPage);
+
+  const spreadStart = Math.floor((currentPage - 1) / 2) * 2 + 1;
 
   const handlePageChange = (newPage: number) => {
     setCurrentPage(newPage);
@@ -144,19 +150,24 @@ export function MagazineReaderView({
       <main className="flex-1 flex flex-col items-center justify-start sm:justify-center">
         {viewMode === 'flipbook' ? (
           <FlipbookClient initialPage={currentPage} onPageChange={handlePageChange}>
-            {initialIssue.pages.map((pageData) => (
-              <MagazinePageRenderer
-                key={pageData.position}
-                page={pageData}
-                isInteractive={true}
-                highlightedCode={highlightedCode}
-                onProductClick={(product) => {
-                  if (product?.slug && product.slug !== '#') {
-                    router.push(`/products/${product.slug}`);
-                  }
-                }}
-              />
-            ))}
+            {initialIssue.pages.map((pageData) => {
+              const pos = pageData.position || pageData.pageNumber;
+              const isVisibleSpread = pos === spreadStart || pos === spreadStart + 1;
+              return (
+                <MagazinePageRenderer
+                  key={pageData.position}
+                  page={pageData}
+                  priority={isVisibleSpread}
+                  isInteractive={true}
+                  highlightedCode={highlightedCode}
+                  onProductClick={(product) => {
+                    if (product?.slug && product.slug !== '#') {
+                      router.push(`/products/${product.slug}`);
+                    }
+                  }}
+                />
+              );
+            })}
           </FlipbookClient>
         ) : (
           <ListViewGrid
