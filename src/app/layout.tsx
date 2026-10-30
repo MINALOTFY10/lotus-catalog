@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
-import { Noto_Sans_Arabic, Noto_Sans } from "next/font/google";
+import { Tajawal, Noto_Sans_Arabic, Noto_Sans } from "next/font/google";
 import "./globals.css";
+
+const tajawal = Tajawal({
+  variable: "--font-tajawal",
+  subsets: ["arabic"],
+  weight: ["300", "400", "500", "700", "800"],
+  display: "swap",
+});
 
 const notoSansArabic = Noto_Sans_Arabic({
   variable: "--font-noto-arabic",
@@ -29,7 +36,7 @@ export default function RootLayout({
     <html
       lang="ar"
       dir="rtl"
-      className={`${notoSansArabic.variable} ${notoSans.variable} h-full antialiased`}
+      className={`${tajawal.variable} ${notoSansArabic.variable} ${notoSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

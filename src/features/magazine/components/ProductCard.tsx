@@ -114,11 +114,12 @@ export function ProductCard({
         <div className="min-w-0 flex-1 flex flex-col justify-start overflow-hidden text-right">
           {/* Title */}
           <h3
-            className="font-bold text-[#191919] tracking-tight leading-snug text-right"
+            className="font-bold text-[#000000] tracking-tight leading-snug text-right"
             title={title}
             style={{
-              fontSize: 'calc(9.8 * var(--u, 1px))',
+              fontSize: 'calc(10 * var(--u, 1px))',
               overflowWrap: 'break-word',
+              fontFamily: 'var(--mag-font-ar)',
             }}
           >
             {title}
@@ -127,10 +128,10 @@ export function ProductCard({
           {/* Arabic Description */}
           {hasDescription && (
             <p
-              className="text-[#444444] font-normal leading-normal mt-[calc(2.5*var(--u,1px))] select-text line-clamp-2 text-right"
+              className="text-[#222222] font-normal leading-normal mt-[calc(2*var(--u,1px))] select-text line-clamp-2 text-right"
               title={description}
               style={{
-                fontSize: 'calc(7.2 * var(--u, 1px))',
+                fontSize: 'calc(6.2 * var(--u, 1px))',
                 lineHeight: 1.35,
                 overflowWrap: 'break-word',
                 display: '-webkit-box',
@@ -138,6 +139,7 @@ export function ProductCard({
                 WebkitBoxOrient: 'vertical',
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
+                fontFamily: 'var(--mag-font-ar)',
               }}
             >
               {description}
@@ -149,13 +151,14 @@ export function ProductCard({
         <div
           className="mt-auto shrink-0 select-none text-right"
           style={{
-            marginTop: 'calc(2.5 * var(--u, 1px))',
+            marginTop: 'calc(2 * var(--u, 1px))',
           }}
         >
           <span
-            className="font-bold block tracking-normal text-[#C39B42]"
+            className="font-bold block tracking-normal text-[#B68763]"
             style={{
-              fontSize: 'calc(7.2 * var(--u, 1px))',
+              fontSize: 'calc(7.0 * var(--u, 1px))',
+              fontFamily: 'var(--mag-font-ar)',
             }}
           >
             {priceLabel}
@@ -166,10 +169,10 @@ export function ProductCard({
             return (
               <span
                 key={idx}
-                className="font-bold text-[#191919] block leading-tight mt-[calc(1.5*var(--u,1px))]"
+                className="font-bold text-[#000000] block leading-tight mt-[calc(1*var(--u,1px))]"
                 style={{
-                  fontSize: 'calc(8.8 * var(--u, 1px))',
-                  fontFamily: cleanLine.includes('L.E') ? 'var(--mag-font-en)' : 'inherit',
+                  fontSize: 'calc(7.2 * var(--u, 1px))',
+                  fontFamily: cleanLine.includes('L.E') ? 'var(--mag-font-en)' : 'var(--mag-font-ar)',
                 }}
               >
                 {cleanLine}

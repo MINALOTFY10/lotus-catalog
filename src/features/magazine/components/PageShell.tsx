@@ -45,53 +45,54 @@ export function PageShell({
       <aside
         className="absolute z-10 pointer-events-none select-none"
         style={{
-          left: 'calc(48 * var(--u, 1px))',
-          top: 'calc(150 * var(--u, 1px))',
-          width: 'calc(65 * var(--u, 1px))',
-          height: 'calc(660 * var(--u, 1px))',
+          left: 0,
+          top: 0,
+          width: 'calc(134 * var(--u, 1px))',
+          height: '100%',
         }}
       >
+        <span className="sr-only">قائمة الأسعار</span>
+
+        {/* Outer Line: قائمة اسعار (PDF: x=45.5pt..75.4pt, y=140pt, size=30pt, Tajawal-Light) */}
         <div
-          className="flex flex-col items-start"
           style={{
             position: 'absolute',
-            left: 0,
-            top: 0,
-            width: 'max-content',
-            gap: 'calc(6 * var(--u, 1px))',
+            left: 'calc(75 * var(--u, 1px))',
+            top: 'calc(138 * var(--u, 1px))',
             transform: 'rotate(90deg)',
             transformOrigin: 'top left',
             whiteSpace: 'nowrap',
-            direction: 'rtl',
-            color: '#1C1917',
+            color: '#000000',
+            fontFamily: 'var(--mag-font-ar)',
+            fontWeight: 300,
+            fontSize: 'calc(30 * var(--u, 1px))',
+            lineHeight: 1,
+            letterSpacing: 'calc(0.5 * var(--u, 1px))',
           }}
         >
-          {/* Outer Line: قائمة اسعار */}
-          <span
-            className="font-bold tracking-wider block text-stone-800"
+          قائمة اسعار
+        </div>
+
+        {/* Inner Line: Section Title (PDF: x=81.6pt..119.6pt, y=140pt, size=38pt, Tajawal-Medium) */}
+        {sectionTitle && (
+          <div
             style={{
-              fontSize: 'calc(18 * var(--u, 1px))',
+              position: 'absolute',
+              left: 'calc(120 * var(--u, 1px))',
+              top: 'calc(138 * var(--u, 1px))',
+              transform: 'rotate(90deg)',
+              transformOrigin: 'top left',
+              whiteSpace: 'nowrap',
+              color: '#000000',
               fontFamily: 'var(--mag-font-ar)',
+              fontWeight: 500,
+              fontSize: 'calc(38 * var(--u, 1px))',
               lineHeight: 1,
             }}
           >
-            قائمة الأسعار
-          </span>
-
-          {/* Inner Line: Section Title */}
-          {sectionTitle && (
-            <span
-              className="font-extrabold tracking-normal block text-stone-950"
-              style={{
-                fontSize: 'calc(21 * var(--u, 1px))',
-                fontFamily: 'var(--mag-font-ar)',
-                lineHeight: 1.1,
-              }}
-            >
-              {sectionTitle}
-            </span>
-          )}
-        </div>
+            {sectionTitle}
+          </div>
+        )}
 
         {/* Authentic Canva Golden Wreath Garland at bottom-left */}
         <div
@@ -115,10 +116,10 @@ export function PageShell({
       <main
         className="absolute z-0"
         style={{
-          left: 'calc(118 * var(--u, 1px))',
-          top: 'calc(145 * var(--u, 1px))',
-          width: 'calc(448 * var(--u, 1px))',
-          height: 'calc(670 * var(--u, 1px))',
+          left: 'calc(136 * var(--u, 1px))',
+          top: 'calc(134 * var(--u, 1px))',
+          width: 'calc(426 * var(--u, 1px))',
+          height: 'calc(680 * var(--u, 1px))',
         }}
       >
         {children}

@@ -36,79 +36,69 @@ export function ShowcaseFoodPage({
           direction: 'rtl',
         }}
       >
-        {/* Top 2 Columns Area (Olive Oil & Dates) */}
-        <div className="w-full flex-1 min-h-0 grid grid-cols-2" style={{ gap: 'calc(8 * var(--u, 1px))' }}>
-          {/* Right Column (Col 1 in RTL) */}
-          <div className="w-full h-full flex flex-col justify-between" style={{ gap: 'calc(8 * var(--u, 1px))' }}>
-            {/* Nakhla Brand Badge */}
-            <div
-              className="w-full overflow-hidden rounded-[calc(5*var(--u,1px))] border border-stone-200/70 shadow-[0_2px_8px_rgba(0,0,0,0.04)] bg-white"
-              style={{ height: '48%' }}
-            >
-              <img
-                src="/magazine/brand_cards/nakhla_brand_badge.webp"
-                alt="تمور نخلة NAKHLA"
-                className="w-full h-full object-cover block"
-              />
-            </div>
-
-            {/* Dates Product Card */}
-            <div className="w-full flex-1 min-h-0">
-              {datesSlot && (
-                <ProductCard
-                  product={datesSlot.product}
-                  titleOverride={datesSlot.title_override}
-                  descriptionOverride={datesSlot.description_override}
-                  priceOverride={datesSlot.price_override}
-                  priceText={datesSlot.price_text}
-                  imageOverride={datesSlot.image_override}
-                  isInteractive={isInteractive}
-                  isHighlighted={Boolean(highlightedCode && datesSlot.product?.cashier_code === highlightedCode)}
-                  imageShare={56}
-                  onSelect={onProductClick}
-                />
-              )}
-            </div>
+        {/* Row 1: Nakhla Badge (Right) & Waj Olive Oil (Left) */}
+        <div className="grid grid-cols-2 flex-1 min-h-0" style={{ gap: 'calc(8 * var(--u, 1px))' }}>
+          {/* Nakhla Brand Badge (Col 1 Right) */}
+          <div className="w-full h-full min-h-0 min-w-0 overflow-hidden rounded-[calc(5*var(--u,1px))] border border-stone-200/70 shadow-[0_2px_8px_rgba(0,0,0,0.04)] bg-white">
+            <img
+              src="/magazine/brand_cards/nakhla_brand_badge.webp"
+              alt="تمور نخلة NAKHLA"
+              className="w-full h-full object-cover block"
+            />
           </div>
 
-          {/* Left Column (Col 2 in RTL) */}
-          <div className="w-full h-full flex flex-col justify-between" style={{ gap: 'calc(8 * var(--u, 1px))' }}>
-            {/* Olive Oil Product Card */}
-            <div className="w-full flex-1 min-h-0">
-              {oliveSlot && (
-                <ProductCard
-                  product={oliveSlot.product}
-                  titleOverride={oliveSlot.title_override}
-                  descriptionOverride={oliveSlot.description_override}
-                  priceOverride={oliveSlot.price_override}
-                  priceText={oliveSlot.price_text}
-                  imageOverride={oliveSlot.image_override}
-                  isInteractive={isInteractive}
-                  isHighlighted={Boolean(highlightedCode && oliveSlot.product?.cashier_code === highlightedCode)}
-                  imageShare={56}
-                  onSelect={onProductClick}
-                />
-              )}
-            </div>
-
-            {/* Waj Olive Tree Badge */}
-            <div
-              className="w-full overflow-hidden rounded-[calc(5*var(--u,1px))] border border-stone-200/70 shadow-[0_2px_8px_rgba(0,0,0,0.04)] bg-white"
-              style={{ height: '48%' }}
-            >
-              <img
-                src="/magazine/brand_cards/waj_brand_badge.webp"
-                alt="واج WAJ زيت زيتون"
-                className="w-full h-full object-cover block"
+          {/* Waj Olive Oil Product Card (Col 2 Left) */}
+          <div className="w-full h-full min-h-0 min-w-0">
+            {oliveSlot && (
+              <ProductCard
+                product={oliveSlot.product}
+                titleOverride={oliveSlot.title_override}
+                descriptionOverride={oliveSlot.description_override}
+                priceOverride={oliveSlot.price_override}
+                priceText={oliveSlot.price_text}
+                imageOverride={oliveSlot.image_override}
+                isInteractive={isInteractive}
+                isHighlighted={Boolean(highlightedCode && oliveSlot.product?.cashier_code === highlightedCode)}
+                imageShare={54}
+                onSelect={onProductClick}
               />
-            </div>
+            )}
           </div>
         </div>
 
-        {/* Bottom Full-Width Rural & Environmental Support Fund Certificate */}
+        {/* Row 2: Nakhla Dates (Right) & Waj Olive Tree Badge (Left) */}
+        <div className="grid grid-cols-2 flex-1 min-h-0" style={{ gap: 'calc(8 * var(--u, 1px))' }}>
+          {/* Nakhla Dates Product Card (Col 1 Right) */}
+          <div className="w-full h-full min-h-0 min-w-0">
+            {datesSlot && (
+              <ProductCard
+                product={datesSlot.product}
+                titleOverride={datesSlot.title_override}
+                descriptionOverride={datesSlot.description_override}
+                priceOverride={datesSlot.price_override}
+                priceText={datesSlot.price_text}
+                imageOverride={datesSlot.image_override}
+                isInteractive={isInteractive}
+                isHighlighted={Boolean(highlightedCode && datesSlot.product?.cashier_code === highlightedCode)}
+                imageShare={54}
+                onSelect={onProductClick}
+              />
+            )}
+          </div>
+
+          {/* Waj Olive Tree Badge (Col 2 Left) */}
+          <div className="w-full h-full min-h-0 min-w-0 overflow-hidden rounded-[calc(5*var(--u,1px))] border border-stone-200/70 shadow-[0_2px_8px_rgba(0,0,0,0.04)] bg-white">
+            <img
+              src="/magazine/brand_cards/waj_brand_badge.webp"
+              alt="واج WAJ زيت زيتون"
+              className="w-full h-full object-cover block"
+            />
+          </div>
+        </div>
+
+        {/* Row 3: Wide Full-Width Rural & Environmental Support Fund Certificate */}
         <div
-          className="w-full overflow-hidden rounded-[calc(5*var(--u,1px))] border border-stone-200/70 shadow-[0_2px_8px_rgba(0,0,0,0.04)] bg-white"
-          style={{ height: '24%' }}
+          className="w-full flex-1 min-h-0 overflow-hidden rounded-[calc(5*var(--u,1px))] border border-stone-200/70 shadow-[0_2px_8px_rgba(0,0,0,0.04)] bg-white"
         >
           <img
             src="/magazine/brand_cards/food_eco_badge.webp"

@@ -35,113 +35,100 @@ export function ShowcaseHoneyPage({
   return (
     <PageShell sectionTitle={sectionTitle} pageNumber={pageNumber}>
       <div
-        className="w-full h-full grid grid-cols-2"
+        className="w-full h-full grid grid-cols-2 grid-rows-3"
         style={{
           gap: 'calc(8 * var(--u, 1px))',
           direction: 'rtl',
         }}
       >
-        {/* Right Column (Col 1 in RTL) */}
-        <div className="w-full h-full flex flex-col justify-between" style={{ gap: 'calc(8 * var(--u, 1px))' }}>
-          {/* Top: Na7la Brand Badge Card */}
-          <div
-            className="w-full overflow-hidden rounded-[calc(5*var(--u,1px))] border border-stone-200/70 shadow-[0_2px_8px_rgba(0,0,0,0.04)] bg-white"
-            style={{ height: '31%' }}
-          >
-            <img
-              src="/magazine/brand_cards/na7la_brand_badge.webp"
-              alt="نحلة NA7LA"
-              className="w-full h-full object-cover block"
-            />
-          </div>
-
-          {/* Middle: Comb Honey Product Card */}
-          <div className="w-full flex-1 min-h-0">
-            {slot2 && (
-              <ProductCard
-                product={slot2.product}
-                titleOverride={slot2.title_override}
-                descriptionOverride={slot2.description_override}
-                priceOverride={slot2.price_override}
-                priceText={slot2.price_text}
-                imageOverride={slot2.image_override}
-                isInteractive={isInteractive}
-                isHighlighted={Boolean(highlightedCode && slot2.product?.cashier_code === highlightedCode)}
-                imageShare={56}
-                onSelect={onProductClick}
-              />
-            )}
-          </div>
-
-          {/* Bottom: Wicker Basket Product Card */}
-          <div className="w-full flex-1 min-h-0">
-            {slot4 && (
-              <ProductCard
-                product={slot4.product}
-                titleOverride={slot4.title_override}
-                descriptionOverride={slot4.description_override}
-                priceOverride={slot4.price_override}
-                priceText={slot4.price_text}
-                imageOverride={slot4.image_override}
-                isInteractive={isInteractive}
-                isHighlighted={Boolean(highlightedCode && slot4.product?.cashier_code === highlightedCode)}
-                imageShare={56}
-                onSelect={onProductClick}
-              />
-            )}
-          </div>
+        {/* Row 1, Col 1 (Right): NA7LA Brand Badge Card */}
+        <div className="w-full h-full min-h-0 min-w-0 overflow-hidden rounded-[calc(5*var(--u,1px))] border border-stone-200/70 shadow-[0_2px_8px_rgba(0,0,0,0.04)] bg-white">
+          <img
+            src="/magazine/brand_cards/na7la_brand_badge.webp"
+            alt="نحلة NA7LA"
+            className="w-full h-full object-cover block"
+          />
         </div>
 
-        {/* Left Column (Col 2 in RTL) */}
-        <div className="w-full h-full flex flex-col justify-between" style={{ gap: 'calc(8 * var(--u, 1px))' }}>
-          {/* Top: Clover Honey Product Card */}
-          <div className="w-full flex-1 min-h-0">
-            {slot1 && (
-              <ProductCard
-                product={slot1.product}
-                titleOverride={slot1.title_override}
-                descriptionOverride={slot1.description_override}
-                priceOverride={slot1.price_override}
-                priceText={slot1.price_text}
-                imageOverride={slot1.image_override}
-                isInteractive={isInteractive}
-                isHighlighted={Boolean(highlightedCode && slot1.product?.cashier_code === highlightedCode)}
-                imageShare={56}
-                onSelect={onProductClick}
-              />
-            )}
-          </div>
-
-          {/* Middle: Nuts Honey Product Card */}
-          <div className="w-full flex-1 min-h-0">
-            {slot3 && (
-              <ProductCard
-                product={slot3.product}
-                titleOverride={slot3.title_override}
-                descriptionOverride={slot3.description_override}
-                priceOverride={slot3.price_override}
-                priceText={slot3.price_text}
-                imageOverride={slot3.image_override}
-                isInteractive={isInteractive}
-                isHighlighted={Boolean(highlightedCode && slot3.product?.cashier_code === highlightedCode)}
-                imageShare={56}
-                onSelect={onProductClick}
-              />
-            )}
-          </div>
-
-          {/* Bottom: Natural Ecological Apiaries Certificate Badge */}
-          {/* Bottom: Natural Ecological Apiaries Certificate Badge */}
-          <div
-            className="w-full overflow-hidden rounded-[calc(5*var(--u,1px))] border border-stone-200/70 shadow-[0_2px_8px_rgba(0,0,0,0.04)] bg-white"
-            style={{ height: '31%' }}
-          >
-            <img
-              src="/magazine/brand_cards/honey_eco_badge.webp"
-              alt="Natural Egypt Apiaries"
-              className="w-full h-full object-cover block"
+        {/* Row 1, Col 2 (Left): Clover Honey Product Card */}
+        <div className="w-full h-full min-h-0 min-w-0">
+          {slot1 && (
+            <ProductCard
+              product={slot1.product}
+              titleOverride={slot1.title_override}
+              descriptionOverride={slot1.description_override}
+              priceOverride={slot1.price_override}
+              priceText={slot1.price_text}
+              imageOverride={slot1.image_override}
+              isInteractive={isInteractive}
+              isHighlighted={Boolean(highlightedCode && slot1.product?.cashier_code === highlightedCode)}
+              imageShare={54}
+              onSelect={onProductClick}
             />
-          </div>
+          )}
+        </div>
+
+        {/* Row 2, Col 1 (Right): Comb Honey Product Card */}
+        <div className="w-full h-full min-h-0 min-w-0">
+          {slot2 && (
+            <ProductCard
+              product={slot2.product}
+              titleOverride={slot2.title_override}
+              descriptionOverride={slot2.description_override}
+              priceOverride={slot2.price_override}
+              priceText={slot2.price_text}
+              imageOverride={slot2.image_override}
+              isInteractive={isInteractive}
+              isHighlighted={Boolean(highlightedCode && slot2.product?.cashier_code === highlightedCode)}
+              imageShare={54}
+              onSelect={onProductClick}
+            />
+          )}
+        </div>
+
+        {/* Row 2, Col 2 (Left): Nuts Honey Product Card */}
+        <div className="w-full h-full min-h-0 min-w-0">
+          {slot3 && (
+            <ProductCard
+              product={slot3.product}
+              titleOverride={slot3.title_override}
+              descriptionOverride={slot3.description_override}
+              priceOverride={slot3.price_override}
+              priceText={slot3.price_text}
+              imageOverride={slot3.image_override}
+              isInteractive={isInteractive}
+              isHighlighted={Boolean(highlightedCode && slot3.product?.cashier_code === highlightedCode)}
+              imageShare={54}
+              onSelect={onProductClick}
+            />
+          )}
+        </div>
+
+        {/* Row 3, Col 1 (Right): Halfa Bag Product Card */}
+        <div className="w-full h-full min-h-0 min-w-0">
+          {slot4 && (
+            <ProductCard
+              product={slot4.product}
+              titleOverride={slot4.title_override}
+              descriptionOverride={slot4.description_override}
+              priceOverride={slot4.price_override}
+              priceText={slot4.price_text}
+              imageOverride={slot4.image_override}
+              isInteractive={isInteractive}
+              isHighlighted={Boolean(highlightedCode && slot4.product?.cashier_code === highlightedCode)}
+              imageShare={54}
+              onSelect={onProductClick}
+            />
+          )}
+        </div>
+
+        {/* Row 3, Col 2 (Left): Natural Ecological Apiaries Certificate Badge */}
+        <div className="w-full h-full min-h-0 min-w-0 overflow-hidden rounded-[calc(5*var(--u,1px))] border border-stone-200/70 shadow-[0_2px_8px_rgba(0,0,0,0.04)] bg-white">
+          <img
+            src="/magazine/brand_cards/honey_eco_badge.webp"
+            alt="Natural Egypt Apiaries"
+            className="w-full h-full object-cover block"
+          />
         </div>
       </div>
     </PageShell>
