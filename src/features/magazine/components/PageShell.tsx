@@ -1,40 +1,31 @@
+'use client';
+
 import React from 'react';
 
 interface PageShellProps {
   sectionTitle?: string | null;
   pageNumber?: number;
-  pageSide?: 'left' | 'right';
-  headlineBottom?: number;
   children: React.ReactNode;
 }
 
 export function PageShell({
-  sectionTitle = 'عسل نقي NA7LA',
+  sectionTitle = 'مجموعة التراث المصري',
   pageNumber,
-  pageSide,
-  headlineBottom,
   children,
 }: PageShellProps) {
-  // Determine if this is a left page (even page: 2, 4, 6, ...) or right page (odd page: 1, 3, 5, ...)
-  const isLeftPage =
-    pageSide === 'left' ||
-    (pageSide === undefined && pageNumber !== undefined && pageNumber % 2 === 0);
-
-  // Standard uniform headline position across all pages (aligned with top/middle section ~588)
-  const finalHeadlineBottom = headlineBottom ?? 588;
-
   return (
     <div
-      className="magazine-page-container select-none relative w-full h-full overflow-hidden"
+      className="magazine-page-container select-none relative w-full h-full overflow-hidden bg-[#FAFAF8]"
       style={{
-        backgroundColor: 'var(--mag-bg, #EFEFEF)',
+        aspectRatio: '595.5 / 842.25',
+        backgroundColor: '#FFFFFF',
       }}
     >
-      {/* 1. Authentic Canva Top Header Strip: 100% Pixel-Perfect Match to Canva */}
+      {/* 1. Authentic Canva Top Header Strip: Lotus Logo + Heritage Text + Fund Seal */}
       <header
         className="absolute top-0 left-0 w-full pointer-events-none select-none z-10 overflow-hidden"
         style={{
-          height: 'calc(145 * var(--u, 1px))',
+          height: 'calc(142 * var(--u, 1px))',
         }}
       >
         <img
@@ -50,137 +41,93 @@ export function PageShell({
         />
       </header>
 
-      {/* 2. Outer Sidebar Vertical Title: Symmetrical for Left & Right pages */}
-      {!isLeftPage ? (
-        /* Right Page: Headline on Outer Right */
-        <aside
-          className="absolute z-10 pointer-events-none select-none"
+      {/* 2. Left Vertical Calligraphy Title: Matching Canva x=45.5 / 81.6 pt */}
+      <aside
+        className="absolute z-10 pointer-events-none select-none"
+        style={{
+          left: 'calc(48 * var(--u, 1px))',
+          top: 'calc(150 * var(--u, 1px))',
+          width: 'calc(65 * var(--u, 1px))',
+          height: 'calc(660 * var(--u, 1px))',
+        }}
+      >
+        <div
+          className="flex flex-col items-start"
           style={{
-            right: 'calc(58 * var(--u, 1px))',
-            top: `calc(${finalHeadlineBottom} * var(--u, 1px))`,
-            width: '0px',
-            height: '0px',
+            position: 'absolute',
+            left: 0,
+            top: 0,
+            width: 'max-content',
+            gap: 'calc(6 * var(--u, 1px))',
+            transform: 'rotate(90deg)',
+            transformOrigin: 'top left',
+            whiteSpace: 'nowrap',
+            direction: 'rtl',
+            color: '#1C1917',
           }}
         >
-          <div
-            className="flex flex-col items-start"
+          {/* Outer Line: قائمة اسعار */}
+          <span
+            className="font-bold tracking-wider block text-stone-800"
             style={{
-              position: 'absolute',
-              right: 0,
-              bottom: 0,
-              width: 'max-content',
-              gap: 'calc(5 * var(--u, 1px))',
-              transform: 'rotate(90deg)',
-              transformOrigin: 'bottom right',
-              whiteSpace: 'nowrap',
-              direction: 'rtl',
-              color: 'var(--mag-ink, #443000)',
+              fontSize: 'calc(18 * var(--u, 1px))',
+              fontFamily: 'var(--mag-font-ar)',
+              lineHeight: 1,
             }}
           >
-            {/* Outer Line: Section Title */}
-            {sectionTitle && (
-              <span
-                className="font-extrabold tracking-normal block"
-                style={{
-                  fontSize: 'calc(21 * var(--u, 1px))',
-                  fontFamily: 'var(--mag-font-ar)',
-                  lineHeight: 1,
-                  letterSpacing: '0.04em',
-                }}
-              >
-                {sectionTitle}
-              </span>
-            )}
+            قائمة اسعار
+          </span>
 
-            {/* Inner Line: قائمة الأسعار */}
+          {/* Inner Line: Section Title */}
+          {sectionTitle && (
             <span
-              className="font-bold tracking-normal block opacity-95"
+              className="font-extrabold tracking-normal block text-stone-950"
               style={{
-                fontSize: 'calc(17 * var(--u, 1px))',
+                fontSize: 'calc(21 * var(--u, 1px))',
                 fontFamily: 'var(--mag-font-ar)',
-                lineHeight: 1,
-                letterSpacing: '0.03em',
+                lineHeight: 1.1,
               }}
             >
-              قائمة الأسعار
+              {sectionTitle}
             </span>
-          </div>
-        </aside>
-      ) : (
-        /* Left Page: Headline on Right side with space on its right side (between spine and title) */
-        <aside
-          className="absolute z-10 pointer-events-none select-none"
+          )}
+        </div>
+
+        {/* Decorative Gold Leaf Garland at bottom left */}
+        <div
+          className="absolute bottom-0 left-0 w-full flex items-end pointer-events-none opacity-40"
           style={{
-            right: 'calc(85 * var(--u, 1px))',
-            top: `calc(${finalHeadlineBottom} * var(--u, 1px))`,
-            width: '0px',
-            height: '0px',
+            height: 'calc(180 * var(--u, 1px))',
           }}
         >
-          <div
-            className="flex flex-col items-start"
-            style={{
-              position: 'absolute',
-              right: 0,
-              bottom: 0,
-              width: 'max-content',
-              gap: 'calc(5 * var(--u, 1px))',
-              transform: 'rotate(90deg)',
-              transformOrigin: 'bottom right',
-              whiteSpace: 'nowrap',
-              direction: 'rtl',
-              color: 'var(--mag-ink, #443000)',
-            }}
+          <svg
+            viewBox="0 0 100 200"
+            className="w-full h-full text-[#B68763]"
+            fill="currentColor"
           >
-            {/* Outer Line: Section Title */}
-            {sectionTitle && (
-              <span
-                className="font-extrabold tracking-normal block"
-                style={{
-                  fontSize: 'calc(21 * var(--u, 1px))',
-                  fontFamily: 'var(--mag-font-ar)',
-                  lineHeight: 1,
-                  letterSpacing: '0.04em',
-                }}
-              >
-                {sectionTitle}
-              </span>
-            )}
+            <path d="M20,180 Q30,140 10,100 Q40,90 25,60 Q50,50 35,20 C45,40 55,70 40,110 C60,120 40,150 20,180 Z" />
+          </svg>
+        </div>
+      </aside>
 
-            {/* Inner Line: قائمة الأسعار */}
-            <span
-              className="font-bold tracking-normal block opacity-95"
-              style={{
-                fontSize: 'calc(17 * var(--u, 1px))',
-                fontFamily: 'var(--mag-font-ar)',
-                lineHeight: 1,
-                letterSpacing: '0.03em',
-              }}
-            >
-              قائمة الأسعار
-            </span>
-          </div>
-        </aside>
-      )}
-
-      {/* 4. Main Catalog Content Area: Matches right page headline gap exactly */}
+      {/* 3. Main Catalog Content Area */}
       <main
         className="absolute z-0"
         style={{
-          left: 'calc(28 * var(--u, 1px))',
+          left: 'calc(118 * var(--u, 1px))',
           top: 'calc(145 * var(--u, 1px))',
-          width: isLeftPage ? 'calc(468 * var(--u, 1px))' : 'calc(495 * var(--u, 1px))',
-          height: 'calc(675 * var(--u, 1px))',
+          width: 'calc(448 * var(--u, 1px))',
+          height: 'calc(670 * var(--u, 1px))',
         }}
       >
         {children}
       </main>
 
-      {/* 5. Page Number (Footer) */}
+      {/* 4. Page Number Footer */}
       {pageNumber !== undefined && (
         <footer
-          className="absolute bottom-[calc(10*var(--u,1px))] left-[calc(28*var(--u,1px))] text-[calc(9*var(--u,1px))] opacity-50 font-semibold"
-          style={{ color: 'var(--mag-ink, #443000)' }}
+          className="absolute bottom-[calc(8*var(--u,1px))] left-[calc(48*var(--u,1px))] text-[calc(9*var(--u,1px))] opacity-60 font-bold"
+          style={{ color: '#443000' }}
         >
           {pageNumber}
         </footer>

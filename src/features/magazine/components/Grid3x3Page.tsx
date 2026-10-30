@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { PageShell } from './PageShell';
 import { ProductCard } from './ProductCard';
@@ -20,7 +22,7 @@ export function Grid3x3Page({
 }: Grid3x3PageProps) {
   // Ensure array has 9 slot entries
   const slotList: (PageSlotData | null)[] = Array.from({ length: 9 }, (_, index) => {
-    return slots.find((s) => s.slot === index + 1) || null;
+    return slots.find((s) => s.slot === index + 1) || slots[index] || null;
   });
 
   return (
@@ -28,7 +30,7 @@ export function Grid3x3Page({
       <div
         className="grid grid-cols-3 grid-rows-3 w-full h-full"
         style={{
-          gap: 'calc(8 * var(--u, 1px)) calc(8 * var(--u, 1px))',
+          gap: 'calc(7 * var(--u, 1px)) calc(7 * var(--u, 1px))',
           direction: 'rtl',
         }}
       >
@@ -37,7 +39,7 @@ export function Grid3x3Page({
             key={index}
             className="w-full h-full min-h-0 min-w-0 animate-card-rise"
             style={{
-              animationDelay: `calc(${index} * 0.035s + 0.12s)`,
+              animationDelay: `calc(${index} * 0.03s + 0.05s)`,
             }}
           >
             {slotData ? (
@@ -46,12 +48,13 @@ export function Grid3x3Page({
                 titleOverride={slotData.title_override}
                 descriptionOverride={slotData.description_override}
                 priceOverride={slotData.price_override}
+                priceText={slotData.price_text}
                 imageOverride={slotData.image_override}
                 isInteractive={isInteractive}
                 isHighlighted={Boolean(highlightedCode && slotData.product?.cashier_code === highlightedCode)}
               />
             ) : (
-              <div className="w-full h-full" />
+              <div className="product-card w-full h-full" />
             )}
           </div>
         ))}
