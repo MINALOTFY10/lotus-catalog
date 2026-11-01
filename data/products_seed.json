@@ -4017,11 +4017,11 @@
   {
     "id": "prod-canva-p29-s7",
     "slug": "prod-canva-p29-s7-إسورة-احجار-سوداء-هيماتيت",
-    "name_ar": "إسورة احجار سوداء هيماتيت",
+    "name_ar": "اسورة من حجر الهيماتيد الطبيعى",
     "name_en": null,
-    "description_ar": "إسورة من خرز الهيماتيت المصقول متعدد الأوجه، مزودة برباط أسود قابل للتعديل",
+    "description_ar": "يعرف بأنه حجر للشفاء ويستخدم لتقوية الهالة وموزانة العقل والجسد والروح وامتصاص الطاقة السلبية من الجسم ويزيل التوتر والقلق.",
     "description_en": null,
-    "category": "حلي ومجوهرات تراثية",
+    "category": "مجموعة الإكسسوارات الــمــصــرية اليدوية",
     "sale_price": 135,
     "in_stock": true,
     "primary_image_url": "/magazine/canva_products/p29_s7.webp",
@@ -4030,7 +4030,8 @@
       "md": "/magazine/canva_products/p29_s7.webp",
       "lg": "/magazine/canva_products/p29_s7.webp"
     },
-    "cashier_code": 391
+    "cashier_code": 391,
+    "stock_status": "متاح"
   },
   {
     "id": "prod-canva-p29-s8",
@@ -4143,11 +4144,11 @@
   {
     "id": "prod-canva-p30-s5",
     "slug": "prod-canva-p30-s5-إسورة-احجار-هيماتيت",
-    "name_ar": "إسورة احجار هيماتيت",
+    "name_ar": "عقد من حجر الهيماتيد الطبيعى",
     "name_en": null,
-    "description_ar": "إسورة من خرز الهيماتيت الرمادي متعدد الأوجه، بتصميم بسيط وقفل معدني",
+    "description_ar": "يعرف بأنه حجر للشفاء ويستخدم لتقوية الهالة وموزانة العقل والجسد والروح وامتصاص الطاقة السلبية من الجسم ويزيل التوتر والقلق.",
     "description_en": null,
-    "category": "حلي ومجوهرات تراثية",
+    "category": "مجموعة الإكسسوارات الــمــصــرية اليدوية",
     "sale_price": 135,
     "in_stock": true,
     "primary_image_url": "/magazine/canva_products/p30_s5.webp",
@@ -4156,7 +4157,8 @@
       "md": "/magazine/canva_products/p30_s5.webp",
       "lg": "/magazine/canva_products/p30_s5.webp"
     },
-    "cashier_code": 398
+    "cashier_code": 398,
+    "stock_status": "متاح"
   },
   {
     "id": "prod-canva-p30-s6",
@@ -4215,11 +4217,11 @@
   {
     "id": "prod-canva-p30-s9",
     "slug": "prod-canva-p30-s9-إسورة-احجار-سبينل-أسود",
-    "name_ar": "إسورة احجار  سبينل أسود",
+    "name_ar": "إسورة من حجر الهيماتيد الطبيعى",
     "name_en": null,
-    "description_ar": "إسورة رقيقة مصنوعة يدو ًيا من خرز حجر السبينل األسود الطبيعي متعدد األوجه، مع قفل فضي",
+    "description_ar": "يعرف بأنه حجر للشفاء ويستخدم لتقوية الهالة وموزانة العقل والجسد والروح وامتصاص الطاقة السلبية من الجسم ويزيل التوتر والقلق.",
     "description_en": null,
-    "category": "حلي ومجوهرات تراثية",
+    "category": "مجموعة الإكسسوارات الــمــصــرية اليدوية",
     "sale_price": 405,
     "in_stock": true,
     "primary_image_url": "/magazine/canva_products/p30_s9.webp",
@@ -4228,7 +4230,8 @@
       "md": "/magazine/canva_products/p30_s9.webp",
       "lg": "/magazine/canva_products/p30_s9.webp"
     },
-    "cashier_code": 402
+    "cashier_code": 402,
+    "stock_status": "متاح"
   },
   {
     "id": "prod-canva-p31-s1",
@@ -4773,11 +4776,11 @@
   {
     "id": "prod-canva-p34-s4",
     "slug": "prod-canva-p34-s4-ميدالية-عقيق-فيروزي",
-    "name_ar": "ميدالية عقيق فيروزي",
+    "name_ar": "ميدالية استانلس مزينه بحجر الجاد الاخضر",
     "name_en": null,
-    "description_ar": "ميدالية مفاتيح مزينة بحجر عقيق طبيعي بدرجات فيروزية، بتصميم بسيط وأنيق",
+    "description_ar": "ميدالية استانلس مزينه بحجر الجاد الاخضر الغنى الذى يعزز المناعة والصحة ويعطى السلام والتأمل.",
     "description_en": null,
-    "category": "حلي ومجوهرات تراثية",
+    "category": "مجموعة الإكسسوارات الــمــصــرية اليدوية",
     "sale_price": 405,
     "in_stock": true,
     "primary_image_url": "/magazine/canva_products/p34_s4.webp",
@@ -4786,7 +4789,8 @@
       "md": "/magazine/canva_products/p34_s4.webp",
       "lg": "/magazine/canva_products/p34_s4.webp"
     },
-    "cashier_code": 433
+    "cashier_code": 433,
+    "stock_status": "متاح"
   },
   {
     "id": "prod-canva-p34-s5",
@@ -4827,11 +4831,11 @@
   {
     "id": "prod-canva-p34-s7",
     "slug": "prod-canva-p34-s7-ميدالية-حجر-رخامي",
-    "name_ar": "ميدالية حجر رخامي",
+    "name_ar": "ميدلية استانلس مزينه بحجر طبيعى",
     "name_en": null,
-    "description_ar": "ميدالية مفاتيح معدنية مزينة بحجر طبيعي دائري بنقشة رخامية مميزة",
+    "description_ar": "ميدلية استانلس مزينه بحجر طبيعى دائرى بنقسة رخامية مميزة من الجبال الرخامية المصرية",
     "description_en": null,
-    "category": "حلي ومجوهرات تراثية",
+    "category": "مجموعة الإكسسوارات الــمــصــرية اليدوية",
     "sale_price": 405,
     "in_stock": true,
     "primary_image_url": "/magazine/canva_products/p34_s7.webp",
@@ -4840,16 +4844,17 @@
       "md": "/magazine/canva_products/p34_s7.webp",
       "lg": "/magazine/canva_products/p34_s7.webp"
     },
-    "cashier_code": 436
+    "cashier_code": 436,
+    "stock_status": "متاح"
   },
   {
     "id": "prod-canva-p34-s8",
     "slug": "prod-canva-p34-s8-ميدالية-من-الحجر-الطبيعي",
-    "name_ar": "ميدالية من الحجر الطبيعي",
+    "name_ar": "ميدالية من الحجر الجاد",
     "name_en": null,
-    "description_ar": "ميدالية مفاتيح مصنوعة يدو ًيا، مزينة بقطعة من الحجر الطبيعي بتفاصيل بسيطة ومميزة",
+    "description_ar": "ميدالية مفاتيح مصنوعة يدو ًيا، مزينة بقطعة من الحجر الجاد بتفاصيل بسيطة ومميزة",
     "description_en": null,
-    "category": "حلي ومجوهرات تراثية",
+    "category": "مجموعة الإكسسوارات الــمــصــرية اليدوية",
     "sale_price": 405,
     "in_stock": true,
     "primary_image_url": "/magazine/canva_products/p34_s8.webp",
@@ -4858,7 +4863,8 @@
       "md": "/magazine/canva_products/p34_s8.webp",
       "lg": "/magazine/canva_products/p34_s8.webp"
     },
-    "cashier_code": 437
+    "cashier_code": 437,
+    "stock_status": "متاح"
   },
   {
     "id": "prod-canva-p34-s9",

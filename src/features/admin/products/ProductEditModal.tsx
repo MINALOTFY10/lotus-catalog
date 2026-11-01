@@ -17,17 +17,29 @@ export function ProductEditModal({
   onClose,
   onSuccess,
 }: ProductEditModalProps) {
-  if (!isOpen || !product) return null;
-
-  const [nameAr, setNameAr] = useState(product.name_ar);
-  const [salePrice, setSalePrice] = useState(String(product.sale_price || ''));
-  const [cashierCode, setCashierCode] = useState(product.cashier_code ? String(product.cashier_code) : '');
-  const [category, setCategory] = useState(product.category || '');
-  const [descriptionAr, setDescriptionAr] = useState(product.description_ar || '');
-  const [imageUrl, setImageUrl] = useState(product.primary_image_url || '');
-  const [stockStatus, setStockStatus] = useState(product.stock_status || 'متاح');
+  const [nameAr, setNameAr] = useState(product?.name_ar ?? '');
+  const [salePrice, setSalePrice] = useState(product?.sale_price != null ? String(product.sale_price) : '');
+  const [cashierCode, setCashierCode] = useState(product?.cashier_code ? String(product.cashier_code) : '');
+  const [category, setCategory] = useState(product?.category ?? '');
+  const [descriptionAr, setDescriptionAr] = useState(product?.description_ar ?? '');
+  const [imageUrl, setImageUrl] = useState(product?.primary_image_url ?? '');
+  const [stockStatus, setStockStatus] = useState(product?.stock_status ?? 'متاح');
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  React.useEffect(() => {
+    if (!product) return;
+
+    setNameAr(product.name_ar ?? '');
+    setSalePrice(product.sale_price != null ? String(product.sale_price) : '');
+    setCashierCode(product.cashier_code ? String(product.cashier_code) : '');
+    setCategory(product.category ?? '');
+    setDescriptionAr(product.description_ar ?? '');
+    setImageUrl(product.primary_image_url ?? '');
+    setStockStatus(product.stock_status ?? 'متاح');
+  }, [product, isOpen]);
+
+  if (!isOpen || !product) return null;
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -224,10 +236,11 @@ export function ProductEditModal({
 
           {/* Description */}
           <div>
-            <label className="block text-xs font-bold text-stone-700 mb-1">
+            <label htmlFor="product-description" className="block text-xs font-bold text-stone-700 mb-1">
               الوصف والمواصفات التفصيلية
             </label>
             <textarea
+              id="product-description"
               rows={3}
               value={descriptionAr}
               onChange={(e) => setDescriptionAr(e.target.value)}
