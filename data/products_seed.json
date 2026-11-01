@@ -4988,10 +4988,10 @@
   },
   {
     "id": "prod-canva-p35-s7",
-    "slug": "prod-canva-p35-s7-ميدالية-الملكة-كليوباترا",
-    "name_ar": "ميدالية الملكة كليوباترا",
+    "slug": "prod-canva-p35-s7-ميدالية-رموز-فرعونية",
+    "name_ar": "ميدالية رموز فرعونية",
     "name_en": null,
-    "description_ar": "ميدالية مفاتيح من النحاس بتصميم مستوحى من الملكة كليوباترا، مع تفاصيل بطابع مصري قديم",
+    "description_ar": "ميدالية مفاتيح مزينة بمجموعة من الرموز المصرية القديمة، تشمل الأهرامات ونفرتيتي وكليوباترا وباستت.",
     "description_en": null,
     "category": "ميداليات وتمائم تراثية",
     "sale_price": 270,
@@ -5003,6 +5003,24 @@
       "lg": "/magazine/canva_products/p35_s7.webp"
     },
     "cashier_code": 458
+  },
+  {
+    "id": "prod-canva-p35-s8",
+    "slug": "prod-canva-p35-s8-ميدالية-الملكة-كليوباترا",
+    "name_ar": "ميدالية الملكة كليوباترا",
+    "name_en": null,
+    "description_ar": "ميدالية مفاتيح من النحاس بتصميم مستوحى من الملكة كليوباترا، مع تفاصيل بطابع مصري قديم.",
+    "description_en": null,
+    "category": "ميداليات وتمائم تراثية",
+    "sale_price": 270,
+    "in_stock": true,
+    "primary_image_url": "/magazine/canva_products/p35_s8.webp",
+    "images": {
+      "sm": "/magazine/canva_products/p35_s8.webp",
+      "md": "/magazine/canva_products/p35_s8.webp",
+      "lg": "/magazine/canva_products/p35_s8.webp"
+    },
+    "cashier_code": 596
   },
   {
     "id": "prod-canva-p36-s1",

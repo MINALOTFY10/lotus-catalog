@@ -171,10 +171,24 @@ export function GridCustomPage({
             ))}
           </div>
 
-          {/* Row 3: 2 cards (50% width each!) */}
-          <div className="grid grid-cols-2 flex-1 min-h-0" style={{ gap: 'calc(8 * var(--u, 1px))' }}>
+          {/* Row 3: 2 cards (either 3-cols with spans 1 and 2 if sum is 3, or 2 equal cols) */}
+          <div
+            className={`grid ${
+              row3.reduce((sum, s) => sum + (s?.col_span || 1), 0) === 3 ? 'grid-cols-3' : 'grid-cols-2'
+            } flex-1 min-h-0`}
+            style={{ gap: 'calc(8 * var(--u, 1px))' }}
+          >
             {row3.map((slotData, idx) => (
-              <div key={idx} className="w-full h-full min-h-0 min-w-0">
+              <div
+                key={idx}
+                className="w-full h-full min-h-0 min-w-0"
+                style={{
+                  gridColumn:
+                    row3.reduce((sum, s) => sum + (s?.col_span || 1), 0) === 3
+                      ? `span ${slotData.col_span || 1} / span ${slotData.col_span || 1}`
+                      : undefined,
+                }}
+              >
                 <ProductCard
                   product={slotData.product}
                   titleOverride={slotData.title_override}
