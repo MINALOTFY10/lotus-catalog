@@ -150,6 +150,7 @@ export async function updateProductAction(
             if (updates.description_ar !== undefined) p.description_ar = updates.description_ar;
             if (updates.category) p.category = updates.category;
             if (updates.stock_status) p.stock_status = updates.stock_status;
+            if (updates.cashier_code !== undefined) p.cashier_code = updates.cashier_code;
 
             // CRITICAL: Update slot overrides that the magazine reader directly renders!
             if (updates.name_ar) slot.title_override = updates.name_ar;

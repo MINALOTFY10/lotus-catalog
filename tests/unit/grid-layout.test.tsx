@@ -39,7 +39,7 @@ describe('ProductCard', () => {
     );
     expect(screen.getByText('طقم اكسسوار بحلق')).toBeDefined();
     expect(screen.getByText('السعر')).toBeDefined();
-    expect(screen.getByText('405 L.E')).toBeDefined();
+    expect(screen.getByText(/٤٠٥\s*ج\.مصري/)).toBeDefined();
     expect(screen.getByText('مصنوع يدويا براسس مجوهرات طقم مع حلق متناسق')).toBeDefined();
   });
 

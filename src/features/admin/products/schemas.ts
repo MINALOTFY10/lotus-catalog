@@ -8,6 +8,7 @@ export const productUpdateSchema = z.object({
   primary_image_url: z.string().optional(),
   stock_status: z.string().optional(),
   in_stock: z.boolean().optional(),
+  cashier_code: z.number().nullable().optional(),
 });
 
 export type ProductUpdateInput = z.infer<typeof productUpdateSchema>;

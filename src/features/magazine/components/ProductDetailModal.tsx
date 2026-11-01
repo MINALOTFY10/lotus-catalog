@@ -99,7 +99,7 @@ export function ProductDetailModal({
           {/* Product Category & Status */}
           <div className="flex items-center justify-between gap-2 flex-wrap">
             {product.category && (
-              <span className="text-xs font-bold text-[#B68763] bg-[#FAF6F0] px-3 py-1 rounded-full border border-[#E8DEC8]">
+              <span className="text-xs font-semibold text-[#8A6747] bg-stone-100 px-2.5 py-0.5 rounded-md">
                 {product.category}
               </span>
             )}

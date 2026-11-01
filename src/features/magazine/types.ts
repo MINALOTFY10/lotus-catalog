@@ -20,6 +20,8 @@ export interface PageSlotData {
   price_override?: number | null;
   image_override?: string | null;
   price_text?: string | null;
+  col_span?: number | null;
+  row_span?: number | null;
 }
 
 export interface MagazinePageData {

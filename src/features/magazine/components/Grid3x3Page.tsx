@@ -38,32 +38,40 @@ export function Grid3x3Page({
           direction: 'rtl',
         }}
       >
-        {slotList.map((slotData, index) => (
-          <div
-            key={index}
-            className="w-full h-full min-h-0 min-w-0 animate-card-rise"
-            style={{
-              animationDelay: `calc(${index} * 0.03s + 0.05s)`,
-            }}
-          >
-            {slotData ? (
-              <ProductCard
-                product={slotData.product}
-                titleOverride={slotData.title_override}
-                descriptionOverride={slotData.description_override}
-                priceOverride={slotData.price_override}
-                priceText={slotData.price_text}
-                imageOverride={slotData.image_override}
-                isInteractive={isInteractive}
-                priority={priority}
-                isHighlighted={Boolean(highlightedCode && slotData.product?.cashier_code === highlightedCode)}
-                onSelect={onProductClick}
-              />
-            ) : (
-              <div className="product-card w-full h-full" />
-            )}
-          </div>
-        ))}
+        {slotList.map((slotData, index) => {
+          const colSpan = Math.min(Math.max(slotData?.col_span || 1, 1), 3);
+          const rowSpan = Math.min(Math.max(slotData?.row_span || 1, 1), 3);
+
+          return (
+            <div
+              key={index}
+              className="w-full h-full min-h-0 min-w-0 animate-card-rise"
+              style={{
+                gridColumn: `span ${colSpan} / span ${colSpan}`,
+                gridRow: `span ${rowSpan} / span ${rowSpan}`,
+                animationDelay: `calc(${index} * 0.03s + 0.05s)`,
+              }}
+            >
+              {slotData ? (
+                <ProductCard
+                  product={slotData.product}
+                  titleOverride={slotData.title_override}
+                  descriptionOverride={slotData.description_override}
+                  priceOverride={slotData.price_override}
+                  priceText={slotData.price_text}
+                  imageOverride={slotData.image_override}
+                  isInteractive={isInteractive}
+                  priority={priority}
+                  isHighlighted={Boolean(highlightedCode && slotData.product?.cashier_code === highlightedCode)}
+                  imageShare={rowSpan >= 2 ? 62 : colSpan >= 2 ? 56 : undefined}
+                  onSelect={onProductClick}
+                />
+              ) : (
+                <div className="product-card w-full h-full" />
+              )}
+            </div>
+          );
+        })}
       </div>
     </PageShell>
   );

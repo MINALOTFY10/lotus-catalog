@@ -5,7 +5,6 @@ import path from 'path';
 import { revalidatePath } from 'next/cache';
 import { MagazinePageData, PageSlotData } from '@/features/magazine/types';
 import { SlotAssignInput, slotAssignSchema } from './schemas';
-import { generateAutoLayout } from '@/features/magazine/services/autoLayout';
 
 /**
  * Pure function to update/assign a product to a slot within page list
@@ -18,18 +17,25 @@ export async function assignProductToSlot(
   overrides?: Partial<SlotAssignInput>
 ): Promise<MagazinePageData[]> {
   return pages.map((page) => {
-    if (page.pageNumber !== pageNumber) return page;
+    if ((page.pageNumber || page.position) !== pageNumber) return page;
 
     const slots = [...(page.slots || [])];
     const existingIndex = slots.findIndex((s) => s.slot === slotNumber);
 
+    const updatedProduct = product ? {
+      ...product,
+      cashier_code: overrides?.cashier_code !== undefined ? overrides.cashier_code : product.cashier_code,
+    } : product;
+
     const newSlot: PageSlotData = {
       slot: slotNumber,
-      product,
+      product: updatedProduct,
       title_override: overrides?.title_override,
       price_override: overrides?.price_override,
       image_override: overrides?.image_override,
       description_override: overrides?.description_override,
+      col_span: overrides?.col_span ?? 1,
+      row_span: overrides?.row_span ?? 1,
     };
 
     if (existingIndex >= 0) {
@@ -55,13 +61,15 @@ export async function removeProductFromSlot(
   slotNumber: number
 ): Promise<MagazinePageData[]> {
   return pages.map((page) => {
-    if (page.pageNumber !== pageNumber) return page;
+    if ((page.pageNumber || page.position) !== pageNumber) return page;
 
     const slots = (page.slots || []).map((s) => {
       if (s.slot === slotNumber) {
         return {
           slot: slotNumber,
           product: undefined,
+          col_span: 1,
+          row_span: 1,
         };
       }
       return s;
@@ -86,6 +94,9 @@ export async function saveSlotAssignmentAction(
     price_override?: number;
     image_override?: string;
     description_override?: string;
+    col_span?: number;
+    row_span?: number;
+    cashier_code?: number | null;
   }
 ): Promise<{ success: boolean; error?: string }> {
   const liveIssuePath = path.resolve(process.cwd(), 'data', 'live_issue.json');
@@ -98,26 +109,49 @@ export async function saveSlotAssignmentAction(
   try {
     const issue = JSON.parse(fs.readFileSync(liveIssuePath, 'utf8'));
 
+    const targetPage = (issue.pages || []).find(
+      (p: any) => (p.pageNumber || p.position) === pageNumber
+    );
+    const currentSlot = targetPage?.slots?.find((s: any) => s.slot === slotNumber);
+
     let productObj: any = undefined;
+
     if (productId) {
-      // Check in existing issue pages first
-      for (const page of issue.pages || []) {
-        for (const slot of page.slots || []) {
-          if (slot.product && (slot.product.id === productId || slot.product.slug === productId)) {
-            productObj = slot.product;
-            break;
-          }
-        }
-        if (productObj) break;
+      // 1. If same product as currently in this slot, reuse currentSlot.product directly
+      if (
+        currentSlot?.product &&
+        (currentSlot.product.id === productId || currentSlot.product.slug === productId)
+      ) {
+        productObj = currentSlot.product;
       }
-      // If not found in issue, check seed
+
+      // 2. Otherwise search across all pages in issue
+      if (!productObj) {
+        for (const page of issue.pages || []) {
+          for (const slot of page.slots || []) {
+            if (slot.product && (slot.product.id === productId || slot.product.slug === productId)) {
+              productObj = slot.product;
+              break;
+            }
+          }
+          if (productObj) break;
+        }
+      }
+
+      // 3. If not found in issue, check seed catalog
       if (!productObj && fs.existsSync(seedPath)) {
         const allSeed = JSON.parse(fs.readFileSync(seedPath, 'utf8'));
         productObj = allSeed.find((p: any) => p.id === productId || p.slug === productId);
       }
+    } else if (overrides && currentSlot?.product) {
+      // If productId was not explicitly provided but overrides (dimensions/text) are being set, retain current product
+      productObj = currentSlot.product;
     }
 
-    if (productId && productObj) {
+    if (productObj) {
+      if (overrides?.cashier_code !== undefined) {
+        productObj.cashier_code = overrides.cashier_code;
+      }
       issue.pages = await assignProductToSlot(
         issue.pages,
         pageNumber,
@@ -125,6 +159,23 @@ export async function saveSlotAssignmentAction(
         productObj,
         overrides
       );
+
+      // Sync cashier_code to products_seed.json if seed exists
+      if (overrides?.cashier_code !== undefined && fs.existsSync(seedPath)) {
+        try {
+          const currentSeed = JSON.parse(fs.readFileSync(seedPath, 'utf8'));
+          const targetId = productObj.id || productObj.slug;
+          const updatedSeed = currentSeed.map((p: any) => {
+            if (p.id === targetId || p.slug === targetId) {
+              return { ...p, cashier_code: overrides.cashier_code };
+            }
+            return p;
+          });
+          fs.writeFileSync(seedPath, JSON.stringify(updatedSeed, null, 2), 'utf8');
+        } catch (e) {
+          console.error('Error syncing cashier_code to seed:', e);
+        }
+      }
     } else {
       issue.pages = await removeProductFromSlot(issue.pages, pageNumber, slotNumber);
     }
@@ -145,31 +196,59 @@ export async function saveSlotAssignmentAction(
 }
 
 /**
- * Server Action to regenerate pages using the 9-per-category auto-layout engine
+ * Server Action to swap or move two slots on the same page (for drag-and-drop)
  */
-export async function runAutoLayoutAction(): Promise<{ success: boolean; totalPages?: number; error?: string }> {
-  const seedPath = path.resolve(process.cwd(), 'data', 'products_seed.json');
+export async function swapPageSlotsAction(
+  pageNumber: number,
+  sourceSlotIndex: number,
+  targetSlotIndex: number
+): Promise<{ success: boolean; error?: string }> {
   const liveIssuePath = path.resolve(process.cwd(), 'data', 'live_issue.json');
-
   try {
-    if (!fs.existsSync(seedPath)) {
-      return { success: false, error: 'ملف المنتجات غير موجود' };
+    if (!fs.existsSync(liveIssuePath)) {
+      return { success: false, error: 'ملف المجلة غير موجود' };
     }
 
-    const products = JSON.parse(fs.readFileSync(seedPath, 'utf8'));
-    const newPages = generateAutoLayout(products);
+    const issue = JSON.parse(fs.readFileSync(liveIssuePath, 'utf8'));
+    const pageIndex = (issue.pages || []).findIndex(
+      (p: any) => (p.pageNumber || p.position) === pageNumber
+    );
 
-    const issue = fs.existsSync(liveIssuePath)
-      ? JSON.parse(fs.readFileSync(liveIssuePath, 'utf8'))
-      : {
-          issueSlug: 'lotus-pricelist',
-          title_ar: 'قائمة أسعار لوتس',
-          version: 1,
-        };
+    if (pageIndex === -1) {
+      return { success: false, error: 'الصفحة غير موجودة' };
+    }
 
-    issue.pages = newPages;
-    issue.totalPages = newPages.length;
-    issue.publishedAt = new Date().toISOString();
+    const page = issue.pages[pageIndex];
+    const slots = [...(page.slots || [])];
+
+    if (
+      sourceSlotIndex < 0 ||
+      sourceSlotIndex >= slots.length ||
+      targetSlotIndex < 0 ||
+      targetSlotIndex >= slots.length
+    ) {
+      return { success: false, error: 'مؤشر الخانة غير صحيح' };
+    }
+
+    // Swap the slot contents while maintaining their .slot number order
+    const sourceSlotNum = slots[sourceSlotIndex].slot || sourceSlotIndex + 1;
+    const targetSlotNum = slots[targetSlotIndex].slot || targetSlotIndex + 1;
+
+    const sourceData = { ...slots[sourceSlotIndex] };
+    const targetData = { ...slots[targetSlotIndex] };
+
+    // Swap product and overrides
+    slots[sourceSlotIndex] = {
+      ...targetData,
+      slot: sourceSlotNum,
+    };
+    slots[targetSlotIndex] = {
+      ...sourceData,
+      slot: targetSlotNum,
+    };
+
+    page.slots = slots;
+    issue.pages[pageIndex] = page;
 
     fs.writeFileSync(liveIssuePath, JSON.stringify(issue, null, 2), 'utf8');
 
@@ -179,10 +258,10 @@ export async function runAutoLayoutAction(): Promise<{ success: boolean; totalPa
     revalidatePath('/admin/composer');
     revalidatePath('/products');
 
-    return { success: true, totalPages: newPages.length };
+    return { success: true };
   } catch (err: any) {
-    console.error('Failed to run auto layout:', err);
-    return { success: false, error: err.message || 'فشل في إعادة التوليد التلقائي' };
+    console.error('Error swapping page slots:', err);
+    return { success: false, error: err.message || 'فشل في تبديل أماكن المنتجات' };
   }
 }
 

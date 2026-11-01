@@ -14,7 +14,7 @@ interface SlotPickerModalProps {
   availableProducts: AdminProductRecord[];
   isOpen: boolean;
   onClose: () => void;
-  onSuccess: () => void;
+  onSuccess: (updatedSlot?: PageSlotData) => void;
 }
 
 export function SlotPickerModal({
@@ -36,8 +36,24 @@ export function SlotPickerModal({
   const [priceOverride, setPriceOverride] = useState(
     currentSlotData?.price_override ? String(currentSlotData.price_override) : ''
   );
+  const [codeOverride, setCodeOverride] = useState(
+    currentSlotData?.product?.cashier_code ? String(currentSlotData.product.cashier_code) : ''
+  );
+  const [colSpan, setColSpan] = useState<number>(Number(currentSlotData?.col_span) || 1);
+  const [rowSpan, setRowSpan] = useState<number>(Number(currentSlotData?.row_span) || 1);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  // Sync state whenever currentSlotData changes or modal opens
+  React.useEffect(() => {
+    const prod = (currentSlotData?.product as AdminProductRecord) || null;
+    setSelectedProduct(prod);
+    setTitleOverride(currentSlotData?.title_override || '');
+    setPriceOverride(currentSlotData?.price_override ? String(currentSlotData.price_override) : '');
+    setCodeOverride(prod?.cashier_code ? String(prod.cashier_code) : '');
+    setColSpan(Number(currentSlotData?.col_span) || 1);
+    setRowSpan(Number(currentSlotData?.row_span) || 1);
+  }, [currentSlotData, isOpen]);
 
   const filteredProducts = useMemo(() => {
     if (!searchQuery.trim()) return availableProducts.slice(0, 30);
@@ -55,9 +71,13 @@ export function SlotPickerModal({
     setError(null);
 
     const priceNum = priceOverride ? parseFloat(priceOverride) : undefined;
+    const codeNum = codeOverride.trim() ? parseInt(codeOverride.trim(), 10) : null;
     const overrides = {
       title_override: titleOverride.trim() || undefined,
       price_override: priceNum && !isNaN(priceNum) ? priceNum : undefined,
+      cashier_code: codeNum && !isNaN(codeNum) ? codeNum : null,
+      col_span: colSpan,
+      row_span: rowSpan,
     };
 
     const res = await saveSlotAssignmentAction(
@@ -74,7 +94,18 @@ export function SlotPickerModal({
     }
 
     setSaving(false);
-    onSuccess();
+    const finalProd = (selectedProduct as any) || currentSlotData?.product;
+    if (finalProd && overrides.cashier_code !== undefined) {
+      finalProd.cashier_code = overrides.cashier_code;
+    }
+    onSuccess({
+      slot: slotNumber,
+      product: finalProd,
+      title_override: overrides.title_override,
+      price_override: overrides.price_override,
+      col_span: overrides.col_span,
+      row_span: overrides.row_span,
+    });
     onClose();
   };
 
@@ -90,7 +121,12 @@ export function SlotPickerModal({
     }
 
     setSaving(false);
-    onSuccess();
+    onSuccess({
+      slot: slotNumber,
+      product: undefined,
+      col_span: 1,
+      row_span: 1,
+    });
     onClose();
   };
 
@@ -148,7 +184,7 @@ export function SlotPickerModal({
                 </h4>
                 {selectedProduct && (
                   <span className="text-xs font-mono font-bold text-stone-500">
-                    {selectedProduct.sale_price} L.E (كود: #{selectedProduct.cashier_code})
+                    {priceOverride || selectedProduct.sale_price} L.E (كود: #{codeOverride || selectedProduct.cashier_code || 'غير محدد'})
                   </span>
                 )}
               </div>
@@ -166,31 +202,86 @@ export function SlotPickerModal({
             )}
           </div>
 
-          {/* Overrides row */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6 p-4 rounded-2xl bg-stone-50 border border-stone-200">
+          {/* Overrides & Dimensions row */}
+          <div className="space-y-4 mb-6 p-4 rounded-2xl bg-stone-50 border border-stone-200">
+            {/* Dimensions selector */}
             <div>
-              <label className="block text-xs font-bold text-stone-700 mb-1">
-                تخصيص عنوان المنتج (اختياري - للمجلة فقط)
+              <label className="block text-xs font-bold text-stone-700 mb-1.5">
+                حجم وأبعاد الكارت في الصفحة (الافتراضي 1×1)
               </label>
-              <input
-                type="text"
-                value={titleOverride}
-                onChange={(e) => setTitleOverride(e.target.value)}
-                placeholder={selectedProduct?.name_ar || 'العنوان الافتراضي...'}
-                className="w-full text-xs bg-white border border-stone-300 rounded-xl px-3 py-2 text-stone-900 focus:outline-hidden focus:border-[#B68763]"
-              />
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                {[
+                  { label: 'عادي (1×1)', col: 1, row: 1, desc: 'حجم عادي' },
+                  { label: 'عرضي (2×1)', col: 2, row: 1, desc: 'عمودين × صف' },
+                  { label: 'طولي (1×2)', col: 1, row: 2, desc: 'عمود × صفين' },
+                  { label: 'مربع كبير (2×2)', col: 2, row: 2, desc: 'عمودين × صفين' },
+                  { label: 'عريض كامل (3×1)', col: 3, row: 1, desc: '3 أعمدة (صف كامل)' },
+                  { label: 'بانر كبير (3×2)', col: 3, row: 2, desc: '3 أعمدة × صفين' },
+                ].map((sizeOpt) => {
+                  const isActive = colSpan === sizeOpt.col && rowSpan === sizeOpt.row;
+                  return (
+                    <button
+                      key={`${sizeOpt.col}-${sizeOpt.row}`}
+                      type="button"
+                      onClick={() => {
+                        setColSpan(sizeOpt.col);
+                        setRowSpan(sizeOpt.row);
+                      }}
+                      className={`p-2.5 rounded-xl border text-right transition-all flex flex-col justify-between cursor-pointer ${
+                        isActive
+                          ? 'bg-[#443000] text-white border-[#443000] shadow-sm'
+                          : 'bg-white text-stone-700 border-stone-200 hover:border-[#B68763] hover:bg-amber-50/40'
+                      }`}
+                    >
+                      <span className="text-xs font-bold block">{sizeOpt.label}</span>
+                      <span className={`text-[10px] mt-0.5 block ${isActive ? 'text-amber-200' : 'text-stone-400'}`}>
+                        {sizeOpt.desc}
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
             </div>
-            <div>
-              <label className="block text-xs font-bold text-stone-700 mb-1">
-                تخصيص السعر (اختياري - للمجلة فقط)
-              </label>
-              <input
-                type="number"
-                value={priceOverride}
-                onChange={(e) => setPriceOverride(e.target.value)}
-                placeholder={selectedProduct ? String(selectedProduct.sale_price) : 'السعر...'}
-                className="w-full text-xs font-mono bg-white border border-stone-300 rounded-xl px-3 py-2 text-stone-900 focus:outline-hidden focus:border-[#B68763]"
-              />
+
+            {/* Title, price, and code overrides */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-2 border-t border-stone-200/80">
+              <div>
+                <label className="block text-xs font-bold text-stone-700 mb-1">
+                  كود المنتج / الكاشير (#)
+                </label>
+                <input
+                  type="number"
+                  step="1"
+                  value={codeOverride}
+                  onChange={(e) => setCodeOverride(e.target.value)}
+                  placeholder={selectedProduct?.cashier_code ? String(selectedProduct.cashier_code) : 'مثال: 101'}
+                  className="w-full text-xs font-mono font-bold bg-white border border-stone-300 rounded-xl px-3 py-2 text-[#443000] focus:outline-hidden focus:border-[#B68763]"
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-bold text-stone-700 mb-1">
+                  تخصيص السعر (L.E)
+                </label>
+                <input
+                  type="number"
+                  value={priceOverride}
+                  onChange={(e) => setPriceOverride(e.target.value)}
+                  placeholder={selectedProduct ? String(selectedProduct.sale_price) : 'السعر...'}
+                  className="w-full text-xs font-mono bg-white border border-stone-300 rounded-xl px-3 py-2 text-stone-900 focus:outline-hidden focus:border-[#B68763]"
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-bold text-stone-700 mb-1">
+                  تخصيص عنوان المنتج (للمجلة فقط)
+                </label>
+                <input
+                  type="text"
+                  value={titleOverride}
+                  onChange={(e) => setTitleOverride(e.target.value)}
+                  placeholder={selectedProduct?.name_ar || 'العنوان الافتراضي...'}
+                  className="w-full text-xs bg-white border border-stone-300 rounded-xl px-3 py-2 text-stone-900 focus:outline-hidden focus:border-[#B68763]"
+                />
+              </div>
             </div>
           </div>
 
@@ -219,7 +310,10 @@ export function SlotPickerModal({
                 return (
                   <div
                     key={p.id}
-                    onClick={() => setSelectedProduct(p)}
+                    onClick={() => {
+                      setSelectedProduct(p);
+                      if (p.cashier_code) setCodeOverride(String(p.cashier_code));
+                    }}
                     className={`p-2.5 flex items-center justify-between cursor-pointer transition-colors ${
                       isSelected ? 'bg-amber-100/50' : 'hover:bg-stone-50'
                     }`}

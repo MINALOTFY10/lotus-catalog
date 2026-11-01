@@ -109,57 +109,43 @@ export function ProductsCatalogView({
           </svg>
         </div>
 
-        {/* Sort selector & Count */}
-        <div className="flex items-center gap-3 justify-between md:justify-end">
-          <span className="text-xs font-bold text-stone-500 whitespace-nowrap">
-            {filteredProducts.length} منتج
-          </span>
+        {/* Filters: Category & Sort & Count */}
+        <div className="flex flex-wrap items-center gap-2.5 justify-between md:justify-end">
+          {/* Category Dropdown Filter */}
+          <select
+            value={selectedCategory}
+            onChange={(e) => {
+              setSelectedCategory(e.target.value);
+              setCurrentPage(1);
+            }}
+            className="text-xs font-bold bg-stone-50 border border-stone-200 rounded-lg px-3 py-2 text-stone-700 focus:outline-hidden focus:border-[#B68763] cursor-pointer"
+          >
+            <option value="all">كل الأقسام ({initialProducts.length})</option>
+            {categories.map((cat) => {
+              const count = initialProducts.filter((p) => p.category === cat).length;
+              return (
+                <option key={cat} value={cat}>
+                  {cat} ({count})
+                </option>
+              );
+            })}
+          </select>
+
+          {/* Sort selector */}
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value as any)}
-            className="text-xs font-bold bg-stone-50 border border-stone-200 rounded-lg px-3 py-2 text-stone-700 focus:outline-hidden focus:border-[#B68763]"
+            className="text-xs font-bold bg-stone-50 border border-stone-200 rounded-lg px-3 py-2 text-stone-700 focus:outline-hidden focus:border-[#B68763] cursor-pointer"
           >
             <option value="default">الترتيب: الافتراضي</option>
             <option value="price-asc">السعر: من الأقل للأعلى</option>
             <option value="price-desc">السعر: من الأعلى للأقل</option>
           </select>
-        </div>
-      </div>
 
-      {/* Category Pills */}
-      <div className="flex items-center gap-2 overflow-x-auto pb-3 mb-6 scrollbar-thin">
-        <button
-          onClick={() => {
-            setSelectedCategory('all');
-            setCurrentPage(1);
-          }}
-          className={`text-xs font-bold px-4 py-2 rounded-full whitespace-nowrap transition-all ${
-            selectedCategory === 'all'
-              ? 'bg-[#443000] text-white shadow-xs'
-              : 'bg-white text-stone-700 border border-stone-200 hover:border-stone-400'
-          }`}
-        >
-          الكل ({initialProducts.length})
-        </button>
-        {categories.map((cat) => {
-          const count = initialProducts.filter((p) => p.category === cat).length;
-          return (
-            <button
-              key={cat}
-              onClick={() => {
-                setSelectedCategory(cat);
-                setCurrentPage(1);
-              }}
-              className={`text-xs font-bold px-4 py-2 rounded-full whitespace-nowrap transition-all ${
-                selectedCategory === cat
-                  ? 'bg-[#443000] text-white shadow-xs'
-                  : 'bg-white text-stone-700 border border-stone-200 hover:border-stone-400'
-              }`}
-            >
-              {cat} ({count})
-            </button>
-          );
-        })}
+          <span className="text-xs font-bold text-stone-500 whitespace-nowrap">
+            {filteredProducts.length} منتج
+          </span>
+        </div>
       </div>
 
       {/* Product Grid */}

@@ -21,6 +21,7 @@ export function ProductEditModal({
 
   const [nameAr, setNameAr] = useState(product.name_ar);
   const [salePrice, setSalePrice] = useState(String(product.sale_price || ''));
+  const [cashierCode, setCashierCode] = useState(product.cashier_code ? String(product.cashier_code) : '');
   const [category, setCategory] = useState(product.category || '');
   const [descriptionAr, setDescriptionAr] = useState(product.description_ar || '');
   const [imageUrl, setImageUrl] = useState(product.primary_image_url || '');
@@ -40,9 +41,12 @@ export function ProductEditModal({
       return;
     }
 
+    const codeNum = cashierCode.trim() ? parseInt(cashierCode.trim(), 10) : null;
+
     const payload = {
       name_ar: nameAr.trim(),
       sale_price: priceNum,
+      cashier_code: codeNum && !isNaN(codeNum) ? codeNum : null,
       category: category.trim(),
       description_ar: descriptionAr.trim(),
       primary_image_url: imageUrl.trim(),
@@ -71,7 +75,7 @@ export function ProductEditModal({
         <div className="flex items-center justify-between pb-4 border-b border-stone-200">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-[#443000] text-white flex items-center justify-center font-bold text-xs">
-              #{product.cashier_code || '?'}
+              #{cashierCode || product.cashier_code || '?'}
             </div>
             <div>
               <h2 className="text-lg font-bold text-[#443000]">تعديل بيانات المنتج</h2>
@@ -168,6 +172,23 @@ export function ProductEditModal({
               />
               <span className="text-[10px] text-stone-400 mt-0.5 block">
                 يظهر مباشرة في المجلة والدليل
+              </span>
+            </div>
+
+            <div>
+              <label className="block text-xs font-bold text-stone-700 mb-1">
+                كود المنتج / الكاشير (#)
+              </label>
+              <input
+                type="number"
+                step="1"
+                value={cashierCode}
+                onChange={(e) => setCashierCode(e.target.value)}
+                placeholder="مثال: 101"
+                className="w-full text-base font-extrabold font-mono bg-white border border-stone-300 rounded-xl px-3 py-2 text-[#443000] focus:outline-hidden focus:border-[#B68763]"
+              />
+              <span className="text-[10px] text-stone-400 mt-0.5 block">
+                كود الفاتورة والبحث السريع
               </span>
             </div>
 

@@ -5,7 +5,7 @@ import { ComposerView } from '@/features/admin/composer/ComposerView';
 import { getAdminProductsList } from '@/features/admin/products/actions';
 
 export const metadata: Metadata = {
-  title: 'محرر صفحات المجلة (3×3) | لوحة تحكم لوتس',
+  title: 'محرر صفحات المجلة التفاعلي | لوحة تحكم لوتس',
 };
 
 export default async function AdminComposerPage() {

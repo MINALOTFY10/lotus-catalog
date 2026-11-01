@@ -135,8 +135,8 @@ async function ProductDetailPageContent({ params }: ProductDetailPageProps) {
             <div>
               {/* Category Badge */}
               {activeProduct.category && (
-                <div className="mb-2.5">
-                  <span className="inline-block text-xs font-bold text-[#B68763] bg-[#B68763]/10 border border-[#B68763]/20 px-3 py-1 rounded-full">
+                <div className="mb-2">
+                  <span className="text-xs font-semibold text-[#8A6747] bg-stone-100 px-2.5 py-0.5 rounded-md">
                     {activeProduct.category}
                   </span>
                 </div>

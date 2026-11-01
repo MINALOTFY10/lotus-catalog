@@ -98,36 +98,25 @@ export function AdminProductsTable({
         </div>
 
         {/* Categories selector */}
-        <div className="flex items-center gap-2 overflow-x-auto max-w-lg scrollbar-thin">
-          <button
-            onClick={() => {
-              setSelectedCategory('all');
+        <div className="flex items-center gap-2">
+          <select
+            value={selectedCategory}
+            onChange={(e) => {
+              setSelectedCategory(e.target.value);
               setCurrentPage(1);
             }}
-            className={`text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap transition-colors ${
-              selectedCategory === 'all'
-                ? 'bg-[#443000] text-white'
-                : 'bg-stone-100 text-stone-600 hover:bg-stone-200'
-            }`}
+            className="text-xs font-bold bg-stone-50 border border-stone-200 rounded-lg px-3 py-2 text-stone-700 focus:outline-hidden focus:border-[#B68763] cursor-pointer"
           >
-            الكل ({products.length})
-          </button>
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => {
-                setSelectedCategory(cat);
-                setCurrentPage(1);
-              }}
-              className={`text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap transition-colors ${
-                selectedCategory === cat
-                  ? 'bg-[#443000] text-white'
-                  : 'bg-stone-100 text-stone-600 hover:bg-stone-200'
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
+            <option value="all">كل الأقسام ({products.length})</option>
+            {categories.map((cat) => {
+              const count = products.filter((p) => p.category === cat).length;
+              return (
+                <option key={cat} value={cat}>
+                  {cat} ({count})
+                </option>
+              );
+            })}
+          </select>
         </div>
       </div>
 

@@ -38,7 +38,9 @@ export default function RootLayout({
       dir="rtl"
       className={`${tajawal.variable} ${notoSansArabic.variable} ${notoSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col" suppressHydrationWarning>
+        {children}
+      </body>
     </html>
   );
 }

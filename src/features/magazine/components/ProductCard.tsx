@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ProductData } from '../types';
+import { toArabicDigits } from '@/lib/format/price';
 
 interface ProductCardProps {
   product?: ProductData | null;
@@ -47,42 +48,54 @@ export function ProductCard({
 
   // Split priceText into golden label and value
   let priceLabel = 'السعر';
-  let priceVal = priceText
-    ? priceText.trim()
-    : price !== undefined && price !== null
-    ? `${price} L.E`
-    : 'حسب الاختيار';
+  let priceVal = '';
 
-  if (priceText) {
-    // Clean any stray prefix like "الالسعر" or "الـالسعر"
-    const cleanText = priceText.replace(/^ال+السعر/, 'السعر').trim();
+  if (price !== undefined && price !== null) {
+    const formattedPrice = `${toArabicDigits(price)} ج.مصري`;
+    if (priceText) {
+      const cleanText = priceText.replace(/^ال+السعر/, 'السعر').trim();
 
-    if (cleanText.includes('المقاس والسعر')) {
-      priceLabel = 'المقاس والسعر';
-      priceVal = cleanText.replace('المقاس والسعر', '').trim();
-    } else if (cleanText.includes('الحجم والسعر')) {
-      priceLabel = 'الحجم والسعر';
-      priceVal = cleanText.replace('الحجم والسعر', '').trim();
-    } else if (cleanText.includes('الوزن والسعر')) {
-      priceLabel = 'الوزن والسعر';
-      priceVal = cleanText.replace('الوزن والسعر', '').trim();
-    } else if (cleanText.includes('السعر')) {
-      priceLabel = 'السعر';
-      priceVal = cleanText.replace('السعر', '').trim();
-    } else if (cleanText.includes('سم')) {
-      priceLabel = 'المقاس والسعر';
-      priceVal = cleanText;
-    } else if (
-      cleanText.includes('جرام') ||
-      cleanText.includes('كيلو') ||
-      cleanText.includes('مل') ||
-      cleanText.includes('لتر')
-    ) {
-      priceLabel = 'الحجم والسعر';
-      priceVal = cleanText;
+      if (cleanText.includes('المقاس والسعر') || cleanText.includes('سم')) {
+        priceLabel = 'المقاس والسعر';
+      } else if (
+        cleanText.includes('الحجم والسعر') ||
+        cleanText.includes('الوزن والسعر') ||
+        cleanText.includes('جرام') ||
+        cleanText.includes('كيلو') ||
+        cleanText.includes('مل') ||
+        cleanText.includes('لتر')
+      ) {
+        priceLabel = cleanText.includes('الوزن والسعر') ? 'الوزن والسعر' : 'الحجم والسعر';
+      } else {
+        priceLabel = 'السعر';
+      }
+
+      if (cleanText.includes('\n')) {
+        // Multi-line tier prices (e.g. 500ml, 750ml, 1L)
+        priceVal = cleanText.replace(/^(المقاس والسعر|الحجم والسعر|الوزن والسعر|السعر)\n?/, '').trim();
+      } else if (cleanText.includes('|')) {
+        const parts = cleanText.split('|');
+        const sizePart =
+          parts
+            .find(
+              (p) =>
+                !p.includes('ج.مصري') &&
+                !p.includes('ج.م') &&
+                !p.includes('L.E') &&
+                !p.includes('السعر')
+            )
+            ?.trim() || parts[1]?.trim() || '';
+        priceVal = sizePart ? `${formattedPrice} | ${sizePart}` : formattedPrice;
+      } else {
+        priceVal = formattedPrice;
+      }
     } else {
-      priceVal = cleanText;
+      priceVal = formattedPrice;
     }
+  } else if (priceText) {
+    priceVal = priceText.trim();
+  } else {
+    priceVal = 'حسب الاختيار';
   }
 
   // Format title into 2 authentic lines matching Canva where appropriate

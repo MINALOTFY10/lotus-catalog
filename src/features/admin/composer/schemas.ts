@@ -8,6 +8,9 @@ export const slotAssignSchema = z.object({
   price_override: z.number().optional(),
   image_override: z.string().optional(),
   description_override: z.string().optional(),
+  col_span: z.number().int().min(1).max(3).optional(),
+  row_span: z.number().int().min(1).max(3).optional(),
+  cashier_code: z.number().nullable().optional(),
 });
 
 export type SlotAssignInput = z.infer<typeof slotAssignSchema>;

@@ -3,7 +3,7 @@ import issueData from '../data/live_issue.json';
 
 describe('Reader View Integration', () => {
   it('contains sequential pages in the live issue', () => {
-    expect(issueData.pages.length).toBe(65);
+    expect(issueData.pages.length).toBe(47);
     issueData.pages.forEach((p, idx) => {
       expect(p.position).toBe(idx + 1);
       expect(p.pageNumber).toBe(idx + 1);

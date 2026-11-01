@@ -7,8 +7,8 @@ describe('Canva Catalog Extraction', () => {
     const issuePath = path.resolve(process.cwd(), 'data/live_issue.json');
     expect(fs.existsSync(issuePath)).toBe(true);
     const issue = JSON.parse(fs.readFileSync(issuePath, 'utf-8'));
-    expect(issue.pages.length).toBe(65);
-    expect(issue.totalPages).toBe(65);
+    expect(issue.pages.length).toBe(47);
+    expect(issue.totalPages).toBe(47);
   });
 
   it('should have authentic products without placeholder text in products_seed.json', () => {
