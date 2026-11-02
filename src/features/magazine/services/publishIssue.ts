@@ -120,8 +120,10 @@ export async function getLiveIssue(options?: { forceFresh?: boolean }): Promise<
       if (res.ok) {
         return (await res.json()) as IssueSnapshot;
       }
-    } catch (err) {
-      console.warn('Failed to fetch live issue from Supabase Storage, falling back to local:', err);
+    } catch (err: any) {
+      if (err?.digest !== 'HANGING_PROMISE_REJECTION') {
+        console.warn('Failed to fetch live issue from Supabase Storage, falling back to local:', err);
+      }
     }
   }
 
