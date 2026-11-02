@@ -4,6 +4,14 @@ const nextConfig: NextConfig = {
   /* config options here */
   cacheComponents: true,
   partialPrefetching: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**.supabase.co',
+      },
+    ],
+  },
   turbopack: {
     rules: {
       "*.css": {
@@ -11,6 +19,16 @@ const nextConfig: NextConfig = {
         as: "*.css",
       },
     },
+  },
+  async rewrites() {
+    const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://ruvocydftemvsjjkdyqe.supabase.co';
+    const bucket = process.env.SUPABASE_STORAGE_BUCKET || 'magazine';
+    return [
+      {
+        source: '/magazine/:path*',
+        destination: `${supabaseUrl}/storage/v1/object/public/${bucket}/:path*`,
+      },
+    ];
   },
   async headers() {
     return [

@@ -13,7 +13,8 @@ export function CanvaMagazinePage({
   sectionTitle,
   priority = false,
 }: CanvaMagazinePageProps) {
-  const pageSrc = `/magazine/pages/page_${pageNumber}.webp`;
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://ruvocydftemvsjjkdyqe.supabase.co';
+  const pageSrc = `${supabaseUrl}/storage/v1/object/public/magazine/pages/page_${pageNumber}.webp`;
 
   return (
     <div

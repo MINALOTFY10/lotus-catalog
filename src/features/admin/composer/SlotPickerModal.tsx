@@ -32,9 +32,10 @@ export function SlotPickerModal({
   const [selectedProduct, setSelectedProduct] = useState<AdminProductRecord | null>(
     (currentSlotData?.product as AdminProductRecord) || null
   );
-  const [titleOverride, setTitleOverride] = useState(currentSlotData?.title_override || '');
+  const initialTitle = currentSlotData?.title_override || currentSlotData?.product?.name_ar || '';
+  const [titleOverride, setTitleOverride] = useState(initialTitle);
   const [priceOverride, setPriceOverride] = useState(
-    currentSlotData?.price_override ? String(currentSlotData.price_override) : ''
+    currentSlotData?.price_override ? String(currentSlotData.price_override) : (currentSlotData?.product?.sale_price ? String(currentSlotData.product.sale_price) : '')
   );
   const [codeOverride, setCodeOverride] = useState(
     currentSlotData?.product?.cashier_code ? String(currentSlotData.product.cashier_code) : ''
@@ -48,8 +49,12 @@ export function SlotPickerModal({
   React.useEffect(() => {
     const prod = (currentSlotData?.product as AdminProductRecord) || null;
     setSelectedProduct(prod);
-    setTitleOverride(currentSlotData?.title_override || '');
-    setPriceOverride(currentSlotData?.price_override ? String(currentSlotData.price_override) : '');
+    setTitleOverride(currentSlotData?.title_override || prod?.name_ar || '');
+    setPriceOverride(
+      currentSlotData?.price_override
+        ? String(currentSlotData.price_override)
+        : (prod?.sale_price ? String(prod.sale_price) : '')
+    );
     setCodeOverride(prod?.cashier_code ? String(prod.cashier_code) : '');
     setColSpan(Number(currentSlotData?.col_span) || 1);
     setRowSpan(Number(currentSlotData?.row_span) || 1);
@@ -72,8 +77,9 @@ export function SlotPickerModal({
 
     const priceNum = priceOverride ? parseFloat(priceOverride) : undefined;
     const codeNum = codeOverride.trim() ? parseInt(codeOverride.trim(), 10) : null;
+    const finalName = titleOverride.trim() || selectedProduct?.name_ar;
     const overrides = {
-      title_override: titleOverride.trim() || undefined,
+      title_override: finalName || undefined,
       price_override: priceNum && !isNaN(priceNum) ? priceNum : undefined,
       cashier_code: codeNum && !isNaN(codeNum) ? codeNum : null,
       col_span: colSpan,
@@ -95,8 +101,10 @@ export function SlotPickerModal({
 
     setSaving(false);
     const finalProd = (selectedProduct as any) || currentSlotData?.product;
-    if (finalProd && overrides.cashier_code !== undefined) {
-      finalProd.cashier_code = overrides.cashier_code;
+    if (finalProd) {
+      if (overrides.title_override) finalProd.name_ar = overrides.title_override;
+      if (overrides.cashier_code !== undefined) finalProd.cashier_code = overrides.cashier_code;
+      if (overrides.price_override !== undefined) finalProd.sale_price = overrides.price_override;
     }
     onSuccess({
       slot: slotNumber,
@@ -180,7 +188,7 @@ export function SlotPickerModal({
                   المنتج المعين حاليًا
                 </span>
                 <h4 className="text-sm font-extrabold text-[#443000]">
-                  {selectedProduct ? selectedProduct.name_ar : 'خانة فارغة (غير مخصصة)'}
+                  {selectedProduct ? (titleOverride.trim() || selectedProduct.name_ar) : 'خانة فارغة (غير مخصصة)'}
                 </h4>
                 {selectedProduct && (
                   <span className="text-xs font-mono font-bold text-stone-500">
@@ -272,14 +280,14 @@ export function SlotPickerModal({
               </div>
               <div>
                 <label className="block text-xs font-bold text-stone-700 mb-1">
-                  تخصيص عنوان المنتج (للمجلة فقط)
+                  اسم وعنوان المنتج
                 </label>
                 <input
                   type="text"
                   value={titleOverride}
                   onChange={(e) => setTitleOverride(e.target.value)}
-                  placeholder={selectedProduct?.name_ar || 'العنوان الافتراضي...'}
-                  className="w-full text-xs bg-white border border-stone-300 rounded-xl px-3 py-2 text-stone-900 focus:outline-hidden focus:border-[#B68763]"
+                  placeholder={selectedProduct?.name_ar || 'اسم المنتج...'}
+                  className="w-full text-xs font-bold bg-white border border-stone-300 rounded-xl px-3 py-2 text-[#443000] focus:outline-hidden focus:border-[#B68763]"
                 />
               </div>
             </div>
@@ -312,6 +320,8 @@ export function SlotPickerModal({
                     key={p.id}
                     onClick={() => {
                       setSelectedProduct(p);
+                      setTitleOverride(p.name_ar || '');
+                      setPriceOverride(String(p.sale_price || ''));
                       if (p.cashier_code) setCodeOverride(String(p.cashier_code));
                     }}
                     className={`p-2.5 flex items-center justify-between cursor-pointer transition-colors ${

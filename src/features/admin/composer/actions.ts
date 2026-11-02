@@ -4,6 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import { revalidatePath } from 'next/cache';
 import { MagazinePageData, PageSlotData } from '@/features/magazine/types';
+import { syncLiveIssueToSupabase } from '@/features/magazine/services/publishIssue';
 import { SlotAssignInput, slotAssignSchema } from './schemas';
 
 /**
@@ -22,16 +23,19 @@ export async function assignProductToSlot(
     const slots = [...(page.slots || [])];
     const existingIndex = slots.findIndex((s) => s.slot === slotNumber);
 
+    const finalName = overrides?.title_override?.trim() || product?.name_ar;
     const updatedProduct = product ? {
       ...product,
+      name_ar: finalName,
       cashier_code: overrides?.cashier_code !== undefined ? overrides.cashier_code : product.cashier_code,
+      sale_price: overrides?.price_override !== undefined ? overrides.price_override : product.sale_price,
     } : product;
 
     const newSlot: PageSlotData = {
       slot: slotNumber,
       product: updatedProduct,
-      title_override: overrides?.title_override,
-      price_override: overrides?.price_override,
+      title_override: finalName,
+      price_override: overrides?.price_override !== undefined ? overrides.price_override : updatedProduct?.sale_price,
       image_override: overrides?.image_override,
       description_override: overrides?.description_override,
       col_span: overrides?.col_span ?? 1,
@@ -160,20 +164,25 @@ export async function saveSlotAssignmentAction(
         overrides
       );
 
-      // Sync cashier_code to products_seed.json if seed exists
-      if (overrides?.cashier_code !== undefined && fs.existsSync(seedPath)) {
+      // Sync cashier_code, name_ar, sale_price to products_seed.json if seed exists
+      if (fs.existsSync(seedPath)) {
         try {
           const currentSeed = JSON.parse(fs.readFileSync(seedPath, 'utf8'));
           const targetId = productObj.id || productObj.slug;
           const updatedSeed = currentSeed.map((p: any) => {
             if (p.id === targetId || p.slug === targetId) {
-              return { ...p, cashier_code: overrides.cashier_code };
+              return {
+                ...p,
+                ...(overrides?.title_override ? { name_ar: overrides.title_override.trim() } : {}),
+                ...(overrides?.cashier_code !== undefined ? { cashier_code: overrides.cashier_code } : {}),
+                ...(overrides?.price_override !== undefined ? { sale_price: overrides.price_override } : {}),
+              };
             }
             return p;
           });
           fs.writeFileSync(seedPath, JSON.stringify(updatedSeed, null, 2), 'utf8');
         } catch (e) {
-          console.error('Error syncing cashier_code to seed:', e);
+          console.error('Error syncing changes to seed:', e);
         }
       }
     } else {
@@ -181,6 +190,7 @@ export async function saveSlotAssignmentAction(
     }
 
     fs.writeFileSync(liveIssuePath, JSON.stringify(issue, null, 2), 'utf8');
+    await syncLiveIssueToSupabase(issue);
 
     revalidatePath('/', 'layout');
     revalidatePath('/');
@@ -251,6 +261,7 @@ export async function swapPageSlotsAction(
     issue.pages[pageIndex] = page;
 
     fs.writeFileSync(liveIssuePath, JSON.stringify(issue, null, 2), 'utf8');
+    await syncLiveIssueToSupabase(issue);
 
     revalidatePath('/', 'layout');
     revalidatePath('/');
@@ -283,6 +294,7 @@ export async function updatePageSectionTitleAction(
     if (page) {
       page.sectionTitle = newTitle.trim();
       fs.writeFileSync(liveIssuePath, JSON.stringify(issue, null, 2), 'utf8');
+      await syncLiveIssueToSupabase(issue);
       revalidatePath('/', 'layout');
       revalidatePath('/');
       revalidatePath('/magazine');

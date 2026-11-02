@@ -3,15 +3,17 @@
 import { useEffect, useRef } from 'react';
 import { MagazinePageData } from '../types';
 
+const SUPABASE_STORAGE_BASE = `${process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://ruvocydftemvsjjkdyqe.supabase.co'}/storage/v1/object/public/magazine`;
+
 const BRAND_PRELOAD_ASSETS = [
-  '/brand/lotus_logo.png',
-  '/brand/fund_seal_header.webp',
-  '/brand/canva_golden_branch.webp',
-  '/magazine/brand_cards/na7la_brand_badge.webp',
-  '/magazine/brand_cards/nakhla_brand_badge.webp',
-  '/magazine/brand_cards/waj_brand_badge.webp',
-  '/magazine/brand_cards/honey_eco_badge.webp',
-  '/magazine/brand_cards/food_eco_badge.webp',
+  `${SUPABASE_STORAGE_BASE}/brand/lotus_logo.png`,
+  `${SUPABASE_STORAGE_BASE}/brand/fund_seal_header.webp`,
+  `${SUPABASE_STORAGE_BASE}/brand/canva_golden_branch.webp`,
+  `${SUPABASE_STORAGE_BASE}/brand_cards/na7la_brand_badge.webp`,
+  `${SUPABASE_STORAGE_BASE}/brand_cards/nakhla_brand_badge.webp`,
+  `${SUPABASE_STORAGE_BASE}/brand_cards/waj_brand_badge.webp`,
+  `${SUPABASE_STORAGE_BASE}/brand_cards/honey_eco_badge.webp`,
+  `${SUPABASE_STORAGE_BASE}/brand_cards/food_eco_badge.webp`,
 ];
 
 /**

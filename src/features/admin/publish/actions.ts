@@ -3,7 +3,7 @@
 import fs from 'fs';
 import path from 'path';
 import { revalidatePath } from 'next/cache';
-import { IssueSnapshot } from '@/features/magazine/services/publishIssue';
+import { IssueSnapshot, syncLiveIssueToSupabase } from '@/features/magazine/services/publishIssue';
 
 export interface VersionHistoryRecord {
   version: number;
@@ -73,6 +73,7 @@ export async function publishLiveIssueAction(
 
     // Update live_issue.json
     fs.writeFileSync(liveIssuePath, JSON.stringify(currentIssue, null, 2), 'utf8');
+    await syncLiveIssueToSupabase(currentIssue);
 
     // Update history registry (mark others not live)
     const newRecord: VersionHistoryRecord = {
@@ -122,6 +123,7 @@ export async function rollbackToVersionAction(
 
     // Restore to live_issue.json
     fs.writeFileSync(liveIssuePath, JSON.stringify(targetSnapshot, null, 2), 'utf8');
+    await syncLiveIssueToSupabase(targetSnapshot);
 
     // Update history isLive flags
     if (fs.existsSync(historyPath)) {

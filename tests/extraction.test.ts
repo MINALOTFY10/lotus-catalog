@@ -21,9 +21,11 @@ describe('Canva Catalog Extraction', () => {
       expect(p.name_ar).not.toMatch(/^منتج لوتس/);
       expect(p.name_ar).not.toMatch(/^منتج تراثي/);
       expect(p.name_ar.length).toBeGreaterThan(2);
-      expect(p.primary_image_url).toMatch(/^\/magazine\/canva_products\/p\d+_s\d+\.webp$/);
-      const imgPath = path.resolve(process.cwd(), 'public', p.primary_image_url.slice(1));
-      expect(fs.existsSync(imgPath), `Missing image: ${imgPath}`).toBe(true);
+      expect(p.primary_image_url).toMatch(/^(\/magazine\/canva_products\/p\d+_s\d+\.webp|https:\/\/.*\.supabase\.co\/.*)$/);
+      if (p.primary_image_url.startsWith('/')) {
+        const imgPath = path.resolve(process.cwd(), 'public', p.primary_image_url.slice(1));
+        expect(fs.existsSync(imgPath), `Missing image: ${imgPath}`).toBe(true);
+      }
     }
   });
 });

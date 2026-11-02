@@ -5,6 +5,7 @@ import path from 'path';
 import { revalidatePath } from 'next/cache';
 import { productUpdateSchema, ProductUpdateInput } from './schemas';
 import { toArabicDigits } from '@/lib/format/price';
+import { syncLiveIssueToSupabase } from '@/features/magazine/services/publishIssue';
 
 export interface AdminProductRecord {
   id: string;
@@ -168,6 +169,8 @@ export async function updateProductAction(
 
       if (modifiedLive) {
         fs.writeFileSync(liveIssuePath, JSON.stringify(issue, null, 2), 'utf8');
+        // Synchronize with Supabase Storage so changes persist in cloud and on deployed site
+        await syncLiveIssueToSupabase(issue);
       }
     }
 

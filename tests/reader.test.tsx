@@ -17,7 +17,7 @@ describe('Reader View Integration', () => {
         if (slot.product) {
           expect(slot.product.name_ar).toBeTruthy();
           expect(slot.product.slug).toMatch(/^prod-/);
-          expect(slot.product.primary_image_url).toMatch(/^(\/magazine\/canva_products\/|\/uploads\/)/);
+          expect(slot.product.primary_image_url).toMatch(/^(\/magazine\/canva_products\/|\/uploads\/|https:\/\/.*\.supabase\.co\/)/);
         }
       }
     }
