@@ -13,6 +13,8 @@ function StaffSessionBadge({ email }: { email: string }) {
   );
 }
 
+export const instant = false;
+
 export default async function AdminProtectedLayout({
   children,
 }: {

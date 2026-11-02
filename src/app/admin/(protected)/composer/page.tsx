@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   title: 'محرر صفحات المجلة التفاعلي | لوحة تحكم لوتس',
 };
 
+export const instant = false;
+
 export default async function AdminComposerPage() {
   await connection();
   const liveIssue = await getLiveIssue({ forceFresh: true });

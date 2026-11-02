@@ -8,6 +8,8 @@ export const metadata: Metadata = {
   title: 'إدارة المنتجات والأسعار | لوحة تحكم لوتس',
 };
 
+export const instant = false;
+
 export default async function AdminProductsPage() {
   await connection();
   const products = await getAdminProductsList();

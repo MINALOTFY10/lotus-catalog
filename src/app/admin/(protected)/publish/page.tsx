@@ -9,6 +9,8 @@ export const metadata: Metadata = {
   title: 'النشر والتراجع الفوري | لوحة تحكم لوتس',
 };
 
+export const instant = false;
+
 export default async function AdminPublishPage() {
   await connection();
   const liveIssue = await getLiveIssue({ forceFresh: true });
