@@ -4,6 +4,7 @@ import { describe, it, expect } from 'vitest';
 import { productUpdateSchema } from '@/features/admin/products/schemas';
 import { updateProductInStore } from '@/features/admin/products/actions';
 import { ProductEditModal } from '@/features/admin/products/ProductEditModal';
+import { AdminProductsTable } from '@/features/admin/products/AdminProductsTable';
 
 describe('productUpdateSchema', () => {
   it('validates price and name correctly', () => {
@@ -95,5 +96,38 @@ describe('ProductEditModal', () => {
 
     fireEvent.change(descriptionInput, { target: { value: 'وصف جديد' } });
     expect(descriptionInput.value).toBe('وصف جديد');
+  });
+});
+
+describe('AdminProductsTable Cashier Code Sorting', () => {
+  it('sorts products by cashier code ascending and descending', () => {
+    const mockProducts = [
+      { id: '1', name_ar: 'المنتج ب', cashier_code: 50, sale_price: 100, slug: 'b', in_stock: true, primary_image_url: '/img.jpg' },
+      { id: '2', name_ar: 'المنتج أ', cashier_code: 5, sale_price: 200, slug: 'a', in_stock: true, primary_image_url: '/img.jpg' },
+      { id: '3', name_ar: 'المنتج ج', cashier_code: null, sale_price: 300, slug: 'c', in_stock: true, primary_image_url: '/img.jpg' },
+    ];
+
+    const { container } = render(
+      React.createElement(AdminProductsTable, {
+        initialProducts: mockProducts,
+        categories: [],
+      })
+    );
+
+    expect(screen.getByText('الكود')).toBeDefined();
+
+    // Click on Code header to sort ascending
+    fireEvent.click(screen.getByText('الكود'));
+    const rowsAsc = container.querySelectorAll('tbody tr');
+    expect(rowsAsc[0].textContent).toContain('#5');
+    expect(rowsAsc[1].textContent).toContain('#50');
+    expect(rowsAsc[2].textContent).toContain('#-');
+
+    // Click again to sort descending
+    fireEvent.click(screen.getByText('الكود'));
+    const rowsDesc = container.querySelectorAll('tbody tr');
+    expect(rowsDesc[0].textContent).toContain('#50');
+    expect(rowsDesc[1].textContent).toContain('#5');
+    expect(rowsDesc[2].textContent).toContain('#-');
   });
 });

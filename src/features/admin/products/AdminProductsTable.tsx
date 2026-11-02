@@ -7,6 +7,17 @@ import { AdminProductRecord } from './actions';
 import { ProductEditModal } from './ProductEditModal';
 import { normalizeArabic } from '@/lib/format/arabic';
 
+export type SortOption =
+  | 'default'
+  | 'cashier_asc'
+  | 'cashier_desc'
+  | 'price_asc'
+  | 'price_desc'
+  | 'name_asc'
+  | 'name_desc';
+
+export type CodeFilterOption = 'all' | 'with_code' | 'without_code';
+
 interface AdminProductsTableProps {
   initialProducts: AdminProductRecord[];
   categories: string[];
@@ -19,6 +30,8 @@ export function AdminProductsTable({
   const [products, setProducts] = useState<AdminProductRecord[]>(initialProducts);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState<SortOption>('default');
+  const [codeFilter, setCodeFilter] = useState<CodeFilterOption>('all');
   const [editingProduct, setEditingProduct] = useState<AdminProductRecord | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 25;
@@ -26,10 +39,23 @@ export function AdminProductsTable({
   const filtered = useMemo(() => {
     let result = [...products];
 
+    // 1. Filter by category
     if (selectedCategory !== 'all') {
       result = result.filter((p) => p.category === selectedCategory);
     }
 
+    // 2. Filter by cashier code presence
+    if (codeFilter === 'with_code') {
+      result = result.filter(
+        (p) => p.cashier_code != null && !isNaN(Number(p.cashier_code))
+      );
+    } else if (codeFilter === 'without_code') {
+      result = result.filter(
+        (p) => p.cashier_code == null || isNaN(Number(p.cashier_code))
+      );
+    }
+
+    // 3. Search query filter
     if (searchQuery.trim()) {
       const q = normalizeArabic(searchQuery);
       result = result.filter((p) => {
@@ -40,8 +66,41 @@ export function AdminProductsTable({
       });
     }
 
+    // 4. Sorting
+    if (sortBy === 'cashier_asc') {
+      result.sort((a, b) => {
+        const aVal = a.cashier_code != null && !isNaN(Number(a.cashier_code))
+          ? Number(a.cashier_code)
+          : Infinity;
+        const bVal = b.cashier_code != null && !isNaN(Number(b.cashier_code))
+          ? Number(b.cashier_code)
+          : Infinity;
+        if (aVal !== bVal) return aVal - bVal;
+        return (a.name_ar || '').localeCompare(b.name_ar || '', 'ar');
+      });
+    } else if (sortBy === 'cashier_desc') {
+      result.sort((a, b) => {
+        const aVal = a.cashier_code != null && !isNaN(Number(a.cashier_code))
+          ? Number(a.cashier_code)
+          : -Infinity;
+        const bVal = b.cashier_code != null && !isNaN(Number(b.cashier_code))
+          ? Number(b.cashier_code)
+          : -Infinity;
+        if (aVal !== bVal) return bVal - aVal;
+        return (a.name_ar || '').localeCompare(b.name_ar || '', 'ar');
+      });
+    } else if (sortBy === 'price_asc') {
+      result.sort((a, b) => (a.sale_price ?? 0) - (b.sale_price ?? 0));
+    } else if (sortBy === 'price_desc') {
+      result.sort((a, b) => (b.sale_price ?? 0) - (a.sale_price ?? 0));
+    } else if (sortBy === 'name_asc') {
+      result.sort((a, b) => (a.name_ar || '').localeCompare(b.name_ar || '', 'ar'));
+    } else if (sortBy === 'name_desc') {
+      result.sort((a, b) => (b.name_ar || '').localeCompare(a.name_ar || '', 'ar'));
+    }
+
     return result;
-  }, [products, selectedCategory, searchQuery]);
+  }, [products, selectedCategory, codeFilter, searchQuery, sortBy]);
 
   const totalPages = Math.ceil(filtered.length / pageSize) || 1;
   const pageItems = useMemo(() => {
@@ -80,7 +139,8 @@ export function AdminProductsTable({
       </div>
 
       {/* Toolbar */}
-      <div className="bg-white p-4 rounded-2xl border border-stone-200 shadow-xs flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
+      <div className="bg-white p-4 rounded-2xl border border-stone-200 shadow-xs flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
+        {/* Search */}
         <div className="relative flex-1">
           <input
             type="text"
@@ -97,8 +157,9 @@ export function AdminProductsTable({
           </svg>
         </div>
 
-        {/* Categories selector */}
-        <div className="flex items-center gap-2">
+        {/* Filters and Sorting Controls */}
+        <div className="flex items-center gap-2 flex-wrap sm:flex-nowrap">
+          {/* Categories selector */}
           <select
             value={selectedCategory}
             onChange={(e) => {
@@ -117,6 +178,44 @@ export function AdminProductsTable({
               );
             })}
           </select>
+
+          {/* Cashier Code Filter */}
+          <select
+            value={codeFilter}
+            onChange={(e) => {
+              setCodeFilter(e.target.value as CodeFilterOption);
+              setCurrentPage(1);
+            }}
+            className="text-xs font-bold bg-stone-50 border border-stone-200 rounded-lg px-3 py-2 text-stone-700 focus:outline-hidden focus:border-[#B68763] cursor-pointer"
+            title="تصفية حسب وجود كود كاشير"
+          >
+            <option value="all">كل الأكواد</option>
+            <option value="with_code">بها كود كاشير (#)</option>
+            <option value="without_code">بدون كود كاشير (-)</option>
+          </select>
+
+          {/* Sorting selector */}
+          <div className="flex items-center gap-1.5 bg-stone-50 border border-stone-200 rounded-lg px-2.5 py-1.5">
+            <svg className="w-3.5 h-3.5 text-stone-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12" />
+            </svg>
+            <select
+              value={sortBy}
+              onChange={(e) => {
+                setSortBy(e.target.value as SortOption);
+                setCurrentPage(1);
+              }}
+              className="text-xs font-bold bg-transparent text-stone-700 focus:outline-hidden cursor-pointer"
+            >
+              <option value="default">الترتيب: الافتراضي</option>
+              <option value="cashier_asc">كود الكاشير: تصاعدي (1 ← 999)</option>
+              <option value="cashier_desc">كود الكاشير: تنازلي (999 ← 1)</option>
+              <option value="price_asc">السعر: من الأقل للأعلى</option>
+              <option value="price_desc">السعر: من الأعلى للأقل</option>
+              <option value="name_asc">الاسم: أبجدياً (أ ← ي)</option>
+              <option value="name_desc">الاسم: أبجدياً (ي ← أ)</option>
+            </select>
+          </div>
         </div>
       </div>
 
@@ -125,12 +224,66 @@ export function AdminProductsTable({
         <div className="overflow-x-auto">
           <table className="w-full text-right border-collapse">
             <thead>
-              <tr className="bg-stone-50 border-b border-stone-200 text-stone-600 text-xs font-bold">
+              <tr className="bg-stone-50 border-b border-stone-200 text-stone-600 text-xs font-bold select-none">
                 <th className="py-3 px-4">الصورة</th>
-                <th className="py-3 px-4">الكود</th>
-                <th className="py-3 px-4">اسم المنتج</th>
+                <th
+                  onClick={() => {
+                    setSortBy((prev) => {
+                      if (prev === 'cashier_asc') return 'cashier_desc';
+                      if (prev === 'cashier_desc') return 'default';
+                      return 'cashier_asc';
+                    });
+                    setCurrentPage(1);
+                  }}
+                  className="py-3 px-4 cursor-pointer hover:bg-amber-100/50 transition-colors group"
+                  title="اضغط لترتيب أكواد الكاشير تصاعدياً أو تنازلياً"
+                >
+                  <div className="flex items-center gap-1.5">
+                    <span>الكود</span>
+                    <span className={`text-[11px] font-mono transition-colors ${sortBy.startsWith('cashier') ? 'text-[#443000] font-black' : 'text-stone-300 group-hover:text-stone-600'}`}>
+                      {sortBy === 'cashier_asc' ? '▲ (1←9)' : sortBy === 'cashier_desc' ? '▼ (9←1)' : '⇅'}
+                    </span>
+                  </div>
+                </th>
+                <th
+                  onClick={() => {
+                    setSortBy((prev) => {
+                      if (prev === 'name_asc') return 'name_desc';
+                      if (prev === 'name_desc') return 'default';
+                      return 'name_asc';
+                    });
+                    setCurrentPage(1);
+                  }}
+                  className="py-3 px-4 cursor-pointer hover:bg-amber-100/50 transition-colors group"
+                  title="اضغط للترتيب أبجدياً"
+                >
+                  <div className="flex items-center gap-1.5">
+                    <span>اسم المنتج</span>
+                    <span className={`text-[11px] font-mono transition-colors ${sortBy.startsWith('name') ? 'text-[#443000] font-black' : 'text-stone-300 group-hover:text-stone-600'}`}>
+                      {sortBy === 'name_asc' ? '▲' : sortBy === 'name_desc' ? '▼' : '⇅'}
+                    </span>
+                  </div>
+                </th>
                 <th className="py-3 px-4">القسم</th>
-                <th className="py-3 px-4">سعر البيع (L.E)</th>
+                <th
+                  onClick={() => {
+                    setSortBy((prev) => {
+                      if (prev === 'price_asc') return 'price_desc';
+                      if (prev === 'price_desc') return 'default';
+                      return 'price_asc';
+                    });
+                    setCurrentPage(1);
+                  }}
+                  className="py-3 px-4 cursor-pointer hover:bg-amber-100/50 transition-colors group"
+                  title="اضغط للترتيب حسب السعر"
+                >
+                  <div className="flex items-center gap-1.5">
+                    <span>سعر البيع (L.E)</span>
+                    <span className={`text-[11px] font-mono transition-colors ${sortBy.startsWith('price') ? 'text-[#443000] font-black' : 'text-stone-300 group-hover:text-stone-600'}`}>
+                      {sortBy === 'price_asc' ? '▲' : sortBy === 'price_desc' ? '▼' : '⇅'}
+                    </span>
+                  </div>
+                </th>
                 <th className="py-3 px-4">سعر التكلفة</th>
                 <th className="py-3 px-4">المخزون</th>
                 <th className="py-3 px-4 text-center">إجراءات</th>
