@@ -1,5 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
+import { connection } from 'next/server';
 import { AdminProductsTable } from '@/features/admin/products/AdminProductsTable';
 import { getAdminProductsList } from '@/features/admin/products/actions';
 
@@ -8,6 +9,7 @@ export const metadata: Metadata = {
 };
 
 export default async function AdminProductsPage() {
+  await connection();
   const products = await getAdminProductsList();
 
   // Extract unique categories

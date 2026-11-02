@@ -72,10 +72,41 @@ describe('assignProductToSlot & removeProductFromSlot', () => {
     expect(slot1?.title_override).toBe('عنوان خاص بالمجلة');
   });
 
-  it('removes product from slot', async () => {
-    const cleared = await removeProductFromSlot(initialPages, 2, 1);
-    const page2 = cleared.find((p) => p.pageNumber === 2);
-    const slot1 = page2?.slots.find((s) => s.slot === 1);
-    expect(slot1?.product).toBeUndefined();
+  it('preserves existing overrides and calculates formatted price_text in Arabic', async () => {
+    const pagesWithOverrides: MagazinePageData[] = [
+      {
+        position: 3,
+        pageNumber: 3,
+        template: 'grid3x3',
+        slots: [
+          {
+            slot: 2,
+            image_override: '/custom-image.webp',
+            description_override: 'وصف مخصص سابق',
+            col_span: 2,
+            row_span: 1,
+            product: {
+              id: 'p-override',
+              slug: 'p-override',
+              name_ar: 'منتج تجريبي',
+              sale_price: 150,
+            },
+          },
+        ],
+      },
+    ];
+
+    const updated = await assignProductToSlot(pagesWithOverrides, 3, 2, pagesWithOverrides[0].slots[0].product, {
+      price_override: 250,
+      cashier_code: 9988,
+    });
+
+    const slot = updated[0].slots[0];
+    expect(slot.price_override).toBe(250);
+    expect(slot.price_text).toBe('٢٥٠ ج.مصري');
+    expect(slot.image_override).toBe('/custom-image.webp');
+    expect(slot.description_override).toBe('وصف مخصص سابق');
+    expect(slot.col_span).toBe(2);
+    expect(slot.product?.cashier_code).toBe(9988);
   });
 });

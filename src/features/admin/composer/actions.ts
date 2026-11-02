@@ -2,9 +2,10 @@
 
 import fs from 'fs';
 import path from 'path';
-import { revalidatePath } from 'next/cache';
+import { revalidatePath, updateTag, revalidateTag } from 'next/cache';
 import { MagazinePageData, PageSlotData } from '@/features/magazine/types';
 import { syncLiveIssueToSupabase, getLiveIssue, safeWriteJsonFile } from '@/features/magazine/services/publishIssue';
+import { toArabicDigits } from '@/lib/format/price';
 import { SlotAssignInput, slotAssignSchema } from './schemas';
 
 /**
@@ -22,24 +23,51 @@ export async function assignProductToSlot(
 
     const slots = [...(page.slots || [])];
     const existingIndex = slots.findIndex((s) => s.slot === slotNumber);
+    const existingSlot = existingIndex >= 0 ? slots[existingIndex] : undefined;
 
     const finalName = overrides?.title_override?.trim() || product?.name_ar;
-    const updatedProduct = product ? {
-      ...product,
-      name_ar: finalName,
-      cashier_code: overrides?.cashier_code !== undefined ? overrides.cashier_code : product.cashier_code,
-      sale_price: overrides?.price_override !== undefined ? overrides.price_override : product.sale_price,
-    } : product;
+    const finalPrice =
+      overrides?.price_override !== undefined
+        ? overrides.price_override
+        : product?.sale_price;
+
+    const updatedProduct = product
+      ? {
+          ...product,
+          name_ar: finalName,
+          cashier_code:
+            overrides?.cashier_code !== undefined
+              ? overrides.cashier_code
+              : product.cashier_code,
+          sale_price: finalPrice,
+        }
+      : product;
 
     const newSlot: PageSlotData = {
       slot: slotNumber,
       product: updatedProduct,
       title_override: finalName,
-      price_override: overrides?.price_override !== undefined ? overrides.price_override : updatedProduct?.sale_price,
-      image_override: overrides?.image_override,
-      description_override: overrides?.description_override,
-      col_span: overrides?.col_span ?? 1,
-      row_span: overrides?.row_span ?? 1,
+      price_override: finalPrice,
+      price_text:
+        finalPrice !== undefined && finalPrice !== null
+          ? `${toArabicDigits(finalPrice)} ج.مصري`
+          : existingSlot?.price_text,
+      image_override:
+        overrides?.image_override !== undefined
+          ? overrides.image_override
+          : existingSlot?.image_override,
+      description_override:
+        overrides?.description_override !== undefined
+          ? overrides.description_override
+          : existingSlot?.description_override,
+      col_span:
+        overrides?.col_span !== undefined
+          ? overrides.col_span
+          : (existingSlot?.col_span ?? 1),
+      row_span:
+        overrides?.row_span !== undefined
+          ? overrides.row_span
+          : (existingSlot?.row_span ?? 1),
     };
 
     if (existingIndex >= 0) {
@@ -159,6 +187,27 @@ export async function saveSlotAssignmentAction(
       if (overrides?.cashier_code !== undefined) {
         productObj.cashier_code = overrides.cashier_code;
       }
+      if (overrides?.title_override?.trim()) {
+        productObj.name_ar = overrides.title_override.trim();
+      }
+      if (overrides?.price_override !== undefined) {
+        productObj.sale_price = overrides.price_override;
+      }
+
+      // Propagate updated productObj attributes to any matching slots in the issue
+      const targetId = productObj.id || productObj.slug;
+      if (targetId) {
+        for (const p of issue.pages || []) {
+          for (const s of p.slots || []) {
+            if (s.product && (s.product.id === targetId || s.product.slug === targetId)) {
+              if (overrides?.cashier_code !== undefined) s.product.cashier_code = overrides.cashier_code;
+              if (overrides?.title_override?.trim()) s.product.name_ar = overrides.title_override.trim();
+              if (overrides?.price_override !== undefined) s.product.sale_price = overrides.price_override;
+            }
+          }
+        }
+      }
+
       issue.pages = await assignProductToSlot(
         issue.pages,
         pageNumber,
@@ -195,10 +244,17 @@ export async function saveSlotAssignmentAction(
     safeWriteJsonFile(liveIssuePath, issue);
     await syncLiveIssueToSupabase(issue);
 
+    try {
+      updateTag('live-issue');
+      revalidateTag('live-issue', { expire: 0 });
+    } catch (tagErr) {
+      console.warn('tag revalidation error:', tagErr);
+    }
     revalidatePath('/', 'layout');
     revalidatePath('/');
     revalidatePath('/magazine');
     revalidatePath('/admin/composer');
+    revalidatePath('/admin/products');
     revalidatePath('/products');
 
     return { success: true };
@@ -266,10 +322,17 @@ export async function swapPageSlotsAction(
     safeWriteJsonFile(liveIssuePath, issue);
     await syncLiveIssueToSupabase(issue);
 
+    try {
+      updateTag('live-issue');
+      revalidateTag('live-issue', { expire: 0 });
+    } catch (tagErr) {
+      console.warn('revalidateTag error:', tagErr);
+    }
     revalidatePath('/', 'layout');
     revalidatePath('/');
     revalidatePath('/magazine');
     revalidatePath('/admin/composer');
+    revalidatePath('/admin/products');
     revalidatePath('/products');
 
     return { success: true };
@@ -298,6 +361,13 @@ export async function updatePageSectionTitleAction(
       page.sectionTitle = newTitle.trim();
       safeWriteJsonFile(liveIssuePath, issue);
       await syncLiveIssueToSupabase(issue);
+
+      try {
+        updateTag('live-issue');
+        revalidateTag('live-issue', { expire: 0 });
+      } catch (tagErr) {
+        console.warn('revalidateTag error:', tagErr);
+      }
       revalidatePath('/', 'layout');
       revalidatePath('/');
       revalidatePath('/magazine');

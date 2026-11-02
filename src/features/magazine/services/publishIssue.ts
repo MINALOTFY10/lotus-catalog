@@ -111,9 +111,25 @@ export async function getLiveIssue(options?: { forceFresh?: boolean }): Promise<
 
   if (supabaseUrl && !supabaseUrl.includes('placeholder')) {
     try {
-      const remoteUrl = `${supabaseUrl.replace(/\/$/, '')}/storage/v1/object/public/${bucket}/data/live_issue.json`;
+      const serviceKey =
+        process.env.SUPABASE_SERVICE_ROLE_KEY ||
+        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+      const remoteUrl = options?.forceFresh
+        ? `${supabaseUrl.replace(/\/$/, '')}/storage/v1/object/public/${bucket}/data/live_issue.json?t=${Date.now()}`
+        : `${supabaseUrl.replace(/\/$/, '')}/storage/v1/object/public/${bucket}/data/live_issue.json`;
+
+      const headers: Record<string, string> = {};
+      if (options?.forceFresh) {
+        headers['Cache-Control'] = 'no-cache, no-store';
+        if (serviceKey) {
+          headers['apikey'] = serviceKey;
+          headers['Authorization'] = `Bearer ${serviceKey}`;
+        }
+      }
+
       const fetchOptions: RequestInit = options?.forceFresh
-        ? { cache: 'no-store', headers: { 'Cache-Control': 'no-cache, no-store' } }
+        ? { cache: 'no-store', headers }
         : { next: { revalidate: 30, tags: ['live-issue'] } };
 
       const res = await fetch(remoteUrl, fetchOptions);

@@ -2,7 +2,7 @@
 
 import fs from 'fs';
 import path from 'path';
-import { revalidatePath } from 'next/cache';
+import { revalidatePath, updateTag, revalidateTag } from 'next/cache';
 import { productUpdateSchema, ProductUpdateInput } from './schemas';
 import { toArabicDigits } from '@/lib/format/price';
 import { syncLiveIssueToSupabase, getLiveIssue, safeWriteJsonFile } from '@/features/magazine/services/publishIssue';
@@ -215,6 +215,12 @@ export async function updateProductAction(
     }
 
     // 3. Immediately bust all cache layers across the app so edits show in one second!
+    try {
+      updateTag('live-issue');
+      revalidateTag('live-issue', { expire: 0 });
+    } catch (tagErr) {
+      console.warn('tag revalidation error:', tagErr);
+    }
     revalidatePath('/', 'layout');
     revalidatePath('/');
     revalidatePath('/magazine');

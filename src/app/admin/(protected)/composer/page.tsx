@@ -1,5 +1,6 @@
 import React from 'react';
 import { Metadata } from 'next';
+import { connection } from 'next/server';
 import { getLiveIssue } from '@/features/magazine/services/publishIssue';
 import { ComposerView } from '@/features/admin/composer/ComposerView';
 import { getAdminProductsList } from '@/features/admin/products/actions';
@@ -9,7 +10,8 @@ export const metadata: Metadata = {
 };
 
 export default async function AdminComposerPage() {
-  const liveIssue = await getLiveIssue();
+  await connection();
+  const liveIssue = await getLiveIssue({ forceFresh: true });
   const products = await getAdminProductsList();
 
   return (

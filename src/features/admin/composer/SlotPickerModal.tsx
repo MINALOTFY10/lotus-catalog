@@ -6,6 +6,7 @@ import { PageSlotData } from '@/features/magazine/types';
 import { AdminProductRecord } from '../products/actions';
 import { saveSlotAssignmentAction } from './actions';
 import { normalizeArabic } from '@/lib/format/arabic';
+import { toArabicDigits } from '@/lib/format/price';
 
 interface SlotPickerModalProps {
   pageNumber: number;
@@ -106,11 +107,25 @@ export function SlotPickerModal({
       if (overrides.cashier_code !== undefined) finalProd.cashier_code = overrides.cashier_code;
       if (overrides.price_override !== undefined) finalProd.sale_price = overrides.price_override;
     }
+
+    const effectivePrice =
+      overrides.price_override !== undefined
+        ? overrides.price_override
+        : finalProd?.sale_price;
+
+    const computedPriceText =
+      effectivePrice !== undefined && effectivePrice !== null
+        ? `${toArabicDigits(effectivePrice)} ج.مصري`
+        : currentSlotData?.price_text;
+
     onSuccess({
       slot: slotNumber,
       product: finalProd,
       title_override: overrides.title_override,
       price_override: overrides.price_override,
+      price_text: computedPriceText,
+      image_override: currentSlotData?.image_override,
+      description_override: currentSlotData?.description_override,
       col_span: overrides.col_span,
       row_span: overrides.row_span,
     });
