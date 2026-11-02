@@ -31,12 +31,41 @@ export function MagazineReaderView({
   // Proactively preload images for visible and upcoming spreads in background
   useMagazinePreload(initialIssue.pages, currentPage);
 
-  const spreadStart = Math.floor((currentPage - 1) / 2) * 2 + 1;
+  // Sync page from URL or sessionStorage on mount and browser popstate
+  React.useEffect(() => {
+    const syncPageFromLocationOrStorage = () => {
+      if (typeof window === 'undefined') return;
+      const params = new URLSearchParams(window.location.search);
+      const pParam = params.get('p');
+      if (pParam) {
+        const pageNum = parseInt(pParam, 10);
+        if (!isNaN(pageNum) && pageNum >= 1 && pageNum <= initialIssue.totalPages) {
+          setCurrentPage(pageNum);
+          return;
+        }
+      }
+      const saved = sessionStorage.getItem('lotus_magazine_page');
+      if (saved) {
+        const pageNum = parseInt(saved, 10);
+        if (!isNaN(pageNum) && pageNum >= 1 && pageNum <= initialIssue.totalPages) {
+          setCurrentPage(pageNum);
+          window.history.replaceState(null, '', `?p=${pageNum}`);
+        }
+      }
+    };
+
+    syncPageFromLocationOrStorage();
+    window.addEventListener('popstate', syncPageFromLocationOrStorage);
+    return () => window.removeEventListener('popstate', syncPageFromLocationOrStorage);
+  }, [initialIssue.totalPages]);
 
   const handlePageChange = (newPage: number) => {
     setCurrentPage(newPage);
-    // Sync URL without full page reload
-    window.history.replaceState(null, '', `?p=${newPage}`);
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('lotus_magazine_page', String(newPage));
+      // Sync URL without full page reload
+      window.history.replaceState(null, '', `?p=${newPage}`);
+    }
   };
 
   return (

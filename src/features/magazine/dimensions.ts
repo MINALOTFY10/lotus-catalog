@@ -48,8 +48,14 @@ export function getEffectiveSlotDimensions(
     return { col_span: 1, row_span: 1 };
   }
 
-  // 6. 7-card layout (e.g. Page 15, 18, 29, 47: rows 1-2 have 3 cards, row 3 has 1 wide hero card)
+  // 6. 7-card layout (e.g. Page 11: row 1 has 3 cards, rows 2-3 have 2 cards; other 7-card: rows 1-2 have 3 cards, row 3 has 1 wide hero card)
   if (totalSlots === 7) {
+    if (page.pageNumber === 11) {
+      if (idx >= 3) {
+        return { col_span: 2, row_span: 1 };
+      }
+      return { col_span: 1, row_span: 1 };
+    }
     if (idx === 6) {
       return { col_span: 3, row_span: 1 };
     }

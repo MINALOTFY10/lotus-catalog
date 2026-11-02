@@ -209,8 +209,86 @@ export function GridCustomPage({
     );
   }
 
-  // 4. 7-card layout (e.g. Pages 11, 13, 35: 3 cols in rows 1-2, 1 centered in row 3)
+  // 4. 7-card layout (Page 11: 3 cards top, 2 cards middle, 2 cards bottom)
   if (slots.length === 7) {
+    if (pageNumber === 11) {
+      const row1 = slots.slice(0, 3);
+      const row2 = slots.slice(3, 5);
+      const row3 = slots.slice(5, 7);
+
+      return (
+        <PageShell sectionTitle={sectionTitle} pageNumber={pageNumber}>
+          <div
+            className="w-full h-full flex flex-col justify-between"
+            style={{
+              gap: 'calc(8 * var(--u, 1px))',
+              direction: 'rtl',
+            }}
+          >
+            {/* Row 1: 3 cards */}
+            <div className="grid grid-cols-3 flex-1 min-h-0" style={{ gap: 'calc(8 * var(--u, 1px))' }}>
+              {row1.map((slotData, idx) => (
+                <div key={idx} className="w-full h-full min-h-0 min-w-0">
+                  <ProductCard
+                    product={slotData.product}
+                    titleOverride={slotData.title_override}
+                    descriptionOverride={slotData.description_override}
+                    priceOverride={slotData.price_override}
+                    priceText={slotData.price_text}
+                    imageOverride={slotData.image_override}
+                    isInteractive={isInteractive}
+                    priority={priority}
+                    isHighlighted={Boolean(highlightedCode && slotData.product?.cashier_code === highlightedCode)}
+                    onSelect={onProductClick}
+                  />
+                </div>
+              ))}
+            </div>
+
+            {/* Row 2: 2 cards */}
+            <div className="grid grid-cols-2 flex-1 min-h-0" style={{ gap: 'calc(8 * var(--u, 1px))' }}>
+              {row2.map((slotData, idx) => (
+                <div key={idx} className="w-full h-full min-h-0 min-w-0">
+                  <ProductCard
+                    product={slotData.product}
+                    titleOverride={slotData.title_override}
+                    descriptionOverride={slotData.description_override}
+                    priceOverride={slotData.price_override}
+                    priceText={slotData.price_text}
+                    imageOverride={slotData.image_override}
+                    isInteractive={isInteractive}
+                    priority={priority}
+                    isHighlighted={Boolean(highlightedCode && slotData.product?.cashier_code === highlightedCode)}
+                    onSelect={onProductClick}
+                  />
+                </div>
+              ))}
+            </div>
+
+            {/* Row 3: 2 cards */}
+            <div className="grid grid-cols-2 flex-1 min-h-0" style={{ gap: 'calc(8 * var(--u, 1px))' }}>
+              {row3.map((slotData, idx) => (
+                <div key={idx} className="w-full h-full min-h-0 min-w-0">
+                  <ProductCard
+                    product={slotData.product}
+                    titleOverride={slotData.title_override}
+                    descriptionOverride={slotData.description_override}
+                    priceOverride={slotData.price_override}
+                    priceText={slotData.price_text}
+                    imageOverride={slotData.image_override}
+                    isInteractive={isInteractive}
+                    priority={priority}
+                    isHighlighted={Boolean(highlightedCode && slotData.product?.cashier_code === highlightedCode)}
+                    onSelect={onProductClick}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </PageShell>
+      );
+    }
+
     const row1 = slots.slice(0, 3);
     const row2 = slots.slice(3, 6);
     const heroSlot = slots[6] || null;

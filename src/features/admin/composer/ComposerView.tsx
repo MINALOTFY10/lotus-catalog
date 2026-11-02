@@ -510,6 +510,40 @@ export function ComposerView({
 
     // 7. 7-card layout
     if (slots.length === 7) {
+      if (activePage.pageNumber === 11) {
+        const row1 = slots.slice(0, 3);
+        const row2 = slots.slice(3, 5);
+        const row3 = slots.slice(5, 7);
+        return (
+          <div
+            className="w-full h-full flex flex-col justify-between"
+            style={{ gap: 'calc(8 * var(--u, 1px))', direction: 'rtl' }}
+          >
+            <div className="grid grid-cols-3 flex-1 min-h-0" style={{ gap: 'calc(8 * var(--u, 1px))' }}>
+              {row1.map((slotData, idx) => (
+                <div key={idx} className="w-full h-full min-h-0 min-w-0">
+                  {renderCardSlot(slotData, idx)}
+                </div>
+              ))}
+            </div>
+            <div className="grid grid-cols-2 flex-1 min-h-0" style={{ gap: 'calc(8 * var(--u, 1px))' }}>
+              {row2.map((slotData, idx) => (
+                <div key={idx} className="w-full h-full min-h-0 min-w-0">
+                  {renderCardSlot(slotData, idx + 3)}
+                </div>
+              ))}
+            </div>
+            <div className="grid grid-cols-2 flex-1 min-h-0" style={{ gap: 'calc(8 * var(--u, 1px))' }}>
+              {row3.map((slotData, idx) => (
+                <div key={idx} className="w-full h-full min-h-0 min-w-0">
+                  {renderCardSlot(slotData, idx + 5)}
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      }
+
       const row1 = slots.slice(0, 3);
       const row2 = slots.slice(3, 6);
       const heroSlot = slots[6] || null;

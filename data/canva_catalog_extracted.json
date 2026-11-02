@@ -24,7 +24,8 @@
             "sm": "/magazine/canva_products/p1_s1.webp",
             "md": "/magazine/canva_products/p1_s1.webp",
             "lg": "/magazine/canva_products/p1_s1.webp"
-          }
+          },
+          "cashier_code": 1
         },
         "title_override": "عسل نحلة عسل برسيم طبيعي",
         "description_override": "نحلة عسل برسيم فاخر، غني بالفيتامينات والإنزيمات الطبيعية التي تدعم المناعة وتعزز الطاقة بشكل طبيعي.",
@@ -49,7 +50,8 @@
             "sm": "/magazine/canva_products/p1_s2.webp",
             "md": "/magazine/canva_products/p1_s2.webp",
             "lg": "/magazine/canva_products/p1_s2.webp"
-          }
+          },
+          "cashier_code": 4
         },
         "title_override": "عسل نحلة عسل بالشمع طبيعي ٦٥٠ جرام",
         "description_override": "عسل نحلة بالشمع طبيعي فاخر، يحتوي على قرص عسل شمعي ذهبي غني بالعسل.",
@@ -74,7 +76,8 @@
             "sm": "/magazine/canva_products/p1_s3.webp",
             "md": "/magazine/canva_products/p1_s3.webp",
             "lg": "/magazine/canva_products/p1_s3.webp"
-          }
+          },
+          "cashier_code": 3
         },
         "title_override": "عسل نحلة عسل بالمكسرات طبيعي ٦٥٠ جرام",
         "description_override": "عسل نحلة بالمكسرات - مزيج فاخر من عسل البرسيم الطبيعي النقي والمكسرات المقرمشة، غني بالبروتينات والفيتامينات، ويمنح الجسم الطاقة والحيوية.",
@@ -99,7 +102,8 @@
             "sm": "/magazine/canva_products/p1_s4.webp",
             "md": "/magazine/canva_products/p1_s4.webp",
             "lg": "/magazine/canva_products/p1_s4.webp"
-          }
+          },
+          "cashier_code": null
         },
         "title_override": "حقيبة من الحلفا مع اختيارك من منتجات نحلة",
         "description_override": "يمكنك اختيار حقيبة من الحلفا واختيار من منتجات نحلة المتعددة او المنتجات الاخري، تقدم للهدايا الفاخرة.",
@@ -134,7 +138,8 @@
             "sm": "/magazine/canva_products/p2_s1.webp",
             "md": "/magazine/canva_products/p2_s1.webp",
             "lg": "/magazine/canva_products/p2_s1.webp"
-          }
+          },
+          "cashier_code": 53
         },
         "title_override": "واج زيت زيتون بكر ممتاز",
         "description_override": "زيت زيتون بكر ممتاز من أجود الأراضي المصرية، يُستخلص بعناية من ثمار الزيتون المختارة بالعصر الأول على البارد، للحفاظ على خصائص الزيت الطبيعية ونكهته الأصيلة. نسبة الحموضة أقل من 0.8%",
@@ -159,7 +164,8 @@
             "sm": "/magazine/canva_products/p2_s2.webp",
             "md": "/magazine/canva_products/p2_s2.webp",
             "lg": "/magazine/canva_products/p2_s2.webp"
-          }
+          },
+          "cashier_code": null
         },
         "title_override": "تمور نخلة رطب سكري",
         "description_override": "تمور نخلة – تمور رطب سكري طبيعية من أجود الأراضي المصرية، تتميز بجودتها العالية وقوامها الطري ومذاقها الغني بحلاوة طبيعية مميزة، لتقدم تجربة تجمع بين أصالة المنتج المصري وجودته.",
@@ -194,7 +200,8 @@
             "sm": "/magazine/canva_products/p3_s1.webp",
             "md": "/magazine/canva_products/p3_s1.webp",
             "lg": "/magazine/canva_products/p3_s1.webp"
-          }
+          },
+          "cashier_code": 399
         },
         "title_override": "كليم من الصوف الطبيعي",
         "description_override": "،كليم منسوج يدو ًيا من الصوف الطبيعي مزين بنقوش هندسية بسيطة وحواف مزينة بالشراشيب",
@@ -219,7 +226,8 @@
             "sm": "/magazine/canva_products/p3_s2.webp",
             "md": "/magazine/canva_products/p3_s2.webp",
             "lg": "/magazine/canva_products/p3_s2.webp"
-          }
+          },
+          "cashier_code": 397
         },
         "title_override": "كليم دبل سنون يدوي",
         "description_override": "كليم منسوج يدو ًيا من الصوف، يتميز بنقشة دبل سنون التقليدية وزخارف هندسية متداخلة وحواف مزينة بالشراشيب",
@@ -244,7 +252,8 @@
             "sm": "/magazine/canva_products/p3_s3.webp",
             "md": "/magazine/canva_products/p3_s3.webp",
             "lg": "/magazine/canva_products/p3_s3.webp"
-          }
+          },
+          "cashier_code": 401
         },
         "title_override": "كليم منسوج يدويا",
         "description_override": "كليم مصنوع يدو ًيا بنقوش هندسية تقليدية وحواف مزينة بالشراشيب",
@@ -269,7 +278,8 @@
             "sm": "/magazine/canva_products/p3_s4.webp",
             "md": "/magazine/canva_products/p3_s4.webp",
             "lg": "/magazine/canva_products/p3_s4.webp"
-          }
+          },
+          "cashier_code": 398
         },
         "title_override": "كليم توبس يدوي",
         "description_override": "كليم تقليدي مصنوع يدو ًيا، يتميز بنقوش هندسية ملونة وتفاصيل دقيقة",
@@ -294,7 +304,8 @@
             "sm": "/magazine/canva_products/p3_s5.webp",
             "md": "/magazine/canva_products/p3_s5.webp",
             "lg": "/magazine/canva_products/p3_s5.webp"
-          }
+          },
+          "cashier_code": 396
         },
         "title_override": "كليم عصري بنسيج بارز",
         "description_override": "كليم يدوي بتصميم عصري، يتميز بنقوش هندسية وتفاصيل نسيجية بارزة",
@@ -319,7 +330,8 @@
             "sm": "/magazine/canva_products/p3_s6.webp",
             "md": "/magazine/canva_products/p3_s6.webp",
             "lg": "/magazine/canva_products/p3_s6.webp"
-          }
+          },
+          "cashier_code": 400
         },
         "title_override": "كليم دبل سنون يدوي",
         "description_override": "كليم مصري منسوج يدو ًيا، يتميز بزخارف هندسية متداخلة ومتكررة وحواف مزينة بالشراشيب",
@@ -344,7 +356,8 @@
             "sm": "/magazine/canva_products/p3_s7.webp",
             "md": "/magazine/canva_products/p3_s7.webp",
             "lg": "/magazine/canva_products/p3_s7.webp"
-          }
+          },
+          "cashier_code": 403
         },
         "title_override": "كليم من الكتان اليدوي",
         "description_override": "كليم كتان ملون مصنوع يدو ًيا، يتميز بنقوش تقليدية وحواف مزينة بالشراشيب",
@@ -369,7 +382,8 @@
             "sm": "/magazine/canva_products/p3_s8.webp",
             "md": "/magazine/canva_products/p3_s8.webp",
             "lg": "/magazine/canva_products/p3_s8.webp"
-          }
+          },
+          "cashier_code": 402
         },
         "title_override": "كليم هندسي يدوي",
         "description_override": "كليم يدوي، مزين بنقوش هندسية جريئة وحواف مزينة بالشراشيب",
@@ -404,7 +418,8 @@
             "sm": "/magazine/canva_products/p4_s1.webp",
             "md": "/magazine/canva_products/p4_s1.webp",
             "lg": "/magazine/canva_products/p4_s1.webp"
-          }
+          },
+          "cashier_code": 90
         },
         "title_override": "غطاء وسادة واحة النخيل",
         "description_override": "غطاء وسادة من القماش الطبيعي، مزين بتطريزات نخيل بدرجات متعددة من األخضر والبني",
@@ -429,7 +444,8 @@
             "sm": "/magazine/canva_products/p4_s2.webp",
             "md": "/magazine/canva_products/p4_s2.webp",
             "lg": "/magazine/canva_products/p4_s2.webp"
-          }
+          },
+          "cashier_code": 90
         },
         "title_override": "غطاء وسادة الحياة البحرية",
         "description_override": "غطاء وسادة من القماش الطبيعي، مزين بتطريزات بارزة مستوحاة من المرجان ونجمة البحر والأصداف بألوان زاهية",
@@ -454,7 +470,8 @@
             "sm": "/magazine/canva_products/p4_s3.webp",
             "md": "/magazine/canva_products/p4_s3.webp",
             "lg": "/magazine/canva_products/p4_s3.webp"
-          }
+          },
+          "cashier_code": 90
         },
         "title_override": "غطاء وسادة المرجان الكحلي",
         "description_override": "غطاء وسادة من القماش القطني بلون أوف وايت، مزين بتطريز بارز مستوحى من فروع المرجان باللون الكحلي",
@@ -479,7 +496,8 @@
             "sm": "/magazine/canva_products/p4_s4.webp",
             "md": "/magazine/canva_products/p4_s4.webp",
             "lg": "/magazine/canva_products/p4_s4.webp"
-          }
+          },
+          "cashier_code": 90
         },
         "title_override": "غطاء وسادة قنديل البحر",
         "description_override": "غطاء وسادة بلون بيج طبيعي، مزين بتطريز بارز لقنديل البحر وتفاصيل مستوحاة من الحياة البحرية",
@@ -504,7 +522,8 @@
             "sm": "/magazine/canva_products/p4_s5.webp",
             "md": "/magazine/canva_products/p4_s5.webp",
             "lg": "/magazine/canva_products/p4_s5.webp"
-          }
+          },
+          "cashier_code": 15
         },
         "title_override": "غطاء وسادة الكروشيه البوهيمية",
         "description_override": "غطاء وسادة من القماش الطبيعي، مزين بطبقة كروشيه يدوية بتفاصيل زهرية وشراشيب زخرفية",
@@ -529,7 +548,8 @@
             "sm": "/magazine/canva_products/p4_s6.webp",
             "md": "/magazine/canva_products/p4_s6.webp",
             "lg": "/magazine/canva_products/p4_s6.webp"
-          }
+          },
+          "cashier_code": 90
         },
         "title_override": "غطاء وسادة الماند ال البوهيمية من الصوف",
         "description_override": "غطاء وسادة مصنوع يدو ًيا، مزين بماند ال ملونة وتطريزات زهرية سوداء وحواف من كرات البوم بوم الوردية",
@@ -554,7 +574,8 @@
             "sm": "/magazine/canva_products/p4_s7.webp",
             "md": "/magazine/canva_products/p4_s7.webp",
             "lg": "/magazine/canva_products/p4_s7.webp"
-          }
+          },
+          "cashier_code": 90
         },
         "title_override": "غطاء وسادة الخط العربي",
         "description_override": "غطاء وسادة مزين بتطريز بارز مستوحى من الخط العربي، بدرجات البرونزي والفضي",
@@ -579,7 +600,8 @@
             "sm": "/magazine/canva_products/p4_s8.webp",
             "md": "/magazine/canva_products/p4_s8.webp",
             "lg": "/magazine/canva_products/p4_s8.webp"
-          }
+          },
+          "cashier_code": 90
         },
         "title_override": "غطاء وسادة الأرابيسك",
         "description_override": "غطاء وسادة مزين بزخارف هندسية مستوحاة من فنون األرابيسك و الجواء الرمضانية بألوان هادئة ومتناسقة",
@@ -604,7 +626,8 @@
             "sm": "/magazine/canva_products/p4_s9.webp",
             "md": "/magazine/canva_products/p4_s9.webp",
             "lg": "/magazine/canva_products/p4_s9.webp"
-          }
+          },
+          "cashier_code": 90
         },
         "title_override": "غطاء وسادة النخيل الباستيل",
         "description_override": "غطاء وسادة بلون أوف وايت، مزين بتطريزات نخيل هادئة بدرجات األخضر الفاتح والأزرق والذهبي",
@@ -639,7 +662,8 @@
             "sm": "/magazine/canva_products/p5_s1.webp",
             "md": "/magazine/canva_products/p5_s1.webp",
             "lg": "/magazine/canva_products/p5_s1.webp"
-          }
+          },
+          "cashier_code": 365
         },
         "title_override": "مشاية خوص مستطيلة بحواف وردية",
         "description_override": "مشاية مستطيلة من الخوص الطبيعي منسوجة يدو ًيا، بتصميم مركزي وحواف دائرية زخرفية",
@@ -664,7 +688,8 @@
             "sm": "/magazine/canva_products/p5_s2.webp",
             "md": "/magazine/canva_products/p5_s2.webp",
             "lg": "/magazine/canva_products/p5_s2.webp"
-          }
+          },
+          "cashier_code": 360
         },
         "title_override": "مشاية خوص بيضاوية بحواف وردية",
         "description_override": "مشاية بيضاوية من الخوص الطبيعي منسوجة يدو ًيا، بتصميم مركزي وحواف دائرية زخرفية",
@@ -689,7 +714,8 @@
             "sm": "/magazine/canva_products/p5_s3.webp",
             "md": "/magazine/canva_products/p5_s3.webp",
             "lg": "/magazine/canva_products/p5_s3.webp"
-          }
+          },
+          "cashier_code": 363
         },
         "title_override": "مشاية خوص دائرية بحواف وردية",
         "description_override": "مشاية دائرية من الخوص الطبيعي منسوجة يدويًا، بتصميم مركزي وحواف دائرية زخرفية",
@@ -714,7 +740,8 @@
             "sm": "/magazine/canva_products/p5_s4.webp",
             "md": "/magazine/canva_products/p5_s4.webp",
             "lg": "/magazine/canva_products/p5_s4.webp"
-          }
+          },
+          "cashier_code": 375
         },
         "title_override": "مقعد صغير خوص منسوج يدويًا",
         "description_override": "،مقعد أسطواني من الخوص الطبيعي منسوج يدو ًيا بتصميم دائري متماسك وسطح علوي مسطح",
@@ -739,7 +766,8 @@
             "sm": "/magazine/canva_products/p5_s5.webp",
             "md": "/magazine/canva_products/p5_s5.webp",
             "lg": "/magazine/canva_products/p5_s5.webp"
-          }
+          },
+          "cashier_code": 362
         },
         "title_override": "مشاية خوص دائرية",
         "description_override": "مشاية دائرية من الخوص الطبيعي، منسوجة يدويًا بتصميم دائري متداخل",
@@ -764,7 +792,8 @@
             "sm": "/magazine/canva_products/p5_s6.webp",
             "md": "/magazine/canva_products/p5_s6.webp",
             "lg": "/magazine/canva_products/p5_s6.webp"
-          }
+          },
+          "cashier_code": 382
         },
         "title_override": "طاولة خوص منسوج",
         "description_override": "طاولة دائرية مصنوعة يدو ًيا من الخوص الطبيعي، بقاعدة معدنية منحنية مغطاة بالخوص",
@@ -789,7 +818,8 @@
             "sm": "/magazine/canva_products/p5_s7.webp",
             "md": "/magazine/canva_products/p5_s7.webp",
             "lg": "/magazine/canva_products/p5_s7.webp"
-          }
+          },
+          "cashier_code": 378
         },
         "title_override": "حقيبة توت يدوية مطرزة بزهور",
         "description_override": "،حقيبة توت مصنوعة يدو ًيا من القماش ،مزينة بتطريز زهور ، ومزودة بمقابض للحمل مناسبة للاستخدام اليومي",
@@ -814,7 +844,8 @@
             "sm": "/magazine/canva_products/p5_s8.webp",
             "md": "/magazine/canva_products/p5_s8.webp",
             "lg": "/magazine/canva_products/p5_s8.webp"
-          }
+          },
+          "cashier_code": 386
         },
         "title_override": "سلة خوص بمقابض جلدية",
         "description_override": "سلة دائرية من الخوص الطبيعي مصنوعة يدو ًيا، مزودة بمقابض جانبية من الجلد البني للاستخدام في التخزين والديكور",
@@ -839,7 +870,8 @@
             "sm": "/magazine/canva_products/p5_s9.webp",
             "md": "/magazine/canva_products/p5_s9.webp",
             "lg": "/magazine/canva_products/p5_s9.webp"
-          }
+          },
+          "cashier_code": 361
         },
         "title_override": "مقعد أرضي دائري من الخوض",
         "description_override": "مقعد أرضي دائري منخفض من الخوص الطبيعي، منسوجة يدو ًيا بتصميم حلزوني متداخل",
@@ -874,7 +906,8 @@
             "sm": "/magazine/canva_products/p6_s1.webp",
             "md": "/magazine/canva_products/p6_s1.webp",
             "lg": "/magazine/canva_products/p6_s1.webp"
-          }
+          },
+          "cashier_code": 376
         },
         "title_override": "غطاء وسادة الخيش مطرز يدويًا",
         "description_override": "غطاء وسادة من الخيش الطبيعي، مزين بتطريزات ملونة مستوحاة من الريف المصري والنخيل والمشاهد القروية",
@@ -899,7 +932,8 @@
             "sm": "/magazine/canva_products/p6_s2.webp",
             "md": "/magazine/canva_products/p6_s2.webp",
             "lg": "/magazine/canva_products/p6_s2.webp"
-          }
+          },
+          "cashier_code": 383
         },
         "title_override": "غطاء علبة مناديل من الخوص المطرز",
         "description_override": "،غطاء علبة مناديل من الخوص الطبيعي مزين بتطريزات ملونة مستوحاة من البيوت الريفية والنخيل",
@@ -924,7 +958,8 @@
             "sm": "/magazine/canva_products/p6_s3.webp",
             "md": "/magazine/canva_products/p6_s3.webp",
             "lg": "/magazine/canva_products/p6_s3.webp"
-          }
+          },
+          "cashier_code": 389
         },
         "title_override": "كوستر خوص دائري مطرز",
         "description_override": "كوستر دائري من الخوص الطبيعي، مزين ،بتطريزات نباتية باللونين األبيض واألخضر والعديد من الاشكال والالوان المختلفة",
@@ -949,7 +984,8 @@
             "sm": "/magazine/canva_products/p6_s4.webp",
             "md": "/magazine/canva_products/p6_s4.webp",
             "lg": "/magazine/canva_products/p6_s4.webp"
-          }
+          },
+          "cashier_code": 379
         },
         "title_override": "حافظة لابتوب من الخيش مطرزة",
         "description_override": "حافظة البتوب من الخيش الطبيعي، مزينة بتطريزات ملونة مستوحاة من النخيل .والبيوت والعديد من الاشكال المختلفة",
@@ -974,7 +1010,8 @@
             "sm": "/magazine/canva_products/p6_s5.webp",
             "md": "/magazine/canva_products/p6_s5.webp",
             "lg": "/magazine/canva_products/p6_s5.webp"
-          }
+          },
+          "cashier_code": 387
         },
         "title_override": "حافظة زجاجة من الخيش مطرزة يدويًا",
         "description_override": "حافظة من الخيش الطبيعي لزجاجة ، مزينة بتطريزات ملونة مستوحاة من النخيل والقرية المصرية، مع حزام طويل للحمل على الكتف",
@@ -999,7 +1036,8 @@
             "sm": "/magazine/canva_products/p6_s6.webp",
             "md": "/magazine/canva_products/p6_s6.webp",
             "lg": "/magazine/canva_products/p6_s6.webp"
-          }
+          },
+          "cashier_code": 391
         },
         "title_override": "حافظة مستندات من الخيش المطرز يدويًا",
         "description_override": "حافظة مستندات مصنوعة يدو ًيا من الخيش الطبيعي، مزينة بتطريزات أنيقة، مناسبة لحفظ وتنظيم الأوراق والمستندات",
@@ -1024,7 +1062,8 @@
             "sm": "/magazine/canva_products/p6_s7.webp",
             "md": "/magazine/canva_products/p6_s7.webp",
             "lg": "/magazine/canva_products/p6_s7.webp"
-          }
+          },
+          "cashier_code": 380
         },
         "title_override": "سلة خوص مطرزة بمقابض",
         "description_override": "سلة واسعة من الخوص الطبيعي، مزودة بمقبضين ومزينة بتطريزات ملونة مستوحاة من النخيل والبيوت الريفية، مع بطانة داخلية قماشية",
@@ -1049,7 +1088,8 @@
             "sm": "/magazine/canva_products/p6_s8.webp",
             "md": "/magazine/canva_products/p6_s8.webp",
             "lg": "/magazine/canva_products/p6_s8.webp"
-          }
+          },
+          "cashier_code": 388
         },
         "title_override": "سلة خوص بشكل إناء مطرزة",
         "description_override": "،سلة من الخوص الطبيعي على شكل إناء مزودة بمقبضين ومزينة بتطريزات ملونة مستوحاة من النخيل والبيوت والطيور",
@@ -1074,7 +1114,8 @@
             "sm": "/magazine/canva_products/p6_s9.webp",
             "md": "/magazine/canva_products/p6_s9.webp",
             "lg": "/magazine/canva_products/p6_s9.webp"
-          }
+          },
+          "cashier_code": 368
         },
         "title_override": "سلة خوص مطرزة يدويًا",
         "description_override": "سلة أسطوانية من الخوص الطبيعي، مزينة بتطريزات ملونة مستوحاة من النخيل .والبيوت الريفية، مع بطانة داخلية قماشية",
@@ -1109,7 +1150,8 @@
             "sm": "/magazine/canva_products/p7_s1.webp",
             "md": "/magazine/canva_products/p7_s1.webp",
             "lg": "/magazine/canva_products/p7_s1.webp"
-          }
+          },
+          "cashier_code": 384
         },
         "title_override": "حقيبة سلة خوص مطرزة بيد خيط",
         "description_override": "حقيبة سلة من الخوص الطبيعي مصنوعة ،يدو ًيا، مزودة بمقابض وبطانة قماشية .ومزينة يدوياً مستوحاة من النخيل والجِمال",
@@ -1134,7 +1176,8 @@
             "sm": "/magazine/canva_products/p7_s2.webp",
             "md": "/magazine/canva_products/p7_s2.webp",
             "lg": "/magazine/canva_products/p7_s2.webp"
-          }
+          },
+          "cashier_code": 395
         },
         "title_override": "حقيبة يد خوص بثلاث اللوان",
         "description_override": "حقيبة يد خوص طبيعي بتصميم يدوي، مزينة بخطوط ملونة وشراشيب، مع يد جلدية وكيس داخلي برباط",
@@ -1159,7 +1202,8 @@
             "sm": "/magazine/canva_products/p7_s3.webp",
             "md": "/magazine/canva_products/p7_s3.webp",
             "lg": "/magazine/canva_products/p7_s3.webp"
-          }
+          },
+          "cashier_code": 385
         },
         "title_override": "حقيبة يد من الخوص مطرزة بجلد",
         "description_override": "حقيبة مستطيلة من الخوص الطبيعي، مزينة بتطريزات، مع يدين وتفاصيل من الجلد البني وبطانة داخلية برباط",
@@ -1184,7 +1228,8 @@
             "sm": "/magazine/canva_products/p7_s4.webp",
             "md": "/magazine/canva_products/p7_s4.webp",
             "lg": "/magazine/canva_products/p7_s4.webp"
-          }
+          },
+          "cashier_code": 392
         },
         "title_override": "حقيبة سلة خوص مطرزة بزهرة عباد الشمس",
         "description_override": "سلة من الخوص الطبيعي مزودة ببطانة داخلية برباط، ومزينة بتطريزات بارزة لزهور دوار الشمس مع شرّابات ملونة",
@@ -1209,7 +1254,8 @@
             "sm": "/magazine/canva_products/p7_s5.webp",
             "md": "/magazine/canva_products/p7_s5.webp",
             "lg": "/magazine/canva_products/p7_s5.webp"
-          }
+          },
+          "cashier_code": null
         },
         "title_override": "حقيبة سلة خوص مطرزة بنقوش نباتية ولؤلؤ ابيض",
         "description_override": "سلة مستطيلة من الخوص ، مزينة بتطريزات نباتية بلون أوف وايت ولؤلؤ وتفاصيل خرزية بسيطة، مع بطانة داخلية قماشية برباط",
@@ -1234,7 +1280,8 @@
             "sm": "/magazine/canva_products/p7_s6.webp",
             "md": "/magazine/canva_products/p7_s6.webp",
             "lg": "/magazine/canva_products/p7_s6.webp"
-          }
+          },
+          "cashier_code": 390
         },
         "title_override": "حقيبة سلة بيضاوية متدرجة خوص بيد خيط",
         "description_override": "سلة من الخوص الطبيعي، مزينة بتطريزات",
@@ -1259,7 +1306,8 @@
             "sm": "/magazine/canva_products/p7_s7.webp",
             "md": "/magazine/canva_products/p7_s7.webp",
             "lg": "/magazine/canva_products/p7_s7.webp"
-          }
+          },
+          "cashier_code": 369
         },
         "title_override": "سلة تخزين خوص مطرزة ،سلة تخزين دائرية من الخوص الطبيعي بدون مقابض ومزينة بخيوط كريمية حول",
         "description_override": "الحافة",
@@ -1284,7 +1332,8 @@
             "sm": "/magazine/canva_products/p7_s8.webp",
             "md": "/magazine/canva_products/p7_s8.webp",
             "lg": "/magazine/canva_products/p7_s8.webp"
-          }
+          },
+          "cashier_code": 373
         },
         "title_override": "سلة تخزين خوص بيد",
         "description_override": "،سلة تخزين دائرية من الخوص الطبيعي مزودة بمقبضين ومزينة بخيوط كريمية حول الحافة",
@@ -1309,7 +1358,8 @@
             "sm": "/magazine/canva_products/p7_s9.webp",
             "md": "/magazine/canva_products/p7_s9.webp",
             "lg": "/magazine/canva_products/p7_s9.webp"
-          }
+          },
+          "cashier_code": 381
         },
         "title_override": "حقيبة صغيرة مطرزة بشرّابة",
         "description_override": "حقيبة قماش صغيرة بس ّحاب، مزينة بتطريزات ملونة مستوحاة من األهرامات .والنخيل والطيور، مع شرّابة خضراء كبيرة",
@@ -1344,7 +1394,8 @@
             "sm": "/magazine/canva_products/p8_s1.webp",
             "md": "/magazine/canva_products/p8_s1.webp",
             "lg": "/magazine/canva_products/p8_s1.webp"
-          }
+          },
+          "cashier_code": 92
         },
         "title_override": "قفطان ازرق طويل مطرز",
         "description_override": "قفطان طويل بتصميم مفتوح وأكمام واسعة، باللون األزرق السماوي، مزين بزخارف بيضاء مستوحاة من التراث",
@@ -1369,7 +1420,8 @@
             "sm": "/magazine/canva_products/p8_s2.webp",
             "md": "/magazine/canva_products/p8_s2.webp",
             "lg": "/magazine/canva_products/p8_s2.webp"
-          }
+          },
+          "cashier_code": 92
         },
         "title_override": "قفطان ابيض طويل مطرز",
         "description_override": "قفطان طويل بتصميم مفتوح وأكمام واسعة، باللون البيض الصافي، مزين بزخارف بيضاء مستوحاة من التراث",
@@ -1394,7 +1446,8 @@
             "sm": "/magazine/canva_products/p8_s3.webp",
             "md": "/magazine/canva_products/p8_s3.webp",
             "lg": "/magazine/canva_products/p8_s3.webp"
-          }
+          },
+          "cashier_code": 92
         },
         "title_override": "قفطان طويل متدرج من الابيض الي األزرق",
         "description_override": "قفطان قطن طويل بتدرج لوني من األبيض إلى الأزرق، مزين بنقوش تراثية رقيقة",
@@ -1419,7 +1472,8 @@
             "sm": "/magazine/canva_products/p8_s4.webp",
             "md": "/magazine/canva_products/p8_s4.webp",
             "lg": "/magazine/canva_products/p8_s4.webp"
-          }
+          },
+          "cashier_code": 92
         },
         "title_override": "قفطان طويل متدرج بالبني",
         "description_override": "قفطان قطن طويل بتدرج لوني من الكريمي إلى البني، مزين بتفاصيل ونقوش تراثية رقيقة",
@@ -1444,7 +1498,8 @@
             "sm": "/magazine/canva_products/p8_s5.webp",
             "md": "/magazine/canva_products/p8_s5.webp",
             "lg": "/magazine/canva_products/p8_s5.webp"
-          }
+          },
+          "cashier_code": 92
         },
         "title_override": "قفطان بيج  طويل بتطريزات بيضاء",
         "description_override": "،كيمونو بيج طويل قطن بتصميم انسيابي مزين بطبعات زهرية بيضاء إلطاللة بسيطة وأنيقة",
@@ -1469,7 +1524,8 @@
             "sm": "/magazine/canva_products/p8_s6.webp",
             "md": "/magazine/canva_products/p8_s6.webp",
             "lg": "/magazine/canva_products/p8_s6.webp"
-          }
+          },
+          "cashier_code": 92
         },
         "title_override": "قفطان طويل متدرج من اللبني و الزرق",
         "description_override": "كيمونو قطن طويل بتدرج لوني من األزرق الفاتح إلى الداكن، مزين بتطريزات بيضاء مستوحاة من الزخارف النباتية",
@@ -1494,7 +1550,8 @@
             "sm": "/magazine/canva_products/p8_s7.webp",
             "md": "/magazine/canva_products/p8_s7.webp",
             "lg": "/magazine/canva_products/p8_s7.webp"
-          }
+          },
+          "cashier_code": 91
         },
         "title_override": "قفطان بطبعات الخط العربي",
         "description_override": "قفطان كتان أبيض طويل مزين بطبعات بنية مستوحاة من الخط العربي",
@@ -1519,7 +1576,8 @@
             "sm": "/magazine/canva_products/p8_s8.webp",
             "md": "/magazine/canva_products/p8_s8.webp",
             "lg": "/magazine/canva_products/p8_s8.webp"
-          }
+          },
+          "cashier_code": 91
         },
         "title_override": "قفطان أبيض مطرز ببيوت ونخيل",
         "description_override": "قفطان كتان أبيض طويل مزين بتطريزات ملونة مستوحاة من البيوت التقليدية وأشجار النخيل على الجزء السفلي",
@@ -1544,7 +1602,8 @@
             "sm": "/magazine/canva_products/p8_s9.webp",
             "md": "/magazine/canva_products/p8_s9.webp",
             "lg": "/magazine/canva_products/p8_s9.webp"
-          }
+          },
+          "cashier_code": 91
         },
         "title_override": "قفطان أوف وايت مطرز بنقوش تراثية",
         "description_override": "قفطان كتان أوف وايت مزين بتطريزات ذهبية وترابية مستوحاة من البيوت وأشجار النخيل",
@@ -1579,7 +1638,8 @@
             "sm": "/magazine/canva_products/p9_s1.webp",
             "md": "/magazine/canva_products/p9_s1.webp",
             "lg": "/magazine/canva_products/p9_s1.webp"
-          }
+          },
+          "cashier_code": 91
         },
         "title_override": "قفطان بيج بتطريزات سوداء",
         "description_override": "قفطان بيج كتان مزين بتطريزات وزخارف سوداء بارزة بطابع بوهيمي أنيق",
@@ -1604,7 +1664,8 @@
             "sm": "/magazine/canva_products/p9_s2.webp",
             "md": "/magazine/canva_products/p9_s2.webp",
             "lg": "/magazine/canva_products/p9_s2.webp"
-          }
+          },
+          "cashier_code": 349
         },
         "title_override": "قفطان بلون الخردلي",
         "description_override": "قفطان طويل باللون األصفر الخردلي، مزين بتفاصيل ونقوش ملونة على األكمام والحواف بطابع تراثي",
@@ -1629,7 +1690,8 @@
             "sm": "/magazine/canva_products/p9_s3.webp",
             "md": "/magazine/canva_products/p9_s3.webp",
             "lg": "/magazine/canva_products/p9_s3.webp"
-          }
+          },
+          "cashier_code": null
         },
         "title_override": "قفطان أوف وايت بتطريزات هندسية",
         "description_override": "قفطان أوف وايت طويل، مزين بتطريزات هندسية سوداء على الحواف األمامية لإطلالة تراثية أنيقة",
@@ -1654,7 +1716,8 @@
             "sm": "/magazine/canva_products/p9_s4.webp",
             "md": "/magazine/canva_products/p9_s4.webp",
             "lg": "/magazine/canva_products/p9_s4.webp"
-          }
+          },
+          "cashier_code": 122
         },
         "title_override": "قفطان  طويل مغلق لوتس",
         "description_override": "قفطان بيج او اسود طويل مغلق بتصميم ، مزين بنقوشV انسيابي وياقة على شكل لوتس",
@@ -1679,7 +1742,8 @@
             "sm": "/magazine/canva_products/p9_s5.webp",
             "md": "/magazine/canva_products/p9_s5.webp",
             "lg": "/magazine/canva_products/p9_s5.webp"
-          }
+          },
+          "cashier_code": 346
         },
         "title_override": "قفطان قصير مطرز",
         "description_override": "قفطان قصير بلون أوف وايت، مزين بتطريزات سيوية ملونة على الحواف والأكمام",
@@ -1704,7 +1768,8 @@
             "sm": "/magazine/canva_products/p9_s6.webp",
             "md": "/magazine/canva_products/p9_s6.webp",
             "lg": "/magazine/canva_products/p9_s6.webp"
-          }
+          },
+          "cashier_code": 344
         },
         "title_override": "طقم قفطان أبيض وبنطال مطرز",
         "description_override": "طقم مك ّون من قفطان أبيض قصير وبنطال متناسق، مزين بتطريزات هندسية ملونة .وتفاصيل مستوحاة من التراث المصري",
@@ -1729,7 +1794,8 @@
             "sm": "/magazine/canva_products/p9_s7.webp",
             "md": "/magazine/canva_products/p9_s7.webp",
             "lg": "/magazine/canva_products/p9_s7.webp"
-          }
+          },
+          "cashier_code": null
         },
         "title_override": "قفطان أبيض مفتوح مطرز بالورود",
         "description_override": "قفطان أبيض خفيف وأنيق، مزين بتطريزات زهرية رقيقة لإطلالة صيفية مميزة",
@@ -1754,7 +1820,8 @@
             "sm": "/magazine/canva_products/p9_s8.webp",
             "md": "/magazine/canva_products/p9_s8.webp",
             "lg": "/magazine/canva_products/p9_s8.webp"
-          }
+          },
+          "cashier_code": 341
         },
         "title_override": "قفطان بني محمر مطرز",
         "description_override": "قفطان بدرجة بني محمر، مزين بتطريزات .ملونة على الحواف والأكمام بطابع تراثي",
@@ -1779,7 +1846,8 @@
             "sm": "/magazine/canva_products/p9_s9.webp",
             "md": "/magazine/canva_products/p9_s9.webp",
             "lg": "/magazine/canva_products/p9_s9.webp"
-          }
+          },
+          "cashier_code": 337
         },
         "title_override": "فستان أسود مطرز بقصة بيبلوم",
         "description_override": "فستان أسود بقصة بيبلوم، مزين بتطريزات .هندسية ملونة مستوحاة من التراث السيوي",
@@ -1814,7 +1882,8 @@
             "sm": "/magazine/canva_products/p10_s1.webp",
             "md": "/magazine/canva_products/p10_s1.webp",
             "lg": "/magazine/canva_products/p10_s1.webp"
-          }
+          },
+          "cashier_code": 125
         },
         "title_override": "فيست موف مطرز",
         "description_override": "فيست قصير باللون الموف، مزين بتطريزات هندسية بيضاء على الحواف",
@@ -1839,7 +1908,8 @@
             "sm": "/magazine/canva_products/p10_s2.webp",
             "md": "/magazine/canva_products/p10_s2.webp",
             "lg": "/magazine/canva_products/p10_s2.webp"
-          }
+          },
+          "cashier_code": 338
         },
         "title_override": "جاكيت  مخطط",
         "description_override": "جاكيت مخطط بتصميم بسيط وعملي، مزود بسحّاب أمامي وجيوب جانبية",
@@ -1864,7 +1934,8 @@
             "sm": "/magazine/canva_products/p10_s3.webp",
             "md": "/magazine/canva_products/p10_s3.webp",
             "lg": "/magazine/canva_products/p10_s3.webp"
-          }
+          },
+          "cashier_code": 343
         },
         "title_override": "جاكيت رمادي مطرز بتفاصيل ملونة",
         "description_override": "جاكيت رمادي بس ّحاب أمامي، مزين بتفاصيل تطريز ملونة على الجيوب إلطاللة بسيطة وعصرية",
@@ -1889,7 +1960,8 @@
             "sm": "/magazine/canva_products/p10_s4.webp",
             "md": "/magazine/canva_products/p10_s4.webp",
             "lg": "/magazine/canva_products/p10_s4.webp"
-          }
+          },
+          "cashier_code": 335
         },
         "title_override": "فيست  قصير لوتس مطرز",
         "description_override": "فيست قصير بدرجة البرتقالي او الزرق السماوي، مزين بتطريزات لوتس بيضاء دقيقة تضيف لمسة تراثية أنيقة",
@@ -1914,7 +1986,8 @@
             "sm": "/magazine/canva_products/p10_s5.webp",
             "md": "/magazine/canva_products/p10_s5.webp",
             "lg": "/magazine/canva_products/p10_s5.webp"
-          }
+          },
+          "cashier_code": 94
         },
         "title_override": "شال كتان أبيض مطرز",
         "description_override": "شال كتان أبيض مزين بتطريزات سوداء .بطابع تراثي، مع شراشيب على الأطراف",
@@ -1939,7 +2012,8 @@
             "sm": "/magazine/canva_products/p10_s6.webp",
             "md": "/magazine/canva_products/p10_s6.webp",
             "lg": "/magazine/canva_products/p10_s6.webp"
-          }
+          },
+          "cashier_code": null
         },
         "title_override": "شال قطن أسود مطرز",
         "description_override": "شال قطن أسود كالسيكي مزين بتطريزات زهرية بيضاء وتفاصيل شراشيب أنيقة",
@@ -1964,7 +2038,8 @@
             "sm": "/magazine/canva_products/p10_s7.webp",
             "md": "/magazine/canva_products/p10_s7.webp",
             "lg": "/magazine/canva_products/p10_s7.webp"
-          }
+          },
+          "cashier_code": null
         },
         "title_override": "شال قطن أزرق مطرز",
         "description_override": "،شال قطن مستطيل باللون األزرق الفاتح مزين بتطريزات بيضاء مستوحاة من الزخارف الهندسية والنباتية التقليدية",
@@ -1989,7 +2064,8 @@
             "sm": "/magazine/canva_products/p10_s8.webp",
             "md": "/magazine/canva_products/p10_s8.webp",
             "lg": "/magazine/canva_products/p10_s8.webp"
-          }
+          },
+          "cashier_code": null
         },
         "title_override": "شال أبيض مطرز بألوان متعددة",
         "description_override": "شال أبيض مزين بتطريزات هندسية ونباتية ملونة، مع شراشيب رقيقة على الأطراف",
@@ -2014,7 +2090,8 @@
             "sm": "/magazine/canva_products/p10_s9.webp",
             "md": "/magazine/canva_products/p10_s9.webp",
             "lg": "/magazine/canva_products/p10_s9.webp"
-          }
+          },
+          "cashier_code": 94
         },
         "title_override": "شال كتان بيج مطرز بالنخيل",
         "description_override": "شال كتان بيج مزين بتطريزات رقيقة مستوحاة من أشجار النخيل، مع شراشيب على الأطراف",
@@ -2049,7 +2126,8 @@
             "sm": "/magazine/canva_products/p11_s1.webp",
             "md": "/magazine/canva_products/p11_s1.webp",
             "lg": "/magazine/canva_products/p11_s1.webp"
-          }
+          },
+          "cashier_code": 325
         },
         "title_override": "حقيبة يد لوتس بيد جانبية  مطرزة بالخرز حقيبة يد لوتس المتفتحة",
         "description_override": "،حقيبة يد مستطيلة مطرزة بالكامل بالخرز ،مزينة ببنقشة زهور اللوتس مع سحّاب وحزام يد",
@@ -2074,7 +2152,8 @@
             "sm": "/magazine/canva_products/p11_s2.webp",
             "md": "/magazine/canva_products/p11_s2.webp",
             "lg": "/magazine/canva_products/p11_s2.webp"
-          }
+          },
+          "cashier_code": 323
         },
         "title_override": "مطرزة بالخرز بيد جانبية",
         "description_override": "حقيبة يد مستطيلة مطرزة بالكامل بالخرز األسود، مزينة بنقشة لوتس باللونين .الفيروزي والأصفر، مع سحّاب وحزام يد",
@@ -2099,7 +2178,8 @@
             "sm": "/magazine/canva_products/p11_s3.webp",
             "md": "/magazine/canva_products/p11_s3.webp",
             "lg": "/magazine/canva_products/p11_s3.webp"
-          }
+          },
+          "cashier_code": 325
         },
         "title_override": "حقيبة يد بنقوش هندسية مطرزة بالخرز بيد جانبية",
         "description_override": "حقيبة يد مستطيلة مطرزة بالخرز، مزينة بنقوش هندسية متكررة ب اللوان، مع س ّحاب وحزام يد",
@@ -2124,7 +2204,8 @@
             "sm": "/magazine/canva_products/p11_s4.webp",
             "md": "/magazine/canva_products/p11_s4.webp",
             "lg": "/magazine/canva_products/p11_s4.webp"
-          }
+          },
+          "cashier_code": 327
         },
         "title_override": "حقيبة يد مصرية الزخرفة بالخرز",
         "description_override": "حقيبة يد مطرزة بالكامل بالخرز، مزينة بزخارف بنقشة زهرة اللوتس مستوحاة من الفن المصري",
@@ -2149,7 +2230,8 @@
             "sm": "/magazine/canva_products/p11_s5.webp",
             "md": "/magazine/canva_products/p11_s5.webp",
             "lg": "/magazine/canva_products/p11_s5.webp"
-          }
+          },
+          "cashier_code": 322
         },
         "title_override": "حقيبة يد لوتس مطرزة بالخرز بدون يد",
         "description_override": "اللوتس، مع سحّاب وبدون حزام يد",
@@ -2174,7 +2256,8 @@
             "sm": "/magazine/canva_products/p11_s6.webp",
             "md": "/magazine/canva_products/p11_s6.webp",
             "lg": "/magazine/canva_products/p11_s6.webp"
-          }
+          },
+          "cashier_code": 326
         },
         "title_override": "منتج حقائب يد مطرزة 6",
         "description_override": "حقيبة يد مستطيلة مطرزة بالكامل بالخرز، مزينة ببنقشة زهور",
@@ -2199,7 +2282,8 @@
             "sm": "/magazine/canva_products/p11_s7.webp",
             "md": "/magazine/canva_products/p11_s7.webp",
             "lg": "/magazine/canva_products/p11_s7.webp"
-          }
+          },
+          "cashier_code": 319
         },
         "title_override": "حقيبة يد نصف دائري بالخرز",
         "description_override": "القلادة المصرية بدرجات الفيروزي والأصفر والأسود",
@@ -2234,7 +2318,8 @@
             "sm": "/magazine/canva_products/p12_s1.webp",
             "md": "/magazine/canva_products/p12_s1.webp",
             "lg": "/magazine/canva_products/p12_s1.webp"
-          }
+          },
+          "cashier_code": 19
         },
         "title_override": "حقيبة يد قماش بالخط العربي والعمالت",
         "description_override": "حقيبة يد من القماش البيج، مزينة بشريط مطرز بالخط العربي وتعليقات من العملات المعدنية",
@@ -2259,7 +2344,8 @@
             "sm": "/magazine/canva_products/p12_s2.webp",
             "md": "/magazine/canva_products/p12_s2.webp",
             "lg": "/magazine/canva_products/p12_s2.webp"
-          }
+          },
+          "cashier_code": 18
         },
         "title_override": "حقيبة يد قماش اخضر داكن بعين زرقاء",
         "description_override": "حقيبة يد من القماش األخضر الداكن، مزينة بعين زرقاء وتفاصيل لامعة، مع سحّاب وحزام يد قابل للفصل",
@@ -2284,7 +2370,8 @@
             "sm": "/magazine/canva_products/p12_s3.webp",
             "md": "/magazine/canva_products/p12_s3.webp",
             "lg": "/magazine/canva_products/p12_s3.webp"
-          }
+          },
+          "cashier_code": 16
         },
         "title_override": "حقيبة يد  خوص مزينة",
         "description_override": "حقيبة يد من الخوص الطبيعي، مزينة بتطريزات تراثية ملونة وش ّرابات متعددة الألوان، مع مقابض حبلية",
@@ -2309,7 +2396,8 @@
             "sm": "/magazine/canva_products/p12_s4.webp",
             "md": "/magazine/canva_products/p12_s4.webp",
             "lg": "/magazine/canva_products/p12_s4.webp"
-          }
+          },
+          "cashier_code": 17
         },
         "title_override": "حقيبة يد قماش مطرزة بزهور عباد الشمس",
         "description_override": "حقيبة كتف من القماش البيج، مزينة بتطريزات صغيرة مستوحاة من زهور دوار الشمس",
@@ -2334,7 +2422,8 @@
             "sm": "/magazine/canva_products/p12_s5.webp",
             "md": "/magazine/canva_products/p12_s5.webp",
             "lg": "/magazine/canva_products/p12_s5.webp"
-          }
+          },
+          "cashier_code": 14
         },
         "title_override": "قبعة خوص مزينة بالصدف",
         "description_override": "قبعة واسعة الحواف من الخوص الطبيعي، مزينة بالصدف والخرز وتعليقة على شكل نجمة البحر",
@@ -2359,7 +2448,8 @@
             "sm": "/magazine/canva_products/p12_s6.webp",
             "md": "/magazine/canva_products/p12_s6.webp",
             "lg": "/magazine/canva_products/p12_s6.webp"
-          }
+          },
+          "cashier_code": 13
         },
         "title_override": "قبعة باللؤلؤ والحلقات الخشبية",
         "description_override": "قبعة مصنوعة يدو ًيا، مزينة بحبات لؤلؤ وحلقات خشبية وتعليقة نجمة بحر في المنتصف",
@@ -2394,7 +2484,8 @@
             "sm": "/magazine/canva_products/p13_s1.webp",
             "md": "/magazine/canva_products/p13_s1.webp",
             "lg": "/magazine/canva_products/p13_s1.webp"
-          }
+          },
+          "cashier_code": 116
         },
         "title_override": "قبة شرقية من الزجاج والصدف",
         "description_override": "قبة شرقية مصنوع يدو ًيا، مزين بالزجاج الملون وتطعيمات هندسية من الصدف داخل إطار نحاسي بطابع تراثي",
@@ -2419,7 +2510,8 @@
             "sm": "/magazine/canva_products/p13_s2.webp",
             "md": "/magazine/canva_products/p13_s2.webp",
             "lg": "/magazine/canva_products/p13_s2.webp"
-          }
+          },
+          "cashier_code": 114
         },
         "title_override": "بيضة كبيرة من الزجاج والصدف",
         "description_override": "قطعة مضيئة مصنوعة يدو ًيا، مزينة بالزجاج الملون وتطعيمات هندسية من الصدف",
@@ -2444,7 +2536,8 @@
             "sm": "/magazine/canva_products/p13_s3.webp",
             "md": "/magazine/canva_products/p13_s3.webp",
             "lg": "/magazine/canva_products/p13_s3.webp"
-          }
+          },
+          "cashier_code": 115
         },
         "title_override": "بيضة صغيرة والصدف  من الزجاج",
         "description_override": "قطعة مضيئة مصنوعة يدو ًيا، مزينة بالزجاج الملون وتطعيمات هندسية من الصدف",
@@ -2469,7 +2562,8 @@
             "sm": "/magazine/canva_products/p13_s4.webp",
             "md": "/magazine/canva_products/p13_s4.webp",
             "lg": "/magazine/canva_products/p13_s4.webp"
-          }
+          },
+          "cashier_code": 117
         },
         "title_override": "مصباح كبير من الزجاج والصدف",
         "description_override": "مصباح مصنوع يدو ًيا، مزين بالزجاج الملون وتطعيمات من الصدف، مع قاعدة وتفاصيل من النحاس المعتق",
@@ -2494,7 +2588,8 @@
             "sm": "/magazine/canva_products/p13_s5.webp",
             "md": "/magazine/canva_products/p13_s5.webp",
             "lg": "/magazine/canva_products/p13_s5.webp"
-          }
+          },
+          "cashier_code": 121
         },
         "title_override": "مصباح صغير من الزجاج والصدف",
         "description_override": "مصباح مصنوع يدو ًيا، مزين بالزجاج الملون وتطعيمات من الصدف، مع قاعدة وتفاصيل من النحاس المعتق",
@@ -2519,7 +2614,8 @@
             "sm": "/magazine/canva_products/p13_s6.webp",
             "md": "/magazine/canva_products/p13_s6.webp",
             "lg": "/magazine/canva_products/p13_s6.webp"
-          }
+          },
+          "cashier_code": 120
         },
         "title_override": "إبريق ديكوري من الزجاج والصدف",
         "description_override": "إبريق ديكوري مصنوع يدو ًيا، مزين بالزجاج الملون وتطعيمات من الصدف مع تفاصيل من النحاس المعتق",
@@ -2544,7 +2640,8 @@
             "sm": "/magazine/canva_products/p13_s7.webp",
             "md": "/magazine/canva_products/p13_s7.webp",
             "lg": "/magazine/canva_products/p13_s7.webp"
-          }
+          },
+          "cashier_code": 119
         },
         "title_override": "منتج زجاج معشق يدوي 7",
         "description_override": "",
@@ -2579,7 +2676,8 @@
             "sm": "/magazine/canva_products/p14_s1.webp",
             "md": "/magazine/canva_products/p14_s1.webp",
             "lg": "/magazine/canva_products/p14_s1.webp"
-          }
+          },
+          "cashier_code": 61
         },
         "title_override": "لوحة رملية صغيرة بيضاوية مستوحاة من الطبيعة",
         "description_override": "لوحة فنية مصنوعة يدو ًيا من رمال األحجار الطبيعية، تصور مشه ًدا هادئًا مستوحى من النيل والطبيعة المصرية",
@@ -2604,7 +2702,8 @@
             "sm": "/magazine/canva_products/p14_s2.webp",
             "md": "/magazine/canva_products/p14_s2.webp",
             "lg": "/magazine/canva_products/p14_s2.webp"
-          }
+          },
+          "cashier_code": 57
         },
         "title_override": "لوحة رملية دائرية مستوحاة من الطبيعة",
         "description_override": "لوحة فنية مصنوعة يدو ًيا من رمال األحجار الطبيعية، تجسد مشاهد مصرية تقليدية بتفاصيل دقيقة",
@@ -2629,7 +2728,8 @@
             "sm": "/magazine/canva_products/p14_s3.webp",
             "md": "/magazine/canva_products/p14_s3.webp",
             "lg": "/magazine/canva_products/p14_s3.webp"
-          }
+          },
+          "cashier_code": 56
         },
         "title_override": "لوحة رملية مستطيلة مستوحاة من الطبيعة",
         "description_override": "لوحة فنية مصنوعة يدو ًيا من رمال األحجار الطبيعية، مستوحاة من الريف والواحات والعمارة المصرية التقليدية",
@@ -2654,7 +2754,8 @@
             "sm": "/magazine/canva_products/p14_s4.webp",
             "md": "/magazine/canva_products/p14_s4.webp",
             "lg": "/magazine/canva_products/p14_s4.webp"
-          }
+          },
+          "cashier_code": 60
         },
         "title_override": "لوحة رملية كبيرة بيضاوية مستوحاة من الطبيعة",
         "description_override": "لوحة فنية مصنوعة يدو ًيا من رمال األحجار الطبيعية، تصور مشه ًدا هادئًا مستوحى من النخيل والطبيعة المصرية",
@@ -2679,7 +2780,8 @@
             "sm": "/magazine/canva_products/p14_s5.webp",
             "md": "/magazine/canva_products/p14_s5.webp",
             "lg": "/magazine/canva_products/p14_s5.webp"
-          }
+          },
+          "cashier_code": 59
         },
         "title_override": "لوحة رملية طولية مستوحاة من الطبيعة",
         "description_override": "لوحة فنية مصنوعة يدو ًيا من رمال األحجار الطبيعية، تجسد مشه ًدا تراثيًا بالنخيل والطبيعة الريفية المصرية",
@@ -2704,7 +2806,8 @@
             "sm": "/magazine/canva_products/p14_s6.webp",
             "md": "/magazine/canva_products/p14_s6.webp",
             "lg": "/magazine/canva_products/p14_s6.webp"
-          }
+          },
+          "cashier_code": 58
         },
         "title_override": "لوحة رملية طولية مستوحاة من الطبيعة",
         "description_override": "لوحة فنية مصنوعة يدو ًيا من رمال األحجار الطبيعية، تجسد مشه ًدا تراثيًا بالنخيل والعمارة الريفية المصرية",
@@ -2739,7 +2842,8 @@
             "sm": "/magazine/canva_products/p15_s1.webp",
             "md": "/magazine/canva_products/p15_s1.webp",
             "lg": "/magazine/canva_products/p15_s1.webp"
-          }
+          },
+          "cashier_code": 139
         },
         "title_override": "طقم صينية سيراميك ٢ أكواب بيضاوية مع",
         "description_override": "صينية سيراميك بيضاوية مصنوعة يدو ًيا مع أكواب متناسقة، بتصميم بسيط ولمسات لونية طبيعية",
@@ -2764,7 +2868,8 @@
             "sm": "/magazine/canva_products/p15_s2.webp",
             "md": "/magazine/canva_products/p15_s2.webp",
             "lg": "/magazine/canva_products/p15_s2.webp"
-          }
+          },
+          "cashier_code": 140
         },
         "title_override": "طقم طبق سيراميك ٤ أكواب نجمة مع",
         "description_override": "طقم سيراميك مصنوع يدويًا، يضم طبق على ٤ أكواب متناسقة، بدرجات شكل نجمة مع الأخضر والفيروزي",
@@ -2789,7 +2894,8 @@
             "sm": "/magazine/canva_products/p15_s3.webp",
             "md": "/magazine/canva_products/p15_s3.webp",
             "lg": "/magazine/canva_products/p15_s3.webp"
-          }
+          },
+          "cashier_code": 141
         },
         "title_override": "وعاء  سيراميك مم ّوج",
         "description_override": "وعاء سيراميك مصنوع يدو ًيا بدرجات األخضر الزيتوني، يتميز بحواف مم ّوجة ولمسة نهائية طبيعية",
@@ -2814,7 +2920,8 @@
             "sm": "/magazine/canva_products/p15_s4.webp",
             "md": "/magazine/canva_products/p15_s4.webp",
             "lg": "/magazine/canva_products/p15_s4.webp"
-          }
+          },
+          "cashier_code": 148
         },
         "title_override": "حامل معالق  سيراميك أسطواني",
         "description_override": "حامل معالق سيراميك مصنوع يدو ًيا بتصميم أسطواني بسيط وتفاصيل زخرفية دقيقة",
@@ -2839,7 +2946,8 @@
             "sm": "/magazine/canva_products/p15_s5.webp",
             "md": "/magazine/canva_products/p15_s5.webp",
             "lg": "/magazine/canva_products/p15_s5.webp"
-          }
+          },
+          "cashier_code": 138
         },
         "title_override": "طقم صينية سيراميك أكواب4 بيضاوية مع",
         "description_override": "طقم مصنوع يدويًا يضم صينية سيراميك  أكواب متناسقة، بلمسات من4بيضاوية و الأزرق والفيروزي",
@@ -2864,7 +2972,8 @@
             "sm": "/magazine/canva_products/p15_s6.webp",
             "md": "/magazine/canva_products/p15_s6.webp",
             "lg": "/magazine/canva_products/p15_s6.webp"
-          }
+          },
+          "cashier_code": 146
         },
         "title_override": "وعاء سيراميك للتقديم بقاعدة",
         "description_override": "وعاء سيراميك مصنوع يدو ًيا على قاعدة مرتفعة، يتميز بملمس طبيعي وتشطيب يدوي مميز",
@@ -2889,7 +2998,8 @@
             "sm": "/magazine/canva_products/p15_s7.webp",
             "md": "/magazine/canva_products/p15_s7.webp",
             "lg": "/magazine/canva_products/p15_s7.webp"
-          }
+          },
+          "cashier_code": 145
         },
         "title_override": "قدر سيراميك بغطاء",
         "description_override": "قدر سيراميك مصنوع يدو ًيا بغطاء ومقابض جانبية، بتصميم ريفي وتشطيب يدوي طبيعي",
@@ -2914,7 +3024,8 @@
             "sm": "/magazine/canva_products/p15_s8.webp",
             "md": "/magazine/canva_products/p15_s8.webp",
             "lg": "/magazine/canva_products/p15_s8.webp"
-          }
+          },
+          "cashier_code": null
         },
         "title_override": "طقم سيراميك صينية مع أكواب إسبريسو4",
         "description_override": "4طقم سيراميك مصنوع يدو ًيا يضم صينية و أكواب إسبريسو بدون يد متناسقة، بتصميم وألوان فيروزية",
@@ -2939,7 +3050,8 @@
             "sm": "/magazine/canva_products/p15_s9.webp",
             "md": "/magazine/canva_products/p15_s9.webp",
             "lg": "/magazine/canva_products/p15_s9.webp"
-          }
+          },
+          "cashier_code": 149
         },
         "title_override": "وعاء سيراميك بحواف غير منتظمة",
         "description_override": "وعاء سيراميك عميق مصنوع يدو ًيا بدرجة أخضر زيتوني، يتميز بحافة متموجة وتشطيب ناعم",
@@ -2974,7 +3086,8 @@
             "sm": "/magazine/canva_products/p16_s1.webp",
             "md": "/magazine/canva_products/p16_s1.webp",
             "lg": "/magazine/canva_products/p16_s1.webp"
-          }
+          },
+          "cashier_code": 144
         },
         "title_override": "طاجن سيراميك مغربي تقليدي",
         "description_override": "طاجن سيراميك تقليدي مصنوع يدو ًيا بدرجات األخضر الزيتوني، بقاعدة مستديرة وغطاء مخروطي",
@@ -2999,7 +3112,8 @@
             "sm": "/magazine/canva_products/p16_s2.webp",
             "md": "/magazine/canva_products/p16_s2.webp",
             "lg": "/magazine/canva_products/p16_s2.webp"
-          }
+          },
+          "cashier_code": 147
         },
         "title_override": "طفاية سجائر سيراميك",
         "description_override": "طفاية سجائر من السيراميك مصنوعة يدو ًيا بدرجات األخضر الزيتوني، مع حافة فيروزية بارزة وتصميم دائري بسيط",
@@ -3024,7 +3138,8 @@
             "sm": "/magazine/canva_products/p16_s3.webp",
             "md": "/magazine/canva_products/p16_s3.webp",
             "lg": "/magazine/canva_products/p16_s3.webp"
-          }
+          },
+          "cashier_code": 155
         },
         "title_override": "وعاء سيراميك للتقديم بقاعدة",
         "description_override": "،وعاء سيراميك مصنوع يدو ًيا بقاعدة مرتفعة بطلاء أوف وايت وتفاصيل نسيجية بسيطة",
@@ -3049,7 +3164,8 @@
             "sm": "/magazine/canva_products/p16_s4.webp",
             "md": "/magazine/canva_products/p16_s4.webp",
             "lg": "/magazine/canva_products/p16_s4.webp"
-          }
+          },
+          "cashier_code": 162
         },
         "title_override": "برطمان سيراميك للتقديم بغطاء",
         "description_override": "برطمان تخزين سيراميك مصنوع يدو ًيا بطالء أوف وايت، بسطح ناعم وغطاء مزين بمقبض علوي",
@@ -3074,7 +3190,8 @@
             "sm": "/magazine/canva_products/p16_s5.webp",
             "md": "/magazine/canva_products/p16_s5.webp",
             "lg": "/magazine/canva_products/p16_s5.webp"
-          }
+          },
+          "cashier_code": 159
         },
         "title_override": "حامل بخور سيراميك",
         "description_override": "،حامل بخور مصنوع يدو ًيا بطالء أوف وايت بقاعدة دائرية ويد جانبية",
@@ -3099,7 +3216,8 @@
             "sm": "/magazine/canva_products/p16_s6.webp",
             "md": "/magazine/canva_products/p16_s6.webp",
             "lg": "/magazine/canva_products/p16_s6.webp"
-          }
+          },
+          "cashier_code": 153
         },
         "title_override": "طبق تقديم او قطاعة سيراميك",
         "description_override": "طبق تقديم سيراميك مصنوع يدو ًيا بطالء أوف وايت مطفي، بحواف غير منتظمة وتفاصيل زخرفية بسيطة",
@@ -3124,7 +3242,8 @@
             "sm": "/magazine/canva_products/p16_s7.webp",
             "md": "/magazine/canva_products/p16_s7.webp",
             "lg": "/magazine/canva_products/p16_s7.webp"
-          }
+          },
+          "cashier_code": 160
         },
         "title_override": "بولة سيراميك صغيرة",
         "description_override": "وعاء سيراميك صغير مصنوع يدو ًيا بطالء أوف وايت، بتصميم بسيط وحافة غير منتظمة قليلًا",
@@ -3149,7 +3268,8 @@
             "sm": "/magazine/canva_products/p16_s8.webp",
             "md": "/magazine/canva_products/p16_s8.webp",
             "lg": "/magazine/canva_products/p16_s8.webp"
-          }
+          },
+          "cashier_code": 201
         },
         "title_override": "طقم كوب وطبق سيراميك",
         "description_override": "طقم مصنوع يدو ًيا يضم كو ًبا وطب ًقا متناسقين، بدرجات أزرق هادئة ولمسة نهائية لامعة",
@@ -3174,7 +3294,8 @@
             "sm": "/magazine/canva_products/p16_s9.webp",
             "md": "/magazine/canva_products/p16_s9.webp",
             "lg": "/magazine/canva_products/p16_s9.webp"
-          }
+          },
+          "cashier_code": null
         },
         "title_override": "كوب إسبريسو سيراميك",
         "description_override": "كوب إسبريسو بدون يد، مصنوعين يدو ًيا بدرجات أوف وايت مع قاعدة سيراميك طبيعية غير مطلية",
@@ -3209,7 +3330,8 @@
             "sm": "/magazine/canva_products/p17_s1.webp",
             "md": "/magazine/canva_products/p17_s1.webp",
             "lg": "/magazine/canva_products/p17_s1.webp"
-          }
+          },
+          "cashier_code": 184
         },
         "title_override": "طبق سيراميك تعليق بارز",
         "description_override": "طبق سيراميك دائري مصنوع يدو ًيا بدرجة فيروزية هادئة، مزين بنقوش نباتية بارزة مستوحاة من أوراق النباتات والسنابل",
@@ -3234,7 +3356,8 @@
             "sm": "/magazine/canva_products/p17_s2.webp",
             "md": "/magazine/canva_products/p17_s2.webp",
             "lg": "/magazine/canva_products/p17_s2.webp"
-          }
+          },
+          "cashier_code": 186
         },
         "title_override": "طبق تقديم سيراميك مموج",
         "description_override": "طبق تقديم سيراميك مصنوع يدو ًيا بتصميم مم ّوج، مع جزء مركزي المع بدرجة فيروزية وحواف بلون طوبي",
@@ -3259,7 +3382,8 @@
             "sm": "/magazine/canva_products/p17_s3.webp",
             "md": "/magazine/canva_products/p17_s3.webp",
             "lg": "/magazine/canva_products/p17_s3.webp"
-          }
+          },
+          "cashier_code": 163
         },
         "title_override": "كوب إسبريسو سيراميك",
         "description_override": "كوب إسبريسو سيراميك بدون يد، مصنوعين يدويًا بتدرجات فيروزية وطوبية",
@@ -3284,7 +3408,8 @@
             "sm": "/magazine/canva_products/p17_s4.webp",
             "md": "/magazine/canva_products/p17_s4.webp",
             "lg": "/magazine/canva_products/p17_s4.webp"
-          }
+          },
+          "cashier_code": 167
         },
         "title_override": "طبق سيراميك للتقديم مع وعاء صوص",
         "description_override": "طبق تقديم سيراميك مصنوع يدو ًيا بلون فيروزي، مزود بوعاء جانبي مدمج لتقديم الصوص أو الغموس",
@@ -3309,7 +3434,8 @@
             "sm": "/magazine/canva_products/p17_s5.webp",
             "md": "/magazine/canva_products/p17_s5.webp",
             "lg": "/magazine/canva_products/p17_s5.webp"
-          }
+          },
+          "cashier_code": 171
         },
         "title_override": "فازة سيراميك كروية",
         "description_override": "،فازة سيراميك مستديرة مصنوعة يدو ًيا بطالء أحمر المع وعنق ضيق مع لمسة زرقاء زخرفية",
@@ -3334,7 +3460,8 @@
             "sm": "/magazine/canva_products/p17_s6.webp",
             "md": "/magazine/canva_products/p17_s6.webp",
             "lg": "/magazine/canva_products/p17_s6.webp"
-          }
+          },
+          "cashier_code": 165
         },
         "title_override": "طقم سفرة  قطع3 سيراميك",
         "description_override": ": قطع3 طقم سفرة سيراميك مكوّن من وعاء صغير وطبق متوسط وطبق رئيسي متناسق، بتدرجات طوبية وفيروزية",
@@ -3359,7 +3486,8 @@
             "sm": "/magazine/canva_products/p17_s7.webp",
             "md": "/magazine/canva_products/p17_s7.webp",
             "lg": "/magazine/canva_products/p17_s7.webp"
-          }
+          },
+          "cashier_code": 173
         },
         "title_override": "طقم إسبريسو مع صينية نجمة",
         "description_override": "أكواب4  قطع، يضم5 طقم مكوّن من إسبريسو سيراميك بدون يد وصينية تقديم على شكل نجمة بتفاصيل زرقاء وفيروزية",
@@ -3384,7 +3512,8 @@
             "sm": "/magazine/canva_products/p17_s8.webp",
             "md": "/magazine/canva_products/p17_s8.webp",
             "lg": "/magazine/canva_products/p17_s8.webp"
-          }
+          },
+          "cashier_code": 181
         },
         "title_override": "طقم قهوة سيراميك",
         "description_override": "طقم قهوة سيراميك مصنوع يدو ًيا، يضم صينية ول ّبانة وكوبين، بتصميم ريفي وألوان هادئة",
@@ -3409,7 +3538,8 @@
             "sm": "/magazine/canva_products/p17_s9.webp",
             "md": "/magazine/canva_products/p17_s9.webp",
             "lg": "/magazine/canva_products/p17_s9.webp"
-          }
+          },
+          "cashier_code": 164
         },
         "title_override": "مج سيراميك بمقبض",
         "description_override": "مج سيراميك مصنوع يدو ًيا، بمقبض مريح وتفاصيل طولية بارزة، مع تدرجات لونية بين الفيروزي والطوبي",
@@ -3444,7 +3574,8 @@
             "sm": "/magazine/canva_products/p18_s1.webp",
             "md": "/magazine/canva_products/p18_s1.webp",
             "lg": "/magazine/canva_products/p18_s1.webp"
-          }
+          },
+          "cashier_code": 177
         },
         "title_override": "طقم إسبريسو مع صينية بيضاوية",
         "description_override": "طقم مك ّون من كوبين إسبريسو وصينية بيضاوية متناسقة، بدرجات أوف وايت واألزرق",
@@ -3469,7 +3600,8 @@
             "sm": "/magazine/canva_products/p18_s2.webp",
             "md": "/magazine/canva_products/p18_s2.webp",
             "lg": "/magazine/canva_products/p18_s2.webp"
-          }
+          },
+          "cashier_code": 174
         },
         "title_override": "فازة سيراميك صغيرة",
         "description_override": "،فازة سيراميك صغيرة مصنوعة يدو ًيا بقاعدة أوف وايت وعنق مزين بتدرجات فيروزية وزرقاء",
@@ -3494,7 +3626,8 @@
             "sm": "/magazine/canva_products/p18_s3.webp",
             "md": "/magazine/canva_products/p18_s3.webp",
             "lg": "/magazine/canva_products/p18_s3.webp"
-          }
+          },
+          "cashier_code": 176
         },
         "title_override": "كوب إسبريسو سيراميك",
         "description_override": "كوب إسبريسو بدون يد، بدرجات أوف وايت مع حافة فيروزية وزرقاء",
@@ -3519,7 +3652,8 @@
             "sm": "/magazine/canva_products/p18_s4.webp",
             "md": "/magazine/canva_products/p18_s4.webp",
             "lg": "/magazine/canva_products/p18_s4.webp"
-          }
+          },
+          "cashier_code": null
         },
         "title_override": "كوب إسبريسو سيراميك",
         "description_override": "كوب إسبريسو بدون يد، بتشطيب مطفي من الخارج وحافة داخلية بدرجة نبيتي لامعة",
@@ -3544,7 +3678,8 @@
             "sm": "/magazine/canva_products/p18_s5.webp",
             "md": "/magazine/canva_products/p18_s5.webp",
             "lg": "/magazine/canva_products/p18_s5.webp"
-          }
+          },
+          "cashier_code": 180
         },
         "title_override": "كوب إسبريسو سيراميك",
         "description_override": "،كوب إسبريسو سيراميك مصنوعة يدو ًيا بلون أوف وايت وحافة فيروزية منقطة",
@@ -3569,7 +3704,8 @@
             "sm": "/magazine/canva_products/p18_s6.webp",
             "md": "/magazine/canva_products/p18_s6.webp",
             "lg": "/magazine/canva_products/p18_s6.webp"
-          }
+          },
+          "cashier_code": 178
         },
         "title_override": "كوب صوص سيراميك",
         "description_override": "،كوب صوص او مقرمشات بتصميم عضوي بقاعدة أوف وايت وحافة زرقاء بارزة",
@@ -3594,7 +3730,8 @@
             "sm": "/magazine/canva_products/p18_s7.webp",
             "md": "/magazine/canva_products/p18_s7.webp",
             "lg": "/magazine/canva_products/p18_s7.webp"
-          }
+          },
+          "cashier_code": 190
         },
         "title_override": "طبق تقديم سيراميك مستطيل",
         "description_override": "طبق تقديم مستطيل مصنوع يدو ًيا، بتدرجات لونية لامعة من البنفسجي والوردي والذهبي",
@@ -3619,7 +3756,8 @@
             "sm": "/magazine/canva_products/p18_s8.webp",
             "md": "/magazine/canva_products/p18_s8.webp",
             "lg": "/magazine/canva_products/p18_s8.webp"
-          }
+          },
+          "cashier_code": 187
         },
         "title_override": "طقم سفرة  قطع3 سيراميك",
         "description_override": "طقم سيراميك مصنوع يدو ًيا يضم طب ًقا رئيس ًيا وطب ًقا جانب ًيا ووعا ًء، بتصميم يجمع بين الأوف وايت والنبيتي ولمسات ذهبية",
@@ -3644,7 +3782,8 @@
             "sm": "/magazine/canva_products/p18_s9.webp",
             "md": "/magazine/canva_products/p18_s9.webp",
             "lg": "/magazine/canva_products/p18_s9.webp"
-          }
+          },
+          "cashier_code": 152
         },
         "title_override": "أكواب4 طقم سيراميك إسبريسو وصينيه",
         "description_override": "أكواب إسبريسو بدون يد4 طقم مكوّن من وصينية، مصنوعة يدويًا بدرجات أوف وايت وتشطيب طبيعي مطفي",
@@ -3679,7 +3818,8 @@
             "sm": "/magazine/canva_products/p19_s1.webp",
             "md": "/magazine/canva_products/p19_s1.webp",
             "lg": "/magazine/canva_products/p19_s1.webp"
-          }
+          },
+          "cashier_code": 188
         },
         "title_override": "طقم سفرة  قطع3 سيراميك",
         "description_override": "طقم سيراميك مصنوع يدو ًيا يضم طب ًقا رئيس ًيا وطب ًقا جانب ًيا ووعا ًء، بتدرجات األزرق الداكن والأسود والبيج مع خطوط زخرفية",
@@ -3704,7 +3844,8 @@
             "sm": "/magazine/canva_products/p19_s2.webp",
             "md": "/magazine/canva_products/p19_s2.webp",
             "lg": "/magazine/canva_products/p19_s2.webp"
-          }
+          },
+          "cashier_code": 188
         },
         "title_override": "طقم سفرة  قطع3 سيراميك",
         "description_override": "طقم سيراميك مصنوع يدو ًيا يضم طب ًقا رئيس ًيا وطب ًقا جانب ًيا ووعا ًء، بطالء أزرق داكن لامع وتفاصيل ذهبية",
@@ -3729,7 +3870,8 @@
             "sm": "/magazine/canva_products/p19_s3.webp",
             "md": "/magazine/canva_products/p19_s3.webp",
             "lg": "/magazine/canva_products/p19_s3.webp"
-          }
+          },
+          "cashier_code": 192
         },
         "title_override": "طبق تقديم سيراميك بيضاوي",
         "description_override": "طبق تقديم بيضاوي مصنوع يدو ًيا، يجمع بين األخضر الداكن واألزرق الكحلي مع تفاصيل ذهبية بارزة",
@@ -3754,7 +3896,8 @@
             "sm": "/magazine/canva_products/p19_s4.webp",
             "md": "/magazine/canva_products/p19_s4.webp",
             "lg": "/magazine/canva_products/p19_s4.webp"
-          }
+          },
+          "cashier_code": 195
         },
         "title_override": "طبق سيراميك عميق",
         "description_override": "،وعاء سيراميك دائري عميق مصنوع يدو ًيا .بطلاء أزرق داكن لامع ولمسة ذهبية داخلية",
@@ -3779,7 +3922,8 @@
             "sm": "/magazine/canva_products/p19_s5.webp",
             "md": "/magazine/canva_products/p19_s5.webp",
             "lg": "/magazine/canva_products/p19_s5.webp"
-          }
+          },
+          "cashier_code": 189
         },
         "title_override": "طقم سفرة  قطع3 سيراميك",
         "description_override": "قطع: طبق رئيسي3 طقم سيراميك من وطبق جانبي ووعاء، بتدرجات من الكريمي والأزرق والرمادي مع خطوط لونية",
@@ -3804,7 +3948,8 @@
             "sm": "/magazine/canva_products/p19_s6.webp",
             "md": "/magazine/canva_products/p19_s6.webp",
             "lg": "/magazine/canva_products/p19_s6.webp"
-          }
+          },
+          "cashier_code": 191
         },
         "title_override": "طبق تقديم سيراميك مستطيل",
         "description_override": "طبق تقديم مستطيل مصنوع يدو ًيا، يجمع بين األسود المطفي واألزرق الالمع مع لمسة ذهبية زخرفية",
@@ -3829,7 +3974,8 @@
             "sm": "/magazine/canva_products/p19_s7.webp",
             "md": "/magazine/canva_products/p19_s7.webp",
             "lg": "/magazine/canva_products/p19_s7.webp"
-          }
+          },
+          "cashier_code": 356
         },
         "title_override": "طاجن تقديم سيراميك واسع",
         "description_override": "طاجن تقديم واسع مصنوع يدو ًيا بدرجات ألوان مختلفة، مزين بتفاصيل بارزة حول الجزء الخارجي",
@@ -3854,7 +4000,8 @@
             "sm": "/magazine/canva_products/p19_s8.webp",
             "md": "/magazine/canva_products/p19_s8.webp",
             "lg": "/magazine/canva_products/p19_s8.webp"
-          }
+          },
+          "cashier_code": 357
         },
         "title_override": "بولة تقديم سيراميك",
         "description_override": "وعاء تقديم سيراميك مصنوع يدو ًيا باللون األحمر، مزين بنقاط بيضاء وتفاصيل حلزونية بارزة حول السطح الخارجي",
@@ -3879,7 +4026,8 @@
             "sm": "/magazine/canva_products/p19_s9.webp",
             "md": "/magazine/canva_products/p19_s9.webp",
             "lg": "/magazine/canva_products/p19_s9.webp"
-          }
+          },
+          "cashier_code": 199
         },
         "title_override": "طقم كوب شاي وطبق سيراميك",
         "description_override": "طقم مصنوع يدو ًيا يضم كوب شاي وطب ًقا متناس ًقا، بطالء أزرق داكن المع ولمسة ذهبية أفقية",
@@ -3914,7 +4062,8 @@
             "sm": "/magazine/canva_products/p20_s1.webp",
             "md": "/magazine/canva_products/p20_s1.webp",
             "lg": "/magazine/canva_products/p20_s1.webp"
-          }
+          },
+          "cashier_code": 168
         },
         "title_override": "طبق تقديم سيراميك بحواف متموجة",
         "description_override": "طبق تقديم سيراميك يدوي، يتميز بحواف متموجة بتصميم أنيق، وطالء فيروزي متدرج مع لمسات من اللون الطيني الطبيعي",
@@ -3939,7 +4088,8 @@
             "sm": "/magazine/canva_products/p20_s2.webp",
             "md": "/magazine/canva_products/p20_s2.webp",
             "lg": "/magazine/canva_products/p20_s2.webp"
-          }
+          },
+          "cashier_code": 166
         },
         "title_override": "صينية تقديم سيراميك",
         "description_override": "،صينية تقديم من السيراميك اليدوي ،بتصميم متموج مستوحى من أمواج البحر تتميز بطلاء فيروزي لامع بتدرجات لونية",
@@ -3964,7 +4114,8 @@
             "sm": "/magazine/canva_products/p20_s3.webp",
             "md": "/magazine/canva_products/p20_s3.webp",
             "lg": "/magazine/canva_products/p20_s3.webp"
-          }
+          },
+          "cashier_code": 169
         },
         "title_override": "طقم تقديم  سمكة سيراميك",
         "description_override": "طقم تقديم مكون من السيراميك المصنوع يدو ًيا على شكل سمكة، يضم طب ًقا عمي ًقا وقاعدة تقديم مسطحة، باللون الفيروزي",
@@ -3989,7 +4140,8 @@
             "sm": "/magazine/canva_products/p20_s4.webp",
             "md": "/magazine/canva_products/p20_s4.webp",
             "lg": "/magazine/canva_products/p20_s4.webp"
-          }
+          },
+          "cashier_code": 156
         },
         "title_override": "٢ كوب سيراميك طقم بنقوش هندسية محفورة",
         "description_override": "٢ كوب وصينية سيراميك يدوي، يتميز بتصميم نقوش هندسية متشابكة محفورة  على سطحه، مع طلاء متدرج بدرجات الرمادي",
@@ -4014,7 +4166,8 @@
             "sm": "/magazine/canva_products/p20_s5.webp",
             "md": "/magazine/canva_products/p20_s5.webp",
             "lg": "/magazine/canva_products/p20_s5.webp"
-          }
+          },
+          "cashier_code": 170
         },
         "title_override": "طبق تقديم سيراميك يدوي بقاعدة مرتفعة",
         "description_override": "طبق تقديم من السيراميك اليدوي، يتميز بقاعدة مرتفعة ثابتة وطالء متدرج يجمع بين اللون الفيروزي والنبيتي من الداخل والخارج",
@@ -4039,7 +4192,8 @@
             "sm": "/magazine/canva_products/p20_s6.webp",
             "md": "/magazine/canva_products/p20_s6.webp",
             "lg": "/magazine/canva_products/p20_s6.webp"
-          }
+          },
+          "cashier_code": 183
         },
         "title_override": "بولة تقديم سيراميك باللون النيلي",
         "description_override": "سيراميك يدوي، يتميز بتصميم  بولة تقديم ،ريفي بسيط وطالء باللون النيلي الزاهي مناسب لتقديم المقبالت",
@@ -4064,7 +4218,8 @@
             "sm": "/magazine/canva_products/p20_s7.webp",
             "md": "/magazine/canva_products/p20_s7.webp",
             "lg": "/magazine/canva_products/p20_s7.webp"
-          }
+          },
+          "cashier_code": 358
         },
         "title_override": "مج سيراميك أزرق بنقوش بارزة",
         "description_override": "مج سيراميك مستدير مصنوع يدو ًيا بدرجة أزرق غامق، مزين بنقوش بارزة مستوحاة من الأوراق حول السطح الخارجي",
@@ -4089,7 +4244,8 @@
             "sm": "/magazine/canva_products/p20_s8.webp",
             "md": "/magazine/canva_products/p20_s8.webp",
             "lg": "/magazine/canva_products/p20_s8.webp"
-          }
+          },
+          "cashier_code": 358
         },
         "title_override": "مج سيراميك بني بنقوش بارزة",
         "description_override": "وعاء تقديم سيراميك مصنوع يدو ًيا باللون األحمر، مزين بنقاط بيضاء وتفاصيل حلزونية بارزة حول السطح الخارجي",
@@ -4114,7 +4270,8 @@
             "sm": "/magazine/canva_products/p20_s9.webp",
             "md": "/magazine/canva_products/p20_s9.webp",
             "lg": "/magazine/canva_products/p20_s9.webp"
-          }
+          },
+          "cashier_code": 212
         },
         "title_override": "كوب سيراميك بنقوش رخامية زرقاء",
         "description_override": "كوب سيراميك يدوي، يتميز بتصميم أنيق بدون مقبض ووزن خفيف، مزين بنقوش رخامية مرسومة يدويًا بتدرجات الأزرق البحري",
@@ -4149,7 +4306,8 @@
             "sm": "/magazine/canva_products/p21_s1.webp",
             "md": "/magazine/canva_products/p21_s1.webp",
             "lg": "/magazine/canva_products/p21_s1.webp"
-          }
+          },
+          "cashier_code": 207
         },
         "title_override": "طقم كوب إسبريسو وطبق",
         "description_override": "طقم إسبريسو مصنوع يدو ًيا، يضم كو ًبا وطب ًقا باللون األسود مع تدرجات من البني والأزرق اللامع",
@@ -4174,7 +4332,8 @@
             "sm": "/magazine/canva_products/p21_s2.webp",
             "md": "/magazine/canva_products/p21_s2.webp",
             "lg": "/magazine/canva_products/p21_s2.webp"
-          }
+          },
+          "cashier_code": 200
         },
         "title_override": "طقم كوب وطبق سيراميك",
         "description_override": "طقم مصنوع يدو ًيا يضم كو ًبا وطب ًقا متناسقين، بدرجات األسود والأزرق والبني مع تأثيرات لونية لامعة",
@@ -4199,7 +4358,8 @@
             "sm": "/magazine/canva_products/p21_s3.webp",
             "md": "/magazine/canva_products/p21_s3.webp",
             "lg": "/magazine/canva_products/p21_s3.webp"
-          }
+          },
+          "cashier_code": 209
         },
         "title_override": "كوب إسبريسو سيراميك",
         "description_override": "كوب إسبريسو بدون يد مصنوع يدو ًيا، بتدرجات األزرق البترولي والبني والخردلي",
@@ -4224,7 +4384,8 @@
             "sm": "/magazine/canva_products/p21_s4.webp",
             "md": "/magazine/canva_products/p21_s4.webp",
             "lg": "/magazine/canva_products/p21_s4.webp"
-          }
+          },
+          "cashier_code": 358
         },
         "title_override": "مج سيراميك منقط",
         "description_override": "مج سيراميك مصنوع يدو ًيا بلون أوف وايت، مزين بنقاط سوداء بارزة بتصميم عصري",
@@ -4249,7 +4410,8 @@
             "sm": "/magazine/canva_products/p21_s5.webp",
             "md": "/magazine/canva_products/p21_s5.webp",
             "lg": "/magazine/canva_products/p21_s5.webp"
-          }
+          },
+          "cashier_code": 358
         },
         "title_override": "مج سيراميك رمادي بنقوش بارزة",
         "description_override": "مج سيراميك دائري مصنوع يدو ًيا بدرجة رمادي مزرق فاتح، مزين بنقوش بارزة على شكل معينات حول الجزء السفلي",
@@ -4274,7 +4436,8 @@
             "sm": "/magazine/canva_products/p21_s6.webp",
             "md": "/magazine/canva_products/p21_s6.webp",
             "lg": "/magazine/canva_products/p21_s6.webp"
-          }
+          },
+          "cashier_code": 358
         },
         "title_override": "مج سيراميك بنقوش بارزة",
         "description_override": "مج سيراميك مستدير مصنوع يدو ًيا بلون أوف وايت منقط، مزين بنقوش شمسية بارزة على السطح الخارجي",
@@ -4309,7 +4472,8 @@
             "sm": "/magazine/canva_products/p22_s1.webp",
             "md": "/magazine/canva_products/p22_s1.webp",
             "lg": "/magazine/canva_products/p22_s1.webp"
-          }
+          },
+          "cashier_code": 102
         },
         "title_override": "صابون سيوة بعسل السدر",
         "description_override": "صابون طبيعي مصنوع يدو ًيا بعسل السدر السيوي، يساعد على ترطيب وتغذية البشرة",
@@ -4334,7 +4498,8 @@
             "sm": "/magazine/canva_products/p22_s2.webp",
             "md": "/magazine/canva_products/p22_s2.webp",
             "lg": "/magazine/canva_products/p22_s2.webp"
-          }
+          },
+          "cashier_code": 105
         },
         "title_override": "صابون سيوة بالقهوة",
         "description_override": "صابون طبيعي مصنوع يدو ًيا بالقهوة، يساعد على تنظيف وتقشير البشرة بلطف ومنحها مظهرًا أكثر حيوية",
@@ -4359,7 +4524,8 @@
             "sm": "/magazine/canva_products/p22_s3.webp",
             "md": "/magazine/canva_products/p22_s3.webp",
             "lg": "/magazine/canva_products/p22_s3.webp"
-          }
+          },
+          "cashier_code": 104
         },
         "title_override": "صابون سيوة بزيت الزيتون",
         "description_override": "صابون طبيعي مصنوع يدو ًيا بزيت الزيتون، يساعد على ترطيب وتغذية البشرة وتركها أكثر نعومة",
@@ -4384,7 +4550,8 @@
             "sm": "/magazine/canva_products/p22_s4.webp",
             "md": "/magazine/canva_products/p22_s4.webp",
             "lg": "/magazine/canva_products/p22_s4.webp"
-          }
+          },
+          "cashier_code": 108
         },
         "title_override": "صابون سيوة  بزيت الزيتون وطمي الكبريت",
         "description_override": "صابون طبيعي مصنوع يدو ًيا بزيت الزيتون وطمي الكبريت، يساعد على تنظيف البشرة بعمق وتنقيتها",
@@ -4409,7 +4576,8 @@
             "sm": "/magazine/canva_products/p22_s5.webp",
             "md": "/magazine/canva_products/p22_s5.webp",
             "lg": "/magazine/canva_products/p22_s5.webp"
-          }
+          },
+          "cashier_code": 106
         },
         "title_override": "صابون سيوة بالفحم",
         "description_override": "صابون طبيعي مصنوع يدو ًيا بالفحم، يساعد على تنظيف البشرة بعمق وتنقيتها من الشوائب",
@@ -4434,7 +4602,8 @@
             "sm": "/magazine/canva_products/p22_s6.webp",
             "md": "/magazine/canva_products/p22_s6.webp",
             "lg": "/magazine/canva_products/p22_s6.webp"
-          }
+          },
+          "cashier_code": 110
         },
         "title_override": "صابون سيوة بالكركم وحليب الناقة",
         "description_override": "صابون طبيعي مصنوع يدو ًيا بالكركم وحليب الناقة، يساعد على تغذية وترطيب البشرة ومنحها إشراقة طبيعية",
@@ -4469,7 +4638,8 @@
             "sm": "/magazine/canva_products/p23_s1.webp",
             "md": "/magazine/canva_products/p23_s1.webp",
             "lg": "/magazine/canva_products/p23_s1.webp"
-          }
+          },
+          "cashier_code": 112
         },
         "title_override": "صابون سيوة بالعسل والكركم",
         "description_override": "صابون طبيعي مصنوع يدو ًيا بالعسل والكركم، يساعد على تنظيف البشرة ومنحها إشراقة ومظهرًا أكثر تجانسًا",
@@ -4494,7 +4664,8 @@
             "sm": "/magazine/canva_products/p23_s2.webp",
             "md": "/magazine/canva_products/p23_s2.webp",
             "lg": "/magazine/canva_products/p23_s2.webp"
-          }
+          },
+          "cashier_code": 109
         },
         "title_override": "صابون سيوة بزيت شجرة الشاي والكركم",
         "description_override": "صابون طبيعي مصنوع يدو ًيا بزيت شجرة الشاي والكركم، يساعد على تنقية البشرة ومنحها مظهرًا أكثر إشراقًا وحيوية",
@@ -4519,7 +4690,8 @@
             "sm": "/magazine/canva_products/p23_s3.webp",
             "md": "/magazine/canva_products/p23_s3.webp",
             "lg": "/magazine/canva_products/p23_s3.webp"
-          }
+          },
+          "cashier_code": 113
         },
         "title_override": "صابون سيوة بجوز الهند",
         "description_override": "صابون طبيعي مصنوع يدو ًيا بجوز الهند، يساعد على تنظيف وترطيب وتغذية البشرة والشعر",
@@ -4544,7 +4716,8 @@
             "sm": "/magazine/canva_products/p23_s4.webp",
             "md": "/magazine/canva_products/p23_s4.webp",
             "lg": "/magazine/canva_products/p23_s4.webp"
-          }
+          },
+          "cashier_code": 109
         },
         "title_override": "صابون سيوة بزيت شجرة الشاي والكركم",
         "description_override": "صابون طبيعي مصنوع يدو ًيا بزيت شجرة الشاي والكركم، يساعد على تنظيف البشرة وتنقيتها وتحسين مظهرها",
@@ -4569,7 +4742,8 @@
             "sm": "/magazine/canva_products/p23_s5.webp",
             "md": "/magazine/canva_products/p23_s5.webp",
             "lg": "/magazine/canva_products/p23_s5.webp"
-          }
+          },
+          "cashier_code": 111
         },
         "title_override": "صابون سيوة بعشب الليمون",
         "description_override": "صابون طبيعي مصنوع يدو ًيا بعشب الليمون، ينظف البشرة بلطف ويمنحها إحساسًا بالانتعاش",
@@ -4594,7 +4768,8 @@
             "sm": "/magazine/canva_products/p23_s6.webp",
             "md": "/magazine/canva_products/p23_s6.webp",
             "lg": "/magazine/canva_products/p23_s6.webp"
-          }
+          },
+          "cashier_code": 101
         },
         "title_override": "صابون سيوة بالروزماري",
         "description_override": "صابون طبيعي مصنوع يدو ًيا بالروزماري، يساعد على تنظيف البشرة بعمق وإنعاشها وتنقيتها",
@@ -4629,7 +4804,8 @@
             "sm": "/magazine/canva_products/p24_s1.webp",
             "md": "/magazine/canva_products/p24_s1.webp",
             "lg": "/magazine/canva_products/p24_s1.webp"
-          }
+          },
+          "cashier_code": 314
         },
         "title_override": "صينية بارزة «الطائر »والزخارف النباتية",
         "description_override": "صينية فضية مربعة مصنوعة يدو ًيا، مزينة محفور تحيط به فروع وأوراق وزخارف  بطائر زهرية على سطح معدني ذي ملمس بارز",
@@ -4654,7 +4830,8 @@
             "sm": "/magazine/canva_products/p24_s2.webp",
             "md": "/magazine/canva_products/p24_s2.webp",
             "lg": "/magazine/canva_products/p24_s2.webp"
-          }
+          },
+          "cashier_code": 313
         },
         "title_override": "صينية فضية بزخارف الأرابيسك",
         "description_override": "صينية فضية مصنوعة يدو ًيا، مزينة بنقوش هندسية إسالمية محفورة وتفاصيل معدنية بارزة مستوحاة من فن الأرابيسك",
@@ -4679,7 +4856,8 @@
             "sm": "/magazine/canva_products/p24_s3.webp",
             "md": "/magazine/canva_products/p24_s3.webp",
             "lg": "/magazine/canva_products/p24_s3.webp"
-          }
+          },
+          "cashier_code": 316
         },
         "title_override": "صينية دائرية بنقوش البردي",
         "description_override": "صينية فضية دائرية يدوية، مزينة بنقوش ،محفورة مستوحاة من زهرة البردي المصرية مع حافة مطروقة بتفاصيل يدوية مميزة",
@@ -4704,7 +4882,8 @@
             "sm": "/magazine/canva_products/p24_s4.webp",
             "md": "/magazine/canva_products/p24_s4.webp",
             "lg": "/magazine/canva_products/p24_s4.webp"
-          }
+          },
+          "cashier_code": 267
         },
         "title_override": "وعاء فضي مفرغ بزخارف نباتية",
         "description_override": "وعاء ديكوري فضي مصنوع يدو ًيا، يتميز ،بزخارف نباتية مفرغة بدقة، وحافة متموجة وقواعد كروية صغيرة",
@@ -4729,7 +4908,8 @@
             "sm": "/magazine/canva_products/p24_s5.webp",
             "md": "/magazine/canva_products/p24_s5.webp",
             "lg": "/magazine/canva_products/p24_s5.webp"
-          }
+          },
+          "cashier_code": 312
         },
         "title_override": "صينية دائرية بنقشة اللوتس",
         "description_override": "صينية فضية دائرية مصنوعة يدو ًيا، مزينة ،بنقوش متكررة مستوحاة من زهرة اللوتس مع حافة مرتفعة وناعمة",
@@ -4754,7 +4934,8 @@
             "sm": "/magazine/canva_products/p24_s6.webp",
             "md": "/magazine/canva_products/p24_s6.webp",
             "lg": "/magazine/canva_products/p24_s6.webp"
-          }
+          },
+          "cashier_code": 268
         },
         "title_override": "طبق فضي بارز بيد",
         "description_override": "طبق فضي بيضاوي يدوي، مزين بزخارف زهرية بارزة، مع حافة متموجة ومقابض جانبية مزخرفة وقواعد حلزونية",
@@ -4779,7 +4960,8 @@
             "sm": "/magazine/canva_products/p24_s7.webp",
             "md": "/magazine/canva_products/p24_s7.webp",
             "lg": "/magazine/canva_products/p24_s7.webp"
-          }
+          },
+          "cashier_code": 270
         },
         "title_override": "طبق فضي وذهبي بزخرفة زهرية",
         "description_override": "،طبق دائري يدوي باللونين الفضي والذهبي مزين بزخارف بارزة من الزهور واألوراق، مع .حافة ذهبية متموجة وتصميم داخلي مضلع",
@@ -4804,7 +4986,8 @@
             "sm": "/magazine/canva_products/p24_s8.webp",
             "md": "/magazine/canva_products/p24_s8.webp",
             "lg": "/magazine/canva_products/p24_s8.webp"
-          }
+          },
+          "cashier_code": 269
         },
         "title_override": "علبة فضية وذهبية سداسية مزخرفة",
         "description_override": "علبة ديكورية سداسية مصنوعة يدو ًيا، تجمع بين اللونين الفضي والذهبي، ومزينة بزخارف زهرية ذهبية بارزة",
@@ -4829,7 +5012,8 @@
             "sm": "/magazine/canva_products/p24_s9.webp",
             "md": "/magazine/canva_products/p24_s9.webp",
             "lg": "/magazine/canva_products/p24_s9.webp"
-          }
+          },
+          "cashier_code": 271
         },
         "title_override": "طبق فضي وذهبي بارز",
         "description_override": "،طبق فضي مصنوع يدو ًيا على شكل زهرة مزين بزخارف نباتية ذهبية بارزة، وحافة متموجة مذهبة",
@@ -4864,7 +5048,8 @@
             "sm": "/magazine/canva_products/p25_s1.webp",
             "md": "/magazine/canva_products/p25_s1.webp",
             "lg": "/magazine/canva_products/p25_s1.webp"
-          }
+          },
+          "cashier_code": 275
         },
         "title_override": "حامل زجاجة على شكل عربة",
         "description_override": "حامل زجاجة مصنوع يدو ًيا من النحاس بتصميم مستوحى من العربة، يتميز بعجالت مفرغة كبيرة وزخارف دقيقة ومقبض خلفي",
@@ -4889,7 +5074,8 @@
             "sm": "/magazine/canva_products/p25_s2.webp",
             "md": "/magazine/canva_products/p25_s2.webp",
             "lg": "/magazine/canva_products/p25_s2.webp"
-          }
+          },
+          "cashier_code": 272
         },
         "title_override": "علبة مناديل بزخارف الأرابيسك",
         "description_override": "،غطاء علبة مناديل من النحاس مصنوع يدو ًيا مزين بزخارف ونقوش أرابيسك دقيقة مستوحاة من الفن الإسلامي",
@@ -4914,7 +5100,8 @@
             "sm": "/magazine/canva_products/p25_s3.webp",
             "md": "/magazine/canva_products/p25_s3.webp",
             "lg": "/magazine/canva_products/p25_s3.webp"
-          }
+          },
+          "cashier_code": 274
         },
         "title_override": "مبخرة نحاس محفورة",
         "description_override": "،مبخرة من النحاس المصقول مصنوعة يدو ًيا مزينة بزخارف أرابيسك محفورة بدقة، ومثبتة على دعامتين وقاعدة زخرفية",
@@ -4939,7 +5126,8 @@
             "sm": "/magazine/canva_products/p25_s4.webp",
             "md": "/magazine/canva_products/p25_s4.webp",
             "lg": "/magazine/canva_products/p25_s4.webp"
-          }
+          },
+          "cashier_code": 279
         },
         "title_override": "سلة تقديم نحاسية منسوجة",
         "description_override": "سلة تقديم دائرية من النحاس بتصميم منسوج ومقبض علوي، تجمع بين الطابع التراثي والاستخدام الديكوري",
@@ -4964,7 +5152,8 @@
             "sm": "/magazine/canva_products/p25_s5.webp",
             "md": "/magazine/canva_products/p25_s5.webp",
             "lg": "/magazine/canva_products/p25_s5.webp"
-          }
+          },
+          "cashier_code": 309
         },
         "title_override": "صينية نحاس بيضاوية بنقشة اللوتس",
         "description_override": "صينية نحاس بيضاوي يدوية، مزينة بنقوش متكررة مستوحاة من زهرة اللوتس، وحافة عريضة مرتفعة",
@@ -4989,7 +5178,8 @@
             "sm": "/magazine/canva_products/p25_s6.webp",
             "md": "/magazine/canva_products/p25_s6.webp",
             "lg": "/magazine/canva_products/p25_s6.webp"
-          }
+          },
+          "cashier_code": 273
         },
         "title_override": "مجسم للمصحف المفتوح فضي وذهب",
         "description_override": "مجسم فضي مصنوع يدو ًيا يجسد مصح ًفا مفتو ًحا، مزين بكتابات عربية بارزة وزخارف .هندسية دقيقة باللونين الفضي والذهبي",
@@ -5014,7 +5204,8 @@
             "sm": "/magazine/canva_products/p25_s7.webp",
             "md": "/magazine/canva_products/p25_s7.webp",
             "lg": "/magazine/canva_products/p25_s7.webp"
-          }
+          },
+          "cashier_code": 310
         },
         "title_override": "صينية نحاس دائرية بزخارف الأرابيسك",
         "description_override": "صينية نحاس دائرية يدوية، مزينة بزخارف هندسية إسلامية محفورة وتفاصيل بارزة مع حافة مرتفعة وتشطيب نحاسي معتق.",
@@ -5039,7 +5230,8 @@
             "sm": "/magazine/canva_products/p25_s8.webp",
             "md": "/magazine/canva_products/p25_s8.webp",
             "lg": "/magazine/canva_products/p25_s8.webp"
-          }
+          },
+          "cashier_code": 308
         },
         "title_override": "صينية نحاس محفورة بنقشة مغربية",
         "description_override": "صينية نحاس مستطيلة يدوية، مزينة بنقوش هندسية محفورة مستوحاة من الزخارف المغربية، وحافة مرتفعة",
@@ -5064,7 +5256,8 @@
             "sm": "/magazine/canva_products/p25_s9.webp",
             "md": "/magazine/canva_products/p25_s9.webp",
             "lg": "/magazine/canva_products/p25_s9.webp"
-          }
+          },
+          "cashier_code": 307
         },
         "title_override": "صينية محفورة «الطائر »والزخارف الهندسية",
         "description_override": "صينية نحاس مربعة مصنوعة يدو ًيا، مزينة بطائر تراثي محفور تحيط به زخارف نباتية ونقوش هندسية دقيقة ذي ملمس بارز",
@@ -5099,7 +5292,8 @@
             "sm": "/magazine/canva_products/p26_s1.webp",
             "md": "/magazine/canva_products/p26_s1.webp",
             "lg": "/magazine/canva_products/p26_s1.webp"
-          }
+          },
+          "cashier_code": 96
         },
         "title_override": "مصباح ملح كريستالي بشكل مكعب",
         "description_override": "مصباح من الملح الصخري بتصميم مكعب مستوحى من مكعب .روبيك، يمنح إضاءة دافئة من خلال تكويناته الكريستالية الطبيعية",
@@ -5124,7 +5318,8 @@
             "sm": "/magazine/canva_products/p26_s2.webp",
             "md": "/magazine/canva_products/p26_s2.webp",
             "lg": "/magazine/canva_products/p26_s2.webp"
-          }
+          },
+          "cashier_code": 95
         },
         "title_override": "مصباح ملح كريستالي بشكل زهرة اللوتس",
         "description_override": "مصباح ديكوري على شكل زهرة اللوتس، مزين بقطع من الملح الصخري الطبيعي التي تمنح إضاءة دافئة وهادئة",
@@ -5149,7 +5344,8 @@
             "sm": "/magazine/canva_products/p26_s3.webp",
             "md": "/magazine/canva_products/p26_s3.webp",
             "lg": "/magazine/canva_products/p26_s3.webp"
-          }
+          },
+          "cashier_code": 98
         },
         "title_override": "مصباح ملح كريستالي بشكل مستطيل",
         "description_override": "مصباح من الملح الصخري األبيض بتصميم هندسي بارز، مزين ببلورات مضيئة بدرجات كهرمانية تمنح إضاءة دافئة",
@@ -5174,7 +5370,8 @@
             "sm": "/magazine/canva_products/p26_s4.webp",
             "md": "/magazine/canva_products/p26_s4.webp",
             "lg": "/magazine/canva_products/p26_s4.webp"
-          }
+          },
+          "cashier_code": null
         },
         "title_override": "مصباح ملح كريستالي بزخارف نجمية",
         "description_override": "،بزخارف نجمية  مصباح من الملح الصخري األبيض بتصميم هندسي مزين ببلورات مضيئة بدرجات كهرمانية تمنح إضاءة دافئة",
@@ -5199,7 +5396,8 @@
             "sm": "/magazine/canva_products/p26_s5.webp",
             "md": "/magazine/canva_products/p26_s5.webp",
             "lg": "/magazine/canva_products/p26_s5.webp"
-          }
+          },
+          "cashier_code": null
         },
         "title_override": "مصباح ملح كريستالي X بزخارف حرف",
         "description_override": "،X حرف  مصباح من الملح الصخري األبيض بتصميم هندسي بزخارف مزين ببلورات مضيئة بدرجات كهرمانية تمنح إضاءة دافئة",
@@ -5224,7 +5422,8 @@
             "sm": "/magazine/canva_products/p26_s6.webp",
             "md": "/magazine/canva_products/p26_s6.webp",
             "lg": "/magazine/canva_products/p26_s6.webp"
-          }
+          },
+          "cashier_code": 99
         },
         "title_override": "مصباح ملح كريستالي بزخارف بسيطة",
         "description_override": "مصباح من الملح الصخري األبيض بتصميم هندسي بزخارف، مزين ببلورات مضيئة بدرجات كهرمانية تمنح إضاءة دافئة",
@@ -5259,7 +5458,8 @@
             "sm": "/magazine/canva_products/p27_s1.webp",
             "md": "/magazine/canva_products/p27_s1.webp",
             "lg": "/magazine/canva_products/p27_s1.webp"
-          }
+          },
+          "cashier_code": 433
         },
         "title_override": "إسورة بنقشة الضفيرة نحاس احمر",
         "description_override": "،إسورةمفتوحة من النحاس بتشطيب معتق مزينة بنقشة مجدولة متداخلة وتفاصيل بارزة",
@@ -5284,7 +5484,8 @@
             "sm": "/magazine/canva_products/p27_s2.webp",
             "md": "/magazine/canva_products/p27_s2.webp",
             "lg": "/magazine/canva_products/p27_s2.webp"
-          }
+          },
+          "cashier_code": 435
         },
         "title_override": "إسورة بنقشة الريشة نحاس أحمر",
         "description_override": "إسورة مفتوحة من النحاس المصقول، مزينة بنقوش هندسية محفورة وتفاصيل دقيقة على الحواف",
@@ -5309,7 +5510,8 @@
             "sm": "/magazine/canva_products/p27_s3.webp",
             "md": "/magazine/canva_products/p27_s3.webp",
             "lg": "/magazine/canva_products/p27_s3.webp"
-          }
+          },
+          "cashier_code": 436
         },
         "title_override": "إسورة فرعونية بمفتاح الحياة نحاس أحمر",
         "description_override": "إسورة مفتوحة من النحاس، مزينة برمز مفتاح الحياة «عنخ» ونقوش مستوحاة من الطابع الفرعوني",
@@ -5334,7 +5536,8 @@
             "sm": "/magazine/canva_products/p27_s4.webp",
             "md": "/magazine/canva_products/p27_s4.webp",
             "lg": "/magazine/canva_products/p27_s4.webp"
-          }
+          },
+          "cashier_code": 437
         },
         "title_override": "إسورة مجدولة نحاس احمر",
         "description_override": "إسورة من النحاس مزينة بنقوش بارزة مستوحاة من الحبال المجدولة، مع تفاصيل دقيقة على الحواف",
@@ -5359,7 +5562,8 @@
             "sm": "/magazine/canva_products/p27_s5.webp",
             "md": "/magazine/canva_products/p27_s5.webp",
             "lg": "/magazine/canva_products/p27_s5.webp"
-          }
+          },
+          "cashier_code": 434
         },
         "title_override": "إسورة شجرة الحياة نحاس احمر",
         "description_override": "إسورة معدنية مزينة بنقوش مستوحاة من ،شجرة الحياة والزخارف الكلتية المتداخلة بتفاصيل نحاسية معتقة",
@@ -5384,7 +5588,8 @@
             "sm": "/magazine/canva_products/p27_s6.webp",
             "md": "/magazine/canva_products/p27_s6.webp",
             "lg": "/magazine/canva_products/p27_s6.webp"
-          }
+          },
+          "cashier_code": 440
         },
         "title_override": "إسورة نحاس فرعونية ذهبية",
         "description_override": "إسورة معدنية بتصميم مستوحى من الزخارف الفرعونية، مزينة بنقوش بارزة وتفاصيل هندسية",
@@ -5409,7 +5614,8 @@
             "sm": "/magazine/canva_products/p27_s7.webp",
             "md": "/magazine/canva_products/p27_s7.webp",
             "lg": "/magazine/canva_products/p27_s7.webp"
-          }
+          },
+          "cashier_code": 444
         },
         "title_override": "إسورة نحاس بالعقيق الأسود والخط العربي  خاتم نحاس بالخط العربي",
         "description_override": "إسورة من النحاس مزينة بنقوش من الخط العربي ولمسات من حجر العقيق األسود، مع قفل معدني",
@@ -5434,7 +5640,8 @@
             "sm": "/magazine/canva_products/p27_s8.webp",
             "md": "/magazine/canva_products/p27_s8.webp",
             "lg": "/magazine/canva_products/p27_s8.webp"
-          }
+          },
+          "cashier_code": 445
         },
         "title_override": "منتج حلي ومجوهرات تراثية 8",
         "description_override": "خاتم من النحاس مصنوعة يدو ًيا، مزينة بنقوش من الخط العربي داخل إطار هندسي تقليدي",
@@ -5459,7 +5666,8 @@
             "sm": "/magazine/canva_products/p27_s9.webp",
             "md": "/magazine/canva_products/p27_s9.webp",
             "lg": "/magazine/canva_products/p27_s9.webp"
-          }
+          },
+          "cashier_code": 446
         },
         "title_override": "خاتم الخط العربي والفيروز",
         "description_override": "خاتم من النحاس مصنوع يدو ًيا، مزين بكتابات عربية محفورة وحجر فيروز بتصميم شرقي مميز",
@@ -5494,7 +5702,8 @@
             "sm": "/magazine/canva_products/p28_s1.webp",
             "md": "/magazine/canva_products/p28_s1.webp",
             "lg": "/magazine/canva_products/p28_s1.webp"
-          }
+          },
+          "cashier_code": 214
         },
         "title_override": "عقد نحاس واللؤلؤ الكلاسيكي",
         "description_override": "عقد من النحاس مصنوع يدو ًيا، مزين بميدالية زخرفية دقيقة واللؤلؤ",
@@ -5519,7 +5728,8 @@
             "sm": "/magazine/canva_products/p28_s2.webp",
             "md": "/magazine/canva_products/p28_s2.webp",
             "lg": "/magazine/canva_products/p28_s2.webp"
-          }
+          },
+          "cashier_code": 442
         },
         "title_override": "طقم نحاس اللوتس والفيروز",
         "description_override": "،طقم مجوهرات من النحاس مصنوع يدو ًيا مزين بنقوش زهرة اللوتس ولمسات من الفيروز، ويشمل عقدًا وسوارًا وخاتمًا",
@@ -5544,7 +5754,8 @@
             "sm": "/magazine/canva_products/p28_s3.webp",
             "md": "/magazine/canva_products/p28_s3.webp",
             "lg": "/magazine/canva_products/p28_s3.webp"
-          }
+          },
+          "cashier_code": 443
         },
         "title_override": "طقم نحاس العين الزرقاء",
         "description_override": "،طقم مجوهرات من النحاس مصنوع يدو ًيا مزين بعين زرقاء وأحجار ملونة وتعليقات زخرفية وتفاصيل دقيقة من السلاسل",
@@ -5569,7 +5780,8 @@
             "sm": "/magazine/canva_products/p28_s4.webp",
             "md": "/magazine/canva_products/p28_s4.webp",
             "lg": "/magazine/canva_products/p28_s4.webp"
-          }
+          },
+          "cashier_code": 10
         },
         "title_override": "طقم مفتاح الحياة  الفرعوني من الاحجار",
         "description_override": "طقم مجوهرات مصنوع يدو ًيا من الخرز بدرجات الفيروز واألبيض، ويشمل عق ًدا مزي ًنا برمز مفتاح الحياة وسوارًا وأقراطًا",
@@ -5594,7 +5806,8 @@
             "sm": "/magazine/canva_products/p28_s5.webp",
             "md": "/magazine/canva_products/p28_s5.webp",
             "lg": "/magazine/canva_products/p28_s5.webp"
-          }
+          },
+          "cashier_code": 218
         },
         "title_override": "طقم مجوهرات أخضر من الاحجار",
         "description_override": "٢ قطعة، يتميز طقم مجوهرات مكوّن من بأحجار خضراء مع عقد وأقراط متناسق",
@@ -5619,7 +5832,8 @@
             "sm": "/magazine/canva_products/p28_s6.webp",
             "md": "/magazine/canva_products/p28_s6.webp",
             "lg": "/magazine/canva_products/p28_s6.webp"
-          }
+          },
+          "cashier_code": 350
         },
         "title_override": "طقم الخرز علي التراز النوبي",
         "description_override": "طقم مصنوع يدو ًيا من الخرز، يتميز بنقوش ،هندسية نوبية باألزرق واألبيض والذهبي .ويشمل عقدًا عريضًا مع أقراط متناسقة",
@@ -5644,7 +5858,8 @@
             "sm": "/magazine/canva_products/p28_s7.webp",
             "md": "/magazine/canva_products/p28_s7.webp",
             "lg": "/magazine/canva_products/p28_s7.webp"
-          }
+          },
+          "cashier_code": null
         },
         "title_override": "عقد من الأحجار الطبيعية",
         "description_override": "عقد من خرز أحجار طبيعية متعددة األوجه .بدرجات ترابية هادئة، بتصميم بسيط وأنيق",
@@ -5669,7 +5884,8 @@
             "sm": "/magazine/canva_products/p28_s8.webp",
             "md": "/magazine/canva_products/p28_s8.webp",
             "lg": "/magazine/canva_products/p28_s8.webp"
-          }
+          },
+          "cashier_code": 240
         },
         "title_override": "عقد كارنيليان وكوارتز شفاف",
         "description_override": "عقد من خرز الكارنيليان بدرجاته الدافئة مع .خرز كوارتز شفاف، بتصميم متناسق وأنيق",
@@ -5694,7 +5910,8 @@
             "sm": "/magazine/canva_products/p28_s9.webp",
             "md": "/magazine/canva_products/p28_s9.webp",
             "lg": "/magazine/canva_products/p28_s9.webp"
-          }
+          },
+          "cashier_code": 217
         },
         "title_override": "عقد من صدف اللؤلؤ",
         "description_override": "عقد مصنوع يدو ًيا، يتميز بقالدة كبيرة من صدف عرق اللؤلؤ الالمع معلقة على حبل أبيض مجدول",
@@ -5729,7 +5946,8 @@
             "sm": "/magazine/canva_products/p29_s1.webp",
             "md": "/magazine/canva_products/p29_s1.webp",
             "lg": "/magazine/canva_products/p29_s1.webp"
-          }
+          },
+          "cashier_code": 254
         },
         "title_override": "إسورة جاسبر دالماسي بالخرز",
         "description_override": "إسورة من حجر الجاسبر الدالماسي المنقط مع حجر أزرق داكن وقفل فضي",
@@ -5754,7 +5972,8 @@
             "sm": "/magazine/canva_products/p29_s2.webp",
             "md": "/magazine/canva_products/p29_s2.webp",
             "lg": "/magazine/canva_products/p29_s2.webp"
-          }
+          },
+          "cashier_code": 254
         },
         "title_override": "إسورة جاسبر دالماسي بالخرز",
         "description_override": "إسورة رقيقة من حجر الجاسبر الدالماسي المنقط مع حجر أزرق داكن وقفل فضي",
@@ -5779,7 +5998,8 @@
             "sm": "/magazine/canva_products/p29_s3.webp",
             "md": "/magazine/canva_products/p29_s3.webp",
             "lg": "/magazine/canva_products/p29_s3.webp"
-          }
+          },
+          "cashier_code": 253
         },
         "title_override": "إسورة ياقوت أزرق",
         "description_override": "إسورة من حجر الياقوت األزرق المصقول متعدد الأوجه، مع قفل فضي",
@@ -5804,7 +6024,8 @@
             "sm": "/magazine/canva_products/p29_s4.webp",
             "md": "/magazine/canva_products/p29_s4.webp",
             "lg": "/magazine/canva_products/p29_s4.webp"
-          }
+          },
+          "cashier_code": 241
         },
         "title_override": "عقد احجار أزرق",
         "description_override": "،عقد من الحجار الزرقاء المع بتأثير معدني مزود بقفل فضي",
@@ -5829,7 +6050,8 @@
             "sm": "/magazine/canva_products/p29_s5.webp",
             "md": "/magazine/canva_products/p29_s5.webp",
             "lg": "/magazine/canva_products/p29_s5.webp"
-          }
+          },
+          "cashier_code": 250
         },
         "title_override": "عقد احجار ابيض بعين زرقاء",
         "description_override": "عقد من الحجار البيضاء، مزين بخرز بتعليقة عين زرقاء",
@@ -5854,7 +6076,8 @@
             "sm": "/magazine/canva_products/p29_s6.webp",
             "md": "/magazine/canva_products/p29_s6.webp",
             "lg": "/magazine/canva_products/p29_s6.webp"
-          }
+          },
+          "cashier_code": 255
         },
         "title_override": "إسورة هيماتيت لامعة",
         "description_override": "إسورة من خرز الهيماتيت المصقول متعدد الأوجه، بتصميم بسيط وقفل معدني",
@@ -5879,7 +6102,8 @@
             "sm": "/magazine/canva_products/p29_s7.webp",
             "md": "/magazine/canva_products/p29_s7.webp",
             "lg": "/magazine/canva_products/p29_s7.webp"
-          }
+          },
+          "cashier_code": 255
         },
         "title_override": "إسورة احجار سوداء هيماتيت",
         "description_override": "إسورة من خرز الهيماتيت المصقول متعدد الأوجه، مزودة برباط أسود قابل للتعديل",
@@ -5904,7 +6128,8 @@
             "sm": "/magazine/canva_products/p29_s8.webp",
             "md": "/magazine/canva_products/p29_s8.webp",
             "lg": "/magazine/canva_products/p29_s8.webp"
-          }
+          },
+          "cashier_code": 243
         },
         "title_override": "عقد احجار لبني أمازونيت",
         "description_override": "عقد من قطع حجر األمازونيت الطبيعي بدرجات فيروزية هادئة، مع قفل فضي",
@@ -5929,7 +6154,8 @@
             "sm": "/magazine/canva_products/p29_s9.webp",
             "md": "/magazine/canva_products/p29_s9.webp",
             "lg": "/magazine/canva_products/p29_s9.webp"
-          }
+          },
+          "cashier_code": null
         },
         "title_override": "عقد احجار بنفسجي جمشت",
         "description_override": "عقد من خرز حجر الجمشت البنفسجي .المصقول متعدد الأوجه، مع قفل فضي",
@@ -5964,7 +6190,8 @@
             "sm": "/magazine/canva_products/p30_s1.webp",
             "md": "/magazine/canva_products/p30_s1.webp",
             "lg": "/magazine/canva_products/p30_s1.webp"
-          }
+          },
+          "cashier_code": 255
         },
         "title_override": "إسورة احجار بنفسجية",
         "description_override": "إسورة رقيقة مصنوعة يدو ًيا من خرز دائري مسطح باللون البنفسجي، مع قفل معدني فضي",
@@ -5989,7 +6216,8 @@
             "sm": "/magazine/canva_products/p30_s2.webp",
             "md": "/magazine/canva_products/p30_s2.webp",
             "lg": "/magazine/canva_products/p30_s2.webp"
-          }
+          },
+          "cashier_code": 254
         },
         "title_override": "عقد حجر الشمس الخوخي",
         "description_override": "تشوكر رقيق من حجر الشمس بدرجات خوخية دافئة، بتصميم بسيط وأنيق",
@@ -6014,7 +6242,8 @@
             "sm": "/magazine/canva_products/p30_s3.webp",
             "md": "/magazine/canva_products/p30_s3.webp",
             "lg": "/magazine/canva_products/p30_s3.webp"
-          }
+          },
+          "cashier_code": 251
         },
         "title_override": "عقد كريستال أزرق فاتح",
         "description_override": "عقد رقيق من خرز كريستالي أزرق فاتح متعدد الأوجه، مع قفل فضي",
@@ -6039,7 +6268,8 @@
             "sm": "/magazine/canva_products/p30_s4.webp",
             "md": "/magazine/canva_products/p30_s4.webp",
             "lg": "/magazine/canva_products/p30_s4.webp"
-          }
+          },
+          "cashier_code": 254
         },
         "title_override": "عقد احجار كارنيليان",
         "description_override": "عقد من خرز الكارنيليان متعدد األوجه بدرجات برتقالية دافئة، بتصميم بسيط وأنيق",
@@ -6064,7 +6294,8 @@
             "sm": "/magazine/canva_products/p30_s5.webp",
             "md": "/magazine/canva_products/p30_s5.webp",
             "lg": "/magazine/canva_products/p30_s5.webp"
-          }
+          },
+          "cashier_code": 255
         },
         "title_override": "إسورة احجار هيماتيت",
         "description_override": "إسورة من خرز الهيماتيت الرمادي متعدد الأوجه، بتصميم بسيط وقفل معدني",
@@ -6089,7 +6320,8 @@
             "sm": "/magazine/canva_products/p30_s6.webp",
             "md": "/magazine/canva_products/p30_s6.webp",
             "lg": "/magazine/canva_products/p30_s6.webp"
-          }
+          },
+          "cashier_code": 255
         },
         "title_override": "إسورة احجار  هيماتيت معدنية",
         "description_override": "إسورة رقيقة مصنوعة يدو ًيا من خرز هيماتيت هندسي بدرجات البرونزي والماغنتا الداكن",
@@ -6114,7 +6346,8 @@
             "sm": "/magazine/canva_products/p30_s7.webp",
             "md": "/magazine/canva_products/p30_s7.webp",
             "lg": "/magazine/canva_products/p30_s7.webp"
-          }
+          },
+          "cashier_code": 252
         },
         "title_override": "عقد احجار  نجمة البحر",
         "description_override": "عقد من الحجر األبيض مزين بتعليقة نجمة .بحر باللون الفيروزي، بتصميم صيفي بسيط",
@@ -6139,7 +6372,8 @@
             "sm": "/magazine/canva_products/p30_s8.webp",
             "md": "/magazine/canva_products/p30_s8.webp",
             "lg": "/magazine/canva_products/p30_s8.webp"
-          }
+          },
+          "cashier_code": null
         },
         "title_override": "عقد احجار  توباز أزرق",
         "description_override": "عقد من قطع حجر األمازونيت الطبيعي بدرجات فيروزية هادئة، مع قفل فضي",
@@ -6164,7 +6398,8 @@
             "sm": "/magazine/canva_products/p30_s9.webp",
             "md": "/magazine/canva_products/p30_s9.webp",
             "lg": "/magazine/canva_products/p30_s9.webp"
-          }
+          },
+          "cashier_code": 253
         },
         "title_override": "إسورة احجار  سبينل أسود",
         "description_override": "إسورة رقيقة مصنوعة يدو ًيا من خرز حجر السبينل األسود الطبيعي متعدد األوجه، مع قفل فضي",
@@ -6199,7 +6434,8 @@
             "sm": "/magazine/canva_products/p31_s1.webp",
             "md": "/magazine/canva_products/p31_s1.webp",
             "lg": "/magazine/canva_products/p31_s1.webp"
-          }
+          },
+          "cashier_code": 253
         },
         "title_override": "إسورة احجار  سوداء لامعة",
         "description_override": "إسورة رقيقة من حجر أسود صغير متعدد الأوجه، بتصميم كلاسيكي بسيط",
@@ -6224,7 +6460,8 @@
             "sm": "/magazine/canva_products/p31_s2.webp",
             "md": "/magazine/canva_products/p31_s2.webp",
             "lg": "/magazine/canva_products/p31_s2.webp"
-          }
+          },
+          "cashier_code": null
         },
         "title_override": "إسورة احجار  خضراء لامعة",
         "description_override": "إسورة رقيقة من خرز أخضر صغير متعدد الأوجه، بتصميم بسيط وأنيق",
@@ -6249,7 +6486,8 @@
             "sm": "/magazine/canva_products/p31_s3.webp",
             "md": "/magazine/canva_products/p31_s3.webp",
             "lg": "/magazine/canva_products/p31_s3.webp"
-          }
+          },
+          "cashier_code": null
         },
         "title_override": "عقد احجار ذهبي لامعة",
         "description_override": "عقد بسيط من حجر أصفر المع متعدد .الأوجه، يضيف لمسة دافئة وأنيقة للإطلالة",
@@ -6274,7 +6512,8 @@
             "sm": "/magazine/canva_products/p31_s4.webp",
             "md": "/magazine/canva_products/p31_s4.webp",
             "lg": "/magazine/canva_products/p31_s4.webp"
-          }
+          },
+          "cashier_code": 242
         },
         "title_override": "عقد احجار لؤلؤ",
         "description_override": "عقد مصنوع يدو ًيا من اللؤلؤ الطبيعي المستزرع، مزين بتعليقة لؤلؤ",
@@ -6299,7 +6538,8 @@
             "sm": "/magazine/canva_products/p31_s5.webp",
             "md": "/magazine/canva_products/p31_s5.webp",
             "lg": "/magazine/canva_products/p31_s5.webp"
-          }
+          },
+          "cashier_code": 241
         },
         "title_override": "عقد احجار  أخضر لامع",
         "description_override": "عقد رقيق من حجر أخضر صغير متعدد الأوجه، يضيف لمسة هادئة وأنيقة",
@@ -6324,7 +6564,8 @@
             "sm": "/magazine/canva_products/p31_s6.webp",
             "md": "/magazine/canva_products/p31_s6.webp",
             "lg": "/magazine/canva_products/p31_s6.webp"
-          }
+          },
+          "cashier_code": 254
         },
         "title_override": "عقد احجار عقيق بدرجات ترابية",
         "description_override": "عقد من خرز العقيق الطبيعي بدرجات ترابية دافئة، بتصميم بسيط وأنيق",
@@ -6349,7 +6590,8 @@
             "sm": "/magazine/canva_products/p31_s7.webp",
             "md": "/magazine/canva_products/p31_s7.webp",
             "lg": "/magazine/canva_products/p31_s7.webp"
-          }
+          },
+          "cashier_code": 254
         },
         "title_override": "إسورة احجار فلوريت",
         "description_override": "إسورة مصنوعة يدو ًيا من أحجار الفلوريت متعددة األلوان بدرجات البنفسجي واألخضر والشفاف، مع قفل فضي",
@@ -6374,7 +6616,8 @@
             "sm": "/magazine/canva_products/p31_s8.webp",
             "md": "/magazine/canva_products/p31_s8.webp",
             "lg": "/magazine/canva_products/p31_s8.webp"
-          }
+          },
+          "cashier_code": null
         },
         "title_override": "عقد احجار كارنيليان",
         "description_override": "عقد مصنوع يدو ًيا من خرز الكارنيليان البرتقالي متعدد األوجه، بتصميم بسيط وأنيق",
@@ -6399,7 +6642,8 @@
             "sm": "/magazine/canva_products/p31_s9.webp",
             "md": "/magazine/canva_products/p31_s9.webp",
             "lg": "/magazine/canva_products/p31_s9.webp"
-          }
+          },
+          "cashier_code": 255
         },
         "title_override": "عقد احجار  هيماتيت",
         "description_override": "عقد من حجر الهيماتيت المعدني متعدد الأوجه، بتصميم بسيط وقفل فضي",
@@ -6434,7 +6678,8 @@
             "sm": "/magazine/canva_products/p32_s1.webp",
             "md": "/magazine/canva_products/p32_s1.webp",
             "lg": "/magazine/canva_products/p32_s1.webp"
-          }
+          },
+          "cashier_code": 254
         },
         "title_override": "إسورة أحجار متعددة الألوان",
         "description_override": "إسورة مصنوعة يدو ًيا من قطع أحجار طبيعية متعددة األلوان، مع قفل فضي وسلسلة إضافية",
@@ -6459,7 +6704,8 @@
             "sm": "/magazine/canva_products/p32_s2.webp",
             "md": "/magazine/canva_products/p32_s2.webp",
             "lg": "/magazine/canva_products/p32_s2.webp"
-          }
+          },
+          "cashier_code": 253
         },
         "title_override": "إسورة احجار عقيق أسود",
         "description_override": "إسورة رقيقة من خرز العقيق األسود الطبيعي، مزودة بقفل فضي",
@@ -6484,7 +6730,8 @@
             "sm": "/magazine/canva_products/p32_s3.webp",
             "md": "/magazine/canva_products/p32_s3.webp",
             "lg": "/magazine/canva_products/p32_s3.webp"
-          }
+          },
+          "cashier_code": 253
         },
         "title_override": "إسورة احجار الزورد",
         "description_override": "إسورة رقيقة مصنوعة يدو ًيا من خرز حجر اللازورد الأزرق الطبيعي",
@@ -6509,7 +6756,8 @@
             "sm": "/magazine/canva_products/p32_s4.webp",
             "md": "/magazine/canva_products/p32_s4.webp",
             "lg": "/magazine/canva_products/p32_s4.webp"
-          }
+          },
+          "cashier_code": null
         },
         "title_override": "عقد احجار إيوليت",
         "description_override": "عقد رقيق من خرز حجر اإليوليت الطبيعي متعدد الأوجه، مزود بقفل فضي",
@@ -6534,7 +6782,8 @@
             "sm": "/magazine/canva_products/p32_s5.webp",
             "md": "/magazine/canva_products/p32_s5.webp",
             "lg": "/magazine/canva_products/p32_s5.webp"
-          }
+          },
+          "cashier_code": 255
         },
         "title_override": "إسورة احجار بنفسجية",
         "description_override": "،إسورة مصنوعة يدو ًيا من خرز بنفسجي مزودة بقفل معدني",
@@ -6559,7 +6808,8 @@
             "sm": "/magazine/canva_products/p32_s6.webp",
             "md": "/magazine/canva_products/p32_s6.webp",
             "lg": "/magazine/canva_products/p32_s6.webp"
-          }
+          },
+          "cashier_code": 255
         },
         "title_override": "إسورة احجار بايرايت",
         "description_override": "إسورة رقيقة من خرز حجر البايرايت الطبيعي متعدد الأوجه، مزودة بقفل ذهبي",
@@ -6584,7 +6834,8 @@
             "sm": "/magazine/canva_products/p32_s7.webp",
             "md": "/magazine/canva_products/p32_s7.webp",
             "lg": "/magazine/canva_products/p32_s7.webp"
-          }
+          },
+          "cashier_code": 438
         },
         "title_override": "إسورة عقيق عروق التنين",
         "description_override": "إسورة من أحجار العقيق الطبيعي بنقشة عروق التنين، بدرجات الزيتوني والعسلي، مع رباط يدوي قابل للتعديل",
@@ -6609,7 +6860,8 @@
             "sm": "/magazine/canva_products/p32_s8.webp",
             "md": "/magazine/canva_products/p32_s8.webp",
             "lg": "/magazine/canva_products/p32_s8.webp"
-          }
+          },
+          "cashier_code": 254
         },
         "title_override": "إسورة احجار جاسبر دالماسي",
         "description_override": "إسورة قابلة للتعديل من خرز الجاسبر الدالماسي وحجر السوداليت األزرق، مزودة برباط منسوج قابل للتعديل",
@@ -6634,7 +6886,8 @@
             "sm": "/magazine/canva_products/p32_s9.webp",
             "md": "/magazine/canva_products/p32_s9.webp",
             "lg": "/magazine/canva_products/p32_s9.webp"
-          }
+          },
+          "cashier_code": 263
         },
         "title_override": "عقد احجار  ياقوت أحمر مع تعليقة",
         "description_override": "عقد رقيق من خرز الياقوت األحمر الطبيعي متعدد األوجه، مزين بتعليقة حجر متناسقة وقفل فضي",
@@ -6669,7 +6922,8 @@
             "sm": "/magazine/canva_products/p33_s1.webp",
             "md": "/magazine/canva_products/p33_s1.webp",
             "lg": "/magazine/canva_products/p33_s1.webp"
-          }
+          },
+          "cashier_code": 254
         },
         "title_override": "إسورة احجار سوداليت",
         "description_override": "إسورة مصنوعة من خرز حجر السوداليت بدرجات األزرق واألبيض، مزودة برباط أسود منسوج قابل للتعديل",
@@ -6694,7 +6948,8 @@
             "sm": "/magazine/canva_products/p33_s2.webp",
             "md": "/magazine/canva_products/p33_s2.webp",
             "lg": "/magazine/canva_products/p33_s2.webp"
-          }
+          },
+          "cashier_code": 255
         },
         "title_override": "عقد اججار بوهيمي",
         "description_override": "عقد مصنوع يدو ًيا من مزيج متناغم من األحجار الطبيعية متعددة األلوان، مع قفل معدني",
@@ -6719,7 +6974,8 @@
             "sm": "/magazine/canva_products/p33_s3.webp",
             "md": "/magazine/canva_products/p33_s3.webp",
             "lg": "/magazine/canva_products/p33_s3.webp"
-          }
+          },
+          "cashier_code": 255
         },
         "title_override": "إسورة احجار  هيماتيت اللامع",
         "description_override": "إسورة قابلة للتعديل من خرز الهيماتيت الرمادي الداكن متعدد األوجه، مع رباط أسود منسوج",
@@ -6744,7 +7000,8 @@
             "sm": "/magazine/canva_products/p33_s4.webp",
             "md": "/magazine/canva_products/p33_s4.webp",
             "lg": "/magazine/canva_products/p33_s4.webp"
-          }
+          },
+          "cashier_code": null
         },
         "title_override": "عقد احجار رقيق",
         "description_override": "عقد رقيق من الحجر صغير بدرجات األبيض .والأخضر والنحاسي، بتصميم بسيط وأنيق",
@@ -6769,7 +7026,8 @@
             "sm": "/magazine/canva_products/p33_s5.webp",
             "md": "/magazine/canva_products/p33_s5.webp",
             "lg": "/magazine/canva_products/p33_s5.webp"
-          }
+          },
+          "cashier_code": 254
         },
         "title_override": "إسورة احجار رمادية",
         "description_override": "إسورة رجالي قابلة للتعديل، مصنوعة من خرز أحجار طبيعية بدرجات الرمادي واألبيض، مع رباط منسوج",
@@ -6794,7 +7052,8 @@
             "sm": "/magazine/canva_products/p33_s6.webp",
             "md": "/magazine/canva_products/p33_s6.webp",
             "lg": "/magazine/canva_products/p33_s6.webp"
-          }
+          },
+          "cashier_code": 253
         },
         "title_override": "إسورة احجار  هيماتيت متعددة الأوجه",
         "description_override": "إسورة من خرز الهيماتيت الرمادي الالمع متعدد الأوجه، مع قفل معدني",
@@ -6819,7 +7078,8 @@
             "sm": "/magazine/canva_products/p33_s7.webp",
             "md": "/magazine/canva_products/p33_s7.webp",
             "lg": "/magazine/canva_products/p33_s7.webp"
-          }
+          },
+          "cashier_code": 254
         },
         "title_override": "عقد احجار إيوليت",
         "description_override": "عقد رقيق مصنوع يدو ًيا من خرز حجر اإليوليت الطبيعي متعدد األوجه، بدرجات أزرق بنفسجي هادئة، مع قفل فضي",
@@ -6844,7 +7104,8 @@
             "sm": "/magazine/canva_products/p33_s8.webp",
             "md": "/magazine/canva_products/p33_s8.webp",
             "lg": "/magazine/canva_products/p33_s8.webp"
-          }
+          },
+          "cashier_code": 254
         },
         "title_override": "عقد احجار حجر الشمس",
         "description_override": "عقد أنيق من خرز حجر الشمس بدرجات دافئة، يضيف لمسة ناعمة ومشرقة للإطلالة",
@@ -6869,7 +7130,8 @@
             "sm": "/magazine/canva_products/p33_s9.webp",
             "md": "/magazine/canva_products/p33_s9.webp",
             "lg": "/magazine/canva_products/p33_s9.webp"
-          }
+          },
+          "cashier_code": 255
         },
         "title_override": "إسورة احجار زرقاء بنقشة شيفرون",
         "description_override": "إسورة من قطع حجرية زرقاء بتصميم  .شيفرون هندسي، مزودة بقفل معدني",
@@ -6904,7 +7166,8 @@
             "sm": "/magazine/canva_products/p34_s1.webp",
             "md": "/magazine/canva_products/p34_s1.webp",
             "lg": "/magazine/canva_products/p34_s1.webp"
-          }
+          },
+          "cashier_code": 257
         },
         "title_override": "حلق برتقالي مربع مطلي بالذهب",
         "description_override": "حلق متدلي بتصميم معدني ذهبي، مزين بأحجار مربعة مفرغة باللون البرتقالي",
@@ -6929,7 +7192,8 @@
             "sm": "/magazine/canva_products/p34_s2.webp",
             "md": "/magazine/canva_products/p34_s2.webp",
             "lg": "/magazine/canva_products/p34_s2.webp"
-          }
+          },
+          "cashier_code": 257
         },
         "title_override": "حلق بحجر ماجنتا مطلي بالذهب",
         "description_override": "حلق متدلي بتصميم معدني ذهبي، مزين بأحجار بيضاوية بدرجة ماجنتا زاهية",
@@ -6954,7 +7218,8 @@
             "sm": "/magazine/canva_products/p34_s3.webp",
             "md": "/magazine/canva_products/p34_s3.webp",
             "lg": "/magazine/canva_products/p34_s3.webp"
-          }
+          },
+          "cashier_code": 257
         },
         "title_override": "حلق من اليشم األخضر مطلي بالذهب",
         "description_override": "حلق متدلي مزين بأحجار يشم خضراء مستطيلة بنقشة طبيعية، مع خطافات معدنية ذهبية",
@@ -6979,7 +7244,8 @@
             "sm": "/magazine/canva_products/p34_s4.webp",
             "md": "/magazine/canva_products/p34_s4.webp",
             "lg": "/magazine/canva_products/p34_s4.webp"
-          }
+          },
+          "cashier_code": 256
         },
         "title_override": "ميدالية عقيق فيروزي",
         "description_override": "ميدالية مفاتيح مزينة بحجر عقيق طبيعي بدرجات فيروزية، بتصميم بسيط وأنيق",
@@ -7004,7 +7270,8 @@
             "sm": "/magazine/canva_products/p34_s5.webp",
             "md": "/magazine/canva_products/p34_s5.webp",
             "lg": "/magazine/canva_products/p34_s5.webp"
-          }
+          },
+          "cashier_code": 257
         },
         "title_override": "حلق أخضر متدلي مطلي بالذهب",
         "description_override": "حلق متدلي بتصميم معدني ذهبي، مزين بأحجار خضراء على شكل قطرة متعددة الأوجه",
@@ -7029,7 +7296,8 @@
             "sm": "/magazine/canva_products/p34_s6.webp",
             "md": "/magazine/canva_products/p34_s6.webp",
             "lg": "/magazine/canva_products/p34_s6.webp"
-          }
+          },
+          "cashier_code": 257
         },
         "title_override": "حلق بحجر وردي مطلي بالذهب",
         "description_override": "حلق متدلي بتصميم معدني ذهبي، مزين بأحجار وردية بيضاوية مصقولة إلطاللة أنيقة وناعمة",
@@ -7054,7 +7322,8 @@
             "sm": "/magazine/canva_products/p34_s7.webp",
             "md": "/magazine/canva_products/p34_s7.webp",
             "lg": "/magazine/canva_products/p34_s7.webp"
-          }
+          },
+          "cashier_code": 256
         },
         "title_override": "ميدالية حجر رخامي",
         "description_override": "ميدالية مفاتيح معدنية مزينة بحجر طبيعي دائري بنقشة رخامية مميزة",
@@ -7079,7 +7348,8 @@
             "sm": "/magazine/canva_products/p34_s8.webp",
             "md": "/magazine/canva_products/p34_s8.webp",
             "lg": "/magazine/canva_products/p34_s8.webp"
-          }
+          },
+          "cashier_code": 256
         },
         "title_override": "ميدالية من الحجر الطبيعي",
         "description_override": "ميدالية مفاتيح مصنوعة يدو ًيا، مزينة بقطعة من الحجر الطبيعي بتفاصيل بسيطة ومميزة",
@@ -7104,7 +7374,8 @@
             "sm": "/magazine/canva_products/p34_s9.webp",
             "md": "/magazine/canva_products/p34_s9.webp",
             "lg": "/magazine/canva_products/p34_s9.webp"
-          }
+          },
+          "cashier_code": null
         },
         "title_override": "ميدالية كالسيدوني أزرق",
         "description_override": "ميدالية مفاتيح بتصميم كالسيكي، مزينة بحجر كالسيدوني أزرق مصقول وتفاصيل معدنية بلون نحاسي معتق",
@@ -7139,7 +7410,8 @@
             "sm": "/magazine/canva_products/p35_s1.webp",
             "md": "/magazine/canva_products/p35_s1.webp",
             "lg": "/magazine/canva_products/p35_s1.webp"
-          }
+          },
+          "cashier_code": 441
         },
         "title_override": "ميدالية عين حورس",
         "description_override": "ميدالية مفاتيح معدنية بتصميم مستوحى من عين حورس الفرعونية، مثبتة بسلسلة متينة",
@@ -7164,7 +7436,8 @@
             "sm": "/magazine/canva_products/p35_s2.webp",
             "md": "/magazine/canva_products/p35_s2.webp",
             "lg": "/magazine/canva_products/p35_s2.webp"
-          }
+          },
+          "cashier_code": 441
         },
         "title_override": "ميدالية باستت الفرعونية",
         "description_override": "ميدالية مفاتيح بتصميم فرعوني مستوحى من باستت الفرعونية",
@@ -7189,7 +7462,8 @@
             "sm": "/magazine/canva_products/p35_s3.webp",
             "md": "/magazine/canva_products/p35_s3.webp",
             "lg": "/magazine/canva_products/p35_s3.webp"
-          }
+          },
+          "cashier_code": 441
         },
         "title_override": "ميدالية توت عنخ آمون",
         "description_override": "ميدالية مفاتيح من النحاس بتصميم مستوحى من تابوت توت عنخ آمون، مع تفاصيل فرعونية مميزة",
@@ -7214,7 +7488,8 @@
             "sm": "/magazine/canva_products/p35_s4.webp",
             "md": "/magazine/canva_products/p35_s4.webp",
             "lg": "/magazine/canva_products/p35_s4.webp"
-          }
+          },
+          "cashier_code": 441
         },
         "title_override": "ميدالية مفتاح الحياة",
         "description_override": "ميدالية مفاتيح بتصميم فرعوني مستوحى »من رمز مفتاح الحياة »عنخ",
@@ -7239,7 +7514,8 @@
             "sm": "/magazine/canva_products/p35_s5.webp",
             "md": "/magazine/canva_products/p35_s5.webp",
             "lg": "/magazine/canva_products/p35_s5.webp"
-          }
+          },
+          "cashier_code": 441
         },
         "title_override": "ميدالية الملكة نفرتيتي",
         "description_override": "ميدالية مفاتيح من النحاس بتصميم مستوحى من تمثال الملكة نفرتيتي",
@@ -7264,7 +7540,8 @@
             "sm": "/magazine/canva_products/p35_s6.webp",
             "md": "/magazine/canva_products/p35_s6.webp",
             "lg": "/magazine/canva_products/p35_s6.webp"
-          }
+          },
+          "cashier_code": 441
         },
         "title_override": "ميدالية الجعران الفرعوني",
         "description_override": "ميدالية مفاتيح معدنية بتصميم الجعران الفرعوني وتفاصيل دقيقة",
@@ -7289,7 +7566,8 @@
             "sm": "/magazine/canva_products/p35_s7.webp",
             "md": "/magazine/canva_products/p35_s7.webp",
             "lg": "/magazine/canva_products/p35_s7.webp"
-          }
+          },
+          "cashier_code": 441
         },
         "title_override": "ميدالية الملكة كليوباترا",
         "description_override": "ميدالية مفاتيح من النحاس بتصميم مستوحى من الملكة كليوباترا، مع تفاصيل بطابع مصري قديم",
@@ -7324,7 +7602,8 @@
             "sm": "/magazine/canva_products/p36_s1.webp",
             "md": "/magazine/canva_products/p36_s1.webp",
             "lg": "/magazine/canva_products/p36_s1.webp"
-          }
+          },
+          "cashier_code": 407
         },
         "title_override": "تمثال تابوت فرعوني ذهبي",
         "description_override": "تمثال زخرفي على هيئة تابوت فرعوني بتشطيب ذهبي معتق، مزين بالرموز الملكية التقليدية والنقوش الهيروغليفية الدقيقة",
@@ -7349,7 +7628,8 @@
             "sm": "/magazine/canva_products/p36_s2.webp",
             "md": "/magazine/canva_products/p36_s2.webp",
             "lg": "/magazine/canva_products/p36_s2.webp"
-          }
+          },
+          "cashier_code": 407
         },
         "title_override": "تمثال تابوت توت عنخ آمون",
         "description_override": "تمثال فرعوني على هيئة تابوت مومياء توت عنخ آمون، ذهبي وأسود معتق، مزين برموز .ملكية ومستوحاة من النقوش الهيروغليفية",
@@ -7374,7 +7654,8 @@
             "sm": "/magazine/canva_products/p36_s3.webp",
             "md": "/magazine/canva_products/p36_s3.webp",
             "lg": "/magazine/canva_products/p36_s3.webp"
-          }
+          },
+          "cashier_code": 411
         },
         "title_override": "شمعدان إيزيس بثلاثة أذرع",
         "description_override": "بثالثة أذرع مصنوع يدو ًيا برونزي  شمعدان معتق، مستوحى من اإللهة إيزيس بأجنحتها الممدودة، ومزود بثلاث حوامل للشموع",
@@ -7399,7 +7680,8 @@
             "sm": "/magazine/canva_products/p36_s4.webp",
             "md": "/magazine/canva_products/p36_s4.webp",
             "lg": "/magazine/canva_products/p36_s4.webp"
-          }
+          },
+          "cashier_code": 408
         },
         "title_override": "تمثال لتوت عنخ آمون",
         "description_override": "،أسود معتق  تمثال فرعوني مصنوع يدو ًيا مزين بلمسات ذهبية قديمة وتفاصيل دقيقة لغطاء الرأس الملكي",
@@ -7424,7 +7706,8 @@
             "sm": "/magazine/canva_products/p36_s5.webp",
             "md": "/magazine/canva_products/p36_s5.webp",
             "lg": "/magazine/canva_products/p36_s5.webp"
-          }
+          },
+          "cashier_code": 405
         },
         "title_override": "صندوق هرمي بعين حورس",
         "description_override": "صندوق هرمي أسود مصنوع يدو ًيا بملمس مستوحى من أعمال البناء الحجري، مزين  بارز برمز عين حورس باللون الذهبي",
@@ -7449,7 +7732,8 @@
             "sm": "/magazine/canva_products/p36_s6.webp",
             "md": "/magazine/canva_products/p36_s6.webp",
             "lg": "/magazine/canva_products/p36_s6.webp"
-          }
+          },
+          "cashier_code": 404
         },
         "title_override": "تمثال لتوت عنخ آمون",
         "description_override": "تمثال فرعوني مصنوع يدو ًيا بتشطيب أسود مطفي، مزين بتفاصيل ولمسات معدنية .ذهبية، مع خلفية مستوحاة من شكل الهرم",
@@ -7474,7 +7758,8 @@
             "sm": "/magazine/canva_products/p36_s7.webp",
             "md": "/magazine/canva_products/p36_s7.webp",
             "lg": "/magazine/canva_products/p36_s7.webp"
-          }
+          },
+          "cashier_code": 410
         },
         "title_override": "تمثال حورس المصري",
         "description_override": "تمثال فرعوني لإلله حورس مصنوع يدو ًيا بتشطيب حجري داكن معتق ولمسات باتينا فاتحة، مزين برأس الصقر التقليدي",
@@ -7499,7 +7784,8 @@
             "sm": "/magazine/canva_products/p36_s8.webp",
             "md": "/magazine/canva_products/p36_s8.webp",
             "lg": "/magazine/canva_products/p36_s8.webp"
-          }
+          },
+          "cashier_code": 406
         },
         "title_override": "تمثال لرمسيس الثاني",
         "description_override": "،تمثال فرعوني مصنوع يدو ًيا أسود مطفي مزين بتفاصيل معدنية ذهبية وقاعدة زخرفية مستوحاة من الفن المصري القديم",
@@ -7524,7 +7810,8 @@
             "sm": "/magazine/canva_products/p36_s9.webp",
             "md": "/magazine/canva_products/p36_s9.webp",
             "lg": "/magazine/canva_products/p36_s9.webp"
-          }
+          },
+          "cashier_code": 409
         },
         "title_override": "تمثال  أبو الهول",
         "description_override": "تمثال فرعوني ألبي الهول مصنوع يدو ًيا بتشطيب حجري داكن معتق، مزين بلمسات ،باتينا فاتحة",
@@ -7559,7 +7846,8 @@
             "sm": "/magazine/canva_products/p37_s1.webp",
             "md": "/magazine/canva_products/p37_s1.webp",
             "lg": "/magazine/canva_products/p37_s1.webp"
-          }
+          },
+          "cashier_code": 412
         },
         "title_override": "تمثال الإلهة إيزيس",
         "description_override": "تمثال حجري من اإللهة إيزيس، بأجنحة ممدودة إلى أعلى وتاج فرعوني، ومزين بنقوش مصرية قديمة على القاعدة",
@@ -7584,7 +7872,8 @@
             "sm": "/magazine/canva_products/p37_s2.webp",
             "md": "/magazine/canva_products/p37_s2.webp",
             "lg": "/magazine/canva_products/p37_s2.webp"
-          }
+          },
+          "cashier_code": 415
         },
         "title_override": "طبق حائط فرعوني ديكوري",
         "description_override": "طبق حائط مستوحى من الفن المصري القديم، يتوسطه بروفايل ملكة فرعونية .مجنحة، وزخارف باللون الأسود والذهبي",
@@ -7609,7 +7898,8 @@
             "sm": "/magazine/canva_products/p37_s3.webp",
             "md": "/magazine/canva_products/p37_s3.webp",
             "lg": "/magazine/canva_products/p37_s3.webp"
-          }
+          },
+          "cashier_code": 416
         },
         "title_override": "طبق حائط »مصور »إخناتون",
         "description_override": "طبق حائط يصور الملك إخناتون مع قرص الشمس آتون واألشعة المميزة،وتفاصيل سوداء وذهبية وإطار هندسي مزخرف",
@@ -7634,7 +7924,8 @@
             "sm": "/magazine/canva_products/p37_s4.webp",
             "md": "/magazine/canva_products/p37_s4.webp",
             "lg": "/magazine/canva_products/p37_s4.webp"
-          }
+          },
+          "cashier_code": 417
         },
         "title_override": "طبق خائط بملكة كليوبترا",
         "description_override": "طبق حائط يتوسطه بروفايل ملكة فرعونية بين أعمدة مستوحاة من المعابد المصرية القديمة، مع زخارف",
@@ -7659,7 +7950,8 @@
             "sm": "/magazine/canva_products/p37_s5.webp",
             "md": "/magazine/canva_products/p37_s5.webp",
             "lg": "/magazine/canva_products/p37_s5.webp"
-          }
+          },
+          "cashier_code": 416
         },
         "title_override": "طبق حائط المحاكمة",
         "description_override": "طبق حائط يصور مشه ًدا فرعون ًيا مستوحى من «المحاكمة»، بتفاصيل سوداء وذهبية .وزخارف نباتية، ومحاط بإطار هندسي مزخرف",
@@ -7684,7 +7976,8 @@
             "sm": "/magazine/canva_products/p37_s6.webp",
             "md": "/magazine/canva_products/p37_s6.webp",
             "lg": "/magazine/canva_products/p37_s6.webp"
-          }
+          },
+          "cashier_code": 416
         },
         "title_override": "طبق حائط الأهرامات وأبو الهول",
         "description_override": "طبق حائط يصور األهرامات وأبو الهول مع رمز عين حورس، ومزين بتفاصيل سوداء وذهبية",
@@ -7709,7 +8002,8 @@
             "sm": "/magazine/canva_products/p37_s7.webp",
             "md": "/magazine/canva_products/p37_s7.webp",
             "lg": "/magazine/canva_products/p37_s7.webp"
-          }
+          },
+          "cashier_code": 418
         },
         "title_override": "حقيبة قماش بطابع فرعوني",
         "description_override": "حقيبة صغيرة من الكتان الطبيعي، مزينة بطباعة مستوحاة من القطة المصرية القديمة والرموز الهيروغليفية",
@@ -7734,7 +8028,8 @@
             "sm": "/magazine/canva_products/p37_s8.webp",
             "md": "/magazine/canva_products/p37_s8.webp",
             "lg": "/magazine/canva_products/p37_s8.webp"
-          }
+          },
+          "cashier_code": 413
         },
         "title_override": "تمثال للملك توت عنخ آمون",
         "description_override": "تمثال فرعوني مصنوع يدو ًيا للملك توت عنخ آمون، بتفاصيل ذهبية وزرقاء وحمراء",
@@ -7759,7 +8054,8 @@
             "sm": "/magazine/canva_products/p37_s9.webp",
             "md": "/magazine/canva_products/p37_s9.webp",
             "lg": "/magazine/canva_products/p37_s9.webp"
-          }
+          },
+          "cashier_code": 416
         },
         "title_override": "طبق معدني ديكوري مصنوع يدو ًيا، يتوسطه بروفايل ملكة فرعونية بين أعمدة مستوحاة من المعابد المصرية القديمة، مع زخارف وتفاصيل سوداء وذهبية دقيقة طبق حائط عربة رمسيس",
         "description_override": "طبق حائط يصور الملك رمسيس على عربة حربية مع قوس ورمز عين حورس، ومزين بتفاصيل سوداء وذهبية",
@@ -7794,7 +8090,8 @@
             "sm": "/magazine/canva_products/p38_s1.webp",
             "md": "/magazine/canva_products/p38_s1.webp",
             "lg": "/magazine/canva_products/p38_s1.webp"
-          }
+          },
+          "cashier_code": 422
         },
         "title_override": "تمثال للإلهة حتحور",
         "description_override": "،تمثال مصنوع يدو ًيا بتشطيب حجري فاتح يجسد اإللهة حتحور بغطاء الرأس التقليدي وقلادة مزخرفة، ومثبت على قاعدة زخرفية",
@@ -7819,7 +8116,8 @@
             "sm": "/magazine/canva_products/p38_s2.webp",
             "md": "/magazine/canva_products/p38_s2.webp",
             "lg": "/magazine/canva_products/p38_s2.webp"
-          }
+          },
+          "cashier_code": 421
         },
         "title_override": "تمثال للملكة نفرتيتي",
         "description_override": "تمثال مصنوع يدو ًيا حجري فاتح، يجسد الملكة نفرتيتي بتاجها الشهير وقالدتها العريضة، ومثبت على قاعدة زخرفية",
@@ -7844,7 +8142,8 @@
             "sm": "/magazine/canva_products/p38_s3.webp",
             "md": "/magazine/canva_products/p38_s3.webp",
             "lg": "/magazine/canva_products/p38_s3.webp"
-          }
+          },
+          "cashier_code": 423
         },
         "title_override": "تمثال  أنوبيس",
         "description_override": "تمثال فرعوني مصنوع يدو ًيا حجري فاتح معتق، يجسد اإلله أنوبيس برأس ابن آوى والزي المصري التقليدي",
@@ -7869,7 +8168,8 @@
             "sm": "/magazine/canva_products/p38_s4.webp",
             "md": "/magazine/canva_products/p38_s4.webp",
             "lg": "/magazine/canva_products/p38_s4.webp"
-          }
+          },
+          "cashier_code": 420
         },
         "title_override": "تمثال  الالهة إيزيس",
         "description_override": "تمثال فرعوني مصنوع يدو ًيا حجري فاتح معتق، يجسد اإللهة إيزيس بأجنحتها الممدودة وغطاء الرأس التقليدي",
@@ -7894,7 +8194,8 @@
             "sm": "/magazine/canva_products/p38_s5.webp",
             "md": "/magazine/canva_products/p38_s5.webp",
             "lg": "/magazine/canva_products/p38_s5.webp"
-          }
+          },
+          "cashier_code": 419
         },
         "title_override": "تمثال فرعوني",
         "description_override": "تمثال فرعوني مصنوع يدو ًيا حجري فاتح ،معتق، مستوحى من هيئة المومياء الملكية ومزين بغطاء الرأس الفرعوني والعصا",
@@ -7919,7 +8220,8 @@
             "sm": "/magazine/canva_products/p38_s6.webp",
             "md": "/magazine/canva_products/p38_s6.webp",
             "lg": "/magazine/canva_products/p38_s6.webp"
-          }
+          },
+          "cashier_code": 424
         },
         "title_override": "تمثال حورس",
         "description_override": "تمثال فرعوني مصنوع يدو ًيا بتشطيب حجري فاتح معتق، يجسد اإلله حورس برأس الصقر والتاج المزدوج والزي المصري التقليدي",
@@ -7944,7 +8246,8 @@
             "sm": "/magazine/canva_products/p38_s7.webp",
             "md": "/magazine/canva_products/p38_s7.webp",
             "lg": "/magazine/canva_products/p38_s7.webp"
-          }
+          },
+          "cashier_code": 427
         },
         "title_override": "طقم كوسترات من الألباستر",
         "description_override": "،طقم مصنوع يدو ًيا من األلباستر األصفر ،يضم حام ًلا وكوسترات دائرية متناسقة بعروق بيضاء شفافة",
@@ -7969,7 +8272,8 @@
             "sm": "/magazine/canva_products/p38_s8.webp",
             "md": "/magazine/canva_products/p38_s8.webp",
             "lg": "/magazine/canva_products/p38_s8.webp"
-          }
+          },
+          "cashier_code": 426
         },
         "title_override": "رمز مفتاح الحياة الالبستر",
         "description_override": "قطعة ديكورية مصنوعة يدو ًيا على شكل مفتاح الحياة «عنخ»، منحوتة من األلباستر الاحمر بعروق طبيعية",
@@ -7994,7 +8298,8 @@
             "sm": "/magazine/canva_products/p38_s9.webp",
             "md": "/magazine/canva_products/p38_s9.webp",
             "lg": "/magazine/canva_products/p38_s9.webp"
-          }
+          },
+          "cashier_code": 428
         },
         "title_override": "بيضة ألباستر زرقاء",
         "description_override": "قطعة ديكورية مصنوعة يدو ًيا من األلباستر الأزرق، تتميز بعروق طبيعية .شفافة وتدرجات لونية مميزة",
@@ -8029,7 +8334,8 @@
             "sm": "/magazine/canva_products/p39_s1.webp",
             "md": "/magazine/canva_products/p39_s1.webp",
             "lg": "/magazine/canva_products/p39_s1.webp"
-          }
+          },
+          "cashier_code": 77
         },
         "title_override": "كوستر كونكريت أصفر على شكل زهرة",
         "description_override": "كوستر كونكريت أصفر مصنوع يدو ًيا على شكل زهرة، يتميز بتشطيب المع وحافة متموجة وتجويف بسيط",
@@ -8054,7 +8360,8 @@
             "sm": "/magazine/canva_products/p39_s2.webp",
             "md": "/magazine/canva_products/p39_s2.webp",
             "lg": "/magazine/canva_products/p39_s2.webp"
-          }
+          },
+          "cashier_code": 40
         },
         "title_override": "مبخرة زيوت",
         "description_override": "مبخرة زيوت عطرية البني الداكن، بطالء المع منقط، مزودة بطبق علوي إلذابة الزيوت أو .الشمع وفتحة سفلية لوضع شمعة صغيرة",
@@ -8079,7 +8386,8 @@
             "sm": "/magazine/canva_products/p39_s3.webp",
             "md": "/magazine/canva_products/p39_s3.webp",
             "lg": "/magazine/canva_products/p39_s3.webp"
-          }
+          },
+          "cashier_code": 31
         },
         "title_override": "شمعة يدوية بنقشة ازهار",
         "description_override": "أصفر مصنوع يدو ًيا، مزين  شمعة داخل وعاء برسومات زهرية حمراء، ومعبأة بشمع أبيض وفتيل قطني واحد",
@@ -8104,7 +8412,8 @@
             "sm": "/magazine/canva_products/p39_s4.webp",
             "md": "/magazine/canva_products/p39_s4.webp",
             "lg": "/magazine/canva_products/p39_s4.webp"
-          }
+          },
+          "cashier_code": null
         },
         "title_override": "فازة صفراء نحتية",
         "description_override": "فازة صفراء بتصميم نحتي عصري وشكل ملتف مميز، مزينة بزهور بيضاء رقيقة",
@@ -8129,7 +8438,8 @@
             "sm": "/magazine/canva_products/p39_s5.webp",
             "md": "/magazine/canva_products/p39_s5.webp",
             "lg": "/magazine/canva_products/p39_s5.webp"
-          }
+          },
+          "cashier_code": 43
         },
         "title_override": "شمعة زجاجية  على شكل نجمة",
         "description_override": "،شمعة داخل برطمان زجاجي على شكل نجمة ،مملوءة بشمع الوان وروائح متعدده ومغلقة بغطاء من الفلين",
@@ -8154,7 +8464,8 @@
             "sm": "/magazine/canva_products/p39_s6.webp",
             "md": "/magazine/canva_products/p39_s6.webp",
             "lg": "/magazine/canva_products/p39_s6.webp"
-          }
+          },
+          "cashier_code": 21
         },
         "title_override": "شمعة كونكريت بشكل بيت",
         "description_override": "،شمعة مصنوعة يدو ًيا على شكل بيت صغير مزينة بتفاصيل باب ونافذة وتطريزات زهرية صفراء زاهية",
@@ -8179,7 +8490,8 @@
             "sm": "/magazine/canva_products/p39_s7.webp",
             "md": "/magazine/canva_products/p39_s7.webp",
             "lg": "/magazine/canva_products/p39_s7.webp"
-          }
+          },
+          "cashier_code": 47
         },
         "title_override": "فواحة معطرة للسيارة والدوالب",
         "description_override": "فواحة عطرية بتصميم بسيط، مناسبة لتعطير السيارة أو الدوالب واألماكن الصغيرة، ومتوفرة بروائح متنوعة",
@@ -8204,7 +8516,8 @@
             "sm": "/magazine/canva_products/p39_s8.webp",
             "md": "/magazine/canva_products/p39_s8.webp",
             "lg": "/magazine/canva_products/p39_s8.webp"
-          }
+          },
+          "cashier_code": 22
         },
         "title_override": "شمعة  مع كوستر",
         "description_override": "شمعة داخل وعاء سيراميك أبيض مزين بزهور وردية صغيرة، تأتي مع كوستر .متناسقة بنفس التصميم رقيقة وأنيقة",
@@ -8229,7 +8542,8 @@
             "sm": "/magazine/canva_products/p39_s9.webp",
             "md": "/magazine/canva_products/p39_s9.webp",
             "lg": "/magazine/canva_products/p39_s9.webp"
-          }
+          },
+          "cashier_code": 46
         },
         "title_override": "فواحة  زجاجية صغيرة",
         "description_override": "فواحة داخل برطمان زجاجي شفاف، ومتوفرة بروائح عطرية متنوعة تناسب األذواق المختلفة",
@@ -8264,7 +8578,8 @@
             "sm": "/magazine/canva_products/p40_s1.webp",
             "md": "/magazine/canva_products/p40_s1.webp",
             "lg": "/magazine/canva_products/p40_s1.webp"
-          }
+          },
+          "cashier_code": 25
         },
         "title_override": "شمعة بنقشة الماندالا الذهبية",
         "description_override": "،شمعة داخل علبة معدنية بنفسجية دائرية مزينة بنقوش ماند ال ذهبية، ومتوفرة بروائح عطرية متنوعة تناسب الأذواق المختلفة",
@@ -8289,7 +8604,8 @@
             "sm": "/magazine/canva_products/p40_s2.webp",
             "md": "/magazine/canva_products/p40_s2.webp",
             "lg": "/magazine/canva_products/p40_s2.webp"
-          }
+          },
+          "cashier_code": 32
         },
         "title_override": "شمعة زجاجية بنفسجية",
         "description_override": "شمعة عطرية داخل وعاء زجاجي بنفسجي شفاف بغطاء خشبي، ومتوفرة بروائح .عطرية متنوعة تناسب الأذواق المختلفة",
@@ -8314,7 +8630,8 @@
             "sm": "/magazine/canva_products/p40_s3.webp",
             "md": "/magazine/canva_products/p40_s3.webp",
             "lg": "/magazine/canva_products/p40_s3.webp"
-          }
+          },
+          "cashier_code": 52
         },
         "title_override": "شمعة داخل وعاء منقط",
         "description_override": "شمعة داخل وعاء أبيض منقط، مزينة بقطع شمع صغيرة على شكل قلوب بنية، ومتوفرة بروائح عطرية متنوعة",
@@ -8339,7 +8656,8 @@
             "sm": "/magazine/canva_products/p40_s4.webp",
             "md": "/magazine/canva_products/p40_s4.webp",
             "lg": "/magazine/canva_products/p40_s4.webp"
-          }
+          },
+          "cashier_code": 27
         },
         "title_override": "شمعة على شكل نجمة بحر",
         "description_override": "،شمعة داخل طبق على شكل نجمة بحر مزينة بتفاصيل شمعية وردية ، ومتوفرة بروائح عطرية",
@@ -8364,7 +8682,8 @@
             "sm": "/magazine/canva_products/p40_s5.webp",
             "md": "/magazine/canva_products/p40_s5.webp",
             "lg": "/magazine/canva_products/p40_s5.webp"
-          }
+          },
+          "cashier_code": 24
         },
         "title_override": "شمعة غيوم وبابيونات",
         "description_override": "شمعة داخل وعاء مزين بحواف بدرجات هادئة، بتفاصيل شمعية على شكل غيوم .وبابيونات، ومتوفرة بروائح عطرية متنوعة",
@@ -8389,7 +8708,8 @@
             "sm": "/magazine/canva_products/p40_s6.webp",
             "md": "/magazine/canva_products/p40_s6.webp",
             "lg": "/magazine/canva_products/p40_s6.webp"
-          }
+          },
+          "cashier_code": 21
         },
         "title_override": "شمعة على شكل بيت الورود",
         "description_override": "،شمعة يدوية على شكل بيت باللون الوردي مزينة بتفاصيل باب ونوافذ بيضاء وزهور وردية بارزة، ومتوفرة بروائح عطرية متنوعة",
@@ -8414,7 +8734,8 @@
             "sm": "/magazine/canva_products/p40_s7.webp",
             "md": "/magazine/canva_products/p40_s7.webp",
             "lg": "/magazine/canva_products/p40_s7.webp"
-          }
+          },
+          "cashier_code": 41
         },
         "title_override": "شمعة  على شكل صدفة بحرية",
         "description_override": "شمعة داخل وعاء أبيض على شكل صدفة بحرية، مزينة بقطع شمع صغيرة على شكل قلوب بنفسجية على السطح، ومتوفرة بروائح عطرية متنوعة",
@@ -8439,7 +8760,8 @@
             "sm": "/magazine/canva_products/p40_s8.webp",
             "md": "/magazine/canva_products/p40_s8.webp",
             "lg": "/magazine/canva_products/p40_s8.webp"
-          }
+          },
+          "cashier_code": null
         },
         "title_override": "شمعة  زجاجية مضلعة",
         "description_override": "،شمعة داخل وعاء زجاجي شفاف مضلع مزينة بزهرة فاوانيا وردية وتفاصيل شمعية خضراء، ومتوفرة بروائح عطرية متنوعة",
@@ -8464,7 +8786,8 @@
             "sm": "/magazine/canva_products/p40_s9.webp",
             "md": "/magazine/canva_products/p40_s9.webp",
             "lg": "/magazine/canva_products/p40_s9.webp"
-          }
+          },
+          "cashier_code": 35
         },
         "title_override": "شمعة  فقاعات باللون األزرق",
         "description_override": "شمعة عصرية باللون األزرق ، مصممة من ،مجموعة كرات متداخلة بتكوين هندسي مميز ومتوفرة بروائح عطرية متنوعة",
@@ -8499,7 +8822,8 @@
             "sm": "/magazine/canva_products/p42_s1.webp",
             "md": "/magazine/canva_products/p42_s1.webp",
             "lg": "/magazine/canva_products/p42_s1.webp"
-          }
+          },
+          "cashier_code": 23
         },
         "title_override": "شمعة دبدوب في سيارة",
         "description_override": "،شمعة داخل علبة معدنية بنفسجية دائرية مزينة بنقوش ماند ال ذهبية، ومتوفرة بروائح عطرية متنوعة تناسب الأذواق المختلفة",
@@ -8524,7 +8848,8 @@
             "sm": "/magazine/canva_products/p42_s2.webp",
             "md": "/magazine/canva_products/p42_s2.webp",
             "lg": "/magazine/canva_products/p42_s2.webp"
-          }
+          },
+          "cashier_code": 42
         },
         "title_override": "شمعة دائرية كنوز البحر",
         "description_override": "شمعة داخل وعاء أبيض دائري، مزينة بتفاصيل شمعية بحرية تشمل حرو ًفا زرقاء ونجمة بحر وأصداف وردية",
@@ -8549,7 +8874,8 @@
             "sm": "/magazine/canva_products/p42_s3.webp",
             "md": "/magazine/canva_products/p42_s3.webp",
             "lg": "/magazine/canva_products/p42_s3.webp"
-          }
+          },
+          "cashier_code": 39
         },
         "title_override": "فواحة زيوت سماء غائمة",
         "description_override": "فواحة زيوت عطرية أزرق فاتح، مزينة يدو ًيا بنقوش سحب بيضاء، ومزودة بطبق علوي .للزيوت وفتحة سفلية لوضع شمعة صغيرة",
@@ -8574,7 +8900,8 @@
             "sm": "/magazine/canva_products/p42_s4.webp",
             "md": "/magazine/canva_products/p42_s4.webp",
             "lg": "/magazine/canva_products/p42_s4.webp"
-          }
+          },
+          "cashier_code": 21
         },
         "title_override": "شمعة على شكل نجمة بحر",
         "description_override": "،شمعة داخل طبق على شكل نجمة بحر مزينة بتفاصيل شمعية وردية ، ومتوفرة بروائح عطرية",
@@ -8599,7 +8926,8 @@
             "sm": "/magazine/canva_products/p42_s5.webp",
             "md": "/magazine/canva_products/p42_s5.webp",
             "lg": "/magazine/canva_products/p42_s5.webp"
-          }
+          },
+          "cashier_code": 29
         },
         "title_override": "شمعة غيوم وبابيونات",
         "description_override": "شمعة داخل وعاء مزين بحواف بدرجات هادئة، بتفاصيل شمعية على شكل غيوم .وبابيونات، ومتوفرة بروائح عطرية متنوعة",
@@ -8624,7 +8952,8 @@
             "sm": "/magazine/canva_products/p42_s6.webp",
             "md": "/magazine/canva_products/p42_s6.webp",
             "lg": "/magazine/canva_products/p42_s6.webp"
-          }
+          },
+          "cashier_code": 20
         },
         "title_override": "شمعة على شكل بيت الورود",
         "description_override": "،شمعة يدوية على شكل بيت باللون الوردي مزينة بتفاصيل باب ونوافذ بيضاء وزهور وردية بارزة، ومتوفرة بروائح عطرية متنوعة",
@@ -8649,7 +8978,8 @@
             "sm": "/magazine/canva_products/p42_s7.webp",
             "md": "/magazine/canva_products/p42_s7.webp",
             "lg": "/magazine/canva_products/p42_s7.webp"
-          }
+          },
+          "cashier_code": 36
         },
         "title_override": "شمعة  حلوى كب كيك وردي",
         "description_override": "،شمعة على شكل كب كيك بقاعدة وردية مزينة بتفاصيل شمعية تشبه الكريمة والرشات الملونة والقلوب الوردية",
@@ -8674,7 +9004,8 @@
             "sm": "/magazine/canva_products/p42_s8.webp",
             "md": "/magazine/canva_products/p42_s8.webp",
             "lg": "/magazine/canva_products/p42_s8.webp"
-          }
+          },
+          "cashier_code": 28
         },
         "title_override": "طبق ورقة شجر",
         "description_override": "طبق سيراميك برتقالي او اخضر مصنوع يدو ًيا على شكل ورقة نبات، يتميز بتفاصيل العروق البارزة وتشطيب لامع",
@@ -8699,7 +9030,8 @@
             "sm": "/magazine/canva_products/p42_s9.webp",
             "md": "/magazine/canva_products/p42_s9.webp",
             "lg": "/magazine/canva_products/p42_s9.webp"
-          }
+          },
+          "cashier_code": 30
         },
         "title_override": "شمعة زهور برتقالية",
         "description_override": "شمعة داخل وعاء أبيض أسطواني، مزينة ،بزهور برتقالية بارزة وتفاصيل بسيطة ومتوفرة بروائح عطرية متنوعة",
@@ -8734,7 +9066,8 @@
             "sm": "/magazine/canva_products/p43_s1.webp",
             "md": "/magazine/canva_products/p43_s1.webp",
             "lg": "/magazine/canva_products/p43_s1.webp"
-          }
+          },
+          "cashier_code": 89
         },
         "title_override": "طقم إكسسوارات كونكريت",
         "description_override": "،طقم إكسسوارات كونكريت بتصميم مستوحى من الرخام الطبيعي ،يضم صينية وعلبة بغطاء لحفظ القطن والمستلزمات الصغيرة يتميز بتدرجات الأبيض والرمادي ولمسات أنيقة",
@@ -8759,7 +9092,8 @@
             "sm": "/magazine/canva_products/p43_s2.webp",
             "md": "/magazine/canva_products/p43_s2.webp",
             "lg": "/magazine/canva_products/p43_s2.webp"
-          }
+          },
+          "cashier_code": 330
         },
         "title_override": "كوستر سلحفاة كروشيه أميجرومي",
         "description_override": "كوستر مصنوع يدو ًيا من الكروشيه على شكل سلحفاة، بتفاصيل دقيقة وقاعدة دائرية، ومتوفر بألوان مختلفة",
@@ -8784,7 +9118,8 @@
             "sm": "/magazine/canva_products/p43_s3.webp",
             "md": "/magazine/canva_products/p43_s3.webp",
             "lg": "/magazine/canva_products/p43_s3.webp"
-          }
+          },
+          "cashier_code": 85
         },
         "title_override": "فازة كونكريت  بتصميم دائري مجوف",
         "description_override": "فازة ديكورية من الكونكريت األبيض، تتميز بتصميم تجريدي انسيابي مع فتحة دائرية في المنتصف، مناسبة لتنسيق الزهور واألغصان المجففة وإضافة لمسة عصرية للديكور",
@@ -8809,7 +9144,8 @@
             "sm": "/magazine/canva_products/p43_s4.webp",
             "md": "/magazine/canva_products/p43_s4.webp",
             "lg": "/magazine/canva_products/p43_s4.webp"
-          }
+          },
+          "cashier_code": 332
         },
         "title_override": "أرنب كروشيه أميجرومي",
         "description_override": "،أرنب مصنوع يدو ًيا من الكروشيه بتفاصيل لطيفة وتصميم بسيط ومتوفر بألوان مختلفة",
@@ -8834,7 +9170,8 @@
             "sm": "/magazine/canva_products/p43_s5.webp",
             "md": "/magazine/canva_products/p43_s5.webp",
             "lg": "/magazine/canva_products/p43_s5.webp"
-          }
+          },
+          "cashier_code": 84
         },
         "title_override": "فازة كونكريت زرقاء بتصميم تجريدي",
         "description_override": "فازة ديكورية من كونكريت باللون األزرق الداكن، تتميز بتصميم تجريدي منحوت بخطوط انسيابية بارزة، مناسبة لتنسيق الزهور المجففة وإضفاء لمسة فنية عصرية على الديكور",
@@ -8859,7 +9196,8 @@
             "sm": "/magazine/canva_products/p43_s6.webp",
             "md": "/magazine/canva_products/p43_s6.webp",
             "lg": "/magazine/canva_products/p43_s6.webp"
-          }
+          },
+          "cashier_code": 48
         },
         "title_override": "شمع معطر حروف الباستيل",
         "description_override": "قطعة شمع معطر بأشكال «حروف الباستيل»حروف وقلوب بدرجات الباستيل من الوردي والبنفسجي واألبيض، ومتوفرة بروائح عطرية متنوعة تناسب الأذواق المختلفة",
@@ -8894,7 +9232,8 @@
             "sm": "/magazine/canva_products/p44_s1.webp",
             "md": "/magazine/canva_products/p44_s1.webp",
             "lg": "/magazine/canva_products/p44_s1.webp"
-          }
+          },
+          "cashier_code": 8
         },
         "title_override": "أطباق خشبية بأحجام متدرجة",
         "description_override": "،اطباق مصنوعة يدو ًيا من الخشب الطبيعي بأحجام متدرجة وتصميم متداخل، لتقديم .الزيتون والمكسرات وغيرها من المقبالت",
@@ -8919,7 +9258,8 @@
             "sm": "/magazine/canva_products/p44_s2.webp",
             "md": "/magazine/canva_products/p44_s2.webp",
             "lg": "/magazine/canva_products/p44_s2.webp"
-          }
+          },
+          "cashier_code": 304
         },
         "title_override": "علبة مناديل خشبية بنقوش مفرغة",
         "description_override": "علبة مناديل من الخشب الطبيعي المصنوع يدو ًيا، تتميز بزخارف هندسية دقيقة مفرغة يُبرز جمال عروق الخشب",
@@ -8944,7 +9284,8 @@
             "sm": "/magazine/canva_products/p44_s3.webp",
             "md": "/magazine/canva_products/p44_s3.webp",
             "lg": "/magazine/canva_products/p44_s3.webp"
-          }
+          },
+          "cashier_code": 7
         },
         "title_override": "طقم تقديم خشبي مقسم للمقبالت",
         "description_override": "طقم تقديم من الخشب الطبيعي المصنوع يدو ًيا، يتميز بأقسام لتقديم اللحوم الباردة .والجبن والزيتون والمقرمشات والمقبالت",
@@ -8969,7 +9310,8 @@
             "sm": "/magazine/canva_products/p44_s4.webp",
             "md": "/magazine/canva_products/p44_s4.webp",
             "lg": "/magazine/canva_products/p44_s4.webp"
-          }
+          },
+          "cashier_code": 287
         },
         "title_override": "صينية خشبية سداسية",
         "description_override": "صينية خشبية سداسية الشكل مصنوعة يدو ًيا من الخشب الفاتح، تتميز بزخارف  ،هندسية إسلامية دقيقة على شكل نجمة",
@@ -8994,7 +9336,8 @@
             "sm": "/magazine/canva_products/p44_s5.webp",
             "md": "/magazine/canva_products/p44_s5.webp",
             "lg": "/magazine/canva_products/p44_s5.webp"
-          }
+          },
+          "cashier_code": 289
         },
         "title_override": "صينية دائرية بنقوش محفورة",
         "description_override": "صينية تقديم دائرية من الخشب الطبيعي المصنوع يدو ًيا، تتميز بحواف مرتفعة وزخارف هندسية محفورة",
@@ -9019,7 +9362,8 @@
             "sm": "/magazine/canva_products/p44_s6.webp",
             "md": "/magazine/canva_products/p44_s6.webp",
             "lg": "/magazine/canva_products/p44_s6.webp"
-          }
+          },
+          "cashier_code": 293
         },
         "title_override": "صينية تقديم او قطاعه بمقابض محفورة",
         "description_override": "صينية تقديم مستطيلة من الخشب الطبيعي المصنوع يدو ًيا، تتميز بمقابض جانبية مزخرفة بنقوش محفورة بدقة",
@@ -9044,7 +9388,8 @@
             "sm": "/magazine/canva_products/p44_s7.webp",
             "md": "/magazine/canva_products/p44_s7.webp",
             "lg": "/magazine/canva_products/p44_s7.webp"
-          }
+          },
+          "cashier_code": 359
         },
         "title_override": "صينية خشبية محفورة",
         "description_override": "صينية خشبية مثمنة الشكل بتشطيب معتق، تتميز بزخارف هندسية مفرغة ومتداخلة بتصميم أنيق",
@@ -9069,7 +9414,8 @@
             "sm": "/magazine/canva_products/p44_s8.webp",
             "md": "/magazine/canva_products/p44_s8.webp",
             "lg": "/magazine/canva_products/p44_s8.webp"
-          }
+          },
+          "cashier_code": 283
         },
         "title_override": "علبة شاي خشبية بغطاء مشربية",
         "description_override": "علبة شاي من الخشب الطبيعي المصنوع يدو ًيا، تتميز بغطاء مفرغة مستوحاة من فن  المشربية، مع أقسام داخلية لتنظيم وحفظ",
@@ -9094,7 +9440,8 @@
             "sm": "/magazine/canva_products/p44_s9.webp",
             "md": "/magazine/canva_products/p44_s9.webp",
             "lg": "/magazine/canva_products/p44_s9.webp"
-          }
+          },
+          "cashier_code": 290
         },
         "title_override": "صينية   دائرية خشبية",
         "description_override": "صينية خشبية دائرية مصنوعة يدو ًيا، تتميز بزخارف هندسية",
@@ -9129,7 +9476,8 @@
             "sm": "/magazine/canva_products/p45_s1.webp",
             "md": "/magazine/canva_products/p45_s1.webp",
             "lg": "/magazine/canva_products/p45_s1.webp"
-          }
+          },
+          "cashier_code": 297
         },
         "title_override": "علبة تنظيم بزخارف الأرابيسك",
         "description_override": "،علبة تنظيم من الخشب المصنوع يدو ًيا تتميز بزخارف أرابيسك خشبية، لتنظيم ،وحفظ المقتنيات الشخصية",
@@ -9154,7 +9502,8 @@
             "sm": "/magazine/canva_products/p45_s2.webp",
             "md": "/magazine/canva_products/p45_s2.webp",
             "lg": "/magazine/canva_products/p45_s2.webp"
-          }
+          },
+          "cashier_code": 305
         },
         "title_override": "علبة مجوهرات بيضاوية بنقوش اللوتس",
         "description_override": "،علبة مجوهرات من الخشب المصنوع يدو ًيا تتميز بتصميم بيضاوي وغطاء مزين بنقوش ،مستوحاة من زهرة اللوتس",
@@ -9179,7 +9528,8 @@
             "sm": "/magazine/canva_products/p45_s3.webp",
             "md": "/magazine/canva_products/p45_s3.webp",
             "lg": "/magazine/canva_products/p45_s3.webp"
-          }
+          },
+          "cashier_code": 286
         },
         "title_override": "علبة مجوهرات بغطاء مزخرف بالمشربية",
         "description_override": "علبة تخزين من الخشب الطبيعي المصنوع يدو ًيا، تتميز بغطاء مزين بزخارف هندسية .مفرغة ومتداخلة مستوحاة من فن المشربية",
@@ -9204,7 +9554,8 @@
             "sm": "/magazine/canva_products/p45_s4.webp",
             "md": "/magazine/canva_products/p45_s4.webp",
             "lg": "/magazine/canva_products/p45_s4.webp"
-          }
+          },
+          "cashier_code": 284
         },
         "title_override": "شمعدان طويل بتصميم مخروطي",
         "description_override": "شمعدان طويل من الخشب الطبيعي المصنوع يدو ًيا ، يتميز بتصميم انسيابي .متدرج وتفاصيل ناعمة تُبرز عروق الخشب",
@@ -9229,7 +9580,8 @@
             "sm": "/magazine/canva_products/p45_s5.webp",
             "md": "/magazine/canva_products/p45_s5.webp",
             "lg": "/magazine/canva_products/p45_s5.webp"
-          }
+          },
+          "cashier_code": 285
         },
         "title_override": "شمعدان قصير بتصميم مخروطي",
         "description_override": "شمعدان قصير من الخشب الطبيعي المصنوع يدو ًيا ، يتميز بتصميم انسيابي .متدرج وتفاصيل ناعمة تُبرز عروق الخشب",
@@ -9254,7 +9606,8 @@
             "sm": "/magazine/canva_products/p45_s6.webp",
             "md": "/magazine/canva_products/p45_s6.webp",
             "lg": "/magazine/canva_products/p45_s6.webp"
-          }
+          },
+          "cashier_code": 296
         },
         "title_override": "علبة إكسسوارات  يدوية بنقوش الخيول",
         "description_override": "علبة إكسسوارات من الخشب المصنوع يدو ًيا، تتميز بزخارف محفورة بدقة مستوحاة من أشكال الخيول",
@@ -9279,7 +9632,8 @@
             "sm": "/magazine/canva_products/p45_s7.webp",
             "md": "/magazine/canva_products/p45_s7.webp",
             "lg": "/magazine/canva_products/p45_s7.webp"
-          }
+          },
+          "cashier_code": 303
         },
         "title_override": "كوستر دائري  بنقوش النجوم الهندسية",
         "description_override": "كوستر دائري من الخشب الطبيعي المصنوع يدو ًيا، يتميز بزخارف هندسية محفورة على شكل نجوم متداخلة",
@@ -9304,7 +9658,8 @@
             "sm": "/magazine/canva_products/p45_s8.webp",
             "md": "/magazine/canva_products/p45_s8.webp",
             "lg": "/magazine/canva_products/p45_s8.webp"
-          }
+          },
+          "cashier_code": 100
         },
         "title_override": "مصباح  مكتبي خشبي",
         "description_override": "مصباح مكتبي خشبي مصنوع يدويًا، يتميز بتصميم نحتي أنيق بعمود منحني على شكل ، مع غطاء إضاءة خشبيS حرف",
@@ -9329,7 +9684,8 @@
             "sm": "/magazine/canva_products/p45_s9.webp",
             "md": "/magazine/canva_products/p45_s9.webp",
             "lg": "/magazine/canva_products/p45_s9.webp"
-          }
+          },
+          "cashier_code": 281
         },
         "title_override": "مرآة خشبية محفورة",
         "description_override": "مرآة حائط بإطار خشبي مصنوع يدو ًيا، مزين بزخارف هندسية محفورة بطابع تراثي",
@@ -9364,7 +9720,8 @@
             "sm": "/magazine/canva_products/p46_s1.webp",
             "md": "/magazine/canva_products/p46_s1.webp",
             "lg": "/magazine/canva_products/p46_s1.webp"
-          }
+          },
+          "cashier_code": 447
         },
         "title_override": "علبة مجوهرات الصدف",
         "description_override": "،علبة مجوهرات خشبية سداسية الشكل مزينة بتطعيمات من عرق اللؤلؤ، وغطاء من الصدف الطبيعي",
@@ -9389,7 +9746,8 @@
             "sm": "/magazine/canva_products/p46_s2.webp",
             "md": "/magazine/canva_products/p46_s2.webp",
             "lg": "/magazine/canva_products/p46_s2.webp"
-          }
+          },
+          "cashier_code": 355
         },
         "title_override": "علبة إكسسوارات مربعة مطعمة بالصدف",
         "description_override": "علبة إكسسوارات مربعة من الخشب المصنوع يدو ًيا، تتميز بتطعيمات من الصدف الطبيعي، مع بطانة داخلية من القطيفة",
@@ -9414,7 +9772,8 @@
             "sm": "/magazine/canva_products/p46_s3.webp",
             "md": "/magazine/canva_products/p46_s3.webp",
             "lg": "/magazine/canva_products/p46_s3.webp"
-          }
+          },
+          "cashier_code": 354
         },
         "title_override": "علبة إكسسوارات مستطيل مطعمة الصدف",
         "description_override": "علبة إكسسوارات مستطيلة من الخشب المصنوع يدو ًيا، تتميز بتطعيمات من الصدف الطبيعي، مع بطانة داخلية من القطيفة",
@@ -9439,7 +9798,8 @@
             "sm": "/magazine/canva_products/p46_s4.webp",
             "md": "/magazine/canva_products/p46_s4.webp",
             "lg": "/magazine/canva_products/p46_s4.webp"
-          }
+          },
+          "cashier_code": 299
         },
         "title_override": "علبة مجوهرات  مطعمة بالصدف",
         "description_override": "،علبة مجوهرات من الخشب المصنوع يدو ًيا تتميز بتطعيمات من الصدف الطبيعي .بدرجات الأزرق والأبيض، على شكل نجمة",
@@ -9464,7 +9824,8 @@
             "sm": "/magazine/canva_products/p46_s5.webp",
             "md": "/magazine/canva_products/p46_s5.webp",
             "lg": "/magazine/canva_products/p46_s5.webp"
-          }
+          },
+          "cashier_code": 453
         },
         "title_override": "علبة مجوهرات سداسية مطعمة بالصدف",
         "description_override": "علبة مجوهرات سداسية من الخشب المصنوع يدو ًيا، تتميز بتطعيمات من الصدف الطبيعي ونقوش فسيفسائية هندسية متداخلة",
@@ -9489,7 +9850,8 @@
             "sm": "/magazine/canva_products/p46_s6.webp",
             "md": "/magazine/canva_products/p46_s6.webp",
             "lg": "/magazine/canva_products/p46_s6.webp"
-          }
+          },
+          "cashier_code": 452
         },
         "title_override": "علبة مجوهرات مطعمة بالصدف",
         "description_override": "،علبة مجوهرات من الخشب المصنوع يدو ًيا تتميز بتطعيمات من الصدف الطبيعي .ونقوش فسيفسائية هندسية متداخلة",
@@ -9514,7 +9876,8 @@
             "sm": "/magazine/canva_products/p46_s7.webp",
             "md": "/magazine/canva_products/p46_s7.webp",
             "lg": "/magazine/canva_products/p46_s7.webp"
-          }
+          },
+          "cashier_code": 449
         },
         "title_override": "كوستر دائري  بنقوش النجوم الهندسية",
         "description_override": "طقم مصنوع يدو ًيا يضم مبخرة وصينية دائرية، مزين بتطعيمات من الصدف الطبيعي ونقوش زهرية بدرجات الفيروزي",
@@ -9539,7 +9902,8 @@
             "sm": "/magazine/canva_products/p46_s8.webp",
             "md": "/magazine/canva_products/p46_s8.webp",
             "lg": "/magazine/canva_products/p46_s8.webp"
-          }
+          },
+          "cashier_code": 449
         },
         "title_override": "طقم مبخرة  مطعمة بالصدف",
         "description_override": "طقم مبخرة مصنوع يدو ًيا من الخشب الداكن، يتميز بتطعيمات من الصدف الطبيعي وزخارف نباتية أنيقة",
@@ -9564,7 +9928,8 @@
             "sm": "/magazine/canva_products/p46_s9.webp",
             "md": "/magazine/canva_products/p46_s9.webp",
             "lg": "/magazine/canva_products/p46_s9.webp"
-          }
+          },
+          "cashier_code": null
         },
         "title_override": "علبة مجوهرات مستطيل مطعم بالصدف",
         "description_override": "،علبة مجوهرات من الخشب المصنوع يدو ًيا تتميز بتطعيمات من الصدف الطبيعي .ونقوش فسيفسائية هندسية متداخلة",
@@ -9599,7 +9964,8 @@
             "sm": "/magazine/canva_products/p47_s1.webp",
             "md": "/magazine/canva_products/p47_s1.webp",
             "lg": "/magazine/canva_products/p47_s1.webp"
-          }
+          },
+          "cashier_code": 302
         },
         "title_override": "كوستر خشبي مربع بنقوش الزهور",
         "description_override": "كوستر مربع من الخشب المصنوع يدويًا، تتميز بزخارف هندسية مفرغة مستوحاة من أشكال الزهور، بتصميم يجمع بين الطابع الفني والاستخدام العملي.",
@@ -9624,7 +9990,8 @@
             "sm": "/magazine/canva_products/p47_s2.webp",
             "md": "/magazine/canva_products/p47_s2.webp",
             "lg": "/magazine/canva_products/p47_s2.webp"
-          }
+          },
+          "cashier_code": 448
         },
         "title_override": "صينية خشبية على شكل نجمة",
         "description_override": "صينية خشبية مصنوعة يدويًا على شكل نجمة، تتميز بأقسام داخلية قابلة للفصل، مزينة بتطعيمات من الصدف الطبيعي بنقوش فسيفسائية هندسية مستوحاة من فن الأرابيسك.",
@@ -9649,7 +10016,8 @@
             "sm": "/magazine/canva_products/p47_s3.webp",
             "md": "/magazine/canva_products/p47_s3.webp",
             "lg": "/magazine/canva_products/p47_s3.webp"
-          }
+          },
+          "cashier_code": 450
         },
         "title_override": "طقم صواني خشبية متداخلة مطعمة بالصدف",
         "description_override": "طقم صواني خشبية مصنوع يدويًا بتصميم متداخل، يتميز بتطعيمات من الصدف الطبيعي وزخارف هندسية على شكل نجوم، تجمع بين الطابع التراثي والأناقة.",
@@ -9674,7 +10042,8 @@
             "sm": "/magazine/canva_products/p47_s4.webp",
             "md": "/magazine/canva_products/p47_s4.webp",
             "lg": "/magazine/canva_products/p47_s4.webp"
-          }
+          },
+          "cashier_code": 353
         },
         "title_override": "كوستر خشبي مربع مطعم بالصدف بنقوش هندسية",
         "description_override": "كوستر خشبي مصنوع يدويًا، يتميز بتطعيمات من الصدف الطبيعي وزخارف هندسية متداخلة بدرجات الأخضر والأصفر، تجمع بين الطابع التراثي والتصميم الأنيق.",
@@ -9709,7 +10078,8 @@
             "sm": "/magazine/canva_products/p48_s1.webp",
             "md": "/magazine/canva_products/p48_s1.webp",
             "lg": "/magazine/canva_products/p48_s1.webp"
-          }
+          },
+          "cashier_code": 306
         },
         "title_override": "حقيبة يد خشبية بنقوش طيور محفورة",
         "description_override": "حقيبة يد من الخشب المصنوع يدويًا، تتميز بزخارف محفورة بدقة مستوحاة من الطيور الشعبية وأشكال الشمس الهندسية، تجمع بين الطابع التراثي والتصميم الفني المميز.",
@@ -9734,7 +10104,8 @@
             "sm": "/magazine/canva_products/p48_s2.webp",
             "md": "/magazine/canva_products/p48_s2.webp",
             "lg": "/magazine/canva_products/p48_s2.webp"
-          }
+          },
+          "cashier_code": 291
         },
         "title_override": "حقيبة يد خشبية بالخرز بنقوش ريش الطاووس",
         "description_override": "حقيبة يد من الخشب الطبيعي مصنوعة يدويًا ومزينة بالخرز بنقوش ريش الطاووس وألوان زاهية، تجمع بين الأصالة والأناقة العصرية وتناسب مختلف المناسبات.",
@@ -9759,7 +10130,8 @@
             "sm": "/magazine/canva_products/p48_s3.webp",
             "md": "/magazine/canva_products/p48_s3.webp",
             "lg": "/magazine/canva_products/p48_s3.webp"
-          }
+          },
+          "cashier_code": 295
         },
         "title_override": "حقيبة يد خشبية مطعمة بالصدف بنقوش هندسية",
         "description_override": "حقيبة يد من الخشب المصنوع يدويًا، تتميز بتطعيمات من الصدف الطبيعي وزخارف هندسية متداخلة على شكل خطوط متعرجة، تجمع بين الطابع التراثي والتصميم العصري الأنيق بألوان وأشكال مختلفة.",

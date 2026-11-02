@@ -51,13 +51,15 @@ export function FlipbookClient({
     [currentPage, isFlipping, onPageChange, totalPages]
   );
 
-  // Sync state if initialPage changes
+  // Sync state if initialPage changes from parent
   useEffect(() => {
-    if (initialPage && initialPage !== currentPage) {
-      goToPage(initialPage);
-      wrapperRef.current?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    if (initialPage) {
+      const clamped = Math.max(1, Math.min(initialPage, totalPages));
+      if (clamped !== currentPage) {
+        setCurrentPage(clamped);
+      }
     }
-  }, [initialPage, currentPage, goToPage]);
+  }, [initialPage, totalPages, currentPage]);
 
   // In Arabic books (RTL):
   // "Next" (التالي) turns page forward (moving left)

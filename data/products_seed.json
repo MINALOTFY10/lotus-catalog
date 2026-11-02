@@ -15,7 +15,7 @@
       "md": "/magazine/canva_products/p1_s1.webp",
       "lg": "/magazine/canva_products/p1_s1.webp"
     },
-    "cashier_code": 101
+    "cashier_code": 1
   },
   {
     "id": "prod-canva-p1-s2",
@@ -33,7 +33,7 @@
       "md": "/magazine/canva_products/p1_s2.webp",
       "lg": "/magazine/canva_products/p1_s2.webp"
     },
-    "cashier_code": 102
+    "cashier_code": 4
   },
   {
     "id": "prod-canva-p1-s3",
@@ -51,7 +51,7 @@
       "md": "/magazine/canva_products/p1_s3.webp",
       "lg": "/magazine/canva_products/p1_s3.webp"
     },
-    "cashier_code": 103
+    "cashier_code": 3
   },
   {
     "id": "prod-canva-p1-s4",
@@ -69,7 +69,7 @@
       "md": "/magazine/canva_products/p1_s4.webp",
       "lg": "/magazine/canva_products/p1_s4.webp"
     },
-    "cashier_code": 104
+    "cashier_code": null
   },
   {
     "id": "prod-canva-p2-s1",
@@ -87,7 +87,7 @@
       "md": "/magazine/canva_products/p2_s1.webp",
       "lg": "/magazine/canva_products/p2_s1.webp"
     },
-    "cashier_code": 105
+    "cashier_code": 53
   },
   {
     "id": "prod-canva-p2-s2",
@@ -105,7 +105,7 @@
       "md": "/magazine/canva_products/p2_s2.webp",
       "lg": "/magazine/canva_products/p2_s2.webp"
     },
-    "cashier_code": 106
+    "cashier_code": null
   },
   {
     "id": "prod-canva-p3-s1",
@@ -123,7 +123,7 @@
       "md": "/magazine/canva_products/p3_s1.webp",
       "lg": "/magazine/canva_products/p3_s1.webp"
     },
-    "cashier_code": 107
+    "cashier_code": 399
   },
   {
     "id": "prod-canva-p3-s2",
@@ -141,7 +141,7 @@
       "md": "/magazine/canva_products/p3_s2.webp",
       "lg": "/magazine/canva_products/p3_s2.webp"
     },
-    "cashier_code": 108
+    "cashier_code": 397
   },
   {
     "id": "prod-canva-p3-s3",
@@ -159,7 +159,7 @@
       "md": "/magazine/canva_products/p3_s3.webp",
       "lg": "/magazine/canva_products/p3_s3.webp"
     },
-    "cashier_code": 109
+    "cashier_code": 401
   },
   {
     "id": "prod-canva-p3-s4",
@@ -177,7 +177,7 @@
       "md": "/magazine/canva_products/p3_s4.webp",
       "lg": "/magazine/canva_products/p3_s4.webp"
     },
-    "cashier_code": 110
+    "cashier_code": 398
   },
   {
     "id": "prod-canva-p3-s5",
@@ -195,7 +195,7 @@
       "md": "/magazine/canva_products/p3_s5.webp",
       "lg": "/magazine/canva_products/p3_s5.webp"
     },
-    "cashier_code": 111
+    "cashier_code": 396
   },
   {
     "id": "prod-canva-p3-s6",
@@ -213,7 +213,7 @@
       "md": "/magazine/canva_products/p3_s6.webp",
       "lg": "/magazine/canva_products/p3_s6.webp"
     },
-    "cashier_code": 112
+    "cashier_code": 400
   },
   {
     "id": "prod-canva-p3-s7",
@@ -231,7 +231,7 @@
       "md": "/magazine/canva_products/p3_s7.webp",
       "lg": "/magazine/canva_products/p3_s7.webp"
     },
-    "cashier_code": 113
+    "cashier_code": 403
   },
   {
     "id": "prod-canva-p3-s8",
@@ -249,7 +249,7 @@
       "md": "/magazine/canva_products/p3_s8.webp",
       "lg": "/magazine/canva_products/p3_s8.webp"
     },
-    "cashier_code": 114
+    "cashier_code": 402
   },
   {
     "id": "prod-canva-p4-s1",
@@ -267,7 +267,7 @@
       "md": "/magazine/canva_products/p4_s1.webp",
       "lg": "/magazine/canva_products/p4_s1.webp"
     },
-    "cashier_code": 115
+    "cashier_code": 90
   },
   {
     "id": "prod-canva-p4-s2",
@@ -285,7 +285,7 @@
       "md": "/magazine/canva_products/p4_s2.webp",
       "lg": "/magazine/canva_products/p4_s2.webp"
     },
-    "cashier_code": 116
+    "cashier_code": 90
   },
   {
     "id": "prod-canva-p4-s3",
@@ -303,7 +303,7 @@
       "md": "/magazine/canva_products/p4_s3.webp",
       "lg": "/magazine/canva_products/p4_s3.webp"
     },
-    "cashier_code": 117
+    "cashier_code": 90
   },
   {
     "id": "prod-canva-p4-s4",
@@ -321,7 +321,7 @@
       "md": "/magazine/canva_products/p4_s4.webp",
       "lg": "/magazine/canva_products/p4_s4.webp"
     },
-    "cashier_code": 118
+    "cashier_code": 90
   },
   {
     "id": "prod-canva-p4-s5",
@@ -339,7 +339,7 @@
       "md": "/magazine/canva_products/p4_s5.webp",
       "lg": "/magazine/canva_products/p4_s5.webp"
     },
-    "cashier_code": 119
+    "cashier_code": 15
   },
   {
     "id": "prod-canva-p4-s6",
@@ -357,7 +357,7 @@
       "md": "/magazine/canva_products/p4_s6.webp",
       "lg": "/magazine/canva_products/p4_s6.webp"
     },
-    "cashier_code": 120
+    "cashier_code": 90
   },
   {
     "id": "prod-canva-p4-s7",
@@ -375,7 +375,7 @@
       "md": "/magazine/canva_products/p4_s7.webp",
       "lg": "/magazine/canva_products/p4_s7.webp"
     },
-    "cashier_code": 121
+    "cashier_code": 90
   },
   {
     "id": "prod-canva-p4-s8",
@@ -393,7 +393,7 @@
       "md": "/magazine/canva_products/p4_s8.webp",
       "lg": "/magazine/canva_products/p4_s8.webp"
     },
-    "cashier_code": 122
+    "cashier_code": 90
   },
   {
     "id": "prod-canva-p4-s9",
@@ -411,7 +411,7 @@
       "md": "/magazine/canva_products/p4_s9.webp",
       "lg": "/magazine/canva_products/p4_s9.webp"
     },
-    "cashier_code": 123
+    "cashier_code": 90
   },
   {
     "id": "prod-canva-p5-s1",
@@ -429,7 +429,7 @@
       "md": "/magazine/canva_products/p5_s1.webp",
       "lg": "/magazine/canva_products/p5_s1.webp"
     },
-    "cashier_code": 127
+    "cashier_code": 365
   },
   {
     "id": "prod-canva-p5-s2",
@@ -447,7 +447,7 @@
       "md": "/magazine/canva_products/p5_s2.webp",
       "lg": "/magazine/canva_products/p5_s2.webp"
     },
-    "cashier_code": 128
+    "cashier_code": 360
   },
   {
     "id": "prod-canva-p5-s3",
@@ -465,7 +465,7 @@
       "md": "/magazine/canva_products/p5_s3.webp",
       "lg": "/magazine/canva_products/p5_s3.webp"
     },
-    "cashier_code": 129
+    "cashier_code": 363
   },
   {
     "id": "prod-canva-p5-s4",
@@ -483,7 +483,7 @@
       "md": "/magazine/canva_products/p5_s4.webp",
       "lg": "/magazine/canva_products/p5_s4.webp"
     },
-    "cashier_code": 130
+    "cashier_code": 375
   },
   {
     "id": "prod-canva-p5-s5",
@@ -501,7 +501,7 @@
       "md": "/magazine/canva_products/p5_s5.webp",
       "lg": "/magazine/canva_products/p5_s5.webp"
     },
-    "cashier_code": 131
+    "cashier_code": 362
   },
   {
     "id": "prod-canva-p5-s6",
@@ -519,7 +519,7 @@
       "md": "/magazine/canva_products/p5_s6.webp",
       "lg": "/magazine/canva_products/p5_s6.webp"
     },
-    "cashier_code": 132
+    "cashier_code": 382
   },
   {
     "id": "prod-canva-p5-s7",
@@ -537,7 +537,7 @@
       "md": "/magazine/canva_products/p5_s7.webp",
       "lg": "/magazine/canva_products/p5_s7.webp"
     },
-    "cashier_code": 133
+    "cashier_code": 378
   },
   {
     "id": "prod-canva-p5-s8",
@@ -555,7 +555,7 @@
       "md": "/magazine/canva_products/p5_s8.webp",
       "lg": "/magazine/canva_products/p5_s8.webp"
     },
-    "cashier_code": 134
+    "cashier_code": 386
   },
   {
     "id": "prod-canva-p5-s9",
@@ -573,7 +573,7 @@
       "md": "/magazine/canva_products/p5_s9.webp",
       "lg": "/magazine/canva_products/p5_s9.webp"
     },
-    "cashier_code": 135
+    "cashier_code": 361
   },
   {
     "id": "prod-canva-p6-s1",
@@ -591,7 +591,7 @@
       "md": "/magazine/canva_products/p6_s1.webp",
       "lg": "/magazine/canva_products/p6_s1.webp"
     },
-    "cashier_code": 136
+    "cashier_code": 376
   },
   {
     "id": "prod-canva-p6-s2",
@@ -609,7 +609,7 @@
       "md": "/magazine/canva_products/p6_s2.webp",
       "lg": "/magazine/canva_products/p6_s2.webp"
     },
-    "cashier_code": 137
+    "cashier_code": 383
   },
   {
     "id": "prod-canva-p6-s3",
@@ -627,7 +627,7 @@
       "md": "/magazine/canva_products/p6_s3.webp",
       "lg": "/magazine/canva_products/p6_s3.webp"
     },
-    "cashier_code": 138
+    "cashier_code": 389
   },
   {
     "id": "prod-canva-p6-s4",
@@ -645,7 +645,7 @@
       "md": "/magazine/canva_products/p6_s4.webp",
       "lg": "/magazine/canva_products/p6_s4.webp"
     },
-    "cashier_code": 140
+    "cashier_code": 379
   },
   {
     "id": "prod-canva-p6-s5",
@@ -663,7 +663,7 @@
       "md": "/magazine/canva_products/p6_s5.webp",
       "lg": "/magazine/canva_products/p6_s5.webp"
     },
-    "cashier_code": 139
+    "cashier_code": 387
   },
   {
     "id": "prod-canva-p6-s6",
@@ -681,7 +681,7 @@
       "md": "/magazine/canva_products/p6_s6.webp",
       "lg": "/magazine/canva_products/p6_s6.webp"
     },
-    "cashier_code": 141
+    "cashier_code": 391
   },
   {
     "id": "prod-canva-p6-s7",
@@ -699,7 +699,7 @@
       "md": "/magazine/canva_products/p6_s7.webp",
       "lg": "/magazine/canva_products/p6_s7.webp"
     },
-    "cashier_code": 142
+    "cashier_code": 380
   },
   {
     "id": "prod-canva-p6-s8",
@@ -717,7 +717,7 @@
       "md": "/magazine/canva_products/p6_s8.webp",
       "lg": "/magazine/canva_products/p6_s8.webp"
     },
-    "cashier_code": 143
+    "cashier_code": 388
   },
   {
     "id": "prod-canva-p6-s9",
@@ -735,7 +735,7 @@
       "md": "/magazine/canva_products/p6_s9.webp",
       "lg": "/magazine/canva_products/p6_s9.webp"
     },
-    "cashier_code": 144
+    "cashier_code": 368
   },
   {
     "id": "prod-canva-p7-s1",
@@ -753,7 +753,7 @@
       "md": "/magazine/canva_products/p7_s1.webp",
       "lg": "/magazine/canva_products/p7_s1.webp"
     },
-    "cashier_code": 145
+    "cashier_code": 384
   },
   {
     "id": "prod-canva-p7-s2",
@@ -771,7 +771,7 @@
       "md": "/magazine/canva_products/p7_s2.webp",
       "lg": "/magazine/canva_products/p7_s2.webp"
     },
-    "cashier_code": 146
+    "cashier_code": 395
   },
   {
     "id": "prod-canva-p7-s3",
@@ -789,7 +789,7 @@
       "md": "/magazine/canva_products/p7_s3.webp",
       "lg": "/magazine/canva_products/p7_s3.webp"
     },
-    "cashier_code": 147
+    "cashier_code": 385
   },
   {
     "id": "prod-canva-p7-s4",
@@ -807,7 +807,7 @@
       "md": "/magazine/canva_products/p7_s4.webp",
       "lg": "/magazine/canva_products/p7_s4.webp"
     },
-    "cashier_code": 148
+    "cashier_code": 392
   },
   {
     "id": "prod-canva-p7-s5",
@@ -825,7 +825,7 @@
       "md": "/magazine/canva_products/p7_s5.webp",
       "lg": "/magazine/canva_products/p7_s5.webp"
     },
-    "cashier_code": 149
+    "cashier_code": null
   },
   {
     "id": "prod-canva-p7-s6",
@@ -843,7 +843,7 @@
       "md": "/magazine/canva_products/p7_s6.webp",
       "lg": "/magazine/canva_products/p7_s6.webp"
     },
-    "cashier_code": 150
+    "cashier_code": 390
   },
   {
     "id": "prod-canva-p7-s7",
@@ -862,7 +862,7 @@
       "lg": "/magazine/canva_products/p7_s7.webp"
     },
     "stock_status": "متاح",
-    "cashier_code": 151
+    "cashier_code": 369
   },
   {
     "id": "prod-canva-p7-s8",
@@ -880,7 +880,7 @@
       "md": "/magazine/canva_products/p7_s8.webp",
       "lg": "/magazine/canva_products/p7_s8.webp"
     },
-    "cashier_code": 152
+    "cashier_code": 373
   },
   {
     "id": "prod-canva-p7-s9",
@@ -898,7 +898,7 @@
       "md": "/magazine/canva_products/p7_s9.webp",
       "lg": "/magazine/canva_products/p7_s9.webp"
     },
-    "cashier_code": 153
+    "cashier_code": 381
   },
   {
     "id": "prod-canva-p8-s1",
@@ -916,7 +916,7 @@
       "md": "/magazine/canva_products/p8_s1.webp",
       "lg": "/magazine/canva_products/p8_s1.webp"
     },
-    "cashier_code": 160
+    "cashier_code": 92
   },
   {
     "id": "prod-canva-p8-s2",
@@ -934,7 +934,7 @@
       "md": "/magazine/canva_products/p8_s2.webp",
       "lg": "/magazine/canva_products/p8_s2.webp"
     },
-    "cashier_code": 161
+    "cashier_code": 92
   },
   {
     "id": "prod-canva-p8-s3",
@@ -952,7 +952,7 @@
       "md": "/magazine/canva_products/p8_s3.webp",
       "lg": "/magazine/canva_products/p8_s3.webp"
     },
-    "cashier_code": 162
+    "cashier_code": 92
   },
   {
     "id": "prod-canva-p8-s4",
@@ -970,7 +970,7 @@
       "md": "/magazine/canva_products/p8_s4.webp",
       "lg": "/magazine/canva_products/p8_s4.webp"
     },
-    "cashier_code": 163
+    "cashier_code": 92
   },
   {
     "id": "prod-canva-p8-s5",
@@ -988,7 +988,7 @@
       "md": "/magazine/canva_products/p8_s5.webp",
       "lg": "/magazine/canva_products/p8_s5.webp"
     },
-    "cashier_code": 164
+    "cashier_code": 92
   },
   {
     "id": "prod-canva-p8-s6",
@@ -1006,7 +1006,7 @@
       "md": "/magazine/canva_products/p8_s6.webp",
       "lg": "/magazine/canva_products/p8_s6.webp"
     },
-    "cashier_code": 165
+    "cashier_code": 92
   },
   {
     "id": "prod-canva-p8-s7",
@@ -1024,7 +1024,7 @@
       "md": "/magazine/canva_products/p8_s7.webp",
       "lg": "/magazine/canva_products/p8_s7.webp"
     },
-    "cashier_code": 166
+    "cashier_code": 91
   },
   {
     "id": "prod-canva-p8-s8",
@@ -1042,7 +1042,7 @@
       "md": "/magazine/canva_products/p8_s8.webp",
       "lg": "/magazine/canva_products/p8_s8.webp"
     },
-    "cashier_code": 167
+    "cashier_code": 91
   },
   {
     "id": "prod-canva-p8-s9",
@@ -1060,7 +1060,7 @@
       "md": "/magazine/canva_products/p8_s9.webp",
       "lg": "/magazine/canva_products/p8_s9.webp"
     },
-    "cashier_code": 168
+    "cashier_code": 91
   },
   {
     "id": "prod-canva-p9-s1",
@@ -1078,7 +1078,7 @@
       "md": "/magazine/canva_products/p9_s1.webp",
       "lg": "/magazine/canva_products/p9_s1.webp"
     },
-    "cashier_code": 169
+    "cashier_code": 91
   },
   {
     "id": "prod-canva-p9-s2",
@@ -1096,7 +1096,7 @@
       "md": "/magazine/canva_products/p9_s2.webp",
       "lg": "/magazine/canva_products/p9_s2.webp"
     },
-    "cashier_code": 170
+    "cashier_code": 349
   },
   {
     "id": "prod-canva-p9-s3",
@@ -1114,7 +1114,7 @@
       "md": "/magazine/canva_products/p9_s3.webp",
       "lg": "/magazine/canva_products/p9_s3.webp"
     },
-    "cashier_code": 171
+    "cashier_code": null
   },
   {
     "id": "prod-canva-p9-s4",
@@ -1132,7 +1132,7 @@
       "md": "/magazine/canva_products/p9_s4.webp",
       "lg": "/magazine/canva_products/p9_s4.webp"
     },
-    "cashier_code": 172
+    "cashier_code": 122
   },
   {
     "id": "prod-canva-p9-s5",
@@ -1150,7 +1150,7 @@
       "md": "/magazine/canva_products/p9_s5.webp",
       "lg": "/magazine/canva_products/p9_s5.webp"
     },
-    "cashier_code": 173
+    "cashier_code": 346
   },
   {
     "id": "prod-canva-p9-s6",
@@ -1168,7 +1168,7 @@
       "md": "/magazine/canva_products/p9_s6.webp",
       "lg": "/magazine/canva_products/p9_s6.webp"
     },
-    "cashier_code": 174
+    "cashier_code": 344
   },
   {
     "id": "prod-canva-p9-s7",
@@ -1186,7 +1186,7 @@
       "md": "/magazine/canva_products/p9_s7.webp",
       "lg": "/magazine/canva_products/p9_s7.webp"
     },
-    "cashier_code": 175
+    "cashier_code": null
   },
   {
     "id": "prod-canva-p9-s8",
@@ -1204,7 +1204,7 @@
       "md": "/magazine/canva_products/p9_s8.webp",
       "lg": "/magazine/canva_products/p9_s8.webp"
     },
-    "cashier_code": 176
+    "cashier_code": 341
   },
   {
     "id": "prod-canva-p9-s9",
@@ -1222,7 +1222,7 @@
       "md": "/magazine/canva_products/p9_s9.webp",
       "lg": "/magazine/canva_products/p9_s9.webp"
     },
-    "cashier_code": 177
+    "cashier_code": 337
   },
   {
     "id": "prod-canva-p10-s1",
@@ -1240,7 +1240,7 @@
       "md": "/magazine/canva_products/p10_s1.webp",
       "lg": "/magazine/canva_products/p10_s1.webp"
     },
-    "cashier_code": 178
+    "cashier_code": 125
   },
   {
     "id": "prod-canva-p10-s2",
@@ -1258,7 +1258,7 @@
       "md": "/magazine/canva_products/p10_s2.webp",
       "lg": "/magazine/canva_products/p10_s2.webp"
     },
-    "cashier_code": 179
+    "cashier_code": 338
   },
   {
     "id": "prod-canva-p10-s3",
@@ -1276,7 +1276,7 @@
       "md": "/magazine/canva_products/p10_s3.webp",
       "lg": "/magazine/canva_products/p10_s3.webp"
     },
-    "cashier_code": 180
+    "cashier_code": 343
   },
   {
     "id": "prod-canva-p10-s4",
@@ -1294,7 +1294,7 @@
       "md": "/magazine/canva_products/p10_s4.webp",
       "lg": "/magazine/canva_products/p10_s4.webp"
     },
-    "cashier_code": 181
+    "cashier_code": 335
   },
   {
     "id": "prod-canva-p10-s5",
@@ -1312,7 +1312,7 @@
       "md": "/magazine/canva_products/p10_s5.webp",
       "lg": "/magazine/canva_products/p10_s5.webp"
     },
-    "cashier_code": 182
+    "cashier_code": 94
   },
   {
     "id": "prod-canva-p10-s6",
@@ -1330,7 +1330,7 @@
       "md": "/magazine/canva_products/p10_s6.webp",
       "lg": "/magazine/canva_products/p10_s6.webp"
     },
-    "cashier_code": 183
+    "cashier_code": null
   },
   {
     "id": "prod-canva-p10-s7",
@@ -1348,7 +1348,7 @@
       "md": "/magazine/canva_products/p10_s7.webp",
       "lg": "/magazine/canva_products/p10_s7.webp"
     },
-    "cashier_code": 184
+    "cashier_code": null
   },
   {
     "id": "prod-canva-p10-s8",
@@ -1366,7 +1366,7 @@
       "md": "/magazine/canva_products/p10_s8.webp",
       "lg": "/magazine/canva_products/p10_s8.webp"
     },
-    "cashier_code": 185
+    "cashier_code": null
   },
   {
     "id": "prod-canva-p10-s9",
@@ -1384,7 +1384,7 @@
       "md": "/magazine/canva_products/p10_s9.webp",
       "lg": "/magazine/canva_products/p10_s9.webp"
     },
-    "cashier_code": 186
+    "cashier_code": 94
   },
   {
     "id": "prod-canva-p11-s1",
@@ -1402,7 +1402,7 @@
       "md": "/magazine/canva_products/p11_s1.webp",
       "lg": "/magazine/canva_products/p11_s1.webp"
     },
-    "cashier_code": 202
+    "cashier_code": 325
   },
   {
     "id": "prod-canva-p11-s2",
@@ -1420,7 +1420,7 @@
       "md": "/magazine/canva_products/p11_s2.webp",
       "lg": "/magazine/canva_products/p11_s2.webp"
     },
-    "cashier_code": 203
+    "cashier_code": 323
   },
   {
     "id": "prod-canva-p11-s3",
@@ -1438,7 +1438,7 @@
       "md": "/magazine/canva_products/p11_s3.webp",
       "lg": "/magazine/canva_products/p11_s3.webp"
     },
-    "cashier_code": 204
+    "cashier_code": 325
   },
   {
     "id": "prod-canva-p11-s4",
@@ -1456,7 +1456,7 @@
       "md": "/magazine/canva_products/p11_s4.webp",
       "lg": "/magazine/canva_products/p11_s4.webp"
     },
-    "cashier_code": 205
+    "cashier_code": 327
   },
   {
     "id": "prod-canva-p11-s5",
@@ -1474,7 +1474,7 @@
       "md": "/magazine/canva_products/p11_s5.webp",
       "lg": "/magazine/canva_products/p11_s5.webp"
     },
-    "cashier_code": 206
+    "cashier_code": 322
   },
   {
     "id": "prod-canva-p11-s6",
@@ -1492,7 +1492,7 @@
       "md": "/magazine/canva_products/p11_s6.webp",
       "lg": "/magazine/canva_products/p11_s6.webp"
     },
-    "cashier_code": 207
+    "cashier_code": 326
   },
   {
     "id": "prod-canva-p11-s7",
@@ -1510,7 +1510,7 @@
       "md": "/magazine/canva_products/p11_s7.webp",
       "lg": "/magazine/canva_products/p11_s7.webp"
     },
-    "cashier_code": 208
+    "cashier_code": 319
   },
   {
     "id": "prod-canva-p12-s1",
@@ -1528,7 +1528,7 @@
       "md": "/magazine/canva_products/p12_s1.webp",
       "lg": "/magazine/canva_products/p12_s1.webp"
     },
-    "cashier_code": 218
+    "cashier_code": 19
   },
   {
     "id": "prod-canva-p12-s2",
@@ -1546,7 +1546,7 @@
       "md": "/magazine/canva_products/p12_s2.webp",
       "lg": "/magazine/canva_products/p12_s2.webp"
     },
-    "cashier_code": 219
+    "cashier_code": 18
   },
   {
     "id": "prod-canva-p12-s3",
@@ -1564,7 +1564,7 @@
       "md": "/magazine/canva_products/p12_s3.webp",
       "lg": "/magazine/canva_products/p12_s3.webp"
     },
-    "cashier_code": 220
+    "cashier_code": 16
   },
   {
     "id": "prod-canva-p12-s4",
@@ -1582,7 +1582,7 @@
       "md": "/magazine/canva_products/p12_s4.webp",
       "lg": "/magazine/canva_products/p12_s4.webp"
     },
-    "cashier_code": 221
+    "cashier_code": 17
   },
   {
     "id": "prod-canva-p12-s5",
@@ -1600,7 +1600,7 @@
       "md": "/magazine/canva_products/p12_s5.webp",
       "lg": "/magazine/canva_products/p12_s5.webp"
     },
-    "cashier_code": 222
+    "cashier_code": 14
   },
   {
     "id": "prod-canva-p12-s6",
@@ -1618,7 +1618,7 @@
       "md": "/magazine/canva_products/p12_s6.webp",
       "lg": "/magazine/canva_products/p12_s6.webp"
     },
-    "cashier_code": 223
+    "cashier_code": 13
   },
   {
     "id": "prod-canva-p13-s1",
@@ -1636,7 +1636,7 @@
       "md": "/magazine/canva_products/p13_s1.webp",
       "lg": "/magazine/canva_products/p13_s1.webp"
     },
-    "cashier_code": 224
+    "cashier_code": 116
   },
   {
     "id": "prod-canva-p13-s2",
@@ -1654,7 +1654,7 @@
       "md": "/magazine/canva_products/p13_s2.webp",
       "lg": "/magazine/canva_products/p13_s2.webp"
     },
-    "cashier_code": 225
+    "cashier_code": 114
   },
   {
     "id": "prod-canva-p13-s3",
@@ -1672,7 +1672,7 @@
       "md": "/magazine/canva_products/p13_s3.webp",
       "lg": "/magazine/canva_products/p13_s3.webp"
     },
-    "cashier_code": 226
+    "cashier_code": 115
   },
   {
     "id": "prod-canva-p13-s4",
@@ -1690,7 +1690,7 @@
       "md": "/magazine/canva_products/p13_s4.webp",
       "lg": "/magazine/canva_products/p13_s4.webp"
     },
-    "cashier_code": 227
+    "cashier_code": 117
   },
   {
     "id": "prod-canva-p13-s5",
@@ -1708,7 +1708,7 @@
       "md": "/magazine/canva_products/p13_s5.webp",
       "lg": "/magazine/canva_products/p13_s5.webp"
     },
-    "cashier_code": 228
+    "cashier_code": 121
   },
   {
     "id": "prod-canva-p13-s6",
@@ -1726,7 +1726,7 @@
       "md": "/magazine/canva_products/p13_s6.webp",
       "lg": "/magazine/canva_products/p13_s6.webp"
     },
-    "cashier_code": 229
+    "cashier_code": 120
   },
   {
     "id": "prod-canva-p13-s7",
@@ -1744,7 +1744,7 @@
       "md": "/magazine/canva_products/p13_s7.webp",
       "lg": "/magazine/canva_products/p13_s7.webp"
     },
-    "cashier_code": 230
+    "cashier_code": 119
   },
   {
     "id": "prod-canva-p14-s1",
@@ -1762,7 +1762,7 @@
       "md": "/magazine/canva_products/p14_s1.webp",
       "lg": "/magazine/canva_products/p14_s1.webp"
     },
-    "cashier_code": 231
+    "cashier_code": 61
   },
   {
     "id": "prod-canva-p14-s2",
@@ -1780,7 +1780,7 @@
       "md": "/magazine/canva_products/p14_s2.webp",
       "lg": "/magazine/canva_products/p14_s2.webp"
     },
-    "cashier_code": 232
+    "cashier_code": 57
   },
   {
     "id": "prod-canva-p14-s3",
@@ -1798,7 +1798,7 @@
       "md": "/magazine/canva_products/p14_s3.webp",
       "lg": "/magazine/canva_products/p14_s3.webp"
     },
-    "cashier_code": 233
+    "cashier_code": 56
   },
   {
     "id": "prod-canva-p14-s4",
@@ -1816,7 +1816,7 @@
       "md": "/magazine/canva_products/p14_s4.webp",
       "lg": "/magazine/canva_products/p14_s4.webp"
     },
-    "cashier_code": 234
+    "cashier_code": 60
   },
   {
     "id": "prod-canva-p14-s5",
@@ -1834,7 +1834,7 @@
       "md": "/magazine/canva_products/p14_s5.webp",
       "lg": "/magazine/canva_products/p14_s5.webp"
     },
-    "cashier_code": 235
+    "cashier_code": 59
   },
   {
     "id": "prod-canva-p14-s6",
@@ -1852,7 +1852,7 @@
       "md": "/magazine/canva_products/p14_s6.webp",
       "lg": "/magazine/canva_products/p14_s6.webp"
     },
-    "cashier_code": 236
+    "cashier_code": 58
   },
   {
     "id": "prod-canva-p15-s1",
@@ -1870,7 +1870,7 @@
       "md": "/magazine/canva_products/p15_s1.webp",
       "lg": "/magazine/canva_products/p15_s1.webp"
     },
-    "cashier_code": 237
+    "cashier_code": 139
   },
   {
     "id": "prod-canva-p15-s2",
@@ -1888,7 +1888,7 @@
       "md": "/magazine/canva_products/p15_s2.webp",
       "lg": "/magazine/canva_products/p15_s2.webp"
     },
-    "cashier_code": 238
+    "cashier_code": 140
   },
   {
     "id": "prod-canva-p15-s3",
@@ -1906,7 +1906,7 @@
       "md": "/magazine/canva_products/p15_s3.webp",
       "lg": "/magazine/canva_products/p15_s3.webp"
     },
-    "cashier_code": 239
+    "cashier_code": 141
   },
   {
     "id": "prod-canva-p15-s4",
@@ -1924,7 +1924,7 @@
       "md": "/magazine/canva_products/p15_s4.webp",
       "lg": "/magazine/canva_products/p15_s4.webp"
     },
-    "cashier_code": 240
+    "cashier_code": 148
   },
   {
     "id": "prod-canva-p15-s5",
@@ -1942,7 +1942,7 @@
       "md": "/magazine/canva_products/p15_s5.webp",
       "lg": "/magazine/canva_products/p15_s5.webp"
     },
-    "cashier_code": 241
+    "cashier_code": 138
   },
   {
     "id": "prod-canva-p15-s6",
@@ -1960,7 +1960,7 @@
       "md": "/magazine/canva_products/p15_s6.webp",
       "lg": "/magazine/canva_products/p15_s6.webp"
     },
-    "cashier_code": 242
+    "cashier_code": 146
   },
   {
     "id": "prod-canva-p15-s7",
@@ -1978,7 +1978,7 @@
       "md": "/magazine/canva_products/p15_s7.webp",
       "lg": "/magazine/canva_products/p15_s7.webp"
     },
-    "cashier_code": 243
+    "cashier_code": 145
   },
   {
     "id": "prod-canva-p15-s8",
@@ -1996,7 +1996,7 @@
       "md": "/magazine/canva_products/p15_s8.webp",
       "lg": "/magazine/canva_products/p15_s8.webp"
     },
-    "cashier_code": 244
+    "cashier_code": null
   },
   {
     "id": "prod-canva-p15-s9",
@@ -2014,7 +2014,7 @@
       "md": "/magazine/canva_products/p15_s9.webp",
       "lg": "/magazine/canva_products/p15_s9.webp"
     },
-    "cashier_code": 245
+    "cashier_code": 149
   },
   {
     "id": "prod-canva-p16-s1",
@@ -2032,7 +2032,7 @@
       "md": "/magazine/canva_products/p16_s1.webp",
       "lg": "/magazine/canva_products/p16_s1.webp"
     },
-    "cashier_code": 246
+    "cashier_code": 144
   },
   {
     "id": "prod-canva-p16-s2",
@@ -2050,7 +2050,7 @@
       "md": "/magazine/canva_products/p16_s2.webp",
       "lg": "/magazine/canva_products/p16_s2.webp"
     },
-    "cashier_code": 247
+    "cashier_code": 147
   },
   {
     "id": "prod-canva-p16-s3",
@@ -2068,7 +2068,7 @@
       "md": "/magazine/canva_products/p16_s3.webp",
       "lg": "/magazine/canva_products/p16_s3.webp"
     },
-    "cashier_code": 248
+    "cashier_code": 155
   },
   {
     "id": "prod-canva-p16-s4",
@@ -2086,7 +2086,7 @@
       "md": "/magazine/canva_products/p16_s4.webp",
       "lg": "/magazine/canva_products/p16_s4.webp"
     },
-    "cashier_code": 249
+    "cashier_code": 162
   },
   {
     "id": "prod-canva-p16-s5",
@@ -2104,7 +2104,7 @@
       "md": "/magazine/canva_products/p16_s5.webp",
       "lg": "/magazine/canva_products/p16_s5.webp"
     },
-    "cashier_code": 250
+    "cashier_code": 159
   },
   {
     "id": "prod-canva-p16-s6",
@@ -2122,7 +2122,7 @@
       "md": "/magazine/canva_products/p16_s6.webp",
       "lg": "/magazine/canva_products/p16_s6.webp"
     },
-    "cashier_code": 251
+    "cashier_code": 153
   },
   {
     "id": "prod-canva-p16-s7",
@@ -2140,7 +2140,7 @@
       "md": "/magazine/canva_products/p16_s7.webp",
       "lg": "/magazine/canva_products/p16_s7.webp"
     },
-    "cashier_code": 252
+    "cashier_code": 160
   },
   {
     "id": "prod-canva-p16-s8",
@@ -2158,7 +2158,7 @@
       "md": "/magazine/canva_products/p16_s8.webp",
       "lg": "/magazine/canva_products/p16_s8.webp"
     },
-    "cashier_code": 253
+    "cashier_code": 201
   },
   {
     "id": "prod-canva-p16-s9",
@@ -2176,7 +2176,7 @@
       "md": "/magazine/canva_products/p16_s9.webp",
       "lg": "/magazine/canva_products/p16_s9.webp"
     },
-    "cashier_code": 254
+    "cashier_code": null
   },
   {
     "id": "prod-canva-p17-s1",
@@ -2194,7 +2194,7 @@
       "md": "/magazine/canva_products/p17_s1.webp",
       "lg": "/magazine/canva_products/p17_s1.webp"
     },
-    "cashier_code": 255
+    "cashier_code": 184
   },
   {
     "id": "prod-canva-p17-s2",
@@ -2212,7 +2212,7 @@
       "md": "/magazine/canva_products/p17_s2.webp",
       "lg": "/magazine/canva_products/p17_s2.webp"
     },
-    "cashier_code": 256
+    "cashier_code": 186
   },
   {
     "id": "prod-canva-p17-s3",
@@ -2230,7 +2230,7 @@
       "md": "/magazine/canva_products/p17_s3.webp",
       "lg": "/magazine/canva_products/p17_s3.webp"
     },
-    "cashier_code": 257
+    "cashier_code": 163
   },
   {
     "id": "prod-canva-p17-s4",
@@ -2248,7 +2248,7 @@
       "md": "/magazine/canva_products/p17_s4.webp",
       "lg": "/magazine/canva_products/p17_s4.webp"
     },
-    "cashier_code": 258
+    "cashier_code": 167
   },
   {
     "id": "prod-canva-p17-s5",
@@ -2266,7 +2266,7 @@
       "md": "/magazine/canva_products/p17_s5.webp",
       "lg": "/magazine/canva_products/p17_s5.webp"
     },
-    "cashier_code": 259
+    "cashier_code": 171
   },
   {
     "id": "prod-canva-p17-s6",
@@ -2284,7 +2284,7 @@
       "md": "/magazine/canva_products/p17_s6.webp",
       "lg": "/magazine/canva_products/p17_s6.webp"
     },
-    "cashier_code": 260
+    "cashier_code": 165
   },
   {
     "id": "prod-canva-p17-s7",
@@ -2302,7 +2302,7 @@
       "md": "/magazine/canva_products/p17_s7.webp",
       "lg": "/magazine/canva_products/p17_s7.webp"
     },
-    "cashier_code": 261
+    "cashier_code": 173
   },
   {
     "id": "prod-canva-p17-s8",
@@ -2320,7 +2320,7 @@
       "md": "/magazine/canva_products/p17_s8.webp",
       "lg": "/magazine/canva_products/p17_s8.webp"
     },
-    "cashier_code": 262
+    "cashier_code": 181
   },
   {
     "id": "prod-canva-p17-s9",
@@ -2338,7 +2338,7 @@
       "md": "/magazine/canva_products/p17_s9.webp",
       "lg": "/magazine/canva_products/p17_s9.webp"
     },
-    "cashier_code": 263
+    "cashier_code": 164
   },
   {
     "id": "prod-canva-p18-s1",
@@ -2356,7 +2356,7 @@
       "md": "/magazine/canva_products/p18_s1.webp",
       "lg": "/magazine/canva_products/p18_s1.webp"
     },
-    "cashier_code": 264
+    "cashier_code": 177
   },
   {
     "id": "prod-canva-p18-s2",
@@ -2374,7 +2374,7 @@
       "md": "/magazine/canva_products/p18_s2.webp",
       "lg": "/magazine/canva_products/p18_s2.webp"
     },
-    "cashier_code": 265
+    "cashier_code": 174
   },
   {
     "id": "prod-canva-p18-s3",
@@ -2392,7 +2392,7 @@
       "md": "/magazine/canva_products/p18_s3.webp",
       "lg": "/magazine/canva_products/p18_s3.webp"
     },
-    "cashier_code": 266
+    "cashier_code": 176
   },
   {
     "id": "prod-canva-p18-s4",
@@ -2410,7 +2410,7 @@
       "md": "/magazine/canva_products/p18_s4.webp",
       "lg": "/magazine/canva_products/p18_s4.webp"
     },
-    "cashier_code": 267
+    "cashier_code": null
   },
   {
     "id": "prod-canva-p18-s5",
@@ -2428,7 +2428,7 @@
       "md": "/magazine/canva_products/p18_s5.webp",
       "lg": "/magazine/canva_products/p18_s5.webp"
     },
-    "cashier_code": 268
+    "cashier_code": 180
   },
   {
     "id": "prod-canva-p18-s6",
@@ -2446,7 +2446,7 @@
       "md": "/magazine/canva_products/p18_s6.webp",
       "lg": "/magazine/canva_products/p18_s6.webp"
     },
-    "cashier_code": 269
+    "cashier_code": 178
   },
   {
     "id": "prod-canva-p18-s7",
@@ -2464,7 +2464,7 @@
       "md": "/magazine/canva_products/p18_s7.webp",
       "lg": "/magazine/canva_products/p18_s7.webp"
     },
-    "cashier_code": 270
+    "cashier_code": 190
   },
   {
     "id": "prod-canva-p18-s8",
@@ -2482,7 +2482,7 @@
       "md": "/magazine/canva_products/p18_s8.webp",
       "lg": "/magazine/canva_products/p18_s8.webp"
     },
-    "cashier_code": 271
+    "cashier_code": 187
   },
   {
     "id": "prod-canva-p18-s9",
@@ -2500,7 +2500,7 @@
       "md": "/magazine/canva_products/p18_s9.webp",
       "lg": "/magazine/canva_products/p18_s9.webp"
     },
-    "cashier_code": 272
+    "cashier_code": 152
   },
   {
     "id": "prod-canva-p19-s1",
@@ -2518,7 +2518,7 @@
       "md": "/magazine/canva_products/p19_s1.webp",
       "lg": "/magazine/canva_products/p19_s1.webp"
     },
-    "cashier_code": 273
+    "cashier_code": 188
   },
   {
     "id": "prod-canva-p19-s2",
@@ -2536,7 +2536,7 @@
       "md": "/magazine/canva_products/p19_s2.webp",
       "lg": "/magazine/canva_products/p19_s2.webp"
     },
-    "cashier_code": 274
+    "cashier_code": 188
   },
   {
     "id": "prod-canva-p19-s3",
@@ -2554,7 +2554,7 @@
       "md": "/magazine/canva_products/p19_s3.webp",
       "lg": "/magazine/canva_products/p19_s3.webp"
     },
-    "cashier_code": 275
+    "cashier_code": 192
   },
   {
     "id": "prod-canva-p19-s4",
@@ -2572,7 +2572,7 @@
       "md": "/magazine/canva_products/p19_s4.webp",
       "lg": "/magazine/canva_products/p19_s4.webp"
     },
-    "cashier_code": 276
+    "cashier_code": 195
   },
   {
     "id": "prod-canva-p19-s5",
@@ -2590,7 +2590,7 @@
       "md": "/magazine/canva_products/p19_s5.webp",
       "lg": "/magazine/canva_products/p19_s5.webp"
     },
-    "cashier_code": 277
+    "cashier_code": 189
   },
   {
     "id": "prod-canva-p19-s6",
@@ -2608,7 +2608,7 @@
       "md": "/magazine/canva_products/p19_s6.webp",
       "lg": "/magazine/canva_products/p19_s6.webp"
     },
-    "cashier_code": 278
+    "cashier_code": 191
   },
   {
     "id": "prod-canva-p19-s7",
@@ -2626,7 +2626,7 @@
       "md": "/magazine/canva_products/p19_s7.webp",
       "lg": "/magazine/canva_products/p19_s7.webp"
     },
-    "cashier_code": 279
+    "cashier_code": 356
   },
   {
     "id": "prod-canva-p19-s8",
@@ -2644,7 +2644,7 @@
       "md": "/magazine/canva_products/p19_s8.webp",
       "lg": "/magazine/canva_products/p19_s8.webp"
     },
-    "cashier_code": 280
+    "cashier_code": 357
   },
   {
     "id": "prod-canva-p19-s9",
@@ -2662,7 +2662,7 @@
       "md": "/magazine/canva_products/p19_s9.webp",
       "lg": "/magazine/canva_products/p19_s9.webp"
     },
-    "cashier_code": 281
+    "cashier_code": 199
   },
   {
     "id": "prod-canva-p20-s1",
@@ -2680,7 +2680,7 @@
       "md": "/magazine/canva_products/p20_s1.webp",
       "lg": "/magazine/canva_products/p20_s1.webp"
     },
-    "cashier_code": 282
+    "cashier_code": 168
   },
   {
     "id": "prod-canva-p20-s2",
@@ -2698,7 +2698,7 @@
       "md": "/magazine/canva_products/p20_s2.webp",
       "lg": "/magazine/canva_products/p20_s2.webp"
     },
-    "cashier_code": 283
+    "cashier_code": 166
   },
   {
     "id": "prod-canva-p20-s3",
@@ -2716,7 +2716,7 @@
       "md": "/magazine/canva_products/p20_s3.webp",
       "lg": "/magazine/canva_products/p20_s3.webp"
     },
-    "cashier_code": 284
+    "cashier_code": 169
   },
   {
     "id": "prod-canva-p20-s4",
@@ -2734,7 +2734,7 @@
       "md": "/magazine/canva_products/p20_s4.webp",
       "lg": "/magazine/canva_products/p20_s4.webp"
     },
-    "cashier_code": 285
+    "cashier_code": 156
   },
   {
     "id": "prod-canva-p20-s5",
@@ -2752,7 +2752,7 @@
       "md": "/magazine/canva_products/p20_s5.webp",
       "lg": "/magazine/canva_products/p20_s5.webp"
     },
-    "cashier_code": 286
+    "cashier_code": 170
   },
   {
     "id": "prod-canva-p20-s6",
@@ -2770,7 +2770,7 @@
       "md": "/magazine/canva_products/p20_s6.webp",
       "lg": "/magazine/canva_products/p20_s6.webp"
     },
-    "cashier_code": 287
+    "cashier_code": 183
   },
   {
     "id": "prod-canva-p20-s7",
@@ -2788,7 +2788,7 @@
       "md": "/magazine/canva_products/p20_s7.webp",
       "lg": "/magazine/canva_products/p20_s7.webp"
     },
-    "cashier_code": 288
+    "cashier_code": 358
   },
   {
     "id": "prod-canva-p20-s8",
@@ -2806,7 +2806,7 @@
       "md": "/magazine/canva_products/p20_s8.webp",
       "lg": "/magazine/canva_products/p20_s8.webp"
     },
-    "cashier_code": 289
+    "cashier_code": 358
   },
   {
     "id": "prod-canva-p20-s9",
@@ -2824,7 +2824,7 @@
       "md": "/magazine/canva_products/p20_s9.webp",
       "lg": "/magazine/canva_products/p20_s9.webp"
     },
-    "cashier_code": 290
+    "cashier_code": 212
   },
   {
     "id": "prod-canva-p21-s1",
@@ -2842,7 +2842,7 @@
       "md": "/magazine/canva_products/p21_s1.webp",
       "lg": "/magazine/canva_products/p21_s1.webp"
     },
-    "cashier_code": 291
+    "cashier_code": 207
   },
   {
     "id": "prod-canva-p21-s2",
@@ -2860,7 +2860,7 @@
       "md": "/magazine/canva_products/p21_s2.webp",
       "lg": "/magazine/canva_products/p21_s2.webp"
     },
-    "cashier_code": 292
+    "cashier_code": 200
   },
   {
     "id": "prod-canva-p21-s3",
@@ -2878,7 +2878,7 @@
       "md": "/magazine/canva_products/p21_s3.webp",
       "lg": "/magazine/canva_products/p21_s3.webp"
     },
-    "cashier_code": 293
+    "cashier_code": 209
   },
   {
     "id": "prod-canva-p21-s4",
@@ -2896,7 +2896,7 @@
       "md": "/magazine/canva_products/p21_s4.webp",
       "lg": "/magazine/canva_products/p21_s4.webp"
     },
-    "cashier_code": 294
+    "cashier_code": 358
   },
   {
     "id": "prod-canva-p21-s5",
@@ -2914,7 +2914,7 @@
       "md": "/magazine/canva_products/p21_s5.webp",
       "lg": "/magazine/canva_products/p21_s5.webp"
     },
-    "cashier_code": 295
+    "cashier_code": 358
   },
   {
     "id": "prod-canva-p21-s6",
@@ -2932,7 +2932,7 @@
       "md": "/magazine/canva_products/p21_s6.webp",
       "lg": "/magazine/canva_products/p21_s6.webp"
     },
-    "cashier_code": 296
+    "cashier_code": 358
   },
   {
     "id": "prod-canva-p22-s1",
@@ -2950,7 +2950,7 @@
       "md": "/magazine/canva_products/p22_s1.webp",
       "lg": "/magazine/canva_products/p22_s1.webp"
     },
-    "cashier_code": 322
+    "cashier_code": 102
   },
   {
     "id": "prod-canva-p22-s2",
@@ -2968,7 +2968,7 @@
       "md": "/magazine/canva_products/p22_s2.webp",
       "lg": "/magazine/canva_products/p22_s2.webp"
     },
-    "cashier_code": 323
+    "cashier_code": 105
   },
   {
     "id": "prod-canva-p22-s3",
@@ -2986,7 +2986,7 @@
       "md": "/magazine/canva_products/p22_s3.webp",
       "lg": "/magazine/canva_products/p22_s3.webp"
     },
-    "cashier_code": 324
+    "cashier_code": 104
   },
   {
     "id": "prod-canva-p22-s4",
@@ -3004,7 +3004,7 @@
       "md": "/magazine/canva_products/p22_s4.webp",
       "lg": "/magazine/canva_products/p22_s4.webp"
     },
-    "cashier_code": 325
+    "cashier_code": 108
   },
   {
     "id": "prod-canva-p22-s5",
@@ -3022,7 +3022,7 @@
       "md": "/magazine/canva_products/p22_s5.webp",
       "lg": "/magazine/canva_products/p22_s5.webp"
     },
-    "cashier_code": 326
+    "cashier_code": 106
   },
   {
     "id": "prod-canva-p22-s6",
@@ -3040,7 +3040,7 @@
       "md": "/magazine/canva_products/p22_s6.webp",
       "lg": "/magazine/canva_products/p22_s6.webp"
     },
-    "cashier_code": 327
+    "cashier_code": 110
   },
   {
     "id": "prod-canva-p23-s1",
@@ -3058,7 +3058,7 @@
       "md": "/magazine/canva_products/p23_s1.webp",
       "lg": "/magazine/canva_products/p23_s1.webp"
     },
-    "cashier_code": 328
+    "cashier_code": 112
   },
   {
     "id": "prod-canva-p23-s2",
@@ -3076,7 +3076,7 @@
       "md": "/magazine/canva_products/p23_s2.webp",
       "lg": "/magazine/canva_products/p23_s2.webp"
     },
-    "cashier_code": 329
+    "cashier_code": 109
   },
   {
     "id": "prod-canva-p23-s3",
@@ -3094,7 +3094,7 @@
       "md": "/magazine/canva_products/p23_s3.webp",
       "lg": "/magazine/canva_products/p23_s3.webp"
     },
-    "cashier_code": 330
+    "cashier_code": 113
   },
   {
     "id": "prod-canva-p23-s4",
@@ -3112,7 +3112,7 @@
       "md": "/magazine/canva_products/p23_s4.webp",
       "lg": "/magazine/canva_products/p23_s4.webp"
     },
-    "cashier_code": 331
+    "cashier_code": 109
   },
   {
     "id": "prod-canva-p23-s5",
@@ -3130,7 +3130,7 @@
       "md": "/magazine/canva_products/p23_s5.webp",
       "lg": "/magazine/canva_products/p23_s5.webp"
     },
-    "cashier_code": 332
+    "cashier_code": 111
   },
   {
     "id": "prod-canva-p23-s6",
@@ -3148,7 +3148,7 @@
       "md": "/magazine/canva_products/p23_s6.webp",
       "lg": "/magazine/canva_products/p23_s6.webp"
     },
-    "cashier_code": 333
+    "cashier_code": 101
   },
   {
     "id": "prod-canva-p24-s1",
@@ -3166,7 +3166,7 @@
       "md": "/magazine/canva_products/p24_s1.webp",
       "lg": "/magazine/canva_products/p24_s1.webp"
     },
-    "cashier_code": 334
+    "cashier_code": 314
   },
   {
     "id": "prod-canva-p24-s2",
@@ -3184,7 +3184,7 @@
       "md": "/magazine/canva_products/p24_s2.webp",
       "lg": "/magazine/canva_products/p24_s2.webp"
     },
-    "cashier_code": 335
+    "cashier_code": 313
   },
   {
     "id": "prod-canva-p24-s3",
@@ -3202,7 +3202,7 @@
       "md": "/magazine/canva_products/p24_s3.webp",
       "lg": "/magazine/canva_products/p24_s3.webp"
     },
-    "cashier_code": 336
+    "cashier_code": 316
   },
   {
     "id": "prod-canva-p24-s4",
@@ -3220,7 +3220,7 @@
       "md": "/magazine/canva_products/p24_s4.webp",
       "lg": "/magazine/canva_products/p24_s4.webp"
     },
-    "cashier_code": 337
+    "cashier_code": 267
   },
   {
     "id": "prod-canva-p24-s5",
@@ -3238,7 +3238,7 @@
       "md": "/magazine/canva_products/p24_s5.webp",
       "lg": "/magazine/canva_products/p24_s5.webp"
     },
-    "cashier_code": 338
+    "cashier_code": 312
   },
   {
     "id": "prod-canva-p24-s6",
@@ -3256,7 +3256,7 @@
       "md": "/magazine/canva_products/p24_s6.webp",
       "lg": "/magazine/canva_products/p24_s6.webp"
     },
-    "cashier_code": 339
+    "cashier_code": 268
   },
   {
     "id": "prod-canva-p24-s7",
@@ -3274,7 +3274,7 @@
       "md": "/magazine/canva_products/p24_s7.webp",
       "lg": "/magazine/canva_products/p24_s7.webp"
     },
-    "cashier_code": 340
+    "cashier_code": 270
   },
   {
     "id": "prod-canva-p24-s8",
@@ -3292,7 +3292,7 @@
       "md": "/magazine/canva_products/p24_s8.webp",
       "lg": "/magazine/canva_products/p24_s8.webp"
     },
-    "cashier_code": 341
+    "cashier_code": 269
   },
   {
     "id": "prod-canva-p24-s9",
@@ -3310,7 +3310,7 @@
       "md": "/magazine/canva_products/p24_s9.webp",
       "lg": "/magazine/canva_products/p24_s9.webp"
     },
-    "cashier_code": 342
+    "cashier_code": 271
   },
   {
     "id": "prod-canva-p25-s1",
@@ -3328,7 +3328,7 @@
       "md": "/magazine/canva_products/p25_s1.webp",
       "lg": "/magazine/canva_products/p25_s1.webp"
     },
-    "cashier_code": 343
+    "cashier_code": 275
   },
   {
     "id": "prod-canva-p25-s2",
@@ -3346,7 +3346,7 @@
       "md": "/magazine/canva_products/p25_s2.webp",
       "lg": "/magazine/canva_products/p25_s2.webp"
     },
-    "cashier_code": 344
+    "cashier_code": 272
   },
   {
     "id": "prod-canva-p25-s3",
@@ -3364,7 +3364,7 @@
       "md": "/magazine/canva_products/p25_s3.webp",
       "lg": "/magazine/canva_products/p25_s3.webp"
     },
-    "cashier_code": 345
+    "cashier_code": 274
   },
   {
     "id": "prod-canva-p25-s4",
@@ -3382,7 +3382,7 @@
       "md": "/magazine/canva_products/p25_s4.webp",
       "lg": "/magazine/canva_products/p25_s4.webp"
     },
-    "cashier_code": 346
+    "cashier_code": 279
   },
   {
     "id": "prod-canva-p25-s5",
@@ -3400,7 +3400,7 @@
       "md": "/magazine/canva_products/p25_s5.webp",
       "lg": "/magazine/canva_products/p25_s5.webp"
     },
-    "cashier_code": 347
+    "cashier_code": 309
   },
   {
     "id": "prod-canva-p25-s6",
@@ -3418,7 +3418,7 @@
       "md": "/magazine/canva_products/p25_s6.webp",
       "lg": "/magazine/canva_products/p25_s6.webp"
     },
-    "cashier_code": 348
+    "cashier_code": 273
   },
   {
     "id": "prod-canva-p25-s7",
@@ -3436,7 +3436,7 @@
       "md": "/magazine/canva_products/p25_s7.webp",
       "lg": "/magazine/canva_products/p25_s7.webp"
     },
-    "cashier_code": 349
+    "cashier_code": 310
   },
   {
     "id": "prod-canva-p25-s8",
@@ -3454,7 +3454,7 @@
       "md": "/magazine/canva_products/p25_s8.webp",
       "lg": "/magazine/canva_products/p25_s8.webp"
     },
-    "cashier_code": 350
+    "cashier_code": 308
   },
   {
     "id": "prod-canva-p25-s9",
@@ -3472,7 +3472,7 @@
       "md": "/magazine/canva_products/p25_s9.webp",
       "lg": "/magazine/canva_products/p25_s9.webp"
     },
-    "cashier_code": 351
+    "cashier_code": 307
   },
   {
     "id": "prod-canva-p26-s1",
@@ -3490,7 +3490,7 @@
       "md": "/magazine/canva_products/p26_s1.webp",
       "lg": "/magazine/canva_products/p26_s1.webp"
     },
-    "cashier_code": 358
+    "cashier_code": 96
   },
   {
     "id": "prod-canva-p26-s2",
@@ -3508,7 +3508,7 @@
       "md": "/magazine/canva_products/p26_s2.webp",
       "lg": "/magazine/canva_products/p26_s2.webp"
     },
-    "cashier_code": 359
+    "cashier_code": 95
   },
   {
     "id": "prod-canva-p26-s3",
@@ -3526,7 +3526,7 @@
       "md": "/magazine/canva_products/p26_s3.webp",
       "lg": "/magazine/canva_products/p26_s3.webp"
     },
-    "cashier_code": 360
+    "cashier_code": 98
   },
   {
     "id": "prod-canva-p26-s4",
@@ -3544,7 +3544,7 @@
       "md": "/magazine/canva_products/p26_s4.webp",
       "lg": "/magazine/canva_products/p26_s4.webp"
     },
-    "cashier_code": 361
+    "cashier_code": null
   },
   {
     "id": "prod-canva-p26-s5",
@@ -3562,7 +3562,7 @@
       "md": "/magazine/canva_products/p26_s5.webp",
       "lg": "/magazine/canva_products/p26_s5.webp"
     },
-    "cashier_code": 362
+    "cashier_code": null
   },
   {
     "id": "prod-canva-p26-s6",
@@ -3580,7 +3580,7 @@
       "md": "/magazine/canva_products/p26_s6.webp",
       "lg": "/magazine/canva_products/p26_s6.webp"
     },
-    "cashier_code": 363
+    "cashier_code": 99
   },
   {
     "id": "prod-canva-p27-s1",
@@ -3598,7 +3598,7 @@
       "md": "/magazine/canva_products/p27_s1.webp",
       "lg": "/magazine/canva_products/p27_s1.webp"
     },
-    "cashier_code": 367
+    "cashier_code": 433
   },
   {
     "id": "prod-canva-p27-s2",
@@ -3616,7 +3616,7 @@
       "md": "/magazine/canva_products/p27_s2.webp",
       "lg": "/magazine/canva_products/p27_s2.webp"
     },
-    "cashier_code": 368
+    "cashier_code": 435
   },
   {
     "id": "prod-canva-p27-s3",
@@ -3634,7 +3634,7 @@
       "md": "/magazine/canva_products/p27_s3.webp",
       "lg": "/magazine/canva_products/p27_s3.webp"
     },
-    "cashier_code": 369
+    "cashier_code": 436
   },
   {
     "id": "prod-canva-p27-s4",
@@ -3652,7 +3652,7 @@
       "md": "/magazine/canva_products/p27_s4.webp",
       "lg": "/magazine/canva_products/p27_s4.webp"
     },
-    "cashier_code": 370
+    "cashier_code": 437
   },
   {
     "id": "prod-canva-p27-s5",
@@ -3670,7 +3670,7 @@
       "md": "/magazine/canva_products/p27_s5.webp",
       "lg": "/magazine/canva_products/p27_s5.webp"
     },
-    "cashier_code": 371
+    "cashier_code": 434
   },
   {
     "id": "prod-canva-p27-s6",
@@ -3688,7 +3688,7 @@
       "md": "/magazine/canva_products/p27_s6.webp",
       "lg": "/magazine/canva_products/p27_s6.webp"
     },
-    "cashier_code": 372
+    "cashier_code": 440
   },
   {
     "id": "prod-canva-p27-s7",
@@ -3706,7 +3706,7 @@
       "md": "/magazine/canva_products/p27_s7.webp",
       "lg": "/magazine/canva_products/p27_s7.webp"
     },
-    "cashier_code": 373
+    "cashier_code": 444
   },
   {
     "id": "prod-canva-p27-s8",
@@ -3724,7 +3724,7 @@
       "md": "/magazine/canva_products/p27_s8.webp",
       "lg": "/magazine/canva_products/p27_s8.webp"
     },
-    "cashier_code": 374
+    "cashier_code": 445
   },
   {
     "id": "prod-canva-p27-s9",
@@ -3742,7 +3742,7 @@
       "md": "/magazine/canva_products/p27_s9.webp",
       "lg": "/magazine/canva_products/p27_s9.webp"
     },
-    "cashier_code": 375
+    "cashier_code": 446
   },
   {
     "id": "prod-canva-p28-s1",
@@ -3760,7 +3760,7 @@
       "md": "/magazine/canva_products/p28_s1.webp",
       "lg": "/magazine/canva_products/p28_s1.webp"
     },
-    "cashier_code": 376
+    "cashier_code": 214
   },
   {
     "id": "prod-canva-p28-s2",
@@ -3778,7 +3778,7 @@
       "md": "/magazine/canva_products/p28_s2.webp",
       "lg": "/magazine/canva_products/p28_s2.webp"
     },
-    "cashier_code": 377
+    "cashier_code": 442
   },
   {
     "id": "prod-canva-p28-s3",
@@ -3796,7 +3796,7 @@
       "md": "/magazine/canva_products/p28_s3.webp",
       "lg": "/magazine/canva_products/p28_s3.webp"
     },
-    "cashier_code": 378
+    "cashier_code": 443
   },
   {
     "id": "prod-canva-p28-s4",
@@ -3814,7 +3814,7 @@
       "md": "/magazine/canva_products/p28_s4.webp",
       "lg": "/magazine/canva_products/p28_s4.webp"
     },
-    "cashier_code": 379
+    "cashier_code": 10
   },
   {
     "id": "prod-canva-p28-s5",
@@ -3832,7 +3832,7 @@
       "md": "/magazine/canva_products/p28_s5.webp",
       "lg": "/magazine/canva_products/p28_s5.webp"
     },
-    "cashier_code": 380
+    "cashier_code": 218
   },
   {
     "id": "prod-canva-p28-s6",
@@ -3850,7 +3850,7 @@
       "md": "/magazine/canva_products/p28_s6.webp",
       "lg": "/magazine/canva_products/p28_s6.webp"
     },
-    "cashier_code": 381
+    "cashier_code": 350
   },
   {
     "id": "prod-canva-p28-s7",
@@ -3868,7 +3868,7 @@
       "md": "/magazine/canva_products/p28_s7.webp",
       "lg": "/magazine/canva_products/p28_s7.webp"
     },
-    "cashier_code": 382
+    "cashier_code": null
   },
   {
     "id": "prod-canva-p28-s8",
@@ -3886,7 +3886,7 @@
       "md": "/magazine/canva_products/p28_s8.webp",
       "lg": "/magazine/canva_products/p28_s8.webp"
     },
-    "cashier_code": 383
+    "cashier_code": 240
   },
   {
     "id": "prod-canva-p28-s9",
@@ -3904,7 +3904,7 @@
       "md": "/magazine/canva_products/p28_s9.webp",
       "lg": "/magazine/canva_products/p28_s9.webp"
     },
-    "cashier_code": 384
+    "cashier_code": 217
   },
   {
     "id": "prod-canva-p29-s1",
@@ -3922,7 +3922,7 @@
       "md": "/magazine/canva_products/p29_s1.webp",
       "lg": "/magazine/canva_products/p29_s1.webp"
     },
-    "cashier_code": 385
+    "cashier_code": 254
   },
   {
     "id": "prod-canva-p29-s2",
@@ -3940,7 +3940,7 @@
       "md": "/magazine/canva_products/p29_s2.webp",
       "lg": "/magazine/canva_products/p29_s2.webp"
     },
-    "cashier_code": 386
+    "cashier_code": 254
   },
   {
     "id": "prod-canva-p29-s3",
@@ -3958,7 +3958,7 @@
       "md": "/magazine/canva_products/p29_s3.webp",
       "lg": "/magazine/canva_products/p29_s3.webp"
     },
-    "cashier_code": 387
+    "cashier_code": 253
   },
   {
     "id": "prod-canva-p29-s4",
@@ -3976,7 +3976,7 @@
       "md": "/magazine/canva_products/p29_s4.webp",
       "lg": "/magazine/canva_products/p29_s4.webp"
     },
-    "cashier_code": 388
+    "cashier_code": 241
   },
   {
     "id": "prod-canva-p29-s5",
@@ -3994,7 +3994,7 @@
       "md": "/magazine/canva_products/p29_s5.webp",
       "lg": "/magazine/canva_products/p29_s5.webp"
     },
-    "cashier_code": 389
+    "cashier_code": 250
   },
   {
     "id": "prod-canva-p29-s6",
@@ -4012,7 +4012,7 @@
       "md": "/magazine/canva_products/p29_s6.webp",
       "lg": "/magazine/canva_products/p29_s6.webp"
     },
-    "cashier_code": 390
+    "cashier_code": 255
   },
   {
     "id": "prod-canva-p29-s7",
@@ -4030,7 +4030,7 @@
       "md": "/magazine/canva_products/p29_s7.webp",
       "lg": "/magazine/canva_products/p29_s7.webp"
     },
-    "cashier_code": 391,
+    "cashier_code": 255,
     "stock_status": "متاح"
   },
   {
@@ -4049,7 +4049,7 @@
       "md": "/magazine/canva_products/p29_s8.webp",
       "lg": "/magazine/canva_products/p29_s8.webp"
     },
-    "cashier_code": 392
+    "cashier_code": 243
   },
   {
     "id": "prod-canva-p29-s9",
@@ -4067,7 +4067,7 @@
       "md": "/magazine/canva_products/p29_s9.webp",
       "lg": "/magazine/canva_products/p29_s9.webp"
     },
-    "cashier_code": 393
+    "cashier_code": null
   },
   {
     "id": "prod-canva-p30-s1",
@@ -4085,7 +4085,7 @@
       "md": "/magazine/canva_products/p30_s1.webp",
       "lg": "/magazine/canva_products/p30_s1.webp"
     },
-    "cashier_code": 394
+    "cashier_code": 255
   },
   {
     "id": "prod-canva-p30-s2",
@@ -4103,7 +4103,7 @@
       "md": "/magazine/canva_products/p30_s2.webp",
       "lg": "/magazine/canva_products/p30_s2.webp"
     },
-    "cashier_code": 395
+    "cashier_code": 254
   },
   {
     "id": "prod-canva-p30-s3",
@@ -4121,7 +4121,7 @@
       "md": "/magazine/canva_products/p30_s3.webp",
       "lg": "/magazine/canva_products/p30_s3.webp"
     },
-    "cashier_code": 396
+    "cashier_code": 251
   },
   {
     "id": "prod-canva-p30-s4",
@@ -4139,7 +4139,7 @@
       "md": "/magazine/canva_products/p30_s4.webp",
       "lg": "/magazine/canva_products/p30_s4.webp"
     },
-    "cashier_code": 397
+    "cashier_code": 254
   },
   {
     "id": "prod-canva-p30-s5",
@@ -4157,7 +4157,7 @@
       "md": "/magazine/canva_products/p30_s5.webp",
       "lg": "/magazine/canva_products/p30_s5.webp"
     },
-    "cashier_code": 398,
+    "cashier_code": 255,
     "stock_status": "متاح"
   },
   {
@@ -4176,7 +4176,7 @@
       "md": "/magazine/canva_products/p30_s6.webp",
       "lg": "/magazine/canva_products/p30_s6.webp"
     },
-    "cashier_code": 399
+    "cashier_code": 255
   },
   {
     "id": "prod-canva-p30-s7",
@@ -4194,7 +4194,7 @@
       "md": "/magazine/canva_products/p30_s7.webp",
       "lg": "/magazine/canva_products/p30_s7.webp"
     },
-    "cashier_code": 400
+    "cashier_code": 252
   },
   {
     "id": "prod-canva-p30-s8",
@@ -4212,7 +4212,7 @@
       "md": "/magazine/canva_products/p30_s8.webp",
       "lg": "/magazine/canva_products/p30_s8.webp"
     },
-    "cashier_code": 401
+    "cashier_code": null
   },
   {
     "id": "prod-canva-p30-s9",
@@ -4230,7 +4230,7 @@
       "md": "/magazine/canva_products/p30_s9.webp",
       "lg": "/magazine/canva_products/p30_s9.webp"
     },
-    "cashier_code": 402,
+    "cashier_code": 253,
     "stock_status": "متاح"
   },
   {
@@ -4249,7 +4249,7 @@
       "md": "/magazine/canva_products/p31_s1.webp",
       "lg": "/magazine/canva_products/p31_s1.webp"
     },
-    "cashier_code": 403
+    "cashier_code": 253
   },
   {
     "id": "prod-canva-p31-s2",
@@ -4267,7 +4267,7 @@
       "md": "/magazine/canva_products/p31_s2.webp",
       "lg": "/magazine/canva_products/p31_s2.webp"
     },
-    "cashier_code": 404
+    "cashier_code": null
   },
   {
     "id": "prod-canva-p31-s3",
@@ -4285,7 +4285,7 @@
       "md": "/magazine/canva_products/p31_s3.webp",
       "lg": "/magazine/canva_products/p31_s3.webp"
     },
-    "cashier_code": 405
+    "cashier_code": null
   },
   {
     "id": "prod-canva-p31-s4",
@@ -4303,7 +4303,7 @@
       "md": "/magazine/canva_products/p31_s4.webp",
       "lg": "/magazine/canva_products/p31_s4.webp"
     },
-    "cashier_code": 406
+    "cashier_code": 242
   },
   {
     "id": "prod-canva-p31-s5",
@@ -4321,7 +4321,7 @@
       "md": "/magazine/canva_products/p31_s5.webp",
       "lg": "/magazine/canva_products/p31_s5.webp"
     },
-    "cashier_code": 407
+    "cashier_code": 241
   },
   {
     "id": "prod-canva-p31-s6",
@@ -4339,7 +4339,7 @@
       "md": "/magazine/canva_products/p31_s6.webp",
       "lg": "/magazine/canva_products/p31_s6.webp"
     },
-    "cashier_code": 408
+    "cashier_code": 254
   },
   {
     "id": "prod-canva-p31-s7",
@@ -4357,7 +4357,7 @@
       "md": "/magazine/canva_products/p31_s7.webp",
       "lg": "/magazine/canva_products/p31_s7.webp"
     },
-    "cashier_code": 409
+    "cashier_code": 254
   },
   {
     "id": "prod-canva-p31-s8",
@@ -4375,7 +4375,7 @@
       "md": "/magazine/canva_products/p31_s8.webp",
       "lg": "/magazine/canva_products/p31_s8.webp"
     },
-    "cashier_code": 410
+    "cashier_code": null
   },
   {
     "id": "prod-canva-p31-s9",
@@ -4393,7 +4393,7 @@
       "md": "/magazine/canva_products/p31_s9.webp",
       "lg": "/magazine/canva_products/p31_s9.webp"
     },
-    "cashier_code": 411
+    "cashier_code": 255
   },
   {
     "id": "prod-canva-p32-s1",
@@ -4411,7 +4411,7 @@
       "md": "/magazine/canva_products/p32_s1.webp",
       "lg": "/magazine/canva_products/p32_s1.webp"
     },
-    "cashier_code": 412
+    "cashier_code": 254
   },
   {
     "id": "prod-canva-p32-s2",
@@ -4429,7 +4429,7 @@
       "md": "/magazine/canva_products/p32_s2.webp",
       "lg": "/magazine/canva_products/p32_s2.webp"
     },
-    "cashier_code": 413
+    "cashier_code": 253
   },
   {
     "id": "prod-canva-p32-s3",
@@ -4447,7 +4447,7 @@
       "md": "/magazine/canva_products/p32_s3.webp",
       "lg": "/magazine/canva_products/p32_s3.webp"
     },
-    "cashier_code": 414
+    "cashier_code": 253
   },
   {
     "id": "prod-canva-p32-s4",
@@ -4465,7 +4465,7 @@
       "md": "/magazine/canva_products/p32_s4.webp",
       "lg": "/magazine/canva_products/p32_s4.webp"
     },
-    "cashier_code": 415
+    "cashier_code": null
   },
   {
     "id": "prod-canva-p32-s5",
@@ -4483,7 +4483,7 @@
       "md": "/magazine/canva_products/p32_s5.webp",
       "lg": "/magazine/canva_products/p32_s5.webp"
     },
-    "cashier_code": 416
+    "cashier_code": 255
   },
   {
     "id": "prod-canva-p32-s6",
@@ -4501,7 +4501,7 @@
       "md": "/magazine/canva_products/p32_s6.webp",
       "lg": "/magazine/canva_products/p32_s6.webp"
     },
-    "cashier_code": 417
+    "cashier_code": 255
   },
   {
     "id": "prod-canva-p32-s7",
@@ -4519,7 +4519,7 @@
       "md": "/magazine/canva_products/p32_s7.webp",
       "lg": "/magazine/canva_products/p32_s7.webp"
     },
-    "cashier_code": 418
+    "cashier_code": 438
   },
   {
     "id": "prod-canva-p32-s8",
@@ -4537,7 +4537,7 @@
       "md": "/magazine/canva_products/p32_s8.webp",
       "lg": "/magazine/canva_products/p32_s8.webp"
     },
-    "cashier_code": 419
+    "cashier_code": 254
   },
   {
     "id": "prod-canva-p32-s9",
@@ -4555,7 +4555,7 @@
       "md": "/magazine/canva_products/p32_s9.webp",
       "lg": "/magazine/canva_products/p32_s9.webp"
     },
-    "cashier_code": 420
+    "cashier_code": 263
   },
   {
     "id": "prod-canva-p33-s1",
@@ -4573,7 +4573,7 @@
       "md": "/magazine/canva_products/p33_s1.webp",
       "lg": "/magazine/canva_products/p33_s1.webp"
     },
-    "cashier_code": 421
+    "cashier_code": 254
   },
   {
     "id": "prod-canva-p33-s2",
@@ -4591,7 +4591,7 @@
       "md": "/magazine/canva_products/p33_s2.webp",
       "lg": "/magazine/canva_products/p33_s2.webp"
     },
-    "cashier_code": 422
+    "cashier_code": 255
   },
   {
     "id": "prod-canva-p33-s3",
@@ -4609,7 +4609,7 @@
       "md": "/magazine/canva_products/p33_s3.webp",
       "lg": "/magazine/canva_products/p33_s3.webp"
     },
-    "cashier_code": 423
+    "cashier_code": 255
   },
   {
     "id": "prod-canva-p33-s4",
@@ -4627,7 +4627,7 @@
       "md": "/magazine/canva_products/p33_s4.webp",
       "lg": "/magazine/canva_products/p33_s4.webp"
     },
-    "cashier_code": 424
+    "cashier_code": null
   },
   {
     "id": "prod-canva-p33-s5",
@@ -4645,7 +4645,7 @@
       "md": "/magazine/canva_products/p33_s5.webp",
       "lg": "/magazine/canva_products/p33_s5.webp"
     },
-    "cashier_code": 425
+    "cashier_code": 254
   },
   {
     "id": "prod-canva-p33-s6",
@@ -4663,7 +4663,7 @@
       "md": "/magazine/canva_products/p33_s6.webp",
       "lg": "/magazine/canva_products/p33_s6.webp"
     },
-    "cashier_code": 426
+    "cashier_code": 253
   },
   {
     "id": "prod-canva-p33-s7",
@@ -4681,7 +4681,7 @@
       "md": "/magazine/canva_products/p33_s7.webp",
       "lg": "/magazine/canva_products/p33_s7.webp"
     },
-    "cashier_code": 427
+    "cashier_code": 254
   },
   {
     "id": "prod-canva-p33-s8",
@@ -4699,7 +4699,7 @@
       "md": "/magazine/canva_products/p33_s8.webp",
       "lg": "/magazine/canva_products/p33_s8.webp"
     },
-    "cashier_code": 428
+    "cashier_code": 254
   },
   {
     "id": "prod-canva-p33-s9",
@@ -4717,7 +4717,7 @@
       "md": "/magazine/canva_products/p33_s9.webp",
       "lg": "/magazine/canva_products/p33_s9.webp"
     },
-    "cashier_code": 429
+    "cashier_code": 255
   },
   {
     "id": "prod-canva-p34-s1",
@@ -4735,7 +4735,7 @@
       "md": "/magazine/canva_products/p34_s1.webp",
       "lg": "/magazine/canva_products/p34_s1.webp"
     },
-    "cashier_code": 430
+    "cashier_code": 257
   },
   {
     "id": "prod-canva-p34-s2",
@@ -4753,7 +4753,7 @@
       "md": "/magazine/canva_products/p34_s2.webp",
       "lg": "/magazine/canva_products/p34_s2.webp"
     },
-    "cashier_code": 431
+    "cashier_code": 257
   },
   {
     "id": "prod-canva-p34-s3",
@@ -4771,7 +4771,7 @@
       "md": "/magazine/canva_products/p34_s3.webp",
       "lg": "/magazine/canva_products/p34_s3.webp"
     },
-    "cashier_code": 432
+    "cashier_code": 257
   },
   {
     "id": "prod-canva-p34-s4",
@@ -4789,7 +4789,7 @@
       "md": "/magazine/canva_products/p34_s4.webp",
       "lg": "/magazine/canva_products/p34_s4.webp"
     },
-    "cashier_code": 433,
+    "cashier_code": 256,
     "stock_status": "متاح"
   },
   {
@@ -4808,7 +4808,7 @@
       "md": "/magazine/canva_products/p34_s5.webp",
       "lg": "/magazine/canva_products/p34_s5.webp"
     },
-    "cashier_code": 434
+    "cashier_code": 257
   },
   {
     "id": "prod-canva-p34-s6",
@@ -4826,7 +4826,7 @@
       "md": "/magazine/canva_products/p34_s6.webp",
       "lg": "/magazine/canva_products/p34_s6.webp"
     },
-    "cashier_code": 435
+    "cashier_code": 257
   },
   {
     "id": "prod-canva-p34-s7",
@@ -4844,7 +4844,7 @@
       "md": "/magazine/canva_products/p34_s7.webp",
       "lg": "/magazine/canva_products/p34_s7.webp"
     },
-    "cashier_code": 436,
+    "cashier_code": 256,
     "stock_status": "متاح"
   },
   {
@@ -4863,7 +4863,7 @@
       "md": "/magazine/canva_products/p34_s8.webp",
       "lg": "/magazine/canva_products/p34_s8.webp"
     },
-    "cashier_code": 437,
+    "cashier_code": 256,
     "stock_status": "متاح"
   },
   {
@@ -4882,7 +4882,7 @@
       "md": "/magazine/canva_products/p34_s9.webp",
       "lg": "/magazine/canva_products/p34_s9.webp"
     },
-    "cashier_code": 438
+    "cashier_code": null
   },
   {
     "id": "prod-canva-p35-s1",
@@ -4900,7 +4900,7 @@
       "md": "/magazine/canva_products/p35_s1.webp",
       "lg": "/magazine/canva_products/p35_s1.webp"
     },
-    "cashier_code": 452
+    "cashier_code": 441
   },
   {
     "id": "prod-canva-p35-s2",
@@ -4918,7 +4918,7 @@
       "md": "/magazine/canva_products/p35_s2.webp",
       "lg": "/magazine/canva_products/p35_s2.webp"
     },
-    "cashier_code": 453
+    "cashier_code": 441
   },
   {
     "id": "prod-canva-p35-s3",
@@ -4936,7 +4936,7 @@
       "md": "/magazine/canva_products/p35_s3.webp",
       "lg": "/magazine/canva_products/p35_s3.webp"
     },
-    "cashier_code": 454
+    "cashier_code": 441
   },
   {
     "id": "prod-canva-p35-s4",
@@ -4954,7 +4954,7 @@
       "md": "/magazine/canva_products/p35_s4.webp",
       "lg": "/magazine/canva_products/p35_s4.webp"
     },
-    "cashier_code": 455
+    "cashier_code": 441
   },
   {
     "id": "prod-canva-p35-s5",
@@ -4972,7 +4972,7 @@
       "md": "/magazine/canva_products/p35_s5.webp",
       "lg": "/magazine/canva_products/p35_s5.webp"
     },
-    "cashier_code": 456
+    "cashier_code": 441
   },
   {
     "id": "prod-canva-p35-s6",
@@ -4990,7 +4990,7 @@
       "md": "/magazine/canva_products/p35_s6.webp",
       "lg": "/magazine/canva_products/p35_s6.webp"
     },
-    "cashier_code": 457
+    "cashier_code": 441
   },
   {
     "id": "prod-canva-p35-s7",
@@ -5002,13 +5002,13 @@
     "category": "ميداليات وتمائم تراثية",
     "sale_price": 270,
     "in_stock": true,
-    "primary_image_url": "/magazine/canva_products/p35_s7.webp",
+    "primary_image_url": "/magazine/canva_products/p35_symbols.webp",
     "images": {
-      "sm": "/magazine/canva_products/p35_s7.webp",
-      "md": "/magazine/canva_products/p35_s7.webp",
-      "lg": "/magazine/canva_products/p35_s7.webp"
+      "sm": "/magazine/canva_products/p35_symbols.webp",
+      "md": "/magazine/canva_products/p35_symbols.webp",
+      "lg": "/magazine/canva_products/p35_symbols.webp"
     },
-    "cashier_code": 458
+    "cashier_code": 441
   },
   {
     "id": "prod-canva-p35-s8",
@@ -5020,13 +5020,13 @@
     "category": "ميداليات وتمائم تراثية",
     "sale_price": 270,
     "in_stock": true,
-    "primary_image_url": "/magazine/canva_products/p35_s8.webp",
+    "primary_image_url": "/magazine/canva_products/p35_cleopatra.webp",
     "images": {
-      "sm": "/magazine/canva_products/p35_s8.webp",
-      "md": "/magazine/canva_products/p35_s8.webp",
-      "lg": "/magazine/canva_products/p35_s8.webp"
+      "sm": "/magazine/canva_products/p35_cleopatra.webp",
+      "md": "/magazine/canva_products/p35_cleopatra.webp",
+      "lg": "/magazine/canva_products/p35_cleopatra.webp"
     },
-    "cashier_code": 596
+    "cashier_code": 441
   },
   {
     "id": "prod-canva-p36-s1",
@@ -5044,7 +5044,7 @@
       "md": "/magazine/canva_products/p36_s1.webp",
       "lg": "/magazine/canva_products/p36_s1.webp"
     },
-    "cashier_code": 459
+    "cashier_code": 407
   },
   {
     "id": "prod-canva-p36-s2",
@@ -5062,7 +5062,7 @@
       "md": "/magazine/canva_products/p36_s2.webp",
       "lg": "/magazine/canva_products/p36_s2.webp"
     },
-    "cashier_code": 460
+    "cashier_code": 407
   },
   {
     "id": "prod-canva-p36-s3",
@@ -5080,7 +5080,7 @@
       "md": "/magazine/canva_products/p36_s3.webp",
       "lg": "/magazine/canva_products/p36_s3.webp"
     },
-    "cashier_code": 461
+    "cashier_code": 411
   },
   {
     "id": "prod-canva-p36-s4",
@@ -5098,7 +5098,7 @@
       "md": "/magazine/canva_products/p36_s4.webp",
       "lg": "/magazine/canva_products/p36_s4.webp"
     },
-    "cashier_code": 462
+    "cashier_code": 408
   },
   {
     "id": "prod-canva-p36-s5",
@@ -5116,7 +5116,7 @@
       "md": "/magazine/canva_products/p36_s5.webp",
       "lg": "/magazine/canva_products/p36_s5.webp"
     },
-    "cashier_code": 463
+    "cashier_code": 405
   },
   {
     "id": "prod-canva-p36-s6",
@@ -5134,7 +5134,7 @@
       "md": "/magazine/canva_products/p36_s6.webp",
       "lg": "/magazine/canva_products/p36_s6.webp"
     },
-    "cashier_code": 464
+    "cashier_code": 404
   },
   {
     "id": "prod-canva-p36-s7",
@@ -5152,7 +5152,7 @@
       "md": "/magazine/canva_products/p36_s7.webp",
       "lg": "/magazine/canva_products/p36_s7.webp"
     },
-    "cashier_code": 465
+    "cashier_code": 410
   },
   {
     "id": "prod-canva-p36-s8",
@@ -5170,7 +5170,7 @@
       "md": "/magazine/canva_products/p36_s8.webp",
       "lg": "/magazine/canva_products/p36_s8.webp"
     },
-    "cashier_code": 466
+    "cashier_code": 406
   },
   {
     "id": "prod-canva-p36-s9",
@@ -5188,7 +5188,7 @@
       "md": "/magazine/canva_products/p36_s9.webp",
       "lg": "/magazine/canva_products/p36_s9.webp"
     },
-    "cashier_code": 467
+    "cashier_code": 409
   },
   {
     "id": "prod-canva-p37-s1",
@@ -5206,7 +5206,7 @@
       "md": "/magazine/canva_products/p37_s1.webp",
       "lg": "/magazine/canva_products/p37_s1.webp"
     },
-    "cashier_code": 468
+    "cashier_code": 412
   },
   {
     "id": "prod-canva-p37-s2",
@@ -5224,7 +5224,7 @@
       "md": "/magazine/canva_products/p37_s2.webp",
       "lg": "/magazine/canva_products/p37_s2.webp"
     },
-    "cashier_code": 469
+    "cashier_code": 415
   },
   {
     "id": "prod-canva-p37-s3",
@@ -5242,7 +5242,7 @@
       "md": "/magazine/canva_products/p37_s3.webp",
       "lg": "/magazine/canva_products/p37_s3.webp"
     },
-    "cashier_code": 470
+    "cashier_code": 416
   },
   {
     "id": "prod-canva-p37-s4",
@@ -5260,7 +5260,7 @@
       "md": "/magazine/canva_products/p37_s4.webp",
       "lg": "/magazine/canva_products/p37_s4.webp"
     },
-    "cashier_code": 471
+    "cashier_code": 417
   },
   {
     "id": "prod-canva-p37-s5",
@@ -5278,7 +5278,7 @@
       "md": "/magazine/canva_products/p37_s5.webp",
       "lg": "/magazine/canva_products/p37_s5.webp"
     },
-    "cashier_code": 472
+    "cashier_code": 416
   },
   {
     "id": "prod-canva-p37-s6",
@@ -5296,7 +5296,7 @@
       "md": "/magazine/canva_products/p37_s6.webp",
       "lg": "/magazine/canva_products/p37_s6.webp"
     },
-    "cashier_code": 473
+    "cashier_code": 416
   },
   {
     "id": "prod-canva-p37-s7",
@@ -5314,7 +5314,7 @@
       "md": "/magazine/canva_products/p37_s7.webp",
       "lg": "/magazine/canva_products/p37_s7.webp"
     },
-    "cashier_code": 474
+    "cashier_code": 418
   },
   {
     "id": "prod-canva-p37-s8",
@@ -5332,7 +5332,7 @@
       "md": "/magazine/canva_products/p37_s8.webp",
       "lg": "/magazine/canva_products/p37_s8.webp"
     },
-    "cashier_code": 475
+    "cashier_code": 413
   },
   {
     "id": "prod-canva-p37-s9",
@@ -5350,7 +5350,7 @@
       "md": "/magazine/canva_products/p37_s9.webp",
       "lg": "/magazine/canva_products/p37_s9.webp"
     },
-    "cashier_code": 476
+    "cashier_code": 416
   },
   {
     "id": "prod-canva-p38-s1",
@@ -5368,7 +5368,7 @@
       "md": "/magazine/canva_products/p38_s1.webp",
       "lg": "/magazine/canva_products/p38_s1.webp"
     },
-    "cashier_code": 477
+    "cashier_code": 422
   },
   {
     "id": "prod-canva-p38-s2",
@@ -5386,7 +5386,7 @@
       "md": "/magazine/canva_products/p38_s2.webp",
       "lg": "/magazine/canva_products/p38_s2.webp"
     },
-    "cashier_code": 478
+    "cashier_code": 421
   },
   {
     "id": "prod-canva-p38-s3",
@@ -5404,7 +5404,7 @@
       "md": "/magazine/canva_products/p38_s3.webp",
       "lg": "/magazine/canva_products/p38_s3.webp"
     },
-    "cashier_code": 479
+    "cashier_code": 423
   },
   {
     "id": "prod-canva-p38-s4",
@@ -5422,7 +5422,7 @@
       "md": "/magazine/canva_products/p38_s4.webp",
       "lg": "/magazine/canva_products/p38_s4.webp"
     },
-    "cashier_code": 480
+    "cashier_code": 420
   },
   {
     "id": "prod-canva-p38-s5",
@@ -5440,7 +5440,7 @@
       "md": "/magazine/canva_products/p38_s5.webp",
       "lg": "/magazine/canva_products/p38_s5.webp"
     },
-    "cashier_code": 481
+    "cashier_code": 419
   },
   {
     "id": "prod-canva-p38-s6",
@@ -5458,7 +5458,7 @@
       "md": "/magazine/canva_products/p38_s6.webp",
       "lg": "/magazine/canva_products/p38_s6.webp"
     },
-    "cashier_code": 482
+    "cashier_code": 424
   },
   {
     "id": "prod-canva-p38-s7",
@@ -5476,7 +5476,7 @@
       "md": "/magazine/canva_products/p38_s7.webp",
       "lg": "/magazine/canva_products/p38_s7.webp"
     },
-    "cashier_code": 483
+    "cashier_code": 427
   },
   {
     "id": "prod-canva-p38-s8",
@@ -5494,7 +5494,7 @@
       "md": "/magazine/canva_products/p38_s8.webp",
       "lg": "/magazine/canva_products/p38_s8.webp"
     },
-    "cashier_code": 484
+    "cashier_code": 426
   },
   {
     "id": "prod-canva-p38-s9",
@@ -5512,7 +5512,7 @@
       "md": "/magazine/canva_products/p38_s9.webp",
       "lg": "/magazine/canva_products/p38_s9.webp"
     },
-    "cashier_code": 485
+    "cashier_code": 428
   },
   {
     "id": "prod-canva-p39-s1",
@@ -5530,7 +5530,7 @@
       "md": "/magazine/canva_products/p39_s1.webp",
       "lg": "/magazine/canva_products/p39_s1.webp"
     },
-    "cashier_code": 486
+    "cashier_code": 77
   },
   {
     "id": "prod-canva-p39-s2",
@@ -5548,7 +5548,7 @@
       "md": "/magazine/canva_products/p39_s2.webp",
       "lg": "/magazine/canva_products/p39_s2.webp"
     },
-    "cashier_code": 487
+    "cashier_code": 40
   },
   {
     "id": "prod-canva-p39-s3",
@@ -5566,7 +5566,7 @@
       "md": "/magazine/canva_products/p39_s3.webp",
       "lg": "/magazine/canva_products/p39_s3.webp"
     },
-    "cashier_code": 488
+    "cashier_code": 31
   },
   {
     "id": "prod-canva-p39-s4",
@@ -5584,7 +5584,7 @@
       "md": "/magazine/canva_products/p39_s4.webp",
       "lg": "/magazine/canva_products/p39_s4.webp"
     },
-    "cashier_code": 489
+    "cashier_code": null
   },
   {
     "id": "prod-canva-p39-s5",
@@ -5602,7 +5602,7 @@
       "md": "/magazine/canva_products/p39_s5.webp",
       "lg": "/magazine/canva_products/p39_s5.webp"
     },
-    "cashier_code": 490
+    "cashier_code": 43
   },
   {
     "id": "prod-canva-p39-s6",
@@ -5620,7 +5620,7 @@
       "md": "/magazine/canva_products/p39_s6.webp",
       "lg": "/magazine/canva_products/p39_s6.webp"
     },
-    "cashier_code": 491
+    "cashier_code": 21
   },
   {
     "id": "prod-canva-p39-s7",
@@ -5638,7 +5638,7 @@
       "md": "/magazine/canva_products/p39_s7.webp",
       "lg": "/magazine/canva_products/p39_s7.webp"
     },
-    "cashier_code": 492
+    "cashier_code": 47
   },
   {
     "id": "prod-canva-p39-s8",
@@ -5656,7 +5656,7 @@
       "md": "/magazine/canva_products/p39_s8.webp",
       "lg": "/magazine/canva_products/p39_s8.webp"
     },
-    "cashier_code": 493
+    "cashier_code": 22
   },
   {
     "id": "prod-canva-p39-s9",
@@ -5674,7 +5674,7 @@
       "md": "/magazine/canva_products/p39_s9.webp",
       "lg": "/magazine/canva_products/p39_s9.webp"
     },
-    "cashier_code": 494
+    "cashier_code": 46
   },
   {
     "id": "prod-canva-p40-s1",
@@ -5692,7 +5692,7 @@
       "md": "/magazine/canva_products/p40_s1.webp",
       "lg": "/magazine/canva_products/p40_s1.webp"
     },
-    "cashier_code": 495
+    "cashier_code": 25
   },
   {
     "id": "prod-canva-p40-s2",
@@ -5710,7 +5710,7 @@
       "md": "/magazine/canva_products/p40_s2.webp",
       "lg": "/magazine/canva_products/p40_s2.webp"
     },
-    "cashier_code": 496
+    "cashier_code": 32
   },
   {
     "id": "prod-canva-p40-s3",
@@ -5728,7 +5728,7 @@
       "md": "/magazine/canva_products/p40_s3.webp",
       "lg": "/magazine/canva_products/p40_s3.webp"
     },
-    "cashier_code": 497
+    "cashier_code": 52
   },
   {
     "id": "prod-canva-p40-s4",
@@ -5746,7 +5746,7 @@
       "md": "/magazine/canva_products/p40_s4.webp",
       "lg": "/magazine/canva_products/p40_s4.webp"
     },
-    "cashier_code": 498
+    "cashier_code": 27
   },
   {
     "id": "prod-canva-p40-s5",
@@ -5764,7 +5764,7 @@
       "md": "/magazine/canva_products/p40_s5.webp",
       "lg": "/magazine/canva_products/p40_s5.webp"
     },
-    "cashier_code": 499
+    "cashier_code": 24
   },
   {
     "id": "prod-canva-p40-s6",
@@ -5782,7 +5782,7 @@
       "md": "/magazine/canva_products/p40_s6.webp",
       "lg": "/magazine/canva_products/p40_s6.webp"
     },
-    "cashier_code": 500
+    "cashier_code": 21
   },
   {
     "id": "prod-canva-p40-s7",
@@ -5800,7 +5800,7 @@
       "md": "/magazine/canva_products/p40_s7.webp",
       "lg": "/magazine/canva_products/p40_s7.webp"
     },
-    "cashier_code": 501
+    "cashier_code": 41
   },
   {
     "id": "prod-canva-p40-s8",
@@ -5818,7 +5818,7 @@
       "md": "/magazine/canva_products/p40_s8.webp",
       "lg": "/magazine/canva_products/p40_s8.webp"
     },
-    "cashier_code": 502
+    "cashier_code": null
   },
   {
     "id": "prod-canva-p40-s9",
@@ -5836,7 +5836,7 @@
       "md": "/magazine/canva_products/p40_s9.webp",
       "lg": "/magazine/canva_products/p40_s9.webp"
     },
-    "cashier_code": 503
+    "cashier_code": 35
   },
   {
     "id": "prod-canva-p42-s1",
@@ -5854,7 +5854,7 @@
       "md": "/magazine/canva_products/p42_s1.webp",
       "lg": "/magazine/canva_products/p42_s1.webp"
     },
-    "cashier_code": 504
+    "cashier_code": 23
   },
   {
     "id": "prod-canva-p42-s2",
@@ -5872,7 +5872,7 @@
       "md": "/magazine/canva_products/p42_s2.webp",
       "lg": "/magazine/canva_products/p42_s2.webp"
     },
-    "cashier_code": 505
+    "cashier_code": 42
   },
   {
     "id": "prod-canva-p42-s3",
@@ -5890,7 +5890,7 @@
       "md": "/magazine/canva_products/p42_s3.webp",
       "lg": "/magazine/canva_products/p42_s3.webp"
     },
-    "cashier_code": 506
+    "cashier_code": 39
   },
   {
     "id": "prod-canva-p42-s4",
@@ -5908,7 +5908,7 @@
       "md": "/magazine/canva_products/p42_s4.webp",
       "lg": "/magazine/canva_products/p42_s4.webp"
     },
-    "cashier_code": 507
+    "cashier_code": 21
   },
   {
     "id": "prod-canva-p42-s5",
@@ -5926,7 +5926,7 @@
       "md": "/magazine/canva_products/p42_s5.webp",
       "lg": "/magazine/canva_products/p42_s5.webp"
     },
-    "cashier_code": 508
+    "cashier_code": 29
   },
   {
     "id": "prod-canva-p42-s6",
@@ -5944,7 +5944,7 @@
       "md": "/magazine/canva_products/p42_s6.webp",
       "lg": "/magazine/canva_products/p42_s6.webp"
     },
-    "cashier_code": 509
+    "cashier_code": 20
   },
   {
     "id": "prod-canva-p42-s7",
@@ -5962,7 +5962,7 @@
       "md": "/magazine/canva_products/p42_s7.webp",
       "lg": "/magazine/canva_products/p42_s7.webp"
     },
-    "cashier_code": 510
+    "cashier_code": 36
   },
   {
     "id": "prod-canva-p42-s8",
@@ -5980,7 +5980,7 @@
       "md": "/magazine/canva_products/p42_s8.webp",
       "lg": "/magazine/canva_products/p42_s8.webp"
     },
-    "cashier_code": 511
+    "cashier_code": 28
   },
   {
     "id": "prod-canva-p42-s9",
@@ -5998,7 +5998,7 @@
       "md": "/magazine/canva_products/p42_s9.webp",
       "lg": "/magazine/canva_products/p42_s9.webp"
     },
-    "cashier_code": 512
+    "cashier_code": 30
   },
   {
     "id": "prod-canva-p43-s1",
@@ -6016,7 +6016,7 @@
       "md": "/magazine/canva_products/p43_s1.webp",
       "lg": "/magazine/canva_products/p43_s1.webp"
     },
-    "cashier_code": 522
+    "cashier_code": 89
   },
   {
     "id": "prod-canva-p43-s2",
@@ -6034,7 +6034,7 @@
       "md": "/magazine/canva_products/p43_s2.webp",
       "lg": "/magazine/canva_products/p43_s2.webp"
     },
-    "cashier_code": 523
+    "cashier_code": 330
   },
   {
     "id": "prod-canva-p43-s3",
@@ -6052,7 +6052,7 @@
       "md": "/magazine/canva_products/p43_s3.webp",
       "lg": "/magazine/canva_products/p43_s3.webp"
     },
-    "cashier_code": 524
+    "cashier_code": 85
   },
   {
     "id": "prod-canva-p43-s4",
@@ -6070,7 +6070,7 @@
       "md": "/magazine/canva_products/p43_s4.webp",
       "lg": "/magazine/canva_products/p43_s4.webp"
     },
-    "cashier_code": 525
+    "cashier_code": 332
   },
   {
     "id": "prod-canva-p43-s5",
@@ -6088,7 +6088,7 @@
       "md": "/magazine/canva_products/p43_s5.webp",
       "lg": "/magazine/canva_products/p43_s5.webp"
     },
-    "cashier_code": 526
+    "cashier_code": 84
   },
   {
     "id": "prod-canva-p43-s6",
@@ -6106,7 +6106,7 @@
       "md": "/magazine/canva_products/p43_s6.webp",
       "lg": "/magazine/canva_products/p43_s6.webp"
     },
-    "cashier_code": 527
+    "cashier_code": 48
   },
   {
     "id": "prod-canva-p44-s1",
@@ -6124,7 +6124,7 @@
       "md": "/magazine/canva_products/p44_s1.webp",
       "lg": "/magazine/canva_products/p44_s1.webp"
     },
-    "cashier_code": 552
+    "cashier_code": 8
   },
   {
     "id": "prod-canva-p44-s2",
@@ -6142,7 +6142,7 @@
       "md": "/magazine/canva_products/p44_s2.webp",
       "lg": "/magazine/canva_products/p44_s2.webp"
     },
-    "cashier_code": 553
+    "cashier_code": 304
   },
   {
     "id": "prod-canva-p44-s3",
@@ -6160,7 +6160,7 @@
       "md": "/magazine/canva_products/p44_s3.webp",
       "lg": "/magazine/canva_products/p44_s3.webp"
     },
-    "cashier_code": 554
+    "cashier_code": 7
   },
   {
     "id": "prod-canva-p44-s4",
@@ -6178,7 +6178,7 @@
       "md": "/magazine/canva_products/p44_s4.webp",
       "lg": "/magazine/canva_products/p44_s4.webp"
     },
-    "cashier_code": 555
+    "cashier_code": 287
   },
   {
     "id": "prod-canva-p44-s5",
@@ -6196,7 +6196,7 @@
       "md": "/magazine/canva_products/p44_s5.webp",
       "lg": "/magazine/canva_products/p44_s5.webp"
     },
-    "cashier_code": 556
+    "cashier_code": 289
   },
   {
     "id": "prod-canva-p44-s6",
@@ -6214,7 +6214,7 @@
       "md": "/magazine/canva_products/p44_s6.webp",
       "lg": "/magazine/canva_products/p44_s6.webp"
     },
-    "cashier_code": 557
+    "cashier_code": 293
   },
   {
     "id": "prod-canva-p44-s7",
@@ -6232,7 +6232,7 @@
       "md": "/magazine/canva_products/p44_s7.webp",
       "lg": "/magazine/canva_products/p44_s7.webp"
     },
-    "cashier_code": 558
+    "cashier_code": 359
   },
   {
     "id": "prod-canva-p44-s8",
@@ -6250,7 +6250,7 @@
       "md": "/magazine/canva_products/p44_s8.webp",
       "lg": "/magazine/canva_products/p44_s8.webp"
     },
-    "cashier_code": 559
+    "cashier_code": 283
   },
   {
     "id": "prod-canva-p44-s9",
@@ -6268,7 +6268,7 @@
       "md": "/magazine/canva_products/p44_s9.webp",
       "lg": "/magazine/canva_products/p44_s9.webp"
     },
-    "cashier_code": 560
+    "cashier_code": 290
   },
   {
     "id": "prod-canva-p45-s1",
@@ -6286,7 +6286,7 @@
       "md": "/magazine/canva_products/p45_s1.webp",
       "lg": "/magazine/canva_products/p45_s1.webp"
     },
-    "cashier_code": 561
+    "cashier_code": 297
   },
   {
     "id": "prod-canva-p45-s2",
@@ -6304,7 +6304,7 @@
       "md": "/magazine/canva_products/p45_s2.webp",
       "lg": "/magazine/canva_products/p45_s2.webp"
     },
-    "cashier_code": 562
+    "cashier_code": 305
   },
   {
     "id": "prod-canva-p45-s3",
@@ -6322,7 +6322,7 @@
       "md": "/magazine/canva_products/p45_s3.webp",
       "lg": "/magazine/canva_products/p45_s3.webp"
     },
-    "cashier_code": 563
+    "cashier_code": 286
   },
   {
     "id": "prod-canva-p45-s4",
@@ -6340,7 +6340,7 @@
       "md": "/magazine/canva_products/p45_s4.webp",
       "lg": "/magazine/canva_products/p45_s4.webp"
     },
-    "cashier_code": 564
+    "cashier_code": 284
   },
   {
     "id": "prod-canva-p45-s5",
@@ -6358,7 +6358,7 @@
       "md": "/magazine/canva_products/p45_s5.webp",
       "lg": "/magazine/canva_products/p45_s5.webp"
     },
-    "cashier_code": 565
+    "cashier_code": 285
   },
   {
     "id": "prod-canva-p45-s6",
@@ -6376,7 +6376,7 @@
       "md": "/magazine/canva_products/p45_s6.webp",
       "lg": "/magazine/canva_products/p45_s6.webp"
     },
-    "cashier_code": 566
+    "cashier_code": 296
   },
   {
     "id": "prod-canva-p45-s7",
@@ -6394,7 +6394,7 @@
       "md": "/magazine/canva_products/p45_s7.webp",
       "lg": "/magazine/canva_products/p45_s7.webp"
     },
-    "cashier_code": 567
+    "cashier_code": 303
   },
   {
     "id": "prod-canva-p45-s8",
@@ -6412,7 +6412,7 @@
       "md": "/magazine/canva_products/p45_s8.webp",
       "lg": "/magazine/canva_products/p45_s8.webp"
     },
-    "cashier_code": 568
+    "cashier_code": 100
   },
   {
     "id": "prod-canva-p45-s9",
@@ -6430,7 +6430,7 @@
       "md": "/magazine/canva_products/p45_s9.webp",
       "lg": "/magazine/canva_products/p45_s9.webp"
     },
-    "cashier_code": 569
+    "cashier_code": 281
   },
   {
     "id": "prod-canva-p46-s1",
@@ -6448,7 +6448,7 @@
       "md": "/magazine/canva_products/p46_s1.webp",
       "lg": "/magazine/canva_products/p46_s1.webp"
     },
-    "cashier_code": 576
+    "cashier_code": 447
   },
   {
     "id": "prod-canva-p46-s2",
@@ -6466,7 +6466,7 @@
       "md": "/magazine/canva_products/p46_s2.webp",
       "lg": "/magazine/canva_products/p46_s2.webp"
     },
-    "cashier_code": 577
+    "cashier_code": 355
   },
   {
     "id": "prod-canva-p46-s3",
@@ -6484,7 +6484,7 @@
       "md": "/magazine/canva_products/p46_s3.webp",
       "lg": "/magazine/canva_products/p46_s3.webp"
     },
-    "cashier_code": 578
+    "cashier_code": 354
   },
   {
     "id": "prod-canva-p46-s4",
@@ -6502,7 +6502,7 @@
       "md": "/magazine/canva_products/p46_s4.webp",
       "lg": "/magazine/canva_products/p46_s4.webp"
     },
-    "cashier_code": 579
+    "cashier_code": 299
   },
   {
     "id": "prod-canva-p46-s5",
@@ -6520,7 +6520,7 @@
       "md": "/magazine/canva_products/p46_s5.webp",
       "lg": "/magazine/canva_products/p46_s5.webp"
     },
-    "cashier_code": 580
+    "cashier_code": 453
   },
   {
     "id": "prod-canva-p46-s6",
@@ -6538,7 +6538,7 @@
       "md": "/magazine/canva_products/p46_s6.webp",
       "lg": "/magazine/canva_products/p46_s6.webp"
     },
-    "cashier_code": 581
+    "cashier_code": 452
   },
   {
     "id": "prod-canva-p46-s7",
@@ -6556,7 +6556,7 @@
       "md": "/magazine/canva_products/p46_s7.webp",
       "lg": "/magazine/canva_products/p46_s7.webp"
     },
-    "cashier_code": 582
+    "cashier_code": 449
   },
   {
     "id": "prod-canva-p46-s8",
@@ -6574,7 +6574,7 @@
       "md": "/magazine/canva_products/p46_s8.webp",
       "lg": "/magazine/canva_products/p46_s8.webp"
     },
-    "cashier_code": 583
+    "cashier_code": 449
   },
   {
     "id": "prod-canva-p46-s9",
@@ -6592,7 +6592,7 @@
       "md": "/magazine/canva_products/p46_s9.webp",
       "lg": "/magazine/canva_products/p46_s9.webp"
     },
-    "cashier_code": 584
+    "cashier_code": null
   },
   {
     "id": "prod-canva-p47-s1",
@@ -6610,7 +6610,7 @@
       "md": "/magazine/canva_products/p47_s1.webp",
       "lg": "/magazine/canva_products/p47_s1.webp"
     },
-    "cashier_code": 585
+    "cashier_code": 302
   },
   {
     "id": "prod-canva-p47-s2",
@@ -6628,7 +6628,7 @@
       "md": "/magazine/canva_products/p47_s2.webp",
       "lg": "/magazine/canva_products/p47_s2.webp"
     },
-    "cashier_code": 586
+    "cashier_code": 448
   },
   {
     "id": "prod-canva-p47-s3",
@@ -6646,7 +6646,7 @@
       "md": "/magazine/canva_products/p47_s3.webp",
       "lg": "/magazine/canva_products/p47_s3.webp"
     },
-    "cashier_code": 587
+    "cashier_code": 450
   },
   {
     "id": "prod-canva-p47-s4",
@@ -6664,7 +6664,7 @@
       "md": "/magazine/canva_products/p47_s4.webp",
       "lg": "/magazine/canva_products/p47_s4.webp"
     },
-    "cashier_code": 588
+    "cashier_code": 353
   },
   {
     "id": "prod-canva-p48-s1",
@@ -6682,7 +6682,7 @@
       "md": "/magazine/canva_products/p48_s1.webp",
       "lg": "/magazine/canva_products/p48_s1.webp"
     },
-    "cashier_code": 593
+    "cashier_code": 306
   },
   {
     "id": "prod-canva-p48-s2",
@@ -6700,7 +6700,7 @@
       "md": "/magazine/canva_products/p48_s2.webp",
       "lg": "/magazine/canva_products/p48_s2.webp"
     },
-    "cashier_code": 594
+    "cashier_code": 291
   },
   {
     "id": "prod-canva-p48-s3",
@@ -6718,6 +6718,6 @@
       "md": "/magazine/canva_products/p48_s3.webp",
       "lg": "/magazine/canva_products/p48_s3.webp"
     },
-    "cashier_code": 595
+    "cashier_code": 295
   }
 ]
