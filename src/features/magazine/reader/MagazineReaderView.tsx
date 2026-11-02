@@ -68,6 +68,8 @@ export function MagazineReaderView({
     }
   };
 
+  const spreadStart = Math.floor((currentPage - 1) / 2) * 2 + 1;
+
   return (
     <div className="min-h-screen bg-[#F3F4F7] flex flex-col">
       {/* Top Reader Navbar */}
@@ -191,7 +193,11 @@ export function MagazineReaderView({
                   highlightedCode={highlightedCode}
                   onProductClick={(product) => {
                     if (product?.slug && product.slug !== '#') {
-                      router.push(`/products/${product.slug}`);
+                      const pageNum = pos || currentPage;
+                      if (typeof window !== 'undefined') {
+                        sessionStorage.setItem('lotus_magazine_page', String(pageNum));
+                      }
+                      router.push(`/products/${encodeURIComponent(product.slug)}?fromPage=${pageNum}`);
                     }
                   }}
                 />

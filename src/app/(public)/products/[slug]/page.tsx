@@ -11,9 +11,11 @@ import {
 } from '@/features/products/services/publicProducts';
 import { formatMagazinePrice } from '@/lib/format/price';
 import { ProductPriceDisplay } from '@/features/products/components/ProductPriceDisplay';
+import { ProductBackButton } from '@/features/products/components/ProductBackButton';
 
 interface ProductDetailPageProps {
   params: Promise<{ slug: string }>;
+  searchParams?: Promise<{ fromPage?: string; p?: string }>;
 }
 
 export async function generateMetadata({
@@ -43,8 +45,10 @@ export async function generateMetadata({
   };
 }
 
-async function ProductDetailPageContent({ params }: ProductDetailPageProps) {
+async function ProductDetailPageContent({ params, searchParams }: ProductDetailPageProps) {
   const { slug } = await params;
+  const sParams = searchParams ? await searchParams : {};
+  const fromPageStr = sParams.fromPage || sParams.p;
   const decodedSlug = decodeURIComponent(slug);
   const liveIssue = await getLiveIssue();
   const product = getPublicProductBySlug(decodedSlug, liveIssue);
@@ -61,6 +65,11 @@ async function ProductDetailPageContent({ params }: ProductDetailPageProps) {
   const activeProduct = product || (await getAllPublicProducts(liveIssue)).find(
     (p) => p.slug === decodedSlug || p.id === decodedSlug
   )!;
+
+  const returnPage = fromPageStr
+    ? parseInt(fromPageStr, 10)
+    : activeProduct.magazinePageNumber || 1;
+  const returnUrl = `/?p=${returnPage}`;
 
   const jsonLd = generateProductJsonLd(activeProduct);
 
@@ -90,24 +99,28 @@ async function ProductDetailPageContent({ params }: ProductDetailPageProps) {
       />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-        {/* Breadcrumb Navigation */}
-        <nav className="flex items-center gap-2 text-xs text-stone-500 mb-6 font-medium">
-          <Link href="/" className="hover:text-[#443000] transition-colors">
-            الرئيسية
-          </Link>
-          <span>/</span>
-          <Link href="/products" className="hover:text-[#443000] transition-colors">
-            المنتجات
-          </Link>
-          {activeProduct.category && (
-            <>
-              <span>/</span>
-              <span className="text-stone-700">{activeProduct.category}</span>
-            </>
-          )}
-          <span>/</span>
-          <span className="text-[#443000] font-bold truncate max-w-xs">{activeProduct.name_ar}</span>
-        </nav>
+        {/* Top Breadcrumb & Back Action Bar */}
+        <div className="flex items-center justify-between gap-4 mb-6">
+          <nav className="flex items-center gap-2 text-xs text-stone-500 font-medium overflow-x-auto py-1">
+            <Link href={returnUrl} className="hover:text-[#443000] transition-colors whitespace-nowrap">
+              الرئيسية
+            </Link>
+            <span>/</span>
+            <Link href={returnUrl} className="hover:text-[#443000] transition-colors whitespace-nowrap">
+              المجلة (صفحة {returnPage})
+            </Link>
+            {activeProduct.category && (
+              <>
+                <span>/</span>
+                <span className="text-stone-700 whitespace-nowrap">{activeProduct.category}</span>
+              </>
+            )}
+            <span>/</span>
+            <span className="text-[#443000] font-bold truncate max-w-xs">{activeProduct.name_ar}</span>
+          </nav>
+
+          <ProductBackButton fallbackUrl={returnUrl} fallbackPage={returnPage} />
+        </div>
 
         {/* Product Showcase Card */}
         <div className="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200/80 shadow-xs flex flex-col md:flex-row items-center md:items-stretch gap-6 sm:gap-10">
@@ -168,34 +181,25 @@ async function ProductDetailPageContent({ params }: ProductDetailPageProps) {
                 </div>
               </div>
 
-              {activeProduct.magazinePageNumber ? (
-                <Link
-                  href={`/magazine?p=${activeProduct.magazinePageNumber}`}
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#443000] hover:bg-[#B68763] text-white text-xs sm:text-sm font-bold shadow-xs hover:shadow-md transition-all duration-200"
+              <Link
+                href={returnUrl}
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#443000] hover:bg-[#B68763] text-white text-xs sm:text-sm font-bold shadow-xs hover:shadow-md transition-all duration-200"
+              >
+                <svg
+                  className="w-4 h-4 shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  strokeWidth="2"
                 >
-                  <svg
-                    className="w-4 h-4 shrink-0"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    strokeWidth="2"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                    />
-                  </svg>
-                  <span>عرض في المجلة (صفحة {activeProduct.magazinePageNumber})</span>
-                </Link>
-              ) : (
-                <Link
-                  href="/magazine"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#443000] hover:bg-[#B68763] text-white text-xs sm:text-sm font-bold shadow-xs hover:shadow-md transition-all duration-200"
-                >
-                  <span>فتح المجلة</span>
-                </Link>
-              )}
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                  />
+                </svg>
+                <span>الرجوع للمجلة (صفحة {returnPage})</span>
+              </Link>
             </div>
           </div>
         </div>
