@@ -712,6 +712,33 @@ export function ComposerView({
 
         {/* Floating Magazine Navigation & Control Bar */}
         <div className="sticky bottom-3 z-30 mt-4 px-2 sm:px-4 py-1.5 sm:py-2 bg-white/95 backdrop-blur shadow-md rounded-full border border-stone-200 flex items-center justify-center gap-1 sm:gap-3 text-xs font-medium transition-all max-w-[calc(100vw-20px)] mx-auto shrink-0 animate-rise-toolbar">
+          {/* Previous Page Button */}
+          <button
+            type="button"
+            onClick={() => handlePageSelect(Math.max(currentPageIndex - 1, 0))}
+            disabled={currentPageIndex <= 0}
+            className="px-2 sm:px-3 py-1 sm:py-1.5 bg-stone-100 hover:bg-[#B68763] hover:text-white disabled:opacity-30 rounded-full text-[#443000] font-bold flex items-center gap-1 sm:gap-1.5 transition-all shadow-2xs shrink-0 whitespace-nowrap cursor-pointer"
+            title="الصفحة السابقة"
+          >
+            <svg
+              className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
+            </svg>
+            <span className="text-[11px] sm:text-xs">السابق</span>
+          </button>
+
+          {/* Page Counter */}
+          <span
+            className="font-bold text-[#443000] px-1 sm:px-2.5 text-xs sm:text-sm select-none shrink-0 whitespace-nowrap text-center"
+            dir="rtl"
+          >
+            صفحة {pageNum} من {pages.length}
+          </span>
+
           {/* Next Page Button */}
           <button
             type="button"
@@ -727,35 +754,8 @@ export function ComposerView({
               stroke="currentColor"
               viewBox="0 0 24 24"
             >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M9 5l7 7-7 7" />
-            </svg>
-          </button>
-
-          {/* Page Counter */}
-          <span
-            className="font-bold text-[#443000] px-1 sm:px-2.5 text-xs sm:text-sm select-none shrink-0 whitespace-nowrap text-center"
-            dir="rtl"
-          >
-            صفحة {pageNum} من {pages.length}
-          </span>
-
-          {/* Previous Page Button */}
-          <button
-            type="button"
-            onClick={() => handlePageSelect(Math.max(currentPageIndex - 1, 0))}
-            disabled={currentPageIndex <= 0}
-            className="px-2 sm:px-3 py-1 sm:py-1.5 bg-stone-100 hover:bg-[#B68763] hover:text-white disabled:opacity-30 rounded-full text-[#443000] font-bold flex items-center gap-1 sm:gap-1.5 transition-all shadow-2xs shrink-0 whitespace-nowrap cursor-pointer"
-            title="الصفحة السابقة"
-          >
-            <svg
-              className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M15 19l-7-7 7-7" />
             </svg>
-            <span className="text-[11px] sm:text-xs">السابق</span>
           </button>
 
           <span className="w-px h-3.5 sm:h-4 bg-stone-200 shrink-0 mx-0.5" />

@@ -19,6 +19,9 @@ export function FlipbookClient({
   const [isFullscreen, setIsFullscreen] = useState<boolean>(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
   const touchStartX = useRef<number | null>(null);
+  const touchStartY = useRef<number | null>(null);
+  const touchStartTime = useRef<number>(0);
+  const isMultiTouch = useRef<boolean>(false);
 
   const totalPages = children.length;
 
@@ -101,24 +104,86 @@ export function FlipbookClient({
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [nextPage, prevPage]);
 
-  // Touch swipe support
+  // Check if user is currently zoomed in (via pinch-zoom on mobile)
+  const isZoomedIn = useCallback(() => {
+    if (typeof window !== 'undefined' && window.visualViewport) {
+      return window.visualViewport.scale > 1.05;
+    }
+    return false;
+  }, []);
+
+  // Touch swipe support (safeguarded against pinch-to-zoom and multi-touch)
   const handleTouchStart = (e: React.TouchEvent) => {
+    // If more than 1 finger is touching, user is pinching/zooming -> ignore swipe completely
+    if (e.touches.length > 1) {
+      isMultiTouch.current = true;
+      touchStartX.current = null;
+      touchStartY.current = null;
+      return;
+    }
+
+    isMultiTouch.current = false;
     touchStartX.current = e.touches[0].clientX;
+    touchStartY.current = e.touches[0].clientY;
+    touchStartTime.current = Date.now();
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    // If a second finger touches during movement, cancel any swipe action
+    if (e.touches.length > 1) {
+      isMultiTouch.current = true;
+      touchStartX.current = null;
+      touchStartY.current = null;
+    }
   };
 
   const handleTouchEnd = (e: React.TouchEvent) => {
-    if (touchStartX.current === null) return;
-    const diff = e.changedTouches[0].clientX - touchStartX.current;
-    if (Math.abs(diff) > 50) {
-      if (diff < 0) {
-        // Swiped left -> next page
-        nextPage();
-      } else {
-        // Swiped right -> prev page
+    // Never flip pages if:
+    // 1. User performed a multi-touch (pinch-to-zoom) gesture
+    // 2. Browser viewport is currently zoomed in (scale > 1.05, user is panning)
+    // 3. No valid single-touch start recorded
+    if (
+      isMultiTouch.current ||
+      isZoomedIn() ||
+      touchStartX.current === null ||
+      touchStartY.current === null ||
+      !e.changedTouches[0]
+    ) {
+      touchStartX.current = null;
+      touchStartY.current = null;
+      isMultiTouch.current = false;
+      return;
+    }
+
+    const touchEndX = e.changedTouches[0].clientX;
+    const touchEndY = e.changedTouches[0].clientY;
+    const diffX = touchEndX - touchStartX.current;
+    const diffY = touchEndY - touchStartY.current;
+    const elapsed = Date.now() - touchStartTime.current;
+
+    // Strict horizontal swipe criteria:
+    // - Clear horizontal distance (at least 60px)
+    // - Horizontal movement significantly dominates vertical movement (at least 1.5x)
+    // - Performed in under 750ms (intentional quick swipe, not slow drag/pan)
+    if (Math.abs(diffX) > 60 && Math.abs(diffX) > Math.abs(diffY) * 1.5 && elapsed < 750) {
+      if (diffX < 0) {
+        // Swiped left -> previous page
         prevPage();
+      } else {
+        // Swiped right -> next page
+        nextPage();
       }
     }
+
     touchStartX.current = null;
+    touchStartY.current = null;
+    isMultiTouch.current = false;
+  };
+
+  const handleTouchCancel = () => {
+    touchStartX.current = null;
+    touchStartY.current = null;
+    isMultiTouch.current = false;
   };
 
   // Sync fullscreen state if user exits via Esc or browser UI
@@ -154,8 +219,11 @@ export function FlipbookClient({
           ? 'h-screen w-screen bg-[#F3F4F7] p-2 flex flex-col justify-between items-center overflow-hidden'
           : 'pt-7 sm:pt-14 pb-4 sm:pb-12 px-1.5 sm:px-4 justify-start items-center'
       }`}
+      style={{ touchAction: 'pan-y pinch-zoom' }}
       onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
+      onTouchCancel={handleTouchCancel}
     >
       {/* Book Stage */}
       <div
@@ -228,14 +296,13 @@ export function FlipbookClient({
           isFullscreen ? 'mt-2 mb-1 shadow-lg' : 'mt-3 sm:mt-6 mb-2 sm:mb-0'
         }`}
       >
-        {/* Next page button */}
+        {/* Previous page button */}
         <button
-          onClick={nextPage}
-          disabled={isMobile ? currentPage >= totalPages : rightPageIndex + 2 > totalPages}
-          className="px-2 sm:px-3 py-1 sm:py-1.5 bg-stone-100 hover:bg-[#B68763] hover:text-white disabled:opacity-30 rounded-full text-[#443000] font-bold flex items-center gap-1 sm:gap-1.5 transition-all shadow-2xs shrink-0 whitespace-nowrap"
-          title="الصفحة التالية"
+          onClick={prevPage}
+          disabled={isMobile ? currentPage <= 1 : rightPageIndex <= 0}
+          className="px-2 sm:px-3 py-1 sm:py-1.5 bg-stone-100 hover:bg-[#B68763] hover:text-white disabled:opacity-30 rounded-full text-[#443000] font-bold flex items-center gap-1 sm:gap-1.5 transition-all shadow-2xs shrink-0 whitespace-nowrap cursor-pointer"
+          title="الصفحة السابقة"
         >
-          <span className="text-[11px] sm:text-xs">التالي</span>
           <svg
             className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0"
             fill="none"
@@ -249,6 +316,7 @@ export function FlipbookClient({
               d="M9 5l7 7-7 7"
             />
           </svg>
+          <span className="text-[11px] sm:text-xs">السابق</span>
         </button>
 
         {/* Page counter */}
@@ -259,13 +327,14 @@ export function FlipbookClient({
           صفحة {isMobile ? currentPage : `${rightPageIndex + 1}${leftPageIndex < totalPages ? ` - ${leftPageIndex + 1}` : ''}`} من {totalPages}
         </span>
 
-        {/* Previous page button */}
+        {/* Next page button */}
         <button
-          onClick={prevPage}
-          disabled={isMobile ? currentPage <= 1 : rightPageIndex <= 0}
-          className="px-2 sm:px-3 py-1 sm:py-1.5 bg-stone-100 hover:bg-[#B68763] hover:text-white disabled:opacity-30 rounded-full text-[#443000] font-bold flex items-center gap-1 sm:gap-1.5 transition-all shadow-2xs shrink-0 whitespace-nowrap"
-          title="الصفحة السابقة"
+          onClick={nextPage}
+          disabled={isMobile ? currentPage >= totalPages : rightPageIndex + 2 > totalPages}
+          className="px-2 sm:px-3 py-1 sm:py-1.5 bg-stone-100 hover:bg-[#B68763] hover:text-white disabled:opacity-30 rounded-full text-[#443000] font-bold flex items-center gap-1 sm:gap-1.5 transition-all shadow-2xs shrink-0 whitespace-nowrap cursor-pointer"
+          title="الصفحة التالية"
         >
+          <span className="text-[11px] sm:text-xs">التالي</span>
           <svg
             className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0"
             fill="none"
@@ -279,7 +348,6 @@ export function FlipbookClient({
               d="M15 19l-7-7 7-7"
             />
           </svg>
-          <span className="text-[11px] sm:text-xs">السابق</span>
         </button>
 
         <span className="w-px h-3.5 sm:h-4 bg-stone-200 shrink-0 mx-0.5" />
