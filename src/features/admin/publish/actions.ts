@@ -3,7 +3,7 @@
 import fs from 'fs';
 import path from 'path';
 import { revalidatePath } from 'next/cache';
-import { IssueSnapshot, syncLiveIssueToSupabase } from '@/features/magazine/services/publishIssue';
+import { IssueSnapshot, syncLiveIssueToSupabase, getLiveIssue, safeWriteJsonFile } from '@/features/magazine/services/publishIssue';
 
 export interface VersionHistoryRecord {
   version: number;
@@ -16,8 +16,14 @@ export interface VersionHistoryRecord {
 
 function ensureVersionsDir(): string {
   const versionsDir = path.resolve(process.cwd(), 'data', 'versions');
-  if (!fs.existsSync(versionsDir)) {
-    fs.mkdirSync(versionsDir, { recursive: true });
+  try {
+    if (!fs.existsSync(versionsDir)) {
+      fs.mkdirSync(versionsDir, { recursive: true });
+    }
+  } catch (err: any) {
+    if (err.code !== 'EROFS' && !err.message?.includes('read-only')) {
+      console.warn('ensureVersionsDir error:', err);
+    }
   }
   return versionsDir;
 }
@@ -48,12 +54,13 @@ export async function publishLiveIssueAction(
   note?: string
 ): Promise<{ success: boolean; version?: number; error?: string }> {
   const liveIssuePath = path.resolve(process.cwd(), 'data', 'live_issue.json');
-  if (!fs.existsSync(liveIssuePath)) {
-    return { success: false, error: 'ملف المجلة غير موجود' };
-  }
 
   try {
-    const currentIssue: IssueSnapshot = JSON.parse(fs.readFileSync(liveIssuePath, 'utf8'));
+    const currentIssue: IssueSnapshot = await getLiveIssue({ forceFresh: true });
+    if (!currentIssue) {
+      return { success: false, error: 'تعذر قراءة بيانات المجلة' };
+    }
+
     const versionsDir = ensureVersionsDir();
     const historyPath = getHistoryFilePath();
 
@@ -68,11 +75,11 @@ export async function publishLiveIssueAction(
     const snapshotFilename = `version_${nextVersion}.json`;
     const snapshotPath = path.join(versionsDir, snapshotFilename);
 
-    // Write version snapshot
-    fs.writeFileSync(snapshotPath, JSON.stringify(currentIssue, null, 2), 'utf8');
+    // Write version snapshot (safe for serverless)
+    safeWriteJsonFile(snapshotPath, currentIssue);
 
-    // Update live_issue.json
-    fs.writeFileSync(liveIssuePath, JSON.stringify(currentIssue, null, 2), 'utf8');
+    // Update live_issue.json and Supabase Storage
+    safeWriteJsonFile(liveIssuePath, currentIssue);
     await syncLiveIssueToSupabase(currentIssue);
 
     // Update history registry (mark others not live)
@@ -88,7 +95,7 @@ export async function publishLiveIssueAction(
     const updatedHistory = history.map((h) => ({ ...h, isLive: false }));
     updatedHistory.unshift(newRecord);
 
-    fs.writeFileSync(historyPath, JSON.stringify(updatedHistory, null, 2), 'utf8');
+    safeWriteJsonFile(historyPath, updatedHistory);
 
     revalidatePath('/', 'layout');
     revalidatePath('/');
@@ -121,8 +128,8 @@ export async function rollbackToVersionAction(
   try {
     const targetSnapshot = JSON.parse(fs.readFileSync(snapshotPath, 'utf8'));
 
-    // Restore to live_issue.json
-    fs.writeFileSync(liveIssuePath, JSON.stringify(targetSnapshot, null, 2), 'utf8');
+    // Restore to live_issue.json and Supabase
+    safeWriteJsonFile(liveIssuePath, targetSnapshot);
     await syncLiveIssueToSupabase(targetSnapshot);
 
     // Update history isLive flags
@@ -132,7 +139,7 @@ export async function rollbackToVersionAction(
         ...h,
         isLive: h.version === targetVersion,
       }));
-      fs.writeFileSync(historyPath, JSON.stringify(updated, null, 2), 'utf8');
+      safeWriteJsonFile(historyPath, updated);
     }
 
     revalidatePath('/', 'layout');

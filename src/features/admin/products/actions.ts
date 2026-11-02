@@ -5,7 +5,7 @@ import path from 'path';
 import { revalidatePath } from 'next/cache';
 import { productUpdateSchema, ProductUpdateInput } from './schemas';
 import { toArabicDigits } from '@/lib/format/price';
-import { syncLiveIssueToSupabase } from '@/features/magazine/services/publishIssue';
+import { syncLiveIssueToSupabase, getLiveIssue, safeWriteJsonFile } from '@/features/magazine/services/publishIssue';
 
 export interface AdminProductRecord {
   id: string;
@@ -27,40 +27,37 @@ export interface AdminProductRecord {
  * from the live magazine issue (495 products) supplemented by seed.
  */
 export async function getAdminProductsList(): Promise<AdminProductRecord[]> {
-  const liveIssuePath = path.resolve(process.cwd(), 'data', 'live_issue.json');
   const seedPath = path.resolve(process.cwd(), 'data', 'products_seed.json');
   const map = new Map<string, AdminProductRecord>();
 
-  if (fs.existsSync(liveIssuePath)) {
-    try {
-      const issue = JSON.parse(fs.readFileSync(liveIssuePath, 'utf8'));
-      for (const page of issue.pages || []) {
-        if (!page.slots) continue;
-        for (const slot of page.slots) {
-          const p = slot.product;
-          if (!p) continue;
-          const key = p.id || p.slug;
-          if (!map.has(key)) {
-            map.set(key, {
-              id: p.id,
-              cashier_code: p.cashier_code ?? null,
-              slug: p.slug,
-              name_ar: slot.title_override || p.name_ar || '',
-              category: page.sectionTitle || page.section_title || p.category || 'عام',
-              cost_price: p.cost_price,
-              sale_price: slot.price_override ?? p.sale_price ?? 0,
-              original_qty: p.original_qty ?? 10,
-              stock_status: p.stock_status || 'متاح',
-              in_stock: p.in_stock !== false,
-              primary_image_url: slot.image_override || p.primary_image_url || '/brand/lotus_logo.png',
-              description_ar: slot.description_override || p.description_ar || '',
-            });
-          }
+  try {
+    const issue = await getLiveIssue({ forceFresh: true });
+    for (const page of issue.pages || []) {
+      if (!page.slots) continue;
+      for (const slot of page.slots) {
+        const p: any = slot.product;
+        if (!p) continue;
+        const key = p.id || p.slug;
+        if (!map.has(key)) {
+          map.set(key, {
+            id: p.id,
+            cashier_code: p.cashier_code ?? null,
+            slug: p.slug,
+            name_ar: slot.title_override || p.name_ar || '',
+            category: page.sectionTitle || page.section_title || p.category || 'عام',
+            cost_price: p.cost_price,
+            sale_price: slot.price_override ?? p.sale_price ?? 0,
+            original_qty: p.original_qty ?? 10,
+            stock_status: p.stock_status || 'متاح',
+            in_stock: p.in_stock !== false,
+            primary_image_url: slot.image_override || p.primary_image_url || '/brand/lotus_logo.png',
+            description_ar: slot.description_override || p.description_ar || '',
+          });
         }
       }
-    } catch (e) {
-      console.error('Failed to read live_issue in getAdminProductsList:', e);
     }
+  } catch (e) {
+    console.error('Failed to read live_issue in getAdminProductsList:', e);
   }
 
   // Also include any seed products not yet placed in pages
@@ -122,14 +119,13 @@ export async function updateProductAction(
   try {
     let modifiedLive = false;
 
-    // 1. Synchronize live_issue.json (The primary source for the magazine & catalog)
-    if (fs.existsSync(liveIssuePath)) {
-      const issue = JSON.parse(fs.readFileSync(liveIssuePath, 'utf8'));
-
+    // 1. Synchronize live_issue (The primary source for the magazine & catalog)
+    const issue = await getLiveIssue({ forceFresh: true });
+    if (issue && issue.pages) {
       for (const page of issue.pages || []) {
         if (!page.slots) continue;
         for (const slot of page.slots) {
-          const p = slot.product;
+          const p: any = slot.product;
           if (!p) continue;
 
           const isMatch =
@@ -168,7 +164,7 @@ export async function updateProductAction(
       }
 
       if (modifiedLive) {
-        fs.writeFileSync(liveIssuePath, JSON.stringify(issue, null, 2), 'utf8');
+        safeWriteJsonFile(liveIssuePath, issue);
         // Synchronize with Supabase Storage so changes persist in cloud and on deployed site
         await syncLiveIssueToSupabase(issue);
       }
@@ -176,42 +172,46 @@ export async function updateProductAction(
 
     // 2. Synchronize products_seed.json
     if (fs.existsSync(seedPath)) {
-      const currentProducts: AdminProductRecord[] = JSON.parse(
-        fs.readFileSync(seedPath, 'utf8')
-      );
+      try {
+        const currentProducts: AdminProductRecord[] = JSON.parse(
+          fs.readFileSync(seedPath, 'utf8')
+        );
 
-      let foundInSeed = false;
-      const updatedProducts = currentProducts.map((prod) => {
-        if (
-          prod.id === productId ||
-          prod.slug === productId ||
-          (prod.cashier_code && String(prod.cashier_code) === String(productId))
-        ) {
-          foundInSeed = true;
-          return {
-            ...prod,
-            ...updates,
-          };
-        }
-        return prod;
-      });
-
-      if (!foundInSeed) {
-        // If it was one of the 123 products not yet in seed, append so it stays synced
-        updatedProducts.push({
-          id: productId,
-          slug: productId,
-          name_ar: updates.name_ar || '',
-          sale_price: updates.sale_price || 0,
-          primary_image_url: updates.primary_image_url || '/brand/lotus_logo.png',
-          description_ar: updates.description_ar || '',
-          category: updates.category || 'عام',
-          in_stock: true,
-          stock_status: updates.stock_status || 'متاح',
+        let foundInSeed = false;
+        const updatedProducts = currentProducts.map((prod) => {
+          if (
+            prod.id === productId ||
+            prod.slug === productId ||
+            (prod.cashier_code && String(prod.cashier_code) === String(productId))
+          ) {
+            foundInSeed = true;
+            return {
+              ...prod,
+              ...updates,
+            };
+          }
+          return prod;
         });
-      }
 
-      fs.writeFileSync(seedPath, JSON.stringify(updatedProducts, null, 2), 'utf8');
+        if (!foundInSeed) {
+          // If it was one of the 123 products not yet in seed, append so it stays synced
+          updatedProducts.push({
+            id: productId,
+            slug: productId,
+            name_ar: updates.name_ar || '',
+            sale_price: updates.sale_price || 0,
+            primary_image_url: updates.primary_image_url || '/brand/lotus_logo.png',
+            description_ar: updates.description_ar || '',
+            category: updates.category || 'عام',
+            in_stock: true,
+            stock_status: updates.stock_status || 'متاح',
+          });
+        }
+
+        safeWriteJsonFile(seedPath, updatedProducts);
+      } catch (seedErr) {
+        console.warn('Could not update seedPath:', seedErr);
+      }
     }
 
     // 3. Immediately bust all cache layers across the app so edits show in one second!

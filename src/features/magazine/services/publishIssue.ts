@@ -28,12 +28,41 @@ export function compileIssueSnapshot(
   };
 }
 
+export function safeWriteJsonFile(filePath: string, data: any): boolean {
+  try {
+    const dir = path.dirname(filePath);
+    if (!fs.existsSync(dir)) {
+      try {
+        fs.mkdirSync(dir, { recursive: true });
+      } catch (mkdirErr: any) {
+        if (mkdirErr.code === 'EROFS' || mkdirErr.message?.includes('read-only')) {
+          return false;
+        }
+      }
+    }
+    const content = typeof data === 'string' ? data : JSON.stringify(data, null, 2);
+    fs.writeFileSync(filePath, content, 'utf8');
+    return true;
+  } catch (err: any) {
+    if (err.code === 'EROFS' || err.message?.includes('read-only')) {
+      console.warn(`[Serverless Read-Only] Skipping local file write to ${filePath}`);
+      return false;
+    }
+    console.warn(`[safeWriteJsonFile] Failed to write to ${filePath}:`, err.message);
+    return false;
+  }
+}
+
 export async function syncLiveIssueToSupabase(snapshot: IssueSnapshot | object): Promise<boolean> {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL?.replace(/\/$/, '');
-  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
   const bucket = process.env.SUPABASE_STORAGE_BUCKET || 'magazine';
 
   if (!supabaseUrl || !serviceKey || supabaseUrl.includes('placeholder')) {
+    console.warn('[syncLiveIssueToSupabase] Supabase credentials missing or invalid:', {
+      hasUrl: !!supabaseUrl,
+      hasKey: !!serviceKey,
+    });
     return false;
   }
 
@@ -62,7 +91,7 @@ export async function syncLiveIssueToSupabase(snapshot: IssueSnapshot | object):
   }
 }
 
-export async function getLiveIssue(): Promise<IssueSnapshot> {
+export async function getLiveIssue(options?: { forceFresh?: boolean }): Promise<IssueSnapshot> {
   const isDev = process.env.NODE_ENV === 'development';
   const localSnapshotPath = path.resolve(process.cwd(), 'data', 'live_issue.json');
 
@@ -84,9 +113,11 @@ export async function getLiveIssue(): Promise<IssueSnapshot> {
     try {
       // Use timestamp query param to prevent Cloudflare/CDN edge cache from serving stale data
       const remoteUrl = `${supabaseUrl.replace(/\/$/, '')}/storage/v1/object/public/${bucket}/data/live_issue.json?t=${Date.now()}`;
-      const res = await fetch(remoteUrl, {
-        next: { revalidate: 30, tags: ['live-issue'] },
-      });
+      const fetchOptions: RequestInit = options?.forceFresh
+        ? { cache: 'no-store' }
+        : { next: { revalidate: 30, tags: ['live-issue'] } };
+
+      const res = await fetch(remoteUrl, fetchOptions);
       if (res.ok) {
         return (await res.json()) as IssueSnapshot;
       }

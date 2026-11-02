@@ -4,7 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import { revalidatePath } from 'next/cache';
 import { MagazinePageData, PageSlotData } from '@/features/magazine/types';
-import { syncLiveIssueToSupabase } from '@/features/magazine/services/publishIssue';
+import { syncLiveIssueToSupabase, getLiveIssue, safeWriteJsonFile } from '@/features/magazine/services/publishIssue';
 import { SlotAssignInput, slotAssignSchema } from './schemas';
 
 /**
@@ -106,12 +106,11 @@ export async function saveSlotAssignmentAction(
   const liveIssuePath = path.resolve(process.cwd(), 'data', 'live_issue.json');
   const seedPath = path.resolve(process.cwd(), 'data', 'products_seed.json');
 
-  if (!fs.existsSync(liveIssuePath)) {
-    return { success: false, error: 'ملف المجلة الحية غير موجود' };
-  }
-
   try {
-    const issue = JSON.parse(fs.readFileSync(liveIssuePath, 'utf8'));
+    const issue = await getLiveIssue({ forceFresh: true });
+    if (!issue || !issue.pages) {
+      return { success: false, error: 'تعذر قراءة بيانات المجلة' };
+    }
 
     const targetPage = (issue.pages || []).find(
       (p: any) => (p.pageNumber || p.position) === pageNumber
@@ -144,8 +143,12 @@ export async function saveSlotAssignmentAction(
 
       // 3. If not found in issue, check seed catalog
       if (!productObj && fs.existsSync(seedPath)) {
-        const allSeed = JSON.parse(fs.readFileSync(seedPath, 'utf8'));
-        productObj = allSeed.find((p: any) => p.id === productId || p.slug === productId);
+        try {
+          const allSeed = JSON.parse(fs.readFileSync(seedPath, 'utf8'));
+          productObj = allSeed.find((p: any) => p.id === productId || p.slug === productId);
+        } catch (e) {
+          console.warn('Could not read seedPath:', e);
+        }
       }
     } else if (overrides && currentSlot?.product) {
       // If productId was not explicitly provided but overrides (dimensions/text) are being set, retain current product
@@ -180,7 +183,7 @@ export async function saveSlotAssignmentAction(
             }
             return p;
           });
-          fs.writeFileSync(seedPath, JSON.stringify(updatedSeed, null, 2), 'utf8');
+          safeWriteJsonFile(seedPath, updatedSeed);
         } catch (e) {
           console.error('Error syncing changes to seed:', e);
         }
@@ -189,7 +192,7 @@ export async function saveSlotAssignmentAction(
       issue.pages = await removeProductFromSlot(issue.pages, pageNumber, slotNumber);
     }
 
-    fs.writeFileSync(liveIssuePath, JSON.stringify(issue, null, 2), 'utf8');
+    safeWriteJsonFile(liveIssuePath, issue);
     await syncLiveIssueToSupabase(issue);
 
     revalidatePath('/', 'layout');
@@ -215,11 +218,11 @@ export async function swapPageSlotsAction(
 ): Promise<{ success: boolean; error?: string }> {
   const liveIssuePath = path.resolve(process.cwd(), 'data', 'live_issue.json');
   try {
-    if (!fs.existsSync(liveIssuePath)) {
-      return { success: false, error: 'ملف المجلة غير موجود' };
+    const issue = await getLiveIssue({ forceFresh: true });
+    if (!issue || !issue.pages) {
+      return { success: false, error: 'تعذر قراءة بيانات المجلة' };
     }
 
-    const issue = JSON.parse(fs.readFileSync(liveIssuePath, 'utf8'));
     const pageIndex = (issue.pages || []).findIndex(
       (p: any) => (p.pageNumber || p.position) === pageNumber
     );
@@ -260,7 +263,7 @@ export async function swapPageSlotsAction(
     page.slots = slots;
     issue.pages[pageIndex] = page;
 
-    fs.writeFileSync(liveIssuePath, JSON.stringify(issue, null, 2), 'utf8');
+    safeWriteJsonFile(liveIssuePath, issue);
     await syncLiveIssueToSupabase(issue);
 
     revalidatePath('/', 'layout');
@@ -285,15 +288,15 @@ export async function updatePageSectionTitleAction(
 ): Promise<{ success: boolean; error?: string }> {
   const liveIssuePath = path.resolve(process.cwd(), 'data', 'live_issue.json');
   try {
-    if (!fs.existsSync(liveIssuePath)) {
-      return { success: false, error: 'ملف المجلة غير موجود' };
+    const issue = await getLiveIssue({ forceFresh: true });
+    if (!issue || !issue.pages) {
+      return { success: false, error: 'تعذر قراءة بيانات المجلة' };
     }
 
-    const issue = JSON.parse(fs.readFileSync(liveIssuePath, 'utf8'));
-    const page = issue.pages.find((p: any) => p.pageNumber === pageNumber);
+    const page = issue.pages.find((p: any) => (p.pageNumber || p.position) === pageNumber);
     if (page) {
       page.sectionTitle = newTitle.trim();
-      fs.writeFileSync(liveIssuePath, JSON.stringify(issue, null, 2), 'utf8');
+      safeWriteJsonFile(liveIssuePath, issue);
       await syncLiveIssueToSupabase(issue);
       revalidatePath('/', 'layout');
       revalidatePath('/');
