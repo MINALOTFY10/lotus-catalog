@@ -3,6 +3,8 @@ import { Metadata } from 'next';
 import { AdminProductsTable } from '@/features/admin/products/AdminProductsTable';
 import { getAdminProductsList } from '@/features/admin/products/actions';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata: Metadata = {
   title: 'إدارة المنتجات والأسعار | لوحة تحكم لوتس',
 };

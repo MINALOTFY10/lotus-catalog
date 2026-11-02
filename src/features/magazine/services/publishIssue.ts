@@ -111,10 +111,9 @@ export async function getLiveIssue(options?: { forceFresh?: boolean }): Promise<
 
   if (supabaseUrl && !supabaseUrl.includes('placeholder')) {
     try {
-      // Use timestamp query param to prevent Cloudflare/CDN edge cache from serving stale data
-      const remoteUrl = `${supabaseUrl.replace(/\/$/, '')}/storage/v1/object/public/${bucket}/data/live_issue.json?t=${Date.now()}`;
+      const remoteUrl = `${supabaseUrl.replace(/\/$/, '')}/storage/v1/object/public/${bucket}/data/live_issue.json`;
       const fetchOptions: RequestInit = options?.forceFresh
-        ? { cache: 'no-store' }
+        ? { cache: 'no-store', headers: { 'Cache-Control': 'no-cache, no-store' } }
         : { next: { revalidate: 30, tags: ['live-issue'] } };
 
       const res = await fetch(remoteUrl, fetchOptions);
