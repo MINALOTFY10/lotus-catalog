@@ -128,7 +128,7 @@ export function ProductDetailModal({
             <span className="text-sm font-bold text-[#B68763]">
               {(product as any).price_text?.includes('جرام') || (product as any).price_text?.includes('كيلو') || (product as any).price_text?.includes('مل') || (product as any).price_text?.includes('لتر')
                 ? 'الحجم والسعر'
-                : (product as any).price_text?.includes('سم') || (product as any).price_text?.includes('*')
+                : (product as any).price_text?.includes('سم') || (product as any).price_text?.includes('*') || (product as any).price_text?.includes('المقاس') || (product as any).price_text?.includes('صغير') || (product as any).price_text?.includes('وسط') || (product as any).price_text?.includes('كبير')
                 ? 'المقاس والسعر'
                 : 'السعر'}
             </span>

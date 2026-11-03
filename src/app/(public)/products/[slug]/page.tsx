@@ -241,9 +241,9 @@ async function ProductDetailPageContent({ params, searchParams }: ProductDetailP
               <div>
                 <span className="text-xs sm:text-sm font-bold text-[#8A6747] block mb-1.5">
                   {activeProduct.price_text && (activeProduct.price_text.includes('\n') || activeProduct.price_text.includes('|'))
-                    ? activeProduct.price_text.includes('جرام') || activeProduct.price_text.includes('كيلو') || activeProduct.price_text.includes('مل') || activeProduct.price_text.includes('لتر')
+                    ? activeProduct.price_text.includes('جرام') || activeProduct.price_text.includes('كيلو') || activeProduct.price_text.includes('مل') || activeProduct.price_text.includes('لتر') || activeProduct.price_text.includes('الحجم')
                       ? 'الحجم والسعر المتاح'
-                      : activeProduct.price_text.includes('سم') || activeProduct.price_text.includes('*')
+                      : activeProduct.price_text.includes('سم') || activeProduct.price_text.includes('*') || activeProduct.price_text.includes('المقاس') || activeProduct.price_text.includes('صغير') || activeProduct.price_text.includes('وسط') || activeProduct.price_text.includes('كبير')
                       ? 'المقاس والسعر المتاح'
                       : 'خيارات الأسعار المتاحة'
                     : 'السعر'}

@@ -1418,7 +1418,22 @@
             "description_ar": "سلة تخزين دائرية من الخوص الطبيعي بدون مقابض ومزينة بخيوط كريمية حول الحافة.",
             "description_en": null,
             "category": "مجموعة الحلفا الــمــصــري اليدوي",
-            "sale_price": 880,
+            "sale_price": 750,
+            "price_text": "المقاس والسعر\nصغير | ٧٥٠ ج.مصري\nوسط | ٨٨٠ ج.مصري\nكبير | ١٠١٥ ج.مصري",
+            "price_tiers": [
+              {
+                "label": "صغير",
+                "price": 750
+              },
+              {
+                "label": "وسط",
+                "price": 880
+              },
+              {
+                "label": "كبير",
+                "price": 1015
+              }
+            ],
             "in_stock": true,
             "primary_image_url": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p7_s7.webp",
             "images": {
@@ -1431,9 +1446,23 @@
           },
           "title_override": "سلة تخزين خوص مطرزة",
           "description_override": "سلة تخزين دائرية من الخوص الطبيعي بدون مقابض ومزينة بخيوط كريمية حول الحافة.",
-          "price_override": 880,
+          "price_override": 750,
           "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p7_s7.webp",
-          "price_text": "٨٨٠ ج.مصري",
+          "price_text": "المقاس والسعر\nصغير | ٧٥٠ ج.مصري\nوسط | ٨٨٠ ج.مصري\nكبير | ١٠١٥ ج.مصري",
+          "price_tiers": [
+            {
+              "label": "صغير",
+              "price": 750
+            },
+            {
+              "label": "وسط",
+              "price": 880
+            },
+            {
+              "label": "كبير",
+              "price": 1015
+            }
+          ],
           "col_span": 1,
           "row_span": 1
         },

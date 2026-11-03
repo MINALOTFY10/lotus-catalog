@@ -30,6 +30,8 @@ export function extractProductsFromIssue(issue: IssueSnapshot): PublicProduct[] 
           magazinePageNumber: page.pageNumber ?? page.position,
           magazineSlot: slot.slot,
           sectionTitle: page.sectionTitle || page.section_title || undefined,
+          price_text: slot.price_text || p.price_text || null,
+          price_tiers: slot.price_tiers || p.price_tiers || null,
         });
       }
     }

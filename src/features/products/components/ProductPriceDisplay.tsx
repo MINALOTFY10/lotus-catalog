@@ -33,11 +33,12 @@ export function ProductPriceDisplay({
       .filter((l) => l && l !== 'ال' && l !== 'الـ' && l !== 'ا');
 
     let dynamicLabel = 'السعر';
-    if (clean.includes('جرام') || clean.includes('كيلو') || clean.includes('مل') || clean.includes('لتر') || clean.includes('الحجم')) {
+    const raw = priceText;
+    if (raw.includes('جرام') || raw.includes('كيلو') || raw.includes('مل') || raw.includes('لتر') || raw.includes('الحجم')) {
       dynamicLabel = 'الحجم والسعر';
-    } else if (clean.includes('سم') || clean.includes('متر') || clean.includes('*') || clean.includes('المقاس')) {
+    } else if (raw.includes('سم') || raw.includes('متر') || raw.includes('*') || raw.includes('المقاس') || raw.includes('صغير') || raw.includes('وسط') || raw.includes('كبير')) {
       dynamicLabel = 'المقاس والسعر';
-    } else if (clean.includes('الوزن')) {
+    } else if (raw.includes('الوزن')) {
       dynamicLabel = 'الوزن والسعر';
     }
 

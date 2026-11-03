@@ -55,7 +55,7 @@ export function ProductCard({
     if (priceText) {
       const cleanText = toArabicDigits(priceText).replace(/^ال+السعر/, 'السعر').trim();
 
-      if (cleanText.includes('المقاس والسعر') || cleanText.includes('سم')) {
+      if (cleanText.includes('المقاس والسعر') || cleanText.includes('سم') || cleanText.includes('المقاس') || cleanText.includes('صغير') || cleanText.includes('وسط') || cleanText.includes('كبير')) {
         priceLabel = 'المقاس والسعر';
       } else if (
         cleanText.includes('الحجم والسعر') ||
@@ -119,6 +119,13 @@ export function ProductCard({
       <>
         <span className="block">حقيبة من الحلفا</span>
         <span className="block">مع اختيارك من منتجات نحلة</span>
+      </>
+    );
+  } else if (title.includes('سلة تخزين خوص مطرزة')) {
+    formattedTitle = (
+      <>
+        <span className="block">سلة</span>
+        <span className="block">تخزين خوص مطرزة</span>
       </>
     );
   }
