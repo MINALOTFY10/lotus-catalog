@@ -77,17 +77,17 @@ function renderHeroPrice(rawPrice: number | null | undefined, priceText?: string
     if (match) {
       return (
         <div className="flex items-baseline gap-1.5 flex-wrap">
-          <span className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#443000] tracking-tight">
+          <span className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#443000] tracking-tight">
             {toArabicDigits(match[1])}
           </span>
-          <span className="text-sm sm:text-base lg:text-lg font-bold text-[#8A6747]">
+          <span className="text-xs sm:text-sm lg:text-base font-bold text-[#8A6747]">
             {toArabicDigits(match[2])}
           </span>
         </div>
       );
     }
     return (
-      <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#443000] tracking-tight">
+      <div className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-[#443000] tracking-tight">
         {toArabicDigits(single)}
       </div>
     );
@@ -239,15 +239,15 @@ async function ProductDetailPageContent({ params, searchParams }: ProductDetailP
         </div>
 
         {/* Product Showcase Card */}
-        <div className="bg-white rounded-3xl p-5 sm:p-8 lg:p-10 border border-stone-200/80 shadow-xs flex flex-col md:flex-row items-center md:items-stretch gap-6 sm:gap-10">
+        <div className="bg-white rounded-2xl p-4 sm:p-6 lg:p-7 border border-stone-200/80 shadow-xs flex flex-col md:flex-row items-center md:items-stretch gap-5 sm:gap-8">
           {/* Image Column */}
-          <div className="w-full md:w-[320px] lg:w-[360px] shrink-0 flex items-center justify-center">
-            <div className="relative w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[360px] aspect-square rounded-2xl overflow-hidden bg-stone-50 border border-stone-200 shadow-inner group">
+          <div className="w-full md:w-[240px] lg:w-[270px] shrink-0 flex items-center justify-center">
+            <div className="relative w-full max-w-[210px] sm:max-w-[240px] lg:max-w-[270px] aspect-square rounded-xl overflow-hidden bg-stone-50 border border-stone-200 shadow-inner group">
               <Image
                 src={activeProduct.primary_image_url}
                 alt={activeProduct.name_ar}
                 fill
-                sizes="(max-width: 768px) 280px, (max-width: 1024px) 320px, 360px"
+                sizes="(max-width: 768px) 210px, (max-width: 1024px) 240px, 270px"
                 className="object-contain sm:object-cover group-hover:scale-105 transition-transform duration-500"
                 priority
               />
@@ -257,30 +257,21 @@ async function ProductDetailPageContent({ params, searchParams }: ProductDetailP
           {/* Details Column */}
           <div className="flex-1 w-full flex flex-col justify-between">
             <div>
-              {/* Category Badge */}
-              {activeProduct.category && (
-                <div className="mb-2.5 sm:mb-3">
-                  <span className="text-xs sm:text-sm font-bold text-[#8A6747] bg-amber-50/90 border border-amber-200/60 px-3 py-1 rounded-full inline-block">
-                    {activeProduct.category}
-                  </span>
-                </div>
-              )}
-
               {/* Title */}
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#443000] leading-tight sm:leading-snug tracking-tight">
+              <h1 className="text-xl sm:text-2xl lg:text-3xl font-black text-[#443000] leading-snug tracking-tight">
                 {activeProduct.name_ar}
               </h1>
 
               {/* Simple Description */}
-              <p className="mt-3 sm:mt-4 text-stone-600 text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl">
+              <p className="mt-2.5 text-stone-600 text-xs sm:text-sm lg:text-base leading-relaxed max-w-2xl">
                 {simpleDescription}
               </p>
             </div>
 
             {/* Price & Magazine Action (at the bottom) */}
-            <div className="mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-stone-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div className="mt-5 sm:mt-6 pt-4 sm:pt-5 border-t border-stone-100 flex flex-col sm:flex-row sm:items-center justify-between gap-3.5">
               <div>
-                <span className="text-xs sm:text-sm font-bold text-[#8A6747] block mb-1.5">
+                <span className="text-[11px] sm:text-xs font-bold text-[#8A6747] block mb-1">
                   {activeProduct.price_text && (activeProduct.price_text.includes('\n') || activeProduct.price_text.includes('|'))
                     ? activeProduct.price_text.includes('جرام') || activeProduct.price_text.includes('كيلو') || activeProduct.price_text.includes('مل') || activeProduct.price_text.includes('لتر') || activeProduct.price_text.includes('الحجم')
                       ? 'الحجم والسعر المتاح'
@@ -294,22 +285,24 @@ async function ProductDetailPageContent({ params, searchParams }: ProductDetailP
 
               <Link
                 href={returnUrl}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-2xl bg-[#443000] hover:bg-[#B68763] text-white text-sm sm:text-base font-bold shadow-xs hover:shadow-md transition-all duration-200 active:scale-[0.98]"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#443000] hover:bg-[#B68763] text-white text-xs sm:text-sm font-bold shadow-xs hover:shadow-md transition-all duration-200 active:scale-[0.98] whitespace-nowrap"
               >
-                <svg
-                  className="w-4 h-4 sm:w-5 sm:h-5 shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  strokeWidth="2"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
-                  />
-                </svg>
-                <span>الرجوع للمجلة (صفحة {toArabicDigits(returnPage)})</span>
+                <span className="flex items-center gap-2">
+                  <svg
+                    className="w-4 h-4 shrink-0 translate-y-[-1px]"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    strokeWidth="2"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                    />
+                  </svg>
+                  <span className="leading-normal">الرجوع للمجلة (صفحة {toArabicDigits(returnPage)})</span>
+                </span>
               </Link>
             </div>
           </div>
