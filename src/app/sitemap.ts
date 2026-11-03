@@ -1,9 +1,18 @@
 import { MetadataRoute } from 'next';
 import { getAllPublicProducts } from '@/features/products/services/publicProducts';
+import { getBaseUrl } from '@/lib/seo';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://lotus.eg';
+  const baseUrl = getBaseUrl();
   const products = await getAllPublicProducts();
+
+  // Extract unique categories
+  const categoriesSet = new Set<string>();
+  products.forEach((p) => {
+    if (p.category) {
+      categoriesSet.add(p.category.trim());
+    }
+  });
 
   const staticRoutes: MetadataRoute.Sitemap = [
     {
@@ -32,6 +41,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     },
   ];
 
+  const categoryRoutes: MetadataRoute.Sitemap = Array.from(categoriesSet).map((cat) => ({
+    url: `${baseUrl}/categories/${encodeURIComponent(cat)}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.8,
+  }));
+
   const productRoutes: MetadataRoute.Sitemap = products.map((product) => ({
     url: `${baseUrl}/products/${encodeURIComponent(product.slug)}`,
     lastModified: new Date(),
@@ -39,5 +55,5 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
-  return [...staticRoutes, ...productRoutes];
+  return [...staticRoutes, ...categoryRoutes, ...productRoutes];
 }

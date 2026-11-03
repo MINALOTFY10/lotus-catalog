@@ -1,0 +1,27 @@
+import { MetadataRoute } from 'next';
+
+export default function manifest(): MetadataRoute.Manifest {
+  return {
+    name: 'كتالوج لوتس | صندوق دعم الصناعات الريفية والبيئية',
+    short_name: 'كتالوج لوتس',
+    description: 'الكتالوج الرقمي لمجلة لوتس للمنتجات اليدوية والتراثية المصرية وقائمة الأسعار الرسمية',
+    start_url: '/',
+    display: 'standalone',
+    background_color: '#F3F4F7',
+    theme_color: '#443000',
+    lang: 'ar',
+    dir: 'rtl',
+    icons: [
+      {
+        src: '/brand/lotus_logo.png',
+        sizes: '192x192',
+        type: 'image/png',
+      },
+      {
+        src: '/brand/lotus_logo.png',
+        sizes: '512x512',
+        type: 'image/png',
+      },
+    ],
+  };
+}

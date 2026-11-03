@@ -12,6 +12,7 @@ import {
 import { formatMagazinePrice, toArabicDigits } from '@/lib/format/price';
 import { ProductPriceDisplay } from '@/features/products/components/ProductPriceDisplay';
 import { ProductBackButton } from '@/features/products/components/ProductBackButton';
+import { generateBreadcrumbSchema } from '@/lib/seo';
 
 interface ProductDetailPageProps {
   params: Promise<{ slug: string }>;
@@ -28,18 +29,36 @@ export async function generateMetadata({
 
   if (!product) {
     return {
-      title: 'المنتج غير موجود | لوتس',
+      title: 'المنتج غير موجود | كتالوج لوتس',
     };
   }
 
+  const title = `${product.name_ar} | كتالوج لوتس - صندوق دعم الصناعات`;
+  const description =
+    product.description_ar ||
+    `تعرف على مواصفات وسعر ${product.name_ar} في كتالوج ومجلة لوتس الصادرة عن صندوق دعم الصناعات الريفية والبيئية.`;
+
   return {
-    title: `${product.name_ar} | لوتس للمنتجات اليدوية`,
-    description:
-      product.description_ar ||
-      `تفاصيل وسعر ${product.name_ar} في كتالوج لوتس الرسمي للمنتجات اليدوية المصرية.`,
+    title,
+    description,
+    alternates: {
+      canonical: `/products/${encodeURIComponent(decodedSlug)}`,
+    },
     openGraph: {
-      title: `${product.name_ar} - لوتس`,
-      description: product.description_ar,
+      title,
+      description,
+      url: `/products/${encodeURIComponent(decodedSlug)}`,
+      images: [
+        {
+          url: product.primary_image_url,
+          alt: product.name_ar,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
       images: [product.primary_image_url],
     },
   };
@@ -155,12 +174,34 @@ async function ProductDetailPageContent({ params, searchParams }: ProductDetailP
       ? 'تصميم تراثي أنيق مشغول يدوياً ليعكس أصالة وجمال الحرف المصرية.'
       : 'صناعة يدوية مصرية متقنة تجسد عراقة الفنون التراثية بمظهر جذاب.');
 
+  // Breadcrumbs schema for Google rich results
+  const breadcrumbItems = [
+    { name: 'الرئيسية', url: '/' },
+    { name: 'دليل المنتجات', url: '/products' },
+  ];
+  if (activeProduct.category) {
+    breadcrumbItems.push({
+      name: activeProduct.category,
+      url: `/categories/${encodeURIComponent(activeProduct.category)}`,
+    });
+  }
+  breadcrumbItems.push({
+    name: activeProduct.name_ar,
+    url: `/products/${encodeURIComponent(activeProduct.slug)}`,
+  });
+  const breadcrumbJsonLd = generateBreadcrumbSchema(breadcrumbItems);
+
   return (
     <>
       {/* Schema.org Product JSON-LD */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      {/* Schema.org BreadcrumbList JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">

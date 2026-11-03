@@ -27,11 +27,20 @@ export interface ProductJsonLd {
   image: string;
   description?: string;
   sku?: string;
+  category?: string;
+  brand?: {
+    '@type': string;
+    name: string;
+  };
   offers: {
     '@type': string;
     price: string;
     priceCurrency: string;
     availability: string;
     url: string;
+    seller?: {
+      '@type': string;
+      name: string;
+    };
   };
 }

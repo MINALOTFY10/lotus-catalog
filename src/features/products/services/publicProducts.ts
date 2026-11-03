@@ -131,12 +131,14 @@ export function searchPublicProducts(
   });
 }
 
+import { getBaseUrl } from '@/lib/seo';
+
 /**
  * Generates JSON-LD schema.org/Product structured data for SEO indexing
  */
 export function generateProductJsonLd(
   product: PublicProduct,
-  baseUrl: string = 'https://lotus.eg'
+  baseUrl: string = getBaseUrl()
 ): ProductJsonLd {
   const cleanBase = baseUrl.replace(/\/$/, '');
   const productUrl = `${cleanBase}/products/${encodeURIComponent(product.slug)}`;
@@ -149,16 +151,28 @@ export function generateProductJsonLd(
     '@type': 'Product',
     name: product.name_ar,
     image: imageUrl,
-    description: product.description_ar || product.name_ar,
+    description:
+      product.description_ar ||
+      `منتج ${product.name_ar} في كتالوج ومجلة لوتس الصادرة عن صندوق دعم الصناعات الريفية والبيئية.`,
     sku: product.cashier_code ? String(product.cashier_code) : product.id,
+    category: product.category || 'منتجات يدوية وتراثية',
+    brand: {
+      '@type': 'Brand',
+      name: 'لوتس - صندوق دعم الصناعات الريفية والبيئية',
+    },
     offers: {
       '@type': 'Offer',
       price: String(product.sale_price),
       priceCurrency: 'EGP',
-      availability: product.in_stock !== false
-        ? 'https://schema.org/InStock'
-        : 'https://schema.org/OutOfStock',
+      availability:
+        product.in_stock !== false
+          ? 'https://schema.org/InStock'
+          : 'https://schema.org/OutOfStock',
       url: productUrl,
+      seller: {
+        '@type': 'GovernmentOrganization',
+        name: 'صندوق دعم الصناعات الريفية والبيئية',
+      },
     },
   };
 }
