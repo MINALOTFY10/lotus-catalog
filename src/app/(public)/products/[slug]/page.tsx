@@ -45,6 +45,46 @@ export async function generateMetadata({
   };
 }
 
+function renderHeroPrice(rawPrice: number | null | undefined, priceText?: string | null) {
+  const formatted = formatMagazinePrice(rawPrice, priceText);
+  const lines = formatted
+    .split('\n')
+    .map((l) => l.trim())
+    .filter(Boolean);
+
+  if (lines.length === 1) {
+    const single = lines[0];
+    const match = single.match(/^([\u0660-\u06690-9.,]+)\s*(.+)$/);
+    if (match) {
+      return (
+        <div className="flex items-baseline gap-1.5 flex-wrap">
+          <span className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#443000] tracking-tight">
+            {match[1]}
+          </span>
+          <span className="text-sm sm:text-base lg:text-lg font-bold text-[#8A6747]">
+            {match[2]}
+          </span>
+        </div>
+      );
+    }
+    return (
+      <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#443000] tracking-tight">
+        {single}
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex flex-col gap-1">
+      {lines.map((line, idx) => (
+        <div key={idx} className="text-base sm:text-xl font-extrabold text-[#443000]">
+          {line}
+        </div>
+      ))}
+    </div>
+  );
+}
+
 async function ProductDetailPageContent({ params, searchParams }: ProductDetailPageProps) {
   const { slug } = await params;
   const sParams = searchParams ? await searchParams : {};
@@ -98,45 +138,55 @@ async function ProductDetailPageContent({ params, searchParams }: ProductDetailP
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
         {/* Top Breadcrumb & Back Action Bar */}
-        <div className="flex items-center justify-between gap-4 mb-6">
-          <nav className="flex items-center gap-2 text-xs text-stone-500 font-medium overflow-x-auto py-1">
-            <Link href={returnUrl} className="hover:text-[#443000] transition-colors whitespace-nowrap">
+        <div className="flex items-center justify-between gap-3 mb-5 sm:mb-8">
+          <nav className="flex items-center gap-1.5 sm:gap-2 text-xs sm:text-sm text-stone-500 font-medium overflow-x-auto py-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <Link
+              href={returnUrl}
+              className="hidden sm:inline hover:text-[#443000] transition-colors whitespace-nowrap"
+            >
               الرئيسية
             </Link>
-            <span>/</span>
-            <Link href={returnUrl} className="hover:text-[#443000] transition-colors whitespace-nowrap">
+            <span className="hidden sm:inline text-stone-300">/</span>
+            <Link
+              href={returnUrl}
+              className="hover:text-[#443000] transition-colors whitespace-nowrap font-medium"
+            >
               المجلة (صفحة {returnPage})
             </Link>
             {activeProduct.category && (
               <>
-                <span>/</span>
-                <span className="text-stone-700 whitespace-nowrap">{activeProduct.category}</span>
+                <span className="text-stone-300">/</span>
+                <span className="hidden md:inline text-stone-700 whitespace-nowrap">
+                  {activeProduct.category}
+                </span>
+                <span className="hidden md:inline text-stone-300">/</span>
               </>
             )}
-            <span>/</span>
-            <span className="text-[#443000] font-bold truncate max-w-xs">{activeProduct.name_ar}</span>
+            <span className="text-[#443000] font-bold truncate max-w-[130px] sm:max-w-xs">
+              {activeProduct.name_ar}
+            </span>
           </nav>
 
           <ProductBackButton fallbackUrl={returnUrl} fallbackPage={returnPage} />
         </div>
 
         {/* Product Showcase Card */}
-        <div className="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200/80 shadow-xs flex flex-col md:flex-row items-center md:items-stretch gap-6 sm:gap-10">
-          {/* Image Column - Compact, elegant square thumbnail */}
-          <div className="w-full md:w-[320px] shrink-0 flex items-center justify-center">
-            <div className="relative w-full max-w-[280px] sm:max-w-[320px] aspect-square rounded-2xl overflow-hidden bg-stone-50 border border-stone-200 shadow-inner group">
+        <div className="bg-white rounded-3xl p-5 sm:p-8 lg:p-10 border border-stone-200/80 shadow-xs flex flex-col md:flex-row items-center md:items-stretch gap-6 sm:gap-10">
+          {/* Image Column */}
+          <div className="w-full md:w-[320px] lg:w-[360px] shrink-0 flex items-center justify-center">
+            <div className="relative w-full max-w-[280px] sm:max-w-[320px] lg:max-w-[360px] aspect-square rounded-2xl overflow-hidden bg-stone-50 border border-stone-200 shadow-inner group">
               <Image
                 src={activeProduct.primary_image_url}
                 alt={activeProduct.name_ar}
                 fill
-                sizes="(max-width: 768px) 280px, 320px"
+                sizes="(max-width: 768px) 280px, (max-width: 1024px) 320px, 360px"
                 className="object-contain sm:object-cover group-hover:scale-105 transition-transform duration-500"
                 priority
               />
               {activeProduct.cashier_code && (
-                <div className="absolute top-3 right-3 bg-black/75 backdrop-blur-md text-white text-[11px] font-mono font-bold px-2.5 py-0.5 rounded-full shadow-sm">
+                <div className="absolute top-3 right-3 bg-black/80 backdrop-blur-md text-amber-200 text-xs sm:text-sm font-mono font-bold px-3 py-1 rounded-full shadow-md border border-amber-500/20">
                   كود المنتج: #{activeProduct.cashier_code}
                 </div>
               )}
@@ -148,45 +198,37 @@ async function ProductDetailPageContent({ params, searchParams }: ProductDetailP
             <div>
               {/* Category Badge */}
               {activeProduct.category && (
-                <div className="mb-2">
-                  <span className="text-xs font-semibold text-[#8A6747] bg-stone-100 px-2.5 py-0.5 rounded-md">
+                <div className="mb-2.5 sm:mb-3">
+                  <span className="text-xs sm:text-sm font-bold text-[#8A6747] bg-amber-50/90 border border-amber-200/60 px-3 py-1 rounded-full inline-block">
                     {activeProduct.category}
                   </span>
                 </div>
               )}
 
               {/* Title */}
-              <h1 className="text-xl sm:text-2xl font-extrabold text-[#443000] leading-snug">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#443000] leading-tight sm:leading-snug tracking-tight">
                 {activeProduct.name_ar}
               </h1>
 
               {/* Simple Description */}
-              <p className="mt-3 text-stone-600 text-sm leading-relaxed">
+              <p className="mt-3 sm:mt-4 text-stone-600 text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl">
                 {simpleDescription}
               </p>
             </div>
 
             {/* Price & Magazine Action (at the bottom) */}
-            <div className="mt-6 pt-5 border-t border-stone-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div className="mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-stone-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
-                <span className="text-[11px] font-bold text-stone-400 block mb-0.5">السعر</span>
-                <div className="text-2xl sm:text-3xl font-extrabold text-[#443000] tracking-tight">
-                  {formatMagazinePrice(activeProduct.sale_price, activeProduct.price_text)
-                    .split('\n')
-                    .map((line, idx) => (
-                      <div key={idx} className="leading-snug">
-                        {line}
-                      </div>
-                    ))}
-                </div>
+                <span className="text-xs sm:text-sm font-bold text-[#8A6747] block mb-1">السعر</span>
+                {renderHeroPrice(activeProduct.sale_price, activeProduct.price_text)}
               </div>
 
               <Link
                 href={returnUrl}
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#443000] hover:bg-[#B68763] text-white text-xs sm:text-sm font-bold shadow-xs hover:shadow-md transition-all duration-200"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-2xl bg-[#443000] hover:bg-[#B68763] text-white text-sm sm:text-base font-bold shadow-xs hover:shadow-md transition-all duration-200 active:scale-[0.98]"
               >
                 <svg
-                  className="w-4 h-4 shrink-0"
+                  className="w-4 h-4 sm:w-5 sm:h-5 shrink-0"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -206,28 +248,28 @@ async function ProductDetailPageContent({ params, searchParams }: ProductDetailP
 
         {/* Related Products Section */}
         {relatedProducts.length > 0 && (
-          <div className="mt-14">
-            <div className="flex items-center justify-between mb-6">
-              <h3 className="text-xl font-extrabold text-[#443000]">
+          <div className="mt-12 sm:mt-16">
+            <div className="flex items-center justify-between mb-5 sm:mb-6">
+              <h3 className="text-lg sm:text-2xl font-extrabold text-[#443000]">
                 منتجات مشابهة في {activeProduct.category}
               </h3>
               <Link
                 href="/products"
-                className="text-xs font-bold text-[#B68763] hover:underline"
+                className="text-xs sm:text-sm font-bold text-[#B68763] hover:text-[#443000] hover:underline transition-colors"
               >
                 عرض كل المنتجات ←
               </Link>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3.5 sm:gap-6">
               {relatedProducts.map((rel) => (
                 <Link
                   key={rel.id || rel.slug}
                   href={`/products/${encodeURIComponent(rel.slug)}`}
-                  className="group bg-white rounded-xl border border-stone-200 overflow-hidden shadow-2xs hover:shadow-md hover:border-[#B68763]/50 transition-all p-3 flex flex-col justify-between"
+                  className="group bg-white rounded-2xl border border-stone-200 overflow-hidden shadow-2xs hover:shadow-md hover:border-[#B68763]/50 transition-all p-3 sm:p-4 flex flex-col justify-between"
                 >
                   <div>
-                    <div className="relative aspect-square w-full rounded-lg overflow-hidden bg-stone-100 mb-2">
+                    <div className="relative aspect-square w-full rounded-xl overflow-hidden bg-stone-100 mb-2 sm:mb-3">
                       <Image
                         src={rel.primary_image_url}
                         alt={rel.name_ar}
@@ -236,7 +278,7 @@ async function ProductDetailPageContent({ params, searchParams }: ProductDetailP
                         className="object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
-                    <h4 className="font-bold text-xs sm:text-sm text-[#443000] group-hover:text-[#B68763] transition-colors line-clamp-2">
+                    <h4 className="font-bold text-xs sm:text-sm text-[#443000] group-hover:text-[#B68763] transition-colors line-clamp-2 leading-snug">
                       {rel.name_ar}
                     </h4>
                   </div>
@@ -253,6 +295,7 @@ async function ProductDetailPageContent({ params, searchParams }: ProductDetailP
     </>
   );
 }
+
 
 export default function ProductDetailPage(props: ProductDetailPageProps) {
   return (
