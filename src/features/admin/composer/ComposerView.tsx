@@ -313,17 +313,14 @@ export function ComposerView({
           </div>
         </div>
 
-        {/* Slot Number & Dimensions Badge */}
-        <div className="absolute bottom-[calc(4*var(--u,1px))] right-[calc(4*var(--u,1px))] z-20 pointer-events-none flex items-center gap-1">
-          {(colSpan > 1 || rowSpan > 1) && (
+        {/* Dimensions Badge (if expanded) */}
+        {(colSpan > 1 || rowSpan > 1) && (
+          <div className="absolute bottom-[calc(4*var(--u,1px))] right-[calc(4*var(--u,1px))] z-20 pointer-events-none flex items-center gap-1">
             <span className="bg-[#443000]/85 text-amber-200 text-[9px] font-mono font-bold px-1 py-0.5 rounded">
               {colSpan}×{rowSpan}
             </span>
-          )}
-          <span className="bg-black/65 backdrop-blur-xs text-white text-[10px] font-mono font-bold px-1.5 py-0.5 rounded">
-            #{slotNumber}
-          </span>
-        </div>
+          </div>
+        )}
       </div>
     );
   };

@@ -2342,7 +2342,7 @@
           "product": {
             "id": "prod-canva-p11-s1",
             "slug": "prod-canva-p11-s1-حقيبة-يد-لوتس-بيد-جانبية-مطرزة",
-            "name_ar": "حقيبة يد لوتس بيد جانبية  مطرزة بالخرز حقيبة يد لوتس المتفتحة",
+            "name_ar": "حقيبة يد لوتس بيد جانبية",
             "name_en": null,
             "description_ar": "،حقيبة يد مستطيلة مطرزة بالكامل بالخرز ،مزينة ببنقشة زهور اللوتس مع سحّاب وحزام يد",
             "description_en": null,
@@ -2357,11 +2357,12 @@
             },
             "cashier_code": 325
           },
-          "title_override": "حقيبة يد لوتس بيد جانبية  مطرزة بالخرز حقيبة يد لوتس المتفتحة",
-          "description_override": "،حقيبة يد مستطيلة مطرزة بالكامل بالخرز ،مزينة ببنقشة زهور اللوتس مع سحّاب وحزام يد",
+          "title_override": "حقيبة يد لوتس بيد جانبية",
           "price_override": 1695,
-          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p11_s1.webp",
           "price_text": "السعر\n١٦٩٥ ج.مصري",
+          "price_tiers": null,
+          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p11_s1.webp",
+          "description_override": "،حقيبة يد مستطيلة مطرزة بالكامل بالخرز ،مزينة ببنقشة زهور اللوتس مع سحّاب وحزام يد",
           "col_span": 1,
           "row_span": 1
         },
@@ -2370,7 +2371,7 @@
           "product": {
             "id": "prod-canva-p11-s2",
             "slug": "prod-canva-p11-s2-مطرزة-بالخرز-بيد-جانبية",
-            "name_ar": "مطرزة بالخرز بيد جانبية",
+            "name_ar": "حقيبة يد لوتس المتفتحة مطرزة بالخرز بيد جانبية",
             "name_en": null,
             "description_ar": "حقيبة يد مستطيلة مطرزة بالكامل بالخرز األسود، مزينة بنقشة لوتس باللونين .الفيروزي والأصفر، مع سحّاب وحزام يد",
             "description_en": null,
@@ -2385,11 +2386,12 @@
             },
             "cashier_code": 323
           },
-          "title_override": "مطرزة بالخرز بيد جانبية",
-          "description_override": "حقيبة يد مستطيلة مطرزة بالكامل بالخرز األسود، مزينة بنقشة لوتس باللونين .الفيروزي والأصفر، مع سحّاب وحزام يد",
+          "title_override": "حقيبة يد لوتس المتفتحة مطرزة بالخرز بيد جانبية",
           "price_override": 1695,
-          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p11_s2.webp",
           "price_text": "السعر\n١٦٩٥ ج.مصري",
+          "price_tiers": null,
+          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p11_s2.webp",
+          "description_override": "حقيبة يد مستطيلة مطرزة بالكامل بالخرز األسود، مزينة بنقشة لوتس باللونين .الفيروزي والأصفر، مع سحّاب وحزام يد",
           "col_span": 1,
           "row_span": 1
         },
@@ -2482,7 +2484,7 @@
           "product": {
             "id": "prod-canva-p11-s6",
             "slug": "prod-canva-p11-s6-منتج-حقائب-يد-مطرزة-6",
-            "name_ar": "منتج حقائب يد مطرزة 6",
+            "name_ar": "حقيبة يد هندسية ذهبي وفضي بغطاء قلاب",
             "name_en": null,
             "description_ar": "حقيبة يد مستطيلة مطرزة بالكامل بالخرز، مزينة ببنقشة زهور",
             "description_en": null,
@@ -2497,11 +2499,12 @@
             },
             "cashier_code": 326
           },
-          "title_override": "منتج حقائب يد مطرزة 6",
-          "description_override": "حقيبة يد مستطيلة مطرزة بالكامل بالخرز، مزينة ببنقشة زهور",
+          "title_override": "حقيبة يد هندسية ذهبي وفضي بغطاء قلاب",
           "price_override": 1850,
-          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p11_s6.webp",
           "price_text": "١٨٥٠ ج.مصري",
+          "price_tiers": null,
+          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p11_s6.webp",
+          "description_override": "حقيبة يد مستطيلة مطرزة بالكامل بالخرز، مزينة ببنقشة زهور",
           "col_span": 1,
           "row_span": 1
         },
@@ -2782,7 +2785,7 @@
           "product": {
             "id": "prod-canva-p13-s3",
             "slug": "prod-canva-p13-s3-بيضة-صغيرة-والصدف-من-الزجاج",
-            "name_ar": "بيضة صغيرة والصدف  من الزجاج",
+            "name_ar": "بيضة صغيرة من الزجاج والصدف",
             "name_en": null,
             "description_ar": "قطعة مضيئة مصنوعة يدو ًيا، مزينة بالزجاج الملون وتطعيمات هندسية من الصدف",
             "description_en": null,
@@ -2797,11 +2800,12 @@
             },
             "cashier_code": 115
           },
-          "title_override": "بيضة صغيرة والصدف  من الزجاج",
-          "description_override": "قطعة مضيئة مصنوعة يدو ًيا، مزينة بالزجاج الملون وتطعيمات هندسية من الصدف",
+          "title_override": "بيضة صغيرة من الزجاج والصدف",
           "price_override": 745,
-          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p13_s3.webp",
           "price_text": "السعر\n٧٤٥ ج.مصري",
+          "price_tiers": null,
+          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p13_s3.webp",
+          "description_override": "قطعة مضيئة مصنوعة يدو ًيا، مزينة بالزجاج الملون وتطعيمات هندسية من الصدف",
           "col_span": 1,
           "row_span": 1
         },
@@ -3166,7 +3170,7 @@
           "product": {
             "id": "prod-canva-p15-s2",
             "slug": "prod-canva-p15-s2-طقم-طبق-سيراميك-٤-أكواب-نجمة-م",
-            "name_ar": "طقم طبق سيراميك ٤ أكواب نجمة مع",
+            "name_ar": "طقم طبق سيراميك نجمة مع ٤ أكواب",
             "name_en": null,
             "description_ar": "طقم سيراميك مصنوع يدويًا، يضم طبق على ٤ أكواب متناسقة، بدرجات شكل نجمة مع الأخضر والفيروزي",
             "description_en": null,
@@ -3181,11 +3185,12 @@
             },
             "cashier_code": 140
           },
-          "title_override": "طقم طبق سيراميك ٤ أكواب نجمة مع",
-          "description_override": "طقم سيراميك مصنوع يدويًا، يضم طبق على ٤ أكواب متناسقة، بدرجات شكل نجمة مع الأخضر والفيروزي",
+          "title_override": "طقم طبق سيراميك نجمة مع ٤ أكواب",
           "price_override": 835,
-          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p15_s2.webp",
           "price_text": "السعر\n٨٣٥ ج.مصري",
+          "price_tiers": null,
+          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p15_s2.webp",
+          "description_override": "طقم سيراميك مصنوع يدويًا، يضم طبق على ٤ أكواب متناسقة، بدرجات شكل نجمة مع الأخضر والفيروزي",
           "col_span": 1,
           "row_span": 1
         },
@@ -3247,7 +3252,7 @@
           "product": {
             "id": "prod-canva-p15-s5",
             "slug": "prod-canva-p15-s5-طقم-صينية-سيراميك-أكواب4-بيضاو",
-            "name_ar": "طقم صينية سيراميك أكواب4 بيضاوية مع",
+            "name_ar": "طقم صينية سيراميك بيضاوية مع 4 أكواب",
             "name_en": null,
             "description_ar": "طقم مصنوع يدويًا يضم صينية سيراميك  أكواب متناسقة، بلمسات من4بيضاوية و الأزرق والفيروزي",
             "description_en": null,
@@ -3262,11 +3267,12 @@
             },
             "cashier_code": 138
           },
-          "title_override": "طقم صينية سيراميك أكواب4 بيضاوية مع",
-          "description_override": "طقم مصنوع يدويًا يضم صينية سيراميك  أكواب متناسقة، بلمسات من4بيضاوية و الأزرق والفيروزي",
+          "title_override": "طقم صينية سيراميك بيضاوية مع 4 أكواب",
           "price_override": 730,
-          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p15_s5.webp",
           "price_text": "السعر\n٧٣٠ ج.مصري",
+          "price_tiers": null,
+          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p15_s5.webp",
+          "description_override": "طقم مصنوع يدويًا يضم صينية سيراميك  أكواب متناسقة، بلمسات من4بيضاوية و الأزرق والفيروزي",
           "col_span": 1,
           "row_span": 1
         },
@@ -3331,7 +3337,7 @@
           "product": {
             "id": "prod-canva-p15-s8",
             "slug": "prod-canva-p15-s8-طقم-سيراميك-صينية-مع-أكواب-إسب",
-            "name_ar": "طقم سيراميك صينية مع أكواب إسبريسو4",
+            "name_ar": "طقم سيراميك صينية مع 4 أكواب إسبريسو",
             "name_en": null,
             "description_ar": "4طقم سيراميك مصنوع يدو ًيا يضم صينية و أكواب إسبريسو بدون يد متناسقة، بتصميم وألوان فيروزية",
             "description_en": null,
@@ -3346,11 +3352,12 @@
             },
             "cashier_code": null
           },
-          "title_override": "طقم سيراميك صينية مع أكواب إسبريسو4",
-          "description_override": "4طقم سيراميك مصنوع يدو ًيا يضم صينية و أكواب إسبريسو بدون يد متناسقة، بتصميم وألوان فيروزية",
+          "title_override": "طقم سيراميك صينية مع 4 أكواب إسبريسو",
           "price_override": 835,
-          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p15_s8.webp",
           "price_text": "السعر\n٨٣٥ ج.مصري",
+          "price_tiers": null,
+          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p15_s8.webp",
+          "description_override": "4طقم سيراميك مصنوع يدو ًيا يضم صينية و أكواب إسبريسو بدون يد متناسقة، بتصميم وألوان فيروزية",
           "col_span": 1,
           "row_span": 1
         },
@@ -4117,7 +4124,7 @@
           "product": {
             "id": "prod-canva-p18-s8",
             "slug": "prod-canva-p18-s8-طقم-سفرة-قطع3-سيراميك",
-            "name_ar": "طقم سفرة  قطع3 سيراميك",
+            "name_ar": "طقم سفرة  سيراميك 3 قطع",
             "name_en": null,
             "description_ar": "طقم سيراميك مصنوع يدو ًيا يضم طب ًقا رئيس ًيا وطب ًقا جانب ًيا ووعا ًء، بتصميم يجمع بين الأوف وايت والنبيتي ولمسات ذهبية",
             "description_en": null,
@@ -4132,11 +4139,12 @@
             },
             "cashier_code": 187
           },
-          "title_override": "طقم سفرة  قطع3 سيراميك",
-          "description_override": "طقم سيراميك مصنوع يدو ًيا يضم طب ًقا رئيس ًيا وطب ًقا جانب ًيا ووعا ًء، بتصميم يجمع بين الأوف وايت والنبيتي ولمسات ذهبية",
+          "title_override": "طقم سفرة  سيراميك 3 قطع",
           "price_override": 945,
-          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p18_s8.webp",
           "price_text": "السعر\n٩٤٥ ج.مصري",
+          "price_tiers": null,
+          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p18_s8.webp",
+          "description_override": "طقم سيراميك مصنوع يدو ًيا يضم طب ًقا رئيس ًيا وطب ًقا جانب ًيا ووعا ًء، بتصميم يجمع بين الأوف وايت والنبيتي ولمسات ذهبية",
           "col_span": 1,
           "row_span": 1
         },
@@ -4145,7 +4153,7 @@
           "product": {
             "id": "prod-canva-p18-s9",
             "slug": "prod-canva-p18-s9-أكواب4-طقم-سيراميك-إسبريسو-وصي",
-            "name_ar": "أكواب4 طقم سيراميك إسبريسو وصينيه",
+            "name_ar": "طقم سيراميك 4 أكواب إسبريسو وصينيه",
             "name_en": null,
             "description_ar": "أكواب إسبريسو بدون يد4 طقم مكوّن من وصينية، مصنوعة يدويًا بدرجات أوف وايت وتشطيب طبيعي مطفي",
             "description_en": null,
@@ -4160,11 +4168,12 @@
             },
             "cashier_code": 152
           },
-          "title_override": "أكواب4 طقم سيراميك إسبريسو وصينيه",
-          "description_override": "أكواب إسبريسو بدون يد4 طقم مكوّن من وصينية، مصنوعة يدويًا بدرجات أوف وايت وتشطيب طبيعي مطفي",
+          "title_override": "طقم سيراميك 4 أكواب إسبريسو وصينيه",
           "price_override": 835,
-          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p18_s9.webp",
           "price_text": "السعر\n٨٣٥ ج.مصري",
+          "price_tiers": null,
+          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p18_s9.webp",
+          "description_override": "أكواب إسبريسو بدون يد4 طقم مكوّن من وصينية، مصنوعة يدويًا بدرجات أوف وايت وتشطيب طبيعي مطفي",
           "col_span": 1,
           "row_span": 1
         }
@@ -4183,7 +4192,7 @@
           "product": {
             "id": "prod-canva-p19-s1",
             "slug": "prod-canva-p19-s1-طقم-سفرة-قطع3-سيراميك",
-            "name_ar": "طقم سفرة  قطع3 سيراميك",
+            "name_ar": "طقم سفرة سيراميك 3 قطع",
             "name_en": null,
             "description_ar": "طقم سيراميك مصنوع يدو ًيا يضم طب ًقا رئيس ًيا وطب ًقا جانب ًيا ووعا ًء، بتدرجات األزرق الداكن والأسود والبيج مع خطوط زخرفية",
             "description_en": null,
@@ -4198,11 +4207,12 @@
             },
             "cashier_code": 188
           },
-          "title_override": "طقم سفرة  قطع3 سيراميك",
-          "description_override": "طقم سيراميك مصنوع يدو ًيا يضم طب ًقا رئيس ًيا وطب ًقا جانب ًيا ووعا ًء، بتدرجات األزرق الداكن والأسود والبيج مع خطوط زخرفية",
+          "title_override": "طقم سفرة سيراميك 3 قطع",
           "price_override": 945,
-          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p19_s1.webp",
           "price_text": "السعر\n٩٤٥ ج.مصري",
+          "price_tiers": null,
+          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p19_s1.webp",
+          "description_override": "طقم سيراميك مصنوع يدو ًيا يضم طب ًقا رئيس ًيا وطب ًقا جانب ًيا ووعا ًء، بتدرجات األزرق الداكن والأسود والبيج مع خطوط زخرفية",
           "col_span": 1,
           "row_span": 1
         },
@@ -4211,7 +4221,7 @@
           "product": {
             "id": "prod-canva-p19-s2",
             "slug": "prod-canva-p19-s2-طقم-سفرة-قطع3-سيراميك",
-            "name_ar": "طقم سفرة  قطع3 سيراميك",
+            "name_ar": "طقم سفرة  سيراميك 3 قطع",
             "name_en": null,
             "description_ar": "طقم سيراميك مصنوع يدو ًيا يضم طب ًقا رئيس ًيا وطب ًقا جانب ًيا ووعا ًء، بطالء أزرق داكن لامع وتفاصيل ذهبية",
             "description_en": null,
@@ -4226,11 +4236,12 @@
             },
             "cashier_code": 188
           },
-          "title_override": "طقم سفرة  قطع3 سيراميك",
-          "description_override": "طقم سيراميك مصنوع يدو ًيا يضم طب ًقا رئيس ًيا وطب ًقا جانب ًيا ووعا ًء، بطالء أزرق داكن لامع وتفاصيل ذهبية",
+          "title_override": "طقم سفرة  سيراميك 3 قطع",
           "price_override": 945,
-          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p19_s2.webp",
           "price_text": "السعر\n٩٤٥ ج.مصري",
+          "price_tiers": null,
+          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p19_s2.webp",
+          "description_override": "طقم سيراميك مصنوع يدو ًيا يضم طب ًقا رئيس ًيا وطب ًقا جانب ًيا ووعا ًء، بطالء أزرق داكن لامع وتفاصيل ذهبية",
           "col_span": 1,
           "row_span": 1
         },
@@ -4295,7 +4306,7 @@
           "product": {
             "id": "prod-canva-p19-s5",
             "slug": "prod-canva-p19-s5-طقم-سفرة-قطع3-سيراميك",
-            "name_ar": "طقم سفرة  قطع3 سيراميك",
+            "name_ar": "طقم سفرة  سيراميك 3 قطع",
             "name_en": null,
             "description_ar": "قطع: طبق رئيسي3 طقم سيراميك من وطبق جانبي ووعاء، بتدرجات من الكريمي والأزرق والرمادي مع خطوط لونية",
             "description_en": null,
@@ -4310,11 +4321,12 @@
             },
             "cashier_code": 189
           },
-          "title_override": "طقم سفرة  قطع3 سيراميك",
-          "description_override": "قطع: طبق رئيسي3 طقم سيراميك من وطبق جانبي ووعاء، بتدرجات من الكريمي والأزرق والرمادي مع خطوط لونية",
+          "title_override": "طقم سفرة  سيراميك 3 قطع",
           "price_override": 945,
-          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p19_s5.webp",
           "price_text": "السعر\n٩٤٥ ج.مصري",
+          "price_tiers": null,
+          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p19_s5.webp",
+          "description_override": "قطع: طبق رئيسي3 طقم سيراميك من وطبق جانبي ووعاء، بتدرجات من الكريمي والأزرق والرمادي مع خطوط لونية",
           "col_span": 1,
           "row_span": 1
         },
@@ -4529,7 +4541,7 @@
           "product": {
             "id": "prod-canva-p20-s4",
             "slug": "prod-canva-p20-s4-٢-كوب-سيراميك-طقم-بنقوش-هندسية",
-            "name_ar": "٢ كوب سيراميك طقم بنقوش هندسية محفورة",
+            "name_ar": "طقم ٢ كوب سيراميك  بنقوش هندسية محفورة",
             "name_en": null,
             "description_ar": "٢ كوب وصينية سيراميك يدوي، يتميز بتصميم نقوش هندسية متشابكة محفورة  على سطحه، مع طلاء متدرج بدرجات الرمادي",
             "description_en": null,
@@ -4544,11 +4556,12 @@
             },
             "cashier_code": 156
           },
-          "title_override": "٢ كوب سيراميك طقم بنقوش هندسية محفورة",
-          "description_override": "٢ كوب وصينية سيراميك يدوي، يتميز بتصميم نقوش هندسية متشابكة محفورة  على سطحه، مع طلاء متدرج بدرجات الرمادي",
+          "title_override": "طقم ٢ كوب سيراميك  بنقوش هندسية محفورة",
           "price_override": 750,
-          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p20_s4.webp",
           "price_text": "السعر\n٧٥٠ ج.مصري",
+          "price_tiers": null,
+          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p20_s4.webp",
+          "description_override": "٢ كوب وصينية سيراميك يدوي، يتميز بتصميم نقوش هندسية متشابكة محفورة  على سطحه، مع طلاء متدرج بدرجات الرمادي",
           "col_span": 1,
           "row_span": 1
         },
@@ -5241,7 +5254,7 @@
           "product": {
             "id": "prod-canva-p24-s1",
             "slug": "prod-canva-p24-s1-صينية-بارزة-«الطائر-»والزخارف",
-            "name_ar": "صينية بارزة «الطائر »والزخارف النباتية",
+            "name_ar": "صينية بارزة «الطائر والزخارف النباتية»",
             "name_en": null,
             "description_ar": "صينية فضية مربعة مصنوعة يدو ًيا، مزينة محفور تحيط به فروع وأوراق وزخارف  بطائر زهرية على سطح معدني ذي ملمس بارز",
             "description_en": null,
@@ -5256,11 +5269,12 @@
             },
             "cashier_code": 314
           },
-          "title_override": "صينية بارزة «الطائر »والزخارف النباتية",
-          "description_override": "صينية فضية مربعة مصنوعة يدو ًيا، مزينة محفور تحيط به فروع وأوراق وزخارف  بطائر زهرية على سطح معدني ذي ملمس بارز",
+          "title_override": "صينية بارزة «الطائر والزخارف النباتية»",
           "price_override": 880,
-          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p24_s1.webp",
           "price_text": "المقاس والسعر\n٨٨٠ ج.مصري | سم  ٢٠*٢٠\n١١٥٠ ج.مصري | ٢٥ سم*٣٥",
+          "price_tiers": null,
+          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p24_s1.webp",
+          "description_override": "صينية فضية مربعة مصنوعة يدو ًيا، مزينة محفور تحيط به فروع وأوراق وزخارف  بطائر زهرية على سطح معدني ذي ملمس بارز",
           "col_span": 1,
           "row_span": 1
         },
@@ -5727,7 +5741,7 @@
           "product": {
             "id": "prod-canva-p25-s9",
             "slug": "prod-canva-p25-s9-صينية-محفورة-«الطائر-»والزخارف",
-            "name_ar": "صينية محفورة «الطائر »والزخارف الهندسية",
+            "name_ar": "صينية محفورة «الطائر والزخارف الهندسية»",
             "name_en": null,
             "description_ar": "صينية نحاس مربعة مصنوعة يدو ًيا، مزينة بطائر تراثي محفور تحيط به زخارف نباتية ونقوش هندسية دقيقة ذي ملمس بارز",
             "description_en": null,
@@ -5742,11 +5756,12 @@
             },
             "cashier_code": 307
           },
-          "title_override": "صينية محفورة «الطائر »والزخارف الهندسية",
-          "description_override": "صينية نحاس مربعة مصنوعة يدو ًيا، مزينة بطائر تراثي محفور تحيط به زخارف نباتية ونقوش هندسية دقيقة ذي ملمس بارز",
+          "title_override": "صينية محفورة «الطائر والزخارف الهندسية»",
           "price_override": 2500,
-          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p25_s9.webp",
           "price_text": "السعر\n٢٥٠٠ ج.مصري | ٢٥ سم قطر",
+          "price_tiers": null,
+          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p25_s9.webp",
+          "description_override": "صينية نحاس مربعة مصنوعة يدو ًيا، مزينة بطائر تراثي محفور تحيط به زخارف نباتية ونقوش هندسية دقيقة ذي ملمس بارز",
           "col_span": 1,
           "row_span": 1
         }
@@ -5877,7 +5892,7 @@
           "product": {
             "id": "prod-canva-p26-s5",
             "slug": "prod-canva-p26-s5-مصباح-ملح-كريستالي-X-بزخارف-حر",
-            "name_ar": "مصباح ملح كريستالي X بزخارف حرف",
+            "name_ar": "مصباح ملح كريستالي بزخارف حرف X",
             "name_en": null,
             "description_ar": "،X حرف  مصباح من الملح الصخري األبيض بتصميم هندسي بزخارف مزين ببلورات مضيئة بدرجات كهرمانية تمنح إضاءة دافئة",
             "description_en": null,
@@ -5892,11 +5907,12 @@
             },
             "cashier_code": null
           },
-          "title_override": "مصباح ملح كريستالي X بزخارف حرف",
-          "description_override": "،X حرف  مصباح من الملح الصخري األبيض بتصميم هندسي بزخارف مزين ببلورات مضيئة بدرجات كهرمانية تمنح إضاءة دافئة",
+          "title_override": "مصباح ملح كريستالي بزخارف حرف X",
           "price_override": 340,
-          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p26_s5.webp",
           "price_text": "السعر\n٣٤٠ ج.مصري",
+          "price_tiers": null,
+          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p26_s5.webp",
+          "description_override": "،X حرف  مصباح من الملح الصخري األبيض بتصميم هندسي بزخارف مزين ببلورات مضيئة بدرجات كهرمانية تمنح إضاءة دافئة",
           "col_span": 2,
           "row_span": 1
         },
@@ -8451,7 +8467,7 @@
           "product": {
             "id": "prod-canva-p36-s8",
             "slug": "prod-canva-p36-s8-تمثال-لرمسيس-الثاني",
-            "name_ar": "تمثال لرمسيس الثاني",
+            "name_ar": "تمثال رمسيس الثاني",
             "name_en": null,
             "description_ar": "،تمثال فرعوني مصنوع يدو ًيا أسود مطفي مزين بتفاصيل معدنية ذهبية وقاعدة زخرفية مستوحاة من الفن المصري القديم",
             "description_en": null,
@@ -8466,11 +8482,12 @@
             },
             "cashier_code": 406
           },
-          "title_override": "تمثال لرمسيس الثاني",
-          "description_override": "،تمثال فرعوني مصنوع يدو ًيا أسود مطفي مزين بتفاصيل معدنية ذهبية وقاعدة زخرفية مستوحاة من الفن المصري القديم",
+          "title_override": "تمثال رمسيس الثاني",
           "price_override": 300,
-          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p36_s8.webp",
           "price_text": "السعر\n٣٠٠ ج.مصري",
+          "price_tiers": null,
+          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p36_s8.webp",
+          "description_override": "،تمثال فرعوني مصنوع يدو ًيا أسود مطفي مزين بتفاصيل معدنية ذهبية وقاعدة زخرفية مستوحاة من الفن المصري القديم",
           "col_span": 1,
           "row_span": 1
         },
@@ -8573,7 +8590,7 @@
           "product": {
             "id": "prod-canva-p37-s3",
             "slug": "prod-canva-p37-s3-طبق-حائط-»مصور-»إخناتون",
-            "name_ar": "طبق حائط »مصور »إخناتون",
+            "name_ar": "طبق حائط  مصور «إخناتون»",
             "name_en": null,
             "description_ar": "طبق حائط يصور الملك إخناتون مع قرص الشمس آتون واألشعة المميزة،وتفاصيل سوداء وذهبية وإطار هندسي مزخرف",
             "description_en": null,
@@ -8588,11 +8605,12 @@
             },
             "cashier_code": 416
           },
-          "title_override": "طبق حائط »مصور »إخناتون",
-          "description_override": "طبق حائط يصور الملك إخناتون مع قرص الشمس آتون واألشعة المميزة،وتفاصيل سوداء وذهبية وإطار هندسي مزخرف",
+          "title_override": "طبق حائط  مصور «إخناتون»",
           "price_override": 330,
-          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p37_s3.webp",
           "price_text": "السعر\n٣٣٠ ج.مصري",
+          "price_tiers": null,
+          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p37_s3.webp",
+          "description_override": "طبق حائط يصور الملك إخناتون مع قرص الشمس آتون واألشعة المميزة،وتفاصيل سوداء وذهبية وإطار هندسي مزخرف",
           "col_span": 1,
           "row_span": 1
         },
@@ -8741,7 +8759,7 @@
           "product": {
             "id": "prod-canva-p37-s9",
             "slug": "prod-canva-p37-s9-طبق-معدني-ديكوري-مصنوع-يدو-ًيا",
-            "name_ar": "طبق معدني ديكوري مصنوع يدو ًيا، يتوسطه بروفايل ملكة فرعونية بين أعمدة مستوحاة من المعابد المصرية القديمة، مع زخارف وتفاصيل سوداء وذهبية دقيقة طبق حائط عربة رمسيس",
+            "name_ar": "طبق حائط عربة رمسيس",
             "name_en": null,
             "description_ar": "طبق حائط يصور الملك رمسيس على عربة حربية مع قوس ورمز عين حورس، ومزين بتفاصيل سوداء وذهبية",
             "description_en": null,
@@ -8756,11 +8774,12 @@
             },
             "cashier_code": 416
           },
-          "title_override": "طبق معدني ديكوري مصنوع يدو ًيا، يتوسطه بروفايل ملكة فرعونية بين أعمدة مستوحاة من المعابد المصرية القديمة، مع زخارف وتفاصيل سوداء وذهبية دقيقة طبق حائط عربة رمسيس",
-          "description_override": "طبق حائط يصور الملك رمسيس على عربة حربية مع قوس ورمز عين حورس، ومزين بتفاصيل سوداء وذهبية",
+          "title_override": "طبق حائط عربة رمسيس",
           "price_override": 330,
-          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p37_s9.webp",
           "price_text": "االسعر\n٣٣٠ ج.مصري",
+          "price_tiers": null,
+          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p37_s9.webp",
+          "description_override": "طبق حائط يصور الملك رمسيس على عربة حربية مع قوس ورمز عين حورس، ومزين بتفاصيل سوداء وذهبية",
           "col_span": 1,
           "row_span": 1
         }
@@ -8807,7 +8826,7 @@
           "product": {
             "id": "prod-canva-p38-s2",
             "slug": "prod-canva-p38-s2-تمثال-للملكة-نفرتيتي",
-            "name_ar": "تمثال للملكة نفرتيتي",
+            "name_ar": "تمثال الملكة نفرتيتي",
             "name_en": null,
             "description_ar": "تمثال مصنوع يدو ًيا حجري فاتح، يجسد الملكة نفرتيتي بتاجها الشهير وقالدتها العريضة، ومثبت على قاعدة زخرفية",
             "description_en": null,
@@ -8822,11 +8841,12 @@
             },
             "cashier_code": 421
           },
-          "title_override": "تمثال للملكة نفرتيتي",
-          "description_override": "تمثال مصنوع يدو ًيا حجري فاتح، يجسد الملكة نفرتيتي بتاجها الشهير وقالدتها العريضة، ومثبت على قاعدة زخرفية",
+          "title_override": "تمثال الملكة نفرتيتي",
           "price_override": 170,
-          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p38_s2.webp",
           "price_text": "السعر\n١٧٠ ج.مصري",
+          "price_tiers": null,
+          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p38_s2.webp",
+          "description_override": "تمثال مصنوع يدو ًيا حجري فاتح، يجسد الملكة نفرتيتي بتاجها الشهير وقالدتها العريضة، ومثبت على قاعدة زخرفية",
           "col_span": 1,
           "row_span": 1
         },
