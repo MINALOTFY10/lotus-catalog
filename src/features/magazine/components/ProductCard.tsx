@@ -128,6 +128,13 @@ export function ProductCard({
         <span className="block">تخزين خوص مطرزة</span>
       </>
     );
+  } else if (title.includes('حقيبة سلة خوص مطرزة بنقوش نباتية')) {
+    formattedTitle = (
+      <>
+        <span className="block">حقيبة سلة خوص مطرزة</span>
+        <span className="block">بنقوش نباتية ولؤلؤ ابيض</span>
+      </>
+    );
   }
 
   const cardContent = (

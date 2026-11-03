@@ -1362,7 +1362,18 @@
             "description_ar": "سلة مستطيلة من الخوص ، مزينة بتطريزات نباتية بلون أوف وايت ولؤلؤ وتفاصيل خرزية بسيطة، مع بطانة داخلية قماشية برباط",
             "description_en": null,
             "category": "خوص وحلفا طبيعي",
-            "sale_price": 2700,
+            "sale_price": 2365,
+            "price_text": "المقاس والسعر\nوسط | ٢٣٦٥ ج.مصري\nكبير | ٢٧٠٠ ج.مصري",
+            "price_tiers": [
+              {
+                "label": "وسط",
+                "price": 2365
+              },
+              {
+                "label": "كبير",
+                "price": 2700
+              }
+            ],
             "in_stock": true,
             "primary_image_url": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p7_s5.webp",
             "images": {
@@ -1374,9 +1385,19 @@
           },
           "title_override": "حقيبة سلة خوص مطرزة بنقوش نباتية ولؤلؤ ابيض",
           "description_override": "سلة مستطيلة من الخوص ، مزينة بتطريزات نباتية بلون أوف وايت ولؤلؤ وتفاصيل خرزية بسيطة، مع بطانة داخلية قماشية برباط",
-          "price_override": 2700,
+          "price_override": 2365,
           "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p7_s5.webp",
-          "price_text": "٢٧٠٠ ج.مصري | كبير",
+          "price_text": "المقاس والسعر\nوسط | ٢٣٦٥ ج.مصري\nكبير | ٢٧٠٠ ج.مصري",
+          "price_tiers": [
+            {
+              "label": "وسط",
+              "price": 2365
+            },
+            {
+              "label": "كبير",
+              "price": 2700
+            }
+          ],
           "col_span": 1,
           "row_span": 1
         },
