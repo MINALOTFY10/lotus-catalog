@@ -257,6 +257,15 @@ async function ProductDetailPageContent({ params, searchParams }: ProductDetailP
           {/* Details Column */}
           <div className="flex-1 w-full flex flex-col justify-between">
             <div>
+              {/* Category Badge */}
+              {activeProduct.category && (
+                <div className="mb-2">
+                  <span className="text-[11px] sm:text-xs font-bold text-[#8A6747] bg-amber-50/90 border border-amber-200/60 px-2.5 py-1 rounded-full inline-block">
+                    {activeProduct.category}
+                  </span>
+                </div>
+              )}
+
               {/* Title */}
               <h1 className="text-xl sm:text-2xl lg:text-3xl font-black text-[#443000] leading-snug tracking-tight">
                 {activeProduct.name_ar}
