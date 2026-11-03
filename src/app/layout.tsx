@@ -41,7 +41,7 @@ const baseUrl = getBaseUrl();
 
 const GOOGLE_SITE_VERIFICATION =
   process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ||
-  "5yMaoOmNwR1MIJ7dx2TQMW7AeT_I5eptx-4DWR2EUGo";
+  "ihr2QxnRWNrKY3aZ_AiM2CpUnPJhAGfZYqAZlrDIn9Q";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
