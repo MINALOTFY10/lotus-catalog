@@ -45,7 +45,7 @@ describe('Product Interaction & Modal', () => {
 
     expect(screen.getByText('عسل نحلة عسل برسيم طبيعي')).toBeDefined();
     expect(screen.getByText(/نحلة عسل برسيم فاخر/)).toBeDefined();
-    expect(screen.getByText('350 ج.مصري')).toBeDefined();
+    expect(screen.getByText('٣٥٠ ج.مصري')).toBeDefined();
     expect(screen.getByText('عسل نحل ومنتجات طبيعية')).toBeDefined();
 
     // Close button

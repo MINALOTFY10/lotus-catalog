@@ -53,7 +53,7 @@ export function ProductCard({
   if (price !== undefined && price !== null) {
     const formattedPrice = `${toArabicDigits(price)} ج.مصري`;
     if (priceText) {
-      const cleanText = priceText.replace(/^ال+السعر/, 'السعر').trim();
+      const cleanText = toArabicDigits(priceText).replace(/^ال+السعر/, 'السعر').trim();
 
       if (cleanText.includes('المقاس والسعر') || cleanText.includes('سم')) {
         priceLabel = 'المقاس والسعر';
@@ -85,15 +85,15 @@ export function ProductCard({
                 !p.includes('السعر')
             )
             ?.trim() || parts[1]?.trim() || '';
-        priceVal = sizePart ? `${formattedPrice} | ${sizePart}` : formattedPrice;
+        priceVal = sizePart ? `${formattedPrice} | ${toArabicDigits(sizePart)}` : formattedPrice;
       } else {
-        priceVal = formattedPrice;
+        priceVal = toArabicDigits(cleanText);
       }
     } else {
       priceVal = formattedPrice;
     }
   } else if (priceText) {
-    priceVal = priceText.trim();
+    priceVal = toArabicDigits(priceText.trim());
   } else {
     priceVal = 'حسب الاختيار';
   }
@@ -216,7 +216,7 @@ export function ProductCard({
             {priceLabel}
           </span>
           {priceVal.split('\n').map((line, idx) => {
-            let cleanLine = line.trim();
+            let cleanLine = toArabicDigits(line.trim());
             // Discard stray "ال", "الـ", "ا" or empty lines
             if (!cleanLine || cleanLine === 'ال' || cleanLine === 'الـ' || cleanLine === 'ا') return null;
 
@@ -233,7 +233,7 @@ export function ProductCard({
                     fontFamily: cleanLine.includes('L.E') ? 'var(--mag-font-en)' : 'var(--mag-font-ar)',
                   }}
                 >
-                  {cleanLine}
+                  {toArabicDigits(cleanLine)}
                 </span>
               );
             }
@@ -281,9 +281,9 @@ export function ProductCard({
                   fontFamily: cleanLine.includes('L.E') ? 'var(--mag-font-en)' : 'var(--mag-font-ar)',
                 }}
               >
-                <span className={isP1Price ? 'font-bold' : 'font-normal'}>{p1}</span>
+                <span className={isP1Price ? 'font-bold' : 'font-normal'}>{toArabicDigits(p1)}</span>
                 <span className="font-normal text-stone-400 mx-1">|</span>
-                <span className={isP1Price ? 'font-normal' : 'font-bold'}>{p2}</span>
+                <span className={isP1Price ? 'font-normal' : 'font-bold'}>{toArabicDigits(p2)}</span>
               </span>
             );
           })}

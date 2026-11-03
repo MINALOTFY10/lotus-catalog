@@ -31,7 +31,7 @@
         "description_override": "نحلة عسل برسيم فاخر، غني بالفيتامينات والإنزيمات الطبيعية التي تدعم المناعة وتعزز الطاقة بشكل طبيعي.",
         "price_override": 385,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p1_s1.webp",
-        "price_text": "٦٥٠ جرام | 385 ج.مصري\n1.5 كيلو | 620 ج.مصري"
+        "price_text": "٦٥٠ جرام | ٣٨٥ ج.مصري\n١.٥ كيلو | ٦٢٠ ج.مصري"
       },
       {
         "slot": 2,
@@ -57,7 +57,7 @@
         "description_override": "عسل نحلة بالشمع طبيعي فاخر، يحتوي على قرص عسل شمعي ذهبي غني بالعسل.",
         "price_override": 520,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p1_s2.webp",
-        "price_text": "520 ج.مصري"
+        "price_text": "٥٢٠ ج.مصري"
       },
       {
         "slot": 3,
@@ -83,7 +83,7 @@
         "description_override": "عسل نحلة بالمكسرات - مزيج فاخر من عسل البرسيم الطبيعي النقي والمكسرات المقرمشة، غني بالبروتينات والفيتامينات، ويمنح الجسم الطاقة والحيوية.",
         "price_override": 715,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p1_s3.webp",
-        "price_text": "715 ج.مصري"
+        "price_text": "٧١٥ ج.مصري"
       },
       {
         "slot": 4,
@@ -145,7 +145,7 @@
         "description_override": "زيت زيتون بكر ممتاز من أجود الأراضي المصرية، يُستخلص بعناية من ثمار الزيتون المختارة بالعصر الأول على البارد، للحفاظ على خصائص الزيت الطبيعية ونكهته الأصيلة. نسبة الحموضة أقل من 0.8%",
         "price_override": 400,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p2_s1.webp",
-        "price_text": "٥٠٠ مل | 400 ج.مصري\n٧٥٠ مل | 575 ج.مصري\n1 لتر | 750 ج.مصري"
+        "price_text": "٥٠٠ مل | ٤٠٠ ج.مصري\n٧٥٠ مل | ٥٧٥ ج.مصري\n١ لتر | ٧٥٠ ج.مصري"
       },
       {
         "slot": 2,
@@ -171,7 +171,7 @@
         "description_override": "تمور نخلة – تمور رطب سكري طبيعية من أجود الأراضي المصرية، تتميز بجودتها العالية وقوامها الطري ومذاقها الغني بحلاوة طبيعية مميزة، لتقدم تجربة تجمع بين أصالة المنتج المصري وجودته.",
         "price_override": 280,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p2_s2.webp",
-        "price_text": "٥٠٠ جرام | 280 ج.مصري\n1 كيلو | 400 ج.مصري"
+        "price_text": "٥٠٠ جرام | ٢٨٠ ج.مصري\n١ كيلو | ٤٠٠ ج.مصري"
       }
     ]
   },
@@ -2263,7 +2263,7 @@
         "description_override": "حقيبة يد مستطيلة مطرزة بالكامل بالخرز، مزينة ببنقشة زهور",
         "price_override": 1850,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p11_s6.webp",
-        "price_text": "1850 ج.مصري"
+        "price_text": "١٨٥٠ ج.مصري"
       },
       {
         "slot": 7,
@@ -2647,7 +2647,7 @@
         "description_override": "",
         "price_override": 1690,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p13_s7.webp",
-        "price_text": "1690 ج.مصري"
+        "price_text": "١٦٩٠ ج.مصري"
       }
     ]
   },

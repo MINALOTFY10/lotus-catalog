@@ -4,7 +4,7 @@ import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { PublicProduct } from '../types';
-import { formatMagazinePrice } from '@/lib/format/price';
+import { formatMagazinePrice, toArabicDigits } from '@/lib/format/price';
 import { ProductPriceDisplay } from './ProductPriceDisplay';
 import { normalizeArabic } from '@/lib/format/arabic';
 
@@ -191,7 +191,7 @@ export function ProductsCatalogView({
                   )}
                   {product.magazinePageNumber && (
                     <span className="absolute bottom-2 left-2 bg-[#443000]/85 text-[#B68763] text-[9px] font-bold px-1.5 py-0.5 rounded">
-                      صفحة {product.magazinePageNumber}
+                      صفحة {toArabicDigits(product.magazinePageNumber)}
                     </span>
                   )}
                 </Link>

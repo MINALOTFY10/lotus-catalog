@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { ProductData } from '../types';
+import { formatMagazinePrice, toArabicDigits } from '@/lib/format/price';
 
 interface ProductDetailModalProps {
   product: ProductData | null;
@@ -123,11 +124,21 @@ export function ProductDetailModal({
           </p>
 
           {/* Price Section */}
-          <div className="pt-4 border-t border-stone-100 flex items-baseline justify-between">
-            <span className="text-sm font-bold text-[#B68763]">السعر الأصلي</span>
-            <span className="text-2xl sm:text-3xl font-black text-[#443000] tracking-tight">
-              {price ? `${price} ج.مصري` : 'يحدد حسب الاختيار'}
+          <div className="pt-4 border-t border-stone-100 flex flex-col gap-1.5 text-right">
+            <span className="text-sm font-bold text-[#B68763]">
+              {(product as any).price_text?.includes('جرام') || (product as any).price_text?.includes('كيلو') || (product as any).price_text?.includes('مل') || (product as any).price_text?.includes('لتر')
+                ? 'الحجم والسعر'
+                : (product as any).price_text?.includes('سم') || (product as any).price_text?.includes('*')
+                ? 'المقاس والسعر'
+                : 'السعر'}
             </span>
+            {formatMagazinePrice(price, (product as any).price_text)
+              .split('\n')
+              .map((line, idx) => (
+                <div key={idx} className="text-xl sm:text-2xl font-black text-[#443000] tracking-tight">
+                  {toArabicDigits(line)}
+                </div>
+              ))}
           </div>
         </div>
 

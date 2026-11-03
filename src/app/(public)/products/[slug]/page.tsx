@@ -9,7 +9,7 @@ import {
   getAllPublicProducts,
   generateProductJsonLd,
 } from '@/features/products/services/publicProducts';
-import { formatMagazinePrice } from '@/lib/format/price';
+import { formatMagazinePrice, toArabicDigits } from '@/lib/format/price';
 import { ProductPriceDisplay } from '@/features/products/components/ProductPriceDisplay';
 import { ProductBackButton } from '@/features/products/components/ProductBackButton';
 
@@ -49,7 +49,7 @@ function renderHeroPrice(rawPrice: number | null | undefined, priceText?: string
   const formatted = formatMagazinePrice(rawPrice, priceText);
   const lines = formatted
     .split('\n')
-    .map((l) => l.trim())
+    .map((l) => toArabicDigits(l.trim()))
     .filter(Boolean);
 
   if (lines.length === 1) {
@@ -59,17 +59,17 @@ function renderHeroPrice(rawPrice: number | null | undefined, priceText?: string
       return (
         <div className="flex items-baseline gap-1.5 flex-wrap">
           <span className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#443000] tracking-tight">
-            {match[1]}
+            {toArabicDigits(match[1])}
           </span>
           <span className="text-sm sm:text-base lg:text-lg font-bold text-[#8A6747]">
-            {match[2]}
+            {toArabicDigits(match[2])}
           </span>
         </div>
       );
     }
     return (
       <div className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#443000] tracking-tight">
-        {single}
+        {toArabicDigits(single)}
       </div>
     );
   }
@@ -92,17 +92,17 @@ function renderHeroPrice(rawPrice: number | null | undefined, priceText?: string
               className="flex items-center justify-between gap-4 px-4 py-2.5 rounded-xl bg-amber-50/70 border border-amber-200/60 shadow-2xs"
             >
               <span className="text-sm sm:text-base font-bold text-stone-700">
-                {label}
+                {toArabicDigits(label)}
               </span>
               <span className="text-base sm:text-xl font-black text-[#443000]">
-                {price}
+                {toArabicDigits(price)}
               </span>
             </div>
           );
         }
         return (
           <div key={idx} className="text-base sm:text-lg font-extrabold text-[#443000]">
-            {line}
+            {toArabicDigits(line)}
           </div>
         );
       })}
@@ -178,7 +178,7 @@ async function ProductDetailPageContent({ params, searchParams }: ProductDetailP
               href={returnUrl}
               className="hover:text-[#443000] transition-colors whitespace-nowrap font-medium"
             >
-              المجلة (صفحة {returnPage})
+              المجلة (صفحة {toArabicDigits(returnPage)})
             </Link>
             {activeProduct.category && (
               <>
@@ -268,7 +268,7 @@ async function ProductDetailPageContent({ params, searchParams }: ProductDetailP
                     d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
                   />
                 </svg>
-                <span>الرجوع للمجلة (صفحة {returnPage})</span>
+                <span>الرجوع للمجلة (صفحة {toArabicDigits(returnPage)})</span>
               </Link>
             </div>
           </div>

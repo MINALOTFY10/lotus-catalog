@@ -208,8 +208,8 @@ export function SlotPickerModal({
                 {selectedProduct && (
                   <span className="text-xs font-mono font-bold text-stone-500">
                     {currentSlotData?.price_text || selectedProduct.price_text
-                      ? (currentSlotData?.price_text || selectedProduct.price_text || '').replace(/\n/g, ' • ')
-                      : `${priceOverride || selectedProduct.sale_price} L.E`}{' '}
+                      ? toArabicDigits((currentSlotData?.price_text || selectedProduct.price_text || '').replace(/\n/g, ' • '))
+                      : `${toArabicDigits(priceOverride || selectedProduct.sale_price)} ج.مصري`}{' '}
                     (كود: #{codeOverride || selectedProduct.cashier_code || 'غير محدد'})
                   </span>
                 )}
@@ -364,7 +364,7 @@ export function SlotPickerModal({
                       </div>
                     </div>
                     <div className="text-left font-mono font-extrabold text-xs text-[#443000]">
-                      {p.sale_price} L.E
+                      {toArabicDigits(p.sale_price)} ج.مصري
                     </div>
                   </div>
                 );

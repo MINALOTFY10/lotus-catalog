@@ -1,5 +1,5 @@
 import React from 'react';
-import { formatMagazinePrice } from '@/lib/format/price';
+import { formatMagazinePrice, toArabicDigits } from '@/lib/format/price';
 
 interface ProductPriceDisplayProps {
   salePrice?: number | null;
@@ -22,7 +22,7 @@ export function ProductPriceDisplay({
 }: ProductPriceDisplayProps) {
   // If priceText is provided, clean section headers
   if (priceText && typeof priceText === 'string' && priceText.trim()) {
-    let clean = priceText.trim();
+    let clean = toArabicDigits(priceText.trim());
     clean = clean
       .replace(/^(السعر|المقاس والسعر|الحجم والسعر|الوزن والسعر)\s*\n?/, '')
       .trim();
@@ -58,14 +58,14 @@ export function ProductPriceDisplay({
               }
               return (
                 <div key={idx} className="flex items-center justify-between text-xs sm:text-sm">
-                  <span className="text-stone-500 font-normal">{size}</span>
-                  <span className="font-extrabold text-[#443000]">{price}</span>
+                  <span className="text-stone-500 font-normal">{toArabicDigits(size)}</span>
+                  <span className="font-extrabold text-[#443000]">{toArabicDigits(price)}</span>
                 </div>
               );
             }
             return (
               <div key={idx} className="font-extrabold text-xs sm:text-sm text-[#443000]">
-                {line}
+                {toArabicDigits(line)}
               </div>
             );
           })}
@@ -90,8 +90,8 @@ export function ProductPriceDisplay({
           <div className={`mt-2.5 pt-2 border-t border-stone-100 flex flex-col gap-1 text-right ${className}`}>
             <span className="text-[10px] font-bold text-[#B68763] block">السعر</span>
             <div className="flex items-center justify-between text-xs sm:text-sm">
-              <span className="text-stone-500 font-normal">{size}</span>
-              <span className="font-extrabold text-[#443000]">{price}</span>
+              <span className="text-stone-500 font-normal">{toArabicDigits(size)}</span>
+              <span className="font-extrabold text-[#443000]">{toArabicDigits(price)}</span>
             </div>
           </div>
         );
@@ -103,7 +103,7 @@ export function ProductPriceDisplay({
           <div className={`mt-2.5 pt-2 border-t border-stone-100 flex flex-col gap-0.5 text-right ${className}`}>
             <span className="text-[10px] font-bold text-[#B68763] block">السعر</span>
             <span className="font-extrabold text-xs sm:text-sm text-[#443000] leading-snug">
-              {line}
+              {toArabicDigits(line)}
             </span>
           </div>
         );
@@ -114,7 +114,7 @@ export function ProductPriceDisplay({
         <div className={`mt-2.5 pt-2 border-t border-stone-100 flex items-center justify-between ${className}`}>
           <span className="text-[10px] font-bold text-[#B68763]">السعر</span>
           <span className="font-extrabold text-xs sm:text-sm text-[#443000]">
-            {line}
+            {toArabicDigits(line)}
           </span>
         </div>
       );
@@ -127,7 +127,7 @@ export function ProductPriceDisplay({
     <div className={`mt-2.5 pt-2 border-t border-stone-100 flex items-center justify-between ${className}`}>
       <span className="text-[10px] font-bold text-[#B68763]">السعر</span>
       <span className="font-extrabold text-xs sm:text-sm text-[#443000]">
-        {fallback}
+        {toArabicDigits(fallback)}
       </span>
     </div>
   );

@@ -20,7 +20,7 @@ export function formatMagazinePrice(
       .replace(/^(السعر|المقاس والسعر|الحجم والسعر|الوزن والسعر)\s*\n?/, '')
       .trim();
     if (clean) {
-      return clean;
+      return toArabicDigits(clean);
     }
   }
 

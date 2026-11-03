@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { IssueSnapshot } from '../types';
 import { extractProductsFromIssue } from '@/features/products/utils/extractProducts';
 import { normalizeArabic } from '@/lib/format/arabic';
-import { formatMagazinePrice } from '@/lib/format/price';
+import { formatMagazinePrice, toArabicDigits } from '@/lib/format/price';
 import { PublicProduct } from '@/features/products/types';
 
 interface MagazineSearchModalProps {
@@ -201,11 +201,11 @@ export function MagazineSearchModal({
                     <span className="flex shrink-0 items-center gap-3">
                       <span className="text-left">
                         <span className="block text-xs font-extrabold text-[#443000] sm:text-sm">
-                          {formatMagazinePrice(product.sale_price)}
+                          {formatMagazinePrice(product.sale_price, (product as any).price_text)}
                         </span>
                         {product.magazinePageNumber && (
                           <span className="mt-1 inline-block rounded bg-[#F3EEE8] px-2 py-0.5 text-[10px] font-bold text-[#654B35]">
-                            صفحة {product.magazinePageNumber}
+                            صفحة {toArabicDigits(product.magazinePageNumber)}
                           </span>
                         )}
                       </span>

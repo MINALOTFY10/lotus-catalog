@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { AdminProductRecord } from './actions';
 import { ProductEditModal } from './ProductEditModal';
 import { normalizeArabic } from '@/lib/format/arabic';
+import { toArabicDigits } from '@/lib/format/price';
 
 export type SortOption =
   | 'default'
@@ -318,10 +319,10 @@ export function AdminProductsTable({
                     </span>
                   </td>
                   <td className="py-2.5 px-4 font-extrabold font-mono text-[#443000] text-sm">
-                    {prod.sale_price} L.E
+                    {toArabicDigits(prod.sale_price)} ج.مصري
                   </td>
                   <td className="py-2.5 px-4 font-mono text-stone-400 text-[11px]">
-                    {prod.cost_price ? `${prod.cost_price} ج.م` : '-'}
+                    {prod.cost_price ? `${toArabicDigits(prod.cost_price)} ج.م` : '-'}
                   </td>
                   <td className="py-2.5 px-4">
                     <span className="inline-flex items-center gap-1 text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">
