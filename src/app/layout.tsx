@@ -39,6 +39,10 @@ export const viewport: Viewport = {
 
 const baseUrl = getBaseUrl();
 
+const GOOGLE_SITE_VERIFICATION =
+  process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION ||
+  "5yMaoOmNwR1MIJ7dx2TQMW7AeT_I5eptx-4DWR2EUGo";
+
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
@@ -95,7 +99,7 @@ export const metadata: Metadata = {
     images: ["/brand/lotus_logo.png"],
   },
   verification: {
-    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
+    google: GOOGLE_SITE_VERIFICATION,
   },
 };
 
