@@ -5,8 +5,8 @@ import React from 'react';
  * Positions and sizes come from the Canva "Arabic lotus Pricelist" page
  * (794px wide page). Canva px * 0.7494 = our units (--u, page = 595u).
  */
-const LOGO = { left: 225.5, top: 15.8, width: 98.0, height: 108.1 };
-const SEAL = { left: 364.6, top: 17.6, width: 107.9, height: 106.3 };
+const LOGO = { left: 245, top: 15.8, width: 98.0, height: 108.1 };
+const SEAL = { left: 384, top: 17.6, width: 107.9, height: 106.3 };
 
 const frame = (box: typeof LOGO): React.CSSProperties => ({
   position: 'absolute',

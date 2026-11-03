@@ -176,12 +176,12 @@ export function ProductCard({
         }}
       >
         <div className="min-w-0 flex-1 flex flex-col justify-start overflow-hidden text-right">
-          {/* Title: Canva ~13.33px bold, slightly enlarged to 11.2u (+12%) for enhanced legibility */}
+          {/* Title: Enlarged by 1px (+1u) for optimal readability */}
           <h3
             className="font-bold text-right"
             title={title}
             style={{
-              fontSize: 'calc(11.2 * var(--u, 1px))',
+              fontSize: 'calc(12.2 * var(--u, 1px))',
               lineHeight: 1.35,
               color: 'var(--mag-text)',
               overflowWrap: 'break-word',
@@ -191,16 +191,17 @@ export function ProductCard({
             {formattedTitle}
           </h3>
 
-          {/* Description: Canva ~8.5px regular, slightly enlarged to 7.4u */}
+          {/* Description: Medium weight font-medium (500) for enhanced clarity without matching title boldness */}
           {hasDescription && (
             <p
-              className="font-normal select-text text-right line-clamp-2"
+              className="font-medium select-text text-right line-clamp-2"
               title={description}
               style={{
                 marginTop: 'calc(2.5 * var(--u, 1px))',
                 fontSize: 'calc(7.4 * var(--u, 1px))',
                 lineHeight: 1.35,
-                color: 'rgba(68, 48, 0, 0.8)',
+                color: 'rgba(55, 38, 0, 0.9)',
+                fontWeight: 500,
                 overflowWrap: 'break-word',
                 display: '-webkit-box',
                 WebkitLineClamp: 2,

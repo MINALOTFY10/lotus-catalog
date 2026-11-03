@@ -216,8 +216,8 @@ export function FlipbookClient({
       ref={wrapperRef}
       className={`relative w-full flex flex-col items-center select-none overflow-x-hidden ${
         isFullscreen
-          ? 'h-screen w-screen bg-[#F3F4F7] p-2 flex flex-col justify-between items-center overflow-hidden'
-          : 'pt-7 sm:pt-14 pb-4 sm:pb-12 px-1.5 sm:px-4 justify-start items-center'
+          ? 'h-screen w-screen bg-[#F3F4F7] p-1 flex flex-col justify-between items-center overflow-hidden'
+          : 'pt-2 sm:pt-14 pb-4 sm:pb-12 px-0.5 sm:px-4 justify-start items-center'
       }`}
       style={{ touchAction: 'pan-y pinch-zoom' }}
       onTouchStart={handleTouchStart}
@@ -236,8 +236,8 @@ export function FlipbookClient({
             className="w-full drop-shadow-2xl transition-transform duration-300 flex items-center justify-center mx-auto my-auto"
             style={{
               maxWidth: isFullscreen
-                ? 'min(calc((100vh - 68px) * (595 / 842)), calc(100vw - 16px))'
-                : 'min(calc(100vw - 12px), 500px)',
+                ? 'min(calc((100vh - 68px) * (595 / 842)), calc(100vw - 4px))'
+                : 'min(calc(100vw - 4px), 520px)',
               width: '100%',
             }}
           >

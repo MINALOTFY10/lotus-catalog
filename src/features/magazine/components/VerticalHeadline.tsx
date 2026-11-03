@@ -12,14 +12,14 @@ interface VerticalHeadlineProps {
  * one text box rotated -90deg, line 1 = "قائمة اسعار" (39.96px, light),
  * line 2 = section title (50.62px, medium). Canva px * 0.7494 = our units (--u).
  */
-const SUBTITLE = { size: 30, weight: 300 };
-const TITLE = { size: 38, weight: 500 };
+const SUBTITLE = { size: 27, weight: 300 };
+const TITLE = { size: 34, weight: 500 };
 
 /** Where the text starts from the top of the page. */
 const START_Y = 140;
 /** Baselines (left to right). Outside line first, inside line second. */
-const SUBTITLE_BASELINE_X = 56;
-const TITLE_BASELINE_X = 100;
+const SUBTITLE_BASELINE_X = 42;
+const TITLE_BASELINE_X = 82;
 
 const textStyle = (size: number, weight: number): React.CSSProperties => ({
   fontFamily: 'var(--mag-font-ar)',
@@ -35,7 +35,7 @@ export function VerticalHeadline({
   return (
     <svg
       className="absolute top-0 left-0 w-full h-full pointer-events-none"
-      viewBox="0 0 134 842"
+      viewBox="0 0 110 842"
       style={{ overflow: 'visible' }}
       aria-hidden="true"
     >
