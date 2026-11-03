@@ -217,7 +217,7 @@ export function FlipbookClient({
       className={`relative w-full flex flex-col items-center select-none overflow-x-hidden ${
         isFullscreen
           ? 'h-screen w-screen bg-[#F3F4F7] p-1 flex flex-col justify-between items-center overflow-hidden'
-          : 'pt-4 sm:pt-6 pb-4 sm:pb-12 px-0.5 sm:px-4 justify-start items-center'
+          : 'pt-2 sm:pt-6 pb-4 sm:pb-12 px-0.5 sm:px-4 justify-start items-center'
       }`}
       style={{ touchAction: 'pan-y pinch-zoom' }}
       onTouchStart={handleTouchStart}
