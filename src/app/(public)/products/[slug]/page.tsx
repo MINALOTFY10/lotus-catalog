@@ -320,13 +320,13 @@ async function ProductDetailPageContent({ params, searchParams }: ProductDetailP
         {/* Related Products Section */}
         {relatedProducts.length > 0 && (
           <div className="mt-12 sm:mt-16">
-            <div className="flex items-center justify-between mb-5 sm:mb-6">
-              <h3 className="text-lg sm:text-2xl font-extrabold text-[#443000]">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-4 mb-5 sm:mb-6">
+              <h3 className="text-base sm:text-2xl font-extrabold text-[#443000] leading-snug">
                 منتجات مشابهة في {activeProduct.category}
               </h3>
               <Link
                 href="/products"
-                className="text-xs sm:text-sm font-bold text-[#B68763] hover:text-[#443000] hover:underline transition-colors"
+                className="text-xs sm:text-sm font-bold text-[#B68763] hover:text-[#443000] hover:underline transition-colors shrink-0 self-start sm:self-auto"
               >
                 عرض كل المنتجات ←
               </Link>
