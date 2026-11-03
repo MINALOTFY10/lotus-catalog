@@ -17,9 +17,8 @@ export function PageShell({
 }: PageShellProps) {
   return (
     <div
-      className="magazine-page-container select-none relative w-full h-full overflow-hidden bg-[#FAFAF8]"
+      className="magazine-page-container select-none relative w-full h-full overflow-hidden bg-[#FAFAF8] aspect-[595.5/980] sm:aspect-[595.5/842.25]"
       style={{
-        aspectRatio: '595.5 / 842.25',
         backgroundColor: '#FFFFFF',
       }}
     >
@@ -43,10 +42,9 @@ export function PageShell({
 
         {/* Authentic Canva Golden Wreath Garland at bottom-left */}
         <div
-          className="absolute pointer-events-none select-none z-10"
+          className="absolute pointer-events-none select-none z-10 bottom-[-10px] sm:bottom-auto sm:top-[calc(599*var(--u,1px))]"
           style={{
             left: 'calc(-278 * var(--u, 1px))',
-            top: 'calc(599 * var(--u, 1px))',
             width: 'calc(323.5 * var(--u, 1px))',
             height: 'calc(323.5 * var(--u, 1px))',
           }}
@@ -59,16 +57,9 @@ export function PageShell({
         </div>
       </aside>
 
-      {/* 3. Main Catalog Content Area - expanded width and right margin for bigger cards */}
+      {/* 3. Main Catalog Content Area - expanded height on mobile for taller cards */}
       <main
-        className="absolute z-0"
-        style={{
-          /* Expanded grid box: takes more space to the left and right edges */
-          left: 'calc(116 * var(--u, 1px))',
-          top: 'calc(139.4 * var(--u, 1px))',
-          width: 'calc(455 * var(--u, 1px))',
-          height: 'calc(659.4 * var(--u, 1px))',
-        }}
+        className="absolute z-0 left-[calc(116*var(--u,1px))] top-[calc(139.4*var(--u,1px))] w-[calc(455*var(--u,1px))] h-[calc(790*var(--u,1px))] sm:h-[calc(659.4*var(--u,1px))]"
       >
         {children}
       </main>

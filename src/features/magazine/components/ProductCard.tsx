@@ -191,10 +191,10 @@ export function ProductCard({
             {formattedTitle}
           </h3>
 
-          {/* Description: Medium weight font-medium (500) for enhanced clarity without matching title boldness */}
+          {/* Description: Medium weight font-medium for enhanced clarity */}
           {hasDescription && (
             <p
-              className="font-medium select-text text-right line-clamp-2"
+              className="font-medium select-text text-right line-clamp-3 sm:line-clamp-2"
               title={description}
               style={{
                 marginTop: 'calc(2.5 * var(--u, 1px))',
@@ -203,11 +203,6 @@ export function ProductCard({
                 color: 'rgba(55, 38, 0, 0.9)',
                 fontWeight: 600,
                 overflowWrap: 'break-word',
-                display: '-webkit-box',
-                WebkitLineClamp: 2,
-                WebkitBoxOrient: 'vertical',
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
                 fontFamily: 'var(--mag-font-ar)',
               }}
             >

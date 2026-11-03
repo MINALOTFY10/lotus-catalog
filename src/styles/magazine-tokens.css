@@ -11,7 +11,7 @@
 }
 
 .magazine-page-container {
-  aspect-ratio: 595 / 842;
+  aspect-ratio: 595.5 / 980;
   container-type: inline-size;
   background-color: var(--mag-bg);
   color: var(--mag-ink);
@@ -20,6 +20,12 @@
   position: relative;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+@media (min-width: 640px) {
+  .magazine-page-container {
+    aspect-ratio: 595.5 / 842.25;
+  }
 }
 
 /* Initial Load & Transition Rising Entrance Animations */

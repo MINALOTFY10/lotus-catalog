@@ -217,7 +217,7 @@ export function FlipbookClient({
       className={`relative w-full flex flex-col items-center select-none overflow-x-hidden ${
         isFullscreen
           ? 'h-screen w-screen bg-[#F3F4F7] p-1 flex flex-col justify-between items-center overflow-hidden'
-          : 'pt-5 sm:pt-6 pb-4 sm:pb-12 px-0.5 sm:px-4 justify-start items-center'
+          : 'pt-4 sm:pt-6 pb-4 sm:pb-12 px-0.5 sm:px-4 justify-start items-center'
       }`}
       style={{ touchAction: 'pan-y pinch-zoom' }}
       onTouchStart={handleTouchStart}
@@ -236,7 +236,7 @@ export function FlipbookClient({
             className="w-full drop-shadow-2xl transition-transform duration-300 flex items-center justify-center mx-auto my-auto"
             style={{
               maxWidth: isFullscreen
-                ? 'min(calc((100dvh - 60px) * (595 / 842)), calc(100vw - 4px))'
+                ? 'min(calc((100dvh - 60px) * (595.5 / 980)), calc(100vw - 4px))'
                 : 'min(calc(100vw - 4px), 540px)',
               width: '100%',
             }}
@@ -300,11 +300,11 @@ export function FlipbookClient({
         <button
           onClick={prevPage}
           disabled={isMobile ? currentPage <= 1 : rightPageIndex <= 0}
-          className="px-2 sm:px-3 py-1 sm:py-1.5 bg-stone-100 hover:bg-[#B68763] hover:text-white disabled:opacity-30 rounded-full text-[#443000] font-bold flex items-center gap-1 sm:gap-1.5 transition-all shadow-2xs shrink-0 whitespace-nowrap cursor-pointer"
+          className="px-2.5 sm:px-3 py-1.5 sm:py-1.5 bg-stone-100 hover:bg-[#B68763] hover:text-white disabled:opacity-30 rounded-full text-[#443000] font-bold inline-flex items-center justify-center gap-1.5 transition-all shadow-2xs shrink-0 whitespace-nowrap cursor-pointer"
           title="الصفحة السابقة"
         >
           <svg
-            className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0"
+            className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0 translate-y-[-0.5px]"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -316,12 +316,12 @@ export function FlipbookClient({
               d="M9 5l7 7-7 7"
             />
           </svg>
-          <span className="text-[11px] sm:text-xs">السابق</span>
+          <span className="text-[11px] sm:text-xs leading-none">السابق</span>
         </button>
 
         {/* Page counter */}
         <span
-          className="font-bold text-[#443000] px-1 sm:px-2.5 text-xs sm:text-sm select-none shrink-0 whitespace-nowrap text-center"
+          className="font-bold text-[#443000] px-1 sm:px-2.5 text-xs sm:text-sm select-none shrink-0 whitespace-nowrap text-center leading-none"
           dir="rtl"
         >
           صفحة {isMobile ? currentPage : `${rightPageIndex + 1}${leftPageIndex < totalPages ? ` - ${leftPageIndex + 1}` : ''}`} من {totalPages}
@@ -331,12 +331,12 @@ export function FlipbookClient({
         <button
           onClick={nextPage}
           disabled={isMobile ? currentPage >= totalPages : rightPageIndex + 2 > totalPages}
-          className="px-2 sm:px-3 py-1 sm:py-1.5 bg-stone-100 hover:bg-[#B68763] hover:text-white disabled:opacity-30 rounded-full text-[#443000] font-bold flex items-center gap-1 sm:gap-1.5 transition-all shadow-2xs shrink-0 whitespace-nowrap cursor-pointer"
+          className="px-2.5 sm:px-3 py-1.5 sm:py-1.5 bg-stone-100 hover:bg-[#B68763] hover:text-white disabled:opacity-30 rounded-full text-[#443000] font-bold inline-flex items-center justify-center gap-1.5 transition-all shadow-2xs shrink-0 whitespace-nowrap cursor-pointer"
           title="الصفحة التالية"
         >
-          <span className="text-[11px] sm:text-xs">التالي</span>
+          <span className="text-[11px] sm:text-xs leading-none">التالي</span>
           <svg
-            className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0"
+            className="w-3 h-3 sm:w-3.5 sm:h-3.5 shrink-0 translate-y-[-0.5px]"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
