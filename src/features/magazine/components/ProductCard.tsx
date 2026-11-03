@@ -176,12 +176,12 @@ export function ProductCard({
         }}
       >
         <div className="min-w-0 flex-1 flex flex-col justify-start overflow-hidden text-right">
-          {/* Title: Enlarged by 1px (+1u) for optimal readability */}
+          {/* Title: Enlarged by 1px more (+1u -> 13.2u) for optimal readability */}
           <h3
             className="font-bold text-right"
             title={title}
             style={{
-              fontSize: 'calc(12.2 * var(--u, 1px))',
+              fontSize: 'calc(14.2 * var(--u, 1px))',
               lineHeight: 1.35,
               color: 'var(--mag-text)',
               overflowWrap: 'break-word',
@@ -198,10 +198,10 @@ export function ProductCard({
               title={description}
               style={{
                 marginTop: 'calc(2.5 * var(--u, 1px))',
-                fontSize: 'calc(7.4 * var(--u, 1px))',
+                fontSize: 'calc(8.4 * var(--u, 1px))',
                 lineHeight: 1.35,
                 color: 'rgba(55, 38, 0, 0.9)',
-                fontWeight: 500,
+                fontWeight: 600,
                 overflowWrap: 'break-word',
                 display: '-webkit-box',
                 WebkitLineClamp: 2,
