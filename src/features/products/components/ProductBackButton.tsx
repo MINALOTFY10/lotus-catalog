@@ -24,12 +24,12 @@ export function ProductBackButton({ fallbackUrl, fallbackPage = 1 }: ProductBack
     <button
       type="button"
       onClick={handleBack}
-      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white hover:bg-amber-50 text-[#443000] hover:text-[#B68763] text-xs font-bold transition-all border border-stone-200/90 hover:border-[#B68763]/40 shadow-2xs group cursor-pointer"
+      className="inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white hover:bg-amber-50 text-[#443000] hover:text-[#B68763] text-xs font-bold transition-all border border-stone-200/90 hover:border-[#B68763]/40 shadow-2xs group cursor-pointer select-none"
       title="الرجوع إلى الصفحة السابقة في المجلة"
     >
-      <span>رجوع للمجلة</span>
+      <span className="leading-none pt-[1px]">رجوع</span>
       <svg
-        className="w-3.5 h-3.5 text-stone-500 group-hover:text-[#B68763] transition-transform group-hover:-translate-x-0.5"
+        className="w-3.5 h-3.5 shrink-0 text-stone-500 group-hover:text-[#B68763] transition-transform group-hover:-translate-x-0.5"
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
