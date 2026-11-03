@@ -176,12 +176,11 @@ export function ProductCard({
         }}
       >
         <div className="min-w-0 flex-1 flex flex-col justify-start overflow-hidden text-right">
-          {/* Title: Enlarged by 1px more (+1u -> 13.2u) for optimal readability */}
+          {/* Title: 14.2u on mobile, 13.2u on desktop (-1px for desktop mode) */}
           <h3
-            className="font-bold text-right"
+            className="font-bold text-right text-[calc(14.2*var(--u,1px))] sm:text-[calc(13.2*var(--u,1px))]"
             title={title}
             style={{
-              fontSize: 'calc(14.2 * var(--u, 1px))',
               lineHeight: 1.35,
               color: 'var(--mag-text)',
               overflowWrap: 'break-word',
