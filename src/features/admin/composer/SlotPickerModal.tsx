@@ -207,7 +207,10 @@ export function SlotPickerModal({
                 </h4>
                 {selectedProduct && (
                   <span className="text-xs font-mono font-bold text-stone-500">
-                    {priceOverride || selectedProduct.sale_price} L.E (كود: #{codeOverride || selectedProduct.cashier_code || 'غير محدد'})
+                    {currentSlotData?.price_text || selectedProduct.price_text
+                      ? (currentSlotData?.price_text || selectedProduct.price_text || '').replace(/\n/g, ' • ')
+                      : `${priceOverride || selectedProduct.sale_price} L.E`}{' '}
+                    (كود: #{codeOverride || selectedProduct.cashier_code || 'غير محدد'})
                   </span>
                 )}
               </div>

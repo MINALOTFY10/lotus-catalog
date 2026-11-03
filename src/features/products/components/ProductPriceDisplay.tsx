@@ -32,11 +32,20 @@ export function ProductPriceDisplay({
       .map((l) => l.trim())
       .filter((l) => l && l !== 'ال' && l !== 'الـ' && l !== 'ا');
 
+    let dynamicLabel = 'السعر';
+    if (clean.includes('جرام') || clean.includes('كيلو') || clean.includes('مل') || clean.includes('لتر') || clean.includes('الحجم')) {
+      dynamicLabel = 'الحجم والسعر';
+    } else if (clean.includes('سم') || clean.includes('متر') || clean.includes('*') || clean.includes('المقاس')) {
+      dynamicLabel = 'المقاس والسعر';
+    } else if (clean.includes('الوزن')) {
+      dynamicLabel = 'الوزن والسعر';
+    }
+
     if (lines.length > 1) {
       // Multi-tier pricing (e.g. honey: 650g vs 1.5kg)
       return (
         <div className={`mt-2.5 pt-2 border-t border-stone-100 flex flex-col gap-1 text-right ${className}`}>
-          <span className="text-[10px] font-bold text-[#B68763] block">السعر</span>
+          <span className="text-[10px] font-bold text-[#B68763] block">{dynamicLabel}</span>
           {lines.map((line, idx) => {
             if (line.includes('|')) {
               const parts = line.split('|').map((p) => p.trim());

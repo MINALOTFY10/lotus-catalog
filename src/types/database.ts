@@ -51,6 +51,8 @@ export interface Database {
           sale_price: number;
           cost_price: number | null;
           variants: Json;
+          price_text: string | null;
+          price_tiers: Json;
           in_stock: boolean;
           show_stock_badge: boolean;
           status: ProductStatus;
@@ -71,6 +73,8 @@ export interface Database {
           sale_price: number;
           cost_price?: number | null;
           variants?: Json;
+          price_text?: string | null;
+          price_tiers?: Json;
           in_stock?: boolean;
           show_stock_badge?: boolean;
           status?: ProductStatus;
@@ -91,6 +95,8 @@ export interface Database {
           sale_price?: number;
           cost_price?: number | null;
           variants?: Json;
+          price_text?: string | null;
+          price_tiers?: Json;
           in_stock?: boolean;
           show_stock_badge?: boolean;
           status?: ProductStatus;

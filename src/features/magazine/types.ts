@@ -1,3 +1,8 @@
+export interface ProductPriceTier {
+  label: string;
+  price: number;
+}
+
 export interface ProductData {
   id: string;
   cashier_code?: number | null;
@@ -10,6 +15,8 @@ export interface ProductData {
   category?: string | null;
   primary_image_url?: string | null;
   in_stock?: boolean;
+  price_text?: string | null;
+  price_tiers?: ProductPriceTier[] | null;
 }
 
 export interface PageSlotData {
@@ -20,6 +27,7 @@ export interface PageSlotData {
   price_override?: number | null;
   image_override?: string | null;
   price_text?: string | null;
+  price_tiers?: ProductPriceTier[] | null;
   col_span?: number | null;
   row_span?: number | null;
 }

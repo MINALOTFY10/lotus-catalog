@@ -75,12 +75,37 @@ function renderHeroPrice(rawPrice: number | null | undefined, priceText?: string
   }
 
   return (
-    <div className="flex flex-col gap-1">
-      {lines.map((line, idx) => (
-        <div key={idx} className="text-base sm:text-xl font-extrabold text-[#443000]">
-          {line}
-        </div>
-      ))}
+    <div className="flex flex-col gap-2 w-full max-w-sm sm:max-w-md">
+      {lines.map((line, idx) => {
+        if (line.includes('|')) {
+          const parts = line.split('|').map((p) => p.trim());
+          const hasCurrency = (s: string) => /ج\.مصري|ج\.م|ج|l\.e|egp/i.test(s);
+          let label = parts[0];
+          let price = parts[1];
+          if (hasCurrency(parts[0]) && !hasCurrency(parts[1])) {
+            price = parts[0];
+            label = parts[1];
+          }
+          return (
+            <div
+              key={idx}
+              className="flex items-center justify-between gap-4 px-4 py-2.5 rounded-xl bg-amber-50/70 border border-amber-200/60 shadow-2xs"
+            >
+              <span className="text-sm sm:text-base font-bold text-stone-700">
+                {label}
+              </span>
+              <span className="text-base sm:text-xl font-black text-[#443000]">
+                {price}
+              </span>
+            </div>
+          );
+        }
+        return (
+          <div key={idx} className="text-base sm:text-lg font-extrabold text-[#443000]">
+            {line}
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -214,7 +239,15 @@ async function ProductDetailPageContent({ params, searchParams }: ProductDetailP
             {/* Price & Magazine Action (at the bottom) */}
             <div className="mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-stone-100 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
-                <span className="text-xs sm:text-sm font-bold text-[#8A6747] block mb-1">السعر</span>
+                <span className="text-xs sm:text-sm font-bold text-[#8A6747] block mb-1.5">
+                  {activeProduct.price_text && (activeProduct.price_text.includes('\n') || activeProduct.price_text.includes('|'))
+                    ? activeProduct.price_text.includes('جرام') || activeProduct.price_text.includes('كيلو') || activeProduct.price_text.includes('مل') || activeProduct.price_text.includes('لتر')
+                      ? 'الحجم والسعر المتاح'
+                      : activeProduct.price_text.includes('سم') || activeProduct.price_text.includes('*')
+                      ? 'المقاس والسعر المتاح'
+                      : 'خيارات الأسعار المتاحة'
+                    : 'السعر'}
+                </span>
                 {renderHeroPrice(activeProduct.sale_price, activeProduct.price_text)}
               </div>
 

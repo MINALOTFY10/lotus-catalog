@@ -1,3 +1,6 @@
+import { ProductPriceTier } from '@/features/magazine/types';
+export type { ProductPriceTier };
+
 export interface PublicProduct {
   id: string;
   cashier_code: number | null;
@@ -14,6 +17,7 @@ export interface PublicProduct {
   magazineSlot?: number;
   sectionTitle?: string;
   price_text?: string | null;
+  price_tiers?: ProductPriceTier[] | null;
 }
 
 export interface ProductJsonLd {

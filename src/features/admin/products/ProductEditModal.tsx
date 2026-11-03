@@ -2,7 +2,36 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { AdminProductRecord, updateProductAction } from './actions';
+import { AdminProductRecord, updateProductAction, ProductPriceTier } from './actions';
+import { toArabicDigits } from '@/lib/format/price';
+
+function parseTiersFromText(text?: string | null): ProductPriceTier[] {
+  if (!text || (!text.includes('\n') && !text.includes('|'))) return [];
+  const clean = text.replace(/^(السعر|المقاس والسعر|الحجم والسعر|الوزن والسعر)\s*\n?/, '').trim();
+  const lines = clean.split('\n').map((l) => l.trim()).filter(Boolean);
+  const tiers: ProductPriceTier[] = [];
+
+  for (const line of lines) {
+    if (line.includes('|')) {
+      const parts = line.split('|').map((p) => p.trim());
+      const hasCurrency = (s: string) => /ج\.مصري|ج\.م|ج|l\.e|egp/i.test(s);
+      let label = parts[0];
+      let priceStr = parts[1];
+      if (hasCurrency(parts[0]) && !hasCurrency(parts[1])) {
+        priceStr = parts[0];
+        label = parts[1];
+      }
+      const numMatch = priceStr
+        .replace(/[٠-٩]/g, (d) => '٠١٢٣٤٥٦٧٨٩'.indexOf(d).toString())
+        .match(/\d+(?:\.\d+)?/);
+      const price = numMatch ? parseFloat(numMatch[0]) : 0;
+      if (label && price > 0) {
+        tiers.push({ label, price });
+      }
+    }
+  }
+  return tiers;
+}
 
 interface ProductEditModalProps {
   product: AdminProductRecord | null;
@@ -24,6 +53,7 @@ export function ProductEditModal({
   const [descriptionAr, setDescriptionAr] = useState(product?.description_ar ?? '');
   const [imageUrl, setImageUrl] = useState(product?.primary_image_url ?? '');
   const [stockStatus, setStockStatus] = useState(product?.stock_status ?? 'متاح');
+  const [priceTiers, setPriceTiers] = useState<ProductPriceTier[]>([]);
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -37,9 +67,35 @@ export function ProductEditModal({
     setDescriptionAr(product.description_ar ?? '');
     setImageUrl(product.primary_image_url ?? '');
     setStockStatus(product.stock_status ?? 'متاح');
+
+    if (product.price_tiers && product.price_tiers.length > 0) {
+      setPriceTiers(product.price_tiers);
+    } else {
+      setPriceTiers(parseTiersFromText(product.price_text));
+    }
   }, [product, isOpen]);
 
   if (!isOpen || !product) return null;
+
+  const handleAddTier = () => {
+    setPriceTiers((prev) => [...prev, { label: '', price: 0 }]);
+  };
+
+  const handleRemoveTier = (index: number) => {
+    setPriceTiers((prev) => prev.filter((_, i) => i !== index));
+  };
+
+  const handleTierChange = (index: number, field: 'label' | 'price', value: string) => {
+    setPriceTiers((prev) =>
+      prev.map((t, i) => {
+        if (i !== index) return t;
+        if (field === 'price') {
+          return { ...t, price: parseFloat(value) || 0 };
+        }
+        return { ...t, label: value };
+      })
+    );
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -55,6 +111,15 @@ export function ProductEditModal({
 
     const codeNum = cashierCode.trim() ? parseInt(cashierCode.trim(), 10) : null;
 
+    const validTiers = priceTiers
+      .map((t) => ({ label: t.label.trim(), price: Number(t.price) }))
+      .filter((t) => t.label && t.price > 0);
+
+    const builtPriceText =
+      validTiers.length > 0
+        ? validTiers.map((t) => `${t.label} | ${toArabicDigits(t.price)} ج.مصري`).join('\n')
+        : null;
+
     const payload = {
       name_ar: nameAr.trim(),
       sale_price: priceNum,
@@ -63,6 +128,8 @@ export function ProductEditModal({
       description_ar: descriptionAr.trim(),
       primary_image_url: imageUrl.trim(),
       stock_status: stockStatus,
+      price_tiers: validTiers.length > 0 ? validTiers : null,
+      price_text: builtPriceText,
     };
 
     const res = await updateProductAction(product.id, payload);
@@ -232,6 +299,74 @@ export function ProductEditModal({
                 <option value="نفد من المعرض">نفد من المعرض</option>
               </select>
             </div>
+          </div>
+
+          {/* Multi-tier Price Options */}
+          <div className="p-4 rounded-2xl bg-amber-50/40 border border-amber-200/60">
+            <div className="flex items-center justify-between mb-2">
+              <div>
+                <label className="block text-xs font-bold text-[#443000]">
+                  خيارات وأسعار متعددة للمنتج (مثل الأحجام والمقاسات)
+                </label>
+                <span className="text-[11px] text-stone-500 block">
+                  إذا كان المنتج يتوفر بأحجام أو مقاسات بأسعار مختلفة (مثال: ٦٥٠ جرام أو 1.5 كيلو).
+                </span>
+              </div>
+              <button
+                type="button"
+                onClick={handleAddTier}
+                className="text-xs font-bold text-[#8A6747] hover:text-[#443000] bg-amber-100/70 hover:bg-amber-200/70 px-3 py-1.5 rounded-lg transition-colors cursor-pointer"
+              >
+                + إضافة خيار سعر
+              </button>
+            </div>
+
+            {priceTiers.length > 0 ? (
+              <div className="space-y-2.5 mt-3">
+                {priceTiers.map((tier, idx) => (
+                  <div key={idx} className="flex items-center gap-2 bg-white p-2.5 rounded-xl border border-stone-200">
+                    <div className="flex-1">
+                      <input
+                        type="text"
+                        value={tier.label}
+                        onChange={(e) => handleTierChange(idx, 'label', e.target.value)}
+                        placeholder="البيان / الحجم (مثال: ٦٥٠ جرام أو 70×140 سم)"
+                        className="w-full text-xs font-bold bg-stone-50 border border-stone-200 rounded-lg px-2.5 py-1.5 text-stone-900 focus:outline-hidden focus:border-[#B68763] focus:bg-white"
+                      />
+                    </div>
+                    <div className="w-32">
+                      <div className="relative">
+                        <input
+                          type="number"
+                          step="1"
+                          value={tier.price || ''}
+                          onChange={(e) => handleTierChange(idx, 'price', e.target.value)}
+                          placeholder="السعر"
+                          className="w-full text-xs font-extrabold font-mono bg-stone-50 border border-stone-200 rounded-lg px-2.5 py-1.5 text-[#443000] focus:outline-hidden focus:border-[#B68763] focus:bg-white text-left pl-8"
+                        />
+                        <span className="absolute left-2 top-1.5 text-[10px] text-stone-400 font-bold pointer-events-none">
+                          ج.م
+                        </span>
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => handleRemoveTier(idx)}
+                      className="p-1.5 text-stone-400 hover:text-red-600 rounded-lg hover:bg-red-50 transition-colors cursor-pointer"
+                      title="حذف هذا الخيار"
+                    >
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                      </svg>
+                    </button>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="mt-2 text-center py-2.5 bg-white/50 rounded-xl border border-dashed border-stone-200 text-stone-400 text-xs">
+                المنتج لديه سعر واحد أساسي حالياً. انقر على «+ إضافة خيار سعر» لإضافة أحجام أو مقاسات متعددة.
+              </div>
+            )}
           </div>
 
           {/* Description */}

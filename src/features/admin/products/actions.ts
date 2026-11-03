@@ -7,6 +7,9 @@ import { productUpdateSchema, ProductUpdateInput } from './schemas';
 import { toArabicDigits } from '@/lib/format/price';
 import { syncLiveIssueToSupabase, getLiveIssue, safeWriteJsonFile } from '@/features/magazine/services/publishIssue';
 
+import { ProductPriceTier } from '@/features/magazine/types';
+export type { ProductPriceTier };
+
 export interface AdminProductRecord {
   id: string;
   cashier_code?: number | null;
@@ -20,6 +23,8 @@ export interface AdminProductRecord {
   in_stock: boolean;
   primary_image_url: string;
   description_ar?: string;
+  price_text?: string | null;
+  price_tiers?: ProductPriceTier[] | null;
 }
 
 /**
@@ -52,6 +57,8 @@ export async function getAdminProductsList(): Promise<AdminProductRecord[]> {
             in_stock: p.in_stock !== false,
             primary_image_url: slot.image_override || p.primary_image_url || '/brand/lotus_logo.png',
             description_ar: slot.description_override || p.description_ar || '',
+            price_text: slot.price_text || p.price_text || null,
+            price_tiers: slot.price_tiers || p.price_tiers || null,
           });
         }
       }
@@ -153,7 +160,29 @@ export async function updateProductAction(
             if (updates.name_ar) slot.title_override = updates.name_ar;
             if (updates.sale_price !== undefined) {
               slot.price_override = updates.sale_price;
-              slot.price_text = `${toArabicDigits(updates.sale_price)} ج.مصري`;
+            }
+
+            // Multi-tier prices support
+            if (updates.price_tiers !== undefined) {
+              p.price_tiers = updates.price_tiers;
+              slot.price_tiers = updates.price_tiers;
+            }
+            if (updates.price_text !== undefined && updates.price_text !== null) {
+              p.price_text = updates.price_text;
+              slot.price_text = updates.price_text;
+            } else if (updates.price_tiers && updates.price_tiers.length > 0) {
+              const multiText = updates.price_tiers
+                .map((t) => `${t.label} | ${toArabicDigits(t.price)} ج.مصري`)
+                .join('\n');
+              p.price_text = multiText;
+              slot.price_text = multiText;
+            } else if (updates.sale_price !== undefined) {
+              const existingText = slot.price_text || p.price_text;
+              const hasMultipleTiers = existingText && (existingText.includes('\n') || existingText.includes('|'));
+              if (!hasMultipleTiers) {
+                slot.price_text = `${toArabicDigits(updates.sale_price)} ج.مصري`;
+                p.price_text = `${toArabicDigits(updates.sale_price)} ج.مصري`;
+              }
             }
             if (updates.primary_image_url) slot.image_override = updates.primary_image_url;
             if (updates.description_ar !== undefined) slot.description_override = updates.description_ar;

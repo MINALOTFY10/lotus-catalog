@@ -9,6 +9,16 @@ export const productUpdateSchema = z.object({
   stock_status: z.string().optional(),
   in_stock: z.boolean().optional(),
   cashier_code: z.number().nullable().optional(),
+  price_text: z.string().nullable().optional(),
+  price_tiers: z
+    .array(
+      z.object({
+        label: z.string().trim(),
+        price: z.number().positive('السعر يجب أن يكون أكبر من صفر'),
+      })
+    )
+    .nullable()
+    .optional(),
 });
 
 export type ProductUpdateInput = z.infer<typeof productUpdateSchema>;

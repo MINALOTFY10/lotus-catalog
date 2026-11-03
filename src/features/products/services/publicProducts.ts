@@ -35,7 +35,8 @@ export function extractProductsFromIssue(issue: IssueSnapshot): PublicProduct[] 
           magazinePageNumber: page.pageNumber ?? page.position,
           magazineSlot: slot.slot,
           sectionTitle: page.sectionTitle || page.section_title || undefined,
-          price_text: slot.price_text || null,
+          price_text: slot.price_text || p.price_text || null,
+          price_tiers: slot.price_tiers || p.price_tiers || null,
         });
       }
     }
@@ -72,6 +73,8 @@ export async function getAllPublicProducts(providedIssue?: IssueSnapshot): Promi
             stock_status: item.stock_status,
             in_stock: item.in_stock ?? true,
             primary_image_url: item.primary_image_url || '/brand/lotus_logo.png',
+            price_text: item.price_text || null,
+            price_tiers: item.price_tiers || null,
           });
           seenSlugs.add(item.slug);
         }

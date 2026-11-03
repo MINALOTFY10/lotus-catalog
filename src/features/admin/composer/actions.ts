@@ -43,15 +43,22 @@ export async function assignProductToSlot(
         }
       : product;
 
+    const existingPriceText = existingSlot?.price_text || product?.price_text;
+    const hasMultipleTiers = existingPriceText && (existingPriceText.includes('\n') || existingPriceText.includes('|'));
+    const finalPriceText =
+      hasMultipleTiers
+        ? existingPriceText
+        : finalPrice !== undefined && finalPrice !== null
+        ? `${toArabicDigits(finalPrice)} ج.مصري`
+        : existingSlot?.price_text;
+
     const newSlot: PageSlotData = {
       slot: slotNumber,
       product: updatedProduct,
       title_override: finalName,
       price_override: finalPrice,
-      price_text:
-        finalPrice !== undefined && finalPrice !== null
-          ? `${toArabicDigits(finalPrice)} ج.مصري`
-          : existingSlot?.price_text,
+      price_text: finalPriceText,
+      price_tiers: existingSlot?.price_tiers || product?.price_tiers || null,
       image_override:
         overrides?.image_override !== undefined
           ? overrides.image_override
