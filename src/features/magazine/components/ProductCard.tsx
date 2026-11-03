@@ -198,7 +198,7 @@ export function ProductCard({
               title={description}
               style={{
                 marginTop: 'calc(2.5 * var(--u, 1px))',
-                fontSize: 'calc(8.4 * var(--u, 1px))',
+                fontSize: 'calc(8 * var(--u, 1px))',
                 lineHeight: 1.35,
                 color: 'rgba(55, 38, 0, 0.9)',
                 fontWeight: 600,
