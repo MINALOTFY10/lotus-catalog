@@ -87,9 +87,11 @@ export function ProductPriceDisplay({
           price = parts[0];
           size = parts[1];
         }
+        size = size.replace(/([٠-٩0-9]+)\s*سم\s*\*\s*([٠-٩0-9]+)/, '$1*$2 سم');
+        size = size.replace(/([٠-٩0-9]+)\s*\*\s*([٠-٩0-9]+)\s*سم/, '$1*$2 سم');
         return (
           <div className={`mt-2.5 pt-2 border-t border-stone-100 flex flex-col gap-1 text-right ${className}`}>
-            <span className="text-[10px] font-bold text-[#B68763] block">السعر</span>
+            <span className="text-[10px] font-bold text-[#B68763] block">{dynamicLabel}</span>
             <div className="flex items-center justify-between text-xs sm:text-sm">
               <span className="text-stone-500 font-normal">{toArabicDigits(size)}</span>
               <span className="font-extrabold text-[#443000]">{toArabicDigits(price)}</span>

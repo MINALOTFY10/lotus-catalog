@@ -85,7 +85,7 @@ export function ProductCard({
                 !p.includes('السعر')
             )
             ?.trim() || parts[1]?.trim() || '';
-        priceVal = sizePart ? `${formattedPrice} | ${toArabicDigits(sizePart)}` : formattedPrice;
+        priceVal = sizePart ? `${toArabicDigits(sizePart)} | ${formattedPrice}` : formattedPrice;
       } else {
         priceVal = toArabicDigits(cleanText);
       }
@@ -286,6 +286,13 @@ export function ProductCard({
               isP1Price = p1Digits >= p2Digits;
             }
 
+            let size = isP1Price ? p2 : p1;
+            let price = isP1Price ? p1 : p2;
+
+            // Normalize dimensions format: "70 سم*140" -> "70*140 سم"
+            size = size.replace(/([٠-٩0-9]+)\s*سم\s*\*\s*([٠-٩0-9]+)/, '$1*$2 سم');
+            size = size.replace(/([٠-٩0-9]+)\s*\*\s*([٠-٩0-9]+)\s*سم/, '$1*$2 سم');
+
             return (
               <span
                 key={idx}
@@ -295,9 +302,9 @@ export function ProductCard({
                   fontFamily: cleanLine.includes('L.E') ? 'var(--mag-font-en)' : 'var(--mag-font-ar)',
                 }}
               >
-                <span className={isP1Price ? 'font-bold' : 'font-normal'}>{toArabicDigits(p1)}</span>
+                <span className="font-normal">{toArabicDigits(size)}</span>
                 <span className="font-normal text-stone-400 mx-1">|</span>
-                <span className={isP1Price ? 'font-normal' : 'font-bold'}>{toArabicDigits(p2)}</span>
+                <span className="font-bold">{toArabicDigits(price)}</span>
               </span>
             );
           })}
