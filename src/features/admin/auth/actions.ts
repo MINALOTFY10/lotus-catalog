@@ -2,8 +2,16 @@
 
 import { cookies } from 'next/headers';
 import { redirect } from 'next/navigation';
+import {
+  STAFF_COOKIE_NAME,
+  signSession,
+  getStaffSession,
+  requireStaffSession,
+  StaffSession,
+} from '@/lib/auth/session';
 
-const STAFF_COOKIE_NAME = 'lotus_staff_session';
+export type { StaffSession };
+export { getStaffSession, requireStaffSession };
 
 export async function loginAction(
   prevState: any,
@@ -12,13 +20,29 @@ export async function loginAction(
   const email = (formData.get('email') as string)?.trim().toLowerCase();
   const password = (formData.get('password') as string) || '';
 
-  const validAdminEmail = (process.env.ADMIN_EMAIL || 'admin@lotus.eg').trim().toLowerCase();
-  const validAdminPassword = process.env.ADMIN_PASSWORD || 'lotus2026';
+  const configuredAdminEmail = process.env.ADMIN_EMAIL?.trim().toLowerCase();
+  const configuredAdminPassword = process.env.ADMIN_PASSWORD;
 
-  // Strict authentication: only allow valid admin credentials
+  // Enforce environment configuration in production (fail closed)
+  const isProd = process.env.NODE_ENV === 'production';
+  if (isProd && (!configuredAdminEmail || !configuredAdminPassword)) {
+    console.error('[loginAction] ADMIN_EMAIL or ADMIN_PASSWORD is missing in production environment');
+    return { error: 'تعذر التحقق من بيانات الدخول، يرجى مراجعة إعدادات الخادم' };
+  }
+
+  const validAdminEmail = (configuredAdminEmail || 'admin@lotus.eg').trim().toLowerCase();
+  const validAdminPassword = configuredAdminPassword || 'lotus2026';
+
+  // Strict authentication check
   if (email && password && email === validAdminEmail && password === validAdminPassword) {
+    const token = await signSession({
+      email,
+      role: 'staff',
+      loggedAt: Date.now(),
+    });
+
     const cookieStore = await cookies();
-    cookieStore.set(STAFF_COOKIE_NAME, JSON.stringify({ email, role: 'staff', loggedAt: Date.now() }), {
+    cookieStore.set(STAFF_COOKIE_NAME, token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       sameSite: 'lax',
@@ -36,16 +60,4 @@ export async function logoutAction(): Promise<void> {
   const cookieStore = await cookies();
   cookieStore.delete(STAFF_COOKIE_NAME);
   redirect('/admin/login');
-}
-
-export async function getStaffSession(): Promise<{ email: string; role: string } | null> {
-  const cookieStore = await cookies();
-  const cookie = cookieStore.get(STAFF_COOKIE_NAME);
-  if (!cookie?.value) return null;
-
-  try {
-    return JSON.parse(cookie.value);
-  } catch {
-    return null;
-  }
 }
