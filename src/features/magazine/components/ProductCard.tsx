@@ -43,8 +43,8 @@ export function ProductCard({
   const slug = product?.slug || '#';
   const hasDescription = Boolean(description && description.length > 0);
 
-  // Canva card: image = 151.2px of 283.5px = 53.3% of the card height
-  const finalImageShare = imageShare ?? 53.3;
+  // Default imageShare: 47% gives optimal balance between photo impact and typography
+  const finalImageShare = imageShare ?? 47;
 
   // Split priceText into golden label and value
   let priceLabel = 'السعر';
@@ -53,7 +53,10 @@ export function ProductCard({
   if (price !== undefined && price !== null) {
     const formattedPrice = `${toArabicDigits(price)} ج.مصري`;
     if (priceText) {
-      const cleanText = toArabicDigits(priceText).replace(/^ال+السعر/, 'السعر').trim();
+      const cleanText = toArabicDigits(priceText)
+        .replace(/^[اإأآل]+\s*السعر/, 'السعر')
+        .replace(/^االسعر/, 'السعر')
+        .trim();
 
       if (cleanText.includes('المقاس والسعر') || cleanText.includes('سم') || cleanText.includes('المقاس') || cleanText.includes('صغير') || cleanText.includes('وسط') || cleanText.includes('كبير')) {
         priceLabel = 'المقاس والسعر';
@@ -72,7 +75,9 @@ export function ProductCard({
 
       if (cleanText.includes('\n')) {
         // Multi-line tier prices (e.g. 500ml, 750ml, 1L)
-        priceVal = cleanText.replace(/^(المقاس والسعر|الحجم والسعر|الوزن والسعر|السعر)\n?/, '').trim();
+        priceVal = cleanText
+          .replace(/^(المقاس والسعر|الحجم والسعر|الوزن والسعر|[اإأآل]*\s*السعر)\n?/, '')
+          .trim();
       } else if (cleanText.includes('|')) {
         const parts = cleanText.split('|');
         const sizePart =
@@ -87,13 +92,17 @@ export function ProductCard({
             ?.trim() || parts[1]?.trim() || '';
         priceVal = sizePart ? `${toArabicDigits(sizePart)} | ${formattedPrice}` : formattedPrice;
       } else {
-        priceVal = toArabicDigits(cleanText);
+        const stripped = cleanText.replace(/^[اإأآل]*\s*السعر\s*:?\s*/, '').trim();
+        priceVal = stripped ? toArabicDigits(stripped) : formattedPrice;
       }
     } else {
       priceVal = formattedPrice;
     }
   } else if (priceText) {
-    priceVal = toArabicDigits(priceText.trim());
+    const clean = toArabicDigits(priceText.trim())
+      .replace(/^(المقاس والسعر|الحجم والسعر|الوزن والسعر|[اإأآل]*\s*السعر)\n?/, '')
+      .trim();
+    priceVal = clean;
   } else {
     priceVal = 'حسب الاختيار';
   }
@@ -124,15 +133,15 @@ export function ProductCard({
   } else if (title.includes('سلة تخزين خوص مطرزة')) {
     formattedTitle = (
       <>
-        <span className="block">سلة</span>
-        <span className="block">تخزين خوص مطرزة</span>
+        <span className="block">سلة تخزين</span>
+        <span className="block">خوص مطرزة</span>
       </>
     );
   } else if (title.includes('حقيبة سلة خوص مطرزة بنقوش نباتية')) {
     formattedTitle = (
       <>
-        <span className="block">حقيبة سلة خوص مطرزة</span>
-        <span className="block">بنقوش نباتية ولؤلؤ ابيض</span>
+        <span className="block">حقيبة سلة خوص</span>
+        <span className="block">مطرزة بنقوش نباتية</span>
       </>
     );
   }
@@ -168,39 +177,40 @@ export function ProductCard({
 
       {/* Product Information Area - RTL right-aligned */}
       <div
-        className="flex-1 flex flex-col justify-between min-h-0 text-right"
+        className="flex-1 flex flex-col justify-between min-h-0 text-right mb-1"
         style={{
-          // Canva: 9.45px side inset, ~11.7px below the image, 9.5px above the card bottom
-          padding: 'calc(8.8 * var(--u, 1px)) calc(7.1 * var(--u, 1px)) calc(7.1 * var(--u, 1px))',
+          // Balanced padding: 6.5u top, 7u sides, 5.5u bottom
+          padding: 'calc(6.5 * var(--u, 1px)) calc(7 * var(--u, 1px)) calc(5.5 * var(--u, 1px))',
           direction: 'rtl',
         }}
       >
         <div className="min-w-0 flex-1 flex flex-col justify-start overflow-hidden text-right">
-          {/* Title: 14.2u on mobile, 13.2u on desktop (-1px for desktop mode) */}
+          {/* Title: 13u on mobile, 11.8u on desktop with line-clamp-2 */}
           <h3
-            className="font-bold text-right text-[calc(14.2*var(--u,1px))] sm:text-[calc(13.2*var(--u,1px))]"
+            className="font-bold text-right text-[calc(13*var(--u,1px))] sm:text-[calc(11.8*var(--u,1px))] line-clamp-2 mt-1"
             title={title}
             style={{
-              lineHeight: 1.35,
+              lineHeight: 1.28,
               color: 'var(--mag-text)',
               overflowWrap: 'break-word',
+              textWrap: 'balance',
               fontFamily: 'var(--mag-font-ar)',
             }}
           >
             {formattedTitle}
           </h3>
 
-          {/* Description: Medium weight font-medium for enhanced clarity */}
+          {/* Description: Exactly 2 lines max with clean ellipsis truncation, never sliced */}
           {hasDescription && (
             <p
-              className="font-medium select-text text-right line-clamp-3 sm:line-clamp-2"
+              className="font-medium select-text text-right line-clamp-2"
               title={description}
               style={{
-                marginTop: 'calc(2.5 * var(--u, 1px))',
+                marginTop: 'calc(4.5 * var(--u, 1px))', 
                 fontSize: 'calc(8 * var(--u, 1px))',
-                lineHeight: 1.35,
+                lineHeight: 1.4,
                 color: 'rgba(55, 38, 0, 0.9)',
-                fontWeight: 600,
+                fontWeight: 500,
                 overflowWrap: 'break-word',
                 fontFamily: 'var(--mag-font-ar)',
               }}
@@ -210,24 +220,37 @@ export function ProductCard({
           )}
         </div>
 
-        {/* Price block: Canva ~9.33px, slightly enlarged to 8.4u / 9.1u for extra clarity */}
+        {/* Price block: Canva ~9.33px, crisp and proportional */}
         <div
           className="shrink-0 select-none text-right"
           style={{
-            marginTop: 'calc(2.5 * var(--u, 1px))',
-            fontSize: 'calc(8.4 * var(--u, 1px))',
-            lineHeight: 1.35,
+            marginTop: 'calc(2 * var(--u, 1px))',
+            fontSize: 'calc(7.8 * var(--u, 1px))',
+            lineHeight: 1.2,
             color: 'var(--mag-text)',
             fontFamily: 'var(--mag-font-ar)',
           }}
         >
-          <span className="font-bold block" style={{ color: 'var(--mag-label-gold)' }}>
+          <span className="font-bold block" style={{ color: 'var(--mag-label-gold)', marginBottom: 'calc(0.5 * var(--u, 1px))' }}>
             {priceLabel}
           </span>
           {priceVal.split('\n').map((line, idx) => {
             let cleanLine = toArabicDigits(line.trim());
-            // Discard stray "ال", "الـ", "ا" or empty lines
-            if (!cleanLine || cleanLine === 'ال' || cleanLine === 'الـ' || cleanLine === 'ا') return null;
+            // Discard stray "ال", "الـ", "ا", duplicate "السعر" or "االسعر" or empty lines
+            if (
+              !cleanLine ||
+              cleanLine === 'ال' ||
+              cleanLine === 'الـ' ||
+              cleanLine === 'ا' ||
+              cleanLine === 'السعر' ||
+              cleanLine === 'االسعر' ||
+              cleanLine === 'ااالسعر' ||
+              cleanLine === 'المقاس والسعر' ||
+              cleanLine === 'الحجم والسعر' ||
+              cleanLine === 'الوزن والسعر'
+            ) {
+              return null;
+            }
 
             // Normalize currency order if currency was placed before number (e.g. "ج.مصري ٤٠٥" -> "٤٠٥ ج.مصري")
             cleanLine = cleanLine.replace(/^(ج\.مصري|ج\.م|ج)\s+([٠-٩0-9]+(?:\.[٠-٩0-9]+)?)/, '$2 $1');
@@ -238,7 +261,8 @@ export function ProductCard({
                   key={idx}
                   className="block font-bold"
                   style={{
-                    fontSize: 'calc(9.1 * var(--u, 1px))',
+                    fontSize: 'calc(10.5 * var(--u, 1px))',
+                    lineHeight: 1.22,
                     fontFamily: cleanLine.includes('L.E') ? 'var(--mag-font-en)' : 'var(--mag-font-ar)',
                   }}
                 >
@@ -293,7 +317,8 @@ export function ProductCard({
                 key={idx}
                 className="block"
                 style={{
-                  fontSize: 'calc(9.1 * var(--u, 1px))',
+                  fontSize: 'calc(8.8 * var(--u, 1px))',
+                  lineHeight: 1.22,
                   fontFamily: cleanLine.includes('L.E') ? 'var(--mag-font-en)' : 'var(--mag-font-ar)',
                 }}
               >

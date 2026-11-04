@@ -63,7 +63,7 @@ export function Grid3x3Page({
                   isInteractive={isInteractive}
                   priority={priority}
                   isHighlighted={Boolean(highlightedCode && slotData.product?.cashier_code === highlightedCode)}
-                  imageShare={rowSpan >= 2 ? 62 : colSpan >= 2 ? 56 : undefined}
+                  imageShare={rowSpan >= 2 ? 62 : colSpan >= 2 ? 54 : 46}
                   onSelect={onProductClick}
                 />
               ) : (
