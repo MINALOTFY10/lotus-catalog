@@ -17,7 +17,7 @@ export function PageShell({
 }: PageShellProps) {
   return (
     <div
-      className="magazine-page-container select-none relative w-full h-full overflow-hidden bg-[#FAFAF8] aspect-[595.5/980] sm:aspect-[595.5/842.25]"
+      className="magazine-page-container select-none relative w-full h-full overflow-hidden bg-[#FAFAF8] aspect-[595.5/945]"
       style={{
         backgroundColor: '#FFFFFF',
       }}
@@ -42,7 +42,7 @@ export function PageShell({
 
         {/* Authentic Canva Golden Wreath Garland at bottom-left */}
         <div
-          className="absolute pointer-events-none select-none z-10 bottom-[-10px] sm:bottom-auto sm:top-[calc(599*var(--u,1px))]"
+          className="absolute pointer-events-none select-none z-10 bottom-[-10px]"
           style={{
             left: 'calc(-278 * var(--u, 1px))',
             width: 'calc(323.5 * var(--u, 1px))',
@@ -57,9 +57,9 @@ export function PageShell({
         </div>
       </aside>
 
-      {/* 3. Main Catalog Content Area - expanded height on mobile for taller cards */}
+      {/* 3. Main Catalog Content Area - expanded height for taller cards */}
       <main
-        className="absolute z-0 left-[calc(116*var(--u,1px))] top-[calc(139.4*var(--u,1px))] w-[calc(455*var(--u,1px))] h-[calc(790*var(--u,1px))] sm:h-[calc(659.4*var(--u,1px))]"
+        className="absolute z-0 left-[calc(116*var(--u,1px))] top-[calc(139.4*var(--u,1px))] w-[calc(455*var(--u,1px))] h-[calc(790*var(--u,1px))]"
       >
         {children}
       </main>
@@ -67,7 +67,7 @@ export function PageShell({
       {/* 4. Page Number Footer */}
       {pageNumber !== undefined && (
         <footer
-          className="absolute bottom-[calc(8*var(--u,1px))] left-[calc(48*var(--u,1px))] text-[calc(9*var(--u,1px))] opacity-60 font-bold"
+          className="absolute bottom-[calc(3.5*var(--u,1px))] left-[calc(48*var(--u,1px))] text-[calc(9*var(--u,1px))] opacity-60 font-bold"
           style={{ color: '#443000' }}
         >
           {pageNumber}

@@ -35,7 +35,7 @@ export function VerticalHeadline({
   return (
     <svg
       className="absolute top-0 left-0 w-full h-full pointer-events-none"
-      viewBox="0 0 110 842"
+      viewBox="0 0 110 945"
       style={{ overflow: 'visible' }}
       aria-hidden="true"
     >

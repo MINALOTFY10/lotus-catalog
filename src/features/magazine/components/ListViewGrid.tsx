@@ -37,7 +37,7 @@ export function ListViewGrid({ pages, onSelectPage }: ListViewGridProps) {
               animationDelay: `calc(${Math.min(index, 12)} * 0.04s + 0.08s)`,
             }}
           >
-            <div className="relative w-full aspect-[595.5/842.25] overflow-hidden rounded-xl bg-stone-100 border border-stone-200/60 shadow-inner group-hover:scale-102 transition-transform duration-300">
+            <div className="relative w-full aspect-[595.5/945] overflow-hidden rounded-xl bg-stone-100 border border-stone-200/60 shadow-inner group-hover:scale-102 transition-transform duration-300">
               <div className="w-full h-full pointer-events-none select-none">
                 <MagazinePagePreview page={page} />
               </div>

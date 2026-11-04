@@ -217,7 +217,7 @@ export function FlipbookClient({
       className={`relative w-full flex flex-col items-center select-none overflow-x-hidden ${
         isFullscreen
           ? 'h-screen w-screen bg-[#F3F4F7] p-1 flex flex-col justify-between items-center overflow-hidden'
-          : 'pt-2 sm:pt-6 pb-4 sm:pb-12 px-0.5 sm:px-4 justify-start items-center'
+          : 'pt-2 sm:pt-6 pb-3 sm:pb-5 px-0.5 sm:px-4 justify-start items-center'
       }`}
       style={{ touchAction: 'pan-y pinch-zoom' }}
       onTouchStart={handleTouchStart}
@@ -236,7 +236,7 @@ export function FlipbookClient({
             className="w-full drop-shadow-2xl transition-transform duration-300 flex items-center justify-center mx-auto my-auto"
             style={{
               maxWidth: isFullscreen
-                ? 'min(calc((100dvh - 60px) * (595.5 / 980)), calc(100vw - 4px))'
+                ? 'min(calc((100dvh - 60px) * (595.5 / 945)), calc(100vw - 4px))'
                 : 'min(calc(100vw - 4px), 540px)',
               width: '100%',
             }}
@@ -250,7 +250,7 @@ export function FlipbookClient({
             style={{
               direction: 'ltr',
               maxWidth: isFullscreen
-                ? 'min(98vw, calc((100vh - 68px) * (1190 / 842)))'
+                ? 'min(98vw, calc((100vh - 68px) * (1191 / 945)))'
                 : 'min(94vw, 1260px)',
             }}
           >
@@ -259,7 +259,7 @@ export function FlipbookClient({
               className="w-1/2 relative border-r border-stone-300/60 shadow-[-10px_0_20px_-10px_rgba(0,0,0,0.15)]"
               style={{
                 maxWidth: isFullscreen
-                  ? 'min(49vw, calc((100vh - 68px) * (595 / 842)))'
+                  ? 'min(49vw, calc((100vh - 68px) * (595.5 / 945)))'
                   : '630px',
               }}
             >
@@ -278,7 +278,7 @@ export function FlipbookClient({
               className="w-1/2 relative border-l border-stone-300/60 shadow-[10px_0_20px_-10px_rgba(0,0,0,0.15)]"
               style={{
                 maxWidth: isFullscreen
-                  ? 'min(49vw, calc((100vh - 68px) * (595 / 842)))'
+                  ? 'min(49vw, calc((100vh - 68px) * (595.5 / 945)))'
                   : '630px',
               }}
             >
@@ -293,7 +293,7 @@ export function FlipbookClient({
       {/* Floating Control Bar at Bottom */}
       <div
         className={`z-30 px-2 sm:px-4 py-1.5 sm:py-2 bg-white/95 backdrop-blur shadow-md rounded-full border border-stone-200 flex items-center justify-center gap-1 sm:gap-3 text-xs font-medium transition-all max-w-[calc(100vw-20px)] mx-auto shrink-0 animate-rise-toolbar ${
-          isFullscreen ? 'mt-2 mb-1 shadow-lg' : 'mt-3 sm:mt-6 mb-2 sm:mb-0'
+          isFullscreen ? 'mt-2 mb-1 shadow-lg' : 'mt-2 sm:mt-3 mb-2 sm:mb-0'
         }`}
       >
         {/* Previous page button */}

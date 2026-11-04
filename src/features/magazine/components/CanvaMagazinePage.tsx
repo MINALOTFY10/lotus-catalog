@@ -20,7 +20,7 @@ export function CanvaMagazinePage({
     <div
       className="magazine-page-container w-full h-full relative select-none bg-white overflow-hidden flex items-center justify-center shadow-lg"
       style={{
-        aspectRatio: '595.5 / 842.25',
+        aspectRatio: '595.5 / 945',
       }}
     >
       {/* Exact Canva High-Definition Page Render */}

@@ -177,7 +177,7 @@ export function ProductCard({
 
       {/* Product Information Area - RTL right-aligned */}
       <div
-        className="flex-1 flex flex-col justify-between min-h-0 text-right mb-1"
+        className="flex-1 flex flex-col justify-between min-h-0 text-right"
         style={{
           // Balanced padding: 6.5u top, 7u sides, 5.5u bottom
           padding: 'calc(6.5 * var(--u, 1px)) calc(7 * var(--u, 1px)) calc(5.5 * var(--u, 1px))',
@@ -187,7 +187,7 @@ export function ProductCard({
         <div className="min-w-0 flex-1 flex flex-col justify-start overflow-hidden text-right">
           {/* Title: 13u on mobile, 11.8u on desktop with line-clamp-2 */}
           <h3
-            className="font-bold text-right text-[calc(13*var(--u,1px))] sm:text-[calc(11.8*var(--u,1px))] line-clamp-2 mt-1"
+            className="font-bold text-right text-[calc(13*var(--u,1px))] sm:text-[calc(11.8*var(--u,1px))] line-clamp-2"
             title={title}
             style={{
               lineHeight: 1.28,
@@ -222,7 +222,7 @@ export function ProductCard({
 
         {/* Price block: Canva ~9.33px, crisp and proportional */}
         <div
-          className="shrink-0 select-none text-right"
+          className="shrink-0 select-none text-right mb-2"
           style={{
             marginTop: 'calc(2 * var(--u, 1px))',
             fontSize: 'calc(7.8 * var(--u, 1px))',
@@ -317,7 +317,7 @@ export function ProductCard({
                 key={idx}
                 className="block"
                 style={{
-                  fontSize: 'calc(8.8 * var(--u, 1px))',
+                  fontSize: 'calc(10.5 * var(--u, 1px))',
                   lineHeight: 1.22,
                   fontFamily: cleanLine.includes('L.E') ? 'var(--mag-font-en)' : 'var(--mag-font-ar)',
                 }}
