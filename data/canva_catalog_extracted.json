@@ -5448,7 +5448,7 @@
           "slug": "prod-canva-p27-s1-إسورة-بنقشة-الضفيرة-نحاس-احمر",
           "name_ar": "إسورة بنقشة الضفيرة نحاس احمر",
           "name_en": null,
-          "description_ar": "،إسورةمفتوحة من النحاس بتشطيب معتق مزينة بنقشة مجدولة متداخلة وتفاصيل بارزة",
+          "description_ar": "إسورةمفتوحة من النحاس بتشطيب معتق، مزينة بنقشة مجدولة متداخلة وتفاصيل بارزة.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 475,
@@ -5462,7 +5462,7 @@
           "cashier_code": 433
         },
         "title_override": "إسورة بنقشة الضفيرة نحاس احمر",
-        "description_override": "،إسورةمفتوحة من النحاس بتشطيب معتق مزينة بنقشة مجدولة متداخلة وتفاصيل بارزة",
+        "description_override": "إسورةمفتوحة من النحاس بتشطيب معتق، مزينة بنقشة مجدولة متداخلة وتفاصيل بارزة.",
         "price_override": 475,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p27_s1.webp",
         "price_text": "السعر\n٤٧٥ ج.مصري"
@@ -5474,7 +5474,7 @@
           "slug": "prod-canva-p27-s2-إسورة-بنقشة-الريشة-نحاس-أحمر",
           "name_ar": "إسورة بنقشة الريشة نحاس أحمر",
           "name_en": null,
-          "description_ar": "إسورة مفتوحة من النحاس المصقول، مزينة بنقوش هندسية محفورة وتفاصيل دقيقة على الحواف",
+          "description_ar": "إسورة مفتوحة من النحاس المصقول، مزينة بنقوش هندسية محفورة وتفاصيل دقيقة على الحواف.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 405,
@@ -5488,7 +5488,7 @@
           "cashier_code": 435
         },
         "title_override": "إسورة بنقشة الريشة نحاس أحمر",
-        "description_override": "إسورة مفتوحة من النحاس المصقول، مزينة بنقوش هندسية محفورة وتفاصيل دقيقة على الحواف",
+        "description_override": "إسورة مفتوحة من النحاس المصقول، مزينة بنقوش هندسية محفورة وتفاصيل دقيقة على الحواف.",
         "price_override": 405,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p27_s2.webp",
         "price_text": "السعر\n٤٠٥ ج.مصري"
@@ -5500,7 +5500,7 @@
           "slug": "prod-canva-p27-s3-إسورة-فرعونية-بمفتاح-الحياة-نح",
           "name_ar": "إسورة فرعونية بمفتاح الحياة نحاس أحمر",
           "name_en": null,
-          "description_ar": "إسورة مفتوحة من النحاس، مزينة برمز مفتاح الحياة «عنخ» ونقوش مستوحاة من الطابع الفرعوني",
+          "description_ar": "إسورة مفتوحة من النحاس، مزينة برمز مفتاح الحياة «عنخ» ونقوش مستوحاة من الطابع الفرعوني.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 375,
@@ -5514,7 +5514,7 @@
           "cashier_code": 436
         },
         "title_override": "إسورة فرعونية بمفتاح الحياة نحاس أحمر",
-        "description_override": "إسورة مفتوحة من النحاس، مزينة برمز مفتاح الحياة «عنخ» ونقوش مستوحاة من الطابع الفرعوني",
+        "description_override": "إسورة مفتوحة من النحاس، مزينة برمز مفتاح الحياة «عنخ» ونقوش مستوحاة من الطابع الفرعوني.",
         "price_override": 375,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p27_s3.webp",
         "price_text": "السعر\n٣٧٥ ج.مصري"
@@ -5526,7 +5526,7 @@
           "slug": "prod-canva-p27-s4-إسورة-مجدولة-نحاس-احمر",
           "name_ar": "إسورة مجدولة نحاس احمر",
           "name_en": null,
-          "description_ar": "إسورة من النحاس مزينة بنقوش بارزة مستوحاة من الحبال المجدولة، مع تفاصيل دقيقة على الحواف",
+          "description_ar": "إسورة من النحاس مزينة بنقوش بارزة مستوحاة من الحبال المجدولة، مع تفاصيل دقيقة على الحواف.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 475,
@@ -5540,7 +5540,7 @@
           "cashier_code": 437
         },
         "title_override": "إسورة مجدولة نحاس احمر",
-        "description_override": "إسورة من النحاس مزينة بنقوش بارزة مستوحاة من الحبال المجدولة، مع تفاصيل دقيقة على الحواف",
+        "description_override": "إسورة من النحاس مزينة بنقوش بارزة مستوحاة من الحبال المجدولة، مع تفاصيل دقيقة على الحواف.",
         "price_override": 475,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p27_s4.webp",
         "price_text": "السعر\n٤٧٥ ج.مصري"
@@ -5552,7 +5552,7 @@
           "slug": "prod-canva-p27-s5-إسورة-شجرة-الحياة-نحاس-احمر",
           "name_ar": "إسورة شجرة الحياة نحاس احمر",
           "name_en": null,
-          "description_ar": "إسورة معدنية مزينة بنقوش مستوحاة من ،شجرة الحياة والزخارف الكلتية المتداخلة بتفاصيل نحاسية معتقة",
+          "description_ar": "إسورة معدنية مزينة بنقوش مستوحاة من شجرة الحياة والزخارف الكلتية المتداخلة، بتفاصيل نحاسية معتقة.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 375,
@@ -5566,7 +5566,7 @@
           "cashier_code": 434
         },
         "title_override": "إسورة شجرة الحياة نحاس احمر",
-        "description_override": "إسورة معدنية مزينة بنقوش مستوحاة من ،شجرة الحياة والزخارف الكلتية المتداخلة بتفاصيل نحاسية معتقة",
+        "description_override": "إسورة معدنية مزينة بنقوش مستوحاة من شجرة الحياة والزخارف الكلتية المتداخلة، بتفاصيل نحاسية معتقة.",
         "price_override": 375,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p27_s5.webp",
         "price_text": "السعر\n٣٧٥ ج.مصري"
@@ -5578,7 +5578,7 @@
           "slug": "prod-canva-p27-s6-إسورة-نحاس-فرعونية-ذهبية",
           "name_ar": "إسورة نحاس فرعونية ذهبية",
           "name_en": null,
-          "description_ar": "إسورة معدنية بتصميم مستوحى من الزخارف الفرعونية، مزينة بنقوش بارزة وتفاصيل هندسية",
+          "description_ar": "إسورة معدنية بتصميم مستوحى من الزخارف الفرعونية، مزينة بنقوش بارزة وتفاصيل هندسية.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 880,
@@ -5592,7 +5592,7 @@
           "cashier_code": 440
         },
         "title_override": "إسورة نحاس فرعونية ذهبية",
-        "description_override": "إسورة معدنية بتصميم مستوحى من الزخارف الفرعونية، مزينة بنقوش بارزة وتفاصيل هندسية",
+        "description_override": "إسورة معدنية بتصميم مستوحى من الزخارف الفرعونية، مزينة بنقوش بارزة وتفاصيل هندسية.",
         "price_override": 880,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p27_s6.webp",
         "price_text": "السعر\n٨٨٠ ج.مصري"
@@ -5602,9 +5602,9 @@
         "product": {
           "id": "prod-canva-p27-s7",
           "slug": "prod-canva-p27-s7-إسورة-نحاس-بالعقيق-الأسود-والخ",
-          "name_ar": "إسورة نحاس بالعقيق الأسود والخط العربي  خاتم نحاس بالخط العربي",
+          "name_ar": "إسورة نحاس بالعقيق الأسود والخط العربي",
           "name_en": null,
-          "description_ar": "إسورة من النحاس مزينة بنقوش من الخط العربي ولمسات من حجر العقيق األسود، مع قفل معدني",
+          "description_ar": "إسورة من النحاس مزينة بنقوش من الخط العربي ولمسات من حجر العقيق الأسود، مع قفل معدني.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 675,
@@ -5617,8 +5617,8 @@
           },
           "cashier_code": 444
         },
-        "title_override": "إسورة نحاس بالعقيق الأسود والخط العربي  خاتم نحاس بالخط العربي",
-        "description_override": "إسورة من النحاس مزينة بنقوش من الخط العربي ولمسات من حجر العقيق األسود، مع قفل معدني",
+        "title_override": "إسورة نحاس بالعقيق الأسود والخط العربي",
+        "description_override": "إسورة من النحاس مزينة بنقوش من الخط العربي ولمسات من حجر العقيق الأسود، مع قفل معدني.",
         "price_override": 675,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p27_s7.webp",
         "price_text": "السعر\n٦٧٥ ج.مصري"
@@ -5628,9 +5628,9 @@
         "product": {
           "id": "prod-canva-p27-s8",
           "slug": "prod-canva-p27-s8-منتج-حلي-ومجوهرات-تراثية-8",
-          "name_ar": "منتج حلي ومجوهرات تراثية 8",
+          "name_ar": "خاتم نحاس بالخط العربي",
           "name_en": null,
-          "description_ar": "خاتم من النحاس مصنوعة يدو ًيا، مزينة بنقوش من الخط العربي داخل إطار هندسي تقليدي",
+          "description_ar": "خاتم من النحاس مصنوعة يدويًا، مزينة بنقوش من الخط العربي داخل إطار هندسي تقليدي.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 205,
@@ -5643,8 +5643,8 @@
           },
           "cashier_code": 445
         },
-        "title_override": "منتج حلي ومجوهرات تراثية 8",
-        "description_override": "خاتم من النحاس مصنوعة يدو ًيا، مزينة بنقوش من الخط العربي داخل إطار هندسي تقليدي",
+        "title_override": "خاتم نحاس بالخط العربي",
+        "description_override": "خاتم من النحاس مصنوعة يدويًا، مزينة بنقوش من الخط العربي داخل إطار هندسي تقليدي.",
         "price_override": 205,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p27_s8.webp",
         "price_text": "السعر\n٢٠٥ ج.مصري"
@@ -5656,7 +5656,7 @@
           "slug": "prod-canva-p27-s9-خاتم-الخط-العربي-والفيروز",
           "name_ar": "خاتم الخط العربي والفيروز",
           "name_en": null,
-          "description_ar": "خاتم من النحاس مصنوع يدو ًيا، مزين بكتابات عربية محفورة وحجر فيروز بتصميم شرقي مميز",
+          "description_ar": "خاتم من النحاس مصنوع يدويًا، مزين بكتابات عربية محفورة وحجر فيروز بتصميم شرقي مميز.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 355,
@@ -5670,7 +5670,7 @@
           "cashier_code": 446
         },
         "title_override": "خاتم الخط العربي والفيروز",
-        "description_override": "خاتم من النحاس مصنوع يدو ًيا، مزين بكتابات عربية محفورة وحجر فيروز بتصميم شرقي مميز",
+        "description_override": "خاتم من النحاس مصنوع يدويًا، مزين بكتابات عربية محفورة وحجر فيروز بتصميم شرقي مميز.",
         "price_override": 355,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p27_s9.webp",
         "price_text": "االسعر\n٣٥٥ ج.مصري"
@@ -5690,9 +5690,9 @@
         "product": {
           "id": "prod-canva-p28-s1",
           "slug": "prod-canva-p28-s1-عقد-نحاس-واللؤلؤ-الكلاسيكي",
-          "name_ar": "عقد نحاس واللؤلؤ الكلاسيكي",
+          "name_ar": "عقد نحاس",
           "name_en": null,
-          "description_ar": "عقد من النحاس مصنوع يدو ًيا، مزين بميدالية زخرفية دقيقة واللؤلؤ",
+          "description_ar": "عقد من النحاس مصنوع يدويًا، مزين بدلاية من الصدف الطبيعى موزيك",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 1285,
@@ -5705,8 +5705,8 @@
           },
           "cashier_code": 214
         },
-        "title_override": "عقد نحاس واللؤلؤ الكلاسيكي",
-        "description_override": "عقد من النحاس مصنوع يدو ًيا، مزين بميدالية زخرفية دقيقة واللؤلؤ",
+        "title_override": "عقد نحاس",
+        "description_override": "عقد من النحاس مصنوع يدويًا، مزين بدلاية من الصدف الطبيعى موزيك",
         "price_override": 1285,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p28_s1.webp",
         "price_text": "السعر\n١٢٨٥ ج.مصري"
@@ -5718,7 +5718,7 @@
           "slug": "prod-canva-p28-s2-طقم-نحاس-اللوتس-والفيروز",
           "name_ar": "طقم نحاس اللوتس والفيروز",
           "name_en": null,
-          "description_ar": "،طقم مجوهرات من النحاس مصنوع يدو ًيا مزين بنقوش زهرة اللوتس ولمسات من الفيروز، ويشمل عقدًا وسوارًا وخاتمًا",
+          "description_ar": "طقم مجوهرات من النحاس مصنوع يدويًا، مزين بنقوش زهرة اللوتس ولمسات من الفيروز، ويشمل عقدًا وسوارًا وخ...",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 1150,
@@ -5732,7 +5732,7 @@
           "cashier_code": 442
         },
         "title_override": "طقم نحاس اللوتس والفيروز",
-        "description_override": "،طقم مجوهرات من النحاس مصنوع يدو ًيا مزين بنقوش زهرة اللوتس ولمسات من الفيروز، ويشمل عقدًا وسوارًا وخاتمًا",
+        "description_override": "طقم مجوهرات من النحاس مصنوع يدويًا، مزين بنقوش زهرة اللوتس ولمسات من الفيروز، ويشمل عقدًا وسوارًا وخ...",
         "price_override": 1150,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p28_s2.webp",
         "price_text": "السعر\n١١٥٠ ج.مصري"
@@ -5744,7 +5744,7 @@
           "slug": "prod-canva-p28-s3-طقم-نحاس-العين-الزرقاء",
           "name_ar": "طقم نحاس العين الزرقاء",
           "name_en": null,
-          "description_ar": "،طقم مجوهرات من النحاس مصنوع يدو ًيا مزين بعين زرقاء وأحجار ملونة وتعليقات زخرفية وتفاصيل دقيقة من السلاسل",
+          "description_ar": "طقم مجوهرات من النحاس مصنوع يدويًا، مزين بعين زرقاء وأحجار ملونة وتعليقات زخرفية وتفاصيل دقيقة من...",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 1620,
@@ -5758,7 +5758,7 @@
           "cashier_code": 443
         },
         "title_override": "طقم نحاس العين الزرقاء",
-        "description_override": "،طقم مجوهرات من النحاس مصنوع يدو ًيا مزين بعين زرقاء وأحجار ملونة وتعليقات زخرفية وتفاصيل دقيقة من السلاسل",
+        "description_override": "طقم مجوهرات من النحاس مصنوع يدويًا، مزين بعين زرقاء وأحجار ملونة وتعليقات زخرفية وتفاصيل دقيقة من...",
         "price_override": 1620,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p28_s3.webp",
         "price_text": "السعر\n١٦٢٠ ج.مصري"
@@ -5768,9 +5768,9 @@
         "product": {
           "id": "prod-canva-p28-s4",
           "slug": "prod-canva-p28-s4-طقم-مفتاح-الحياة-الفرعوني-من-ا",
-          "name_ar": "طقم مفتاح الحياة  الفرعوني من الاحجار",
+          "name_ar": "طقم مفتاح الحياة الفرعوني من الاحجار",
           "name_en": null,
-          "description_ar": "طقم مجوهرات مصنوع يدو ًيا من الخرز بدرجات الفيروز واألبيض، ويشمل عق ًدا مزي ًنا برمز مفتاح الحياة وسوارًا وأقراطًا",
+          "description_ar": "طقم مجوهرات مصنوع يدويًا من الخرز بدرجات الفيروز والأبيض، ويشمل عقدًا مزينًا برمز مفتاح الحياة وسوارً...",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 270,
@@ -5783,8 +5783,8 @@
           },
           "cashier_code": 10
         },
-        "title_override": "طقم مفتاح الحياة  الفرعوني من الاحجار",
-        "description_override": "طقم مجوهرات مصنوع يدو ًيا من الخرز بدرجات الفيروز واألبيض، ويشمل عق ًدا مزي ًنا برمز مفتاح الحياة وسوارًا وأقراطًا",
+        "title_override": "طقم مفتاح الحياة الفرعوني من الاحجار",
+        "description_override": "طقم مجوهرات مصنوع يدويًا من الخرز بدرجات الفيروز والأبيض، ويشمل عقدًا مزينًا برمز مفتاح الحياة وسوارً...",
         "price_override": 270,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p28_s4.webp",
         "price_text": "السعر\n٢٧٠ ج.مصري"
@@ -5794,9 +5794,9 @@
         "product": {
           "id": "prod-canva-p28-s5",
           "slug": "prod-canva-p28-s5-طقم-مجوهرات-أخضر-من-الاحجار",
-          "name_ar": "طقم مجوهرات أخضر من الاحجار",
+          "name_ar": "طقم من الفيروز الاخضر",
           "name_en": null,
-          "description_ar": "٢ قطعة، يتميز طقم مجوهرات مكوّن من بأحجار خضراء مع عقد وأقراط متناسق",
+          "description_ar": "طقم مجوهرات من الفيروز الاخضر النادر مكوّن من ٢ قطعة وهى العقد والاقراط، يتميز بأطلالة راقية وناعمه",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 1690,
@@ -5809,8 +5809,8 @@
           },
           "cashier_code": 218
         },
-        "title_override": "طقم مجوهرات أخضر من الاحجار",
-        "description_override": "٢ قطعة، يتميز طقم مجوهرات مكوّن من بأحجار خضراء مع عقد وأقراط متناسق",
+        "title_override": "طقم من الفيروز الاخضر",
+        "description_override": "طقم مجوهرات من الفيروز الاخضر النادر مكوّن من ٢ قطعة وهى العقد والاقراط، يتميز بأطلالة راقية وناعمه",
         "price_override": 1690,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p28_s5.webp",
         "price_text": "السعر\n١٦٩٠ ج.مصري"
@@ -5822,7 +5822,7 @@
           "slug": "prod-canva-p28-s6-طقم-الخرز-علي-التراز-النوبي",
           "name_ar": "طقم الخرز علي التراز النوبي",
           "name_en": null,
-          "description_ar": "طقم مصنوع يدو ًيا من الخرز، يتميز بنقوش ،هندسية نوبية باألزرق واألبيض والذهبي .ويشمل عقدًا عريضًا مع أقراط متناسقة",
+          "description_ar": "طقم مصنوع يدويًا من الخرز، يتميز بنقوش هندسية نوبية بالأزرق والأبيض والذهبي، ويشمل عقدًا عريضًا مع أ...",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 1155,
@@ -5836,7 +5836,7 @@
           "cashier_code": 350
         },
         "title_override": "طقم الخرز علي التراز النوبي",
-        "description_override": "طقم مصنوع يدو ًيا من الخرز، يتميز بنقوش ،هندسية نوبية باألزرق واألبيض والذهبي .ويشمل عقدًا عريضًا مع أقراط متناسقة",
+        "description_override": "طقم مصنوع يدويًا من الخرز، يتميز بنقوش هندسية نوبية بالأزرق والأبيض والذهبي، ويشمل عقدًا عريضًا مع أ...",
         "price_override": 1155,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p28_s6.webp",
         "price_text": "السعر\n١١٥٥ ج.مصري"
@@ -5846,9 +5846,9 @@
         "product": {
           "id": "prod-canva-p28-s7",
           "slug": "prod-canva-p28-s7-عقد-من-الأحجار-الطبيعية",
-          "name_ar": "عقد من الأحجار الطبيعية",
+          "name_ar": "عقد من حجر عيون موسى",
           "name_en": null,
-          "description_ar": "عقد من خرز أحجار طبيعية متعددة األوجه .بدرجات ترابية هادئة، بتصميم بسيط وأنيق",
+          "description_ar": "عقد من أحجار طبيعية متعددة الأوجه بدرجات ترابية هادئة، بتصميم بسيط وأنيق.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 18,
@@ -5861,8 +5861,8 @@
           },
           "cashier_code": null
         },
-        "title_override": "عقد من الأحجار الطبيعية",
-        "description_override": "عقد من خرز أحجار طبيعية متعددة األوجه .بدرجات ترابية هادئة، بتصميم بسيط وأنيق",
+        "title_override": "عقد من حجر عيون موسى",
+        "description_override": "عقد من أحجار طبيعية متعددة الأوجه بدرجات ترابية هادئة، بتصميم بسيط وأنيق.",
         "price_override": 18,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p28_s7.webp",
         "price_text": "السعر\n٨١٠ ج.مصري"
@@ -5874,7 +5874,7 @@
           "slug": "prod-canva-p28-s8-عقد-كارنيليان-وكوارتز-شفاف",
           "name_ar": "عقد كارنيليان وكوارتز شفاف",
           "name_en": null,
-          "description_ar": "عقد من خرز الكارنيليان بدرجاته الدافئة مع .خرز كوارتز شفاف، بتصميم متناسق وأنيق",
+          "description_ar": "عقد من خرز الكارنيليان بدرجاته الدافئة مع كوارتز شفاف، بتصميم متناسق وأنيق.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 675,
@@ -5888,7 +5888,7 @@
           "cashier_code": 240
         },
         "title_override": "عقد كارنيليان وكوارتز شفاف",
-        "description_override": "عقد من خرز الكارنيليان بدرجاته الدافئة مع .خرز كوارتز شفاف، بتصميم متناسق وأنيق",
+        "description_override": "عقد من خرز الكارنيليان بدرجاته الدافئة مع كوارتز شفاف، بتصميم متناسق وأنيق.",
         "price_override": 675,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p28_s8.webp",
         "price_text": "السعر\n٦٧٥ ج.مصري"
@@ -5900,7 +5900,7 @@
           "slug": "prod-canva-p28-s9-عقد-من-صدف-اللؤلؤ",
           "name_ar": "عقد من صدف اللؤلؤ",
           "name_en": null,
-          "description_ar": "عقد مصنوع يدو ًيا، يتميز بقالدة كبيرة من صدف عرق اللؤلؤ الالمع معلقة على حبل أبيض مجدول",
+          "description_ar": "عقد مصنوع يدويًا، يتميز بقلادة كبيرة من صدف عرق اللؤلؤ اللامع معلقة على حبل أبيض مجدول.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 1285,
@@ -5914,7 +5914,7 @@
           "cashier_code": 217
         },
         "title_override": "عقد من صدف اللؤلؤ",
-        "description_override": "عقد مصنوع يدو ًيا، يتميز بقالدة كبيرة من صدف عرق اللؤلؤ الالمع معلقة على حبل أبيض مجدول",
+        "description_override": "عقد مصنوع يدويًا، يتميز بقلادة كبيرة من صدف عرق اللؤلؤ اللامع معلقة على حبل أبيض مجدول.",
         "price_override": 1285,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p28_s9.webp",
         "price_text": "االسعر\n١٢٨٥ ج.مصري"
@@ -5934,9 +5934,9 @@
         "product": {
           "id": "prod-canva-p29-s1",
           "slug": "prod-canva-p29-s1-إسورة-جاسبر-دالماسي-بالخرز",
-          "name_ar": "إسورة جاسبر دالماسي بالخرز",
+          "name_ar": "إسورة من حجر لابيس لازولى",
           "name_en": null,
-          "description_ar": "إسورة من حجر الجاسبر الدالماسي المنقط مع حجر أزرق داكن وقفل فضي",
+          "description_ar": "إسورة من حجر لابيس لازولى الطبيعى بدرجات الابيسةالرائعه بشكل حجر الفاست وقفل فضي.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 340,
@@ -5949,8 +5949,8 @@
           },
           "cashier_code": 254
         },
-        "title_override": "إسورة جاسبر دالماسي بالخرز",
-        "description_override": "إسورة من حجر الجاسبر الدالماسي المنقط مع حجر أزرق داكن وقفل فضي",
+        "title_override": "إسورة من حجر لابيس لازولى",
+        "description_override": "إسورة من حجر لابيس لازولى الطبيعى بدرجات الابيسةالرائعه بشكل حجر الفاست وقفل فضي.",
         "price_override": 340,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p29_s1.webp",
         "price_text": "السعر\n٣٤٠ ج.مصري"
@@ -5960,9 +5960,9 @@
         "product": {
           "id": "prod-canva-p29-s2",
           "slug": "prod-canva-p29-s2-إسورة-جاسبر-دالماسي-بالخرز",
-          "name_ar": "إسورة جاسبر دالماسي بالخرز",
+          "name_ar": "إسورة جاسبر دالماسي",
           "name_en": null,
-          "description_ar": "إسورة رقيقة من حجر الجاسبر الدالماسي المنقط مع حجر أزرق داكن وقفل فضي",
+          "description_ar": "إسورة رقيقة من حجر الجاسبر الدالماسي المنقط مع حجر أزرق داكن وقفل فضي.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 340,
@@ -5975,8 +5975,8 @@
           },
           "cashier_code": 254
         },
-        "title_override": "إسورة جاسبر دالماسي بالخرز",
-        "description_override": "إسورة رقيقة من حجر الجاسبر الدالماسي المنقط مع حجر أزرق داكن وقفل فضي",
+        "title_override": "إسورة جاسبر دالماسي",
+        "description_override": "إسورة رقيقة من حجر الجاسبر الدالماسي المنقط مع حجر أزرق داكن وقفل فضي.",
         "price_override": 340,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p29_s2.webp",
         "price_text": "السعر\n٣٤٠ ج.مصري"
@@ -5988,7 +5988,7 @@
           "slug": "prod-canva-p29-s3-إسورة-ياقوت-أزرق",
           "name_ar": "إسورة ياقوت أزرق",
           "name_en": null,
-          "description_ar": "إسورة من حجر الياقوت األزرق المصقول متعدد الأوجه، مع قفل فضي",
+          "description_ar": "إسورة من حجر الياقوت الأزرق المصقول متعدد الأوجه، مع قفل فضي.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 405,
@@ -6002,7 +6002,7 @@
           "cashier_code": 253
         },
         "title_override": "إسورة ياقوت أزرق",
-        "description_override": "إسورة من حجر الياقوت األزرق المصقول متعدد الأوجه، مع قفل فضي",
+        "description_override": "إسورة من حجر الياقوت الأزرق المصقول متعدد الأوجه، مع قفل فضي.",
         "price_override": 405,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p29_s3.webp",
         "price_text": "السعر\n٤٠٥ ج.مصري"
@@ -6012,9 +6012,9 @@
         "product": {
           "id": "prod-canva-p29-s4",
           "slug": "prod-canva-p29-s4-عقد-احجار-أزرق",
-          "name_ar": "عقد احجار أزرق",
+          "name_ar": "عقد من حجر الهيماتيت الطبيعى",
           "name_en": null,
-          "description_ar": "،عقد من الحجار الزرقاء المع بتأثير معدني مزود بقفل فضي",
+          "description_ar": "عقد من حجر الهيماتيت الطبيعى ويتميز بلونه الاخضر المزرق وشكل الحجر الصغير الانيق الذى يتيح له الت...",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 270,
@@ -6027,8 +6027,8 @@
           },
           "cashier_code": 241
         },
-        "title_override": "عقد احجار أزرق",
-        "description_override": "،عقد من الحجار الزرقاء المع بتأثير معدني مزود بقفل فضي",
+        "title_override": "عقد من حجر الهيماتيت الطبيعى",
+        "description_override": "عقد من حجر الهيماتيت الطبيعى ويتميز بلونه الاخضر المزرق وشكل الحجر الصغير الانيق الذى يتيح له الت...",
         "price_override": 270,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p29_s4.webp",
         "price_text": "السعر\n٢٧٠ ج.مصري"
@@ -6040,7 +6040,7 @@
           "slug": "prod-canva-p29-s5-عقد-احجار-ابيض-بعين-زرقاء",
           "name_ar": "عقد احجار ابيض بعين زرقاء",
           "name_en": null,
-          "description_ar": "عقد من الحجار البيضاء، مزين بخرز بتعليقة عين زرقاء",
+          "description_ar": "عقد من الاحجار البيضاء، مزين بتعليقة عين زرقاء.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 405,
@@ -6054,7 +6054,7 @@
           "cashier_code": 250
         },
         "title_override": "عقد احجار ابيض بعين زرقاء",
-        "description_override": "عقد من الحجار البيضاء، مزين بخرز بتعليقة عين زرقاء",
+        "description_override": "عقد من الاحجار البيضاء، مزين بتعليقة عين زرقاء.",
         "price_override": 405,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p29_s5.webp",
         "price_text": "السعر\n٤٠٥ ج.مصري"
@@ -6064,9 +6064,9 @@
         "product": {
           "id": "prod-canva-p29-s6",
           "slug": "prod-canva-p29-s6-إسورة-هيماتيت-لامعة",
-          "name_ar": "إسورة هيماتيت لامعة",
+          "name_ar": "إسورة هيماتيت طبيعى",
           "name_en": null,
-          "description_ar": "إسورة من خرز الهيماتيت المصقول متعدد الأوجه، بتصميم بسيط وقفل معدني",
+          "description_ar": "إسورة من حجر الهيماتيت الطبيعى يعرف بأنه حجر للشفاء ويستخدم لتقوية الهالة وموزانه العقل والجسد وا...",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 135,
@@ -6079,8 +6079,8 @@
           },
           "cashier_code": 255
         },
-        "title_override": "إسورة هيماتيت لامعة",
-        "description_override": "إسورة من خرز الهيماتيت المصقول متعدد الأوجه، بتصميم بسيط وقفل معدني",
+        "title_override": "إسورة هيماتيت طبيعى",
+        "description_override": "إسورة من حجر الهيماتيت الطبيعى يعرف بأنه حجر للشفاء ويستخدم لتقوية الهالة وموزانه العقل والجسد وا...",
         "price_override": 135,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p29_s6.webp",
         "price_text": "السعر\n١٣٥ ج.مصري"
@@ -6090,9 +6090,9 @@
         "product": {
           "id": "prod-canva-p29-s7",
           "slug": "prod-canva-p29-s7-إسورة-احجار-سوداء-هيماتيت",
-          "name_ar": "إسورة احجار سوداء هيماتيت",
+          "name_ar": "إسورة احجار الهيماتيت الطبيعى",
           "name_en": null,
-          "description_ar": "إسورة من خرز الهيماتيت المصقول متعدد الأوجه، مزودة برباط أسود قابل للتعديل",
+          "description_ar": "إسورة من حجر الهيماتيت الذى يتميز بأزالة التوتر والقلق وازالة الطالقة السلبية من الجسم مصنوعة من...",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 135,
@@ -6105,8 +6105,8 @@
           },
           "cashier_code": 255
         },
-        "title_override": "إسورة احجار سوداء هيماتيت",
-        "description_override": "إسورة من خرز الهيماتيت المصقول متعدد الأوجه، مزودة برباط أسود قابل للتعديل",
+        "title_override": "إسورة احجار الهيماتيت الطبيعى",
+        "description_override": "إسورة من حجر الهيماتيت الذى يتميز بأزالة التوتر والقلق وازالة الطالقة السلبية من الجسم مصنوعة من...",
         "price_override": 135,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p29_s7.webp",
         "price_text": "السعر\n١٣٥ ج.مصري"
@@ -6118,7 +6118,7 @@
           "slug": "prod-canva-p29-s8-عقد-احجار-لبني-أمازونيت",
           "name_ar": "عقد احجار لبني أمازونيت",
           "name_en": null,
-          "description_ar": "عقد من قطع حجر األمازونيت الطبيعي بدرجات فيروزية هادئة، مع قفل فضي",
+          "description_ar": "عقد من قطع حجر الأمازونيت الطبيعي بدرجات فيروزية هادئة، مع قفل فضي.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 610,
@@ -6132,7 +6132,7 @@
           "cashier_code": 243
         },
         "title_override": "عقد احجار لبني أمازونيت",
-        "description_override": "عقد من قطع حجر األمازونيت الطبيعي بدرجات فيروزية هادئة، مع قفل فضي",
+        "description_override": "عقد من قطع حجر الأمازونيت الطبيعي بدرجات فيروزية هادئة، مع قفل فضي.",
         "price_override": 610,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p29_s8.webp",
         "price_text": "السعر\n٦١٠ ج.مصري"
@@ -6142,9 +6142,9 @@
         "product": {
           "id": "prod-canva-p29-s9",
           "slug": "prod-canva-p29-s9-عقد-احجار-بنفسجي-جمشت",
-          "name_ar": "عقد احجار بنفسجي جمشت",
+          "name_ar": "عقد كريستال بنفسجي جمشت",
           "name_en": null,
-          "description_ar": "عقد من خرز حجر الجمشت البنفسجي .المصقول متعدد الأوجه، مع قفل فضي",
+          "description_ar": "عقد من كريستال الجمشت البنفسجي المصقول متعدد الأوجه، مع قفل فضي.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 45,
@@ -6157,8 +6157,8 @@
           },
           "cashier_code": null
         },
-        "title_override": "عقد احجار بنفسجي جمشت",
-        "description_override": "عقد من خرز حجر الجمشت البنفسجي .المصقول متعدد الأوجه، مع قفل فضي",
+        "title_override": "عقد كريستال بنفسجي جمشت",
+        "description_override": "عقد من كريستال الجمشت البنفسجي المصقول متعدد الأوجه، مع قفل فضي.",
         "price_override": 45,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p29_s9.webp",
         "price_text": "االسعر\n٥٤٠ ج.مصري"
@@ -6180,7 +6180,7 @@
           "slug": "prod-canva-p30-s1-إسورة-احجار-بنفسجية",
           "name_ar": "إسورة احجار بنفسجية",
           "name_en": null,
-          "description_ar": "إسورة رقيقة مصنوعة يدو ًيا من خرز دائري مسطح باللون البنفسجي، مع قفل معدني فضي",
+          "description_ar": "إسورة رقيقة مصنوعة يدويًا من خرز دائري مسطح باللون البنفسجي، مع قفل معدني فضي.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 135,
@@ -6194,7 +6194,7 @@
           "cashier_code": 255
         },
         "title_override": "إسورة احجار بنفسجية",
-        "description_override": "إسورة رقيقة مصنوعة يدو ًيا من خرز دائري مسطح باللون البنفسجي، مع قفل معدني فضي",
+        "description_override": "إسورة رقيقة مصنوعة يدويًا من خرز دائري مسطح باللون البنفسجي، مع قفل معدني فضي.",
         "price_override": 135,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p30_s1.webp",
         "price_text": "السعر\n١٣٥ ج.مصري"
@@ -6206,7 +6206,7 @@
           "slug": "prod-canva-p30-s2-عقد-حجر-الشمس-الخوخي",
           "name_ar": "عقد حجر الشمس الخوخي",
           "name_en": null,
-          "description_ar": "تشوكر رقيق من حجر الشمس بدرجات خوخية دافئة، بتصميم بسيط وأنيق",
+          "description_ar": "تشوكر رقيق من حجر الشمس بدرجات خوخية دافئة، بتصميم بسيط وأنيق.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 340,
@@ -6220,7 +6220,7 @@
           "cashier_code": 254
         },
         "title_override": "عقد حجر الشمس الخوخي",
-        "description_override": "تشوكر رقيق من حجر الشمس بدرجات خوخية دافئة، بتصميم بسيط وأنيق",
+        "description_override": "تشوكر رقيق من حجر الشمس بدرجات خوخية دافئة، بتصميم بسيط وأنيق.",
         "price_override": 340,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p30_s2.webp",
         "price_text": "السعر\n٣٤٠ ج.مصري"
@@ -6232,7 +6232,7 @@
           "slug": "prod-canva-p30-s3-عقد-كريستال-أزرق-فاتح",
           "name_ar": "عقد كريستال أزرق فاتح",
           "name_en": null,
-          "description_ar": "عقد رقيق من خرز كريستالي أزرق فاتح متعدد الأوجه، مع قفل فضي",
+          "description_ar": "عقد رقيق من خرز كريستالي أزرق فاتح متعدد الأوجه، مع قفل فضي.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 405,
@@ -6246,7 +6246,7 @@
           "cashier_code": 251
         },
         "title_override": "عقد كريستال أزرق فاتح",
-        "description_override": "عقد رقيق من خرز كريستالي أزرق فاتح متعدد الأوجه، مع قفل فضي",
+        "description_override": "عقد رقيق من خرز كريستالي أزرق فاتح متعدد الأوجه، مع قفل فضي.",
         "price_override": 405,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p30_s3.webp",
         "price_text": "السعر\n٤٠٥ ج.مصري"
@@ -6258,7 +6258,7 @@
           "slug": "prod-canva-p30-s4-عقد-احجار-كارنيليان",
           "name_ar": "عقد احجار كارنيليان",
           "name_en": null,
-          "description_ar": "عقد من خرز الكارنيليان متعدد األوجه بدرجات برتقالية دافئة، بتصميم بسيط وأنيق",
+          "description_ar": "عقد من خرز الكارنيليان متعدد الأوجه بدرجات برتقالية دافئة، بتصميم بسيط وأنيق.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 340,
@@ -6272,7 +6272,7 @@
           "cashier_code": 254
         },
         "title_override": "عقد احجار كارنيليان",
-        "description_override": "عقد من خرز الكارنيليان متعدد األوجه بدرجات برتقالية دافئة، بتصميم بسيط وأنيق",
+        "description_override": "عقد من خرز الكارنيليان متعدد الأوجه بدرجات برتقالية دافئة، بتصميم بسيط وأنيق.",
         "price_override": 340,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p30_s4.webp",
         "price_text": "السعر\n٣٤٠ ج.مصري"
@@ -6282,9 +6282,9 @@
         "product": {
           "id": "prod-canva-p30-s5",
           "slug": "prod-canva-p30-s5-إسورة-احجار-هيماتيت",
-          "name_ar": "إسورة احجار هيماتيت",
+          "name_ar": "إسورة احجار هيماتيت الطبيعى",
           "name_en": null,
-          "description_ar": "إسورة من خرز الهيماتيت الرمادي متعدد الأوجه، بتصميم بسيط وقفل معدني",
+          "description_ar": "إسورة من خرز الهيماتيت الرمادي متعدد الأوجه، بتصميم بسيط وقفل معدني.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 135,
@@ -6297,8 +6297,8 @@
           },
           "cashier_code": 255
         },
-        "title_override": "إسورة احجار هيماتيت",
-        "description_override": "إسورة من خرز الهيماتيت الرمادي متعدد الأوجه، بتصميم بسيط وقفل معدني",
+        "title_override": "إسورة احجار هيماتيت الطبيعى",
+        "description_override": "إسورة من خرز الهيماتيت الرمادي متعدد الأوجه، بتصميم بسيط وقفل معدني.",
         "price_override": 135,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p30_s5.webp",
         "price_text": "السعر\n١٣٥ ج.مصري"
@@ -6308,9 +6308,9 @@
         "product": {
           "id": "prod-canva-p30-s6",
           "slug": "prod-canva-p30-s6-إسورة-احجار-هيماتيت-معدنية",
-          "name_ar": "إسورة احجار  هيماتيت معدنية",
+          "name_ar": "إسورة احجار هيماتيت معدنية",
           "name_en": null,
-          "description_ar": "إسورة رقيقة مصنوعة يدو ًيا من خرز هيماتيت هندسي بدرجات البرونزي والماغنتا الداكن",
+          "description_ar": "إسورة رقيقة مصنوعة يدويًا من خرز هيماتيت هندسي بدرجات البرونزي والماغنتا الداكن.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 135,
@@ -6323,8 +6323,8 @@
           },
           "cashier_code": 255
         },
-        "title_override": "إسورة احجار  هيماتيت معدنية",
-        "description_override": "إسورة رقيقة مصنوعة يدو ًيا من خرز هيماتيت هندسي بدرجات البرونزي والماغنتا الداكن",
+        "title_override": "إسورة احجار هيماتيت معدنية",
+        "description_override": "إسورة رقيقة مصنوعة يدويًا من خرز هيماتيت هندسي بدرجات البرونزي والماغنتا الداكن.",
         "price_override": 135,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p30_s6.webp",
         "price_text": "السعر\n١٣٥ ج.مصري"
@@ -6334,9 +6334,9 @@
         "product": {
           "id": "prod-canva-p30-s7",
           "slug": "prod-canva-p30-s7-عقد-احجار-نجمة-البحر",
-          "name_ar": "عقد احجار  نجمة البحر",
+          "name_ar": "عقد حجر القمر بنجمه فيروز طبيعى",
           "name_en": null,
-          "description_ar": "عقد من الحجر األبيض مزين بتعليقة نجمة .بحر باللون الفيروزي، بتصميم صيفي بسيط",
+          "description_ar": "عقد من حجر القمر حجر البدايات الجديدة والنمو الداخلى والخارجى وتخفيف الضغط على الجسم مع النجمه ال...",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 610,
@@ -6349,8 +6349,8 @@
           },
           "cashier_code": 252
         },
-        "title_override": "عقد احجار  نجمة البحر",
-        "description_override": "عقد من الحجر األبيض مزين بتعليقة نجمة .بحر باللون الفيروزي، بتصميم صيفي بسيط",
+        "title_override": "عقد حجر القمر بنجمه فيروز طبيعى",
+        "description_override": "عقد من حجر القمر حجر البدايات الجديدة والنمو الداخلى والخارجى وتخفيف الضغط على الجسم مع النجمه ال...",
         "price_override": 610,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p30_s7.webp",
         "price_text": "السعر\n٦١٠ ج.مصري"
@@ -6360,9 +6360,9 @@
         "product": {
           "id": "prod-canva-p30-s8",
           "slug": "prod-canva-p30-s8-عقد-احجار-توباز-أزرق",
-          "name_ar": "عقد احجار  توباز أزرق",
+          "name_ar": "عقد احجار توباز أزرق",
           "name_en": null,
-          "description_ar": "عقد من قطع حجر األمازونيت الطبيعي بدرجات فيروزية هادئة، مع قفل فضي",
+          "description_ar": "عقد من قطع حجر الأمازونيت الطبيعي بدرجات فيروزية هادئة، مع قفل فضي.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 16,
@@ -6375,8 +6375,8 @@
           },
           "cashier_code": null
         },
-        "title_override": "عقد احجار  توباز أزرق",
-        "description_override": "عقد من قطع حجر األمازونيت الطبيعي بدرجات فيروزية هادئة، مع قفل فضي",
+        "title_override": "عقد احجار توباز أزرق",
+        "description_override": "عقد من قطع حجر الأمازونيت الطبيعي بدرجات فيروزية هادئة، مع قفل فضي.",
         "price_override": 16,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p30_s8.webp",
         "price_text": "السعر\n٦١٠ ج.مصري"
@@ -6386,9 +6386,9 @@
         "product": {
           "id": "prod-canva-p30-s9",
           "slug": "prod-canva-p30-s9-إسورة-احجار-سبينل-أسود",
-          "name_ar": "إسورة احجار  سبينل أسود",
+          "name_ar": "إسورة سبينل احجار أسود",
           "name_en": null,
-          "description_ar": "إسورة رقيقة مصنوعة يدو ًيا من خرز حجر السبينل األسود الطبيعي متعدد األوجه، مع قفل فضي",
+          "description_ar": "إسورة رقيقة مصنوعة يدويًا من خرز حجر ال الأسود الطبيعي متعدد الأوجه، مع قفل فضي.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 405,
@@ -6401,8 +6401,8 @@
           },
           "cashier_code": 253
         },
-        "title_override": "إسورة احجار  سبينل أسود",
-        "description_override": "إسورة رقيقة مصنوعة يدو ًيا من خرز حجر السبينل األسود الطبيعي متعدد األوجه، مع قفل فضي",
+        "title_override": "إسورة سبينل احجار أسود",
+        "description_override": "إسورة رقيقة مصنوعة يدويًا من خرز حجر ال الأسود الطبيعي متعدد الأوجه، مع قفل فضي.",
         "price_override": 405,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p30_s9.webp",
         "price_text": "االسعر\n٤٠٥ ج.مصري"
@@ -6422,9 +6422,9 @@
         "product": {
           "id": "prod-canva-p31-s1",
           "slug": "prod-canva-p31-s1-إسورة-احجار-سوداء-لامعة",
-          "name_ar": "إسورة احجار  سوداء لامعة",
+          "name_ar": "إسورة احجار سوداء لامعة",
           "name_en": null,
-          "description_ar": "إسورة رقيقة من حجر أسود صغير متعدد الأوجه، بتصميم كلاسيكي بسيط",
+          "description_ar": "إسورة رقيقة من حجر أسود صغير متعدد الأوجه، بتصميم كلاسيكي بسيط.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 405,
@@ -6437,8 +6437,8 @@
           },
           "cashier_code": 253
         },
-        "title_override": "إسورة احجار  سوداء لامعة",
-        "description_override": "إسورة رقيقة من حجر أسود صغير متعدد الأوجه، بتصميم كلاسيكي بسيط",
+        "title_override": "إسورة احجار سوداء لامعة",
+        "description_override": "إسورة رقيقة من حجر أسود صغير متعدد الأوجه، بتصميم كلاسيكي بسيط.",
         "price_override": 405,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p31_s1.webp",
         "price_text": "السعر\n٤٠٥ ج.مصري"
@@ -6448,9 +6448,9 @@
         "product": {
           "id": "prod-canva-p31-s2",
           "slug": "prod-canva-p31-s2-إسورة-احجار-خضراء-لامعة",
-          "name_ar": "إسورة احجار  خضراء لامعة",
+          "name_ar": "إسورة احجار خضراء لامعة",
           "name_en": null,
-          "description_ar": "إسورة رقيقة من خرز أخضر صغير متعدد الأوجه، بتصميم بسيط وأنيق",
+          "description_ar": "إسورة رقيقة من خرز أخضر صغير متعدد الأوجه، بتصميم بسيط وأنيق.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 702,
@@ -6463,8 +6463,8 @@
           },
           "cashier_code": null
         },
-        "title_override": "إسورة احجار  خضراء لامعة",
-        "description_override": "إسورة رقيقة من خرز أخضر صغير متعدد الأوجه، بتصميم بسيط وأنيق",
+        "title_override": "إسورة احجار خضراء لامعة",
+        "description_override": "إسورة رقيقة من خرز أخضر صغير متعدد الأوجه، بتصميم بسيط وأنيق.",
         "price_override": 702,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p31_s2.webp",
         "price_text": "السعر\n٢٠٧ ج.مصري"
@@ -6476,7 +6476,7 @@
           "slug": "prod-canva-p31-s3-عقد-احجار-ذهبي-لامعة",
           "name_ar": "عقد احجار ذهبي لامعة",
           "name_en": null,
-          "description_ar": "عقد بسيط من حجر أصفر المع متعدد .الأوجه، يضيف لمسة دافئة وأنيقة للإطلالة",
+          "description_ar": "عقد بسيط من حجر أصفر لامع متعدد الأوجه، يضيف لمسة دافئة وأنيقة للإطلالة.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 504,
@@ -6490,7 +6490,7 @@
           "cashier_code": null
         },
         "title_override": "عقد احجار ذهبي لامعة",
-        "description_override": "عقد بسيط من حجر أصفر المع متعدد .الأوجه، يضيف لمسة دافئة وأنيقة للإطلالة",
+        "description_override": "عقد بسيط من حجر أصفر لامع متعدد الأوجه، يضيف لمسة دافئة وأنيقة للإطلالة.",
         "price_override": 504,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p31_s3.webp",
         "price_text": "السعر\n٤٠٥ ج.مصري"
@@ -6502,7 +6502,7 @@
           "slug": "prod-canva-p31-s4-عقد-احجار-لؤلؤ",
           "name_ar": "عقد احجار لؤلؤ",
           "name_en": null,
-          "description_ar": "عقد مصنوع يدو ًيا من اللؤلؤ الطبيعي المستزرع، مزين بتعليقة لؤلؤ",
+          "description_ar": "عقد مصنوع يدويًا من اللؤلؤ الطبيعي المستزرع، مزين بتعليقة لؤلؤ.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 3375,
@@ -6516,7 +6516,7 @@
           "cashier_code": 242
         },
         "title_override": "عقد احجار لؤلؤ",
-        "description_override": "عقد مصنوع يدو ًيا من اللؤلؤ الطبيعي المستزرع، مزين بتعليقة لؤلؤ",
+        "description_override": "عقد مصنوع يدويًا من اللؤلؤ الطبيعي المستزرع، مزين بتعليقة لؤلؤ.",
         "price_override": 3375,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p31_s4.webp",
         "price_text": "السعر\n٣٣٧٥ ج.مصري"
@@ -6526,9 +6526,9 @@
         "product": {
           "id": "prod-canva-p31-s5",
           "slug": "prod-canva-p31-s5-عقد-احجار-أخضر-لامع",
-          "name_ar": "عقد احجار  أخضر لامع",
+          "name_ar": "عقد احجار لؤلؤ شربيل",
           "name_en": null,
-          "description_ar": "عقد رقيق من حجر أخضر صغير متعدد الأوجه، يضيف لمسة هادئة وأنيقة",
+          "description_ar": "عقد رقيق من لولى شربيل صغير متعدد الأوجه، يضيف لمسة هادئة وأنيقة.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 270,
@@ -6541,8 +6541,8 @@
           },
           "cashier_code": 241
         },
-        "title_override": "عقد احجار  أخضر لامع",
-        "description_override": "عقد رقيق من حجر أخضر صغير متعدد الأوجه، يضيف لمسة هادئة وأنيقة",
+        "title_override": "عقد احجار لؤلؤ شربيل",
+        "description_override": "عقد رقيق من لولى شربيل صغير متعدد الأوجه، يضيف لمسة هادئة وأنيقة.",
         "price_override": 270,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p31_s5.webp",
         "price_text": "السعر\n٢٧٠ ج.مصري"
@@ -6554,7 +6554,7 @@
           "slug": "prod-canva-p31-s6-عقد-احجار-عقيق-بدرجات-ترابية",
           "name_ar": "عقد احجار عقيق بدرجات ترابية",
           "name_en": null,
-          "description_ar": "عقد من خرز العقيق الطبيعي بدرجات ترابية دافئة، بتصميم بسيط وأنيق",
+          "description_ar": "عقد من خرز العقيق الطبيعي بدرجات ترابية دافئة، بتصميم بسيط وأنيق.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 340,
@@ -6568,7 +6568,7 @@
           "cashier_code": 254
         },
         "title_override": "عقد احجار عقيق بدرجات ترابية",
-        "description_override": "عقد من خرز العقيق الطبيعي بدرجات ترابية دافئة، بتصميم بسيط وأنيق",
+        "description_override": "عقد من خرز العقيق الطبيعي بدرجات ترابية دافئة، بتصميم بسيط وأنيق.",
         "price_override": 340,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p31_s6.webp",
         "price_text": "السعر\n٣٤٠ ج.مصري"
@@ -6580,7 +6580,7 @@
           "slug": "prod-canva-p31-s7-إسورة-احجار-فلوريت",
           "name_ar": "إسورة احجار فلوريت",
           "name_en": null,
-          "description_ar": "إسورة مصنوعة يدو ًيا من أحجار الفلوريت متعددة األلوان بدرجات البنفسجي واألخضر والشفاف، مع قفل فضي",
+          "description_ar": "إسورة مصنوعة يدويًا من أحجار الفلوريت متعددة الألوان بدرجات البنفسجي والأخضر والشفاف، مع قفل فضي.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 340,
@@ -6594,7 +6594,7 @@
           "cashier_code": 254
         },
         "title_override": "إسورة احجار فلوريت",
-        "description_override": "إسورة مصنوعة يدو ًيا من أحجار الفلوريت متعددة األلوان بدرجات البنفسجي واألخضر والشفاف، مع قفل فضي",
+        "description_override": "إسورة مصنوعة يدويًا من أحجار الفلوريت متعددة الألوان بدرجات البنفسجي والأخضر والشفاف، مع قفل فضي.",
         "price_override": 340,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p31_s7.webp",
         "price_text": "السعر\n٣٤٠ ج.مصري"
@@ -6606,7 +6606,7 @@
           "slug": "prod-canva-p31-s8-عقد-احجار-كارنيليان",
           "name_ar": "عقد احجار كارنيليان",
           "name_en": null,
-          "description_ar": "عقد مصنوع يدو ًيا من خرز الكارنيليان البرتقالي متعدد األوجه، بتصميم بسيط وأنيق",
+          "description_ar": "عقد مصنوع يدويًا من خرز الكارنيليان البرتقالي متعدد الأوجه، بتصميم بسيط وأنيق.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 504,
@@ -6620,7 +6620,7 @@
           "cashier_code": null
         },
         "title_override": "عقد احجار كارنيليان",
-        "description_override": "عقد مصنوع يدو ًيا من خرز الكارنيليان البرتقالي متعدد األوجه، بتصميم بسيط وأنيق",
+        "description_override": "عقد مصنوع يدويًا من خرز الكارنيليان البرتقالي متعدد الأوجه، بتصميم بسيط وأنيق.",
         "price_override": 504,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p31_s8.webp",
         "price_text": "السعر\n٤٠٥ ج.مصري"
@@ -6630,9 +6630,9 @@
         "product": {
           "id": "prod-canva-p31-s9",
           "slug": "prod-canva-p31-s9-عقد-احجار-هيماتيت",
-          "name_ar": "عقد احجار  هيماتيت",
+          "name_ar": "عقد احجار هيماتيت",
           "name_en": null,
-          "description_ar": "عقد من حجر الهيماتيت المعدني متعدد الأوجه، بتصميم بسيط وقفل فضي",
+          "description_ar": "عقد من حجر الهيماتيت المعدني متعدد الأوجه، بتصميم بسيط وقفل فضي.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 135,
@@ -6645,8 +6645,8 @@
           },
           "cashier_code": 255
         },
-        "title_override": "عقد احجار  هيماتيت",
-        "description_override": "عقد من حجر الهيماتيت المعدني متعدد الأوجه، بتصميم بسيط وقفل فضي",
+        "title_override": "عقد احجار هيماتيت",
+        "description_override": "عقد من حجر الهيماتيت المعدني متعدد الأوجه، بتصميم بسيط وقفل فضي.",
         "price_override": 135,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p31_s9.webp",
         "price_text": "االسعر\n١٣٥ ج.مصري"
@@ -6668,7 +6668,7 @@
           "slug": "prod-canva-p32-s1-إسورة-أحجار-متعددة-الألوان",
           "name_ar": "إسورة أحجار متعددة الألوان",
           "name_en": null,
-          "description_ar": "إسورة مصنوعة يدو ًيا من قطع أحجار طبيعية متعددة األلوان، مع قفل فضي وسلسلة إضافية",
+          "description_ar": "إسورة مصنوعة يدويًا من قطع أحجار طبيعية متعددة الألوان، مع قفل فضي وسلسلة إضافية.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 340,
@@ -6682,7 +6682,7 @@
           "cashier_code": 254
         },
         "title_override": "إسورة أحجار متعددة الألوان",
-        "description_override": "إسورة مصنوعة يدو ًيا من قطع أحجار طبيعية متعددة األلوان، مع قفل فضي وسلسلة إضافية",
+        "description_override": "إسورة مصنوعة يدويًا من قطع أحجار طبيعية متعددة الألوان، مع قفل فضي وسلسلة إضافية.",
         "price_override": 340,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p32_s1.webp",
         "price_text": "السعر\n٣٤٠ ج.مصري"
@@ -6694,7 +6694,7 @@
           "slug": "prod-canva-p32-s2-إسورة-احجار-عقيق-أسود",
           "name_ar": "إسورة احجار عقيق أسود",
           "name_en": null,
-          "description_ar": "إسورة رقيقة من خرز العقيق األسود الطبيعي، مزودة بقفل فضي",
+          "description_ar": "إسورة رقيقة من خرز العقيق الأسود الطبيعي، مزودة بقفل فضي.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 405,
@@ -6708,7 +6708,7 @@
           "cashier_code": 253
         },
         "title_override": "إسورة احجار عقيق أسود",
-        "description_override": "إسورة رقيقة من خرز العقيق األسود الطبيعي، مزودة بقفل فضي",
+        "description_override": "إسورة رقيقة من خرز العقيق الأسود الطبيعي، مزودة بقفل فضي.",
         "price_override": 405,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p32_s2.webp",
         "price_text": "السعر\n٤٠٥ ج.مصري"
@@ -6718,9 +6718,9 @@
         "product": {
           "id": "prod-canva-p32-s3",
           "slug": "prod-canva-p32-s3-إسورة-احجار-الزورد",
-          "name_ar": "إسورة احجار الزورد",
+          "name_ar": "إسورة احجار لازورد",
           "name_en": null,
-          "description_ar": "إسورة رقيقة مصنوعة يدو ًيا من خرز حجر اللازورد الأزرق الطبيعي",
+          "description_ar": "إسورة رقيقة مصنوعة يدويًا من خرز حجر اللازورد الأزرق الطبيعي.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 405,
@@ -6733,8 +6733,8 @@
           },
           "cashier_code": 253
         },
-        "title_override": "إسورة احجار الزورد",
-        "description_override": "إسورة رقيقة مصنوعة يدو ًيا من خرز حجر اللازورد الأزرق الطبيعي",
+        "title_override": "إسورة احجار لازورد",
+        "description_override": "إسورة رقيقة مصنوعة يدويًا من خرز حجر اللازورد الأزرق الطبيعي.",
         "price_override": 405,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p32_s3.webp",
         "price_text": "السعر\n٤٠٥ ج.مصري"
@@ -6746,7 +6746,7 @@
           "slug": "prod-canva-p32-s4-عقد-احجار-إيوليت",
           "name_ar": "عقد احجار إيوليت",
           "name_en": null,
-          "description_ar": "عقد رقيق من خرز حجر اإليوليت الطبيعي متعدد الأوجه، مزود بقفل فضي",
+          "description_ar": "عقد رقيق من خرز حجر الإيوليت الطبيعي متعدد الأوجه، مزود بقفل فضي.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 45,
@@ -6760,7 +6760,7 @@
           "cashier_code": null
         },
         "title_override": "عقد احجار إيوليت",
-        "description_override": "عقد رقيق من خرز حجر اإليوليت الطبيعي متعدد الأوجه، مزود بقفل فضي",
+        "description_override": "عقد رقيق من خرز حجر الإيوليت الطبيعي متعدد الأوجه، مزود بقفل فضي.",
         "price_override": 45,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p32_s4.webp",
         "price_text": "السعر\n٥٤٠ ج.مصري"
@@ -6772,7 +6772,7 @@
           "slug": "prod-canva-p32-s5-إسورة-احجار-بنفسجية",
           "name_ar": "إسورة احجار بنفسجية",
           "name_en": null,
-          "description_ar": "،إسورة مصنوعة يدو ًيا من خرز بنفسجي مزودة بقفل معدني",
+          "description_ar": "إسورة مصنوعة يدويًا من خرز بنفسجي، مزودة بقفل معدني.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 135,
@@ -6786,7 +6786,7 @@
           "cashier_code": 255
         },
         "title_override": "إسورة احجار بنفسجية",
-        "description_override": "،إسورة مصنوعة يدو ًيا من خرز بنفسجي مزودة بقفل معدني",
+        "description_override": "إسورة مصنوعة يدويًا من خرز بنفسجي، مزودة بقفل معدني.",
         "price_override": 135,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p32_s5.webp",
         "price_text": "السعر\n١٣٥ ج.مصري"
@@ -6798,7 +6798,7 @@
           "slug": "prod-canva-p32-s6-إسورة-احجار-بايرايت",
           "name_ar": "إسورة احجار بايرايت",
           "name_en": null,
-          "description_ar": "إسورة رقيقة من خرز حجر البايرايت الطبيعي متعدد الأوجه، مزودة بقفل ذهبي",
+          "description_ar": "إسورة رقيقة من خرز حجر البايرايت الطبيعي متعدد الأوجه، مزودة بقفل ذهبي.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 135,
@@ -6812,7 +6812,7 @@
           "cashier_code": 255
         },
         "title_override": "إسورة احجار بايرايت",
-        "description_override": "إسورة رقيقة من خرز حجر البايرايت الطبيعي متعدد الأوجه، مزودة بقفل ذهبي",
+        "description_override": "إسورة رقيقة من خرز حجر البايرايت الطبيعي متعدد الأوجه، مزودة بقفل ذهبي.",
         "price_override": 135,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p32_s6.webp",
         "price_text": "السعر\n١٣٥ ج.مصري"
@@ -6824,7 +6824,7 @@
           "slug": "prod-canva-p32-s7-إسورة-عقيق-عروق-التنين",
           "name_ar": "إسورة عقيق عروق التنين",
           "name_en": null,
-          "description_ar": "إسورة من أحجار العقيق الطبيعي بنقشة عروق التنين، بدرجات الزيتوني والعسلي، مع رباط يدوي قابل للتعديل",
+          "description_ar": "إسورة من أحجار العقيق الطبيعي بنقشة عروق التنين، بدرجات الزيتوني والعسلي، مع رباط يدوي قابل للتعديل.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 475,
@@ -6838,7 +6838,7 @@
           "cashier_code": 438
         },
         "title_override": "إسورة عقيق عروق التنين",
-        "description_override": "إسورة من أحجار العقيق الطبيعي بنقشة عروق التنين، بدرجات الزيتوني والعسلي، مع رباط يدوي قابل للتعديل",
+        "description_override": "إسورة من أحجار العقيق الطبيعي بنقشة عروق التنين، بدرجات الزيتوني والعسلي، مع رباط يدوي قابل للتعديل.",
         "price_override": 475,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p32_s7.webp",
         "price_text": "السعر\n٤٧٥ ج.مصري"
@@ -6850,7 +6850,7 @@
           "slug": "prod-canva-p32-s8-إسورة-احجار-جاسبر-دالماسي",
           "name_ar": "إسورة احجار جاسبر دالماسي",
           "name_en": null,
-          "description_ar": "إسورة قابلة للتعديل من خرز الجاسبر الدالماسي وحجر السوداليت األزرق، مزودة برباط منسوج قابل للتعديل",
+          "description_ar": "إسورة قابلة للتعديل من خرز الجاسبر الدالماسي وحجر السوداليت الأزرق، مزودة برباط منسوج قابل للتعديل.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 340,
@@ -6864,7 +6864,7 @@
           "cashier_code": 254
         },
         "title_override": "إسورة احجار جاسبر دالماسي",
-        "description_override": "إسورة قابلة للتعديل من خرز الجاسبر الدالماسي وحجر السوداليت األزرق، مزودة برباط منسوج قابل للتعديل",
+        "description_override": "إسورة قابلة للتعديل من خرز الجاسبر الدالماسي وحجر السوداليت الأزرق، مزودة برباط منسوج قابل للتعديل.",
         "price_override": 340,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p32_s8.webp",
         "price_text": "السعر\n٣٤٠ ج.مصري"
@@ -6874,9 +6874,9 @@
         "product": {
           "id": "prod-canva-p32-s9",
           "slug": "prod-canva-p32-s9-عقد-احجار-ياقوت-أحمر-مع-تعليقة",
-          "name_ar": "عقد احجار  ياقوت أحمر مع تعليقة",
+          "name_ar": "عقد احجار ياقوت أحمر مع تعليقة",
           "name_en": null,
-          "description_ar": "عقد رقيق من خرز الياقوت األحمر الطبيعي متعدد األوجه، مزين بتعليقة حجر متناسقة وقفل فضي",
+          "description_ar": "عقد رقيق من خرز الياقوت الأحمر الطبيعي متعدد الأوجه، مزين بتعليقة حجر متناسقة وقفل فضي.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 540,
@@ -6889,8 +6889,8 @@
           },
           "cashier_code": 263
         },
-        "title_override": "عقد احجار  ياقوت أحمر مع تعليقة",
-        "description_override": "عقد رقيق من خرز الياقوت األحمر الطبيعي متعدد األوجه، مزين بتعليقة حجر متناسقة وقفل فضي",
+        "title_override": "عقد احجار ياقوت أحمر مع تعليقة",
+        "description_override": "عقد رقيق من خرز الياقوت الأحمر الطبيعي متعدد الأوجه، مزين بتعليقة حجر متناسقة وقفل فضي.",
         "price_override": 540,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p32_s9.webp",
         "price_text": "االسعر\n٥٤٠ ج.مصري"
@@ -6912,7 +6912,7 @@
           "slug": "prod-canva-p33-s1-إسورة-احجار-سوداليت",
           "name_ar": "إسورة احجار سوداليت",
           "name_en": null,
-          "description_ar": "إسورة مصنوعة من خرز حجر السوداليت بدرجات األزرق واألبيض، مزودة برباط أسود منسوج قابل للتعديل",
+          "description_ar": "إسورة مصنوعة من خرز حجر السوداليت بدرجات الأزرق والأبيض، مزودة برباط أسود منسوج قابل للتعديل.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 340,
@@ -6926,7 +6926,7 @@
           "cashier_code": 254
         },
         "title_override": "إسورة احجار سوداليت",
-        "description_override": "إسورة مصنوعة من خرز حجر السوداليت بدرجات األزرق واألبيض، مزودة برباط أسود منسوج قابل للتعديل",
+        "description_override": "إسورة مصنوعة من خرز حجر السوداليت بدرجات الأزرق والأبيض، مزودة برباط أسود منسوج قابل للتعديل.",
         "price_override": 340,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p33_s1.webp",
         "price_text": "السعر\n٣٤٠ ج.مصري"
@@ -6938,7 +6938,7 @@
           "slug": "prod-canva-p33-s2-عقد-اججار-بوهيمي",
           "name_ar": "عقد اججار بوهيمي",
           "name_en": null,
-          "description_ar": "عقد مصنوع يدو ًيا من مزيج متناغم من األحجار الطبيعية متعددة األلوان، مع قفل معدني",
+          "description_ar": "عقد مصنوع يدويًا من مزيج متناغم من الأحجار الطبيعية متعددة الألوان، مع قفل معدني.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 135,
@@ -6952,7 +6952,7 @@
           "cashier_code": 255
         },
         "title_override": "عقد اججار بوهيمي",
-        "description_override": "عقد مصنوع يدو ًيا من مزيج متناغم من األحجار الطبيعية متعددة األلوان، مع قفل معدني",
+        "description_override": "عقد مصنوع يدويًا من مزيج متناغم من الأحجار الطبيعية متعددة الألوان، مع قفل معدني.",
         "price_override": 135,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p33_s2.webp",
         "price_text": "السعر\n١٣٥ ج.مصري"
@@ -6962,9 +6962,9 @@
         "product": {
           "id": "prod-canva-p33-s3",
           "slug": "prod-canva-p33-s3-إسورة-احجار-هيماتيت-اللامع",
-          "name_ar": "إسورة احجار  هيماتيت اللامع",
+          "name_ar": "إسورة احجار هيماتيت اللامع",
           "name_en": null,
-          "description_ar": "إسورة قابلة للتعديل من خرز الهيماتيت الرمادي الداكن متعدد األوجه، مع رباط أسود منسوج",
+          "description_ar": "إسورة قابلة للتعديل من خرز الهيماتيت الرمادي الداكن متعدد الأوجه، مع رباط أسود منسوج.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 135,
@@ -6977,8 +6977,8 @@
           },
           "cashier_code": 255
         },
-        "title_override": "إسورة احجار  هيماتيت اللامع",
-        "description_override": "إسورة قابلة للتعديل من خرز الهيماتيت الرمادي الداكن متعدد األوجه، مع رباط أسود منسوج",
+        "title_override": "إسورة احجار هيماتيت اللامع",
+        "description_override": "إسورة قابلة للتعديل من خرز الهيماتيت الرمادي الداكن متعدد الأوجه، مع رباط أسود منسوج.",
         "price_override": 135,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p33_s3.webp",
         "price_text": "السعر\n١٣٥ ج.مصري"
@@ -6990,7 +6990,7 @@
           "slug": "prod-canva-p33-s4-عقد-احجار-رقيق",
           "name_ar": "عقد احجار رقيق",
           "name_en": null,
-          "description_ar": "عقد رقيق من الحجر صغير بدرجات األبيض .والأخضر والنحاسي، بتصميم بسيط وأنيق",
+          "description_ar": "عقد رقيق من الحجر صغير بدرجات الأبيض والأخضر والنحاسي، بتصميم بسيط وأنيق.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 504,
@@ -7004,7 +7004,7 @@
           "cashier_code": null
         },
         "title_override": "عقد احجار رقيق",
-        "description_override": "عقد رقيق من الحجر صغير بدرجات األبيض .والأخضر والنحاسي، بتصميم بسيط وأنيق",
+        "description_override": "عقد رقيق من الحجر صغير بدرجات الأبيض والأخضر والنحاسي، بتصميم بسيط وأنيق.",
         "price_override": 504,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p33_s4.webp",
         "price_text": "السعر\n٤٠٥ ج.مصري"
@@ -7016,7 +7016,7 @@
           "slug": "prod-canva-p33-s5-إسورة-احجار-رمادية",
           "name_ar": "إسورة احجار رمادية",
           "name_en": null,
-          "description_ar": "إسورة رجالي قابلة للتعديل، مصنوعة من خرز أحجار طبيعية بدرجات الرمادي واألبيض، مع رباط منسوج",
+          "description_ar": "إسورة رجالي قابلة للتعديل، مصنوعة من خرز أحجار طبيعية بدرجات الرمادي والأبيض، مع رباط منسوج.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 340,
@@ -7030,7 +7030,7 @@
           "cashier_code": 254
         },
         "title_override": "إسورة احجار رمادية",
-        "description_override": "إسورة رجالي قابلة للتعديل، مصنوعة من خرز أحجار طبيعية بدرجات الرمادي واألبيض، مع رباط منسوج",
+        "description_override": "إسورة رجالي قابلة للتعديل، مصنوعة من خرز أحجار طبيعية بدرجات الرمادي والأبيض، مع رباط منسوج.",
         "price_override": 340,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p33_s5.webp",
         "price_text": "السعر\n٣٤٠ ج.مصري"
@@ -7040,9 +7040,9 @@
         "product": {
           "id": "prod-canva-p33-s6",
           "slug": "prod-canva-p33-s6-إسورة-احجار-هيماتيت-متعددة-الأ",
-          "name_ar": "إسورة احجار  هيماتيت متعددة الأوجه",
+          "name_ar": "إسورة احجار هيماتيت متعددة الأوجه",
           "name_en": null,
-          "description_ar": "إسورة من خرز الهيماتيت الرمادي الالمع متعدد الأوجه، مع قفل معدني",
+          "description_ar": "إسورة من خرز الهيماتيت الرمادي اللامع متعدد الأوجه، مع قفل معدني.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 405,
@@ -7055,8 +7055,8 @@
           },
           "cashier_code": 253
         },
-        "title_override": "إسورة احجار  هيماتيت متعددة الأوجه",
-        "description_override": "إسورة من خرز الهيماتيت الرمادي الالمع متعدد الأوجه، مع قفل معدني",
+        "title_override": "إسورة احجار هيماتيت متعددة الأوجه",
+        "description_override": "إسورة من خرز الهيماتيت الرمادي اللامع متعدد الأوجه، مع قفل معدني.",
         "price_override": 405,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p33_s6.webp",
         "price_text": "السعر\n٤٠٥ ج.مصري"
@@ -7068,7 +7068,7 @@
           "slug": "prod-canva-p33-s7-عقد-احجار-إيوليت",
           "name_ar": "عقد احجار إيوليت",
           "name_en": null,
-          "description_ar": "عقد رقيق مصنوع يدو ًيا من خرز حجر اإليوليت الطبيعي متعدد األوجه، بدرجات أزرق بنفسجي هادئة، مع قفل فضي",
+          "description_ar": "عقد رقيق مصنوع يدويًا من خرز حجر الإيوليت الطبيعي متعدد الأوجه، بدرجات أزرق بنفسجي هادئة، مع قفل فضي.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 340,
@@ -7082,7 +7082,7 @@
           "cashier_code": 254
         },
         "title_override": "عقد احجار إيوليت",
-        "description_override": "عقد رقيق مصنوع يدو ًيا من خرز حجر اإليوليت الطبيعي متعدد األوجه، بدرجات أزرق بنفسجي هادئة، مع قفل فضي",
+        "description_override": "عقد رقيق مصنوع يدويًا من خرز حجر الإيوليت الطبيعي متعدد الأوجه، بدرجات أزرق بنفسجي هادئة، مع قفل فضي.",
         "price_override": 340,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p33_s7.webp",
         "price_text": "السعر\n٣٤٠ ج.مصري"
@@ -7094,7 +7094,7 @@
           "slug": "prod-canva-p33-s8-عقد-احجار-حجر-الشمس",
           "name_ar": "عقد احجار حجر الشمس",
           "name_en": null,
-          "description_ar": "عقد أنيق من خرز حجر الشمس بدرجات دافئة، يضيف لمسة ناعمة ومشرقة للإطلالة",
+          "description_ar": "عقد أنيق من خرز حجر الشمس بدرجات دافئة، يضيف لمسة ناعمة ومشرقة للإطلالة.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 340,
@@ -7108,7 +7108,7 @@
           "cashier_code": 254
         },
         "title_override": "عقد احجار حجر الشمس",
-        "description_override": "عقد أنيق من خرز حجر الشمس بدرجات دافئة، يضيف لمسة ناعمة ومشرقة للإطلالة",
+        "description_override": "عقد أنيق من خرز حجر الشمس بدرجات دافئة، يضيف لمسة ناعمة ومشرقة للإطلالة.",
         "price_override": 340,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p33_s8.webp",
         "price_text": "السعر\n٣٤٠ ج.مصري"
@@ -7120,7 +7120,7 @@
           "slug": "prod-canva-p33-s9-إسورة-احجار-زرقاء-بنقشة-شيفرون",
           "name_ar": "إسورة احجار زرقاء بنقشة شيفرون",
           "name_en": null,
-          "description_ar": "إسورة من قطع حجرية زرقاء بتصميم  .شيفرون هندسي، مزودة بقفل معدني",
+          "description_ar": "إسورة من قطع حجرية زرقاء بتصميم شيفرون هندسي، مزودة بقفل معدني.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 135,
@@ -7134,7 +7134,7 @@
           "cashier_code": 255
         },
         "title_override": "إسورة احجار زرقاء بنقشة شيفرون",
-        "description_override": "إسورة من قطع حجرية زرقاء بتصميم  .شيفرون هندسي، مزودة بقفل معدني",
+        "description_override": "إسورة من قطع حجرية زرقاء بتصميم شيفرون هندسي، مزودة بقفل معدني.",
         "price_override": 135,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p33_s9.webp",
         "price_text": "االسعر\n١٣٥ ج.مصري"
@@ -7156,7 +7156,7 @@
           "slug": "prod-canva-p34-s1-حلق-برتقالي-مربع-مطلي-بالذهب",
           "name_ar": "حلق برتقالي مربع مطلي بالذهب",
           "name_en": null,
-          "description_ar": "حلق متدلي بتصميم معدني ذهبي، مزين بأحجار مربعة مفرغة باللون البرتقالي",
+          "description_ar": "حلق متدلي بتصميم معدني ذهبي، مزين بأحجار مربعة مفرغة باللون البرتقالي.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 405,
@@ -7170,7 +7170,7 @@
           "cashier_code": 257
         },
         "title_override": "حلق برتقالي مربع مطلي بالذهب",
-        "description_override": "حلق متدلي بتصميم معدني ذهبي، مزين بأحجار مربعة مفرغة باللون البرتقالي",
+        "description_override": "حلق متدلي بتصميم معدني ذهبي، مزين بأحجار مربعة مفرغة باللون البرتقالي.",
         "price_override": 405,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p34_s1.webp",
         "price_text": "السعر\n٤٠٥ ج.مصري"
@@ -7182,7 +7182,7 @@
           "slug": "prod-canva-p34-s2-حلق-بحجر-ماجنتا-مطلي-بالذهب",
           "name_ar": "حلق بحجر ماجنتا مطلي بالذهب",
           "name_en": null,
-          "description_ar": "حلق متدلي بتصميم معدني ذهبي، مزين بأحجار بيضاوية بدرجة ماجنتا زاهية",
+          "description_ar": "حلق متدلي بتصميم معدني ذهبي، مزين بأحجار بيضاوية بدرجة ماجنتا زاهية.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 405,
@@ -7196,7 +7196,7 @@
           "cashier_code": 257
         },
         "title_override": "حلق بحجر ماجنتا مطلي بالذهب",
-        "description_override": "حلق متدلي بتصميم معدني ذهبي، مزين بأحجار بيضاوية بدرجة ماجنتا زاهية",
+        "description_override": "حلق متدلي بتصميم معدني ذهبي، مزين بأحجار بيضاوية بدرجة ماجنتا زاهية.",
         "price_override": 405,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p34_s2.webp",
         "price_text": "السعر\n٤٠٥ ج.مصري"
@@ -7206,9 +7206,9 @@
         "product": {
           "id": "prod-canva-p34-s3",
           "slug": "prod-canva-p34-s3-حلق-من-اليشم-األخضر-مطلي-بالذه",
-          "name_ar": "حلق من اليشم األخضر مطلي بالذهب",
+          "name_ar": "حلق من اليشم الأخضر مطلي بالذهب",
           "name_en": null,
-          "description_ar": "حلق متدلي مزين بأحجار يشم خضراء مستطيلة بنقشة طبيعية، مع خطافات معدنية ذهبية",
+          "description_ar": "حلق متدلي مزين بأحجار يشم خضراء مستطيلة بنقشة طبيعية، مع خطافات معدنية ذهبية.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 405,
@@ -7221,8 +7221,8 @@
           },
           "cashier_code": 257
         },
-        "title_override": "حلق من اليشم األخضر مطلي بالذهب",
-        "description_override": "حلق متدلي مزين بأحجار يشم خضراء مستطيلة بنقشة طبيعية، مع خطافات معدنية ذهبية",
+        "title_override": "حلق من اليشم الأخضر مطلي بالذهب",
+        "description_override": "حلق متدلي مزين بأحجار يشم خضراء مستطيلة بنقشة طبيعية، مع خطافات معدنية ذهبية.",
         "price_override": 405,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p34_s3.webp",
         "price_text": "السعر\n٤٠٥ ج.مصري"
@@ -7232,9 +7232,9 @@
         "product": {
           "id": "prod-canva-p34-s4",
           "slug": "prod-canva-p34-s4-ميدالية-عقيق-فيروزي",
-          "name_ar": "ميدالية عقيق فيروزي",
+          "name_ar": "ميدالية استانلس مزينه بحجر الجاد الاخضر",
           "name_en": null,
-          "description_ar": "ميدالية مفاتيح مزينة بحجر عقيق طبيعي بدرجات فيروزية، بتصميم بسيط وأنيق",
+          "description_ar": "ميدالية مفاتيح مزينة بحجر عقيق طبيعي بدرجات فيروزية، بتصميم بسيط وأنيق.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 405,
@@ -7247,8 +7247,8 @@
           },
           "cashier_code": 256
         },
-        "title_override": "ميدالية عقيق فيروزي",
-        "description_override": "ميدالية مفاتيح مزينة بحجر عقيق طبيعي بدرجات فيروزية، بتصميم بسيط وأنيق",
+        "title_override": "ميدالية استانلس مزينه بحجر الجاد الاخضر",
+        "description_override": "ميدالية مفاتيح مزينة بحجر عقيق طبيعي بدرجات فيروزية، بتصميم بسيط وأنيق.",
         "price_override": 405,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p34_s4.webp",
         "price_text": "السعر\n٤٠٥ ج.مصري"
@@ -7260,7 +7260,7 @@
           "slug": "prod-canva-p34-s5-حلق-أخضر-متدلي-مطلي-بالذهب",
           "name_ar": "حلق أخضر متدلي مطلي بالذهب",
           "name_en": null,
-          "description_ar": "حلق متدلي بتصميم معدني ذهبي، مزين بأحجار خضراء على شكل قطرة متعددة الأوجه",
+          "description_ar": "حلق متدلي بتصميم معدني ذهبي، مزين بأحجار خضراء على شكل قطرة متعددة الأوجه.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 405,
@@ -7274,7 +7274,7 @@
           "cashier_code": 257
         },
         "title_override": "حلق أخضر متدلي مطلي بالذهب",
-        "description_override": "حلق متدلي بتصميم معدني ذهبي، مزين بأحجار خضراء على شكل قطرة متعددة الأوجه",
+        "description_override": "حلق متدلي بتصميم معدني ذهبي، مزين بأحجار خضراء على شكل قطرة متعددة الأوجه.",
         "price_override": 405,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p34_s5.webp",
         "price_text": "السعر\n٤٠٥ ج.مصري"
@@ -7286,7 +7286,7 @@
           "slug": "prod-canva-p34-s6-حلق-بحجر-وردي-مطلي-بالذهب",
           "name_ar": "حلق بحجر وردي مطلي بالذهب",
           "name_en": null,
-          "description_ar": "حلق متدلي بتصميم معدني ذهبي، مزين بأحجار وردية بيضاوية مصقولة إلطاللة أنيقة وناعمة",
+          "description_ar": "حلق متدلي بتصميم معدني ذهبي، مزين بأحجار وردية بيضاوية مصقولة لإطلالة أنيقة وناعمة.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 405,
@@ -7300,7 +7300,7 @@
           "cashier_code": 257
         },
         "title_override": "حلق بحجر وردي مطلي بالذهب",
-        "description_override": "حلق متدلي بتصميم معدني ذهبي، مزين بأحجار وردية بيضاوية مصقولة إلطاللة أنيقة وناعمة",
+        "description_override": "حلق متدلي بتصميم معدني ذهبي، مزين بأحجار وردية بيضاوية مصقولة لإطلالة أنيقة وناعمة.",
         "price_override": 405,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p34_s6.webp",
         "price_text": "السعر\n٤٠٥ ج.مصري"
@@ -7310,9 +7310,9 @@
         "product": {
           "id": "prod-canva-p34-s7",
           "slug": "prod-canva-p34-s7-ميدالية-حجر-رخامي",
-          "name_ar": "ميدالية حجر رخامي",
+          "name_ar": "ميدلية استانلس مزينه بحجر طبيعى",
           "name_en": null,
-          "description_ar": "ميدالية مفاتيح معدنية مزينة بحجر طبيعي دائري بنقشة رخامية مميزة",
+          "description_ar": "ميدالية مفاتيح معدنية مزينة بحجر طبيعي دائري بنقشة رخامية مميزة.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 405,
@@ -7325,8 +7325,8 @@
           },
           "cashier_code": 256
         },
-        "title_override": "ميدالية حجر رخامي",
-        "description_override": "ميدالية مفاتيح معدنية مزينة بحجر طبيعي دائري بنقشة رخامية مميزة",
+        "title_override": "ميدلية استانلس مزينه بحجر طبيعى",
+        "description_override": "ميدالية مفاتيح معدنية مزينة بحجر طبيعي دائري بنقشة رخامية مميزة.",
         "price_override": 405,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p34_s7.webp",
         "price_text": "السعر\n٤٠٥ ج.مصري"
@@ -7336,9 +7336,9 @@
         "product": {
           "id": "prod-canva-p34-s8",
           "slug": "prod-canva-p34-s8-ميدالية-من-الحجر-الطبيعي",
-          "name_ar": "ميدالية من الحجر الطبيعي",
+          "name_ar": "ميدالية من الحجر الجاد",
           "name_en": null,
-          "description_ar": "ميدالية مفاتيح مصنوعة يدو ًيا، مزينة بقطعة من الحجر الطبيعي بتفاصيل بسيطة ومميزة",
+          "description_ar": "ميدالية مفاتيح مصنوعة يدويًا، مزينة بقطعة من الحجر الطبيعي بتفاصيل بسيطة ومميزة.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 405,
@@ -7351,8 +7351,8 @@
           },
           "cashier_code": 256
         },
-        "title_override": "ميدالية من الحجر الطبيعي",
-        "description_override": "ميدالية مفاتيح مصنوعة يدو ًيا، مزينة بقطعة من الحجر الطبيعي بتفاصيل بسيطة ومميزة",
+        "title_override": "ميدالية من الحجر الجاد",
+        "description_override": "ميدالية مفاتيح مصنوعة يدويًا، مزينة بقطعة من الحجر الطبيعي بتفاصيل بسيطة ومميزة.",
         "price_override": 405,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p34_s8.webp",
         "price_text": "السعر\n٤٠٥ ج.مصري"
@@ -7364,7 +7364,7 @@
           "slug": "prod-canva-p34-s9-ميدالية-كالسيدوني-أزرق",
           "name_ar": "ميدالية كالسيدوني أزرق",
           "name_en": null,
-          "description_ar": "ميدالية مفاتيح بتصميم كالسيكي، مزينة بحجر كالسيدوني أزرق مصقول وتفاصيل معدنية بلون نحاسي معتق",
+          "description_ar": "ميدالية مفاتيح بتصميم كلاسيكي، مزينة بحجر كالسيدوني أزرق مصقول وتفاصيل معدنية بلون نحاسي معتق.",
           "description_en": null,
           "category": "حلي ومجوهرات تراثية",
           "sale_price": 54,
@@ -7378,7 +7378,7 @@
           "cashier_code": null
         },
         "title_override": "ميدالية كالسيدوني أزرق",
-        "description_override": "ميدالية مفاتيح بتصميم كالسيكي، مزينة بحجر كالسيدوني أزرق مصقول وتفاصيل معدنية بلون نحاسي معتق",
+        "description_override": "ميدالية مفاتيح بتصميم كلاسيكي، مزينة بحجر كالسيدوني أزرق مصقول وتفاصيل معدنية بلون نحاسي معتق.",
         "price_override": 54,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p34_s9.webp",
         "price_text": "االسعر\n٤٥٠ ج.مصري"
@@ -7400,7 +7400,7 @@
           "slug": "prod-canva-p35-s1-ميدالية-عين-حورس",
           "name_ar": "ميدالية عين حورس",
           "name_en": null,
-          "description_ar": "ميدالية مفاتيح معدنية بتصميم مستوحى من عين حورس الفرعونية، مثبتة بسلسلة متينة",
+          "description_ar": "ميدالية مفاتيح معدنية بتصميم مستوحى من عين حورس الفرعونية، مثبتة بسلسلة متينة.",
           "description_en": null,
           "category": "ميداليات وتمائم تراثية",
           "sale_price": 270,
@@ -7414,7 +7414,7 @@
           "cashier_code": 441
         },
         "title_override": "ميدالية عين حورس",
-        "description_override": "ميدالية مفاتيح معدنية بتصميم مستوحى من عين حورس الفرعونية، مثبتة بسلسلة متينة",
+        "description_override": "ميدالية مفاتيح معدنية بتصميم مستوحى من عين حورس الفرعونية، مثبتة بسلسلة متينة.",
         "price_override": 270,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p35_s1.webp",
         "price_text": "السعر\n٢٧٠ ج.مصري"
@@ -7426,7 +7426,7 @@
           "slug": "prod-canva-p35-s2-ميدالية-باستت-الفرعونية",
           "name_ar": "ميدالية باستت الفرعونية",
           "name_en": null,
-          "description_ar": "ميدالية مفاتيح بتصميم فرعوني مستوحى من باستت الفرعونية",
+          "description_ar": "ميدالية مفاتيح بتصميم فرعوني مستوحى من باستت الفرعونية.",
           "description_en": null,
           "category": "ميداليات وتمائم تراثية",
           "sale_price": 270,
@@ -7440,7 +7440,7 @@
           "cashier_code": 441
         },
         "title_override": "ميدالية باستت الفرعونية",
-        "description_override": "ميدالية مفاتيح بتصميم فرعوني مستوحى من باستت الفرعونية",
+        "description_override": "ميدالية مفاتيح بتصميم فرعوني مستوحى من باستت الفرعونية.",
         "price_override": 270,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p35_s2.webp",
         "price_text": "السعر\n٢٧٠ ج.مصري"
@@ -7452,7 +7452,7 @@
           "slug": "prod-canva-p35-s3-ميدالية-توت-عنخ-آمون",
           "name_ar": "ميدالية توت عنخ آمون",
           "name_en": null,
-          "description_ar": "ميدالية مفاتيح من النحاس بتصميم مستوحى من تابوت توت عنخ آمون، مع تفاصيل فرعونية مميزة",
+          "description_ar": "ميدالية مفاتيح من النحاس بتصميم مستوحى من تابوت توت عنخ آمون، مع تفاصيل فرعونية مميزة.",
           "description_en": null,
           "category": "ميداليات وتمائم تراثية",
           "sale_price": 270,
@@ -7466,7 +7466,7 @@
           "cashier_code": 441
         },
         "title_override": "ميدالية توت عنخ آمون",
-        "description_override": "ميدالية مفاتيح من النحاس بتصميم مستوحى من تابوت توت عنخ آمون، مع تفاصيل فرعونية مميزة",
+        "description_override": "ميدالية مفاتيح من النحاس بتصميم مستوحى من تابوت توت عنخ آمون، مع تفاصيل فرعونية مميزة.",
         "price_override": 270,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p35_s3.webp",
         "price_text": "السعر\n٢٧٠ ج.مصري"
@@ -7478,7 +7478,7 @@
           "slug": "prod-canva-p35-s4-ميدالية-مفتاح-الحياة",
           "name_ar": "ميدالية مفتاح الحياة",
           "name_en": null,
-          "description_ar": "ميدالية مفاتيح بتصميم فرعوني مستوحى »من رمز مفتاح الحياة »عنخ",
+          "description_ar": "ميدالية مفاتيح بتصميم فرعوني مستوحى من رمز مفتاح الحياة «عنخ».",
           "description_en": null,
           "category": "ميداليات وتمائم تراثية",
           "sale_price": 270,
@@ -7492,7 +7492,7 @@
           "cashier_code": 441
         },
         "title_override": "ميدالية مفتاح الحياة",
-        "description_override": "ميدالية مفاتيح بتصميم فرعوني مستوحى »من رمز مفتاح الحياة »عنخ",
+        "description_override": "ميدالية مفاتيح بتصميم فرعوني مستوحى من رمز مفتاح الحياة «عنخ».",
         "price_override": 270,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p35_s4.webp",
         "price_text": "السعر\n٢٧٠ ج.مصري"
@@ -7504,7 +7504,7 @@
           "slug": "prod-canva-p35-s5-ميدالية-الملكة-نفرتيتي",
           "name_ar": "ميدالية الملكة نفرتيتي",
           "name_en": null,
-          "description_ar": "ميدالية مفاتيح من النحاس بتصميم مستوحى من تمثال الملكة نفرتيتي",
+          "description_ar": "ميدالية مفاتيح من النحاس بتصميم مستوحى من تمثال الملكة نفرتيتي.",
           "description_en": null,
           "category": "ميداليات وتمائم تراثية",
           "sale_price": 270,
@@ -7518,7 +7518,7 @@
           "cashier_code": 441
         },
         "title_override": "ميدالية الملكة نفرتيتي",
-        "description_override": "ميدالية مفاتيح من النحاس بتصميم مستوحى من تمثال الملكة نفرتيتي",
+        "description_override": "ميدالية مفاتيح من النحاس بتصميم مستوحى من تمثال الملكة نفرتيتي.",
         "price_override": 270,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p35_s5.webp",
         "price_text": "السعر\n٢٧٠ ج.مصري"
@@ -7530,7 +7530,7 @@
           "slug": "prod-canva-p35-s6-ميدالية-الجعران-الفرعوني",
           "name_ar": "ميدالية الجعران الفرعوني",
           "name_en": null,
-          "description_ar": "ميدالية مفاتيح معدنية بتصميم الجعران الفرعوني وتفاصيل دقيقة",
+          "description_ar": "ميدالية مفاتيح معدنية بتصميم الجعران الفرعوني وتفاصيل دقيقة.",
           "description_en": null,
           "category": "ميداليات وتمائم تراثية",
           "sale_price": 270,
@@ -7544,7 +7544,7 @@
           "cashier_code": 441
         },
         "title_override": "ميدالية الجعران الفرعوني",
-        "description_override": "ميدالية مفاتيح معدنية بتصميم الجعران الفرعوني وتفاصيل دقيقة",
+        "description_override": "ميدالية مفاتيح معدنية بتصميم الجعران الفرعوني وتفاصيل دقيقة.",
         "price_override": 270,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p35_s6.webp",
         "price_text": "السعر\n٢٧٠ ج.مصري"
@@ -7554,9 +7554,9 @@
         "product": {
           "id": "prod-canva-p35-s7",
           "slug": "prod-canva-p35-s7-ميدالية-الملكة-كليوباترا",
-          "name_ar": "ميدالية الملكة كليوباترا",
+          "name_ar": "ميدالية رموز فرعونية",
           "name_en": null,
-          "description_ar": "ميدالية مفاتيح من النحاس بتصميم مستوحى من الملكة كليوباترا، مع تفاصيل بطابع مصري قديم",
+          "description_ar": "ميدالية مفاتيح مزينة بمجموعة من الرموز المصرية القديمة، تشمل الأهرامات ونفرتيتي وكليوباترا وباستت.",
           "description_en": null,
           "category": "ميداليات وتمائم تراثية",
           "sale_price": 270,
@@ -7569,8 +7569,8 @@
           },
           "cashier_code": 441
         },
-        "title_override": "ميدالية الملكة كليوباترا",
-        "description_override": "ميدالية مفاتيح من النحاس بتصميم مستوحى من الملكة كليوباترا، مع تفاصيل بطابع مصري قديم",
+        "title_override": "ميدالية رموز فرعونية",
+        "description_override": "ميدالية مفاتيح مزينة بمجموعة من الرموز المصرية القديمة، تشمل الأهرامات ونفرتيتي وكليوباترا وباستت.",
         "price_override": 270,
         "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p35_s7.webp",
         "price_text": "السعر\n٢٧٠ ج.مصري"
