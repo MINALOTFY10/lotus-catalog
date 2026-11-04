@@ -5,9 +5,20 @@ import path from 'path';
 import { revalidatePath, updateTag, revalidateTag } from 'next/cache';
 import { MagazinePageData, PageSlotData } from '@/features/magazine/types';
 import { syncLiveIssueToSupabase, getLiveIssue, safeWriteJsonFile } from '@/features/magazine/services/publishIssue';
-import { toArabicDigits } from '@/lib/format/price';
+import { coercePriceNumber, toArabicDigits } from '@/lib/format/price';
 import { SlotAssignInput, slotAssignSchema } from './schemas';
 import { requireStaffSession } from '@/lib/auth/session';
+
+function resolveEffectivePrice(
+  slotPrice: number | string | null | undefined,
+  fallbackPrice: number | string | null | undefined
+): number {
+  const parsedSlot = coercePriceNumber(slotPrice);
+  if (parsedSlot !== null) return parsedSlot;
+
+  const parsedFallback = coercePriceNumber(fallbackPrice);
+  return parsedFallback ?? 0;
+}
 
 /**
  * Pure function to update/assign a product to a slot within page list
@@ -27,10 +38,10 @@ export async function assignProductToSlot(
     const existingSlot = existingIndex >= 0 ? slots[existingIndex] : undefined;
 
     const finalName = overrides?.title_override?.trim() || product?.name_ar;
-    const finalPrice =
-      overrides?.price_override !== undefined
-        ? overrides.price_override
-        : product?.sale_price;
+    const finalPrice = resolveEffectivePrice(
+      overrides?.price_override,
+      product?.sale_price
+    );
 
     const updatedProduct = product
       ? {

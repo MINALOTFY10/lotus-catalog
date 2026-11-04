@@ -4,7 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import { revalidatePath, updateTag, revalidateTag } from 'next/cache';
 import { productUpdateSchema, ProductUpdateInput } from './schemas';
-import { toArabicDigits } from '@/lib/format/price';
+import { coercePriceNumber, toArabicDigits } from '@/lib/format/price';
 import { syncLiveIssueToSupabase, getLiveIssue, safeWriteJsonFile } from '@/features/magazine/services/publishIssue';
 import { requireStaffSession } from '@/lib/auth/session';
 
@@ -32,6 +32,17 @@ export interface AdminProductRecord {
  * Returns all products for the admin table by extracting them directly
  * from the live magazine issue (495 products) supplemented by seed.
  */
+function resolveEffectivePrice(
+  slotPrice: number | string | null | undefined,
+  fallbackPrice: number | string | null | undefined
+): number {
+  const parsedSlot = coercePriceNumber(slotPrice);
+  if (parsedSlot !== null) return parsedSlot;
+
+  const parsedFallback = coercePriceNumber(fallbackPrice);
+  return parsedFallback ?? 0;
+}
+
 export async function getAdminProductsList(): Promise<AdminProductRecord[]> {
   await requireStaffSession();
   const seedPath = path.resolve(process.cwd(), 'data', 'products_seed.json');
@@ -53,7 +64,7 @@ export async function getAdminProductsList(): Promise<AdminProductRecord[]> {
             name_ar: slot.title_override || p.name_ar || '',
             category: page.sectionTitle || page.section_title || p.category || 'عام',
             cost_price: p.cost_price,
-            sale_price: slot.price_override ?? p.sale_price ?? 0,
+            sale_price: resolveEffectivePrice(slot.price_override, p.sale_price),
             original_qty: p.original_qty ?? 10,
             stock_status: p.stock_status || 'متاح',
             in_stock: p.in_stock !== false,

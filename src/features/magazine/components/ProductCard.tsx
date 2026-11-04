@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ProductData } from '../types';
-import { toArabicDigits } from '@/lib/format/price';
+import { coercePriceNumber, hasPriceDigits, toArabicDigits } from '@/lib/format/price';
 
 interface ProductCardProps {
   product?: ProductData | null;
@@ -38,7 +38,9 @@ export function ProductCard({
 
   const title = (titleOverride || product?.name_ar || '').trim();
   const description = (descriptionOverride || product?.description_ar || '').trim();
-  const price = priceOverride !== undefined && priceOverride !== null ? priceOverride : product?.sale_price;
+  const normalizedOverride = coercePriceNumber(priceOverride);
+  const fallbackPrice = coercePriceNumber(product?.sale_price);
+  const price = normalizedOverride ?? fallbackPrice ?? null;
   const imageUrl = imageOverride || product?.primary_image_url || '/brand/lotus_logo.png';
   const slug = product?.slug || '#';
   const hasDescription = Boolean(description && description.length > 0);
@@ -50,9 +52,9 @@ export function ProductCard({
   let priceLabel = 'السعر';
   let priceVal = '';
 
-  if (price !== undefined && price !== null) {
+  if (price !== null && price !== undefined) {
     const formattedPrice = `${toArabicDigits(price)} ج.مصري`;
-    if (priceText) {
+    if (priceText && typeof priceText === 'string' && priceText.trim() && hasPriceDigits(priceText)) {
       const cleanText = toArabicDigits(priceText)
         .replace(/^[اإأآل]+\s*السعر/, 'السعر')
         .replace(/^االسعر/, 'السعر')
@@ -98,7 +100,7 @@ export function ProductCard({
     } else {
       priceVal = formattedPrice;
     }
-  } else if (priceText) {
+  } else if (priceText && typeof priceText === 'string' && priceText.trim() && hasPriceDigits(priceText)) {
     const clean = toArabicDigits(priceText.trim())
       .replace(/^(المقاس والسعر|الحجم والسعر|الوزن والسعر|[اإأآل]*\s*السعر)\n?/, '')
       .trim();
