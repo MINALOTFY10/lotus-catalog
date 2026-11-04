@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { MagazinePageData } from '../types';
+import { MagazinePageData, VersionHistoryItem } from '../types';
 
 export interface IssueSnapshot {
   issueSlug: string;
@@ -28,14 +28,15 @@ export function compileIssueSnapshot(
   };
 }
 
-export function safeWriteJsonFile(filePath: string, data: any): boolean {
+export function safeWriteJsonFile(filePath: string, data: unknown): boolean {
   try {
     const dir = path.dirname(filePath);
     if (!fs.existsSync(dir)) {
       try {
         fs.mkdirSync(dir, { recursive: true });
-      } catch (mkdirErr: any) {
-        if (mkdirErr.code === 'EROFS' || mkdirErr.message?.includes('read-only')) {
+      } catch (mkdirErr: unknown) {
+        const err = mkdirErr as { code?: string; message?: string };
+        if (err.code === 'EROFS' || err.message?.includes('read-only')) {
           return false;
         }
       }
@@ -43,7 +44,8 @@ export function safeWriteJsonFile(filePath: string, data: any): boolean {
     const content = typeof data === 'string' ? data : JSON.stringify(data, null, 2);
     fs.writeFileSync(filePath, content, 'utf8');
     return true;
-  } catch (err: any) {
+  } catch (rawErr: unknown) {
+    const err = rawErr as { code?: string; message?: string };
     if (err.code === 'EROFS' || err.message?.includes('read-only')) {
       console.warn(`[Serverless Read-Only] Skipping local file write to ${filePath}`);
       return false;
@@ -154,7 +156,7 @@ export async function getVersionSnapshotFromStorage(
 }
 
 export async function syncVersionHistoryToStorage(
-  history: any[]
+  history: VersionHistoryItem[]
 ): Promise<boolean> {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL?.replace(/\/$/, '');
   const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
@@ -184,7 +186,7 @@ export async function syncVersionHistoryToStorage(
   }
 }
 
-export async function getVersionHistoryFromStorage(): Promise<any[] | null> {
+export async function getVersionHistoryFromStorage(): Promise<VersionHistoryItem[] | null> {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL?.replace(/\/$/, '');
   const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
   const bucket = process.env.SUPABASE_STORAGE_BUCKET || 'magazine';
@@ -203,7 +205,7 @@ export async function getVersionHistoryFromStorage(): Promise<any[] | null> {
 
     const res = await fetch(remoteUrl, { cache: 'no-store', headers });
     if (res.ok) {
-      return (await res.json()) as any[];
+      return (await res.json()) as VersionHistoryItem[];
     }
     return null;
   } catch (err) {
@@ -257,8 +259,8 @@ export async function getLiveIssue(options?: { forceFresh?: boolean }): Promise<
       if (res.ok) {
         return (await res.json()) as IssueSnapshot;
       }
-    } catch (err: any) {
-      if (err?.digest !== 'HANGING_PROMISE_REJECTION') {
+    } catch (err: unknown) {
+      if ((err as { digest?: string })?.digest !== 'HANGING_PROMISE_REJECTION') {
         console.warn('Failed to fetch live issue from Supabase Storage, falling back to local:', err);
       }
     }

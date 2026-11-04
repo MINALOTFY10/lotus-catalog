@@ -27,8 +27,6 @@ export function SlotPickerModal({
   onClose,
   onSuccess,
 }: SlotPickerModalProps) {
-  if (!isOpen) return null;
-
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedProduct, setSelectedProduct] = useState<AdminProductRecord | null>(
     (currentSlotData?.product as AdminProductRecord) || null
@@ -48,6 +46,7 @@ export function SlotPickerModal({
 
   // Sync state whenever currentSlotData changes or modal opens
   React.useEffect(() => {
+    if (!isOpen) return;
     const prod = (currentSlotData?.product as AdminProductRecord) || null;
     setSelectedProduct(prod);
     setTitleOverride(currentSlotData?.title_override || prod?.name_ar || '');
@@ -62,6 +61,7 @@ export function SlotPickerModal({
   }, [currentSlotData, isOpen]);
 
   const filteredProducts = useMemo(() => {
+    if (!isOpen) return [];
     if (!searchQuery.trim()) return availableProducts.slice(0, 30);
     const q = normalizeArabic(searchQuery);
     return availableProducts.filter((p) => {
@@ -70,7 +70,9 @@ export function SlotPickerModal({
       const cat = normalizeArabic(p.category || '');
       return name.includes(q) || cat.includes(q) || code === searchQuery.trim();
     });
-  }, [availableProducts, searchQuery]);
+  }, [availableProducts, searchQuery, isOpen]);
+
+  if (!isOpen) return null;
 
   const handleSave = async () => {
     setSaving(true);
@@ -101,17 +103,20 @@ export function SlotPickerModal({
     }
 
     setSaving(false);
-    const finalProd = (selectedProduct as any) || currentSlotData?.product;
-    if (finalProd) {
-      if (overrides.title_override) finalProd.name_ar = overrides.title_override;
-      if (overrides.cashier_code !== undefined) finalProd.cashier_code = overrides.cashier_code;
-      if (overrides.price_override !== undefined) finalProd.sale_price = overrides.price_override;
-    }
+    const baseProd = selectedProduct || (currentSlotData?.product as AdminProductRecord | undefined);
+    const updatedProd = baseProd
+      ? {
+          ...baseProd,
+          ...(overrides.title_override ? { name_ar: overrides.title_override } : {}),
+          ...(overrides.cashier_code !== undefined ? { cashier_code: overrides.cashier_code } : {}),
+          ...(overrides.price_override !== undefined ? { sale_price: overrides.price_override } : {}),
+        }
+      : undefined;
 
     const effectivePrice =
       overrides.price_override !== undefined
         ? overrides.price_override
-        : finalProd?.sale_price;
+        : updatedProd?.sale_price;
 
     const computedPriceText =
       effectivePrice !== undefined && effectivePrice !== null
@@ -120,7 +125,7 @@ export function SlotPickerModal({
 
     onSuccess({
       slot: slotNumber,
-      product: finalProd,
+      product: updatedProd,
       title_override: overrides.title_override,
       price_override: overrides.price_override,
       price_text: computedPriceText,

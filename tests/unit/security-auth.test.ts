@@ -18,7 +18,7 @@ describe('Cryptographic Session Security', () => {
 
   it('rejects a tampered payload or signature', async () => {
     const token = await signSession(payload, secret);
-    const [body, sig] = token.split('.');
+    const [, sig] = token.split('.');
     const tamperedBody = Buffer.from(
       JSON.stringify({ email: 'hacker@evil.com', role: 'staff', loggedAt: 1700000000000 })
     ).toString('base64url');

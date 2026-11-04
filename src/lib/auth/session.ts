@@ -30,11 +30,12 @@ function toBase64Url(uint8: Uint8Array): string {
   return btoa(bin).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
 }
 
-function fromBase64Url(str: string): Uint8Array {
+function fromBase64Url(str: string): Uint8Array<ArrayBuffer> {
   const base64 = str.replace(/-/g, '+').replace(/_/g, '/');
   const pad = base64.length % 4 === 0 ? '' : '='.repeat(4 - (base64.length % 4));
   const bin = atob(base64 + pad);
-  const bytes = new Uint8Array(bin.length);
+  const buffer = new ArrayBuffer(bin.length);
+  const bytes = new Uint8Array(buffer);
   for (let i = 0; i < bin.length; i++) {
     bytes[i] = bin.charCodeAt(i);
   }
@@ -83,7 +84,7 @@ export async function verifySession(
     const isValid = await crypto.subtle.verify(
       'HMAC',
       key,
-      sigBytes,
+      sigBytes as BufferSource,
       enc.encode(payloadB64)
     );
 

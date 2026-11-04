@@ -12,7 +12,8 @@ describe('Design Tokens', () => {
     expect(css).toContain('--mag-card: #FFFFFF;');
     expect(css).toContain('--mag-ink: #443000;');
     expect(css).toContain('--mag-accent: #B68763;');
-    expect(css).toContain('aspect-ratio: 595 / 842;');
+    expect(css).toContain('aspect-ratio: 595.5 / 980;');
+    expect(css).toContain('aspect-ratio: 595.5 / 842.25;');
     expect(css).toContain('--u: calc(100cqw / 595);');
   });
 });

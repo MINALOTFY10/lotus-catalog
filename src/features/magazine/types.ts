@@ -62,3 +62,10 @@ export interface IssueSnapshot {
   theme?: Record<string, string>;
 }
 
+export interface VersionHistoryItem {
+  version: number;
+  publishedAt: string;
+  totalPages: number;
+  message?: string;
+  author?: string;
+}

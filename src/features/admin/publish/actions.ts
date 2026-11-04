@@ -30,8 +30,9 @@ function ensureVersionsDir(): string {
     if (!fs.existsSync(versionsDir)) {
       fs.mkdirSync(versionsDir, { recursive: true });
     }
-  } catch (err: any) {
-    if (err.code !== 'EROFS' && !err.message?.includes('read-only')) {
+  } catch (err: unknown) {
+    const error = err as { code?: string; message?: string };
+    if (error.code !== 'EROFS' && !error.message?.includes('read-only')) {
       console.warn('ensureVersionsDir error:', err);
     }
   }
