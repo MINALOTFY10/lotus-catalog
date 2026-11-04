@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import { getAllPublicProducts } from '@/features/products/services/publicProducts';
 import { ProductsCatalogView } from '@/features/products/components/ProductsCatalogView';
-import { getBaseUrl, generateBreadcrumbSchema } from '@/lib/seo';
+import { getBaseUrl, generateBreadcrumbSchema, safeJsonLd } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'دليل المنتجات والأسعار | كتالوج لوتس - صندوق دعم الصناعات',
@@ -54,11 +54,11 @@ export default async function ProductsPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(itemListSchema) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }}
       />
       <ProductsCatalogView
         initialProducts={products}

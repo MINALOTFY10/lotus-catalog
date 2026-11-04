@@ -151,3 +151,11 @@ export function generateBreadcrumbSchema(
     })),
   };
 }
+
+/**
+ * Safely serializes data to JSON for embedding in <script type="application/ld+json">
+ * Replaces < and > with Unicode escape sequences (\u003c, \u003e) to prevent HTML script breakout XSS
+ */
+export function safeJsonLd(data: unknown): string {
+  return JSON.stringify(data).replace(/</g, '\\u003c').replace(/>/g, '\\u003e');
+}

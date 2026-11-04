@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import { Metadata } from 'next';
 import { getAllPublicProducts } from '@/features/products/services/publicProducts';
 import { SearchClientView } from '@/features/products/components/SearchClientView';
-import { generateBreadcrumbSchema } from '@/lib/seo';
+import { generateBreadcrumbSchema, safeJsonLd } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'البحث في الكتالوج | كتالوج لوتس - صندوق دعم الصناعات',
@@ -36,7 +36,7 @@ async function SearchPageContent({ searchParams }: SearchPageProps) {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }}
       />
       <SearchClientView
         initialProducts={products}

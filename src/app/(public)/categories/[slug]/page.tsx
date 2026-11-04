@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import { getAllPublicProducts } from '@/features/products/services/publicProducts';
 import { ProductsCatalogView } from '@/features/products/components/ProductsCatalogView';
-import { generateBreadcrumbSchema } from '@/lib/seo';
+import { generateBreadcrumbSchema, safeJsonLd } from '@/lib/seo';
 
 interface CategoryPageProps {
   params: Promise<{ slug: string }>;
@@ -58,7 +58,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbSchema) }}
       />
       <ProductsCatalogView
         initialProducts={products}

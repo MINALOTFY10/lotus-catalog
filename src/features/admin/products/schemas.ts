@@ -5,7 +5,13 @@ export const productUpdateSchema = z.object({
   sale_price: z.number().positive('سعر البيع يجب أن يكون أكبر من صفر'),
   description_ar: z.string().optional(),
   category: z.string().optional(),
-  primary_image_url: z.string().optional(),
+  primary_image_url: z
+    .string()
+    .refine(
+      (val) => !val || val.startsWith('/') || val.startsWith('https://'),
+      { message: 'رابط الصورة يجب أن يبدأ بـ / أو https://' }
+    )
+    .optional(),
   stock_status: z.string().optional(),
   in_stock: z.boolean().optional(),
   cashier_code: z.number().nullable().optional(),

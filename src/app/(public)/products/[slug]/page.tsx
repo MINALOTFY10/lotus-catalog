@@ -12,7 +12,7 @@ import {
 import { formatMagazinePrice, toArabicDigits } from '@/lib/format/price';
 import { ProductPriceDisplay } from '@/features/products/components/ProductPriceDisplay';
 import { ProductBackButton } from '@/features/products/components/ProductBackButton';
-import { generateBreadcrumbSchema } from '@/lib/seo';
+import { generateBreadcrumbSchema, safeJsonLd } from '@/lib/seo';
 
 interface ProductDetailPageProps {
   params: Promise<{ slug: string }>;
@@ -196,12 +196,12 @@ async function ProductDetailPageContent({ params, searchParams }: ProductDetailP
       {/* Schema.org Product JSON-LD */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(jsonLd) }}
       />
       {/* Schema.org BreadcrumbList JSON-LD */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: safeJsonLd(breadcrumbJsonLd) }}
       />
 
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">

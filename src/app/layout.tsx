@@ -10,6 +10,7 @@ import {
   SEO_DEFAULT_DESCRIPTION,
   generateOrganizationSchema,
   generateWebSiteSchema,
+  safeJsonLd,
 } from "@/lib/seo";
 
 const tajawal = Tajawal({
@@ -121,11 +122,11 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+          dangerouslySetInnerHTML={{ __html: safeJsonLd(orgSchema) }}
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
+          dangerouslySetInnerHTML={{ __html: safeJsonLd(webSiteSchema) }}
         />
       </head>
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
