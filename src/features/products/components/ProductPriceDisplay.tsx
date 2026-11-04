@@ -36,15 +36,15 @@ export function ProductPriceDisplay({
         .map((l) => l.trim())
         .filter((l) => l && l !== 'ال' && l !== 'الـ' && l !== 'ا');
 
-    let dynamicLabel = 'السعر';
-    const raw = priceText;
-    if (raw.includes('جرام') || raw.includes('كيلو') || raw.includes('مل') || raw.includes('لتر') || raw.includes('الحجم')) {
-      dynamicLabel = 'الحجم والسعر';
-    } else if (raw.includes('سم') || raw.includes('متر') || raw.includes('*') || raw.includes('المقاس') || raw.includes('صغير') || raw.includes('وسط') || raw.includes('كبير')) {
-      dynamicLabel = 'المقاس والسعر';
-    } else if (raw.includes('الوزن')) {
-      dynamicLabel = 'الوزن والسعر';
-    }
+      let dynamicLabel = 'السعر';
+      const sourceText = priceText;
+      if (sourceText.includes('جرام') || sourceText.includes('كيلو') || sourceText.includes('مل') || sourceText.includes('لتر') || sourceText.includes('الحجم')) {
+        dynamicLabel = 'الحجم والسعر';
+      } else if (sourceText.includes('سم') || sourceText.includes('متر') || sourceText.includes('*') || sourceText.includes('المقاس') || sourceText.includes('صغير') || sourceText.includes('وسط') || sourceText.includes('كبير')) {
+        dynamicLabel = 'المقاس والسعر';
+      } else if (sourceText.includes('الوزن')) {
+        dynamicLabel = 'الوزن والسعر';
+      }
 
       if (lines.length > 1) {
         // Multi-tier pricing (e.g. honey: 650g vs 1.5kg)

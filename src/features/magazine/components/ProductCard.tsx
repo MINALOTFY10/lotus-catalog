@@ -9,7 +9,7 @@ interface ProductCardProps {
   product?: ProductData | null;
   titleOverride?: string | null;
   descriptionOverride?: string | null;
-  priceOverride?: number | null;
+  priceOverride?: number | string | null;
   priceText?: string | null;
   imageOverride?: string | null;
   isInteractive?: boolean;

@@ -107,7 +107,14 @@ describe('publicProducts service', () => {
                     slot: 1,
                     price_override: '',
                     product: {
-                      ...page.slots[0].product,
+                      ...(page.slots[0]?.product ?? {
+                        id: 'prod-1',
+                        slug: 'prod-1-عسل-كيلو-و-نص',
+                        name_ar: 'عسل كيلو و نص',
+                        description_ar: 'عسل نقي طبيعي فاخر',
+                        sale_price: 620,
+                        primary_image_url: '/uploads/products/image1.jpg',
+                      }),
                       sale_price: 940,
                     },
                   },

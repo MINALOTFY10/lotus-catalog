@@ -1,4 +1,5 @@
 import { MagazinePageData } from '@/features/magazine/types';
+import { coercePriceNumber } from '@/lib/format/price';
 
 export interface PriceChange {
   pageNumber: number;
@@ -52,17 +53,17 @@ export function computeIssueDiff(
         continue;
       }
 
-      const draftPrice = draftSlot.price_override ?? draftSlot.product?.sale_price;
-      const livePrice = liveSlot.price_override ?? liveSlot.product?.sale_price;
+      const draftPrice = coercePriceNumber(draftSlot.price_override ?? draftSlot.product?.sale_price);
+      const livePrice = coercePriceNumber(liveSlot.price_override ?? liveSlot.product?.sale_price);
 
-      if (draftPrice !== livePrice && draftPrice !== undefined && livePrice !== undefined) {
+      if (draftPrice !== livePrice && draftPrice !== null && livePrice !== null) {
         changedSlotsCount++;
         priceChanges.push({
           pageNumber: draftPage.pageNumber,
           slotNumber: draftSlot.slot,
           productName: draftSlot.title_override || draftSlot.product?.name_ar || 'منتج',
-          oldPrice: livePrice ?? 0,
-          newPrice: draftPrice ?? 0,
+          oldPrice: livePrice,
+          newPrice: draftPrice,
         });
       }
 

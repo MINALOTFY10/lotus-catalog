@@ -24,7 +24,7 @@ export interface PageSlotData {
   product?: ProductData | null;
   title_override?: string | null;
   description_override?: string | null;
-  price_override?: number | null;
+  price_override?: number | string | null;
   image_override?: string | null;
   price_text?: string | null;
   price_tiers?: ProductPriceTier[] | null;
