@@ -3,7 +3,16 @@
 import fs from 'fs';
 import path from 'path';
 import { revalidatePath } from 'next/cache';
-import { IssueSnapshot, syncLiveIssueToSupabase, getLiveIssue, safeWriteJsonFile } from '@/features/magazine/services/publishIssue';
+import {
+  IssueSnapshot,
+  syncLiveIssueToSupabase,
+  getLiveIssue,
+  safeWriteJsonFile,
+  saveVersionSnapshotToStorage,
+  getVersionSnapshotFromStorage,
+  syncVersionHistoryToStorage,
+  getVersionHistoryFromStorage,
+} from '@/features/magazine/services/publishIssue';
 import { requireStaffSession } from '@/lib/auth/session';
 
 export interface VersionHistoryRecord {
@@ -38,15 +47,27 @@ function getHistoryFilePath(): string {
  */
 export async function getVersionHistoryAction(): Promise<VersionHistoryRecord[]> {
   await requireStaffSession();
-  const historyPath = getHistoryFilePath();
-  if (!fs.existsSync(historyPath)) {
-    return [];
-  }
+
+  // 1. Try reading from Supabase Storage first (authoritative in production/serverless)
   try {
-    return JSON.parse(fs.readFileSync(historyPath, 'utf8'));
-  } catch {
-    return [];
+    const cloudHistory = await getVersionHistoryFromStorage();
+    if (cloudHistory && Array.isArray(cloudHistory) && cloudHistory.length > 0) {
+      return cloudHistory as VersionHistoryRecord[];
+    }
+  } catch (err) {
+    console.warn('[getVersionHistoryAction] Could not fetch history from cloud storage:', err);
   }
+
+  // 2. Fall back to local file
+  const historyPath = getHistoryFilePath();
+  if (fs.existsSync(historyPath)) {
+    try {
+      return JSON.parse(fs.readFileSync(historyPath, 'utf8'));
+    } catch {
+      return [];
+    }
+  }
+  return [];
 }
 
 /**
@@ -72,9 +93,13 @@ export async function publishLiveIssueAction(
     const versionsDir = ensureVersionsDir();
     const historyPath = getHistoryFilePath();
 
-    const history: VersionHistoryRecord[] = fs.existsSync(historyPath)
-      ? JSON.parse(fs.readFileSync(historyPath, 'utf8'))
-      : [];
+    const cloudHistory = await getVersionHistoryFromStorage();
+    const history: VersionHistoryRecord[] =
+      cloudHistory && Array.isArray(cloudHistory) && cloudHistory.length > 0
+        ? (cloudHistory as VersionHistoryRecord[])
+        : fs.existsSync(historyPath)
+        ? JSON.parse(fs.readFileSync(historyPath, 'utf8'))
+        : [];
 
     const nextVersion = (currentIssue.version || 1) + 1;
     currentIssue.version = nextVersion;
@@ -83,8 +108,9 @@ export async function publishLiveIssueAction(
     const snapshotFilename = `version_${nextVersion}.json`;
     const snapshotPath = path.join(versionsDir, snapshotFilename);
 
-    // Write version snapshot (safe for serverless)
+    // Write version snapshot (safe for serverless + cloud storage)
     safeWriteJsonFile(snapshotPath, currentIssue);
+    await saveVersionSnapshotToStorage(nextVersion, currentIssue);
 
     // Update live_issue.json and Supabase Storage
     safeWriteJsonFile(liveIssuePath, currentIssue);
@@ -104,6 +130,7 @@ export async function publishLiveIssueAction(
     updatedHistory.unshift(newRecord);
 
     safeWriteJsonFile(historyPath, updatedHistory);
+    await syncVersionHistoryToStorage(updatedHistory);
 
     revalidatePath('/', 'layout');
     revalidatePath('/');
@@ -139,25 +166,49 @@ export async function rollbackToVersionAction(
   const liveIssuePath = path.resolve(process.cwd(), 'data', 'live_issue.json');
   const historyPath = getHistoryFilePath();
 
-  if (!fs.existsSync(snapshotPath)) {
-    return { success: false, error: `النسخة رقم ${targetVersion} غير موجودة` };
-  }
-
   try {
-    const targetSnapshot = JSON.parse(fs.readFileSync(snapshotPath, 'utf8'));
+    let targetSnapshot: IssueSnapshot | null = null;
+
+    // 1. Try fetching snapshot from Supabase Storage first
+    try {
+      targetSnapshot = await getVersionSnapshotFromStorage(targetVersion);
+    } catch (err) {
+      console.warn(`[rollbackToVersionAction] Failed fetching version_${targetVersion} from storage:`, err);
+    }
+
+    // 2. Fall back to local disk if available
+    if (!targetSnapshot && fs.existsSync(snapshotPath)) {
+      try {
+        targetSnapshot = JSON.parse(fs.readFileSync(snapshotPath, 'utf8'));
+      } catch (err) {
+        console.warn(`[rollbackToVersionAction] Failed parsing local version_${targetVersion}:`, err);
+      }
+    }
+
+    if (!targetSnapshot) {
+      return { success: false, error: `النسخة رقم ${targetVersion} غير موجودة` };
+    }
 
     // Restore to live_issue.json and Supabase
     safeWriteJsonFile(liveIssuePath, targetSnapshot);
     await syncLiveIssueToSupabase(targetSnapshot);
 
     // Update history isLive flags
-    if (fs.existsSync(historyPath)) {
-      const history: VersionHistoryRecord[] = JSON.parse(fs.readFileSync(historyPath, 'utf8'));
-      const updated = history.map((h) => ({
+    const cloudHistory = await getVersionHistoryFromStorage();
+    const currentHistory =
+      cloudHistory && Array.isArray(cloudHistory) && cloudHistory.length > 0
+        ? cloudHistory
+        : fs.existsSync(historyPath)
+        ? JSON.parse(fs.readFileSync(historyPath, 'utf8'))
+        : [];
+
+    if (Array.isArray(currentHistory) && currentHistory.length > 0) {
+      const updated = currentHistory.map((h: any) => ({
         ...h,
         isLive: h.version === targetVersion,
       }));
       safeWriteJsonFile(historyPath, updated);
+      await syncVersionHistoryToStorage(updated);
     }
 
     revalidatePath('/', 'layout');
