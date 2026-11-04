@@ -6,6 +6,7 @@ import { revalidatePath, updateTag, revalidateTag } from 'next/cache';
 import { productUpdateSchema, ProductUpdateInput } from './schemas';
 import { toArabicDigits } from '@/lib/format/price';
 import { syncLiveIssueToSupabase, getLiveIssue, safeWriteJsonFile } from '@/features/magazine/services/publishIssue';
+import { requireStaffSession } from '@/lib/auth/session';
 
 import { ProductPriceTier } from '@/features/magazine/types';
 export type { ProductPriceTier };
@@ -32,6 +33,7 @@ export interface AdminProductRecord {
  * from the live magazine issue (495 products) supplemented by seed.
  */
 export async function getAdminProductsList(): Promise<AdminProductRecord[]> {
+  await requireStaffSession();
   const seedPath = path.resolve(process.cwd(), 'data', 'products_seed.json');
   const map = new Map<string, AdminProductRecord>();
 
@@ -113,6 +115,12 @@ export async function updateProductAction(
   productId: string,
   rawInput: unknown
 ): Promise<{ success: boolean; error?: string }> {
+  try {
+    await requireStaffSession();
+  } catch {
+    return { success: false, error: 'غير مصرح: يجب تسجيل الدخول كمسؤول' };
+  }
+
   const parseResult = productUpdateSchema.safeParse(rawInput);
   if (!parseResult.success) {
     const firstError = parseResult.error.issues[0]?.message || 'بيانات غير صالحة';

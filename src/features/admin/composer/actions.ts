@@ -7,6 +7,7 @@ import { MagazinePageData, PageSlotData } from '@/features/magazine/types';
 import { syncLiveIssueToSupabase, getLiveIssue, safeWriteJsonFile } from '@/features/magazine/services/publishIssue';
 import { toArabicDigits } from '@/lib/format/price';
 import { SlotAssignInput, slotAssignSchema } from './schemas';
+import { requireStaffSession } from '@/lib/auth/session';
 
 /**
  * Pure function to update/assign a product to a slot within page list
@@ -138,6 +139,12 @@ export async function saveSlotAssignmentAction(
     cashier_code?: number | null;
   }
 ): Promise<{ success: boolean; error?: string }> {
+  try {
+    await requireStaffSession();
+  } catch {
+    return { success: false, error: 'غير مصرح: يجب تسجيل الدخول كمسؤول' };
+  }
+
   const liveIssuePath = path.resolve(process.cwd(), 'data', 'live_issue.json');
   const seedPath = path.resolve(process.cwd(), 'data', 'products_seed.json');
 
@@ -279,6 +286,12 @@ export async function swapPageSlotsAction(
   sourceSlotIndex: number,
   targetSlotIndex: number
 ): Promise<{ success: boolean; error?: string }> {
+  try {
+    await requireStaffSession();
+  } catch {
+    return { success: false, error: 'غير مصرح: يجب تسجيل الدخول كمسؤول' };
+  }
+
   const liveIssuePath = path.resolve(process.cwd(), 'data', 'live_issue.json');
   try {
     const issue = await getLiveIssue({ forceFresh: true });
@@ -356,6 +369,12 @@ export async function updatePageSectionTitleAction(
   pageNumber: number,
   newTitle: string
 ): Promise<{ success: boolean; error?: string }> {
+  try {
+    await requireStaffSession();
+  } catch {
+    return { success: false, error: 'غير مصرح: يجب تسجيل الدخول كمسؤول' };
+  }
+
   const liveIssuePath = path.resolve(process.cwd(), 'data', 'live_issue.json');
   try {
     const issue = await getLiveIssue({ forceFresh: true });

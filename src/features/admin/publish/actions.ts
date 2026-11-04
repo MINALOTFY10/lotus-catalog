@@ -4,6 +4,7 @@ import fs from 'fs';
 import path from 'path';
 import { revalidatePath } from 'next/cache';
 import { IssueSnapshot, syncLiveIssueToSupabase, getLiveIssue, safeWriteJsonFile } from '@/features/magazine/services/publishIssue';
+import { requireStaffSession } from '@/lib/auth/session';
 
 export interface VersionHistoryRecord {
   version: number;
@@ -36,6 +37,7 @@ function getHistoryFilePath(): string {
  * Returns list of all previously published versions
  */
 export async function getVersionHistoryAction(): Promise<VersionHistoryRecord[]> {
+  await requireStaffSession();
   const historyPath = getHistoryFilePath();
   if (!fs.existsSync(historyPath)) {
     return [];
@@ -53,6 +55,12 @@ export async function getVersionHistoryAction(): Promise<VersionHistoryRecord[]>
 export async function publishLiveIssueAction(
   note?: string
 ): Promise<{ success: boolean; version?: number; error?: string }> {
+  try {
+    await requireStaffSession();
+  } catch {
+    return { success: false, error: 'غير مصرح: يجب تسجيل الدخول كمسؤول' };
+  }
+
   const liveIssuePath = path.resolve(process.cwd(), 'data', 'live_issue.json');
 
   try {
@@ -116,6 +124,16 @@ export async function publishLiveIssueAction(
 export async function rollbackToVersionAction(
   targetVersion: number
 ): Promise<{ success: boolean; error?: string }> {
+  try {
+    await requireStaffSession();
+  } catch {
+    return { success: false, error: 'غير مصرح: يجب تسجيل الدخول كمسؤول' };
+  }
+
+  if (!Number.isInteger(targetVersion) || targetVersion <= 0) {
+    return { success: false, error: 'رقم النسخة غير صالح' };
+  }
+
   const versionsDir = ensureVersionsDir();
   const snapshotPath = path.join(versionsDir, `version_${targetVersion}.json`);
   const liveIssuePath = path.resolve(process.cwd(), 'data', 'live_issue.json');
