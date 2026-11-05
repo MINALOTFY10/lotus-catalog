@@ -129,7 +129,7 @@
             "description_ar": "يمكنك اختيار حقيبة من الحلفا واختيار من منتجات نحلة المتعددة او المنتجات الاخري، تقدم للهدايا الفاخرة.",
             "description_en": null,
             "category": "عسل نحل ومنتجات طبيعية",
-            "sale_price": 250,
+            "sale_price": null,
             "in_stock": true,
             "primary_image_url": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p1_s4.webp",
             "images": {
@@ -137,13 +137,15 @@
               "md": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p1_s4.webp",
               "lg": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p1_s4.webp"
             },
-            "cashier_code": null
+            "cashier_code": null,
+            "price_text": "يحدد علي حسب الاختيار"
           },
           "title_override": "حقيبة من الحلفا مع اختيارك من منتجات نحلة",
-          "description_override": "يمكنك اختيار حقيبة من الحلفا واختيار من منتجات نحلة المتعددة او المنتجات الاخري، تقدم للهدايا الفاخرة.",
-          "price_override": 250,
-          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p1_s4.webp",
+          "price_override": null,
           "price_text": "يحدد علي حسب الاختيار",
+          "price_tiers": null,
+          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p1_s4.webp",
+          "description_override": "يمكنك اختيار حقيبة من الحلفا واختيار من منتجات نحلة المتعددة او المنتجات الاخري، تقدم للهدايا الفاخرة.",
           "col_span": 1,
           "row_span": 1
         }

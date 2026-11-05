@@ -52,7 +52,14 @@ export function ProductCard({
   let priceLabel = 'السعر';
   let priceVal = '';
 
-  if (price !== null && price !== undefined) {
+  const isDescriptivePriceText =
+    priceText &&
+    typeof priceText === 'string' &&
+    (priceText.includes('يحدد') || priceText.includes('الاختيار'));
+
+  if (isDescriptivePriceText) {
+    priceVal = priceText.includes('يحدد') ? 'يحدد علي حسب الاختيار' : priceText.trim();
+  } else if (price !== null && price !== undefined) {
     const formattedPrice = `${toArabicDigits(price)} ج.مصري`;
     if (priceText && typeof priceText === 'string' && priceText.trim() && hasPriceDigits(priceText)) {
       const cleanText = toArabicDigits(priceText)
@@ -100,13 +107,18 @@ export function ProductCard({
     } else {
       priceVal = formattedPrice;
     }
-  } else if (priceText && typeof priceText === 'string' && priceText.trim() && hasPriceDigits(priceText)) {
-    const clean = toArabicDigits(priceText.trim())
-      .replace(/^(المقاس والسعر|الحجم والسعر|الوزن والسعر|[اإأآل]*\s*السعر)\n?/, '')
-      .trim();
-    priceVal = clean;
+  } else if (priceText && typeof priceText === 'string' && priceText.trim()) {
+    const raw = priceText.trim();
+    if (raw.includes('يحدد') || raw.includes('اختيار') || !hasPriceDigits(raw)) {
+      priceVal = raw.includes('يحدد') ? 'يحدد علي حسب الاختيار' : raw;
+    } else {
+      const clean = toArabicDigits(raw)
+        .replace(/^(المقاس والسعر|الحجم والسعر|الوزن والسعر|[اإأآل]*\s*السعر)\n?/, '')
+        .trim();
+      priceVal = clean || 'يحدد علي حسب الاختيار';
+    }
   } else {
-    priceVal = 'حسب الاختيار';
+    priceVal = 'يحدد علي حسب الاختيار';
   }
 
   // Format title into 2 authentic lines matching Canva where appropriate

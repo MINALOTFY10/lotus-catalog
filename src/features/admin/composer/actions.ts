@@ -38,10 +38,10 @@ export async function assignProductToSlot(
     const existingSlot = existingIndex >= 0 ? slots[existingIndex] : undefined;
 
     const finalName = overrides?.title_override?.trim() || product?.name_ar;
-    const finalPrice = resolveEffectivePrice(
-      overrides?.price_override,
-      product?.sale_price
-    );
+    const finalPrice =
+      overrides?.price_override === null
+        ? null
+        : resolveEffectivePrice(overrides?.price_override, product?.sale_price);
 
     const updatedProduct = product
       ? {
@@ -52,17 +52,27 @@ export async function assignProductToSlot(
               ? overrides.cashier_code
               : product.cashier_code,
           sale_price: finalPrice,
+          price_text: overrides?.price_text_override !== undefined ? overrides.price_text_override : product.price_text,
         }
       : product;
 
     const existingPriceText = existingSlot?.price_text || product?.price_text;
     const hasMultipleTiers = existingPriceText && (existingPriceText.includes('\n') || existingPriceText.includes('|'));
-    const finalPriceText =
-      hasMultipleTiers
-        ? existingPriceText
-        : finalPrice !== undefined && finalPrice !== null
-        ? `${toArabicDigits(finalPrice)} ج.مصري`
-        : existingSlot?.price_text;
+    
+    let finalPriceText: string | null | undefined;
+    if (overrides?.price_text_override !== undefined) {
+      finalPriceText = overrides.price_text_override;
+    } else if (hasMultipleTiers) {
+      finalPriceText = existingPriceText;
+    } else if (finalPrice !== undefined && finalPrice !== null && finalPrice > 0) {
+      finalPriceText = `${toArabicDigits(finalPrice)} ج.مصري`;
+    } else if (existingSlot?.price_text) {
+      finalPriceText = existingSlot.price_text;
+    } else if (finalPrice === null || finalPrice === 0) {
+      finalPriceText = 'يحدد علي حسب الاختيار';
+    } else {
+      finalPriceText = null;
+    }
 
     const newSlot: PageSlotData = {
       slot: slotNumber,
@@ -142,7 +152,8 @@ export async function saveSlotAssignmentAction(
   productId: string | null,
   overrides?: {
     title_override?: string;
-    price_override?: number;
+    price_override?: number | null;
+    price_text_override?: string | null;
     image_override?: string;
     description_override?: string;
     col_span?: number;
@@ -218,6 +229,9 @@ export async function saveSlotAssignmentAction(
       if (overrides?.price_override !== undefined) {
         productObj.sale_price = overrides.price_override;
       }
+      if (overrides?.price_text_override !== undefined) {
+        productObj.price_text = overrides.price_text_override;
+      }
       if (overrides?.description_override !== undefined) {
         productObj.description_ar = overrides.description_override.trim();
       }
@@ -231,6 +245,7 @@ export async function saveSlotAssignmentAction(
               if (overrides?.cashier_code !== undefined) s.product.cashier_code = overrides.cashier_code;
               if (overrides?.title_override?.trim()) s.product.name_ar = overrides.title_override.trim();
               if (overrides?.price_override !== undefined) s.product.sale_price = overrides.price_override;
+              if (overrides?.price_text_override !== undefined) s.product.price_text = overrides.price_text_override;
               if (overrides?.description_override !== undefined) {
                 s.product.description_ar = overrides.description_override.trim();
               }
@@ -247,7 +262,7 @@ export async function saveSlotAssignmentAction(
         overrides
       );
 
-      // Sync cashier_code, name_ar, sale_price, description_ar to products_seed.json if seed exists
+      // Sync cashier_code, name_ar, sale_price, price_text, description_ar to products_seed.json if seed exists
       if (fs.existsSync(seedPath)) {
         try {
           const currentSeed = JSON.parse(fs.readFileSync(seedPath, 'utf8'));
@@ -259,6 +274,7 @@ export async function saveSlotAssignmentAction(
                 ...(overrides?.title_override ? { name_ar: overrides.title_override.trim() } : {}),
                 ...(overrides?.cashier_code !== undefined ? { cashier_code: overrides.cashier_code } : {}),
                 ...(overrides?.price_override !== undefined ? { sale_price: overrides.price_override } : {}),
+                ...(overrides?.price_text_override !== undefined ? { price_text: overrides.price_text_override } : {}),
                 ...(overrides?.description_override !== undefined ? { description_ar: overrides.description_override.trim() } : {}),
               };
             }

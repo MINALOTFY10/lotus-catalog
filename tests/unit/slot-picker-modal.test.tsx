@@ -62,24 +62,30 @@ describe('SlotPickerModal', () => {
     expect(screen.getByText('تخصيص الخانة 1 - صفحة 1')).toBeDefined();
   });
 
-  it('filters available products by name or cashier code', () => {
+  it('allows customizing title, price, custom choice toggle, and description', () => {
     render(
       <SlotPickerModal
         pageNumber={1}
         slotNumber={1}
         isOpen={true}
-        availableProducts={mockProducts}
+        currentSlotData={{
+          slot: 1,
+          product: mockProducts[0],
+          price_override: 320,
+        }}
         onClose={vi.fn()}
         onSuccess={vi.fn()}
       />
     );
 
-    const searchInput = screen.getByPlaceholderText('ابحث بالاسم، الكود (#) أو القسم...');
-    expect(searchInput).toBeDefined();
+    expect(screen.getByText('تخصيص الخانة 1 - صفحة 1')).toBeDefined();
+    expect(screen.getByPlaceholderText('أدخل وصف المنتج، المكونات، طريقة الاستخدام، أو أي مواصفات تفصيلية...')).toBeDefined();
+    const customChoiceBtn = screen.getByText('يحدد علي حسب الاختيار');
+    expect(customChoiceBtn).toBeDefined();
 
-    // Search for olive oil
-    fireEvent.change(searchInput, { target: { value: 'زيتون' } });
-    expect(screen.getByText('زيت زيتون بكر')).toBeDefined();
-    expect(screen.queryByText('عسل سدر جبلي')).toBeNull();
+    // Toggle custom choice
+    fireEvent.click(customChoiceBtn);
+    const priceInput = screen.getByPlaceholderText('يحدد علي حسب الاختيار') as HTMLInputElement;
+    expect(priceInput.disabled).toBe(true);
   });
 });

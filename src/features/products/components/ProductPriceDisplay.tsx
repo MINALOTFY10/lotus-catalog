@@ -23,6 +23,17 @@ export function ProductPriceDisplay({
   // If priceText is provided, clean section headers, but ignore malformed labels without digits
   if (priceText && typeof priceText === 'string' && priceText.trim()) {
     const raw = priceText.trim();
+    if (raw.includes('يحدد') || raw.includes('الاختيار')) {
+      const displayText = raw.includes('يحدد') ? 'يحدد علي حسب الاختيار' : raw;
+      return (
+        <div className={`mt-2.5 pt-2 border-t border-stone-100 flex flex-col gap-0.5 text-right ${className}`}>
+          <span className="text-[10px] font-bold text-[#B68763] block">السعر</span>
+          <span className="font-extrabold text-xs sm:text-sm text-[#443000] leading-snug">
+            {displayText}
+          </span>
+        </div>
+      );
+    }
     if (!/[0-9٠-٩]/.test(raw)) {
       // malformed data such as "االسعر\nج.مصري" should not override the real numeric price
     } else {

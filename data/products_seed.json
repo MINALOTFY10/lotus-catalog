@@ -73,7 +73,7 @@
     "description_ar": "يمكنك اختيار حقيبة من الحلفا واختيار من منتجات نحلة المتعددة او المنتجات الاخري، تقدم للهدايا الفاخرة.",
     "description_en": null,
     "category": "عسل نحل ومنتجات طبيعية",
-    "sale_price": 250,
+    "sale_price": null,
     "in_stock": true,
     "primary_image_url": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p1_s4.webp",
     "images": {
@@ -81,7 +81,8 @@
       "md": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p1_s4.webp",
       "lg": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p1_s4.webp"
     },
-    "cashier_code": null
+    "cashier_code": null,
+    "price_text": "يحدد علي حسب الاختيار"
   },
   {
     "id": "prod-canva-p2-s1",

@@ -45,6 +45,9 @@ export function formatMagazinePrice(
 
   if (priceText && typeof priceText === 'string' && priceText.trim()) {
     const raw = priceText.trim();
+    if (raw.includes('يحدد') || raw.includes('الاختيار')) {
+      return raw.includes('يحدد') ? 'يحدد علي حسب الاختيار' : raw;
+    }
     if (hasPriceDigits(raw)) {
       let clean = raw;
       clean = clean

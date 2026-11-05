@@ -39,6 +39,8 @@ export function SlotPickerModal({
   const [descriptionOverride, setDescriptionOverride] = useState(
     currentSlotData?.description_override || currentSlotData?.product?.description_ar || ''
   );
+  const isCustomPriceInitial = currentSlotData?.price_text === 'يحدد علي حسب الاختيار';
+  const [isCustomChoicePrice, setIsCustomChoicePrice] = useState(isCustomPriceInitial);
   const [colSpan, setColSpan] = useState<number>(Number(currentSlotData?.col_span) || 1);
   const [rowSpan, setRowSpan] = useState<number>(Number(currentSlotData?.row_span) || 1);
   const [saving, setSaving] = useState(false);
@@ -57,6 +59,10 @@ export function SlotPickerModal({
     );
     setCodeOverride(prod?.cashier_code ? String(prod.cashier_code) : '');
     setDescriptionOverride(currentSlotData?.description_override || prod?.description_ar || '');
+    setIsCustomChoicePrice(
+      currentSlotData?.price_text === 'يحدد علي حسب الاختيار' ||
+      prod?.price_text === 'يحدد علي حسب الاختيار'
+    );
     setColSpan(Number(currentSlotData?.col_span) || 1);
     setRowSpan(Number(currentSlotData?.row_span) || 1);
   }, [currentSlotData, isOpen]);
@@ -67,13 +73,20 @@ export function SlotPickerModal({
     setSaving(true);
     setError(null);
 
-    const priceNum = priceOverride ? parseFloat(priceOverride) : undefined;
+    const priceNum = isCustomChoicePrice ? null : (priceOverride ? parseFloat(priceOverride) : undefined);
     const codeNum = codeOverride.trim() ? parseInt(codeOverride.trim(), 10) : null;
     const finalName = titleOverride.trim() || selectedProduct?.name_ar;
     const descTrimmed = descriptionOverride.trim();
+    const finalPriceText = isCustomChoicePrice
+      ? 'يحدد علي حسب الاختيار'
+      : (priceNum !== undefined && priceNum !== null && !isNaN(priceNum))
+      ? `${toArabicDigits(priceNum)} ج.مصري`
+      : undefined;
+
     const overrides = {
       title_override: finalName || undefined,
-      price_override: priceNum && !isNaN(priceNum) ? priceNum : undefined,
+      price_override: priceNum && !isNaN(priceNum) ? priceNum : (isCustomChoicePrice ? null : undefined),
+      price_text_override: isCustomChoicePrice ? 'يحدد علي حسب الاختيار' : finalPriceText,
       cashier_code: codeNum && !isNaN(codeNum) ? codeNum : null,
       description_override: descTrimmed !== '' ? descTrimmed : undefined,
       col_span: colSpan,
@@ -100,27 +113,24 @@ export function SlotPickerModal({
           ...baseProd,
           ...(overrides.title_override ? { name_ar: overrides.title_override } : {}),
           ...(overrides.cashier_code !== undefined ? { cashier_code: overrides.cashier_code } : {}),
-          ...(overrides.price_override !== undefined ? { sale_price: overrides.price_override } : {}),
+          sale_price: isCustomChoicePrice ? null : (overrides.price_override !== undefined ? overrides.price_override : baseProd.sale_price),
+          price_text: overrides.price_text_override !== undefined ? overrides.price_text_override : baseProd.price_text,
           ...(overrides.description_override !== undefined ? { description_ar: overrides.description_override } : {}),
         }
       : undefined;
 
-    const effectivePrice =
-      overrides.price_override !== undefined
-        ? overrides.price_override
-        : updatedProd?.sale_price;
-
-    const computedPriceText =
-      effectivePrice !== undefined && effectivePrice !== null
-        ? `${toArabicDigits(effectivePrice)} ج.مصري`
-        : currentSlotData?.price_text;
+    const effectivePriceText = isCustomChoicePrice
+      ? 'يحدد علي حسب الاختيار'
+      : overrides.price_override !== undefined && overrides.price_override !== null
+      ? `${toArabicDigits(overrides.price_override)} ج.مصري`
+      : currentSlotData?.price_text;
 
     onSuccess({
       slot: slotNumber,
       product: updatedProd,
       title_override: overrides.title_override,
       price_override: overrides.price_override,
-      price_text: computedPriceText,
+      price_text: effectivePriceText,
       image_override: currentSlotData?.image_override,
       description_override: overrides.description_override,
       col_span: overrides.col_span,
@@ -204,9 +214,11 @@ export function SlotPickerModal({
                 </h4>
                 {selectedProduct && (
                   <span className="text-xs font-mono font-bold text-stone-500">
-                    {currentSlotData?.price_text || selectedProduct.price_text
-                      ? toArabicDigits((currentSlotData?.price_text || selectedProduct.price_text || '').replace(/\n/g, ' • '))
-                      : `${toArabicDigits(priceOverride || selectedProduct.sale_price)} ج.مصري`}{' '}
+                    {isCustomChoicePrice
+                      ? 'يحدد علي حسب الاختيار'
+                      : (currentSlotData?.price_text || selectedProduct.price_text
+                        ? toArabicDigits((currentSlotData?.price_text || selectedProduct.price_text || '').replace(/\n/g, ' • '))
+                        : `${toArabicDigits(priceOverride || selectedProduct.sale_price)} ج.مصري`)}{' '}
                     (كود: #{codeOverride || selectedProduct.cashier_code || 'غير محدد'})
                   </span>
                 )}
@@ -282,16 +294,37 @@ export function SlotPickerModal({
                 />
               </div>
               <div>
-                <label className="block text-xs font-bold text-stone-700 mb-1">
-                  تخصيص السعر (L.E)
-                </label>
+                <div className="flex items-center justify-between mb-1">
+                  <label className="block text-xs font-bold text-stone-700">
+                    تخصيص السعر (L.E)
+                  </label>
+                </div>
                 <input
                   type="number"
-                  value={priceOverride}
+                  disabled={isCustomChoicePrice}
+                  value={isCustomChoicePrice ? '' : priceOverride}
                   onChange={(e) => setPriceOverride(e.target.value)}
-                  placeholder={selectedProduct ? String(selectedProduct.sale_price) : 'السعر...'}
-                  className="w-full text-xs font-mono bg-white border border-stone-300 rounded-xl px-3 py-2 text-stone-900 focus:outline-hidden focus:border-[#B68763]"
+                  placeholder={isCustomChoicePrice ? 'يحدد علي حسب الاختيار' : (selectedProduct ? String(selectedProduct.sale_price) : 'السعر...')}
+                  className={`w-full text-xs font-mono bg-white border border-stone-300 rounded-xl px-3 py-2 text-stone-900 focus:outline-hidden focus:border-[#B68763] ${
+                    isCustomChoicePrice ? 'bg-amber-50/60 border-amber-300 text-amber-800 cursor-not-allowed font-sans font-bold' : ''
+                  }`}
                 />
+                <button
+                  type="button"
+                  onClick={() => setIsCustomChoicePrice(!isCustomChoicePrice)}
+                  className={`mt-1.5 w-full py-1 px-2 rounded-lg text-[11px] font-bold border transition-colors flex items-center justify-center gap-1.5 cursor-pointer ${
+                    isCustomChoicePrice
+                      ? 'bg-[#443000] text-amber-200 border-[#443000]'
+                      : 'bg-white text-stone-600 border-stone-200 hover:border-amber-400 hover:bg-amber-50/40'
+                  }`}
+                >
+                  <span className={`w-3.5 h-3.5 rounded flex items-center justify-center border text-[10px] ${
+                    isCustomChoicePrice ? 'bg-amber-400 border-amber-400 text-stone-900 font-extrabold' : 'border-stone-300 bg-white'
+                  }`}>
+                    {isCustomChoicePrice ? '✓' : ''}
+                  </span>
+                  <span>يحدد علي حسب الاختيار</span>
+                </button>
               </div>
               <div>
                 <label className="block text-xs font-bold text-stone-700 mb-1">
