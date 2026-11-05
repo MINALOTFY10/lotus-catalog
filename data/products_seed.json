@@ -6,17 +6,17 @@
     "name_en": null,
     "description_ar": "نحلة عسل برسيم فاخر، غني بالفيتامينات والإنزيمات الطبيعية التي تدعم المناعة وتعزز الطاقة بشكل طبيعي.",
     "description_en": null,
-    "category": "عسل نحل ومنتجات طبيعية",
-    "sale_price": 350,
-    "price_text": "٦٥٠ جرام | ٣٥٠ ج.مصري\n١.٥ كيلو | ٥٦٠ ج.مصري",
+    "category": "مجموعة عسل نحلة الطبيعي اليدوي",
+    "sale_price": 385,
+    "price_text": "٦٥٠ جرام | ٣٨٥ ج.مصري\n١.٥ كيلو | ٦٢٠ ج.مصري",
     "price_tiers": [
       {
         "label": "٦٥٠ جرام",
-        "price": 350
+        "price": 385
       },
       {
         "label": "١.٥ كيلو",
-        "price": 560
+        "price": 620
       }
     ],
     "in_stock": true,
@@ -26,7 +26,8 @@
       "md": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p1_s1.webp",
       "lg": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p1_s1.webp"
     },
-    "cashier_code": 1
+    "cashier_code": 1,
+    "stock_status": "متاح"
   },
   {
     "id": "prod-canva-p1-s2",
@@ -3860,8 +3861,8 @@
     "name_en": null,
     "description_ar": "طقم مجوهرات مصنوع يدويًا من الخرز بدرجات الفيروز والأبيض، ويشمل عقدًا مزينًا برمز مفتاح الحياة وسوارً...",
     "description_en": null,
-    "category": "حلي ومجوهرات تراثية",
-    "sale_price": 1284,
+    "category": "مجموعة الإكسسوارات الــمــصــرية اليدوية",
+    "sale_price": 1285,
     "in_stock": true,
     "primary_image_url": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p28_s4.webp",
     "images": {
@@ -3869,7 +3870,10 @@
       "md": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p28_s4.webp",
       "lg": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p28_s4.webp"
     },
-    "cashier_code": 10
+    "cashier_code": 10,
+    "stock_status": "متاح",
+    "price_text": null,
+    "price_tiers": null
   },
   {
     "id": "prod-canva-p28-s5",

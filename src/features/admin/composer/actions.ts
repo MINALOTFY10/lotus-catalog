@@ -207,6 +207,9 @@ export async function saveSlotAssignmentAction(
       if (overrides?.price_override !== undefined) {
         productObj.sale_price = overrides.price_override;
       }
+      if (overrides?.description_override !== undefined) {
+        productObj.description_ar = overrides.description_override.trim();
+      }
 
       // Propagate updated productObj attributes to any matching slots in the issue
       const targetId = productObj.id || productObj.slug;
@@ -217,6 +220,9 @@ export async function saveSlotAssignmentAction(
               if (overrides?.cashier_code !== undefined) s.product.cashier_code = overrides.cashier_code;
               if (overrides?.title_override?.trim()) s.product.name_ar = overrides.title_override.trim();
               if (overrides?.price_override !== undefined) s.product.sale_price = overrides.price_override;
+              if (overrides?.description_override !== undefined) {
+                s.product.description_ar = overrides.description_override.trim();
+              }
             }
           }
         }
@@ -230,7 +236,7 @@ export async function saveSlotAssignmentAction(
         overrides
       );
 
-      // Sync cashier_code, name_ar, sale_price to products_seed.json if seed exists
+      // Sync cashier_code, name_ar, sale_price, description_ar to products_seed.json if seed exists
       if (fs.existsSync(seedPath)) {
         try {
           const currentSeed = JSON.parse(fs.readFileSync(seedPath, 'utf8'));
@@ -242,6 +248,7 @@ export async function saveSlotAssignmentAction(
                 ...(overrides?.title_override ? { name_ar: overrides.title_override.trim() } : {}),
                 ...(overrides?.cashier_code !== undefined ? { cashier_code: overrides.cashier_code } : {}),
                 ...(overrides?.price_override !== undefined ? { sale_price: overrides.price_override } : {}),
+                ...(overrides?.description_override !== undefined ? { description_ar: overrides.description_override.trim() } : {}),
               };
             }
             return p;
