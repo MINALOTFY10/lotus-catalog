@@ -1,5 +1,7 @@
 import { describe, it, expect } from 'vitest';
+import { render, screen } from '@testing-library/react';
 import { formatMagazinePrice } from '@/lib/format/price';
+import { ProductCard } from '@/features/magazine/components/ProductCard';
 import { getPublicProductBySlug, searchPublicProducts, generateProductJsonLd } from '@/features/products/services/publicProducts';
 import { IssueSnapshot } from '@/features/magazine/services/publishIssue';
 
@@ -15,6 +17,31 @@ describe('formatMagazinePrice', () => {
     expect(formatMagazinePrice(null)).toBe('السعر عند الطلب');
     expect(formatMagazinePrice(undefined)).toBe('السعر عند الطلب');
     expect(formatMagazinePrice(0)).toBe('السعر عند الطلب');
+  });
+
+  it('ignores malformed priceText without digits and falls back to the numeric price', () => {
+    expect(formatMagazinePrice(250, 'االسعر\nج.مصري')).toBe('٢٥٠ ج.مصري');
+  });
+
+  it('keeps the real numeric price when the magazine slot override is blank', () => {
+    render(
+      <ProductCard
+        product={{
+          id: 'prod-365',
+          slug: 'prod-365',
+          name_ar: 'مبخرة نحاس',
+          description_ar: 'وصف',
+          sale_price: 365,
+          in_stock: true,
+          primary_image_url: '/img.jpg',
+        }}
+        priceOverride=""
+        priceText="السعر\nج.مصري"
+        isInteractive={false}
+      />
+    );
+
+    expect(screen.getByText(/٣٦٥/)).toBeTruthy();
   });
 });
 
@@ -65,6 +92,42 @@ describe('publicProducts service', () => {
     expect(result?.magazinePageNumber).toBe(2);
     // CRITICAL SECURITY REQUIREMENT: cost_price must never leak to public
     expect((result as unknown as Record<string, unknown>).cost_price).toBeUndefined();
+  });
+
+  it('falls back to the product price when a magazine slot has a blank price override', () => {
+    const issueWithBlankOverride: IssueSnapshot = {
+      ...mockIssue,
+      pages: [
+        ...mockIssue.pages.map((page, index) =>
+          index === 1
+            ? {
+                ...page,
+                slots: [
+                  {
+                    slot: 1,
+                    price_override: '',
+                    product: {
+                      ...(page.slots[0]?.product ?? {
+                        id: 'prod-1',
+                        slug: 'prod-1-عسل-كيلو-و-نص',
+                        name_ar: 'عسل كيلو و نص',
+                        description_ar: 'عسل نقي طبيعي فاخر',
+                        sale_price: 620,
+                        primary_image_url: '/uploads/products/image1.jpg',
+                      }),
+                      sale_price: 940,
+                    },
+                  },
+                ],
+              }
+            : page
+        ),
+      ],
+    };
+
+    const result = getPublicProductBySlug('prod-1-عسل-كيلو-و-نص', issueWithBlankOverride);
+    expect(result).not.toBeNull();
+    expect(result?.sale_price).toBe(940);
   });
 
   it('searches products by Arabic title or cashier code', () => {

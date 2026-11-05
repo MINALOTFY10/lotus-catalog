@@ -9129,10 +9129,11 @@
             "cashier_code": 77
           },
           "title_override": "كوستر كونكريت أصفر على شكل زهرة",
-          "description_override": "كوستر كونكريت أصفر مصنوع يدو ًيا على شكل زهرة، يتميز بتشطيب المع وحافة متموجة وتجويف بسيط",
           "price_override": 65,
-          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p39_s1.webp",
           "price_text": "السعر\nج.مصري",
+          "price_tiers": null,
+          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p39_s1.webp",
+          "description_override": "كوستر كونكريت أصفر مصنوع يدو ًيا على شكل زهرة، يتميز بتشطيب المع وحافة متموجة وتجويف بسيط",
           "col_span": 1,
           "row_span": 1
         },
@@ -9157,10 +9158,11 @@
             "cashier_code": 40
           },
           "title_override": "مبخرة زيوت",
-          "description_override": "مبخرة زيوت عطرية البني الداكن، بطالء المع منقط، مزودة بطبق علوي إلذابة الزيوت أو .الشمع وفتحة سفلية لوضع شمعة صغيرة",
           "price_override": 205,
-          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p39_s2.webp",
           "price_text": "السعر\nج.مصري",
+          "price_tiers": null,
+          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p39_s2.webp",
+          "description_override": "مبخرة زيوت عطرية البني الداكن، بطالء المع منقط، مزودة بطبق علوي إلذابة الزيوت أو .الشمع وفتحة سفلية لوضع شمعة صغيرة",
           "col_span": 1,
           "row_span": 1
         },
