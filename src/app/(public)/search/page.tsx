@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import { Metadata } from 'next';
 import { getAllPublicProducts } from '@/features/products/services/publicProducts';
 import { SearchClientView } from '@/features/products/components/SearchClientView';
-import { generateBreadcrumbSchema, safeJsonLd } from '@/lib/seo';
+import { buildOpenGraph, generateBreadcrumbSchema, safeJsonLd } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'البحث في الكتالوج | كتالوج لوتس - صندوق دعم الصناعات',
@@ -11,12 +11,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/search',
   },
-  openGraph: {
+  openGraph: buildOpenGraph({
     title: 'البحث في الكتالوج | كتالوج لوتس - صندوق دعم الصناعات',
     description:
       'ابحث في قائمة أسعار ومنتجات كتالوج لوتس التابع لصندوق دعم الصناعات الريفية والبيئية بالاسم، الكود، أو القسم الحرفي.',
     url: '/search',
-  },
+  }),
 };
 
 interface SearchPageProps {

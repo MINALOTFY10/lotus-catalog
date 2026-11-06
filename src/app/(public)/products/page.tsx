@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import { getAllPublicProducts } from '@/features/products/services/publicProducts';
 import { ProductsCatalogView } from '@/features/products/components/ProductsCatalogView';
-import { getBaseUrl, generateBreadcrumbSchema, safeJsonLd } from '@/lib/seo';
+import { buildOpenGraph, getBaseUrl, generateBreadcrumbSchema, safeJsonLd } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'دليل المنتجات والأسعار | كتالوج لوتس - صندوق دعم الصناعات',
@@ -11,12 +11,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/products',
   },
-  openGraph: {
+  openGraph: buildOpenGraph({
     title: 'دليل المنتجات والأسعار | كتالوج لوتس - صندوق دعم الصناعات',
     description:
       'قائمة أسعار ومعروضات المنتجات التراثية واليدوية في كتالوج لوتس الصادر عن صندوق دعم الصناعات الريفية والبيئية.',
     url: '/products',
-  },
+  }),
 };
 
 export default async function ProductsPage() {

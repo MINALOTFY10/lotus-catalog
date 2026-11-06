@@ -5,6 +5,7 @@ import { getLiveIssue } from '@/features/magazine/services/publishIssue';
 import { resolveCurrentPage } from '@/features/magazine/reader/useFlipbook';
 import { MagazineReaderView } from '@/features/magazine/reader/MagazineReaderView';
 import { MagazineSkeleton } from '@/features/magazine/components/MagazineSkeleton';
+import { buildOpenGraph } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'المجلة التفاعلية | كتالوج لوتس - صندوق دعم الصناعات',
@@ -13,12 +14,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/magazine',
   },
-  openGraph: {
+  openGraph: buildOpenGraph({
     title: 'المجلة التفاعلية | كتالوج لوتس - صندوق دعم الصناعات',
     description:
       'استعرض صفحات مجلة لوتس التفاعلية ثلاثية الأبعاد مع قائمة أسعار منتجات صندوق دعم الصناعات الريفية والبيئية.',
     url: '/magazine',
-  },
+  }),
 };
 
 interface MagazinePageProps {

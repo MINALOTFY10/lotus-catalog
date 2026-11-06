@@ -5,6 +5,7 @@ import { getLiveIssue } from '@/features/magazine/services/publishIssue';
 import { resolveCurrentPage } from '@/features/magazine/reader/useFlipbook';
 import { MagazineReaderView } from '@/features/magazine/reader/MagazineReaderView';
 import { MagazineSkeleton } from '@/features/magazine/components/MagazineSkeleton';
+import { buildOpenGraph } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'كتالوج لوتس الرسمي | صندوق دعم الصناعات الريفية والبيئية',
@@ -13,12 +14,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/',
   },
-  openGraph: {
+  openGraph: buildOpenGraph({
     title: 'كتالوج لوتس | صندوق دعم الصناعات الريفية والبيئية',
     description:
       'الكتالوج الرقمي لمجلة لوتس - منتجات يدوية وتراثية مصرية بتجربة تفاعلية ثلاثية الأبعاد مع قائمة الأسعار الرسمية.',
     url: '/',
-  },
+  }),
 };
 
 interface HomePageProps {

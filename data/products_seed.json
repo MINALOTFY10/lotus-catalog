@@ -107,7 +107,7 @@
     "slug": "prod-canva-p2-s2-تمور-نخلة-رطب-سكري",
     "name_ar": "تمور نخلة رطب سكري",
     "name_en": null,
-    "description_ar": "تمور نخلة – تمور رطب سكري طبيعية من أجود الأراضي المصرية، تتميز بجودتها العالية وقوامها الطري ومذاقها الغني بحلاوة طبيعية مميزة، لتقدم تجربة تجمع بين أصالة المنتج المصري وجودته.",
+    "description_ar": "تمور رطب سكري طبيعية من أجود الأراضي المصرية، تتميز بجودتها العالية وقوامها الطري ومذاقها الغني بحلاوة طبيعية مميزة، لتقدم تجربة تجمع بين أصالة المنتج المصري وجودته.",
     "description_en": null,
     "category": "منتجات غذائية طبيعية",
     "sale_price": 280,
@@ -118,7 +118,8 @@
       "md": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p2_s2.webp",
       "lg": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p2_s2.webp"
     },
-    "cashier_code": null
+    "cashier_code": null,
+    "price_text": "٢٨٠ ج.مصري"
   },
   {
     "id": "prod-canva-p3-s1",

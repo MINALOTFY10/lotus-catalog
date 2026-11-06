@@ -2,7 +2,7 @@ import React from 'react';
 import { Metadata } from 'next';
 import { getAllPublicProducts } from '@/features/products/services/publicProducts';
 import { ProductsCatalogView } from '@/features/products/components/ProductsCatalogView';
-import { generateBreadcrumbSchema, safeJsonLd } from '@/lib/seo';
+import { buildOpenGraph, generateBreadcrumbSchema, safeJsonLd } from '@/lib/seo';
 
 interface CategoryPageProps {
   params: Promise<{ slug: string }>;
@@ -22,11 +22,11 @@ export async function generateMetadata({
     alternates: {
       canonical: `/categories/${encodeURIComponent(decoded)}`,
     },
-    openGraph: {
+    openGraph: buildOpenGraph({
       title,
       description,
       url: `/categories/${encodeURIComponent(decoded)}`,
-    },
+    }),
     twitter: {
       card: 'summary_large_image',
       title,

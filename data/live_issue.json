@@ -192,7 +192,7 @@
             "slug": "prod-canva-p2-s2-تمور-نخلة-رطب-سكري",
             "name_ar": "تمور نخلة رطب سكري",
             "name_en": null,
-            "description_ar": "تمور نخلة – تمور رطب سكري طبيعية من أجود الأراضي المصرية، تتميز بجودتها العالية وقوامها الطري ومذاقها الغني بحلاوة طبيعية مميزة، لتقدم تجربة تجمع بين أصالة المنتج المصري وجودته.",
+            "description_ar": "تمور رطب سكري طبيعية من أجود الأراضي المصرية، تتميز بجودتها العالية وقوامها الطري ومذاقها الغني بحلاوة طبيعية مميزة، لتقدم تجربة تجمع بين أصالة المنتج المصري وجودته.",
             "description_en": null,
             "category": "منتجات غذائية طبيعية",
             "sale_price": 280,
@@ -203,13 +203,15 @@
               "md": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p2_s2.webp",
               "lg": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p2_s2.webp"
             },
-            "cashier_code": null
+            "cashier_code": null,
+            "price_text": "٢٨٠ ج.مصري"
           },
           "title_override": "تمور نخلة رطب سكري",
-          "description_override": "تمور نخلة – تمور رطب سكري طبيعية من أجود الأراضي المصرية، تتميز بجودتها العالية وقوامها الطري ومذاقها الغني بحلاوة طبيعية مميزة، لتقدم تجربة تجمع بين أصالة المنتج المصري وجودته.",
           "price_override": 280,
+          "price_text": "٢٨٠ ج.مصري",
+          "price_tiers": null,
           "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p2_s2.webp",
-          "price_text": "٥٠٠ جرام | ٢٨٠ ج.مصري\n١ كيلو | ٤٠٠ ج.مصري",
+          "description_override": "تمور رطب سكري طبيعية من أجود الأراضي المصرية، تتميز بجودتها العالية وقوامها الطري ومذاقها الغني بحلاوة طبيعية مميزة، لتقدم تجربة تجمع بين أصالة المنتج المصري وجودته.",
           "col_span": 1,
           "row_span": 1
         }

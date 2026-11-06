@@ -12,7 +12,7 @@ import {
 import { formatMagazinePrice, toArabicDigits } from '@/lib/format/price';
 import { ProductPriceDisplay } from '@/features/products/components/ProductPriceDisplay';
 import { ProductBackButton } from '@/features/products/components/ProductBackButton';
-import { generateBreadcrumbSchema, safeJsonLd } from '@/lib/seo';
+import { buildOpenGraph, generateBreadcrumbSchema, safeJsonLd } from '@/lib/seo';
 
 interface ProductDetailPageProps {
   params: Promise<{ slug: string }>;
@@ -44,7 +44,7 @@ export async function generateMetadata({
     alternates: {
       canonical: `/products/${encodeURIComponent(decodedSlug)}`,
     },
-    openGraph: {
+    openGraph: buildOpenGraph({
       title,
       description,
       url: `/products/${encodeURIComponent(decodedSlug)}`,
@@ -54,7 +54,7 @@ export async function generateMetadata({
           alt: product.name_ar,
         },
       ],
-    },
+    }),
     twitter: {
       card: 'summary_large_image',
       title,

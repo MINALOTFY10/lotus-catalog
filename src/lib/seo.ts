@@ -3,6 +3,8 @@
  * for Lotus Catalog & The Rural and Environmental Industries Support Fund (صندوق دعم الصناعات الريفية والبيئية)
  */
 
+import type { Metadata } from 'next';
+
 export function getBaseUrl(): string {
   if (process.env.NEXT_PUBLIC_SITE_URL && process.env.NEXT_PUBLIC_SITE_URL.trim() !== '') {
     return process.env.NEXT_PUBLIC_SITE_URL.trim().replace(/\/$/, '');
@@ -45,10 +47,40 @@ export const SEO_KEYWORDS = [
   'Rural and Environmental Industries Support Fund',
 ];
 
-export const SEO_SITE_NAME = 'كتالوج ومجلة لوتس | صندوق دعم الصناعات الريفية والبيئية';
+// Must match the WebSite structured data "name" so Google picks one consistent site name.
+export const SEO_SITE_NAME = 'كتالوج لوتس';
 
 export const SEO_DEFAULT_DESCRIPTION =
   'الكتالوج الرقمي الرسمي لمجلة لوتس الصادرة عن صندوق دعم الصناعات الريفية والبيئية (وزارة التضامن الاجتماعي). استعرض وتصفح قائمة الأسعار الرسمية والمنتجات التراثية واليدوية المصرية وعسل النحل والفخار والخزف وخشب السرسوع بتجربة تفاعلية ثلاثية الأبعاد.';
+
+type OpenGraphMetadata = NonNullable<Metadata['openGraph']>;
+
+/**
+ * Next.js replaces (does not merge) the whole `openGraph` object when a page sets its own.
+ * Pages must build theirs with this helper so `og:site_name`, `og:type`, `og:locale`
+ * and the default image are never lost.
+ */
+export function buildOpenGraph(page: {
+  title: string;
+  description: string;
+  url: string;
+  images?: OpenGraphMetadata['images'];
+}): OpenGraphMetadata {
+  return {
+    type: 'website',
+    locale: 'ar_EG',
+    siteName: SEO_SITE_NAME,
+    images: [
+      {
+        url: '/brand/lotus_logo.png',
+        width: 462,
+        height: 458,
+        alt: 'شعار كتالوج لوتس - صندوق دعم الصناعات الريفية والبيئية',
+      },
+    ],
+    ...page,
+  };
+}
 
 /**
  * Generate Schema.org Organization structured data
