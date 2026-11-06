@@ -129,9 +129,9 @@ export function ProductPriceDisplay({
 
         // Short single price (e.g. "715 ج.مصري")
         return (
-          <div className={`mt-2.5 pt-2 border-t border-stone-100 flex items-center justify-between ${className}`}>
-            <span className="text-[10px] font-bold text-[#B68763]">السعر</span>
-            <span className="font-extrabold text-xs sm:text-sm text-[#443000]">
+          <div className={`mt-2.5 pt-2 border-t border-stone-100 flex items-center justify-between gap-2 ${className}`}>
+            <span className="text-[10px] font-bold text-[#B68763] shrink-0 whitespace-nowrap">السعر</span>
+            <span className="font-extrabold text-xs sm:text-sm text-[#443000] truncate text-left">
               {toArabicDigits(line)}
             </span>
           </div>
@@ -143,9 +143,9 @@ export function ProductPriceDisplay({
   // Standard numeric fallback formatted via formatMagazinePrice
   const fallback = formatMagazinePrice(salePrice);
   return (
-    <div className={`mt-2.5 pt-2 border-t border-stone-100 flex items-center justify-between ${className}`}>
-      <span className="text-[10px] font-bold text-[#B68763]">السعر</span>
-      <span className="font-extrabold text-xs sm:text-sm text-[#443000]">
+    <div className={`mt-2.5 pt-2 border-t border-stone-100 flex items-center justify-between gap-2 ${className}`}>
+      <span className="text-[10px] font-bold text-[#B68763] shrink-0 whitespace-nowrap">السعر</span>
+      <span className="font-extrabold text-xs sm:text-sm text-[#443000] truncate text-left">
         {toArabicDigits(fallback)}
       </span>
     </div>

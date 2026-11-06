@@ -24,7 +24,7 @@ export function ProductBackButton({ fallbackUrl, fallbackPage = 1 }: ProductBack
     <button
       type="button"
       onClick={handleBack}
-      className="shrink-0 inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white hover:bg-amber-50 text-[#443000] hover:text-[#B68763] text-xs font-bold transition-all border border-stone-200/90 hover:border-[#B68763]/40 shadow-2xs group cursor-pointer select-none"
+      className="shrink-0 inline-flex items-center justify-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white hover:bg-amber-50 text-[#443000] hover:text-[#B68763] text-xs font-bold transition-all border border-stone-200/90 hover:border-[#B68763]/40 shadow-2xs group cursor-pointer select-none whitespace-nowrap"
       title="الرجوع إلى الصفحة السابقة في المجلة"
     >
       <span className="leading-none pt-[1px]">رجوع</span>

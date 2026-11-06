@@ -71,7 +71,7 @@ export function MagazineReaderView({
   const spreadStart = Math.floor((currentPage - 1) / 2) * 2 + 1;
 
   return (
-    <div className="min-h-screen bg-[#F3F4F7] flex flex-col">
+    <div className="min-h-screen bg-[#F3F4F7] flex flex-col w-full overflow-x-hidden">
       {/* Top Reader Navbar */}
       <nav className="w-full bg-white border-b border-stone-200 px-2 sm:px-6 py-2 sm:py-3 flex items-center justify-between sticky top-0 z-40 shadow-xs animate-slide-down-nav">
         <Link href="/" className="flex items-center gap-1.5 sm:gap-3.5 group min-w-0">
@@ -178,7 +178,7 @@ export function MagazineReaderView({
       </nav>
 
       {/* Main Reader View */}
-      <main className="flex-1 flex flex-col items-center justify-start">
+      <main className="flex-1 w-full max-w-full flex flex-col items-center justify-start min-w-0">
         {viewMode === 'flipbook' ? (
           <FlipbookClient initialPage={currentPage} onPageChange={handlePageChange}>
             {initialIssue.pages.map((pageData) => {

@@ -82,10 +82,10 @@ export function TocDrawer({
                   {sec.title}
                 </p>
                 <div className="flex items-center gap-2 mt-1">
-                  <span className="text-[10px] text-stone-500 font-medium">
+                  <span className="text-[10px] text-stone-500 font-medium shrink-0 whitespace-nowrap">
                     {sec.count} صفحة
                   </span>
-                  <span className="text-[10px] font-bold px-1.5 py-0.5 bg-[#443000] text-[#B68763] rounded">
+                  <span className="text-[10px] font-bold px-1.5 py-0.5 bg-[#443000] text-[#B68763] rounded shrink-0 whitespace-nowrap">
                     ص {sec.startPage}
                   </span>
                 </div>

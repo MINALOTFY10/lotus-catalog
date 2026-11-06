@@ -92,12 +92,12 @@ export function PublishManagerView({
         {/* Current Live Issue Card */}
         <div className="bg-white rounded-3xl p-6 border border-stone-200 shadow-xs flex flex-col justify-between">
           <div>
-            <div className="flex items-center justify-between mb-4">
-              <span className="text-xs font-bold text-[#B68763] bg-[#B68763]/10 px-3 py-1 rounded-full">
+            <div className="flex flex-wrap items-center justify-between gap-2.5 mb-4">
+              <span className="text-xs font-bold text-[#B68763] bg-[#B68763]/10 px-3 py-1 rounded-full shrink-0 whitespace-nowrap">
                 الإصدار النشط حالياً في الموقع
               </span>
-              <span className="flex items-center gap-1.5 text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+              <span className="flex items-center gap-1.5 text-xs font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full shrink-0 whitespace-nowrap">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping shrink-0"></span>
                 مباشر للجمهور (Live)
               </span>
             </div>
@@ -147,7 +147,7 @@ export function PublishManagerView({
         <div className="bg-gradient-to-br from-white to-amber-50/30 rounded-3xl p-6 border border-amber-900/15 shadow-xs flex flex-col justify-between">
           <form onSubmit={handlePublish} className="space-y-4">
             <div>
-              <span className="text-xs font-bold text-[#443000] bg-amber-100 px-3 py-1 rounded-full">
+              <span className="text-xs font-bold text-[#443000] bg-amber-100 px-3 py-1 rounded-full inline-block shrink-0 whitespace-nowrap">
                 نشر إصدار جديد
               </span>
               <h3 className="text-base font-extrabold text-[#443000] mt-2">

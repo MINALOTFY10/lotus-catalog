@@ -199,12 +199,12 @@ export function MagazineSearchModal({
                     </span>
 
                     <span className="flex shrink-0 items-center gap-3">
-                      <span className="text-left">
-                        <span className="block text-xs font-extrabold text-[#443000] sm:text-sm">
+                      <span className="text-left shrink-0">
+                        <span className="block text-xs font-extrabold text-[#443000] sm:text-sm whitespace-nowrap">
                           {formatMagazinePrice(product.sale_price, (product as any).price_text)}
                         </span>
                         {product.magazinePageNumber && (
-                          <span className="mt-1 inline-block rounded bg-[#F3EEE8] px-2 py-0.5 text-[10px] font-bold text-[#654B35]">
+                          <span className="mt-1 inline-block rounded bg-[#F3EEE8] px-2 py-0.5 text-[10px] font-bold text-[#654B35] whitespace-nowrap">
                             صفحة {toArabicDigits(product.magazinePageNumber)}
                           </span>
                         )}

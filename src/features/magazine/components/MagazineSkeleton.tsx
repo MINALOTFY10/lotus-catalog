@@ -149,7 +149,7 @@ export function MagazineSkeleton() {
         </div>
 
         {/* Floating Control Bar Skeleton at Bottom */}
-        <div className="z-30 mt-4 sm:mt-6 px-4 py-2 bg-white/95 shadow-md rounded-full border border-stone-200 flex items-center gap-4 text-xs">
+        <div className="z-30 mt-4 sm:mt-6 px-4 py-2 bg-white/95 shadow-md rounded-full border border-stone-200 flex items-center gap-4 text-xs max-w-[calc(100vw-20px)] mx-auto shrink-0 whitespace-nowrap">
           <div className="h-7 w-20 bg-stone-200/80 rounded-full animate-pulse" />
           <div className="h-4 w-28 bg-[#B68763]/25 rounded-md animate-pulse" />
           <div className="h-7 w-20 bg-stone-200/80 rounded-full animate-pulse" />

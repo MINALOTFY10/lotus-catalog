@@ -176,18 +176,18 @@ export function SearchClientView({
                   <div className="p-3 pt-0 flex items-center gap-1.5">
                     <Link
                       href={`/products/${encodeURIComponent(product.slug)}`}
-                      className="flex-1 text-center text-xs font-bold bg-stone-100 hover:bg-stone-200 text-stone-800 py-1.5 rounded-lg transition-colors"
+                      className="flex-1 text-center text-xs font-bold bg-stone-100 hover:bg-stone-200 text-stone-800 py-1.5 rounded-lg transition-colors truncate whitespace-nowrap"
                     >
                       تفاصيل
                     </Link>
                     {product.magazinePageNumber && (
                       <Link
                         href={`/magazine?p=${product.magazinePageNumber}`}
-                        className="text-center text-xs font-bold bg-[#B68763]/15 hover:bg-[#B68763]/25 text-[#443000] px-2.5 py-1.5 rounded-lg transition-colors flex items-center gap-1"
+                        className="text-center text-xs font-bold bg-[#B68763]/15 hover:bg-[#B68763]/25 text-[#443000] px-2.5 py-1.5 rounded-lg transition-colors flex items-center justify-center gap-1 shrink-0 whitespace-nowrap"
                         title={`عرض في المجلة (صفحة ${product.magazinePageNumber})`}
                       >
                         <span>المجلة</span>
-                        <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg className="w-3 h-3 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                         </svg>
                       </Link>

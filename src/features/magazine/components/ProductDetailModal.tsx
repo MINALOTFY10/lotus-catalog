@@ -100,12 +100,12 @@ export function ProductDetailModal({
           {/* Product Category & Status */}
           <div className="flex items-center justify-between gap-2 flex-wrap">
             {product.category && (
-              <span className="text-xs font-semibold text-[#8A6747] bg-stone-100 px-2.5 py-0.5 rounded-md">
+              <span className="text-xs font-semibold text-[#8A6747] bg-stone-100 px-2.5 py-0.5 rounded-md truncate max-w-[200px]">
                 {product.category}
               </span>
             )}
-            <span className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200/60">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-200/60 shrink-0 whitespace-nowrap">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
               متوفر للطلب
             </span>
           </div>
