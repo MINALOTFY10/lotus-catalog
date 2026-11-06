@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'كتالوج لوتس | صندوق دعم الصناعات الريفية والبيئية',
     short_name: 'كتالوج لوتس',
-    description: 'الكتالوج الرقمي لمجلة لوتس للمنتجات اليدوية والتراثية المصرية وقائمة الأسعار الرسمية',
+    description: 'الكتالوج الرقمي الإلكتروني لمجلة لوتس للمنتجات اليدوية والتراثية المصرية وقائمة الأسعار الإلكترونية',
     start_url: '/',
     display: 'standalone',
     background_color: '#F3F4F7',
