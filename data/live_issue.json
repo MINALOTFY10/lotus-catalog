@@ -36,11 +36,11 @@
               }
             ],
             "in_stock": true,
-            "primary_image_url": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p1_s1.webp",
+            "primary_image_url": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/uploads/products/prod-canva-p1-s1-1793980139404.png",
             "images": {
-              "sm": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p1_s1.webp",
-              "md": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p1_s1.webp",
-              "lg": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p1_s1.webp"
+              "sm": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/uploads/products/prod-canva-p1-s1-1793980139404.png",
+              "md": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/uploads/products/prod-canva-p1-s1-1793980139404.png",
+              "lg": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/uploads/products/prod-canva-p1-s1-1793980139404.png"
             },
             "cashier_code": 1,
             "stock_status": "متاح"
@@ -48,7 +48,7 @@
           "title_override": "عسل نحلة عسل برسيم طبيعي",
           "description_override": "نحلة عسل برسيم فاخر، غني بالفيتامينات والإنزيمات الطبيعية التي تدعم المناعة وتعزز الطاقة بشكل طبيعي.",
           "price_override": 385,
-          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/canva_products/p1_s1.webp",
+          "image_override": "https://ruvocydftemvsjjkdyqe.supabase.co/storage/v1/object/public/magazine/uploads/products/prod-canva-p1-s1-1793980139404.png",
           "price_text": "٦٥٠ جرام | ٣٨٥ ج.مصري\n١.٥ كيلو | ٦٢٠ ج.مصري",
           "price_tiers": [
             {

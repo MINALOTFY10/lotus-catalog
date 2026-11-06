@@ -94,7 +94,7 @@ function renderHeroPrice(rawPrice: number | null | undefined, priceText?: string
   }
 
   return (
-    <div className="flex flex-col gap-2 w-full max-w-sm sm:max-w-md">
+    <div className="flex flex-col gap-1.5 w-full max-w-xs sm:max-w-sm">
       {lines.map((line, idx) => {
         if (line.includes('|')) {
           const parts = line.split('|').map((p) => p.trim());
@@ -108,19 +108,19 @@ function renderHeroPrice(rawPrice: number | null | undefined, priceText?: string
           return (
             <div
               key={idx}
-              className="flex items-center justify-between gap-4 px-4 py-2.5 rounded-xl bg-amber-50/70 border border-amber-200/60 shadow-2xs"
+              className="flex items-center justify-between gap-3 px-3 py-1.5 rounded-lg bg-amber-50/70 border border-amber-200/60 shadow-2xs"
             >
-              <span className="text-sm sm:text-base font-bold text-stone-700">
+              <span className="text-xs sm:text-sm font-medium text-stone-700">
                 {toArabicDigits(label)}
               </span>
-              <span className="text-base sm:text-xl font-black text-[#443000]">
+              <span className="text-sm sm:text-base font-bold text-[#443000]">
                 {toArabicDigits(price)}
               </span>
             </div>
           );
         }
         return (
-          <div key={idx} className="text-base sm:text-lg font-extrabold text-[#443000]">
+          <div key={idx} className="text-sm sm:text-base font-bold text-[#443000]">
             {toArabicDigits(line)}
           </div>
         );

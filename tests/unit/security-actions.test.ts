@@ -1,6 +1,6 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import * as sessionModule from '@/lib/auth/session';
-import { updateProductAction, getAdminProductsList } from '@/features/admin/products/actions';
+import { updateProductAction, getAdminProductsList, uploadProductImageAction } from '@/features/admin/products/actions';
 import { saveSlotAssignmentAction, swapPageSlotsAction, updatePageSectionTitleAction } from '@/features/admin/composer/actions';
 import { publishLiveIssueAction, rollbackToVersionAction, getVersionHistoryAction } from '@/features/admin/publish/actions';
 
@@ -20,6 +20,14 @@ describe('Server Action Authorization Guards', () => {
     it('rejects getAdminProductsList when no session exists', async () => {
       vi.spyOn(sessionModule, 'getStaffSession').mockResolvedValue(null);
       await expect(getAdminProductsList()).rejects.toThrow(/غير مصرح|Unauthorized/i);
+    });
+
+    it('rejects uploadProductImageAction when no session exists', async () => {
+      vi.spyOn(sessionModule, 'getStaffSession').mockResolvedValue(null);
+      const fd = new FormData();
+      const result = await uploadProductImageAction(fd);
+      expect(result.success).toBe(false);
+      expect(result.error).toMatch(/غير مصرح|Unauthorized/i);
     });
   });
 
